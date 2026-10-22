@@ -612,7 +612,7 @@
     const cont = document.getElementById("continue");
     if (cont && last && last.file) {
       cont.hidden = false;
-      cont.querySelector("a").href = last.file;
+      cont.querySelector("a").href = last.file + (last.at ? "#weiter" : "");
       cont.querySelector(".t").textContent = last.n + " · " + last.title;
     }
   };
@@ -763,7 +763,10 @@
     const i = all.findIndex((c) => c.n === n);
     const c = all[i];
     document.title = c.title + " · " + window.BOOK.title;
-    store.set("last", { n: c.n, title: c.title, file: Book.file(c) });
+    // Eine gemerkte Stelle in diesem Kapitel bleibt erhalten, bis wieder gescrollt wird.
+    const prevLast = store.get("last", null);
+    const saveLast = (pos) => store.set("last", Object.assign({ n: c.n, title: c.title, file: Book.file(c) }, pos));
+    saveLast(prevLast && prevLast.n === n ? { at: prevLast.at, frac: prevLast.frac } : {});
 
     // Kopfleiste
     const bar = document.createElement("div");
@@ -820,5 +823,49 @@
       btn.addEventListener("click", () => { Book.setDone(n, !Book.done().has(n)); paint(); });
       paint();
     }
+
+    // Leseposition: „Weiterlesen“ (…#weiter) springt zur gemerkten Stelle, sonst beginnt das Kapitel oben.
+    const resume = location.hash === "#weiter" && prevLast && prevLast.n === n ? prevLast : null;
+    let ready = !resume, timer = 0;
+    const save = () => { clearTimeout(timer); timer = 0; saveLast(readingPos()); };
+    window.addEventListener("scroll", () => { if (ready && !timer) timer = setTimeout(save, 300); }, { passive: true });
+    window.addEventListener("pagehide", () => { if (timer) save(); });
+    if (resume) {
+      const go = () => {
+        restorePos(resume);
+        history.replaceState(null, "", location.pathname + location.search);
+        ready = true;
+      };
+      document.readyState === "complete" ? go() : window.addEventListener("load", go, { once: true });
+    }
   };
+
+  // Die Stelle wird relativ zum Abschnitt gespeichert (id der h2 + Anteil bis zur nächsten h2),
+  // damit sie bei anderer Fensterbreite oder Schriftgröße an derselben Textstelle landet.
+  const topbarH = () => { const t = document.querySelector(".topbar"); return t ? t.offsetHeight : 0; };
+  const sectionHeads = () => [...document.querySelectorAll("main h2[id]")].filter((h) => h.offsetParent !== null);
+  function sectionSpan(hs, k) {
+    const top = hs[k].getBoundingClientRect().top;
+    const end = hs[k + 1] ? hs[k + 1].getBoundingClientRect().top : document.querySelector("main").getBoundingClientRect().bottom;
+    return { top, len: Math.max(1, end - top) };
+  }
+  function readingPos() {
+    const edge = topbarH() + 1, hs = sectionHeads();
+    let k = -1;
+    hs.forEach((h, i) => { if (h.getBoundingClientRect().top <= edge) k = i; });
+    if (k < 0) return { at: null, frac: 0 };
+    const s = sectionSpan(hs, k);
+    return { at: hs[k].id, frac: Math.round(Math.min(1, Math.max(0, (edge - s.top) / s.len)) * 1000) / 1000 };
+  }
+  function restorePos(pos) {
+    const h = pos.at && document.getElementById(pos.at);
+    if (!h) return;
+    const hs = sectionHeads();
+    let k = hs.indexOf(h), frac = pos.frac || 0;
+    // Abschnitt ausgeblendet (z. B. Vertiefungen aus): ans Ende des vorherigen sichtbaren Abschnitts.
+    if (k < 0) { k = hs.filter((x) => x.compareDocumentPosition(h) & Node.DOCUMENT_POSITION_FOLLOWING).length - 1; frac = 1; }
+    if (k < 0) return;
+    const s = sectionSpan(hs, k);
+    window.scrollTo({ top: window.scrollY + s.top + frac * s.len - topbarH(), behavior: "instant" });
+  }
 })();
