@@ -30,7 +30,7 @@
   <header class="chapter-head">
     <div class="num">Anhang</div>
     <h1>Tonarten-Übersicht</h1>
-    <p class="lede">Alle Dur- und Moll-Tonarten mit ihren Vorzeichen. Im <a class="gl" href="kap07-quintenzirkel.html#g-quintenzirkel">Quintenzirkel</a> steht jede <a class="gl" href="kap07-quintenzirkel.html#g-tonart">Tonart</a> eine <a class="gl" href="kap05-intervalle.html#g-quinte">Quinte</a> über ihrem linken Nachbarn und hat ein <a class="gl" href="kap01-klaviatur.html#g-kreuz">Kreuz</a> mehr bzw. ein ♭ weniger. Die Herleitung steht in Kapitel 7.</p>
+    <p class="lede">Alle Dur- und Moll-Tonarten mit ihren Vorzeichen. Im <a class="gl" href="kap07-quintenzirkel.html#g-quintenzirkel">Quintenzirkel</a> steht jede <a class="gl" href="kap07-quintenzirkel.html#g-tonart">Tonart</a> eine <a class="gl" href="kap05-intervalle.html#g-quinte">Quinte</a> über ihrem Nachbarn gegen den Uhrzeigersinn und hat ein <a class="gl" href="kap01-klaviatur.html#g-kreuz">Kreuz</a> mehr bzw. ein ♭ weniger. Die Herleitung steht in Kapitel 7.</p>
   </header>
 
   <div class="circle" id="circle"></div>
@@ -100,7 +100,7 @@
     const r0 = 60 + NAT[K.r[0]] + K.r[1];
     const ms = [0, 2, 4, 5, 7, 9, 11, 12].map((x) => r0 + x);
     host.textContent = "";
-    Book.keyboard(host, { from: 60, to: 84, labels: "c", marks: ms.map((m, j) => ({ m, cls: j === 0 || j === 7 ? "c2" : "" })) });
+    Book.keyboard(host, { from: Math.min(60, r0), to: 84, labels: "c", marks: ms.map((m, j) => ({ m, cls: j === 0 || j === 7 ? "c2" : "" })) });
     nameEl.textContent = `${K.maj}-Dur / ${K.min}-Moll: ${K.acc.length ? K.acc.join(", ") : "keine Vorzeichen"}`;
     tbody.querySelectorAll("tr").forEach((t) => t.classList.toggle("sel", +t.dataset.i === i));
     document.querySelectorAll(".seg").forEach((g) => g.classList.toggle("sel", +g.dataset.i === i || (+g.dataset.i === 12 && i === 0) || (+g.dataset.i === 13 && i === 1) || (+g.dataset.i === 2 && i === 14)));

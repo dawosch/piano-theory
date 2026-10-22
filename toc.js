@@ -28,10 +28,10 @@ window.BOOK = {
         { n: 13, slug: "stufen", ready: true, title: "Leitereigene Akkorde und Stufen", desc: "Die sieben Akkorde einer Tonart, römische Stufenzahlen, Dur/Moll-Muster I ii iii IV V vi vii°.", prereq: [6, 11] },
         { n: 14, slug: "funktionen", ready: true, title: "Tonika, Subdominante, Dominante", desc: "Spannung und Entspannung. Stufentheorie und Funktionstheorie (T, S, D, Tp …) im Vergleich.", prereq: [13] },
         { n: 15, slug: "septakkorde", ready: true, title: "Septakkorde", desc: "Dominantsept, maj7, m7, halbvermindert, vermindert. Warum der Tritonus nach Auflösung drängt.", prereq: [11, 14], trainer: true },
-        { n: 16, slug: "kadenzen", ready: true, title: "Kadenzen und Schlüsse", desc: "Ganzschluss, Halbschluss, Plagalschluss, Trugschluss. Wie Musik Satzzeichen setzt.", prereq: [14], trainer: true },
+        { n: 16, slug: "kadenzen", ready: true, title: "Kadenzen und Schlüsse", desc: "Ganzschluss, Halbschluss, Plagalschluss, Trugschluss. Wie Musik Satzzeichen setzt.", prereq: [14, 15], trainer: true },
         { n: 17, slug: "leadsheets", ready: true, title: "Akkordsymbole und Leadsheets", desc: "Cmaj7, Am/E, sus4, add9, Slash-Akkorde. Vom Symbol zum Griff.", prereq: [12, 15] },
         { n: 18, slug: "pop-progressionen", ready: true, title: "Typische Akkordfolgen", desc: "I–V–vi–IV, vi–IV–I–V, Fünfziger-Folge, Kanon-Folge. Warum so viele Songs gleich gebaut sind.", prereq: [16, 17] },
-        { n: 19, slug: "nichtakkordtoene", ready: true, title: "Melodie über Akkorden", desc: "Akkordtöne und Nichtakkordtöne: Durchgang, Wechselnote, Vorhalt, Antizipation.", prereq: [13] }
+        { n: 19, slug: "nichtakkordtoene", ready: true, title: "Melodie über Akkorden", desc: "Akkordtöne und Nichtakkordtöne: Durchgang, Wechselnote, Vorhalt, Antizipation.", prereq: [13, 16, 17] }
       ]
     },
     {
@@ -67,7 +67,7 @@ window.BOOK = {
         { n: 34, slug: "kontrapunkt-1", ready: true, title: "Kontrapunkt I: Note gegen Note", desc: "Fux’ erste Gattung: zweistimmig, ein Ton gegen einen Ton.", prereq: [33] },
         { n: 35, slug: "kontrapunkt-2", ready: true, title: "Kontrapunkt II: Zwei und vier Noten", desc: "Zweite und dritte Gattung: Durchgänge und Wechselnoten kontrolliert einsetzen.", prereq: [34] },
         { n: 36, slug: "kontrapunkt-3", ready: true, title: "Kontrapunkt III: Synkope und freier Satz", desc: "Vierte Gattung (Vorhalte) und fünfte Gattung (alles gemischt).", prereq: [35] },
-        { n: 37, slug: "choralsatz", ready: true, title: "Der vierstimmige Satz", desc: "Sopran, Alt, Tenor, Bass. Verdopplung, Stimmabstände, Akkordverbindungen im Bach-Stil.", prereq: [16, 33] },
+        { n: 37, slug: "choralsatz", ready: true, title: "Der vierstimmige Satz", desc: "Sopran, Alt, Tenor, Bass. Verdopplung, Stimmabstände, Akkordverbindungen im Bach-Stil.", prereq: [16, 33, 36] },
         { n: 38, slug: "fuge", ready: true, title: "Imitation, Kanon und Fuge", desc: "Thema, Antwort, Kontrasubjekt, Engführung. Eine Bach-Fuge lesen.", prereq: [36, 37] }
       ]
     },
@@ -78,19 +78,19 @@ window.BOOK = {
         { n: 39, slug: "bausteine", ready: true, title: "Motiv, Phrase, Periode, Satz", desc: "Die kleinen Einheiten, aus denen Melodien gebaut sind.", prereq: [16] },
         { n: 40, slug: "liedformen", ready: true, title: "Liedformen, Rondo und Variation", desc: "AB, ABA, ABACA, Thema mit Variationen.", prereq: [39] },
         { n: 41, slug: "sonate", ready: true, title: "Die Sonatenhauptsatzform", desc: "Exposition, Durchführung, Reprise und die Logik der Tonarten dahinter.", prereq: [22, 40] },
-        { n: 42, slug: "songformen", ready: true, title: "Songformen in Pop und Jazz", desc: "Strophe, Refrain, Bridge, 12-Takt-Blues, AABA.", prereq: [18, 39] }
+        { n: 42, slug: "songformen", ready: true, title: "Songformen in Pop und Jazz", desc: "Strophe, Refrain, Bridge, 12-Takt-Blues, AABA.", prereq: [18, 39, 40] }
       ]
     },
     {
       id: "VII", title: "Klavierpraxis",
-      blurb: "Unabhängig von der Theorie lesbar. Am besten parallel zu den anderen Teilen.",
+      blurb: "Kapitel 43, 45 und 47 sind unabhängig von der Theorie lesbar, die übrigen am besten parallel zu den genannten Theoriekapiteln.",
       chapters: [
         { n: 43, slug: "technik", ready: true, title: "Haltung und Technik", desc: "Sitzhöhe, Handform, Gewicht statt Kraft. Verspannungen vermeiden.", prereq: [] },
-        { n: 44, slug: "fingersaetze", ready: true, title: "Fingersätze", desc: "Prinzipien statt Einzelfälle: Daumenuntersatz, Tonleitern, Arpeggien, Akkorde.", prereq: [6] },
+        { n: 44, slug: "fingersaetze", ready: true, title: "Fingersätze", desc: "Prinzipien statt Einzelfälle: Daumenuntersatz, Tonleitern, Arpeggien, Akkorde.", prereq: [6, 7] },
         { n: 45, slug: "pedal", ready: true, title: "Das Pedal", desc: "Haltepedal, synkopischer Pedalwechsel, Una corda, Sostenuto.", prereq: [] },
         { n: 46, slug: "begleitmuster", ready: true, title: "Begleitmuster", desc: "Von Blockakkorden über Arpeggien und Alberti-Bässe bis zu Pop-Patterns.", prereq: [12, 17] },
         { n: 47, slug: "ueben", ready: true, title: "Effektiv üben", desc: "Langsam üben, in Abschnitten üben, verteilt üben, mit Metronom. Was die Lernforschung sagt.", prereq: [] },
-        { n: 48, slug: "blattspiel", ready: true, title: "Blattspiel", desc: "Muster statt Einzelnoten lesen, vorauslesen, nicht anhalten.", prereq: [2, 3] },
+        { n: 48, slug: "blattspiel", ready: true, title: "Blattspiel", desc: "Muster statt Einzelnoten lesen, vorauslesen, nicht anhalten.", prereq: [2, 3, 5] },
         { n: 49, slug: "nach-gehoer", ready: true, title: "Nach Gehör spielen und improvisieren", desc: "Melodien heraushören, Akkorde finden, erste Improvisation über Pentatonik und Blues.", prereq: [9, 18] }
       ]
     }

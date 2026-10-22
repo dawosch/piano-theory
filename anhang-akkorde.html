@@ -52,9 +52,9 @@
   const S = (str) => str.split(" ").map((t) => t.split(",").map(Number));
   const CHORDS = [
     { g: "Dreiklänge" },
-    { name: "Dur", sym: ["", "maj"], f: S("1,0 3,4 5,7"), ch: 11 },
+    { name: "Dur", sym: [""], f: S("1,0 3,4 5,7"), ch: 11 },
     { name: "Moll", sym: ["m", "mi", "min", "−"], f: S("1,0 3,3 5,7"), ch: 11 },
-    { name: "vermindert", sym: ["dim", "°"], f: S("1,0 3,3 5,6"), ch: 11 },
+    { name: "vermindert", sym: ["°", "dim"], f: S("1,0 3,3 5,6"), ch: 11 },
     { name: "übermäßig", sym: ["+", "aug", "(♯5)"], f: S("1,0 3,4 5,8"), ch: 11 },
     { name: "Vorhalt Sekunde", sym: ["sus2"], f: S("1,0 2,2 5,7"), ch: 17 },
     { name: "Vorhalt Quarte", sym: ["sus4", "sus"], f: S("1,0 4,5 5,7"), ch: 17 },
@@ -65,7 +65,7 @@
     { name: "Dominantseptakkord", sym: ["7"], f: S("1,0 3,4 5,7 7,10"), ch: 15 },
     { name: "großer Septakkord", sym: ["maj7", "Δ7", "M7", "j7"], f: S("1,0 3,4 5,7 7,11"), ch: 15 },
     { name: "Moll-Septakkord", sym: ["m7", "−7", "mi7"], f: S("1,0 3,3 5,7 7,10"), ch: 15 },
-    { name: "Moll mit großer Septime", sym: ["m(maj7)", "mΔ7", "−Δ7"], f: S("1,0 3,3 5,7 7,11"), ch: 27 },
+    { name: "Moll mit großer Septime", sym: ["m(maj7)", "mΔ7", "−Δ7"], f: S("1,0 3,3 5,7 7,11"), ch: 15 },
     { name: "halbverminderter Septakkord", sym: ["m7♭5", "ø7", "ø"], f: S("1,0 3,3 5,6 7,10"), ch: 15 },
     { name: "verminderter Septakkord", sym: ["°7", "dim7"], f: S("1,0 3,3 5,6 7,9"), ch: 15 },
     { name: "Dominantsept mit Quartvorhalt", sym: ["7sus4", "7sus"], f: S("1,0 4,5 5,7 7,10"), ch: 17 },
