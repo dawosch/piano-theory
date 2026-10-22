@@ -645,12 +645,41 @@
     });
   };
 
+  // ---------- Hell/Dunkel ----------
+  // Ohne gespeicherte Wahl folgt die Seite dem System; das Inline-Skript im <head> setzt eine gespeicherte Wahl schon vor dem ersten Zeichnen.
+  const MOON = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>';
+  const darkQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  const isDark = () => {
+    const t = document.documentElement.getAttribute("data-theme");
+    return t ? t === "dark" : !!(darkQuery && darkQuery.matches);
+  };
+  Book.themeToggle = function () {
+    const btn = document.createElement("button");
+    btn.className = "toggle theme-toggle";
+    btn.type = "button";
+    btn.innerHTML = `${MOON}<span>Dunkel</span>`;
+    const paint = () => {
+      const on = isDark();
+      btn.setAttribute("aria-pressed", String(on));
+      btn.querySelector("span").textContent = on ? "Dunkel an" : "Dunkel aus";
+    };
+    btn.addEventListener("click", () => {
+      const t = isDark() ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", t);
+      store.set("theme", t); paint();
+    });
+    if (darkQuery && darkQuery.addEventListener) darkQuery.addEventListener("change", paint);
+    paint();
+    return btn;
+  };
+
   // ---------- Anhangseite ----------
   Book.page = function (title) {
     document.title = title + " · " + window.BOOK.title;
     const bar = document.createElement("div");
     bar.className = "topbar";
     bar.innerHTML = `<div class="wrap inner"><a class="home" href="index.html">${window.BOOK.title}</a><span class="where">Anhang · ${title}</span></div>`;
+    bar.querySelector(".inner").append(Book.themeToggle());
     document.body.prepend(bar);
     Book.enhanceLayers();
     Book.autoKeyboards();
@@ -671,6 +700,7 @@
     bar.innerHTML = `<div class="wrap inner"><a class="home" href="index.html">${window.BOOK.title}</a>` +
       `<span class="where">Teil ${c.part} · Kapitel ${c.n}</span>` +
       `<button class="toggle" type="button" id="deep-toggle" aria-pressed="true">${ICON.deep}<span>Vertiefungen</span></button></div>`;
+    bar.querySelector(".inner").append(Book.themeToggle());
     document.body.prepend(bar);
     const tog = bar.querySelector("#deep-toggle");
     function applyDeep(show) {

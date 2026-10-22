@@ -126,6 +126,8 @@ code, .mono { font-family: var(--font-mono); font-size: 0.9em; }
   background: none; border: 1px solid var(--line); border-radius: 999px; padding: 0.25rem 0.7rem;
 }
 .toggle[aria-pressed="true"] { color: var(--deep); border-color: var(--deep-line); background: var(--deep-bg); }
+.toggle .icon { width: 1rem; height: 1rem; flex: none; }
+.theme-toggle[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
 
 /* ---------- Kapitelkopf ---------- */
 .chapter-head { padding-block: 3rem 1.5rem; }

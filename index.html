@@ -8,8 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
 <link rel="stylesheet" href="book.css">
+<script>try{var t=JSON.parse(localStorage.getItem("kv:theme"));if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <style>
-  .hero { background: var(--surface); border-bottom: 1px solid var(--line); }
+  .hero { position: relative; background: var(--surface); border-bottom: 1px solid var(--line); }
+  .hero > .theme-toggle { position: absolute; top: 0.8rem; right: max(16px, env(safe-area-inset-right, 0px)); }
   .hero .wrap-wide { padding-block: 3.2rem 2.4rem; display: grid; gap: 1.6rem; }
   .hero h1 { font-size: var(--step-4); letter-spacing: -0.025em; }
   .hero .lede { font-size: var(--step-1); line-height: 1.5; max-width: 40ch; color: var(--muted); margin: 0.6rem 0 0; }
@@ -109,6 +111,7 @@
 <script src="toc.js"></script>
 <script src="book.js"></script>
 <script>
+  document.querySelector(".hero").append(Book.themeToggle());
   Book.enhanceLayers();
   Book.renderToc(document.getElementById("toc"));
   Book.keyboard(document.getElementById("hero-kbd"), {
