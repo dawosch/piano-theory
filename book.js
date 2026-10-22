@@ -645,6 +645,72 @@
     });
   };
 
+  // ---------- Begriffs-Tooltips ----------
+  // Jeder Link auf eine Begriffsstelle (href="…#g-slug") zeigt beim Zeigen oder Fokussieren die Definition aus glossar-data.js.
+  // Auf Touch-Geräten öffnet der erste Tipp den Tooltip, der zweite folgt dem Link.
+  // <dfn class="tip"> markiert Begriffe, die das Buch nur benutzt und nicht erklärt; sie zeigen ihre Kurzdefinition selbst.
+  let glossLoad = null, tip = null, tipFor = null, lastPointer = "mouse";
+  function loadGlossar() {
+    if (window.GLOSSAR) return Promise.resolve();
+    return glossLoad || (glossLoad = new Promise((resolve) => {
+      const s = document.createElement("script");
+      s.src = "glossar-data.js";
+      s.onload = s.onerror = () => resolve();
+      document.head.appendChild(s);
+    }));
+  }
+  function hideTip() {
+    if (!tipFor) return;
+    tipFor.removeAttribute("aria-describedby");
+    tip.hidden = true; tipFor = null;
+  }
+  function showTip(a, e) {
+    if (!tip) {
+      tip = document.createElement("div");
+      tip.className = "gloss-tip"; tip.id = "gloss-tip"; tip.setAttribute("role", "tooltip");
+      tip.append(document.createElement("strong"), document.createElement("span"), document.createElement("span"));
+      tip.lastChild.className = "src";
+      document.body.appendChild(tip);
+    }
+    hideTip();
+    const here = e.h.split("#")[0] === location.pathname.split("/").pop();
+    tip.children[0].textContent = e.t;
+    tip.children[1].textContent = e.d;
+    tip.children[2].textContent = a.tagName === "DFN" ? "" : here ? "Erklärt in diesem Kapitel" : `Erklärt in Kapitel ${e.n}`;
+    tip.children[2].hidden = a.tagName === "DFN";
+    tip.hidden = false; tipFor = a;
+    a.setAttribute("aria-describedby", tip.id);
+    const r = a.getClientRects()[0] || a.getBoundingClientRect();
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    const left = Math.max(16, Math.min(r.left, document.documentElement.clientWidth - w - 16));
+    const below = r.bottom + 8 + h <= window.innerHeight || r.top - 8 - h < 0;
+    tip.style.left = left + window.scrollX + "px";
+    tip.style.top = (below ? r.bottom + 8 : r.top - 8 - h) + window.scrollY + "px";
+  }
+  Book.glossLinks = function (root) {
+    const links = [...(root || document).querySelectorAll('main a[href*="#g-"], main dfn.tip[id]')].filter((a) => !a.closest("div.gl"));
+    if (!links.length) return;
+    loadGlossar().then(() => links.forEach((a) => {
+      const e = window.GLOSSAR && window.GLOSSAR[a.tagName === "DFN" ? a.id : a.hash.slice(1)];
+      if (!e) return;
+      if (a.tagName === "DFN") a.tabIndex = 0;
+      else a.classList.add("term-link");
+      a.addEventListener("pointerdown", (ev) => { lastPointer = ev.pointerType; });
+      a.addEventListener("mouseenter", () => showTip(a, e));
+      a.addEventListener("mouseleave", hideTip);
+      a.addEventListener("focus", () => showTip(a, e));
+      a.addEventListener("blur", hideTip);
+      a.addEventListener("click", (ev) => {
+        if (lastPointer === "touch" && tipFor !== a) { ev.preventDefault(); showTip(a, e); }
+      });
+    }));
+    if (!Book.glossLinks.wired) {
+      Book.glossLinks.wired = true;
+      document.addEventListener("keydown", (ev) => { if (ev.key === "Escape") hideTip(); });
+      document.addEventListener("pointerdown", (ev) => { if (tipFor && !tipFor.contains(ev.target)) hideTip(); });
+    }
+  };
+
   // ---------- Hell/Dunkel ----------
   // Ohne gespeicherte Wahl folgt die Seite dem System; das Inline-Skript im <head> setzt eine gespeicherte Wahl schon vor dem ersten Zeichnen.
   const MOON = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>';
@@ -684,6 +750,7 @@
     Book.enhanceLayers();
     Book.autoKeyboards();
     Book.autoScores();
+    Book.glossLinks();
   };
 
   // ---------- Kapitelseite ----------
@@ -729,6 +796,7 @@
     Book.enhanceLayers();
     Book.autoKeyboards();
     Book.autoScores();
+    Book.glossLinks();
     document.querySelectorAll("div.interval-trainer").forEach((el) => Book.intervalTrainer(el));
 
     // Fuß: gelesen-Haken und Blättern

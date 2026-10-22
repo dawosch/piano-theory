@@ -14,16 +14,18 @@ for (const c of chapters) {
   if (!fs.existsSync(f)) continue;
   const d = new JSDOM(fs.readFileSync(f, "utf8")).window.document;
   d.querySelectorAll("dfn").forEach((dfn) => {
-    const term = dfn.textContent.trim().replace(/\s+/g, " ");
+    // data-term: Stichwort im Glossar (Grundform), data-def: eigenständige Kurzdefinition, data-forms: Wortformen für mk_links.js
+    const term = (dfn.dataset.term || dfn.textContent).trim().replace(/\s+/g, " ");
     const key = term.toLowerCase();
     if (!term || entries.has(key)) return;
     const block = dfn.closest("p, li, td, dd") || dfn.parentElement;
     const text = block.textContent.replace(/\s+/g, " ").trim();
     const sentences = text.split(/(?<=[.!?:])\s+(?=[A-ZÄÖÜ„(])/);
-    let def = sentences.find((s) => s.includes(term)) || sentences[0];
+    let def = dfn.dataset.def ? dfn.dataset.def.trim() : sentences.find((s) => s.includes(dfn.textContent.trim())) || sentences[0];
     if (def.length > 320) def = def.slice(0, 317).replace(/\s\S*$/, "") + " …";
     const sec = dfn.closest("section.layer");
-    entries.set(key, { term, def, n: c.n, title: c.title, href: file(c) + (dfn.id ? "#" + dfn.id : ""), deep: !!(sec && sec.classList.contains("deep")) });
+    const forms = dfn.hasAttribute("data-forms") ? dfn.dataset.forms.split("|").map((x) => x.trim()).filter(Boolean) : null;
+    entries.set(key, { term, def, forms, n: c.n, title: c.title, href: file(c) + (dfn.id ? "#" + dfn.id : ""), deep: !!(sec && sec.classList.contains("deep")) });
   });
 }
 
@@ -48,6 +50,7 @@ const html = `<!doctype html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
 <link rel="stylesheet" href="book.css">
+<script>try{var t=JSON.parse(localStorage.getItem("kv:theme"));if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <style>
   .letters { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-block: 0.8rem; font-family: var(--font-display); }
   .letters a { text-decoration: none; border: 1px solid var(--line); border-radius: 4px; padding: 0.1rem 0.5rem; }
@@ -91,4 +94,10 @@ ${groups[L].map((e) => `      <div class="entry" data-t="${esc(e.term.toLowerCas
 </html>
 `;
 fs.writeFileSync(path.join(BOOK, "glossar.html"), html, "utf8");
+
+// Daten für die Begriffs-Tooltips (Book.glossLinks): nur Begriffe mit Sprungmarke, Schlüssel ist die dfn-id.
+const rows = sorted.filter((e) => e.href.includes("#")).map((e) =>
+  "  " + JSON.stringify(e.href.split("#")[1]) + ": " + JSON.stringify({ t: e.term, d: e.def, n: e.n, h: e.href, f: e.forms || undefined }));
+fs.writeFileSync(path.join(BOOK, "glossar-data.js"),
+  "// Erzeugt von tools/mk_glossar.js, nicht von Hand bearbeiten.\nwindow.GLOSSAR = {\n" + rows.join(",\n") + "\n};\n", "utf8");
 console.log("Glossar:", sorted.length, "Begriffe aus", chapters.filter((c) => fs.existsSync(path.join(BOOK, file(c)))).length, "Kapiteln");

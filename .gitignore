@@ -2,6 +2,7 @@
 tools/node_modules/
 # erzeugte Prüfdateien
 tools/xref.txt
+tools/links.txt
 __pycache__/
 *.pyc
 # Betriebssystem
