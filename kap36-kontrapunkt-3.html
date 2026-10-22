@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kontrapunkt III: Synkope und freier Satz · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil V · Kapitel 36</div>
+    <h1>Kontrapunkt III: Synkope und freier Satz</h1>
+    <p class="lede">Die vierte Gattung bringt die ausdrucksstärkste Dissonanz der Musik: den Vorhalt. Ein Ton bleibt liegen, während sich die andere Stimme bewegt, und reibt sich dadurch, bevor er sich auflöst. Die fünfte Gattung verbindet dann alles Gelernte zu einer freien, lebendigen Gegenstimme. Vom Vorhalt führt ein direkter Weg zu den sus4-Akkorden der Popmusik.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Vorbereitung, Dissonanz und Auflösung eines Vorhalts benennen,</li>
+      <li>die gebräuchlichen Vorhalte 7–6, 4–3 und 2–3 erkennen und schreiben,</li>
+      <li>Vorhaltsketten verstehen und spielen,</li>
+      <li>einen Kontrapunkt der fünften Gattung analysieren und selbst entwerfen,</li>
+      <li>sus4- und sus2-Akkorde als Vorhalte begreifen und am Klavier einsetzen.</li>
+    </ul>
+  </div>
+
+  <!-- 36.1 -->
+  <h2 id="synkope">36.1 Die Synkope im Kontrapunkt</h2>
+  <p>In der vierten Gattung bewegt sich die Gegenstimme in Halben, aber versetzt: Jede Note beginnt auf der leichten Zeit und wird über den Taktstrich auf die schwere Zeit des nächsten Takts übergebunden. Eine solche Verschiebung gegen den Takt heißt <dfn id="g-synkope">Synkope</dfn> (Kapitel 4). Während die Gegenstimme ihren Ton hält, wechselt der Cantus firmus auf den nächsten Ton. Der gehaltene Ton steht dadurch plötzlich in einem neuen Zusammenklang.</p>
+  <p>Ist dieser neue Zusammenklang konsonant, ist alles in Ordnung. Ist er dissonant, entsteht ein <dfn id="g-vorhalt">Vorhalt</dfn>: Die Dissonanz steht auf der schweren Zeit, und der Ton muss sich danach auflösen.</p>
+
+  <!-- 36.2 -->
+  <h2 id="phasen">36.2 Die drei Phasen des Vorhalts</h2>
+  <p>Jeder Vorhalt läuft in drei Schritten ab:</p>
+  <ol>
+    <li><strong>Vorbereitung:</strong> Der Ton erklingt auf leichter Zeit als Konsonanz.</li>
+    <li><strong>Dissonanz:</strong> Der Ton wird übergebunden. Der Cantus firmus wechselt, und auf der schweren Zeit entsteht eine Dissonanz.</li>
+    <li><strong>Auflösung:</strong> Der dissonante Ton geht auf der nächsten leichten Zeit <em>stufenweise abwärts</em> in eine Konsonanz.</li>
+  </ol>
+  <div class="abc" data-bpm="60" data-caption="Vorhalt 7–6: c'' wird als Sexte über e vorbereitet, wird über d zur Septime und löst sich abwärts nach h' auf.">
+    X:1
+    M:4/4
+    L:1/2
+    K:C
+    %%score {V1 V2}
+    V:V1 clef=treble
+    V:V2 clef=bass
+    [V:V1] z "^6 Vorbereitung"c- | "^7 Dissonanz"c "^6 Auflösung"B |]
+    [V:V2] E,2 | D,2 |]
+  </div>
+  <p>Benannt wird ein Vorhalt nach den beiden Intervallen von Dissonanz und Auflösung: <strong>7–6</strong> heißt, die Septime löst sich in die Sexte auf.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Vorhalt: vorbereitet (Konsonanz, leichte Zeit), übergebunden (Dissonanz, schwere Zeit), aufgelöst (Schritt abwärts in eine Konsonanz, leichte Zeit).</p>
+  </div>
+
+  <section class="layer deep" data-title="Warum darf eine Dissonanz hier auf der schweren Zeit stehen?">
+    <p>In Kapitel 35 galt: Auf der schweren Zeit steht eine Konsonanz. Der Vorhalt bricht diese Regel scheinbar, und doch ist er die Dissonanz, die am wenigsten nach Fehler klingt. Das liegt an der Vorbereitung.</p>
+    <p>Der dissonante Ton ist kein neuer Ton. Er klang gerade eben noch als Konsonanz, und das Ohr hat ihn als stabilen Teil des Satzes akzeptiert. Neu ist nur der Ton der <em>anderen</em> Stimme. Die Dissonanz entsteht also, weil die eine Stimme „zu früh“ weitergeht, während die andere noch am alten Ton festhält. Der Name sagt es: Der Ton wird <em>vorgehalten</em>, er hält die Konsonanz des vorigen Klangs vor dem neuen Klang fest.</p>
+    <p>Das Ohr versteht diesen Zusammenhang. Es hört eine Stimme, die zögert, und erwartet, dass sie nachzieht. Genau das geschieht bei der Auflösung. Die Spannung entsteht durch eine Verzögerung, nicht durch einen fremden Ton, und eine Verzögerung kann sich das Gehör erklären.</p>
+    <p>Weil der Vorhalt auf der schweren Zeit liegt, ist er zugleich die <em>stärkste</em> Dissonanz des strengen Satzes. Die Barockmusik nutzte ihn deshalb gezielt für Ausdruck, etwa für Klage und Sehnsucht. Ein abwärts aufgelöster Vorhalt wurde als „Seufzer“ empfunden.</p>
+  </section>
+
+  <!-- 36.3 -->
+  <h2 id="welche">36.3 Welche Vorhalte gut sind</h2>
+  <p>Nicht jede Dissonanz eignet sich als Vorhalt. Liegt die Gegenstimme <strong>oben</strong>, sind diese üblich:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Vorhalt</th><th>Dissonanz → Auflösung</th><th>Bewertung</th></tr></thead>
+      <tbody>
+        <tr><td>7–6</td><td>Septime → Sexte</td><td>der häufigste und beste Vorhalt</td></tr>
+        <tr><td>4–3</td><td>Quarte → Terz</td><td>sehr gut, die Grundlage des sus4-Akkords</td></tr>
+        <tr><td>9–8</td><td>None → Oktave</td><td>möglich, aber schwächer, weil die Auflösung in eine leere Oktave führt</td></tr>
+        <tr><td>2–1</td><td>Sekunde → Prime</td><td>meiden: Die Auflösung lässt die Stimmen zusammenfallen</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Liegt die Gegenstimme <strong>unten</strong>, ist der wichtigste Vorhalt <strong>2–3</strong>: Der Bass hält einen Ton, über dem die Oberstimme einen Schritt abwärts geht. Dadurch wird aus der Terz eine Sekunde (genauer: eine None), die sich auflöst, indem der Bass einen Schritt abwärts geht.</p>
+  <div class="abc" data-bpm="60" data-caption="Vorhalt 2–3 in der Unterstimme: c wird unter d' zur None und löst sich nach H auf.">
+    X:1
+    M:4/4
+    L:1/2
+    K:C
+    %%score {V1 V2}
+    V:V1 clef=treble
+    V:V2 clef=bass
+    [V:V1] E2 | D2 | C2 |]
+    [V:V2] z "^3"C,- | "^(2)"C, "^3"B,, | "^8"C,2 |]
+  </div>
+  <p>Eine Folge wie 6–5 ist <em>kein</em> Vorhalt, denn die Sexte ist bereits konsonant. Übergebundene Konsonanzen sind erlaubt, sie brauchen keine Auflösung. Die Stimme darf danach frei weitergehen, auch springen.</p>
+
+  <section class="layer deep" data-title="Warum lösen sich Vorhalte abwärts auf?">
+    <p>Im strengen Satz geht die Auflösung immer stufenweise abwärts. Dafür gibt es mehrere Gründe, die sich gegenseitig stützen.</p>
+    <p><strong>Die Herkunft:</strong> Ein Vorhalt entsteht, wenn eine Stimme zögert, während die andere abwärts weitergeht. Im 7–6-Vorhalt fällt der Cantus firmus (e → d), und die Oberstimme folgt mit einem Schritt Verspätung (c'' → h'). Sie macht also dieselbe Bewegung wie die andere Stimme, nur später. Lösen sich die beiden zu einer Sexte, ist die Ordnung wiederhergestellt.</p>
+    <p><strong>Die Intervallbewegung:</strong> Bei 7–6 und 4–3 führt ein Schritt abwärts von einer Dissonanz in die nächstliegende unvollkommene Konsonanz. Ein Schritt aufwärts würde aus der Septime eine Oktave und aus der Quarte eine Quinte machen, also eine vollkommene Konsonanz, und die würde den Satz kurz zum Stehen bringen.</p>
+    <p><strong>Die Wahrnehmung:</strong> In vielen Musikkulturen werden fallende Linien mit Entspannung und Ruhe verbunden, steigende mit Spannung und Aufbruch. Ein abwärts aufgelöster Vorhalt fühlt sich deshalb wie ein Ausatmen an.</p>
+    <p>In späterer Musik gibt es auch Vorhalte, die sich aufwärts auflösen, vor allem wenn der vorgehaltene Ton ein Leitton ist (7–8: h' über c löst sich nach c''). Sie heißen manchmal <em>Retardation</em>. Im strengen Satz nach Fux kommen sie nicht vor.</p>
+  </section>
+
+  <!-- 36.4 -->
+  <h2 id="beispiel4">36.4 Ein Beispiel der vierten Gattung</h2>
+  <p>Die Regeln der vierten Gattung zusammengefasst:</p>
+  <ol>
+    <li>Der erste Takt beginnt mit halber Pause, danach eine vollkommene Konsonanz.</li>
+    <li>Jeder Ton wird von der leichten auf die schwere Zeit übergebunden.</li>
+    <li>Ist der übergebundene Ton auf der schweren Zeit dissonant, löst er sich stufenweise abwärts in eine Konsonanz auf.</li>
+    <li>Ist er konsonant, geht er frei weiter.</li>
+    <li>Die Töne auf der leichten Zeit sind immer konsonant.</li>
+    <li>Wenn keine Synkope möglich ist, darf sie kurz unterbrochen werden. Man spricht dann vom „Brechen“ der Gattung.</li>
+    <li>Schluss mit Gegenstimme oben: Vorhalt 7–6 über der 2. Stufe, dann die Oktave.</li>
+  </ol>
+  <div class="abc" data-bpm="80" data-caption="Vierte Gattung über c – d – f – e – d – c. Dissonanzen in Klammern.">
+    X:1
+    M:4/4
+    L:1/2
+    K:C
+    %%score {V1 V2}
+    V:V1 clef=treble
+    V:V2 clef=bass
+    [V:V1] z "^5"G- | "^(4)"G "^3"F- | "^8"F "^6"D- | "^(7)"D "^6"C- | "^(7)"C "^6"B, | "^8"C2 |]
+    [V:V2] C,2 | D,2 | F,2 | E,2 | D,2 | C,2 |]
+  </div>
+  <p>Takt 2 enthält einen Vorhalt 4–3 (g' über d löst sich nach f'). In Takt 3 ist der übergebundene Ton f' über f eine Oktave, also konsonant, und die Stimme springt frei zu d'. In den Takten 4 und 5 folgen zwei Vorhalte 7–6. Der letzte ist die typische Schlussformel: c' über d als Septime, aufgelöst in den Leitton h, dann die Oktave c–c'.</p>
+
+  <section class="layer piano" data-title="Vorhalte spielen: halten, reiben, lösen">
+    <p>Spiel das Beispiel mit beiden Händen. Die rechte Hand hält ihre Töne über den Taktstrich, während die linke wechselt. Dabei lernst du zwei Dinge.</p>
+    <p><strong>Wirklich halten:</strong> Der übergebundene Ton wird nicht neu angeschlagen. Der Finger bleibt auf der Taste, während die linke Hand den neuen Basston spielt. Erst dadurch entsteht die Reibung. Achte darauf, kein Pedal zu verwenden, denn das würde die Auflösung verwischen.</p>
+    <p><strong>Gestalten:</strong> In der Barockmusik wird die Dissonanz betont und die Auflösung leiser gespielt. Am Klavier kannst du die Dissonanz nicht lauter machen, weil der Ton schon klingt. Du kannst aber den neuen Basston, der die Dissonanz auslöst, mit etwas Gewicht spielen und die Auflösung in der rechten Hand ganz weich anschlagen. So entsteht der „Seufzer“.</p>
+    <p><strong>Übung:</strong> Spiel nur Takt 4 und 5 als Schleife: d' halten, links e anschlagen, rechts c' weich spielen und halten, links d anschlagen, rechts h weich. Hör auf das Wechselspiel von Reibung und Lösung.</p>
+  </section>
+
+  <!-- 36.5 -->
+  <h2 id="ketten">36.5 Vorhaltsketten</h2>
+  <p>Wenn beide Stimmen stufenweise fallen, kann sich ein Vorhalt an den nächsten reihen. Die bekannteste Form ist die Kette von 7–6-Vorhalten über einem fallenden Bass:</p>
+  <div class="abc" data-bpm="80" data-caption="Kette von 7–6-Vorhalten: Jede Auflösung ist zugleich die Vorbereitung des nächsten Vorhalts.">
+    X:1
+    M:4/4
+    L:1/2
+    K:C
+    %%score {V1 V2}
+    V:V1 clef=treble
+    V:V2 clef=bass
+    [V:V1] z "^6"c- | "^(7)"c "^6"B- | "^(7)"B "^6"A- | "^(7)"A "^6"G- | "^(7)"G "^6"F- | "^(7)"F "^6"E | "^3"E2 |]
+    [V:V2] E,2 | D,2 | C,2 | B,,2 | A,,2 | G,,2 | C,2 |]
+  </div>
+  <p>Ohne die Haltebögen wäre das eine einfache Folge paralleler Sexten. Durch die Verschiebung um eine Halbe wird jede Sexte zuerst zur Septime. Diese Technik findest du in unzähligen Werken des Barock, oft in Triosonaten, wo zwei Melodieinstrumente sich in Vorhaltsketten abwechseln. In Kapitel 26 begegnet sie dir wieder als Grundlage von Sequenzen.</p>
+
+  <!-- 36.6 -->
+  <h2 id="gattung5">36.6 Die fünfte Gattung: der freie Kontrapunkt</h2>
+  <p>In der fünften Gattung, dem <dfn id="g-bluehender-kontrapunkt">blühenden Kontrapunkt</dfn> (lateinisch <em>contrapunctus floridus</em>), werden alle bisherigen Notenwerte gemischt: Ganze, Halbe, Viertel, Synkopen und vereinzelt Achtel. Es gelten die Regeln der jeweiligen Gattung für den jeweiligen Notenwert. Dazu kommen Regeln für den Rhythmus:</p>
+  <ul>
+    <li><strong>Abwechslung:</strong> Kein Rhythmus wird lange beibehalten. Ein guter Kontrapunkt beginnt meist ruhig, wird in der Mitte bewegter und kommt zum Schluss wieder zur Ruhe.</li>
+    <li><strong>Achtel</strong> kommen nur paarweise vor, auf der leichten Hälfte eines Schlags, stufenweise erreicht und verlassen.</li>
+    <li><strong>Synkopen</strong> sind das wichtigste Mittel, um Schwung über den Taktstrich zu tragen.</li>
+    <li><strong>Viertel</strong> sollten nicht in langen Ketten stehen, sonst wird aus der fünften Gattung eine dritte.</li>
+    <li>Der Schluss ist meist ein Vorhalt 7–6 (Gegenstimme oben).</li>
+  </ul>
+  <div class="abc" data-bpm="80" data-caption="Fünfte Gattung über c – d – f – e – d – c. Dissonanzen in Klammern.">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {V1 V2}
+    V:V1 clef=treble
+    V:V2 clef=bass
+    [V:V1] z2 "^5"G2- | "^(4)"G2 "^3"F "^(2)"E | "^6"D "^8"F "^3"A2 | "^3"G "^(4)"A/ "^5"B/ "^6"c2- | "^(7)"c2 "^6"B2 | "^8"c4 |]
+    [V:V2] C,4 | D,4 | F,4 | E,4 | D,4 | C,4 |]
+  </div>
+  <p>Die Gegenstimme beginnt mit einer Synkope und einem Vorhalt 4–3. Danach folgen ein Durchgang in Vierteln (e'), ein Dreiklang in Vierteln und einer Halben (d' f' a'), ein Achtelpaar als Durchgang (a' h') und zum Schluss die Synkope mit dem Vorhalt 7–6. Der Rhythmus wird zur Mitte hin bewegter und am Ende wieder ruhig.</p>
+
+  <section class="layer deep" data-title="Warum Fux den Rhythmus so genau regelt">
+    <p>Die Regeln zum Rhythmus der fünften Gattung wirken pedantisch. Sie beschreiben aber ein Grundprinzip der Vokalmusik des 16. Jahrhunderts: Jede Stimme soll für sich atmen können. Ein Sänger kann nicht beliebig schnell und lange in kleinen Notenwerten singen. Bewegung entsteht in Wellen, mit ruhigen Abschnitten dazwischen.</p>
+    <p>Die Achtel-Regel hat einen ähnlichen Grund. Achtel sind in diesem Stil Verzierungen, keine tragenden Töne. Stehen sie auf der leichten Hälfte eines Schlags und werden stufenweise erreicht, fügen sie sich als Schnörkel in die Linie ein. Stünden sie betont oder würden springen, wären sie plötzlich wichtige Töne, und der ruhige Grundpuls der Musik ginge verloren.</p>
+    <p>Das Ziel ist das, was Fux und seine Vorbilder an Palestrinas Musik bewunderten: eine Linie, die frei wirkt und dennoch nie willkürlich ist. Jede Abweichung vom Grundpuls ist motiviert, jede Dissonanz erklärbar.</p>
+  </section>
+
+  <!-- 36.7 -->
+  <h2 id="praxis">36.7 Vom Vorhalt zum sus-Akkord</h2>
+  <p>Vorhalte sind keine Spezialität alter Musik. In der Pop- und Rockmusik heißen sie <dfn id="g-sus-akkord">sus-Akkorde</dfn>, von englisch <em>suspended</em>, „vorgehalten“. Ein <strong>Csus4</strong> besteht aus c – f – g: Die Terz e ist durch die Quarte f ersetzt. Löst sich f nach e auf, ist das genau der Vorhalt 4–3 aus diesem Kapitel.</p>
+  <div class="abc" data-bpm="70" data-caption="Csus4 → C und Gsus4 → G: der Vorhalt 4–3 als Akkord">
+    X:1
+    M:4/4
+    L:1/2
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "Csus4"[CFG] "C"[CEG] | "Gsus4"[G,CD] "G"[G,B,D] |]
+    [V:LH] C,2 C,2 | G,,2 G,,2 |]
+  </div>
+  <p>Der Unterschied zum strengen Satz: In der Popmusik wird der Vorhalt oft nicht vorbereitet und manchmal auch nicht aufgelöst. Ein sus4-Akkord darf als offener, schwebender Klang für sich stehen. Daneben gibt es den <strong>sus2-Akkord</strong> (c – d – g), bei dem die Terz durch die Sekunde ersetzt ist. Er entspricht dem Vorhalt 2–3, wird aber in der Praxis selten aufgelöst und meist als eigene Klangfarbe benutzt. Die Akkordsymbole erklärt Kapitel 17.</p>
+
+  <section class="layer piano" data-title="sus4-Auflösungen in der Begleitung">
+    <p>Ein sus4 vor dem eigentlichen Akkord ist eines der einfachsten Mittel, eine Begleitung lebendiger zu machen.</p>
+    <ul>
+      <li><strong>Griff:</strong> Für Csus4 → C bleibt die rechte Hand in der Lage c'–f'–g' (1–3–5 oder 1–4–5). Der 4. Finger auf f' fällt zum 3. Finger auf e'. Die Bewegung ist eine einzige kleine Fingerbewegung.</li>
+      <li><strong>Rhythmus:</strong> Spiel den sus4 auf Zählzeit 1 und die Auflösung auf Zählzeit 3, oder den sus4 eine Achtel vor dem Akkord als kurzen Vorschlag.</li>
+      <li><strong>Am Schluss:</strong> Vor dem letzten Akkord eines Songs wirkt Gsus4 → G → C besonders stark. Das ist der alte Vorhalt 4–3 über der Dominante, der in den Kadenzen der Barockzeit allgegenwärtig war.</li>
+    </ul>
+    <p><strong>Übung:</strong> Spiel die Folge C – Am – F – G (Abschnitt 33.8) und füge vor jedem Akkord, wo es passt, einen sus4 ein: Csus4 → C, Fsus4 → F, Gsus4 → G. Hör, wie sich die Begleitung dadurch bewegt, obwohl die Akkorde gleich bleiben.</p>
+  </section>
+
+  <section class="layer piano" data-title="Freien Kontrapunkt improvisieren">
+    <p>Wenn du die fünf Gattungen kennst, kannst du über einer Basslinie frei eine zweite Stimme improvisieren. Das ist eine ausgezeichnete Vorbereitung auf das Spiel nach Gehör (Kapitel 49).</p>
+    <p><strong>Übung:</strong> Spiel mit der linken Hand langsam den Cantus firmus c – d – f – e – d – c, jeden Ton über einen ganzen Takt. Improvisier mit der rechten Hand eine Gegenstimme in gemischten Rhythmen. Halte dich an drei Grundsätze:</p>
+    <ol>
+      <li>Auf jeder Eins eine Konsonanz oder ein vorbereiteter Vorhalt.</li>
+      <li>Dissonanzen dazwischen nur stufenweise.</li>
+      <li>Vor dem Schluss c' halten, während links das d kommt, dann nach h auflösen.</li>
+    </ol>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>In der vierten Gattung wird jeder Ton von der leichten auf die schwere Zeit übergebunden.</li>
+    <li>Ein Vorhalt hat drei Phasen: Vorbereitung (Konsonanz), Dissonanz auf schwerer Zeit, Auflösung stufenweise abwärts.</li>
+    <li>Gute Vorhalte sind 7–6 und 4–3 (Gegenstimme oben) sowie 2–3 (Gegenstimme unten). Übergebundene Konsonanzen brauchen keine Auflösung.</li>
+    <li>Die fünfte Gattung mischt alle Notenwerte. Rhythmische Abwechslung, Achtel nur als stufenweise Verzierung, Schluss mit 7–6-Vorhalt.</li>
+    <li>sus4-Akkorde der Popmusik sind Vorhalte 4–3, die oft ohne Vorbereitung und manchmal ohne Auflösung verwendet werden.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">36.1</span><div><span class="kind">Notenlesen</span>Bestimme in jedem Takt, ob auf der schweren Zeit ein Vorhalt steht, und wenn ja, welcher.</div></div>
+      <div class="abc" data-bpm="80">
+        X:1
+        M:4/4
+        L:1/2
+        K:C
+        %%score {V1 V2}
+        V:V1 clef=treble
+        V:V2 clef=bass
+        [V:V1] z c- | c A- | A G- | G F- | F E |]
+        [V:V2] A,2 | F,2 | E,2 | A,2 | G,2 |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Takt 1: c'' über a, Terz (Vorbereitung). Takt 2: c'' über f ist eine Quinte, also konsonant, kein Vorhalt. Die Stimme springt frei zu a'. Takt 3: a' über e ist eine Quarte, also Vorhalt 4–3 mit Auflösung nach g' (Terz). Takt 4: g' über a ist eine Septime, Vorhalt 7–6 mit Auflösung nach f' (Sexte). Takt 5: f' über g ist eine Septime, Vorhalt 7–6 mit Auflösung nach e' (Sexte).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">36.2</span><div><span class="kind">Theorie</span>Warum ist die Folge 6–5 (Sexte übergebunden, dann Schritt abwärts in die Quinte) kein Vorhalt?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Ein Vorhalt setzt voraus, dass der übergebundene Ton dissonant ist. Die Sexte ist eine Konsonanz. Der Ton muss sich also nicht auflösen. Die Bewegung 6–5 ist einfach ein Schritt von einer Konsonanz in eine andere. Sie ist erlaubt, solange keine Parallelen entstehen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">36.3</span><div><span class="kind">Theorie</span>Im Vorhalt 7–6 über dem Bass d: Welcher Ton wird vorgehalten, worauf löst er sich auf, und über welchem Basston wurde er vorbereitet, wenn der Bass vorher e war?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die Septime über d ist c (etwa c''). Sie löst sich in die Sexte h' auf. Vorbereitet wurde c'' über e als kleine Sexte, also als Konsonanz.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">36.4</span><div><span class="kind">Theorie</span>Schreib einen Kontrapunkt der vierten Gattung über den Cantus firmus c – e – f – g – e – a – g – e – f – e – d – c (kleine Oktave). Beginne mit halber Pause und g'.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Eine mögliche Lösung (Töne der leichten Zeit, jeweils übergebunden): g' | e' | d' | e' | g' | f' | e' | e'' | d'' | c'' | h' | c''. Auf den schweren Zeiten entstehen: Terz (g' über e), Septime 7–6 (e' über f), Quinte (d' über g), Oktave (e' über e), Septime 7–6 (g' über a), Septime 7–6 (f' über g), Oktave (e' über e), dann drei Vorhalte 7–6 hintereinander zum Schluss. In Takt 8 springt die Stimme eine Oktave nach oben, um Platz für die abschließende Vorhaltskette zu gewinnen. Der Sprung wird durch Schritte abwärts ausgeglichen.</div>
+      <div class="abc" data-bpm="100">
+        X:1
+        M:4/4
+        L:1/2
+        K:C
+        %%score {V1 V2}
+        V:V1 clef=treble
+        V:V2 clef=bass
+        [V:V1] z "^5"G- | "^3"G "^8"E- | "^(7)"E "^6"D- | "^5"D "^6"E- | "^8"E "^3"G- | "^(7)"G "^6"F- |
+        [V:V2] C,2 | E,2 | F,2 | G,2 | E,2 | A,2 |
+        [V:V1] "^(7)"F "^6"E- | "^8"E "^8"e- | "^(7)"e "^6"d- | "^(7)"d "^6"c- | "^(7)"c "^6"B | "^8"c2 |]
+        [V:V2] G,2 | E,2 | F,2 | E,2 | D,2 | C,2 |]
+      </div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">36.5</span><div><span class="kind">Theorie</span>Die Unterstimme hält c, während die Oberstimme von e' nach d' geht. Welcher Vorhalt entsteht, und wie löst er sich auf?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>c unter d' bildet eine None, also eine zusammengesetzte Sekunde. Das ist der Vorhalt 2–3 in der Unterstimme. Er löst sich auf, indem die Unterstimme stufenweise abwärts nach H geht. H–d' ist eine (zusammengesetzte) kleine Terz.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">36.6</span><div><span class="kind">Gehör</span>Spiel die Vorhaltskette aus 36.5 ab und danach diese Version ohne Haltebögen. Beschreibe den Unterschied.</div></div>
+      <div class="abc" data-bpm="80">
+        X:1
+        M:4/4
+        L:1/2
+        K:C
+        %%score {V1 V2}
+        V:V1 clef=treble
+        V:V2 clef=bass
+        [V:V1] c2 | B2 | A2 | G2 | F2 | E2 | E2 |]
+        [V:V2] E,2 | D,2 | C,2 | B,,2 | A,,2 | G,,2 | C,2 |]
+      </div>
+      <details class="solution"><summary>Tipp</summary><div>Ohne Haltebögen hörst du eine ruhige Folge paralleler Sexten, angenehm, aber ohne Spannung. Mit Vorhalten zieht jede schwere Zeit eine kleine Reibung nach sich, die sich gleich wieder löst. Die Musik bekommt einen Puls aus Spannung und Entspannung.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">36.7</span><div><span class="kind">Theorie</span>Was ist an diesem Ausschnitt der fünften Gattung falsch? Über einem liegenden c spielt die Oberstimme: g' (Viertel), dann zwei Achtel h' a', dann g' (Halbe).</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Das erste Achtel h' wird durch einen Terzsprung (g' → h') erreicht. Achtel müssen stufenweise erreicht und verlassen werden. Außerdem ist h' über c eine große Septime, also eine Dissonanz, die durch einen Sprung erreicht wird. Korrekt wäre etwa g' (Viertel), a' h' (Achtel), c'' (Halbe): Das a' ist ein Durchgang, h' ebenfalls.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">36.8</span><div><span class="kind">Am Klavier</span>Spiel Csus4 → C, Fsus4 → F und Gsus4 → G jeweils mit dem Grundton links. Welcher Finger bewegt sich in der rechten Hand?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Csus4 c'–f'–g' → C c'–e'–g': f' → e'. Fsus4 c'–f'–b' → F c'–f'–a': b' → a'. Gsus4 g–c'–d' → G g–h–d': c' → h. In allen Fällen bewegt sich nur der Ton, der die Quarte bildet, einen Schritt abwärts zur Terz.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">36.9</span><div><span class="kind">Am Klavier</span>Spiel das Beispiel der fünften Gattung aus 36.6 mit beiden Händen. Achte besonders auf das Achtelpaar und auf die übergebundenen Töne.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Fingersatz rechts als Vorschlag: g' (4), gehalten | f' (3), e' (2) | d' (1), f' (2), a' (3) | g' (2), a' (3), h' (4), c'' (5), gehalten | h' (4) | c'' (5). Der Daumen liegt auf dem tiefsten Ton d', von dort reicht die Hand ohne Lagewechsel bis zum Schluss. Halte g' und c'' wirklich über den Taktstrich, während die linke Hand wechselt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">36.10</span><div><span class="kind">Vertiefung</span>Der Vorhalt steht auf der schweren Zeit, obwohl dort sonst nur Konsonanzen erlaubt sind. Erkläre, warum das Gehör ihn trotzdem akzeptiert.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der dissonante Ton ist kein neuer Ton, sondern klang unmittelbar vorher als Konsonanz. Die Dissonanz entsteht nur, weil die andere Stimme weitergeht, während dieser Ton liegen bleibt. Das Gehör versteht das als Verzögerung: Die Stimme zögert und wird gleich nachziehen. Weil die Auflösung erwartbar ist und tatsächlich folgt, wird die Reibung als ausdrucksvolle Spannung erlebt und nicht als Fehler.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(36);
+</script>
+</body>
+</html>

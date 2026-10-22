@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nach Gehör spielen und improvisieren · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .tool { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; margin-block: 1.6rem; }
+  .tool h4 { margin-top: 0; }
+  .tool .settings { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-size: var(--step--1); font-family: var(--font-display); color: var(--muted); margin-bottom: 0.6rem; }
+  .tool .settings label { display: inline-flex; gap: 0.3rem; align-items: center; cursor: pointer; }
+  .tool .status { font-family: var(--font-display); min-height: 1.6em; }
+  .tool .chord-now { font-family: var(--font-display); font-weight: 700; font-size: var(--step-3); color: var(--accent); min-height: 1.3em; }
+  .tool .bars { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-block: 0.5rem; }
+  .tool .bars span { font-family: var(--font-mono); font-size: var(--step--1); border: 1px solid var(--line); border-radius: 4px; padding: 0.1rem 0.4rem; }
+  .tool .bars span.on { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+  .tool input[type="range"] { accent-color: var(--accent); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil VII · Kapitel 49</div>
+    <h1>Nach Gehör spielen und improvisieren</h1>
+    <p class="lede">Noten sind nur ein Weg zur Musik. Ein Lied aus dem Gedächtnis nachspielen, die Akkorde zu einer Melodie finden, frei über eine Begleitung spielen: All das verbindet Ohr und Hand direkt. Dieses Kapitel zeigt dir, wie du anfängst, und warum vieles leichter ist, als es scheint.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>eine bekannte Melodie Schritt für Schritt heraushören und nachspielen,</li>
+      <li>die Tonart eines Liedes bestimmen und passende Akkorde finden,</li>
+      <li>ein Lied in eine bequeme Tonart übertragen,</li>
+      <li>mit der Pentatonik über eine Begleitung improvisieren,</li>
+      <li>einen 12-Takt-Blues spielen und mit der Blues-Skala darüber improvisieren.</li>
+    </ul>
+  </div>
+
+  <!-- 49.1 -->
+  <h2 id="ohr">49.1 Ohr und Hand verbinden</h2>
+  <p>Wer nach Gehör spielt, übersetzt einen inneren Klang direkt in Bewegungen. Das gelingt nicht durch Raten, sondern mit den Werkzeugen aus diesem Buch: Intervalle (Kapitel 5), Tonleitern (Kapitel 6 bis 9) und typische Akkordfolgen (Kapitel 18). Was du theoretisch kennst, lernst du hier zu <em>erkennen</em>.</p>
+  <p>Die wichtigste Fähigkeit dabei ist das <dfn id="g-relatives-gehoer">relative Gehör</dfn>: Töne im Verhältnis zueinander zu erkennen. Du musst nicht wissen, dass ein Lied mit g' beginnt. Es reicht zu hören, dass der zweite Ton eine Terz höher liegt als der erste. Diese Fähigkeit hat jeder, und sie wächst mit Übung.</p>
+
+  <section class="layer deep" data-title="Absolutes und relatives Gehör">
+    <p>Menschen mit <dfn id="g-absolutes-gehoer">absolutem Gehör</dfn> können einen einzelnen Ton benennen, ohne einen Vergleichston zu hören: „Das ist ein Fis.“ Diese Fähigkeit ist selten. In westlichen Ländern wird sie oft mit etwa einem von 10.000 Menschen angegeben. Unter Musikern, die sehr früh mit Unterricht begonnen haben, ist sie deutlich häufiger. Die Psychologin Diana Deutsch fand 2006 bei Musikstudierenden in China, die eine Tonsprache sprechen und früh mit Musik begonnen hatten, einen weit höheren Anteil als bei vergleichbaren Studierenden in den USA. Vermutlich gibt es ein frühes Zeitfenster in der Kindheit, in dem diese Fähigkeit entstehen kann.</p>
+    <p>Für das Musizieren ist das absolute Gehör aber weniger wichtig, als oft angenommen wird. Musik besteht aus Beziehungen: Eine Melodie bleibt dieselbe, egal auf welchem Ton sie beginnt. Ein Kinderlied, das in G-Dur oder in F-Dur gesungen wird, erkennt jeder sofort. Genau das ist relatives Hören: Wir hören die Intervalle und die Funktion der Töne innerhalb der Tonart, nicht die absoluten Frequenzen.</p>
+    <p>Das relative Gehör lässt sich auch im Erwachsenenalter sehr gut trainieren. Es ist die Grundlage für alles in diesem Kapitel: Heraushören, Akkorde finden, Improvisieren, Transponieren.</p>
+  </section>
+
+  <!-- 49.2 -->
+  <h2 id="melodie">49.2 Melodien heraushören</h2>
+  <p>Nimm eine Melodie, die du gut kennst und singen kannst, zum Beispiel ein Kinderlied oder einen Weihnachtslied-Anfang. Dann geh so vor:</p>
+  <ol>
+    <li><strong>Singen.</strong> Sing die ersten zwei oder drei Takte langsam. Was du nicht singen kannst, kannst du kaum heraushören.</li>
+    <li><strong>Startton wählen.</strong> Such dir einen Ton, der für deine Stimme bequem ist, und behandle ihn als ersten Ton. Für den Anfang ist c' praktisch, weil viele Melodien dann auf weißen Tasten bleiben.</li>
+    <li><strong>Richtung hören.</strong> Geht der nächste Ton hinauf, hinunter oder bleibt er gleich?</li>
+    <li><strong>Abstand schätzen.</strong> Schritt (Sekunde) oder Sprung? Wenn Sprung: wie groß? Die Lieder aus Abschnitt 5.11 helfen.</li>
+    <li><strong>Probieren und korrigieren.</strong> Spiel den Ton, vergleiche mit deinem inneren Klang, korrigiere. Fehler sind hier Teil der Methode.</li>
+    <li><strong>Rhythmus dazu.</strong> Erst wenn die Töne stimmen, achte darauf, welche lang und welche kurz sind.</li>
+  </ol>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Die meisten Melodien bewegen sich überwiegend in Schritten. Große Sprünge sind selten und fallen deshalb auf. Wenn du unsicher bist, probier zuerst den Nachbarton.</p>
+  </div>
+
+  <div class="tool" id="echo">
+    <h4>Melodie-Echo</h4>
+    <p>Hör dir eine kurze Melodie an, die immer auf c' beginnt, und spiel sie auf der Klaviatur nach.</p>
+    <div class="settings">
+      <span>Länge:</span>
+      <label><input type="radio" name="echo-len" id="echo-len3" value="3" checked> 3 Töne</label>
+      <label><input type="radio" name="echo-len" id="echo-len4" value="4"> 4 Töne</label>
+      <label><input type="radio" name="echo-len" id="echo-len5" value="5"> 5 Töne</label>
+      <span>Tonvorrat:</span>
+      <label><input type="radio" name="echo-range" id="echo-r1" value="5" checked> c'–g'</label>
+      <label><input type="radio" name="echo-range" id="echo-r2" value="8"> c'–c''</label>
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" type="button" id="echo-new">▶ Neue Melodie</button>
+      <button class="btn" type="button" id="echo-again" disabled>Nochmal hören</button>
+      <button class="btn" type="button" id="echo-show" disabled>Lösung zeigen</button>
+    </div>
+    <p class="status" id="echo-status" aria-live="polite">Starte mit „Neue Melodie“.</p>
+    <div id="echo-kbd"></div>
+  </div>
+
+  <!-- 49.3 -->
+  <h2 id="tonart">49.3 Die Tonart finden</h2>
+  <p>Um Akkorde zu finden, brauchst du zuerst die Tonart. Hat dein Lied auf c' begonnen und bleibt es auf weißen Tasten, liegt es vermutlich in C-Dur oder a-Moll. Genauer:</p>
+  <ul>
+    <li><strong>Der Schlusston</strong> einer Melodie ist meistens der Grundton der Tonart. Die meisten Lieder enden „zu Hause“.</li>
+    <li><strong>Lange und betonte Töne</strong> sind oft Grundton, Terz oder Quinte der Tonart.</li>
+    <li><strong>Brauchst du schwarze Tasten</strong>, verrät ihre Zahl die Tonart (Kapitel 7). Ein einzelnes fis deutet auf G-Dur oder e-Moll, ein einzelnes b auf F-Dur oder d-Moll.</li>
+    <li><strong>Dur oder Moll:</strong> Klingt der Schluss hell und offen, eher Dur, dunkel oder wehmütig, eher Moll (Kapitel 8).</li>
+  </ul>
+
+  <section class="layer deep" data-title="Wie das Ohr den Grundton findet">
+    <p>Woher wissen wir, welcher Ton der Grundton ist, obwohl niemand ihn ansagt? Die Musikpsychologin Carol Krumhansl untersuchte das mit der sogenannten <em>Probe-Tone-Methode</em>. Mit Edward Kessler (1982) spielte sie Versuchspersonen eine Tonleiter oder Akkordfolge vor, gefolgt von einem einzelnen Testton. Die Personen bewerteten, wie gut dieser Ton als Abschluss passte.</p>
+    <p>Das Ergebnis war ein sehr stabiles Profil. Am besten passt der Grundton, dann Quinte und Terz, danach die übrigen Töne der Tonleiter, am schlechtesten die Töne außerhalb der Tonart. Dieses Profil entspricht ziemlich genau der Häufigkeit, mit der diese Töne in westlicher Musik vorkommen und auf betonten Zeiten stehen.</p>
+    <p>Das Ohr lernt also durch jahrelanges Hören eine Art Statistik: Welche Töne kommen oft vor, welche stehen am Ende, welche auf schweren Zählzeiten? Aus diesen Erfahrungen bildet es eine Erwartung, und der Ton, der am stärksten erwartet wird, fühlt sich wie „zu Hause“ an. Deshalb funktioniert der Schlusston als Wegweiser so zuverlässig: Komponisten bedienen diese Erwartung, und das Ohr hat sie längst verinnerlicht.</p>
+  </section>
+
+  <!-- 49.4 -->
+  <h2 id="akkorde">49.4 Akkorde zur Melodie finden</h2>
+  <p>Die meisten einfachen Lieder kommen mit drei bis vier Akkorden aus: <strong>I, IV, V</strong> und oft <strong>vi</strong> (Kapitel 13, 14). In C-Dur sind das C, F, G und Am. So findest du sie:</p>
+  <ol>
+    <li><strong>Tonart bestimmen</strong> und die Hauptakkorde bereitlegen.</li>
+    <li><strong>Den Bass hören.</strong> Wenn du eine Aufnahme hast, hör auf die tiefste Linie. Sie ist meist der Grundton des Akkords.</li>
+    <li><strong>Melodie auf den schweren Zählzeiten prüfen.</strong> Der Melodieton auf Zählzeit 1 ist fast immer ein Akkordton. Steht dort e, kommen C (c–e–g) oder Am (a–c–e) infrage, steht dort d, eher G (g–h–d).</li>
+    <li><strong>Probieren.</strong> Spiel links den Grundton der Kandidaten, rechts die Melodie. Klingt es stimmig, passt der Akkord. Klingt es schief, nimm den nächsten Kandidaten.</li>
+    <li><strong>Mit dem Schluss beginnen.</strong> Das Lied endet fast immer auf I, der vorletzte Akkord ist sehr oft V (Kapitel 16).</li>
+  </ol>
+
+  <section class="layer piano" data-title="Die Akkordfamilien der wichtigsten Tonarten">
+    <p>Diese Tabelle zeigt die leitereigenen Akkorde in vier bequemen Dur-Tonarten. Die fett gesetzten sind die häufigsten. Fast jedes Volks-, Kinder- und Popsong-Repertoire kommt mit ihnen aus.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Tonart</th><th><strong>I</strong></th><th>ii</th><th>iii</th><th><strong>IV</strong></th><th><strong>V</strong></th><th><strong>vi</strong></th></tr></thead>
+        <tbody>
+          <tr class="play-row" data-play="48 53 55 48" data-mode="mel"><td>C-Dur</td><td><strong>C</strong></td><td>Dm</td><td>Em</td><td><strong>F</strong></td><td><strong>G</strong></td><td><strong>Am</strong></td></tr>
+          <tr class="play-row" data-play="43 48 50 43" data-mode="mel"><td>G-Dur</td><td><strong>G</strong></td><td>Am</td><td>Hm</td><td><strong>C</strong></td><td><strong>D</strong></td><td><strong>Em</strong></td></tr>
+          <tr class="play-row" data-play="41 46 48 41" data-mode="mel"><td>F-Dur</td><td><strong>F</strong></td><td>Gm</td><td>Am</td><td><strong>B</strong></td><td><strong>C</strong></td><td><strong>Dm</strong></td></tr>
+          <tr class="play-row" data-play="38 43 45 38" data-mode="mel"><td>D-Dur</td><td><strong>D</strong></td><td>Em</td><td>F♯m</td><td><strong>G</strong></td><td><strong>A</strong></td><td><strong>Hm</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">Ein Klick auf eine Zeile spielt die Bassfolge I–IV–V–I.</p>
+    <p><strong>Übung:</strong> Nimm ein Lied, das du heraushören konntest. Begleite es links nur mit dem Grundton der Akkorde, einen Ton pro Takt. Wenn das stimmt, ersetze den Grundton durch eines der Begleitmuster aus Kapitel 46.</p>
+  </section>
+
+  <h4>Transponieren</h4>
+  <p>Hast du ein Lied in einer unbequemen Tonart herausgehört, kannst du es in eine leichtere übertragen. Das nennt man <dfn id="g-transponieren">Transponieren</dfn>. Am einfachsten geht es mit Stufen: Denk die Akkorde als I, IV, V und vi statt als Buchstaben. In C-Dur ist I–V–vi–IV gleich C–G–Am–F, in G-Dur G–D–Em–C. Die Melodie verschiebst du um dasselbe Intervall. Wer in Stufen denkt, kann jedes Lied in jeder Tonart spielen.</p>
+
+  <!-- 49.5 -->
+  <h2 id="pentatonik">49.5 Erste Improvisation: fünf schwarze Tasten</h2>
+  <p>Improvisieren heißt, Musik im Moment zu erfinden. Der einfachste Einstieg nutzt die fünf schwarzen Tasten. Sie bilden zusammen eine <strong>Pentatonik</strong>, eine Tonleiter aus fünf Tönen (Kapitel 9). Mit ihr klingt fast jede Tonfolge über der passenden Begleitung stimmig.</p>
+  <figure>
+    <div class="kb" data-from="60" data-to="84" data-labels="none" data-flat data-marks="61:: 63:: 66:: 68:: 70:: 73:: 75:: 78:: 80:: 82::" aria-label="Die schwarzen Tasten über zwei Oktaven: Ges-Dur-Pentatonik"></div>
+    <figcaption>Die schwarzen Tasten bilden die Ges-Dur-Pentatonik (ges–as–b–des–es), enharmonisch auch Fis-Dur-Pentatonik.</figcaption>
+  </figure>
+  <p>Starte unten den Begleitautomaten mit dem Muster „Pop auf den schwarzen Tasten“ und spiel mit der rechten Hand nur auf schwarzen Tasten dazu. Diese Leitlinien helfen:</p>
+  <ul>
+    <li><strong>Rhythmus vor Tönen.</strong> Klopf erst einen einfachen Rhythmus auf einer einzigen Taste. Ein guter Rhythmus mit einem Ton klingt besser als viele Töne ohne Rhythmus.</li>
+    <li><strong>Ein Motiv erfinden und wiederholen.</strong> Drei oder vier Töne reichen. Spiel es mehrmals, dann verändere es leicht: höher, tiefer, anderer Rhythmus.</li>
+    <li><strong>Frage und Antwort.</strong> Spiel eine kurze Phrase (die Frage), mach eine Pause, und spiel eine zweite, die ähnlich anfängt, aber anders endet (die Antwort).</li>
+    <li><strong>Pausen sind Musik.</strong> Lass Platz. Ein Zuhörer braucht Zeit, eine Idee aufzunehmen.</li>
+    <li><strong>Auf dem Grundton landen.</strong> Ende Phrasen ab und zu auf ges. Das klingt nach Ankommen.</li>
+  </ul>
+
+  <div class="tool" id="jam">
+    <h4>Begleitautomat</h4>
+    <div class="settings">
+      <span>Muster:</span>
+      <label><input type="radio" name="jam-loop" id="jam-pop" value="pop" checked> Pop auf den schwarzen Tasten (Ges–Des–Esm–Ces)</label>
+      <label><input type="radio" name="jam-loop" id="jam-blues" value="blues"> 12-Takt-Blues in C</label>
+    </div>
+    <div class="settings">
+      <label>Tempo <input type="range" id="jam-tempo" min="60" max="140" value="84" aria-label="Tempo"> <span id="jam-bpm" class="mono">84</span></label>
+    </div>
+    <div class="btn-row"><button class="btn primary" type="button" id="jam-btn">▶ Start</button></div>
+    <div class="chord-now" id="jam-chord" aria-live="off"></div>
+    <div class="bars" id="jam-bars"></div>
+  </div>
+
+  <section class="layer deep" data-title="Warum die Pentatonik kaum falsch klingen kann">
+    <p>Die Pentatonik hat keine Halbtonschritte. Zwischen ihren benachbarten Tönen liegen nur Ganztöne und kleine Terzen: ges–as–b in Ganztönen, b–des eine kleine Terz, des–es ein Ganzton, es–ges wieder eine kleine Terz. Damit fehlen genau die Intervalle, die am stärksten reiben: die kleine Sekunde und ihre Umkehrung, die große Septime. Auch der Tritonus kommt in der Pentatonik nicht vor. Welche zwei Töne du auch gleichzeitig spielst, sie bilden immer eine große Sekunde, eine Terz, eine Quarte, eine Quinte, eine Sexte oder eine kleine Septime. Keines davon klingt scharf (Abschnitt 5.10).</p>
+    <p>Die Pentatonik entsteht außerdem auf eine besonders einfache Weise: Stapelt man von ges aus vier reine Quinten, erhält man ges, des, as, es, b. Das sind genau die fünf schwarzen Tasten (siehe die Vertiefung in Abschnitt 5.10). Sie ist also aus dem konsonantesten Intervall nach der Oktave gebaut.</p>
+    <p>Vielleicht ist das ein Grund, warum pentatonische Tonleitern in sehr vielen Musikkulturen vorkommen, etwa in China und Japan, in Westafrika, in schottischen und irischen Volksliedern, in Spirituals und im Blues. Ob die Pentatonik deshalb ein „universelles“ Prinzip ist, wird in der Musikethnologie allerdings vorsichtig beurteilt. Ihre Verbreitung ist groß, aber nicht lückenlos, und ihre Verwendung unterscheidet sich von Kultur zu Kultur stark.</p>
+  </section>
+
+  <!-- 49.6 -->
+  <h2 id="blues">49.6 Der 12-Takt-Blues</h2>
+  <p>Der <dfn id="g-zwoelftakt-blues">12-Takt-Blues</dfn> ist eine der wichtigsten Formen von Jazz, Rock und Pop. Er besteht aus nur drei Akkorden, I7, IV7 und V7, in einem festen Schema von zwölf Takten. In C:</p>
+  <div class="table-scroll">
+    <table>
+      <tbody>
+        <tr><td class="mono">C7</td><td class="mono">C7</td><td class="mono">C7</td><td class="mono">C7</td></tr>
+        <tr><td class="mono">F7</td><td class="mono">F7</td><td class="mono">C7</td><td class="mono">C7</td></tr>
+        <tr><td class="mono">G7</td><td class="mono">F7</td><td class="mono">C7</td><td class="mono">G7</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Jede Zeile hat vier Takte, oft auch inhaltlich: In der traditionellen Textform wird die erste Zeile gesungen, in der zweiten wiederholt und in der dritten beantwortet. Der letzte Takt (G7) führt zurück zum Anfang. Mehr zur Form steht in Kapitel 42.</p>
+  <p>Für die Improvisation über den Blues in C nimmst du die <dfn id="g-blues-skala">Blues-Skala</dfn> c–es–f–ges–g–b–c (Kapitel 9). Sie ist die Moll-Pentatonik auf c (c–es–f–g–b) plus der verminderten Quinte ges.</p>
+  <div class="abc" data-bpm="96" data-caption="Die Blues-Skala auf c, dann ein kurzes Motiv daraus">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    C2 _E2 F2 _G2 | G2 _B2 c4 | "C7"z G _B c- c2 G2 | _B G _E C- C4 |]
+  </div>
+
+  <section class="layer deep" data-title="Blue Notes: Töne zwischen den Tasten">
+    <p>Der Blues entstand um 1900 im Süden der USA aus afroamerikanischen Traditionen: Arbeitsliedern, Spirituals, Rufen und Antworten. Sängerinnen und Sänger setzten bestimmte Töne bewusst zwischen die Tonstufen der europäischen Tonleiter. Die Terz liegt dann irgendwo zwischen kleiner und großer Terz, ebenso Quinte und Septime. Diese Töne heißen <dfn id="g-blue-note">Blue Notes</dfn>.</p>
+    <p>Daraus entsteht die charakteristische Reibung des Blues: Über einem C7-Akkord mit großer Terz e singt oder spielt die Melodie eine Terz, die eher zu es tendiert. Dur in der Begleitung, Moll in der Melodie. Nach den Regeln der klassischen Harmonielehre wäre das ein Fehler, im Blues ist es der Kern des Ausdrucks.</p>
+    <p>Das Klavier kann keine Töne zwischen den Tasten spielen. Pianisten haben deshalb Ersatztechniken entwickelt. Die wichtigste ist der <em>Schleifer</em> (engl. <em>crushed note</em>): Man schlägt es und e fast gleichzeitig an und lässt es sofort los. Das Ohr hört eine Terz, die von unten „hineinrutscht“. Ebenso üblich ist, es und e als Zweiklang reiben zu lassen. Beides ahmt das Gleiten der Stimme oder der Gitarrensaite nach.</p>
+  </section>
+
+  <section class="layer piano" data-title="Den Blues spielen">
+    <p><strong>Linke Hand.</strong> Spiel zum Blues-Schema links den Grundton und die Quinte als Zweiklang (c–g, f–c', g–d'), einmal pro Takt oder in Vierteln. Das ist schon eine vollständige Begleitung.</p>
+    <p><strong>Rechte Hand.</strong> Spiel nur drei Töne der Blues-Skala: c', es', f'. Erfinde einen Rhythmus und wiederhole ihn über den ganzen ersten Durchgang. Im zweiten Durchgang nimmst du g' und b' dazu.</p>
+    <p><strong>Der Schleifer.</strong> Spiel über C7 mit dem zweiten Finger es' und gleite sofort mit dem dritten Finger auf e', als würdest du von der schwarzen Taste abrutschen. Mach das am Anfang jeder Phrase.</p>
+    <p><strong>Mit dem Automaten.</strong> Stell den Begleitautomaten auf „12-Takt-Blues in C“ und spiel mit. Die Anzeige zeigt dir, in welchem Takt du bist. Achte besonders auf den Wechsel zu F7 in Takt 5 und zurück in Takt 7.</p>
+  </section>
+
+  <!-- 49.7 -->
+  <h2 id="routine">49.7 Eine Routine für das Gehör</h2>
+  <ul>
+    <li><strong>Jeden Tag eine Melodie.</strong> Hör eine einfache Melodie heraus, auch nur die ersten zwei Takte.</li>
+    <li><strong>In mehreren Tonarten.</strong> Spiel sie danach in einer zweiten Tonart. Das trainiert das Denken in Intervallen und Stufen.</li>
+    <li><strong>Fünf Minuten improvisieren.</strong> Mit dem Automaten oder einer einfachen eigenen Begleitung. Ohne Ziel, ohne Bewertung.</li>
+    <li><strong>Gehörtrainer nutzen.</strong> Die Trainer in den Kapiteln 5, 8, 11, 15, 16 und 24 schulen Intervalle, Tonleitern, Akkorde, Kadenzen und Kirchentonarten.</li>
+  </ul>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Nach Gehör spielen beruht auf relativem Hören. Das kann jeder lernen.</li>
+    <li>Melodien heraushören: singen, Startton wählen, Richtung und Abstand hören, probieren, korrigieren.</li>
+    <li>Der Schlusston zeigt meist die Tonart. Akkorde findest du über I, IV, V und vi und über die Melodietöne auf Zählzeit 1.</li>
+    <li>Improvisieren beginnt mit Rhythmus, Motiv, Wiederholung und Pausen. Die Pentatonik klingt fast nie falsch, weil ihr Halbtöne und Tritonus fehlen.</li>
+    <li>Der 12-Takt-Blues besteht aus I7, IV7 und V7. Die Blues-Skala ist Moll-Pentatonik plus verminderte Quinte.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">49.1</span><div><span class="kind">Gehör</span>Spiel im Melodie-Echo fünf Aufgaben mit drei Tönen und fünf mit vier Tönen. Notier, wie viele du beim ersten Versuch richtig hattest.</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Wenn dir eine Melodie zu schnell entgleitet, sing sie nach dem Hören laut nach, bevor du spielst. Das Singen hält die Melodie im Gedächtnis fest und zeigt dir die Richtung jedes Schritts.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">49.2</span><div><span class="kind">Am Klavier</span>Hör „Alle meine Entchen“ heraus, beginnend auf c'. Welche Töne brauchst du, und auf welchem Ton endet das Lied?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>c'–d'–e'–f'–g'–g' („Alle meine Entchen“), dann a'–a'–a'–a'–g' („schwimmen auf dem See“, zweimal), f'–f'–f'–f'–e'–e' („Köpfchen in das Wasser“), d'–d'–d'–d'–c' („Schwänzchen in die Höh“). Das Lied endet auf c', dem Grundton von C-Dur. Es braucht nur die Töne c' bis a'.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">49.3</span><div><span class="kind">Theorie</span>Eine Melodie in C-Dur hat auf Zählzeit 1 die Töne e, a, d und c (je ein Takt). Welche Akkorde aus C, F, G und Am passen jeweils?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>e: C (c–e–g) oder Am (a–c–e). a: F (f–a–c) oder Am. d: G (g–h–d). c: C, F oder Am. Eine sinnvolle Folge wäre C–F–G–C oder Am–F–G–C. Welche passt, entscheidet das Ohr und der Rest der Melodie.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">49.4</span><div><span class="kind">Theorie</span>Transponiere die Akkordfolge C–Am–F–G (I–vi–IV–V) nach G-Dur, F-Dur und D-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G-Dur: G–Em–C–D. F-Dur: F–Dm–B–C. D-Dur: D–Hm–G–A.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">49.5</span><div><span class="kind">Am Klavier</span>Starte den Begleitautomaten im Pop-Muster und improvisiere zwei Minuten auf den schwarzen Tasten. Benutze dabei bewusst ein Motiv aus drei Tönen, das du wiederholst und veränderst.</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Wenn dir nichts einfällt, nimm ein festes Rhythmusmuster (zum Beispiel „lang–kurz–kurz“) und ändere nur die Töne. Begrenzung hilft der Fantasie. Nimm dich auf: Beim Anhören klingt die eigene Improvisation oft besser, als sie sich beim Spielen angefühlt hat.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">49.6</span><div><span class="kind">Theorie</span>Schreib das 12-Takt-Blues-Schema in G auf.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G7 G7 G7 G7 | C7 C7 G7 G7 | D7 C7 G7 D7. I7 = G7, IV7 = C7, V7 = D7.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">49.7</span><div><span class="kind">Theorie</span>Wie heißt die Blues-Skala auf g? Leite sie aus der Moll-Pentatonik ab.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Moll-Pentatonik auf g: g–b–c–d–f. Dazu die verminderte Quinte des: g–b–c–des–d–f–g. Das Muster ist dasselbe wie auf c: Grundton, kleine Terz, Quarte, verminderte Quinte, Quinte, kleine Septime.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">49.8</span><div><span class="kind">Vertiefung</span>Warum bilden zwei beliebige Töne der Pentatonik nie eine kleine Sekunde oder einen Tritonus? Begründe mit dem Aufbau aus Quinten.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die Pentatonik besteht aus fünf aufeinanderfolgenden Tönen im Quintenkreis (ges–des–as–es–b). Eine kleine Sekunde entsteht zwischen Tönen, die im Quintenkreis fünf Schritte auseinanderliegen (c–g–d–a–e–h: c und h). Ein Tritonus braucht sechs Schritte (c bis fis). In fünf aufeinanderfolgenden Quinten liegen höchstens vier Schritte zwischen zwei Tönen. Deshalb kommen nur Intervalle vor, die aus ein bis vier Quinten entstehen: Quinte/Quarte (1), große Sekunde/kleine Septime (2), große Sexte/kleine Terz (3), große Terz/kleine Sexte (4).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">49.9</span><div><span class="kind">Am Klavier</span>Spiel den 12-Takt-Blues in C mit Grundton und Quinte in der linken Hand und dem Schleifer es'–e' am Anfang jeder Zeile in der rechten Hand.</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Über F7 klingt der Schleifer es'–e' anders, weil es dort die Septime von F7 ist und e reibt. Manche Pianisten spielen über F7 stattdessen as–a (die Terz von F7, von unten angeschliffen). Probier beides und hör den Unterschied.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(49);
+  const A = Book.audio;
+
+  // ---------- Melodie-Echo ----------
+  (function () {
+    const SCALE = [60, 62, 64, 65, 67, 69, 71, 72];
+    const status = document.getElementById("echo-status");
+    const again = document.getElementById("echo-again");
+    const show = document.getElementById("echo-show");
+    let melody = null, pos = 0, firstTry = true;
+    const kb = Book.keyboard(document.getElementById("echo-kbd"), {
+      from: 60, to: 72, labels: "white",
+      onKey(m) {
+        if (!melody) return;
+        if (m === melody[pos]) {
+          pos++;
+          if (pos === melody.length) {
+            status.textContent = firstTry ? "Richtig, beim ersten Versuch!" : "Richtig!";
+            kb.mark(melody.map((x, i) => ({ m: x, cls: i === 0 ? "" : "c2" })));
+            melody = null; again.disabled = true; show.disabled = true;
+          } else {
+            status.textContent = `Ton ${pos} stimmt. Weiter …`;
+          }
+        } else {
+          firstTry = false;
+          status.textContent = `Ton ${pos + 1} war anders. Hör noch einmal und beginne von vorn.`;
+          pos = 0;
+        }
+      }
+    });
+    const val = (name) => +document.querySelector(`input[name="${name}"]:checked`).value;
+    function play() { melody && melody.forEach((m, i) => A.note(m, i * 0.6, 0.55)); }
+    function make() {
+      const len = val("echo-len"), range = val("echo-range");
+      const pool = SCALE.slice(0, range);
+      let idx = 0;
+      const out = [pool[0]];
+      while (out.length < len) {
+        const step = [-2, -1, 1, 2][Math.floor(Math.random() * 4)];
+        const n = idx + step;
+        if (n < 0 || n >= pool.length) continue;
+        idx = n; out.push(pool[n]);
+      }
+      return out;
+    }
+    document.getElementById("echo-new").addEventListener("click", () => {
+      melody = make(); pos = 0; firstTry = true;
+      kb.mark([]); again.disabled = false; show.disabled = false;
+      status.textContent = "Hör zu und spiel nach. Der erste Ton ist immer c'.";
+      play();
+    });
+    again.addEventListener("click", () => { pos = 0; play(); });
+    show.addEventListener("click", () => {
+      if (!melody) return;
+      kb.mark(melody.map((x, i) => ({ m: x, cls: i === 0 ? "" : "c2" })));
+      status.textContent = "Lösung: " + melody.map((m) => Book.name(m)).join(" – ");
+      firstTry = false;
+    });
+  })();
+
+  // ---------- Begleitautomat ----------
+  (function () {
+    const LOOPS = {
+      pop: [
+        { label: "Ges", bass: 42, chord: [54, 58, 61] },
+        { label: "Des", bass: 37, chord: [53, 56, 61] },
+        { label: "Es-Moll", bass: 39, chord: [51, 54, 58] },
+        { label: "Ces", bass: 35, chord: [51, 54, 59] }
+      ],
+      blues: (function () {
+        const C7 = { label: "C7", bass: 36, chord: [52, 55, 58] };
+        const F7 = { label: "F7", bass: 41, chord: [51, 57, 60] };
+        const G7 = { label: "G7", bass: 43, chord: [53, 59, 62] };
+        return [C7, C7, C7, C7, F7, F7, C7, C7, G7, F7, C7, G7];
+      })()
+    };
+    const btn = document.getElementById("jam-btn");
+    const tempo = document.getElementById("jam-tempo");
+    const bpmOut = document.getElementById("jam-bpm");
+    const chordEl = document.getElementById("jam-chord");
+    const barsEl = document.getElementById("jam-bars");
+    let running = false, timer = null, bar = 0;
+    const loopName = () => document.querySelector('input[name="jam-loop"]:checked').value;
+    function drawBars() {
+      barsEl.innerHTML = LOOPS[loopName()].map((b, i) => `<span data-i="${i}">${b.label}</span>`).join("");
+    }
+    function playBar() {
+      if (!running) return;
+      const loop = LOOPS[loopName()];
+      const b = loop[bar % loop.length];
+      const beat = 60 / +tempo.value;
+      A.note(b.bass, 0, beat * 1.9, 0.75);
+      A.note(b.bass + 7, beat * 2, beat * 1.9, 0.6);
+      for (let k = 0; k < 4; k++) A.chord(b.chord, k * beat, beat * 0.8, k % 2 ? 0.45 : 0.35);
+      chordEl.textContent = b.label;
+      barsEl.querySelectorAll("span").forEach((s) => s.classList.toggle("on", +s.dataset.i === bar % loop.length));
+      bar++;
+      timer = setTimeout(playBar, beat * 4 * 1000);
+    }
+    function start() { if (!A.ensure()) return; running = true; bar = 0; btn.textContent = "■ Stopp"; playBar(); }
+    function stop() { running = false; clearTimeout(timer); btn.textContent = "▶ Start"; chordEl.textContent = ""; barsEl.querySelectorAll("span").forEach((s) => s.classList.remove("on")); }
+    btn.addEventListener("click", () => (running ? stop() : start()));
+    tempo.addEventListener("input", () => (bpmOut.textContent = tempo.value));
+    document.querySelectorAll('input[name="jam-loop"]').forEach((r) => r.addEventListener("change", () => { bar = 0; drawBars(); }));
+    drawBars();
+  })();
+</script>
+</body>
+</html>

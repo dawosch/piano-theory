@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Die Dur-Tonleiter · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .builder { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; margin-block: 1.6rem; }
+  .builder h4 { margin-top: 0; }
+  .builder .keys { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-block: 0.6rem; }
+  .builder .keys .btn[aria-pressed="true"] { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+  .builder .names { font-family: var(--font-mono); font-size: 1rem; margin: 0.6rem 0; overflow-wrap: anywhere; }
+  .builder .names b { color: var(--accent); font-weight: 500; }
+  .degrees td:first-child { font-family: var(--font-mono); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil I · Kapitel 6</div>
+    <h1>Die Dur-Tonleiter</h1>
+    <p class="lede">Die Dur-Tonleiter ist das Bezugssystem für den größten Teil der Musik, die du spielen wirst. Wer ihr Bauprinzip versteht, kann sie auf jeder Taste bilden, Intervalle in Sekunden bestimmen und später Akkorde und Tonarten herleiten, statt sie auswendig zu lernen.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>das Ganz- und Halbtonmuster der Dur-Tonleiter erklären und anwenden,</li>
+      <li>die Dur-Tonleiter auf jedem Grundton bilden und richtig schreiben,</li>
+      <li>die Stufen einer Tonleiter benennen, besonders Grundton, Dominante und Leitton,</li>
+      <li>Intervalle mit dem „Dur-Trick“ schnell bestimmen,</li>
+      <li>begründen, warum die Dur-Tonleiter gerade diese sieben Töne enthält.</li>
+    </ul>
+  </div>
+
+  <!-- 6.1 -->
+  <h2 id="tonleiter">6.1 Was eine Tonleiter ist</h2>
+  <p>Eine <dfn id="g-tonleiter">Tonleiter</dfn> (auch <dfn id="g-skala">Skala</dfn>, englisch <em>scale</em>) ist eine Auswahl von Tönen, die der Tonhöhe nach geordnet ist. Sie beginnt und endet auf ihrem <dfn id="g-grundton">Grundton</dfn>. Die Töne dazwischen heißen <dfn id="g-stufe">Stufen</dfn> und werden vom Grundton aus durchgezählt: erste Stufe, zweite Stufe und so weiter.</p>
+  <p>Eine Tonleiter ist eigentlich ein <strong>Tonvorrat</strong>. Ein Musikstück in Dur spielt nicht die Tonleiter rauf und runter, es benutzt ihre Töne in beliebiger Reihenfolge. Die Tonleiter ist nur die übersichtlichste Art, diesen Vorrat aufzuschreiben.</p>
+  <p>Die Dur-Tonleiter hat sieben verschiedene Töne. Der achte Ton ist wieder der Grundton, eine Oktave höher. Tonleitern mit sieben Tönen, bei denen jeder Buchstabe genau einmal vorkommt und die aus Ganz- und Halbtönen bestehen, heißen <dfn id="g-diatonisch">diatonisch</dfn> (griechisch etwa „durch die Töne hindurch“).</p>
+
+  <!-- 6.2 -->
+  <h2 id="c-dur">6.2 Die C-Dur-Tonleiter und ihr Muster</h2>
+  <p>Die einfachste Dur-Tonleiter liegt auf den weißen Tasten von c bis c. Sie heißt <strong>C-Dur</strong>.</p>
+  <div class="abc" data-bpm="100" data-caption="C-Dur aufwärts und abwärts">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    "^1"C "^2"D "^3"E "^4"F | "^5"G "^6"A "^7"B "^8"c | c B A G | F E D C |]
+  </div>
+  <p>Schau dir an, wie groß die Schritte sind. Zwischen den meisten benachbarten weißen Tasten liegt eine schwarze. Das ergibt einen <dfn id="g-ganzton">Ganzton</dfn> (zwei Halbtöne). Nur zwischen e und f sowie zwischen h und c fehlt die schwarze Taste. Dort ist der Schritt ein <dfn id="g-halbton">Halbton</dfn>.</p>
+  <figure>
+    <div class="kb" data-from="60" data-to="72" data-labels="white" data-marks="60 62 64 65 67 69 71 72" data-brackets="60-62:G;62-64:G;64-65:H;65-67:G;67-69:G;69-71:G;71-72:H" aria-label="C-Dur-Tonleiter mit Ganz- und Halbtonschritten"></div>
+    <figcaption>G = Ganzton, H = Halbton. Die Halbtöne liegen zwischen der 3. und 4. sowie zwischen der 7. und 8. Stufe.</figcaption>
+  </figure>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Dur-Tonleiter: <strong>Ganz – Ganz – Halb – Ganz – Ganz – Ganz – Halb</strong>.<br>Die Halbtöne liegen zwischen der 3. und 4. sowie der 7. und 8. Stufe.</p>
+  </div>
+  <p>Dieses Muster ist die Dur-Tonleiter. Der Name „C-Dur“ sagt nur, auf welchem Ton das Muster beginnt. Auf einem anderen Grundton ergibt dasselbe Muster eine andere Dur-Tonleiter, die genau gleich klingt, nur höher oder tiefer.</p>
+
+  <section class="layer deep" data-title="Warum gerade diese sieben Töne?">
+    <p>Die weißen Tasten wirken wie eine willkürliche Auswahl aus zwölf Tönen. Tatsächlich lassen sie sich auf mindestens zwei Arten herleiten, die beide zum selben Ergebnis führen.</p>
+    <h4>1. Quinten übereinanderschichten</h4>
+    <p>In Kapitel 5 hast du gesehen, dass die Quinte nach der Oktave das einfachste Intervall ist (3:2). Beginne auf f und gehe sechsmal eine Quinte aufwärts: f, c, g, d, a, e, h. Das sind sieben Töne. Ordne sie innerhalb einer Oktave, und du erhältst c, d, e, f, g, a, h, also genau C-Dur.</p>
+    <div class="kb" data-from="53" data-to="83" data-labels="white" data-marks="53::1 60::2 67::3 74::4 81::5 64::6 71::7" aria-label="Die sieben Töne von C-Dur als Quintenkette f, c, g, d, a, e, h"></div>
+    <p class="muted">Die Zahlen zeigen die Reihenfolge in der Quintenkette (e und h sind in die passende Oktave versetzt).</p>
+    <p>Warum gerade sieben? Mit dem achten Ton (fis) entstünden erstmals zwei Halbtonschritte direkt hintereinander (f–fis–g). Mit sieben Quinten hat die Tonleiter dagegen nur zwei Schrittgrößen, Ganz- und Halbton, und die beiden Halbtöne liegen so weit wie möglich auseinander. Mit fünf Quinten entsteht übrigens die Pentatonik (Kapitel 9).</p>
+    <p>Diese Konstruktion erklärt auch, was du in Kapitel 5 über die beiden Intervallfamilien gelernt hast: In einer solchen Tonleiter kommt jede Intervallzahl in genau zwei Größen vor. Sekunden sind groß oder klein, Quarten rein oder übermäßig und so weiter. Musiktheoretiker nennen das die Myhill-Eigenschaft.</p>
+    <h4>2. Drei Durdreiklänge</h4>
+    <p>Ein Durdreiklang besteht aus Grundton, großer Terz und Quinte. In reiner Stimmung stehen seine Töne im Verhältnis 4:5:6 zueinander, genau wie der 4., 5. und 6. Teilton der Obertonreihe. Nimm drei Durdreiklänge, deren Grundtöne eine Quinte auseinander liegen: F–A–C, C–E–G und G–H–D. Zusammen enthalten sie die Töne c, d, e, f, g, a, h. Wieder C-Dur.</p>
+    <p>Rechnet man die Töne in reinen Verhältnissen aus (bezogen auf c = 1), ergibt sich diese Tonleiter:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Ton</th><th>c</th><th>d</th><th>e</th><th>f</th><th>g</th><th>a</th><th>h</th><th>c'</th></tr></thead>
+        <tbody>
+          <tr><td>Verhältnis</td><td class="mono">1</td><td class="mono">9/8</td><td class="mono">5/4</td><td class="mono">4/3</td><td class="mono">3/2</td><td class="mono">5/3</td><td class="mono">15/8</td><td class="mono">2</td></tr>
+          <tr><td>herkommend aus</td><td>C-Dur</td><td>G-Dur (Quinte)</td><td>C-Dur (Terz)</td><td>F-Dur (Grundton)</td><td>C-Dur (Quinte)</td><td>F-Dur (Terz)</td><td>G-Dur (Terz)</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Diese drei Akkorde sind die Hauptakkorde jeder Dur-Tonart (I, IV und V, Kapitel 13 und 14). Die Dur-Tonleiter ist also gewissermaßen der Tonvorrat ihrer drei wichtigsten Akkorde.</p>
+  </section>
+
+  <!-- 6.3 -->
+  <h2 id="uebertragen">6.3 Das Muster auf andere Grundtöne übertragen</h2>
+  <p>Beginnst du das Muster auf g statt auf c, reicht das Spiel auf weißen Tasten nicht mehr. Die 7. Stufe muss einen Halbton unter dem Grundton liegen. Von g aus ist das nicht f, sondern fis.</p>
+  <div class="abc" data-bpm="100" data-caption="G-Dur: ein ♯ auf der 7. Stufe">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    G A B c | d e ^f g |]
+  </div>
+  <p>Beginnst du auf f, passt die 4. Stufe nicht. Sie muss einen Halbton über der 3. Stufe (a) liegen, also b statt h.</p>
+  <div class="abc" data-bpm="100" data-caption="F-Dur: ein ♭ auf der 4. Stufe">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    F G A _B | c d e f |]
+  </div>
+  <p>Für das Bilden jeder Dur-Tonleiter gibt es ein sicheres Verfahren in zwei Schritten:</p>
+  <ol>
+    <li><strong>Buchstaben aufschreiben:</strong> Beginne beim Grundton und schreib die sieben Buchstaben der Reihe nach auf. Jeder Buchstabe kommt genau einmal vor.</li>
+    <li><strong>Vorzeichen anpassen:</strong> Geh das Muster Ganz – Ganz – Halb – Ganz – Ganz – Ganz – Halb durch und setz ♯ oder ♭, wo der Schritt nicht passt.</li>
+  </ol>
+  <h4>Beispiel: E-Dur</h4>
+  <p>Buchstaben: e, f, g, a, h, c, d, e. Muster prüfen: e→f ist ein Halbton, nötig ist ein Ganzton, also fis. fis→g ist ein Halbton, nötig ist ein Ganzton, also gis. gis→a ist ein Halbton, das passt. a→h ist ein Ganzton, das passt. h→c ist ein Halbton, nötig ist ein Ganzton, also cis. cis→d: Halbton, nötig ist Ganzton, also dis. dis→e ist ein Halbton, das passt.</p>
+  <p>Ergebnis: <strong>e, fis, gis, a, h, cis, dis, e</strong>. Vier Kreuze.</p>
+  <h4>Beispiel: B-Dur</h4>
+  <p>Buchstaben: b, c, d, e, f, g, a, b. Muster prüfen: b→c Ganzton, c→d Ganzton, d→e muss ein Halbton sein, also es. es→f Ganzton, f→g Ganzton, g→a Ganzton, a→b Halbton. Ergebnis: <strong>b, c, d, es, f, g, a, b</strong>. Zwei ♭.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>In einer Dur-Tonleiter kommt jeder Buchstabe genau einmal vor. Deshalb heißt der 4. Ton von F-Dur b und nicht ais, und der 7. Ton von Fis-Dur eis und nicht f.</p>
+  </div>
+  <p>Probier das Muster im Baukasten auf allen zwölf Grundtönen aus:</p>
+
+  <div class="builder" id="builder">
+    <h4>Tonleiter-Baukasten: Dur</h4>
+    <div class="keys" role="group" aria-label="Grundton wählen"></div>
+    <p class="names" aria-live="polite"></p>
+    <div class="bkbd"></div>
+    <div class="btn-row"><button class="btn primary" type="button" id="builder-play">▶ Tonleiter spielen</button></div>
+  </div>
+
+  <section class="layer deep" data-title="Warum jeder Buchstabe nur einmal vorkommen darf">
+    <p>Auf der Klaviatur klingt F-Dur mit ais genauso wie mit b. Die Regel „jeder Buchstabe einmal“ ist trotzdem kein Selbstzweck.</p>
+    <p><strong>Notenbild:</strong> Jeder Buchstabe hat im Notensystem seinen festen Platz. Kommt jeder Buchstabe einmal vor, steht die Tonleiter als gleichmäßige Treppe im System: Linie, Zwischenraum, Linie und so weiter. Mit a und ais stünden zwei Noten auf derselben Position und eine Position bliebe leer.</p>
+    <p><strong>Intervalle:</strong> Weil jede Stufe einen eigenen Buchstaben hat, haben alle Intervalle vom Grundton aus die richtige Zahl. Vom f zum b ist es eine Quarte, so wie vom c zum f in C-Dur. Vom f zum ais wäre es formal eine Terz. Die Struktur „4. Stufe = Quarte über dem Grundton“ bleibt nur mit der richtigen Schreibweise in jeder Tonart sichtbar.</p>
+    <p><strong>Akkorde:</strong> Akkorde werden aus jeder zweiten Stufe gebaut (Kapitel 11 und 13). Mit sauberer Schreibweise sieht jeder Akkord wie ein Terzenstapel aus und lässt sich auf einen Blick erkennen.</p>
+  </section>
+
+  <!-- 6.4 -->
+  <h2 id="stufen">6.4 Die Stufen und ihre Namen</h2>
+  <p>Jede Stufe einer Tonleiter hat eine eigene Rolle. Einige davon haben Namen, die dir im ganzen Buch wieder begegnen:</p>
+  <div class="table-scroll">
+    <table class="degrees">
+      <thead><tr><th>Stufe</th><th>Name</th><th>in C-Dur</th><th>Rolle</th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60"><td>1</td><td><dfn id="g-tonika">Tonika</dfn> (Grundton)</td><td>c</td><td>Ruhepunkt, „Zuhause“</td><td>▶</td></tr>
+        <tr class="play-row" data-play="62"><td>2</td><td>Supertonika</td><td>d</td><td>Stufe über der Tonika</td><td>▶</td></tr>
+        <tr class="play-row" data-play="64"><td>3</td><td>Mediante</td><td>e</td><td>entscheidet über Dur oder Moll</td><td>▶</td></tr>
+        <tr class="play-row" data-play="65"><td>4</td><td><dfn id="g-subdominante">Subdominante</dfn></td><td>f</td><td>eine Quinte unter der Tonika</td><td>▶</td></tr>
+        <tr class="play-row" data-play="67"><td>5</td><td><dfn id="g-dominante">Dominante</dfn></td><td>g</td><td>eine Quinte über der Tonika, stärkster Gegenpol</td><td>▶</td></tr>
+        <tr class="play-row" data-play="69"><td>6</td><td>Submediante</td><td>a</td><td>Grundton der parallelen Molltonart (Kapitel 8)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="71"><td>7</td><td><dfn id="g-leitton">Leitton</dfn></td><td>h</td><td>einen Halbton unter der Tonika, strebt zu ihr</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die Namen klingen nach Latein-Unterricht, sind aber logisch. <em>Dominante</em> heißt „die Beherrschende“: Nach der Tonika ist sie der wichtigste Ton der Tonart. <em>Subdominante</em> heißt „Unter-Dominante“, weil sie genauso weit <em>unter</em> der Tonika liegt (eine Quinte) wie die Dominante darüber. Die Mediante liegt in der Mitte zwischen Tonika und Dominante. Die Submediante liegt eine Terz unter der Tonika, also in der Mitte zwischen der Tonika und der darunterliegenden Subdominante.</p>
+  <p>Die Rollen von Tonika, Subdominante und Dominante werden ab Kapitel 14 zum Kern der Harmonielehre. Hier geht es zunächst nur um die einzelnen Töne.</p>
+  <p>Spiel die C-Dur-Tonleiter aufwärts und hör auf dem h auf. Die Melodie wirkt unvollständig, als fehle der letzte Schritt. Das ist die Wirkung des Leittons.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="60 62 64 65 67 69 71" data-bpm="160">▶ Tonleiter bis zum Leitton</button>
+    <button class="btn" type="button" data-play="60 62 64 65 67 69 71 72" data-bpm="160">▶ mit Auflösung zum c</button>
+  </div>
+
+  <section class="layer deep" data-title="Warum zieht der Leitton so stark nach oben?">
+    <p>Der Leitton liegt nur einen Halbton unter der Tonika. Halbtonschritte sind die kleinsten Schritte, die unser Tonsystem kennt, und das Ohr nimmt einen Ton, der einen Halbton neben einem stabilen Ton liegt, als „fast angekommen“ wahr. Dazu kommen drei weitere Gründe.</p>
+    <p><strong>Lage zur Tonika.</strong> Die Halbtöne der Dur-Tonleiter liegen genau neben den beiden stabilsten Tönen: e–f führt zur Subdominante, h–c zur Tonika. Der Leitton ist der einzige Ton, der einen Halbton <em>unter</em> der Tonika liegt und sie damit von unten „ansteuert“. In der Musiklehre spricht man von der <dfn id="g-strebetendenz">Strebetendenz</dfn> eines Tons.</p>
+    <p><strong>Akkorde.</strong> Der Leitton ist die Terz des Dominantdreiklangs G–H–D. Wenn dieser Akkord zur Tonika C–E–G geht, löst sich h nach c auf. Diese Verbindung ist der stärkste Schluss der tonalen Musik (Kapitel 16).</p>
+    <p><strong>Gewohnheit.</strong> Wir haben diese Bewegung tausendfach gehört, weil Melodien in Dur sehr oft über den Leitton schließen. Die Erwartung wird dadurch immer stärker.</p>
+    <p>Der Name ist alt: Im Lateinischen hieß der Ton <em>subsemitonium modi</em>, der „Halbton unter dem Grundton der Tonart“. Wie wichtig er ist, zeigt Kapitel 8: In Moll fehlt er zunächst, und man erhöht dort eigens die 7. Stufe, um ihn zu bekommen.</p>
+  </section>
+
+  <section class="layer deep" data-title="Wie erkennt das Ohr den Grundton?">
+    <p>Wer eine Melodie hört, spürt meist sofort, welcher Ton „Zuhause“ ist, ohne die Tonleiter zu kennen. Dahinter stecken zwei Mechanismen.</p>
+    <p><strong>Häufigkeit und Gewicht.</strong> Die Psychologin Carol Krumhansl ließ Versuchspersonen in den 1980er-Jahren nach einer kurzen Dur-Passage einzelne Prüftöne bewerten: Wie gut passt dieser Ton als Abschluss? Am besten bewertet wurde die Tonika, danach Quinte und Terz, dann die übrigen Töne der Tonleiter und ganz zuletzt die Töne außerhalb. Diese sogenannte Tonhierarchie entspricht ziemlich genau der Häufigkeit, mit der die Töne in westlicher Musik vorkommen. Das Ohr lernt sie durch Zuhören, ähnlich wie man die Häufigkeit von Wörtern in einer Sprache lernt.</p>
+    <p><strong>Asymmetrie.</strong> Die Dur-Tonleiter ist nicht gleichmäßig gebaut. Ihre zwei Halbtöne liegen an bestimmten Stellen, und von jeder Stufe aus sieht die Umgebung anders aus. Hört das Ohr einen Halbtonschritt, kann es daraus ableiten, wo es sich in der Tonleiter befindet. Bei einer völlig gleichmäßigen Tonleiter wie der Ganztonleiter (Kapitel 9) ist das unmöglich. Sie klingt deshalb schwebend und ohne Zentrum.</p>
+  </section>
+
+  <section class="layer piano" data-title="Die C-Dur-Tonleiter spielen">
+    <p>Eine Tonleiter mit acht Tönen ist länger als fünf Finger. Damit die Hand weiterkommt, setzt du den Daumen unter die Hand (aufwärts in der rechten Hand) oder die Finger über den Daumen (abwärts). Für C-Dur über eine Oktave gilt:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Hand</th><th>c</th><th>d</th><th>e</th><th>f</th><th>g</th><th>a</th><th>h</th><th>c</th></tr></thead>
+        <tbody>
+          <tr><td>rechts aufwärts</td><td>1</td><td>2</td><td>3</td><td><strong>1</strong></td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+          <tr><td>links aufwärts</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td><strong>3</strong></td><td>2</td><td>1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Abwärts gilt derselbe Fingersatz rückwärts. Rechts geht dann der 3. Finger über den Daumen (von f nach e). Links ist es umgekehrt: Aufwärts greift der 3. Finger über den Daumen (von g nach a), abwärts setzt der Daumen unter die Hand (von a nach g).</p>
+    <p>Typische Fehler und was dagegen hilft:</p>
+    <ul>
+      <li><strong>Der Daumenuntersatz holpert.</strong> Bereite den Daumen früh vor. Während du e mit dem 3. Finger spielst, wandert der Daumen schon unter der Hand Richtung f.</li>
+      <li><strong>Der Ellbogen kippt nach außen.</strong> Die Hand bewegt sich seitlich, der Arm folgt ruhig mit. Der Daumen erledigt den Weg, nicht der Ellbogen.</li>
+      <li><strong>Ungleichmäßige Töne.</strong> Spiel sehr langsam und hör auf gleiche Lautstärke. Ein Metronom auf 60 mit einem Ton pro Schlag reicht am Anfang.</li>
+    </ul>
+    <p>Die Fingersätze aller anderen Tonleitern folgen wenigen Prinzipien, die Kapitel 44 erklärt. Viele Kreuz-Tonarten (G, D, A, E) haben in der rechten Hand denselben Fingersatz wie C-Dur.</p>
+  </section>
+
+  <!-- 6.5 -->
+  <h2 id="tetrachorde">6.5 Zwei gleiche Hälften: die Tetrachorde</h2>
+  <p>Teil die Dur-Tonleiter in zwei Hälften aus je vier Tönen: c–d–e–f und g–a–h–c. Beide Hälften haben dasselbe Muster: Ganz – Ganz – Halb. Eine solche Viertongruppe heißt <dfn id="g-tetrachord">Tetrachord</dfn>. Zwischen den beiden Tetrachorden liegt ein Ganzton (f–g).</p>
+  <figure>
+    <div class="kb" data-from="60" data-to="72" data-labels="white" data-marks="60 62 64 65 67:c2 69:c2 71:c2 72:c2" data-brackets="60-65:Tetrachord 1;67-72:Tetrachord 2" aria-label="C-Dur, geteilt in zwei gleich gebaute Tetrachorde"></div>
+    <figcaption>Unterer Tetrachord blau, oberer petrol. Beide: Ganz – Ganz – Halb.</figcaption>
+  </figure>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Dur-Tonleiter = Tetrachord (G–G–H) + Ganzton + Tetrachord (G–G–H).</p>
+  </div>
+  <p>Daraus folgt eine elegante Beobachtung: Der obere Tetrachord von C-Dur (g–a–h–c) ist zugleich der untere Tetrachord von G-Dur. Um G-Dur zu bilden, brauchst du nur noch einen neuen oberen Tetrachord: d–e–fis–g. Von einer Tonart zur nächsten ändert sich also genau ein Ton. Diese Kette führt direkt zum Quintenzirkel in Kapitel 7.</p>
+  <div class="abc" data-bpm="100" data-caption="Der obere Tetrachord von C-Dur wird zum unteren von G-Dur">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    "^C-Dur"C D E F | G A B c ||"^G-Dur"G A B c | d e ^f g |]
+  </div>
+
+  <section class="layer deep" data-title="Woher der Tetrachord kommt">
+    <p><em>Tetrachord</em> ist griechisch und bedeutet „vier Saiten“. In der antiken griechischen Musiktheorie war der Tetrachord die Grundeinheit: vier Töne im Rahmen einer reinen Quarte, deren zwei Außentöne fest und deren Innentöne beweglich waren. Je nachdem, wo der Halbton lag, ergaben sich unterschiedliche Tonleitern.</p>
+    <p>Dass die Dur-Tonleiter aus zwei <em>gleichen</em> Tetrachorden besteht, ist eine besondere Eigenschaft. Unter den Drehungen der weißen Tasten teilt Dur diese Eigenschaft nur mit den Leitern ab d und ab e (Dorisch und Phrygisch, Kapitel 24). Das Besondere an Dur ist die Lage des Halbtons: Er steht am Ende jedes Tetrachords. Beide Hälften schließen deshalb mit einem Halbton nach oben: e–f führt in die Subdominante, h–c in die Tonika. Die Tonleiter hat dadurch zwei „Zielpunkte“ im Abstand einer Quinte, und genau diese beiden Töne (f bzw. c) werden in der Harmonik zu Grundtönen der wichtigsten Akkorde.</p>
+  </section>
+
+  <!-- 6.6 -->
+  <h2 id="dur-trick">6.6 Der Dur-Trick: Intervalle schnell bestimmen</h2>
+  <p>In Kapitel 5 hast du Intervalle mit Zählen bestimmt. Mit der Dur-Tonleiter geht es schneller. Die Intervalle vom Grundton zu den Stufen einer Dur-Tonleiter sind nämlich alle groß oder rein:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Stufe</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr></thead>
+      <tbody><tr><td>Intervall vom Grundton</td><td>g2</td><td>g3</td><td>r4</td><td>r5</td><td>g6</td><td>g7</td><td>r8</td></tr></tbody>
+    </table>
+  </div>
+  <p>Daraus ergibt sich das Verfahren:</p>
+  <ol>
+    <li>Bestimme die Zahl (Buchstaben zählen).</li>
+    <li>Stell dir den unteren Ton als Grundton einer Dur-Tonleiter vor.</li>
+    <li>Gehört der obere Ton zu dieser Tonleiter, ist das Intervall <strong>groß</strong> (2, 3, 6, 7) oder <strong>rein</strong> (1, 4, 5, 8).</li>
+    <li>Liegt er einen Halbton tiefer, ist es <strong>klein</strong> (bzw. <strong>vermindert</strong> bei reinen Intervallen). Liegt er einen Halbton höher, ist es <strong>übermäßig</strong>.</li>
+  </ol>
+  <h4>Beispiele</h4>
+  <ul>
+    <li><strong>e–g:</strong> Terz. In E-Dur heißt die 3. Stufe gis. g ist einen Halbton tiefer, also <strong>kleine Terz</strong>.</li>
+    <li><strong>d–h:</strong> Sexte. In D-Dur heißt die 6. Stufe h. Also <strong>große Sexte</strong>.</li>
+    <li><strong>f–h:</strong> Quarte. In F-Dur heißt die 4. Stufe b. h ist einen Halbton höher, also <strong>übermäßige Quarte</strong>.</li>
+    <li><strong>as–f':</strong> Sexte. As-Dur ist as, b, c, des, es, f, g. f gehört dazu, also <strong>große Sexte</strong>.</li>
+  </ul>
+  <p>Ist der untere Ton ungewöhnlich (etwa dis oder gis, deren Dur-Tonleitern viele Vorzeichen haben), entferne dasselbe Vorzeichen von beiden Tönen. Das Intervall bleibt dabei gleich: dis–fis wird zu d–f, also eine kleine Terz.</p>
+
+  <section class="layer piano" data-title="Dur auf jeder Taste finden">
+    <p>Bevor du alle Dur-Tonleitern mit Fingersatz übst, lohnt sich eine einfachere Übung: <strong>Dur-Fünftonräume</strong>. Ein Fünftonraum besteht aus den ersten fünf Tönen einer Dur-Tonleiter (Ganz – Ganz – Halb – Ganz). Jeder Finger liegt auf einer eigenen Taste, ein Daumenuntersatz ist nicht nötig.</p>
+    <ol>
+      <li>Leg die rechte Hand mit dem Daumen auf c und spiel c–d–e–f–g und zurück. Sag dabei „ganz, ganz, halb, ganz“.</li>
+      <li>Rück mit dem Daumen auf cis/des und finde mit dem Ohr und dem Muster die richtigen fünf Tasten (des, es, f, ges, as).</li>
+      <li>Geh so chromatisch weiter durch alle zwölf Grundtöne.</li>
+    </ol>
+    <p>Du wirst merken, dass sich bestimmte Handformen wiederholen. C und G haben nur weiße Tasten im Fünftonraum. Bei D und A liegt die Terz auf einer schwarzen Taste, der Mittelfinger rückt nach vorn in den Tastenraum. Bei E liegen Sekunde und Terz auf schwarzen Tasten, bei F die Quarte (b). Diese Handformen sind später genau die Griffe der Durdreiklänge (Kapitel 11).</p>
+    <p>Wichtig für die Handhaltung: Liegt ein Finger auf einer schwarzen Taste, rück die ganze Hand ein Stück nach vorn in Richtung der schwarzen Tasten. So müssen sich die Finger nicht strecken.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Eine Tonleiter ist ein geordneter Tonvorrat. Die Dur-Tonleiter hat sieben Töne, jeder Buchstabe kommt genau einmal vor.</li>
+    <li>Muster: Ganz – Ganz – Halb – Ganz – Ganz – Ganz – Halb. Halbtöne zwischen den Stufen 3–4 und 7–8.</li>
+    <li>Wichtige Stufen: 1 Tonika, 4 Subdominante, 5 Dominante, 7 Leitton (einen Halbton unter der Tonika).</li>
+    <li>Dur besteht aus zwei gleichen Tetrachorden. Der obere Tetrachord einer Tonart ist der untere der nächsten Tonart eine Quinte höher.</li>
+    <li>Dur-Trick: Liegt der obere Ton in der Dur-Tonleiter des unteren, ist das Intervall groß oder rein.</li>
+    <li>Die sieben Töne ergeben sich aus einer Kette von sechs Quinten und zugleich aus den drei Durdreiklängen auf 1, 4 und 5.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">6.1</span><div><span class="kind">Theorie</span>Schreib die Dur-Tonleitern von G, D und F auf. Geh dabei nach dem Zwei-Schritt-Verfahren vor.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G-Dur: g, a, h, c, d, e, fis, g. D-Dur: d, e, fis, g, a, h, cis, d. F-Dur: f, g, a, b, c, d, e, f. In G und D sorgt das Kreuz auf der 7. Stufe für den Leitton, in F das ♭ auf der 4. Stufe für den Halbton zwischen 3 und 4.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">6.2</span><div><span class="kind">Theorie</span>Bilde A-Dur und Es-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>A-Dur: a, h, cis, d, e, fis, gis, a (drei Kreuze). Es-Dur: es, f, g, as, b, c, d, es (drei ♭). Bei Es-Dur muss die 4. Stufe as heißen, damit zwischen g und as ein Halbton liegt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">6.3</span><div><span class="kind">Theorie</span>Jemand schreibt F-Dur so: f, g, a, ais, c, d, e, f. Was ist falsch, obwohl alle Töne richtig klingen?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der Buchstabe a kommt zweimal vor (a, ais), der Buchstabe b (bzw. h) fehlt. Richtig ist b. Nur so ist die 4. Stufe eine Quarte über dem Grundton und die Tonleiter im Notenbild eine gleichmäßige Treppe.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">6.4</span><div><span class="kind">Theorie</span>Eine Dur-Tonleiter enthält die Töne fis, cis, gis und dis, sonst nur Stammtöne. Welche ist es?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>E-Dur: e, fis, gis, a, h, cis, dis, e. Ein schneller Weg: Das zuletzt hinzugekommene Kreuz ist dis. Es ist der Leitton, also liegt die Tonika einen Halbton darüber: e. Kapitel 7 macht daraus eine allgemeine Regel.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">6.5</span><div><span class="kind">Theorie</span>Bestimme mit dem Dur-Trick: d–h, e–c', g–f', b–e', a–c'.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>
+        d–h: h gehört zu D-Dur, große Sexte. e–c': E-Dur hat cis, c ist einen Halbton tiefer, kleine Sexte. g–f': G-Dur hat fis, f ist tiefer, kleine Septime. b–e': B-Dur hat es, e ist einen Halbton höher, übermäßige Quarte (Tritonus). a–c': A-Dur hat cis, c ist tiefer, kleine Terz.
+      </div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">6.6</span><div><span class="kind">Theorie</span>Welcher Ton ist in G-Dur die Dominante, welcher die Subdominante und welcher der Leitton? Und in F-Dur?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G-Dur: Dominante d, Subdominante c, Leitton fis. F-Dur: Dominante c, Subdominante b, Leitton e.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">6.7</span><div><span class="kind">Theorie</span>Der obere Tetrachord von D-Dur ist zugleich der untere Tetrachord welcher Dur-Tonleiter? Welcher neue Ton kommt in dieser Tonleiter hinzu?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Oberer Tetrachord von D-Dur: a, h, cis, d. Er ist der untere Tetrachord von A-Dur. Der neue obere Tetrachord heißt e, fis, gis, a. Neu ist gis, der Leitton von A-Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">6.8</span><div><span class="kind">Notenlesen</span>Welche Dur-Tonleiter ist hier notiert? Welche Stufe ist mit dem Pfeil markiert, und wie heißt ihr Name?</div></div>
+      <div class="abc" data-bpm="100">
+        X:1
+        M:4/4
+        L:1/4
+        K:C
+        D E ^F G | A B "^↑"^c d |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>D-Dur (d, e, fis, g, a, h, cis, d). Der Pfeil steht über cis, der 7. Stufe: dem Leitton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">6.9</span><div><span class="kind">Am Klavier</span>Spiel die C-Dur-Tonleiter über eine Oktave, erst rechts, dann links, jeweils auf- und abwärts mit dem Fingersatz aus dem Kasten. Dann spiel D-Dur mit demselben Fingersatz. Funktioniert er?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Ja. D-Dur hat in beiden Händen denselben Fingersatz wie C-Dur (rechts 1 2 3 1 2 3 4 5, links 5 4 3 2 1 3 2 1). Die beiden schwarzen Tasten fis und cis fallen auf den 3. Finger, der lang genug ist, um bequem in den Tastenraum zu greifen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">6.10</span><div><span class="kind">Gehör</span>Spiel eine Dur-Tonleiter aufwärts und hör auf der 7. Stufe auf. Spiel sie dann abwärts und hör auf der 2. Stufe auf. Beschreib den Unterschied.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>In beiden Fällen fehlt der Grundton, und die Melodie wirkt offen. Auf der 7. Stufe ist der Zug zur Tonika stärker, weil der Halbtonschritt fehlt (Leitton). Von der 2. Stufe zur Tonika ist es ein Ganzton, der Abschluss fühlt sich ebenfalls erwartet an, aber weniger dringend. Beide Wege zur Tonika kommen in Melodieschlüssen sehr häufig vor.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">6.11</span><div><span class="kind">Vertiefung</span>Bilde eine Kette aus sieben Quinten, die auf c beginnt (statt auf f). Welche Tonleiter ergibt sich, wenn du die Töne ordnest? Welcher Ton unterscheidet sie von C-Dur?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>c, g, d, a, e, h, fis. Geordnet ab g: g, a, h, c, d, e, fis. Das ist G-Dur. Gegenüber C-Dur fehlt f, dafür ist fis dazugekommen. Eine Quinte weiter in der Kette heißt also: eine Tonart weiter, ein Ton anders. Genau das ist das Prinzip des Quintenzirkels (Kapitel 7).</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(6);
+
+  // Tonleiter-Baukasten: Dur auf zwölf Grundtönen, richtig geschrieben
+  (function () {
+    const LET = ["c", "d", "e", "f", "g", "a", "h"], NAT = [0, 2, 4, 5, 7, 9, 11];
+    function accName(l, a) {
+      if (a === 0) return l;
+      if (a > 0) return l + "is".repeat(a);
+      if (l === "h") return a === -1 ? "b" : "heses";
+      if (l === "e" || l === "a") return l + "s" + "es".repeat(-a - 1);
+      return l + "es".repeat(-a);
+    }
+    const cap = (s) => s[0].toUpperCase() + s.slice(1);
+    const STEPS = [0, 2, 4, 5, 7, 9, 11, 12];
+    const KEYS = [[0, 0], [4, 0], [1, 0], [5, 0], [2, 0], [6, 0], [3, 1], [1, -1], [5, -1], [2, -1], [6, -1], [3, 0]];
+    function scale(li, acc) {
+      const rootPc = NAT[li] + acc;
+      let root = 60 + ((rootPc % 12) + 12) % 12;
+      if (root > 66) root -= 12;
+      const names = STEPS.map((s, i) => {
+        const l = (li + i) % 7;
+        const target = ((rootPc + s) % 12 + 12) % 12;
+        const a = ((target - NAT[l]) % 12 + 18) % 12 - 6;
+        return accName(LET[l], a);
+      });
+      return { name: cap(accName(LET[li], acc)), names, midis: STEPS.map((s) => root + s) };
+    }
+    const box = document.getElementById("builder");
+    const keysEl = box.querySelector(".keys"), namesEl = box.querySelector(".names");
+    const kb = Book.keyboard(box.querySelector(".bkbd"), { from: 55, to: 79, labels: "c", ariaLabel: "Klaviatur mit der gewählten Dur-Tonleiter" });
+    let cur = null;
+    function select(i) {
+      cur = scale(KEYS[i][0], KEYS[i][1]);
+      keysEl.querySelectorAll("button").forEach((b, j) => b.setAttribute("aria-pressed", String(i === j)));
+      const acc = cur.names.slice(0, 7).filter((n) => n.length > 1 || n === "b").length;
+      namesEl.innerHTML = `<b>${cur.name}-Dur:</b> ${cur.names.join(", ")} <span class="muted">(${acc === 0 ? "keine Vorzeichen" : acc + " Vorzeichen"})</span>`;
+      kb.mark(cur.midis.map((m, k) => (k === 0 || k === 7 ? { m, cls: "c2" } : m)));
+    }
+    KEYS.forEach((k, i) => {
+      const b = document.createElement("button");
+      b.className = "btn"; b.type = "button";
+      b.textContent = cap(accName(LET[k[0]], k[1]));
+      b.addEventListener("click", () => { select(i); Book.audio.seq(cur.midis.map((m) => [m, 1]), 200); });
+      keysEl.appendChild(b);
+    });
+    document.getElementById("builder-play").addEventListener("click", () => cur && Book.audio.seq(cur.midis.map((m) => [m, 1]), 200));
+    select(0);
+  })();
+</script>
+</body>
+</html>

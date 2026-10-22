@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Motiv, Phrase, Periode, Satz · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .formplan svg { width: 100%; height: auto; display: block; }
+  .formplan .blk { stroke: var(--line); stroke-width: 1; }
+  .formplan .a { fill: var(--accent-soft); }
+  .formplan .b { fill: var(--deep-bg); }
+  .formplan .c { fill: var(--piano-bg); }
+  .formplan text { fill: var(--ink); font-family: var(--font-display); font-size: 12px; text-anchor: middle; }
+  .formplan text.s { fill: var(--muted); font-size: 10.5px; }
+  .formplan .cad { fill: var(--muted); font-family: var(--font-mono); font-size: 10.5px; text-anchor: middle; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil VI · Kapitel 39</div>
+    <h1>Motiv, Phrase, Periode, Satz</h1>
+    <p class="lede">Melodien bestehen nicht aus beliebig aneinandergereihten Tönen, sondern aus kleinen Bausteinen, die wiederholt, verändert und zu größeren Einheiten verbunden werden. Wer diese Bausteine erkennt, versteht Stücke schneller, lernt sie leichter auswendig und weiß beim Spielen, wo eine Phrase atmet und wo sie ankommt.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Motive in einer Melodie finden und ihre Veränderungen benennen,</li>
+      <li>Phrasen und ihre Abschlüsse (Halbschluss, Ganzschluss) erkennen,</li>
+      <li>die beiden klassischen achttaktigen Themenformen Periode und Satz unterscheiden,</li>
+      <li>eine kurze Melodie selbst als Periode oder Satz bauen,</li>
+      <li>die Gliederung eines Stücks beim Üben und Auswendiglernen nutzen.</li>
+    </ul>
+  </div>
+
+  <!-- 39.1 -->
+  <h2 id="ueberblick">39.1 Musik hat eine Grammatik</h2>
+  <p>Die <dfn id="g-formenlehre">Formenlehre</dfn> beschreibt, wie Musikstücke gegliedert sind. Sie arbeitet auf mehreren Ebenen, ähnlich wie eine Sprache aus Wörtern, Satzteilen, Sätzen und Absätzen besteht:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Ebene</th><th>Typische Länge</th><th>Vergleich mit Sprache</th></tr></thead>
+      <tbody>
+        <tr><td>Motiv</td><td>wenige Töne, oft unter einem Takt</td><td>Wort</td></tr>
+        <tr><td>Phrase (Zweitakter, Viertakter)</td><td>2–4 Takte</td><td>Satzteil</td></tr>
+        <tr><td>Thema: Periode oder Satz</td><td>meist 8 Takte</td><td>vollständiger Satz</td></tr>
+        <tr><td>Formteil (A, B …)</td><td>8–32 Takte</td><td>Absatz</td></tr>
+        <tr><td>Satz eines Werkes, Song</td><td>Minuten</td><td>Kapitel</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Dieses Kapitel behandelt die kleinen Ebenen bis zum achttaktigen Thema. Die Kapitel 40 bis 42 bauen daraus größere Formen: Liedformen, Rondo, Variation, Sonate und Songformen.</p>
+  <p>Zwei Kräfte halten diese Ebenen zusammen. <strong>Wiederholung</strong> schafft Wiedererkennen und Zusammenhang. <strong>Kontrast</strong> schafft Abwechslung und Entwicklung. Fast jede Form ist eine bestimmte Mischung aus beidem.</p>
+
+  <!-- 39.2 -->
+  <h2 id="motiv">39.2 Das Motiv</h2>
+  <p>Ein <dfn id="g-motiv">Motiv</dfn> ist die kleinste musikalische Einheit, die man als zusammengehörig und wiedererkennbar wahrnimmt. Es besteht meist aus zwei bis sechs Tönen und hat einen eigenen Rhythmus und eine eigene Kontur. Das berühmteste Motiv der Musikgeschichte ist der Beginn von Beethovens 5. Sinfonie: drei kurze Töne und ein langer.</p>
+  <div class="abc" data-bpm="108" data-caption="Beethoven, 5. Sinfonie c-Moll, Beginn (Melodiestimme, vereinfacht)">
+    X:1
+    M:2/4
+    L:1/8
+    K:Cm
+    "^Motiv" z G G G | !fermata!E4 | "^Wiederholung, eine Stufe tiefer" z F F F | D4- | !fermata!D4 |]
+  </div>
+  <p>Beethoven baut aus diesem einen Motiv einen ganzen Sinfoniesatz. Das gelingt, weil ein Motiv zwei Eigenschaften hat, die man getrennt verändern kann:</p>
+  <ul>
+    <li>den <strong>Rhythmus</strong> (hier: kurz-kurz-kurz-lang),</li>
+    <li>die <strong>Intervallfolge</strong> bzw. Kontur (hier: Tonwiederholung, dann eine Terz abwärts).</li>
+  </ul>
+  <p>Bleibt der Rhythmus erhalten, erkennt man ein Motiv auch dann wieder, wenn die Töne sich ändern. Beim zweiten Mal ist der Sprung eine kleine statt einer großen Terz (f–d statt g–es), trotzdem hört jeder dasselbe Motiv.</p>
+
+  <h4>Wie Motive verändert werden</h4>
+  <p>Komponisten verarbeiten Motive mit einer überschaubaren Zahl von Techniken. Diese Liste ist eine Art Werkzeugkasten, den du in fast jedem Stück wiederfindest:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Technik</th><th>Was passiert</th></tr></thead>
+      <tbody>
+        <tr><td><dfn id="g-wiederholung">Wiederholung</dfn></td><td>Das Motiv erklingt unverändert noch einmal.</td></tr>
+        <tr><td><dfn id="g-sequenz-motiv">Sequenz</dfn></td><td>Das Motiv wird auf eine andere Tonstufe versetzt (Kapitel 26).</td></tr>
+        <tr><td>Umkehrung</td><td>Aufwärts wird abwärts und umgekehrt.</td></tr>
+        <tr><td>Krebs</td><td>Das Motiv wird rückwärts gespielt.</td></tr>
+        <tr><td><dfn id="g-augmentation">Augmentation</dfn> / Diminution</td><td>Die Notenwerte werden verdoppelt bzw. halbiert.</td></tr>
+        <tr><td><dfn id="g-abspaltung">Abspaltung</dfn></td><td>Nur ein Teil des Motivs wird weiterverwendet, meist der Anfang oder das Ende.</td></tr>
+        <tr><td>Intervallveränderung</td><td>Der Rhythmus bleibt, einzelne Intervalle werden größer oder kleiner.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Hier ein eigenes Motiv mit fünf Bearbeitungen. Hör zu, wie es sich verwandelt und trotzdem erkennbar bleibt:</p>
+  <div class="abc" data-bpm="96" data-caption="Ein Motiv und seine Verarbeitungen">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    "^Motiv" C2 E G c4 | "^Sequenz" D2 F A d4 | "^Umkehrung" c2 A F C4 | "^Krebs" c4 G E C2 | "^Augmentation" C4 E2 G2 | c8 | "^Abspaltung" C E G2 C E G2 |]
+  </div>
+
+  <section class="layer deep" data-title="Warum erkennen wir ein Motiv wieder, obwohl sich die Töne ändern?">
+    <p>Das Gedächtnis speichert eine Melodie nicht als Liste absoluter Tonhöhen. Du erkennst „Alle meine Entchen“ in jeder Tonart, also merkst du dir offenbar Beziehungen zwischen Tönen und keine festen Frequenzen. Die Musikpsychologie unterscheidet dabei drei Merkmale, die zusammenwirken:</p>
+    <ul>
+      <li><strong>Rhythmus:</strong> das Muster aus kurzen und langen Tönen.</li>
+      <li><strong>Kontur:</strong> die Abfolge von „hoch, runter, gleich“, unabhängig von der genauen Größe der Schritte. W. Jay Dowling hat in den 1970er-Jahren gezeigt, dass Hörer neue, kurz gehörte Melodien vor allem über ihre Kontur behalten und Melodien mit gleicher Kontur, aber anderen Intervallen leicht verwechseln.</li>
+      <li><strong>Intervalle:</strong> die genauen Abstände. Bei gut bekannten Melodien sind sie fest im Gedächtnis, deshalb fällt eine falsche Terz in einem vertrauten Lied sofort auf. Studien zum Erkennen bekannter Lieder (etwa Hébert und Peretz, 1997) fanden sogar, dass die Tonfolge allein oft besser erkannt wird als der Rhythmus allein.</li>
+    </ul>
+    <p>Innerhalb eines Stückes ist die Lage anders. Dort hörst du ein Motiv zum ersten Mal und sollst es in veränderter Gestalt wiedererkennen. Dann tragen Rhythmus und Kontur die Identität, denn genau diese Merkmale lassen Komponisten meist unverändert. Bei einer Sequenz bleiben Rhythmus, Kontur und meist auch die Intervalle erhalten, nur die Lage wechselt. Bei einer Intervallveränderung bleiben Rhythmus und Kontur. Bei einer Umkehrung bleibt der Rhythmus, die Kontur kippt. Je mehr Merkmale erhalten bleiben, desto deutlicher hört man die Verwandtschaft.</p>
+    <p>Dass Beethoven aus vier Tönen einen ganzen Satz bauen kann, ist kein Zufall. Ein sehr einfaches, rhythmisch markantes Motiv lässt sich in alle Richtungen verändern und bleibt trotzdem erkennbar. Ein kompliziertes Motiv würde sich bei der Verarbeitung schneller im Ohr auflösen.</p>
+  </section>
+
+  <!-- 39.3 -->
+  <h2 id="phrase">39.3 Phrase und Zäsur</h2>
+  <p>Eine <dfn id="g-phrase">Phrase</dfn> ist ein musikalischer Gedanke, der einen erkennbaren Anfang und ein erkennbares Ende hat, vergleichbar mit einem Satzteil zwischen zwei Kommas. In klassischer Musik und im Pop sind Phrasen meist zwei oder vier Takte lang. Das Ende einer Phrase heißt <dfn id="g-zaesur">Zäsur</dfn>. Dort entsteht ein kleiner Ruhepunkt, oft durch einen längeren Ton, eine Pause oder einen Akkordwechsel zu einem stabilen Klang.</p>
+  <p>Wie stark eine Zäsur wirkt, hängt vor allem vom Akkord am Phrasenende ab. Die Kadenzen aus Kapitel 16 sind die Satzzeichen der Musik:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Schluss</th><th>Akkorde am Ende</th><th>Wirkung</th><th>Satzzeichen</th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-cad="half"><td><dfn id="g-halbschluss-form">Halbschluss</dfn></td><td>… → V</td><td>offen, fragend, es muss weitergehen</td><td>Komma oder Fragezeichen</td><td>▶</td></tr>
+        <tr class="play-row" data-cad="full"><td><dfn id="g-ganzschluss-form">Ganzschluss</dfn></td><td>V → I</td><td>geschlossen, angekommen</td><td>Punkt</td><td>▶</td></tr>
+        <tr class="play-row" data-cad="deceptive"><td>Trugschluss</td><td>V → vi</td><td>überraschend, verlängert</td><td>Gedankenstrich</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Eine Melodie, die auf der Dominante innehält, fühlt sich wie eine Frage an. Eine Melodie, die mit einem Ganzschluss endet, fühlt sich wie eine Antwort an. Aus dieser Frage-Antwort-Beziehung entsteht die wichtigste achttaktige Form, die Periode.</p>
+
+  <section class="layer deep" data-title="Woher kommt der Vergleich mit Satzzeichen?">
+    <p>Die Idee, Musik wie Sprache zu gliedern, ist im 18. Jahrhundert ausgearbeitet worden. Johann Mattheson beschrieb 1739 im „Vollkommenen Capellmeister“ die musikalische Gliederung ausdrücklich mit Begriffen der Rhetorik und Grammatik. Heinrich Christoph Koch entwickelte in seinem „Versuch einer Anleitung zur Composition“ (1782–1793) ein ganzes System von Ruhepunkten: kleinere Einschnitte, Absätze und Schlüsse, die er mit Komma, Semikolon und Punkt verglich.</p>
+    <p>Der Vergleich ist mehr als ein Bild. Musik und Sprache verlaufen beide in der Zeit, und beide müssen vom Gedächtnis in Häppchen verarbeitet werden. Das Arbeitsgedächtnis kann nur wenige Einheiten gleichzeitig halten. Phrasen von zwei bis vier Takten passen gut in dieses Fenster. Zäsuren geben dem Hörer Zeit, das Gehörte zu einem Block zusammenzufassen, bevor der nächste beginnt.</p>
+    <p>Die Begriffe Periode und Satz, die du gleich kennenlernst, stammen aus einer späteren Tradition. Arnold Schönberg unterrichtete sie in Wien und später in den USA. Sein Schüler Erwin Ratz fasste sie 1951 in der „Einführung in die musikalische Formenlehre“ zusammen. Schönbergs eigenes Lehrbuch „Fundamentals of Musical Composition“ erschien 1967 nach seinem Tod. Seit den 1990er-Jahren hat William Caplin („Classical Form“, 1998) das System verfeinert, und es ist heute international Standard für die Analyse klassischer Themen.</p>
+  </section>
+
+  <!-- 39.4 -->
+  <h2 id="periode">39.4 Die Periode</h2>
+  <p>Eine <dfn id="g-periode">Periode</dfn> ist ein meist achttaktiges Thema aus zwei gleich langen Hälften, die wie Frage und Antwort zusammengehören:</p>
+  <ul>
+    <li>Der <dfn id="g-vordersatz">Vordersatz</dfn> (Takt 1–4) stellt einen Gedanken vor und endet offen, meist mit einem <strong>Halbschluss</strong>.</li>
+    <li>Der <dfn id="g-nachsatz">Nachsatz</dfn> (Takt 5–8) beginnt wie der Vordersatz, führt ihn aber zu einem geschlossenen Ende, meist zu einem <strong>Ganzschluss</strong>.</li>
+  </ul>
+  <figure class="formplan" id="plan-periode"></figure>
+  <p>Das bekannteste Beispiel ist die „Ode an die Freude“ aus Beethovens 9. Sinfonie. Hier in C-Dur und leicht vereinfacht:</p>
+  <div class="abc" data-bpm="100" data-caption="Beethoven, „Ode an die Freude“, erste acht Takte (C-Dur, vereinfacht)">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    "^Vordersatz""C" E E F G | "G" G F E D | "C" C C D E | "G" E3/2 D/ D2 |
+    "^Nachsatz""C" E E F G | "G" G F E D | "C" C C D E | "G" D3/2 "C" C/ C2 |]
+  </div>
+  <p>Vergleiche die Takte 4 und 8. Der Vordersatz bleibt auf d' stehen, einem Ton des Dominantakkords G. Die Melodie wirkt unvollständig. Der Nachsatz ist bis Takt 7 identisch, dreht dann aber die letzten zwei Töne um: Er landet auf c', dem Grundton. Ein einziger veränderter Takt verwandelt die Frage in eine Antwort.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Periode = Vordersatz (offen, oft Halbschluss) + Nachsatz (gleicher Anfang, geschlossenes Ende, Ganzschluss). Typisch sind 4 + 4 Takte.</p>
+  </div>
+
+  <h4>Varianten der Periode</h4>
+  <ul>
+    <li><strong>Modulierende Periode:</strong> Der Nachsatz endet nicht in der Ausgangstonart, sondern in einer verwandten Tonart, oft in der Dominanttonart. Das ist häufig, wenn ein Stück danach weitergehen und später zurückkehren soll (Kapitel 22).</li>
+    <li><strong>Erweiterte Periode:</strong> Vorder- oder Nachsatz werden durch Wiederholungen, eingeschobene Takte oder einen hinausgezögerten Schluss verlängert, zum Beispiel durch einen Trugschluss vor dem eigentlichen Ganzschluss.</li>
+    <li><strong>Zusammengesetzte Periode:</strong> Vorder- und Nachsatz sind selbst achttaktig. Das Ganze umfasst dann 16 Takte.</li>
+  </ul>
+  <p>Ein klassisches Beispiel aus der Klaviermusik ist das Thema des ersten Satzes von Mozarts Sonate A-Dur KV 331, über das Mozart Variationen geschrieben hat. Seine ersten acht Takte bilden eine Periode: Der Vordersatz hält in Takt 4 auf der Dominante inne, der Nachsatz beginnt gleich und schließt in Takt 8 auf der Tonika.</p>
+
+  <section class="layer piano" data-title="Eine Periode spielen: Frage und Antwort hörbar machen">
+    <p>Wenn du weißt, dass ein Thema eine Periode ist, kannst du die beiden Hälften bewusst gestalten. Drei Hinweise:</p>
+    <ul>
+      <li><strong>Das Ende des Vordersatzes nicht abschließen.</strong> Der Halbschluss soll fragend klingen. Spiel den letzten Ton nicht schwerer als den vorletzten, und lass ihn nicht ausklingen, als wäre das Stück zu Ende. Eine minimale Atempause genügt.</li>
+      <li><strong>Den Nachsatz als Antwort beginnen.</strong> Er fängt mit denselben Tönen an. Spiel ihn trotzdem nicht als bloße Wiederholung. Viele Pianisten beginnen den Nachsatz eine Spur leiser oder ruhiger, damit der eigentliche Schluss mehr Gewicht bekommt.</li>
+      <li><strong>Den Ganzschluss ankommen lassen.</strong> Der Schlusston fällt auf eine schwere Zeit. Lass ihn klingen und nimm danach die Hand ruhig weg.</li>
+    </ul>
+    <p><strong>Übung:</strong> Spiel die „Ode an die Freude“ oben mit der rechten Hand in Fünf-Finger-Lage (Daumen auf c'). Spiel einmal beide Hälften gleich und einmal mit Frage und Antwort. Nimm dich mit dem Handy auf und vergleiche.</p>
+    <p>Begleite dazu mit der linken Hand nur die Grundtöne: c bei C, g bei G (Kapitel 46 zeigt vollere Begleitmuster).</p>
+  </section>
+
+  <!-- 39.5 -->
+  <h2 id="satz">39.5 Der Satz</h2>
+  <p>Der <dfn id="g-satz">Satz</dfn> (englisch <em>sentence</em>) ist die zweite große Themenform. Er hat nichts mit dem „Satz“ eines Musikstücks zu tun, also einem Teil einer Sonate oder Sinfonie. Gemeint ist ein achttaktiges Thema, das nicht wie eine Frage-Antwort-Einheit gebaut ist, sondern wie eine Entwicklung:</p>
+  <ol>
+    <li><strong>Präsentation</strong> (Takt 1–4): Eine zweitaktige <dfn id="g-basisidee">Basisidee</dfn> wird vorgestellt und gleich wiederholt, oft auf einer anderen Harmonie (Tonika, dann Dominante).</li>
+    <li><strong>Fortsetzung</strong> (Takt 5–8): Die Einheiten werden kürzer. Aus zweitaktigen Gruppen werden eintaktige oder halbtaktige Stücke (Abspaltung), das Tempo der Ereignisse nimmt zu, und am Ende steht eine Kadenz.</li>
+  </ol>
+  <p>Das Proportionsmuster 2 + 2 + 4, das sich innen oft als 2 + 2 + 1 + 1 + 2 gliedert, erzeugt einen Sog nach vorn. Die Wiederholung am Anfang stellt den Gedanken klar, die Verkürzung danach treibt auf das Ziel zu.</p>
+  <figure class="formplan" id="plan-satz"></figure>
+  <p>Ein eigenes Beispiel in C-Dur:</p>
+  <div class="abc" data-bpm="100" data-caption="Ein achttaktiger Satz: Basisidee, Wiederholung auf der Dominante, Verkürzung, Kadenz">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    "^Basisidee""C" C E G c | "C" c G E2 | "^Wiederholung""G" B, D G B | "G" B G D2 |
+    "^Verkürzung""C" C E G2 | "Dm" D F A2 | "^Kadenz""G7" G F D B, | "C" C4 |]
+  </div>
+  <p>Takt 1–2 und 3–4 haben dieselbe Kontur: Dreiklang aufwärts, dann zurück. Ab Takt 5 bleibt nur noch der Anfang der Idee übrig (drei Töne aufwärts), jetzt im Abstand von einem Takt und in einer Sequenz eine Stufe höher. Takt 7–8 führen in die Kadenz.</p>
+  <p>Das berühmteste Lehrbuchbeispiel ist der Beginn von Beethovens Klaviersonate f-Moll op. 2 Nr. 1. Takt 1–2 bringen eine Basisidee in f-Moll: einen schnell aufsteigenden Dreiklang mit einer kleinen Verzierung am Ende. Takt 3–4 wiederholen sie auf der Dominante. In Takt 5–6 spaltet Beethoven die Verzierung ab und wiederholt sie in eintaktigen Gruppen. Takt 7 verkürzt noch einmal, und Takt 8 bleibt mit einer Fermate auf der Dominante stehen, also mit einem Halbschluss. Ein Satz kann also auch offen enden.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Satz = Präsentation (Basisidee + Wiederholung, 2 + 2) + Fortsetzung (Verkürzung und Kadenz, 4). Erkennungszeichen: Die Einheiten werden zum Ende hin kürzer.</p>
+  </div>
+
+  <section class="layer deep" data-title="Warum wirkt die Verkürzung wie eine Beschleunigung?">
+    <p>Im Satz ändert sich das Tempo nicht. Trotzdem empfinden Hörer die zweite Hälfte als drängender. Das liegt an der Dichte der Ereignisse, die das Ohr verfolgt.</p>
+    <p>In der Präsentation passiert alle zwei Takte etwas Neues: Basisidee, dann ihre Wiederholung. In der Fortsetzung kommt jeden Takt eine neue Einheit, gegen Ende sogar jeden halben Takt. Die Musiktheorie spricht von <em>Fragmentierung</em> oder Abspaltung. Für das Gehör bedeutet das: Die Gruppen, die es bilden muss, werden kleiner und folgen schneller aufeinander. Dieselbe Technik kennt man aus der Rhetorik als Steigerung („Er kam, er sah, er siegte“).</p>
+    <p>Oft beschleunigt sich zusätzlich der <strong>harmonische Rhythmus</strong>, also das Tempo der Akkordwechsel. In der Präsentation wechselt die Harmonie häufig nur alle zwei Takte (I, dann V), in der Fortsetzung oft jeden Takt oder jeden halben Takt. Diese Verdichtung zur Kadenz hin ist eines der wichtigsten Mittel klassischer Musik, um Zielgerichtetheit zu erzeugen.</p>
+    <p>Ein Grund, warum die Präsentation nicht langweilig wirkt, obwohl sie dieselbe Idee zweimal bringt: Die Wiederholung steht meist auf einer anderen Harmonie. Tonika und Dominante bilden ein Spannungspaar (Kapitel 14). Die Idee wird also wiederholt und gleichzeitig harmonisch geöffnet.</p>
+  </section>
+
+  <!-- 39.6 -->
+  <h2 id="vergleich">39.6 Periode oder Satz? So unterscheidest du sie</h2>
+  <p>Beide Formen sind meist acht Takte lang und beginnen mit einer zweitaktigen Idee. Entscheidend ist, was in <strong>Takt 3–4</strong> und in <strong>Takt 5</strong> passiert:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th></th><th>Periode</th><th>Satz</th></tr></thead>
+      <tbody>
+        <tr><td>Takt 1–2</td><td>Anfangsidee</td><td>Basisidee</td></tr>
+        <tr><td>Takt 3–4</td><td>etwas Neues, das zum Halbschluss führt</td><td>Basisidee noch einmal (oft auf V)</td></tr>
+        <tr><td>Takt 5</td><td>Anfangsidee kehrt zurück (Nachsatz)</td><td>kurze Bruchstücke der Idee</td></tr>
+        <tr><td>Gliederung</td><td>4 + 4, symmetrisch</td><td>2 + 2 + 4, zielgerichtet</td></tr>
+        <tr><td>Charakter</td><td>ausgewogen, liedhaft</td><td>vorwärtsdrängend, entwickelnd</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Eine schnelle Faustregel: Kommt die Anfangsidee in Takt 3 wieder, ist es eher ein Satz. Kommt sie erst in Takt 5 wieder, ist es eher eine Periode.</p>
+  <p>Nicht jedes Thema passt sauber in eine der beiden Formen. Komponisten mischen sie. Caplin nennt solche Mischformen <em>hybride Themen</em>, zum Beispiel eine Periode, deren Nachsatz wie die Fortsetzung eines Satzes gebaut ist. Auch das ist eine Erkenntnis: Formbegriffe sind Werkzeuge zum Verstehen, keine Vorschriften, an die sich Komponisten gehalten hätten.</p>
+
+  <section class="layer deep" data-title="Warum gerade acht Takte?">
+    <p>Die Achttaktigkeit wirkt so selbstverständlich, dass man sie kaum hinterfragt. Sie folgt aber aus einem Prinzip, das du aus Kapitel 4 kennst: der metrischen Hierarchie.</p>
+    <p>Innerhalb eines Taktes wechseln schwere und leichte Zählzeiten. Dasselbe Muster setzt sich auf höheren Ebenen fort. Takte gruppieren sich paarweise zu einem schweren und einem leichten Takt, Zweitakter zu Viertaktern, Viertakter zu Achttaktern. Die Musiktheorie spricht von <em>Hypermetrum</em>. Lerdahl und Jackendoff haben 1983 in „A Generative Theory of Tonal Music“ gezeigt, dass Hörer solche Gruppierungen nach regelhaften Prinzipien bilden, ähnlich wie bei der Wahrnehmung sprachlicher Strukturen.</p>
+    <p>Die Zweiteilung hat auch eine praktische Wurzel. Ein großer Teil der Musik des 18. Jahrhunderts ist aus dem Tanz hervorgegangen. Tanzfiguren sind symmetrisch gebaut, eine Bewegung und ihre Gegenbewegung brauchen gleich viel Zeit. Ein Menuett mit siebentaktigen Phrasen wäre schlicht nicht tanzbar gewesen.</p>
+    <p>Gerade weil acht Takte die Erwartung sind, wirken Abweichungen. Ein Thema mit einem eingeschobenen neunten Takt fühlt sich gedehnt an, ein sechstaktiges gedrängt. Haydn war ein Meister solcher bewussten Unregelmäßigkeiten. Sie funktionieren nur, weil das Ohr die Norm kennt.</p>
+  </section>
+
+  <!-- 39.7 -->
+  <h2 id="bauen">39.7 Selbst bauen: eine Periode in vier Schritten</h2>
+  <p>Am besten verstehst du die Formen, indem du selbst eine baust. Du brauchst dafür nur C-Dur und die Akkorde I, IV und V.</p>
+  <ol>
+    <li><strong>Anfangsidee erfinden</strong> (Takt 1–2): zwei Takte, die auf Tönen des C-Dur-Akkords beginnen. Ein markanter Rhythmus hilft.</li>
+    <li><strong>Vordersatz schließen</strong> (Takt 3–4): Führe die Melodie zu einem Ton des G-Dur-Akkords (g, h oder d) auf einer schweren Zählzeit in Takt 4. Das ist dein Halbschluss.</li>
+    <li><strong>Nachsatz beginnen</strong> (Takt 5–6): Wiederhole Takt 1–2 genau oder fast genau.</li>
+    <li><strong>Nachsatz schließen</strong> (Takt 7–8): Führe die Melodie über einen G-Dur-Ton in Takt 7 zum c auf der ersten Zählzeit von Takt 8. Das ist dein Ganzschluss.</li>
+  </ol>
+  <p>So könnte das Ergebnis aussehen:</p>
+  <div class="abc" data-bpm="96" data-caption="Eine selbst gebaute Periode in C-Dur">
+    X:1
+    M:3/4
+    L:1/4
+    K:C
+    "^Vordersatz""C" G2 E | "C" c2 G | "F" A G F | "G" D3 |
+    "^Nachsatz""C" G2 E | "C" c2 G | "G7" F E D | "C" C3 |]
+  </div>
+
+  <section class="layer piano" data-title="Form als Landkarte beim Üben und Auswendiglernen">
+    <p>Ein Stück, das du nur als Folge von Tönen kennst, ist schwer zu merken und bricht bei einem Fehler oft komplett zusammen. Ein Stück, das du als Folge von Phrasen und Themen kennst, hat feste Haltepunkte.</p>
+    <ul>
+      <li><strong>Gliederung einzeichnen.</strong> Markiere mit Bleistift in den Noten jede Phrase mit einem Bogen über dem System und jede Kadenz mit „HS“ oder „GS“. Schreib an jede Wiederholung einer Idee ein Kürzel (a, a', b).</li>
+      <li><strong>Gleich und anders trennen.</strong> Bei einer Periode sind Vorder- und Nachsatz bis kurz vor Schluss gleich. Fehler entstehen genau an der Stelle, an der sie sich unterscheiden, weil die Hand automatisch die erste Version spielt. Übe diese Stelle gezielt im Wechsel: Takt 3–4, dann Takt 7–8.</li>
+      <li><strong>Einstiegspunkte üben.</strong> Übe, an jedem Phrasenanfang einsteigen zu können. Wenn du dich beim Vorspielen verspielst, springst du zum nächsten Phrasenanfang, statt von vorn zu beginnen. Kapitel 47 zeigt, warum dieses Üben in Abschnitten so wirksam ist.</li>
+      <li><strong>Phrasenbögen spielen.</strong> Eine Phrase hat meist einen Höhepunkt, oft kurz vor ihrem Ende. Lass die Lautstärke zu ihm hin leicht wachsen und danach zurückgehen. Zwischen zwei Phrasen kurz „atmen“, also den letzten Ton minimal verkürzen.</li>
+    </ul>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Musik ist hierarchisch gegliedert: Motiv, Phrase, Thema, Formteil, Werk.</li>
+    <li>Ein <strong>Motiv</strong> ist die kleinste wiedererkennbare Einheit. Es wird durch Wiederholung, Sequenz, Umkehrung, Augmentation oder Abspaltung verarbeitet.</li>
+    <li>Phrasen enden mit Zäsuren. Halbschluss wirkt offen, Ganzschluss geschlossen.</li>
+    <li>Die <strong>Periode</strong> besteht aus Vordersatz und Nachsatz (4 + 4): gleicher Beginn, offenes und geschlossenes Ende.</li>
+    <li>Der <strong>Satz</strong> besteht aus Präsentation und Fortsetzung (2 + 2 + 4): Idee, Wiederholung, Verkürzung, Kadenz.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">39.1</span><div><span class="kind">Theorie</span>Welche Verarbeitungstechnik liegt jeweils vor? Ausgangsmotiv: c'–e'–g' (Achtel, Achtel, Viertel). (a) d'–f'–a' im selben Rhythmus, (b) c'–e'–g' in Viertel, Viertel, Halbe, (c) g'–e'–c' im Rhythmus Viertel, Achtel, Achtel, (d) c'–e' (zwei Achtel), mehrfach hintereinander.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>(a) Sequenz: gleiche Gestalt eine Stufe höher. (b) Augmentation: Notenwerte verdoppelt. (c) Krebs: dieselben Töne und Notenwerte rückwärts. Die Umkehrung wäre dagegen c'–a–f im Originalrhythmus: gleicher Anfangston, Bewegung in die Gegenrichtung. (d) Abspaltung: nur der Anfang des Motivs wird weiterverwendet.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">39.2</span><div><span class="kind">Theorie</span>Warum erkennt man in Beethovens 5. Sinfonie die zweite Motivgestalt (f–f–f–d) als dasselbe Motiv, obwohl ein anderes Intervall darin vorkommt?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Rhythmus (kurz-kurz-kurz-lang) und Kontur (Tonwiederholung, dann Terz abwärts) bleiben gleich. Nur die Größe der Terz ändert sich: es–g ist eine große Terz (4 Halbtöne), d–f eine kleine Terz (3 Halbtöne). Wenn Rhythmus und Kontur erhalten bleiben, hört das Ohr eine Variante desselben Motivs.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">39.3</span><div><span class="kind">Notenlesen</span>Ist dieses Thema eine Periode oder ein Satz? Begründe mit Takt 3 und Takt 5.</div></div>
+      <div class="abc" data-bpm="100">
+        X:1
+        M:4/4
+        L:1/4
+        K:G
+        "G" G B d2 | "D7" c A F2 | "G" G B d2 | "D7" c A F2 | "G" G B "C" e c | "G" d B "D7" A F | "G" G2 "D7" A2 | "G" G4 |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Ein Satz. Die zweitaktige Basisidee (Takt 1–2) kommt in Takt 3–4 sofort wieder. Ab Takt 5 wechselt die Harmonie jeden halben Takt, die Melodie arbeitet mit kürzeren Bausteinen, und Takt 7–8 bilden die Kadenz D7–G. Hier steht die Wiederholung übrigens nicht auf der Dominante, sondern unverändert. Auch das kommt vor.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">39.4</span><div><span class="kind">Theorie</span>In der „Ode an die Freude“ unterscheiden sich Vordersatz und Nachsatz nur im letzten Takt. Welche Schlüsse liegen in Takt 4 und Takt 8 vor, und welcher Melodieton ist dafür entscheidend?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Takt 4: Halbschluss, die Melodie endet auf d', einem Ton des Dominantakkords G. Takt 8: Ganzschluss, die Melodie endet auf c', dem Grundton von C. Entscheidend ist der Schlusston: d' bleibt offen, c' schließt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">39.5</span><div><span class="kind">Theorie</span>Ein Vordersatz endet mit einem Ganzschluss in C-Dur, der Nachsatz ebenfalls. Warum wirkt eine solche „Periode“ schwächer als eine mit Halbschluss im Vordersatz?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Wenn schon der Vordersatz geschlossen endet, fehlt die Frage. Der Nachsatz bringt dann keine Auflösung einer offenen Spannung, sondern nur eine Bestätigung. Der Reiz der Periode liegt gerade im Gegensatz von offenem und geschlossenem Ende.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">39.6</span><div><span class="kind">Am Klavier</span>Komponiere nach der Anleitung in 39.7 eine eigene achttaktige Periode in C-Dur im 4/4-Takt. Spiel sie mit der rechten Hand und begleite mit der linken nur die Grundtöne der Akkorde.</div></div>
+      <details class="solution"><summary>Prüfliste</summary><div>Takt 4 endet auf g, h oder d über G-Dur (Halbschluss)? Takt 5–6 entsprechen Takt 1–2? Takt 8 endet auf c auf der ersten Zählzeit über C-Dur, davor G oder G7? Klingt Takt 4 wie eine Frage und Takt 8 wie eine Antwort? Dann ist es eine Periode.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">39.7</span><div><span class="kind">Am Klavier</span>Baue aus dieser Basisidee einen Satz: c'–d'–e'–c' (vier Viertel) und e'–f'–g' (Viertel, Viertel, Halbe). Wiederhole die Idee in Takt 3–4 auf der Dominante, verkürze in Takt 5–6 und schließe in Takt 7–8.</div></div>
+      <details class="solution"><summary>Eine mögliche Lösung</summary><div>Takt 1–2 (C): c' d' e' c' | e' f' g'. Takt 3–4 (G7): h c' d' h | d' e' f', also dieselbe Gestalt eine Stufe tiefer auf Tönen, die zu G7 passen. Takt 5–6: e' f' g' (Halbe) | f' g' a' (Halbe), nur noch der Aufstieg vom Ende der Idee, in Eintaktern und eine Stufe höher sequenziert. Takt 7–8 (G7–C): g' f' e' d' | c'. Wichtig ist das Muster: zweimal zwei Takte, dann kürzere Einheiten, dann Kadenz.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">39.8</span><div><span class="kind">Gehör</span>Hör dir die Takte 1–8 aus Mozarts Sonate A-Dur KV 331 (1. Satz) und aus Beethovens Sonate f-Moll op. 2 Nr. 1 (1. Satz) an. Notiere, an welchen Stellen du die Zäsuren hörst und was in Takt 3 jeweils passiert.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Mozart: deutliche Zäsur nach Takt 4 (Halbschluss), in Takt 5 beginnt der Anfang von neuem: Periode. Beethoven: kleine Zäsur nach Takt 2, in Takt 3 kehrt die Idee sofort auf der Dominante zurück, danach werden die Einheiten kürzer, Zäsur mit Fermate in Takt 8: Satz.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">39.9</span><div><span class="kind">Vertiefung</span>Erkläre mit dem Begriff des harmonischen Rhythmus, warum die Fortsetzung eines Satzes drängender wirkt als die Präsentation, obwohl das Tempo gleich bleibt.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der harmonische Rhythmus ist die Geschwindigkeit der Akkordwechsel. In der Präsentation steht oft zwei Takte lang derselbe Akkord, in der Fortsetzung wechselt er jeden Takt oder jeden halben Takt. Gleichzeitig werden die melodischen Einheiten kürzer. Das Ohr muss pro Zeiteinheit mehr Ereignisse verarbeiten und erlebt das als Beschleunigung auf die Kadenz zu.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(39);
+
+  // Kadenzen zum Anhören (C-Dur)
+  (function () {
+    const C = [48, 64, 67, 72], F = [53, 65, 69, 72], G = [43, 62, 67, 71], G7 = [43, 62, 65, 71], Am = [45, 64, 69, 72];
+    const seqs = {
+      half: [[C, 1], [F, 1], [C, 1], [G, 2]],
+      full: [[C, 1], [F, 1], [G7, 1], [C, 2]],
+      deceptive: [[C, 1], [F, 1], [G7, 1], [Am, 2]]
+    };
+    document.querySelectorAll("[data-cad]").forEach((row) => {
+      row.addEventListener("click", () => Book.audio.seq(seqs[row.dataset.cad], 80));
+    });
+  })();
+
+  // Formpläne Periode und Satz
+  (function () {
+    function plan(id, blocks, label) {
+      const W = 640, H = 92, L = 4, R = 4, total = 8;
+      const x = (t) => L + (t / total) * (W - L - R);
+      let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${label}">`;
+      blocks.forEach((b) => {
+        s += `<rect class="blk ${b.cls}" x="${x(b.from)}" y="${b.y || 8}" width="${x(b.to) - x(b.from)}" height="${b.h || 34}" rx="4"/>`;
+        s += `<text x="${(x(b.from) + x(b.to)) / 2}" y="${(b.y || 8) + (b.h || 34) / 2 + 4}">${b.t}</text>`;
+      });
+      for (let t = 1; t <= 8; t++) s += `<text class="s" x="${(x(t - 1) + x(t)) / 2}" y="${H - 22}">T. ${t}</text>`;
+      blocks.filter((b) => b.cad).forEach((b) => (s += `<text class="cad" x="${x(b.to) - 18}" y="${H - 6}">${b.cad}</text>`));
+      s += "</svg>";
+      document.getElementById(id).innerHTML = s + `<figcaption>${label}</figcaption>`;
+    }
+    plan("plan-periode", [
+      { from: 0, to: 4, t: "Vordersatz", cls: "a", cad: "HS" },
+      { from: 4, to: 8, t: "Nachsatz", cls: "a", cad: "GS" },
+      { from: 0, to: 2, t: "Idee", cls: "b", y: 46, h: 18 },
+      { from: 4, to: 6, t: "Idee", cls: "b", y: 46, h: 18 }
+    ], "Periode: zwei gleich lange Hälften mit gleichem Anfang. Der Vordersatz endet offen (HS = Halbschluss), der Nachsatz geschlossen (GS = Ganzschluss).");
+    plan("plan-satz", [
+      { from: 0, to: 4, t: "Präsentation", cls: "a" },
+      { from: 4, to: 8, t: "Fortsetzung", cls: "c", cad: "Kadenz" },
+      { from: 0, to: 2, t: "Basisidee", cls: "b", y: 46, h: 18 },
+      { from: 2, to: 4, t: "Wiederholung", cls: "b", y: 46, h: 18 },
+      { from: 4, to: 5, t: "1", cls: "b", y: 46, h: 18 },
+      { from: 5, to: 6, t: "1", cls: "b", y: 46, h: 18 },
+      { from: 6, to: 8, t: "Kadenz", cls: "b", y: 46, h: 18 }
+    ], "Satz: Die Basisidee erklingt zweimal, danach werden die Einheiten kürzer und münden in eine Kadenz.");
+  })();
+</script>
+</body>
+</html>

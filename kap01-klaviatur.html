@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Die Klaviatur · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .finder .target { font-family: var(--font-display); font-size: var(--step-3); font-weight: 700; color: var(--accent); min-height: 1.3em; margin: 0.4rem 0; }
+  .finder .feedback { min-height: 1.6em; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil I · Kapitel 1</div>
+    <h1>Die Klaviatur</h1>
+    <p class="lede">Die Klaviatur ist eine Landkarte aller Töne, die das Klavier spielen kann. Wer ihr Muster versteht, findet jede Taste ohne Suchen und hat das Fundament, auf dem alle weiteren Kapitel aufbauen.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>jede weiße und jede schwarze Taste mit ihrem deutschen und englischen Namen benennen,</li>
+      <li>Oktaven unterscheiden und mit Helmholtz- und wissenschaftlicher Schreibweise bezeichnen,</li>
+      <li>Halbton- und Ganztonschritte auf der Klaviatur erkennen,</li>
+      <li>Töne mit ♯ und ♭ erhöhen und erniedrigen und richtig benennen,</li>
+      <li>erklären, warum es sieben weiße und fünf schwarze Tasten gibt und warum wir „h“ sagen.</li>
+    </ul>
+  </div>
+
+  <!-- 1.1 -->
+  <h2 id="muster">1.1 Das Muster der Klaviatur</h2>
+  <p>Ein modernes Klavier hat <strong>88 Tasten</strong>: 52 weiße und 36 schwarze. Auf den ersten Blick wirkt das unübersichtlich. Tatsächlich besteht die Klaviatur aber aus einem einzigen Muster aus zwölf Tasten, das sich immer wieder wiederholt.</p>
+  <p>Achte auf die schwarzen Tasten. Sie bilden abwechselnd <strong>Zweiergruppen</strong> und <strong>Dreiergruppen</strong>. Zwischen den Gruppen liegen jeweils zwei weiße Tasten direkt nebeneinander, ohne schwarze Taste dazwischen. Dieses Muster ist dein wichtigster Orientierungspunkt.</p>
+  <figure>
+    <div class="kb" data-from="48" data-to="83" data-labels="none" data-marks="49:c2 51:c2 54:c3 56:c3 58:c3 61:c2 63:c2 66:c3 68:c3 70:c3 73:c2 75:c2 78:c3 80:c3 82:c3" aria-label="Drei Oktaven der Klaviatur, schwarze Zweiergruppen petrol, Dreiergruppen orange"></div>
+    <figcaption>Die schwarzen Tasten in Zweiergruppen (petrol) und Dreiergruppen (orange). Das Muster wiederholt sich alle zwölf Tasten.</figcaption>
+  </figure>
+  <p>Eine Wiederholungseinheit umfasst sieben weiße und fünf schwarze Tasten, zusammen zwölf. Jede dieser zwölf Tasten erzeugt einen anderen Ton. Nach zwölf Tasten beginnt das Muster von vorn, und die Töne kehren in höherer Lage wieder.</p>
+
+  <section class="layer deep" data-title="Warum hat das Klavier genau 88 Tasten?">
+    <p>Die Zahl 88 ist ein Kompromiss zwischen Bauweise und Gehör. Die tiefste Taste, das Subkontra-A, schwingt mit 27,5 Hz. Das höchste c''''' ganz rechts schwingt mit etwa 4186 Hz.</p>
+    <p>Unterhalb von etwa 20 bis 30 Hz hören wir keine klare Tonhöhe mehr, sondern eher ein Brummen oder Flattern. Oberhalb von etwa 4000 bis 5000 Hz fällt es dem Gehör schwer, Tonhöhen musikalisch einzuordnen. Melodien in dieser Lage klingen eher wie Pfeifen und Klirren. Das Klavier deckt damit ziemlich genau den Bereich ab, in dem Tonhöhen als Musik funktionieren.</p>
+    <p>Historisch ist die Klaviatur gewachsen. Mozarts Hammerflügel hatte rund fünf Oktaven, etwa 61 Tasten. Im 19. Jahrhundert wuchs der Umfang mit den Ansprüchen der Komponisten. Seit den 1880er-Jahren, maßgeblich durch die Firma Steinway, sind 88 Tasten Standard. Einige Instrumente gehen weiter: Der Bösendorfer „Imperial“ hat 97 Tasten und reicht im Bass bis zum Subsubkontra-C.</p>
+  </section>
+
+  <!-- 1.2 -->
+  <h2 id="stammtoene">1.2 Die weißen Tasten: Stammtöne</h2>
+  <p>Die weißen Tasten heißen <dfn id="g-stammton">Stammtöne</dfn>. Sie tragen die Buchstaben <strong>c, d, e, f, g, a, h</strong>. Danach beginnt die Reihe wieder mit c.</p>
+  <figure>
+    <div class="kb" data-from="48" data-to="71" data-labels="white" aria-label="Zwei Oktaven mit den Namen der weißen Tasten"></div>
+    <figcaption>Die Stammtöne. Tippe die Tasten an, um sie zu hören.</figcaption>
+  </figure>
+  <p>So findest du jeden Stammton über die schwarzen Tasten:</p>
+  <ul>
+    <li><strong>c</strong> liegt direkt links von einer Zweiergruppe.</li>
+    <li><strong>d</strong> liegt in der Mitte der Zweiergruppe, <strong>e</strong> direkt rechts davon.</li>
+    <li><strong>f</strong> liegt direkt links von einer Dreiergruppe.</li>
+    <li><strong>g</strong> und <strong>a</strong> liegen zwischen den Tasten der Dreiergruppe, <strong>h</strong> direkt rechts davon.</li>
+  </ul>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>c liegt links von den zwei schwarzen Tasten, f links von den drei schwarzen Tasten. Von diesen beiden Ankern aus findest du alle anderen Stammtöne.</p>
+  </div>
+  <p>Im Englischen heißen die Stammtöne <strong>C, D, E, F, G, A, B</strong>. Der einzige Unterschied ist der letzte Ton: Unser <em>h</em> heißt im Englischen <em>B</em>. Diesen Unterschied musst du dir gut merken, denn Akkordsymbole, Lernvideos und Musiksoftware verwenden fast immer die englischen Namen. Woher das deutsche h stammt, erklärt die Vertiefung in Abschnitt 1.5.</p>
+
+  <section class="layer deep" data-title="Warum beginnt die Reihe bei C und nicht bei A?">
+    <p>Die Buchstaben wurden im Mittelalter vergeben. Damals begann die Tonreihe, mit der Musiktheoretiker arbeiteten, bei A. Die Buchstaben A bis G wurden einfach der Reihe nach verteilt und wiederholten sich in jeder höheren Lage.</p>
+    <p>Dass wir heute bei C anfangen, hat mit der späteren Musik zu tun. Die Dur-Tonleiter auf C benutzt genau die weißen Tasten und keine schwarzen. Seit dem 17. Jahrhundert wurde Dur zum Normalfall der europäischen Musik, und C-Dur zur einfachsten Tonart. So wurde C zum natürlichen Ausgangspunkt. Die alte Zählung bei A lebt noch versteckt weiter: Der Stimmton, nach dem Orchester stimmen, ist ein A.</p>
+  </section>
+
+  <section class="layer deep" data-title="Woher kommen Do, Re, Mi?">
+    <p>In Italien, Frankreich, Spanien und vielen anderen Ländern heißen die Stammtöne nicht c, d, e, sondern <em>do, re, mi, fa, sol, la, si</em>. Diese Silben gehen auf den Mönch Guido von Arezzo zurück, der um 1025 eine Methode entwickelte, mit der Sänger neue Melodien schneller lernen konnten.</p>
+    <p>Guido nahm einen bekannten Hymnus an Johannes den Täufer, <em>Ut queant laxis</em>. In diesem Hymnus beginnt jede Zeile einen Ton höher als die vorige. Die Anfangssilben der Zeilen ergaben die Tonnamen: <em>ut, re, mi, fa, sol, la</em>. Aus der letzten Zeile, <em>Sancte Iohannes</em>, wurde später <em>si</em> gebildet. Das schwer singbare <em>ut</em> ersetzte man im 17. Jahrhundert in Italien durch <em>do</em>.</p>
+    <p>Guidos System hatte nur sechs Silben. Damit hängt eine Besonderheit zusammen, die bis heute in unseren Notennamen steckt: die Sache mit b und h (Abschnitt 1.5).</p>
+  </section>
+
+  <!-- 1.3 -->
+  <h2 id="oktaven">1.3 Oktaven und ihre Namen</h2>
+  <p>Gehst du von einem c aus sieben weiße Tasten nach rechts, landest du wieder auf einem c. Dieses c klingt höher, aber dem ersten auffallend ähnlich. Der Abstand zwischen zwei Tönen gleichen Namens heißt <dfn id="g-oktave">Oktave</dfn> (lateinisch <em>octava</em>, „die achte“, weil das zweite c der achte Stammton ist).</p>
+  <p>Da jeder Name mehrfach vorkommt, braucht man eine Angabe, <em>welches</em> c gemeint ist. Dafür gibt es zwei Schreibweisen.</p>
+  <h4>Deutsche Schreibweise (Helmholtz)</h4>
+  <p>Jeder Bereich von c bis h bildet eine Oktave mit eigenem Namen. Die Töne werden mit Groß- und Kleinbuchstaben, Strichen und Ziffern unterschieden:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Oktave</th><th>Helmholtz</th><th>wissenschaftlich</th><th class="num">c bzw. tiefster Ton</th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="21"><td>Subkontraoktave (nur A, B, H)</td><td>A2 – H2</td><td>A0 – B0</td><td class="num">27,5 Hz (A2)</td></tr>
+        <tr class="play-row" data-play="24"><td>Kontraoktave</td><td>C1 – H1</td><td>C1 – B1</td><td class="num">32,7 Hz</td></tr>
+        <tr class="play-row" data-play="36"><td>Große Oktave</td><td>C – H</td><td>C2 – B2</td><td class="num">65,4 Hz</td></tr>
+        <tr class="play-row" data-play="48"><td>Kleine Oktave</td><td>c – h</td><td>C3 – B3</td><td class="num">130,8 Hz</td></tr>
+        <tr class="play-row" data-play="60"><td><strong>Eingestrichene Oktave</strong></td><td><strong>c' – h'</strong></td><td><strong>C4 – B4</strong></td><td class="num">261,6 Hz</td></tr>
+        <tr class="play-row" data-play="72"><td>Zweigestrichene Oktave</td><td>c'' – h''</td><td>C5 – B5</td><td class="num">523,3 Hz</td></tr>
+        <tr class="play-row" data-play="84"><td>Dreigestrichene Oktave</td><td>c''' – h'''</td><td>C6 – B6</td><td class="num">1046,5 Hz</td></tr>
+        <tr class="play-row" data-play="96"><td>Viergestrichene Oktave</td><td>c'''' – h''''</td><td>C7 – B7</td><td class="num">2093,0 Hz</td></tr>
+        <tr class="play-row" data-play="108"><td>Fünfgestrichenes c (letzte Taste)</td><td>c'''''</td><td>C8</td><td class="num">4186,0 Hz</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Das <strong>c'</strong> („eingestrichenes c“) liegt ungefähr in der Mitte des Klaviers, meist direkt vor dem Markennamen oder dem Schlüsselloch. Es heißt deshalb auch <dfn id="g-mittleres-c">mittleres C</dfn> (englisch <em>middle C</em>). In diesem Buch ist es der wichtigste Bezugspunkt.</p>
+  <figure>
+    <div class="kb" data-from="36" data-to="84" data-labels="c" data-marks="60" aria-label="Vier Oktaven mit beschrifteten C-Tasten, das c' ist markiert"></div>
+    <figcaption>Die C-Tasten von C bis c''' mit Helmholtz-Namen. Markiert ist das c', das mittlere C.</figcaption>
+  </figure>
+  <h4>Wissenschaftliche Schreibweise</h4>
+  <p>International und in Musiksoftware üblich ist eine Schreibweise mit englischem Tonnamen und Ziffer: Das mittlere C heißt <strong>C4</strong>, das a' darüber <strong>A4</strong>. Die Ziffer wechselt immer beim C. Das h' direkt unter c'' heißt also B4, das c'' darüber C5.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>c' = C4 = mittleres C. Von dort zählst du: Jede Oktave höher bekommt einen Strich mehr bzw. eine Ziffer mehr.</p>
+  </div>
+  <p>Vorsicht bei den tiefsten Tönen: Das Subkontra-A heißt in deutscher Schreibweise A2, in wissenschaftlicher aber A0. Die Ziffern bedeuten in beiden Systemen etwas anderes. Nur in der Kontraoktave stimmen sie zufällig überein (C1 ist in beiden Systemen dasselbe C).</p>
+
+  <section class="layer deep" data-title="Woher stammen die Striche und warum sagt Yamaha C3?">
+    <p>Die Schreibweise mit Strichen ist älter als ihr Name. Sie entwickelte sich aus der deutschen Orgeltabulatur des 15. bis 17. Jahrhunderts. Organisten schrieben Musik damals nicht in Noten, sondern mit Buchstaben, und kennzeichneten die Lage mit Strichen über den Buchstaben. Im 19. Jahrhundert verwendete der Physiker Hermann von Helmholtz diese Schreibweise in seinem einflussreichen Buch über die Lehre von den Tonempfindungen (1863). Deshalb trägt sie heute seinen Namen.</p>
+    <p>Die wissenschaftliche Schreibweise mit Ziffern hat einen praktischen Vorteil: Sie zählt durchgehend, ohne Wechsel zwischen Groß- und Kleinbuchstaben. In Musiksoftware begegnet dir allerdings ein Stolperstein. Manche Hersteller, darunter Yamaha, nennen das mittlere C nicht C4, sondern <strong>C3</strong>. Beides meint denselben Ton, nur die Zählung beginnt eine Oktave anders. Wenn eine Angabe nicht passt, prüfe deshalb immer, welches C als mittleres C gilt.</p>
+    <p>In der digitalen Welt hat das mittlere C noch eine dritte Bezeichnung: Im MIDI-Standard, mit dem Keyboards und Computer kommunizieren, ist es die Nummer 60. Jede Taste zählt einen Schritt weiter. Das a' ist Nummer 69.</p>
+  </section>
+
+  <!-- 1.4 -->
+  <h2 id="halbton">1.4 Halbton und Ganzton</h2>
+  <p>Der kleinste Schritt auf dem Klavier führt von einer Taste zur unmittelbar benachbarten, egal ob sie weiß oder schwarz ist. Dieser Schritt heißt <dfn id="g-halbton">Halbton</dfn> (englisch <em>half step</em> oder <em>semitone</em>). Zwei Halbtöne ergeben einen <dfn id="g-ganzton">Ganzton</dfn> (englisch <em>whole step</em> oder <em>tone</em>).</p>
+  <figure>
+    <div class="kb" data-from="60" data-to="72" data-labels="white" data-marks="60 61:c2 64:c3 65:c3" data-brackets="60-61:HT;62-64:GT;64-65:HT" aria-label="Halbtöne c'–cis' und e'–f', Ganzton d'–e'"></div>
+    <figcaption>c'–cis' ist ein Halbton (weiß zu schwarz). d'–e' ist ein Ganzton. e'–f' ist ein Halbton zwischen zwei weißen Tasten.</figcaption>
+  </figure>
+  <p>Zwischen den meisten weißen Tasten liegt eine schwarze Taste. Von einer weißen Taste zur nächsten weißen ist es dann ein Ganzton, zum Beispiel c–d oder f–g. An zwei Stellen fehlt die schwarze Taste: zwischen <strong>e und f</strong> und zwischen <strong>h und c</strong>. Dort ist der Schritt von weiß zu weiß nur ein Halbton.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Die weißen Tasten liegen im Ganztonabstand, außer bei e–f und h–c. Dort liegen Halbtöne.</p>
+  </div>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="60 61 62 63 64 65 66 67 68 69 70 71 72" data-bpm="240">▶ Alle zwölf Halbtöne von c' bis c''</button>
+    <button class="btn" type="button" data-play="60 62 64 65 67 69 71 72" data-bpm="160">▶ Nur die weißen Tasten</button>
+  </div>
+  <p>Wenn du nur die weißen Tasten von c bis c spielst, hörst du die vertraute Tonleiter „do re mi fa sol la si do“. Sie klingt so, wie sie klingt, weil die Halbtöne genau an diesen beiden Stellen liegen. Wie aus diesem Muster Tonleitern und Tonarten werden, zeigt Kapitel 6.</p>
+
+  <section class="layer deep" data-title="Warum sieben weiße und fünf schwarze Tasten?">
+    <p>Auf den ersten Blick wirkt die Verteilung willkürlich. Man könnte zwölf gleich gestaltete Tasten bauen. Dass die Klaviatur anders aussieht, hat zwei Gründe: einen musikalischen und einen historischen.</p>
+    <h4>Der musikalische Grund: Quinten</h4>
+    <p>Die sieben weißen Tasten sind keine zufällige Auswahl aus zwölf Tönen. Sie entstehen, wenn man von f aus sechs Mal eine Quinte nach oben geht, also jeweils sieben Halbtöne: <strong>f – c – g – d – a – e – h</strong>. Ordnet man diese sieben Töne der Höhe nach, erhält man genau die weißen Tasten.</p>
+    <p>Geht man von h aus weiter in Quinten, folgen <strong>fis – cis – gis – dis – ais</strong>. Das sind genau die fünf schwarzen Tasten. Nach diesen insgesamt zwölf Tönen landet man (fast) wieder beim Ausgangston. Die schwarzen Tasten sind also die „nächsten fünf Quinten“, die das System auf zwölf Töne ergänzen.</p>
+    <p>Die Quinte ist nach der Oktave das am stärksten verschmelzende Intervall (Kapitel 5 erklärt, warum). Eine Tonauswahl aus lauter Quintverwandtschaften klingt deshalb besonders zusammenhängend. Warum sich der Kreis nach genau zwölf Quinten fast schließt, rechnet Abschnitt 5.10 vor. Kapitel 6, 7 und 9 bauen auf diesem Gedanken auf.</p>
+    <h4>Der historische Grund</h4>
+    <p>Die ersten Tasteninstrumente, mittelalterliche Orgeln, hatten nur die Stammtöne. Die Musik dieser Zeit kam fast ganz ohne zusätzliche Töne aus. Wahrscheinlich war das b der erste Ton, der eine eigene zusätzliche Taste bekam, weil er im mittelalterlichen Tonsystem schon fest verankert war (dazu gleich mehr). Die übrigen Zusatztöne folgten im 14. und 15. Jahrhundert. Sie wurden in eine zweite, erhöhte und schmalere Reihe gesetzt, damit die vertraute Reihe der Stammtöne erhalten blieb.</p>
+    <p>Übrigens waren die Farben lange nicht festgelegt. Auf vielen Cembali des 17. und 18. Jahrhunderts, besonders in Frankreich, waren die Stammtasten dunkel und die Zusatztasten hell. Auch manche Hammerflügel aus Mozarts Zeit sehen so aus. Die heutige Farbgebung setzte sich erst um 1800 allgemein durch.</p>
+  </section>
+
+  <section class="layer piano" data-title="Orientierung ohne Hinsehen">
+    <p>Geübte Pianisten schauen kaum auf die Tasten. Sie orientieren sich mit den Fingern an den schwarzen Tasten, die man ertasten kann, weil sie höher liegen.</p>
+    <p><strong>Übung 1:</strong> Schließ die Augen. Leg die rechte Hand auf die Tasten und tast dich zu einer Zweiergruppe schwarzer Tasten. Rutsch mit dem Finger direkt links an der Gruppe herunter: Das ist ein c. Mach dasselbe mit der Dreiergruppe für f.</p>
+    <p><strong>Übung 2:</strong> Spiel alle c auf dem Klavier von ganz links nach ganz rechts. Dann alle f, dann alle h. Sag dabei laut den Helmholtz-Namen („großes C, kleines c, c' …“).</p>
+    <p><strong>Übung 3:</strong> Spiel nur die schwarzen Tasten, erst die Zweiergruppen, dann die Dreiergruppen. Du kannst damit sofort angenehm klingende Melodien improvisieren. Warum das funktioniert, verrät Kapitel 9.</p>
+  </section>
+
+  <section class="layer piano" data-title="Sitzposition und Fingernummern">
+    <p>Setz dich so, dass das c' ungefähr vor der Mitte deines Körpers liegt. Von dort erreichst du mit beiden Händen bequem den größten Teil der Klaviatur.</p>
+    <p>In Noten stehen oft Zahlen über den Noten. Das sind <dfn id="g-fingersatz">Fingersätze</dfn>. Für beide Hände gilt dieselbe Zählung:</p>
+    <ul>
+      <li><strong>1</strong> = Daumen, <strong>2</strong> = Zeigefinger, <strong>3</strong> = Mittelfinger, <strong>4</strong> = Ringfinger, <strong>5</strong> = kleiner Finger.</li>
+    </ul>
+    <p>Eine bequeme Grundstellung ist die <strong>Fünf-Finger-Lage</strong>: Jeder Finger liegt auf einer eigenen weißen Taste. Rechts liegt der Daumen auf c', der kleine Finger auf g'. Links liegt der kleine Finger auf c, der Daumen auf g. Die Finger sind leicht gekrümmt, als hielte die Hand locker einen Ball. Haltung und Technik vertieft Kapitel 43.</p>
+    <div class="kb" data-from="48" data-to="67" data-labels="none" data-marks="48:c2:5 50:c2:4 52:c2:3 53:c2:2 55:c2:1 60::1 62::2 64::3 65::4 67::5" aria-label="Fünf-Finger-Lage: linke Hand c bis g, rechte Hand c' bis g', mit Fingernummern"></div>
+    <p class="muted">Fünf-Finger-Lage: linke Hand (petrol) auf c bis g, rechte Hand (blau) auf c' bis g'.</p>
+  </section>
+
+  <!-- 1.5 -->
+  <h2 id="vorzeichen">1.5 Die schwarzen Tasten: erhöhen und erniedrigen</h2>
+  <p>Die schwarzen Tasten haben keine eigenen Buchstaben. Sie werden nach ihren weißen Nachbarn benannt. Jede schwarze Taste liegt zwischen zwei Stammtönen und kann deshalb von beiden Seiten aus gedacht werden:</p>
+  <ul>
+    <li>Ein Stammton wird um einen Halbton <strong>erhöht</strong>, indem an den Namen die Silbe <strong>-is</strong> angehängt wird: c wird zu <em>cis</em>, f zu <em>fis</em>. Das Zeichen dafür ist das <dfn id="g-kreuz">Kreuz</dfn> ♯ (englisch <em>sharp</em>: C♯ = „C sharp“).</li>
+    <li>Ein Stammton wird um einen Halbton <strong>erniedrigt</strong>, indem die Silbe <strong>-es</strong> angehängt wird: d wird zu <em>des</em>, g zu <em>ges</em>. Das Zeichen dafür ist das <dfn id="g-be">b</dfn> ♭ (englisch <em>flat</em>: D♭ = „D flat“).</li>
+  </ul>
+  <p>Drei Namen sind verkürzt, weil sie sich sonst schlecht aussprechen lassen: Aus „ees“ wird <strong>es</strong>, aus „aes“ wird <strong>as</strong>, und das erniedrigte h heißt einfach <strong>b</strong>.</p>
+  <figure>
+    <div class="kb" data-from="60" data-to="71" data-labels="all" aria-label="Eine Oktave mit Kreuz-Namen der schwarzen Tasten"></div>
+    <div class="kb" data-from="60" data-to="71" data-labels="all" data-flat aria-label="Eine Oktave mit b-Namen der schwarzen Tasten"></div>
+    <figcaption>Dieselben schwarzen Tasten mit Kreuz-Namen (oben) und b-Namen (unten).</figcaption>
+  </figure>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>schwarze Taste</th><th>als Erhöhung</th><th>als Erniedrigung</th><th>englisch</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="61"><td>zwischen c und d</td><td>cis</td><td>des</td><td>C♯ / D♭</td><td>▶</td></tr>
+        <tr class="play-row" data-play="63"><td>zwischen d und e</td><td>dis</td><td>es</td><td>D♯ / E♭</td><td>▶</td></tr>
+        <tr class="play-row" data-play="66"><td>zwischen f und g</td><td>fis</td><td>ges</td><td>F♯ / G♭</td><td>▶</td></tr>
+        <tr class="play-row" data-play="68"><td>zwischen g und a</td><td>gis</td><td>as</td><td>G♯ / A♭</td><td>▶</td></tr>
+        <tr class="play-row" data-play="70"><td>zwischen a und h</td><td>ais</td><td>b</td><td>A♯ / B♭</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Zwei Namen für dieselbe Taste nennt man <dfn id="g-enharmonische-verwechslung">enharmonische Verwechslung</dfn>. Welcher Name richtig ist, hängt vom Zusammenhang ab, meist von der Tonart. Kapitel 5 (Abschnitt 5.7) und Kapitel 7 erklären, nach welchen Regeln man sich entscheidet.</p>
+  <h4>Erhöhte und erniedrigte Töne auf weißen Tasten</h4>
+  <p>Erhöhen heißt immer „einen Halbton nach rechts“, erniedrigen „einen Halbton nach links“. Wo zwischen zwei weißen Tasten keine schwarze liegt, landet man dabei auf einer weißen Taste:</p>
+  <ul>
+    <li><strong>eis</strong> liegt auf der Taste f, <strong>fes</strong> auf der Taste e.</li>
+    <li><strong>his</strong> liegt auf der Taste c, <strong>ces</strong> auf der Taste h.</li>
+  </ul>
+  <p>Diese Namen kommen selten vor, sind aber in bestimmten Tonarten notwendig. In Fis-Dur zum Beispiel heißt der siebte Ton eis und nicht f (Kapitel 7).</p>
+  <p>Für seltene Fälle gibt es außerdem das <strong>Doppelkreuz</strong> 𝄪, das um zwei Halbtöne erhöht (<em>-isis</em>: cisis, fisis), und das <strong>Doppel-b</strong> 𝄫, das um zwei Halbtöne erniedrigt (<em>-eses</em>: deses, heses). Das Zeichen ♮, das <dfn id="g-aufloesungszeichen">Auflösungszeichen</dfn>, hebt eine Erhöhung oder Erniedrigung wieder auf. Wie diese Zeichen in Noten verwendet werden, zeigt Kapitel 2.</p>
+
+  <section class="layer deep" data-title="Die ganze Geschichte von b und h">
+    <p>Warum heißt der siebte Stammton im Deutschen h, im Rest der Welt aber B? Und warum heißt das erniedrigte h ausgerechnet b? Die Antwort führt zurück zu Guido von Arezzo und seinen sechs Silben (Abschnitt 1.2).</p>
+    <h4>Zwei Arten von B</h4>
+    <p>Die mittelalterliche Tonreihe benutzte die Buchstaben A bis G. Beim Ton B gab es aber ein Problem. Je nach Melodie sang man ihn in zwei verschiedenen Höhen: etwas tiefer, wenn die Melodie um f kreiste, und etwas höher, wenn sie um g kreiste. Der tiefere Ton vermied den unbequemen Tritonus f–h, den Kapitel 5 beschreibt.</p>
+    <p>Man unterschied die beiden B durch ihre Schreibform:</p>
+    <ul>
+      <li>Das tiefere B schrieb man mit rundem Bauch, als <em>b rotundum</em> („rundes b“). Es galt als das weiche B, <em>b molle</em>. Aus diesem runden b entstand unser Erniedrigungszeichen ♭.</li>
+      <li>Das höhere B schrieb man eckig, als <em>b quadratum</em> („eckiges b“). Es galt als das harte B, <em>b durum</em>. Aus dem eckigen b entwickelten sich sowohl das Auflösungszeichen ♮ als auch das Kreuz ♯.</li>
+    </ul>
+    <h4>Wie aus dem eckigen b ein h wurde</h4>
+    <p>In der gebrochenen Schrift, die im deutschsprachigen Raum verbreitet war, sah das eckige b einem h zum Verwechseln ähnlich. Schreiber und Drucker lasen und schrieben es zunehmend als h. So entstanden im Deutschen zwei getrennte Buchstaben: <strong>b</strong> für das weiche, tiefere B und <strong>h</strong> für das harte, höhere. In den meisten anderen Sprachen blieb es beim einen Buchstaben B, und das tiefere B bekam einen Zusatz (englisch B♭, „B flat“).</p>
+    <h4>Dur und Moll</h4>
+    <p>Die lateinischen Wörter für hart und weich leben in zwei Begriffen weiter, die dir ständig begegnen werden. Aus <em>durus</em> (hart) wurde <strong>Dur</strong>, aus <em>mollis</em> (weich) wurde <strong>Moll</strong>. Was Dur und Moll heute bedeuten, erklären die Kapitel 6 und 8.</p>
+    <h4>B-A-C-H</h4>
+    <p>Die deutsche Besonderheit hat eine berühmte Folge. Nur mit deutschen Tonnamen lässt sich der Name BACH in Töne übersetzen: b – a – c – h. Johann Sebastian Bach verwendete diese Tonfolge selbst, unter anderem in der unvollendeten letzten Fuge seiner „Kunst der Fuge“. Später schrieben Komponisten wie Schumann, Liszt und Reger Werke über das B-A-C-H-Motiv.</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-play="70 69 72 71" data-bpm="70">▶ b – a – c – h</button>
+    </div>
+  </section>
+
+  <!-- 1.6 -->
+  <h2 id="ueben">1.6 Tasten finden</h2>
+  <p>Mit dem folgenden Trainer übst du, Tasten schnell zu finden. Es erscheint ein Tonname, und du tippst die passende Taste an. Im Modus „mit Oktave“ musst du zusätzlich die richtige Lage treffen.</p>
+
+  <div class="trainer finder" id="finder">
+    <h4>Tastenfinder</h4>
+    <div class="settings">
+      <span>Auswahl:</span>
+      <label><input type="radio" name="finder-set" id="finder-set-w" value="white" checked> nur weiße Tasten</label>
+      <label><input type="radio" name="finder-set" id="finder-set-a" value="all"> alle Tasten</label>
+    </div>
+    <div class="settings">
+      <span>Modus:</span>
+      <label><input type="radio" name="finder-mode" id="finder-mode-n" value="name" checked> nur Name</label>
+      <label><input type="radio" name="finder-mode" id="finder-mode-o" value="oct"> mit Oktave</label>
+    </div>
+    <div class="btn-row"><button class="btn primary" type="button" id="finder-new">Neuer Ton</button></div>
+    <div class="target" id="finder-target" aria-live="polite">&nbsp;</div>
+    <p class="feedback" id="finder-fb">Tippe auf „Neuer Ton“ und dann auf die passende Taste.</p>
+    <div id="finder-kbd"></div>
+    <p class="score-line" id="finder-score"></p>
+  </div>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Die Klaviatur wiederholt ein Muster aus sieben weißen und fünf schwarzen Tasten. Die schwarzen Tasten bilden Zweier- und Dreiergruppen.</li>
+    <li>Die weißen Tasten heißen c, d, e, f, g, a, h (englisch C, D, E, F, G, A, B). c liegt links von zwei, f links von drei schwarzen Tasten.</li>
+    <li>Das mittlere C heißt c' (Helmholtz) bzw. C4 (wissenschaftlich). Oktaven werden mit Strichen bzw. Ziffern unterschieden.</li>
+    <li>Ein Halbton ist der Schritt zur Nachbartaste, ein Ganzton sind zwei Halbtöne. Zwischen e–f und h–c liegen Halbtöne ohne schwarze Taste.</li>
+    <li>♯ erhöht (-is), ♭ erniedrigt (-es). Jede schwarze Taste hat zwei Namen. Das deutsche h und b gehen auf das eckige und das runde b des Mittelalters zurück.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">1.1</span><div><span class="kind">Theorie</span>Benenne die fünf markierten Tasten mit ihrem Helmholtz-Namen.</div></div>
+      <div class="kb" data-from="55" data-to="72" data-labels="c" data-marks="62:c2:1 65:c2:2 71:c2:3 57:c2:4 64:c2:5" aria-label="Klaviatur mit fünf nummerierten Tasten"></div>
+      <details class="solution"><summary>Lösung</summary><div>1: d' (Mitte der Zweiergruppe über c'). 2: f' (links von der Dreiergruppe). 3: h' (rechts von der Dreiergruppe). 4: a (zwischen zweiter und dritter Taste der Dreiergruppe in der kleinen Oktave). 5: e' (rechts von der Zweiergruppe).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">1.2</span><div><span class="kind">Theorie</span>Halbton oder Ganzton? e–f, f–g, h–c, cis–dis, e–fis, a–b, ais–h.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>e–f: Halbton (keine schwarze Taste dazwischen). f–g: Ganzton. h–c: Halbton. cis–dis: Ganzton (eine weiße Taste, d, liegt dazwischen). e–fis: Ganzton. a–b: Halbton. ais–h: Halbton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">1.3</span><div><span class="kind">Theorie</span>Gib für jede schwarze Taste beide Namen an. Auf welchen Tasten liegen eis, fes, his und ces?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>cis/des, dis/es, fis/ges, gis/as, ais/b. eis liegt auf f, fes auf e, his auf c, ces auf h. Erhöhen heißt einen Halbton nach rechts, erniedrigen einen nach links, auch wenn man dabei auf einer weißen Taste landet.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">1.4</span><div><span class="kind">Theorie</span>Übersetze in die wissenschaftliche Schreibweise: g'', a, C, h', fis'''. Und zurück: E2, B♭3, C6.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>g'' = G5, a = A3, C = C2, h' = B4, fis''' = F♯6. E2 = E (große Oktave), B♭3 = b (kleine Oktave), C6 = c'''. Faustregel: Zahl der Striche plus 3 ergibt die Ziffer, kleine Oktave ist 3, große Oktave 2.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">1.5</span><div><span class="kind">Theorie</span>Wie viele weiße Tasten liegen von c' bis c'' (beide eingeschlossen)? Wie viele Tasten insgesamt?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>8 weiße Tasten (c', d', e', f', g', a', h', c''), daher der Name Oktave. Insgesamt 13 Tasten, also 12 Halbtonschritte.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">1.6</span><div><span class="kind">Theorie</span>Ein Ton wird erst erhöht und dann zweimal erniedrigt. Wo landest du, wenn du von d ausgehst? Wie heißt der Ton?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Eine Erhöhung und zwei Erniedrigungen ergeben insgesamt eine Erniedrigung um einen Halbton: Du landest auf der schwarzen Taste zwischen c und d. Benannt nach dem Ausgangston d heißt sie des.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">1.7</span><div><span class="kind">Am Klavier</span>Spiel mit dem Mittelfinger der rechten Hand alle Tasten von c' bis c'' nacheinander (weiße und schwarze). Sag bei jeder schwarzen Taste beide Namen.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>c', cis'/des', d', dis'/es', e', f', fis'/ges', g', gis'/as', a', ais'/b', h', c''. Das sind 13 Tasten und 12 Halbtonschritte. Achte auf e'–f' und h'–c'': Dort folgen zwei weiße Tasten direkt aufeinander.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">1.8</span><div><span class="kind">Am Klavier</span>Finde mit geschlossenen Augen nacheinander: ein c, ein f, ein h, ein fis, ein es. Öffne die Augen erst, nachdem du die Taste angeschlagen hast.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>c: links von der Zweiergruppe. f: links von der Dreiergruppe. h: rechts von der Dreiergruppe. fis: erste Taste der Dreiergruppe. es: zweite Taste der Zweiergruppe.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">1.9</span><div><span class="kind">Vertiefung</span>Das a' schwingt mit 440 Hz. Eine Oktave höher verdoppelt sich die Frequenz. Mit welcher Frequenz schwingen a'', a, A und das tiefste A des Klaviers (A2)?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>a'' = 880 Hz, a = 220 Hz, A = 110 Hz. Weiter abwärts: A1 = 55 Hz und A2 = 27,5 Hz. Vom tiefsten zum Kammerton sind es vier Oktaven, die Frequenz teilt sich also viermal durch 2: 440 / 16 = 27,5.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">1.10</span><div><span class="kind">Vertiefung</span>Das Klavier reicht von A2 (A0) bis c''''' (C8). Wie viele vollständige Oktaven von c bis h enthält es, und wie viele Tasten bleiben übrig?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Vollständig sind die Oktaven von C1 bis h'''' (wissenschaftlich C1 bis B7): sieben Oktaven mit je 12 Tasten, zusammen 84. Übrig bleiben die drei Subkontra-Tasten A2, B2, H2 unten und das c''''' oben. 84 + 3 + 1 = 88.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(1);
+
+  // Tastenfinder
+  (function () {
+    const root = document.getElementById("finder");
+    const tgt = document.getElementById("finder-target");
+    const fb = document.getElementById("finder-fb");
+    const sc = document.getElementById("finder-score");
+    const FROM = 48, TO = 83;
+    let cur = null, last = null, tried = false, right = 0, total = 0;
+    const val = (n) => root.querySelector(`input[name="${n}"]:checked`).value;
+    const kb = Book.keyboard(document.getElementById("finder-kbd"), {
+      from: FROM, to: TO, labels: "none", ariaLabel: "Klaviatur zum Antippen",
+      onKey(m) {
+        if (!cur) return;
+        const ok = val("finder-mode") === "oct" ? m === cur.m : (m - cur.m) % 12 === 0;
+        if (!tried) { total++; if (ok) right++; tried = true; }
+        if (ok) {
+          fb.textContent = "Richtig.";
+          kb.mark([{ m, cls: "c2" }]);
+          cur = null;
+        } else {
+          fb.textContent = "Das war " + Book.name(m) + ". Versuch es noch einmal.";
+        }
+        sc.textContent = `${right} von ${total} beim ersten Versuch richtig`;
+      }
+    });
+    function ask() {
+      const all = val("finder-set") === "all";
+      let m;
+      do { m = FROM + Math.floor(Math.random() * (TO - FROM + 1)); } while ((!all && Book.isBlack(m)) || m === last);
+      last = m;
+      const flat = Math.random() < 0.5;
+      const oct = val("finder-mode") === "oct";
+      cur = { m };
+      tried = false;
+      kb.mark([]);
+      tgt.textContent = oct ? Book.name(m, { flat }) : Book.name(m, { octave: false, flat });
+      fb.textContent = oct ? "Finde genau diesen Ton in der richtigen Oktave." : "Finde diesen Ton in einer beliebigen Oktave.";
+    }
+    document.getElementById("finder-new").addEventListener("click", ask);
+    root.addEventListener("change", () => { cur = null; tgt.innerHTML = "&nbsp;"; kb.mark([]); fb.textContent = "Tippe auf „Neuer Ton“."; });
+  })();
+</script>
+</body>
+</html>

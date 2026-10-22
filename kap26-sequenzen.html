@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sequenzen und Orgelpunkt · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil III · Kapitel 26</div>
+    <h1>Sequenzen und Orgelpunkt</h1>
+    <p class="lede">Musik braucht Bewegung, und manchmal braucht sie das Gegenteil: einen festen Boden. Sequenzen wiederholen ein Muster auf immer neuen Tonstufen und treiben die Harmonik voran. Der Orgelpunkt hält dagegen einen Basston fest, während darüber alles wechselt. Beide Techniken findest du in Barockmusik genauso wie in Pop und Jazz.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Modell und Sequenzglieder in Melodie und Harmonik erkennen und tonale von realen Sequenzen unterscheiden,</li>
+      <li>die Quintfallsequenz in jeder Dur-Tonart spielen, auch mit Septakkorden,</li>
+      <li>weitere Sequenzmodelle wie die Pachelbel-Folge, Monte und Fonte benennen,</li>
+      <li>Tonika- und Dominantorgelpunkte erkennen und am Klavier einsetzen,</li>
+      <li>Sequenzen nutzen, um Akkordfolgen und Technik in allen Tonarten zu üben.</li>
+    </ul>
+  </div>
+
+  <!-- 26.1 -->
+  <h2 id="was">26.1 Was eine Sequenz ist</h2>
+  <p>Eine <dfn id="g-sequenz">Sequenz</dfn> ist die Wiederholung eines musikalischen Abschnitts auf einer anderen Tonstufe. Der erste Abschnitt heißt <strong>Modell</strong>, jede Wiederholung ein <strong>Sequenzglied</strong>. Meist folgen zwei bis vier Glieder in gleichen Abständen aufeinander, etwa jeweils eine Stufe höher.</p>
+  <div class="abc" data-bpm="100" data-caption="Ein Modell aus vier Tönen und zwei Sequenzglieder, jeweils eine Stufe höher">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    "^Modell" C D E C "^1. Glied" D E F D | "^2. Glied" E F G E G4 |]
+  </div>
+  <p>Sequenzen gibt es in der Melodie und in der Harmonik. Oft treten beide zusammen auf: Eine Akkordfolge wird verschoben, und die Melodie darüber wandert mit.</p>
+  <h4>Tonal oder real</h4>
+  <p>Bei einer <dfn id="g-tonale-sequenz">tonalen Sequenz</dfn> bleibt die Wiederholung innerhalb der Tonleiter. Die Intervalle können sich dabei leicht ändern, etwa eine große Sekunde zu einer kleinen werden. Im Beispiel oben ist c – d – e eine Folge aus zwei Ganztönen, d – e – f dagegen aus Ganzton und Halbton.</p>
+  <p>Bei einer <dfn id="g-reale-sequenz">realen Sequenz</dfn> bleiben alle Intervalle exakt gleich. Dafür braucht man tonartfremde Töne. Aus c – d – e wird real eine Stufe höher d – e – fis.</p>
+  <div class="abc" data-bpm="100" data-caption="Tonal (d – e – f) und real (d – e – fis) im Vergleich">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    "^tonal" C D E C D E F D | "^real" C D E C D E ^F D |]
+  </div>
+  <p>Tonale Sequenzen bleiben in der Tonart, reale Sequenzen modulieren oder tonikalisieren dabei oft. In der Praxis sind die meisten Sequenzen tonal oder eine Mischung aus beidem.</p>
+
+  <!-- 26.2 -->
+  <h2 id="quintfall">26.2 Die Quintfallsequenz</h2>
+  <p>Die wichtigste harmonische Sequenz ist die <dfn id="g-quintfallsequenz">Quintfallsequenz</dfn>. Ihre Akkordgrundtöne fallen von Akkord zu Akkord um eine Quinte (oder steigen um eine Quarte, was auf dasselbe hinausläuft). In C-Dur:</p>
+  <div class="formula">C → F → H° → Em → Am → Dm → G → C<br>I &nbsp;&nbsp;IV &nbsp;&nbsp;vii° &nbsp;iii &nbsp;&nbsp;vi &nbsp;&nbsp;ii &nbsp;&nbsp;V &nbsp;&nbsp;I</div>
+  <p>Sie durchläuft alle sieben Stufen der Tonart und endet mit der Kadenz ii – V – I. Weil sie tonal ist, ist ein Schritt keine reine Quinte: Von F nach H ist es eine übermäßige Quarte bzw. verminderte Quinte. Das Ohr akzeptiert das, weil es das Muster erkennt.</p>
+  <div class="abc" data-bpm="96" data-caption="Quintfallsequenz in C-Dur. Die rechte Hand wechselt zwischen Grundstellung und Quartsextlage und bewegt sich nur stufenweise abwärts.">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[CEG] "F"[CFA] "^H°"[B,DF] "Em"[B,EG] | "Am"[A,CE] "Dm"[A,DF] "G"[G,B,D] "C"[G,CE] |]
+    [V:LH] C, F,, B,, E,, | A,, D,, G,, C,, |]
+  </div>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="48 60 64 67/2|41 60 65 69/2|47 59 62 65/2|40 59 64 67/2|45 57 60 64/2|38 57 62 65/2|43 55 59 62/2|36 55 60 64/4" data-bpm="120">▶ Dreiklänge</button>
+    <button class="btn" type="button" data-seq="48 64 71/2|41 64 69/2|47 62 69/2|40 62 67/2|45 60 67/2|38 60 65/2|43 59 65/2|36 59 64/4" data-bpm="120">▶ mit Septakkorden (Leittöne)</button>
+  </div>
+  <h4>Mit Septakkorden</h4>
+  <p>Mit Septimen wird die Quintfallsequenz zur Grundlage unzähliger Jazz-Standards: Cmaj7 – Fmaj7 – Hø7 – Em7 – Am7 – Dm7 – G7 – Cmaj7. Bekannte Beispiele sind „Autumn Leaves“ und „Fly Me to the Moon“. Auch der Disco-Klassiker „I Will Survive“ (Gloria Gaynor) baut auf einer Quintfallsequenz in Moll auf: Am – Dm – G – C – F – Hø – E.</p>
+  <h4>Mit Zwischendominanten</h4>
+  <p>Macht man jeden Akkord der Sequenz zu einem Dominantseptakkord, wird die tonale Sequenz zur realen. Daraus entsteht die Kette E7 – A7 – D7 – G7 – C, die du als Ragtime-Progression aus Kapitel 21 kennst.</p>
+
+  <section class="layer deep" data-title="Warum der Quintfall so stark ist">
+    <p>Der Schritt „Grundton eine Quinte abwärts“ ist derselbe wie von der Dominante zur Tonika. Jeder einzelne Schritt einer Quintfallsequenz klingt deshalb wie eine kleine Kadenz, und die Sequenz wie eine Kette von Auflösungen. Jede Ankunft ist zugleich ein neuer Aufbruch.</p>
+    <p>Dazu kommt die Stimmführung. Zwei Akkorde im Quintabstand haben immer einen gemeinsamen Ton (C und F teilen das c), und die übrigen Stimmen bewegen sich in kleinen Schritten. Mit Septakkorden wird das besonders deutlich: Die Septime eines Akkords fällt zur Terz des nächsten, die Terz bleibt als Septime des nächsten liegen. In der Klangbeispiel-Version mit Septakkorden oben hörst du zwei Linien, die abwechselnd liegen bleiben und um eine Stufe fallen.</p>
+    <p>Der französische Komponist und Theoretiker Jean-Philippe Rameau hat in seinem <em>Traité de l’harmonie</em> (1722) erstmals die Idee eines „Fundamentalbasses“ formuliert: die Folge der Akkordgrundtöne, unabhängig von der tatsächlich gespielten Basslinie. Für ihn war der Quintfall die natürlichste Bewegung dieses Fundamentalbasses. Diese Sicht prägt die Harmonielehre bis heute.</p>
+  </section>
+
+  <section class="layer piano" data-title="Die Quintfallsequenz greifen">
+    <p>Spiel die Quintfallsequenz zuerst wie im Notenbeispiel: die rechte Hand abwechselnd in Grundstellung und Quartsextlage, die linke Hand die Grundtöne.</p>
+    <ul>
+      <li>Rechte Hand: Fingersatz 1–3–5 für Grundstellung, 1–3–5 auch für die Quartsextlage. Die Hand rutscht alle zwei Akkorde eine Stufe tiefer.</li>
+      <li>Linke Hand: Die Grundtöne springen abwechselnd eine Quinte abwärts und eine Quarte aufwärts, damit sie in einer bequemen Lage bleiben.</li>
+    </ul>
+    <p>Danach die Version mit Septakkorden: Die linke Hand spielt weiter die Grundtöne, die rechte Hand nur Terz und Septime (wie der Tritonus-Griff aus Kapitel 21). In C-Dur: e'+h' → e'+a' → d'+a' → d'+g' → c'+g' → c'+f' → h+f' → h+e'. Bei jedem Akkordwechsel bewegt sich nur einer der beiden Finger, immer eine Stufe abwärts.</p>
+    <p><strong>Übung:</strong> Spiel die Quintfallsequenz in G-Dur und F-Dur. Wenn du sicher bist, auch in a-Moll (Am – Dm – G – C – F – Hø – E – Am), wobei du am Ende das gis im E-Dur nicht vergisst.</p>
+  </section>
+
+  <!-- 26.3 -->
+  <h2 id="modelle">26.3 Weitere Sequenzmodelle</h2>
+  <p>Neben dem Quintfall gibt es einige weitere Muster, die so häufig vorkommen, dass sie eigene Namen haben.</p>
+  <h4>Die Pachelbel-Sequenz</h4>
+  <p>Johann Pachelbels Kanon in D-Dur (um 1700) beruht auf einer achttaktigen Bassfolge, deren erste sechs Akkorde eine Sequenz bilden: <strong>Quarte abwärts, Sekunde aufwärts</strong>. In C-Dur: C – G | Am – Em | F – C | F – G. Jedes Paar fällt eine Quarte, und das nächste Paar beginnt eine Stufe höher als das vorige endete.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="48 64 67 72/2|43 62 67 71/2|45 60 64 72/2|40 59 64 67/2|41 60 65 69/2|36 60 64 67/2|41 57 60 65/2|43 59 62 67/2|48 60 64 67/4" data-bpm="100">▶ Pachelbel-Folge in C</button>
+  </div>
+  <p>Die Folge ist im Pop allgegenwärtig. „Go West“ (Pet Shop Boys) übernimmt sie fast unverändert, und viele Balladen verwenden ihren Anfang I – V – vi – iii.</p>
+  <h4>Der Terzfall</h4>
+  <p>Die Grundtöne fallen in Terzen: C – Am – F – Dm, danach meist G – C. Benachbarte Akkorde teilen dabei zwei von drei Tönen, der Wechsel ist sehr weich. Eng verwandte Folgen wie I – vi – IV – V oder I – vi – ii – V sind die Grundlage vieler Lieder der 1950er-Jahre.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="48 60 64 67/2|45 60 64 69/2|41 60 65 69/2|38 62 65 69/2|43 59 62 67/2|48 60 64 67/4" data-bpm="100">▶ C – Am – F – Dm – G – C</button>
+  </div>
+  <h4>Monte und Fonte</h4>
+  <p>Zwei kurze, zweigliedrige Sequenzen mit Zwischendominanten haben ihre Namen vom Theoretiker Joseph Riepel (1755):</p>
+  <ul>
+    <li><strong>Monte</strong> („Berg“) steigt: V7/IV – IV – V7/V – V, in C-Dur C7 – F – D7 – G. Das Modell wird einen Ganzton höher wiederholt. Die Musik klettert und gewinnt an Spannung.</li>
+    <li><strong>Fonte</strong> („Quelle“) fällt: V7/ii – ii – V7 – I, in C-Dur A7 – Dm – G7 – C. Das Modell wird einen Ganzton tiefer wiederholt. Die Musik kehrt zur Ruhe zurück.</li>
+  </ul>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="48 58 64 67/2|41 57 65 69/2|50 60 66 69/2|43 59 62 67/4" data-bpm="100">▶ Monte</button>
+    <button class="btn" type="button" data-seq="45 61 64 67/2|50 62 65 69/2|43 59 65 67/2|48 60 64 67/4" data-bpm="100">▶ Fonte</button>
+  </div>
+  <h4>Parallele Sextakkorde</h4>
+  <p>Eine Folge von Akkorden in Sextakkordlage (Terz im Bass), die stufenweise auf- oder absteigt. Weil alle Stimmen parallel laufen, klingt das wie eine verdickte Melodie. Im 15. Jahrhundert nannte man diese Satzweise <em>Fauxbourdon</em>. In der Barockmusik und in Etüden findest du sie oft als schnelle Läufe.</p>
+  <div class="abc" data-bpm="120" data-caption="Absteigende Sextakkorde in C-Dur">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    [EGc] [DFB] [CEA] [B,DG] | [A,CF] [G,B,E] [F,A,D] [E,G,C] |]
+  </div>
+
+  <section class="layer deep" data-title="Warum Sequenzen die Tonart verwischen dürfen">
+    <p>In der Quintfallsequenz steht ein verminderter Akkord (H°) mitten in der Folge, und ein Grundtonschritt ist keine reine Quinte. In einem normalen Satz würden solche Stellen auffallen. In einer Sequenz klingen sie selbstverständlich. Warum?</p>
+    <p>Die Wahrnehmungspsychologie erklärt das mit Mustererkennung. Sobald das Ohr zwei Glieder einer Sequenz gehört hat, erkennt es die Regel und sagt das nächste Glied voraus. Die Aufmerksamkeit verlagert sich vom einzelnen Akkord auf die Bewegung des Ganzen. Kleine Abweichungen, die nötig sind, um in der Tonart zu bleiben, werden als Teil des Musters gehört und nicht als Störung.</p>
+    <p>Das hat eine praktische Folge: Sequenzen sind ideale Brücken. Komponisten nutzen sie, um Musik von einer Stelle zu einer anderen zu bringen, etwa in der Durchführung einer Sonate (Kapitel 41). Während einer Sequenz verliert das Ohr vorübergehend die Orientierung, wo das Zentrum liegt, und akzeptiert danach leichter eine neue Tonart.</p>
+    <p>Die Kehrseite: Sequenzen ermüden schnell. Mehr als drei oder vier Glieder empfinden die meisten Hörer als mechanisch. Gute Komponisten brechen eine Sequenz deshalb meist ab, bevor die Vorhersage langweilig wird.</p>
+  </section>
+
+  <section class="layer deep" data-title="Riepel, Monte und Fonte: Bausteine der galanten Musik">
+    <p>Joseph Riepel war ein österreichischer Musiktheoretiker. In seinen „Anfangsgründen zur musicalischen Setzkunst“ (ab 1752) beschreibt er in Form von Lehrgesprächen, wie man Menuette und andere kurze Stücke baut. Dabei gab er drei typischen Wendungen italienische Namen, die man sich wie Wegmarken vorstellen kann: <em>Monte</em> (Berg) für das Hinaufsteigen, <em>Fonte</em> (Quelle) für das Hinabsteigen und <em>Ponte</em> (Brücke) für einen Abschnitt, der auf der Dominante verharrt.</p>
+    <p>Der amerikanische Musikwissenschaftler Robert Gjerdingen hat 2007 in seinem Buch <em>Music in the Galant Style</em> gezeigt, dass Komponisten des 18. Jahrhunderts mit einem ganzen Vorrat solcher Muster arbeiteten, die sie in ihrer Ausbildung wie Vokabeln gelernt hatten. Er nennt sie <em>Schemata</em>. Mozart, Haydn und ihre Zeitgenossen setzten Stücke zu einem guten Teil aus diesen Bausteinen zusammen, ähnlich wie Jazzmusiker heute mit gelernten Wendungen wie II – V – I improvisieren.</p>
+  </section>
+
+  <!-- 26.4 -->
+  <h2 id="orgelpunkt">26.4 Der Orgelpunkt</h2>
+  <p>Ein <dfn id="g-orgelpunkt">Orgelpunkt</dfn> ist ein lang ausgehaltener oder ständig wiederholter Basston, über dem die Harmonien wechseln. Der Name kommt von der Orgel, auf der ein Organist einen Ton mit dem Pedal beliebig lange halten kann. Auch Akkorde, die eigentlich nicht zu diesem Basston passen, dürfen über ihm erklingen.</p>
+  <div class="abc" data-bpm="70" data-caption="Tonikaorgelpunkt auf C. Darüber wechseln C, F und G7.">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[EGc]4 | "F/C"[FAc]4 | "G7/C"[DFB]4 | "C"[EGc]4 |]
+    [V:LH] C,,4 | C,,4 | C,,4 | C,,4 |]
+  </div>
+  <p>Zwei Arten sind besonders häufig:</p>
+  <ul>
+    <li><strong>Tonikaorgelpunkt:</strong> Der Grundton liegt, oft am Anfang oder am Ende eines Stücks. Er wirkt beruhigend, wie ein festes Fundament.</li>
+    <li><strong>Dominantorgelpunkt:</strong> Die 5. Stufe liegt, oft kurz vor einem wichtigen Einsatz der Tonika, etwa vor der Reprise einer Sonate oder vor dem Schluss. Er staut Spannung auf, weil das Ohr die ganze Zeit auf die Auflösung zur Tonika wartet.</li>
+  </ul>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="43 60 64 67/2|43 59 62 65/2|43 60 64 67/2|43 59 62 65/2|43 60 65 69/2|43 59 62 65/2|48 60 64 67/4" data-bpm="80">▶ Dominantorgelpunkt auf G, dann C</button>
+  </div>
+  <p>Ein berühmtes Beispiel ist das C-Dur-Präludium aus dem ersten Band von Bachs „Wohltemperiertem Klavier“ (BWV 846). Gegen Ende liegt viele Takte lang ein G im Bass, darüber wechseln die Harmonien immer weiter in die Spannung. Danach folgt ein Tonikaorgelpunkt auf C, über dem das Stück ausklingt.</p>
+  <p>Liegt der ausgehaltene Ton nicht im Bass, sondern in einer Oberstimme, spricht man von einem <strong>liegenden Ton</strong> oder umgekehrten Orgelpunkt. In Pop und Rock findet man das oft als Gitarren- oder Synthesizerton, der über wechselnden Akkorden stehen bleibt.</p>
+  <p>Im Leadsheet erscheinen Orgelpunkte als Slash-Akkorde (Kapitel 17): C – F/C – G/C – C bedeutet, dass der Bass auf c bleibt, während die Akkorde darüber wechseln.</p>
+
+  <section class="layer deep" data-title="Warum über einem Orgelpunkt fast alles erlaubt ist">
+    <p>Über einem liegenden C klingt sogar ein G7 (g – h – d – f) akzeptabel, obwohl c gegen h und d reibt. Das liegt an der Art, wie das Gehör Klänge sortiert. Der Psychologe Albert Bregman hat dieses Sortieren in seinem Buch <em>Auditory Scene Analysis</em> (1990) beschrieben: Das Ohr zerlegt ein Klanggemisch in getrennte „Ströme“, etwa in eine Stimme, die sich bewegt, und einen Ton, der bleibt. Ein Ton, der sich lange nicht verändert, wird als Hintergrund wahrgenommen. Seine Reibungen mit dem Vordergrund fallen weniger ins Gewicht.</p>
+    <p>Dazu kommt die Akustik. Ein tiefer Basston erzeugt eine reiche Obertonreihe (Kapitel 5). Diese Obertöne geben dem gesamten Klang eine Grundfarbe. Bei einem Tonikaorgelpunkt bestätigen sie fortlaufend das tonale Zentrum, selbst wenn die Akkorde darüber kurz davon wegführen.</p>
+    <p>Liegende Töne sind übrigens viel älter als die Harmonielehre. Dudelsack, Drehleier und viele außereuropäische Musiktraditionen spielen über einem durchgehenden <em>Bordun</em>, einem Dauerton im Bass. Der Orgelpunkt ist die Fortsetzung dieser Praxis im mehrstimmigen Satz.</p>
+  </section>
+
+  <section class="layer piano" data-title="Orgelpunkte am Klavier spielen">
+    <p>Ein Orgelpunkt ist am Klavier eine Herausforderung, weil ein Klavierton abklingt. Es gibt drei Lösungen:</p>
+    <ul>
+      <li><strong>Halten mit dem Pedal:</strong> Schlag den Basston an und halte das rechte Pedal, solange die Harmonie darüber das verträgt. Wechsle das Pedal, wenn es zu verschwommen wird, und schlag den Basston dabei neu an (Kapitel 45).</li>
+      <li><strong>Wiederholen:</strong> Die linke Hand schlägt den Basston auf jeder Zählzeit oder in einem Rhythmus neu an, etwa in Achteln. Das ist im Pop die übliche Form („pulsierender Bass“).</li>
+      <li><strong>Oktaven:</strong> Die linke Hand spielt den Basston als Oktave (C – c). Das gibt mehr Fundament und klingt länger.</li>
+    </ul>
+    <p><strong>Übung:</strong> Linke Hand: C – c in Achteln, ohne Unterbrechung. Rechte Hand: je zwei Takte C, F/C, G/C, C. Danach dasselbe mit G im Bass und den Akkorden C/G, G7, C/G, G7, bevor du zu C auflöst.</p>
+  </section>
+
+  <!-- 26.5 -->
+  <h2 id="ueben">26.5 Sequenzen zum Üben nutzen</h2>
+  <p>Sequenzen sind auch ein Übungsprinzip. Viele klassische Fingerübungen, etwa die von Charles-Louis Hanon, sind nichts anderes als ein kurzes Modell, das auf jeder Stufe der Tonleiter wiederholt wird. Dasselbe Prinzip lässt sich auf Akkorde und Harmonik anwenden:</p>
+  <ul>
+    <li><strong>Akkordfolgen transponieren:</strong> Spiel ii – V – I in C, dann eine Stufe tiefer in B, dann in As und so weiter. Du übst so jede Tonart mit derselben Griffform.</li>
+    <li><strong>Quintfall durch alle Tonarten:</strong> Spiel Dominantseptakkorde im Quintfall: C7 – F7 – B7 – Es7 – … Nach zwölf Akkorden bist du wieder bei C7 und hast alle Tonarten berührt.</li>
+    <li><strong>Melodische Muster:</strong> Nimm ein vier- oder fünftöniges Motiv und spiel es auf jeder Stufe einer Tonleiter. Das trainiert Fingersatz und Tonartgefühl zugleich.</li>
+  </ul>
+
+  <section class="layer piano" data-title="Ein Sequenzmuster für jeden Tag">
+    <p>Ein kurzes Muster, das Technik und Harmonik verbindet: In C-Dur spielt die rechte Hand auf jeder Stufe einen gebrochenen Dreiklang aufwärts und die Tonleiter wieder abwärts (c – e – g – f – e – d – c, dann d – f – a – g – f – e – d und so weiter), die linke Hand den Grundton.</p>
+    <div class="abc" data-bpm="132" data-caption="Tägliches Sequenzmuster: Dreiklang auf, Tonleiter ab, jede Stufe eine Stufe höher">
+      X:1
+      M:4/4
+      L:1/8
+      K:C
+      C E G F E D C2 | D F A G F E D2 | E G B A G F E2 | F A c B A G F2 | G B d c B A G2 | A c e d c B A2 | B d f e d c B2 | c8 |]
+    </div>
+    <p>Fingersatz rechte Hand: 1–3–5–4–3–2–1 auf jeder Stufe. Die Hand verschiebt sich jeweils um eine weiße Taste. Achte darauf, dass auf der vii-Stufe (h – d – f) der verminderte Dreiklang erklingt. Hier spürst du das tonale Prinzip der Sequenz direkt in der Hand.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Eine Sequenz wiederholt ein Modell auf anderen Tonstufen. Tonale Sequenzen bleiben in der Tonleiter, reale halten alle Intervalle exakt.</li>
+    <li>Die Quintfallsequenz (I – IV – vii° – iii – vi – ii – V – I) ist das wichtigste harmonische Sequenzmodell, mit Septakkorden die Grundlage vieler Jazz-Standards.</li>
+    <li>Weitere Modelle: Pachelbel (Quarte abwärts, Sekunde aufwärts), Terzfall, Monte (steigend) und Fonte (fallend).</li>
+    <li>Ein Orgelpunkt hält einen Basston, während die Harmonien darüber wechseln. Tonikaorgelpunkte beruhigen, Dominantorgelpunkte bauen Spannung auf.</li>
+    <li>Sequenzen sind auch ein Übungsprinzip: dasselbe Muster auf allen Stufen und in allen Tonarten.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">26.1</span><div><span class="kind">Theorie</span>Schreib die Quintfallsequenz in G-Dur mit Akkordnamen und Stufen.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G – C – F♯° – Hm – Em – Am – D – G. I – IV – vii° – iii – vi – ii – V – I.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">26.2</span><div><span class="kind">Theorie</span>Welcher Grundtonschritt in der diatonischen Quintfallsequenz ist keine reine Quinte abwärts? Warum lässt man ihn trotzdem zu?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der Schritt IV → vii° (in C-Dur F → H). F – H ist eine übermäßige Quarte aufwärts bzw. eine verminderte Quinte abwärts. Er wird zugelassen, weil die Sequenz tonal bleibt und nur Töne der Tonart verwendet. Das Ohr folgt dem Muster und hört die Abweichung nicht als Störung.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">26.3</span><div><span class="kind">Theorie</span>Schreib die Pachelbel-Folge in D-Dur (Originaltonart des Kanons). Beschreibe das Sequenzmodell.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>D – A – Hm – F♯m – G – D – G – A. Modell: zwei Akkorde im Abstand einer Quarte abwärts (D – A), das nächste Paar beginnt eine Sekunde höher als der vorige Akkord endete (A → Hm). Die ersten drei Paare bilden die Sequenz, G – A am Ende führt zurück zu D.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">26.4</span><div><span class="kind">Theorie</span>Das Motiv g – a – h wird zweimal eine Stufe höher sequenziert. Schreib die Glieder tonal (in C-Dur) und real.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Tonal: a – h – c, h – c – d. Real (immer zwei Ganztöne): a – h – cis, h – cis – dis.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">26.5</span><div><span class="kind">Theorie</span>Welche Akkorde passen über einen Dominantorgelpunkt in C-Dur (G im Bass), und wie schreibt man sie im Leadsheet?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Typisch sind C/G (I6/4), G7, Dm/G und F/G sowie verminderte Akkorde wie H°7/G. Alle werden als Slash-Akkorde mit G hinter dem Schrägstrich notiert. Zum Schluss löst sich der Orgelpunkt nach C auf.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">26.6</span><div><span class="kind">Am Klavier</span>Spiel die Quintfallsequenz in F-Dur mit der Griffweise aus dem Klavier-Einschub (Grundstellung und Quartsextlage im Wechsel).</div></div>
+      <details class="solution"><summary>Lösung</summary><div>F – B – E° – Am – Dm – Gm – C – F. Rechte Hand zum Beispiel: f' a' c'' (F) – f' b' d'' (B) – e' g' b' (E°) – e' a' c'' (Am) – d' f' a' (Dm) – d' g' b' (Gm) – c' e' g' (C) – c' f' a' (F).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">26.7</span><div><span class="kind">Am Klavier</span>Spiel Monte und Fonte in G-Dur. Wie heißen die Akkorde?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Monte: G7 – C – A7 – D (V7/IV – IV – V7/V – V). Fonte: E7 – Am – D7 – G (V7/ii – ii – V7 – I).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">26.8</span><div><span class="kind">Gehör</span>Welches Beispiel ist eine Quintfallsequenz, welches die Pachelbel-Folge?</div></div>
+      <div class="btn-row">
+        <button class="btn" type="button" data-seq="48 64 67 72/2|43 62 67 71/2|45 60 64 72/2|40 59 64 67/2|41 60 65 69/2|36 60 64 67/2|41 57 60 65/2|43 59 62 67/2|48 60 64 67/4" data-bpm="110">▶ Beispiel A</button>
+        <button class="btn" type="button" data-seq="48 60 64 67/2|41 60 65 69/2|47 59 62 65/2|40 59 64 67/2|45 57 60 64/2|38 57 62 65/2|43 55 59 62/2|36 55 60 64/4" data-bpm="110">▶ Beispiel B</button>
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>A ist die Pachelbel-Folge (C – G – Am – Em – F – C – F – G – C), B die Quintfallsequenz (C – F – H° – Em – Am – Dm – G – C). Bei B fällt der Bass gleichmäßig im Wechsel von Quinte und Quarte, bei A wechseln Quartfall und Sekundschritt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">26.9</span><div><span class="kind">Notenlesen</span>Finde Modell und Sequenzglieder. Ist die Sequenz tonal oder real?</div></div>
+      <div class="abc" data-bpm="110">
+        X:1
+        M:3/4
+        L:1/8
+        K:G
+        G A B G D2 | A B c A E2 | B c d B F2 | G6 |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Modell: Takt 1 (g' a' h' g' d'). Glieder: Takt 2 eine Stufe höher (a' h' c'' a' e'), Takt 3 noch eine Stufe höher (h' c'' d'' h' fis'). Die Sequenz ist tonal: Takt 1 beginnt mit zwei Ganztönen, Takt 2 mit Ganzton und Halbton (h' – c'').</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">26.10</span><div><span class="kind">Vertiefung</span>Spielt man Dominantseptakkorde im Quintfall (C7 – F7 – B7 – …), wie viele Akkorde braucht man, bis man wieder bei C7 ankommt? Begründe mit dem Quintenzirkel.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Zwölf. Jeder Schritt geht eine Quinte abwärts, also eine Position im Quintenzirkel weiter. Nach zwölf Schritten ist der Zirkel einmal durchlaufen: C7 – F7 – B7 – Es7 – As7 – Des7 – Ges7 – H7 (Ces7) – E7 – A7 – D7 – G7 – C7. Dabei kommt jeder der zwölf Töne genau einmal als Grundton vor.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(26);
+  document.querySelectorAll("[data-seq]").forEach((b) => b.addEventListener("click", () => {
+    const steps = b.dataset.seq.split("|").map((s) => {
+      const [n, d] = s.split("/");
+      return [n.trim().split(/\s+/).map(Number), +(d || 2)];
+    });
+    Book.audio.seq(steps, +b.dataset.bpm || 72);
+  }));
+</script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tritonussubstitution und alterierte Dominanten · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .progression { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.8rem 1rem; margin-block: 1.4rem; }
+  .progression .prog-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
+  .progression .chip-btn { font-family: var(--font-display); font-weight: 600; font-size: var(--step--1); border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 999px; padding: 0.2rem 0.7rem; cursor: pointer; }
+  .progression .chip-btn.cur { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+  .progression .cap { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); margin: 0.3rem 0 0; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil IV · Kapitel 31</div>
+    <h1>Tritonussubstitution und alterierte Dominanten</h1>
+    <p class="lede">Warum kann man vor Cmaj7 statt G7 auch D♭7 spielen, einen Akkord, der mit C-Dur scheinbar nichts zu tun hat? Die Antwort steckt im Tritonus. Sie führt direkt zur alterierten Dominante, dem spannungsreichsten Klang des Jazz.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>zu jedem Dominantseptakkord das Tritonussubstitut bilden,</li>
+      <li>erklären, warum die Substitution funktioniert,</li>
+      <li>II–V–I-Verbindungen und Quintfallketten mit Substituten umfärben,</li>
+      <li>die alterierte Skala herleiten und alterierte Voicings greifen,</li>
+      <li>einschätzen, wann eine Melodie die Substitution zulässt.</li>
+    </ul>
+  </div>
+
+  <!-- 31.1 -->
+  <h2 id="tritonus">31.1 Der Tritonus im Dominantseptakkord</h2>
+  <p>In Kapitel 15 hast du gesehen, dass der Dominantseptakkord seine Spannung aus dem Tritonus zwischen Terz und Septime bezieht. In G7 ist das h–f. Das h strebt aufwärts zum c, das f abwärts zum e.</p>
+  <p>Nun ein Blick auf D♭7: des–f–as–ces. Terz ist f, Septime ist ces, und ces liegt auf derselben Taste wie h. D♭7 enthält also genau denselben Tritonus wie G7, nur mit vertauschten Rollen.</p>
+  <figure>
+    <div class="kb" data-from="48" data-to="72" data-labels="none" data-marks="55:c3:G 59:c2:h 62 65:c2:f" aria-label="G7 auf der Klaviatur: g, h, d, f; h und f markiert"></div>
+    <div class="kb" data-from="48" data-to="72" data-labels="none" data-marks="49:c3:des 53:c2:f 56 59:c2:ces" aria-label="D♭7 auf der Klaviatur: des, f, as, ces; f und ces markiert"></div>
+    <figcaption>Oben G7, unten D♭7. Petrol: der gemeinsame Tritonus h/ces–f. Orange: die Grundtöne g und des, die ebenfalls einen Tritonus auseinanderliegen.</figcaption>
+  </figure>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th></th><th>Terz</th><th>Septime</th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="43 53 59" data-mode="harm"><td>G7</td><td>h</td><td>f</td></tr>
+        <tr class="play-row" data-play="37 53 59" data-mode="harm"><td>D♭7</td><td>f</td><td>ces (= h)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die Grundtöne g und des liegen ebenfalls einen Tritonus auseinander. Daher der Name: <dfn id="g-tritonussubstitution">Tritonussubstitution</dfn>, kurz Tritonussubstitut oder <em>subV</em>, englisch <em>tritone substitution</em>.</p>
+
+  <!-- 31.2 -->
+  <h2 id="substitution">31.2 Die Substitution</h2>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Jeder Dominantseptakkord kann durch den Dominantseptakkord ersetzt werden, dessen Grundton einen Tritonus entfernt liegt. G7 → D♭7, D7 → A♭7, A7 → E♭7.</p>
+  </div>
+  <p>In der II–V–I wird aus Dm7–G7–Cmaj7 die Folge Dm7–D♭7–Cmaj7. Der Bass läuft nun chromatisch abwärts: d–des–c.</p>
+  <div class="progression" data-steps="38 53:c2 60:c3 | 43 53:c3 59:c2 | 36 52:c2 59:c3" data-labels="Dm7|G7|Cmaj7" data-from="36" data-to="64" data-bpm="60" data-beats="2" data-caption="Original: Quintfall im Bass d–G–C."></div>
+  <div class="progression" data-steps="38 53:c2 60:c3 | 37 53:c2 59:c3 | 36 52:c2 59:c3" data-labels="Dm7|D♭7|Cmaj7" data-from="36" data-to="64" data-bpm="60" data-beats="2" data-caption="Mit Tritonussubstitut: chromatischer Bass d–des–c. Die oberen Töne sind identisch."></div>
+  <p>Hör genau hin: Die beiden oberen Töne bleiben in beiden Fassungen gleich. Nur der Bass ändert sich. Das ist der Kern der ganzen Technik.</p>
+  <div class="abc" data-bpm="60" data-caption="Mit vollen Rootless-Voicings: jede Stimme bewegt sich nur einen Halbton oder bleibt liegen.">
+    X:1
+    M:4/4
+    L:1/2
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "Dm9"[CEFA]2 | "Db9"[_C_EF_A]2 | "Cmaj9"[B,DEG]2 |]
+    [V:LH] D,,2 | _D,,2 | C,,2 |]
+  </div>
+
+  <!-- 31.3 -->
+  <h2 id="warum">31.3 Warum sie funktioniert</h2>
+  <p>Drei Gründe wirken zusammen:</p>
+  <ol>
+    <li><strong>Der gemeinsame Tritonus.</strong> Die Spannung einer Dominante steckt in Terz und Septime. D♭7 hat dieselben zwei Töne wie G7, sie lösen sich genauso auf: h (ces) nach c, f nach e.</li>
+    <li><strong>Die chromatische Bassbewegung.</strong> des–c ist ein Halbtonschritt, also eine Leittonbewegung von oben. Sie ist fast so zielgerichtet wie der Quintfall g–c.</li>
+    <li><strong>Die übrigen Töne sind Alterationen von G7.</strong> des ist die ♭5 (♯11) von G, as die ♭9, es (die 9 von D♭) die ♭13. D♭7 klingt deshalb wie ein alterierter G7 ohne Grundton.</li>
+  </ol>
+  <p>Punkt 3 zeigt die folgende Tabelle für jeden Ton: Was über G7 ein Akkordton ist, wird über D♭7 zum Optionston oder zur Alteration und umgekehrt.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Ton</th><th>Funktion über G7</th><th>Funktion über D♭7</th></tr></thead>
+      <tbody>
+        <tr><td>g</td><td>1</td><td>♯11</td></tr>
+        <tr><td>as</td><td>♭9</td><td>5</td></tr>
+        <tr><td>a</td><td>9</td><td>♯5</td></tr>
+        <tr><td>h / ces</td><td>3</td><td>♭7</td></tr>
+        <tr><td>c</td><td>11 (Avoid)</td><td>große 7, reibt mit ces</td></tr>
+        <tr><td>des</td><td>♭5 / ♯11</td><td>1</td></tr>
+        <tr><td>d</td><td>5</td><td>♭9</td></tr>
+        <tr><td>es</td><td>♭13</td><td>9</td></tr>
+        <tr><td>e</td><td>13</td><td>♯9</td></tr>
+        <tr><td>f</td><td>♭7</td><td>3</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section class="layer deep" data-title="Die Symmetrie des Tritonus">
+    <p>Der Tritonus ist das einzige Intervall, das bei der Umkehrung gleich bleibt. Sechs Halbtöne plus sechs Halbtöne ergeben die Oktave. h–f ist ein Tritonus, f–h ebenfalls (Abschnitt 5.4).</p>
+    <p>Daraus folgt eine einfache Rechnung. Es gibt zwölf Dominantseptakkorde, aber nur sechs verschiedene Tritoni (c–fis, cis–g, d–gis, dis–a, e–ais, f–h, danach wiederholt es sich). Jeder Tritonus gehört also zu genau zwei Dominantseptakkorden. Diese bilden die sechs Paare:</p>
+    <p class="mono">G7 ↔ D♭7 · C7 ↔ G♭7 · D7 ↔ A♭7 · A7 ↔ E♭7 · E7 ↔ B♭7 · H7 ↔ F7</p>
+    <p>Jeder Dominantseptakkord hat damit genau ein Tritonussubstitut, und das Substitut des Substituts ist wieder der ursprüngliche Akkord.</p>
+    <p>Geht man einen Schritt weiter zum verminderten Septakkord, wird die Symmetrie noch größer. h–d–f–as enthält zwei Tritoni (h–f und d–as) und steckt in G7♭9, B♭7♭9, D♭7♭9 und E7♭9. Vier Dominanten im Abstand kleiner Terzen teilen sich damit einen Klang. Diese Verwandtschaft nutzt die Halbton-Ganzton-Skala (Abschnitt 30.4).</p>
+  </section>
+
+  <section class="layer deep" data-title="Ein Vorfahr aus der Klassik: der übermäßige Quintsextakkord">
+    <p>Die Tritonussubstitution wurde im Bebop der 1940er-Jahre zu einem Standardwerkzeug, der Klang ist aber viel älter. In der klassischen Harmonik gibt es den <em>übermäßigen Quintsextakkord</em> (Kapitel 25). In C-Dur lautet er as–c–es–fis und löst sich zur Dominante G auf.</p>
+    <p>Spielt man as–c–es–fis auf dem Klavier, klingt er exakt wie A♭7 (as–c–es–ges), denn fis und ges liegen auf derselben Taste. A♭7 ist das Tritonussubstitut von D7, der Doppeldominante zu G. Mozart, Beethoven und Schubert benutzten also schon den Klang einer Tritonussubstitution, nur anders notiert und anders gedacht: als Akkord mit zwei Leittönen (as → g und fis → g), die sich auf den Grundton der Dominante zubewegen.</p>
+    <p>Die Schreibweise verrät die Denkweise. Die Klassik schreibt fis, weil der Ton aufwärts zum g führt. Der Jazz schreibt ges als Septime von A♭7, weil er in Akkordsymbolen denkt. Der Klang ist derselbe.</p>
+  </section>
+
+  <section class="layer piano" data-title="Die II–subV–I in der linken Hand">
+    <p>Mit Shell-Voicings (Kapitel 29) ist die Substitution besonders bequem: Die Hand bleibt liegen, nur der kleine Finger rutscht einen Halbton.</p>
+    <ul>
+      <li>Dm7: d–f–c' (1–3–7)</li>
+      <li>D♭7: des–f–ces' (1–3–7), geschrieben des–f–h</li>
+      <li>Cmaj7: c–e–h (1–3–7)</li>
+    </ul>
+    <p>Alle drei Griffe haben dieselbe Form 1–3–7. Der Bass fällt chromatisch, die Terz f bleibt und fällt dann nach e, die Septime c' fällt nach h und bleibt.</p>
+    <p><strong>Übung:</strong> Spiel abwechselnd Dm7–G7–Cmaj7 und Dm7–D♭7–Cmaj7, jeweils zwei Schläge pro Akkord. Übertrag beides nach F-Dur (Gm7–C7/G♭7–Fmaj7) und B♭-Dur (Cm7–F7/C♭7 = H7–B♭maj7).</p>
+  </section>
+
+  <!-- 31.4 -->
+  <h2 id="ketten">31.4 Substitution in Ketten</h2>
+  <p>Jede Dominante darf ersetzt werden, auch Zwischendominanten (Kapitel 21). In einer Quintfallkette entstehen dadurch chromatisch fallende Bässe:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Fassung</th><th>Akkorde</th><th>Bass</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" id="chain-a"><td>Original</td><td>Cmaj7 – A7 – Dm7 – G7 – Cmaj7</td><td>c a d g c</td><td>▶</td></tr>
+        <tr class="play-row" id="chain-b"><td>beide ersetzt</td><td>Cmaj7 – E♭7 – Dm7 – D♭7 – Cmaj7</td><td>c es d des c</td><td>▶</td></tr>
+        <tr class="play-row" id="chain-c"><td>nur Dominanten</td><td>E7 – E♭7 – D7 – D♭7 – Cmaj7</td><td>e es d des c</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die letzte Zeile zeigt eine besonders beliebte Wendung: lauter Dominanten, die chromatisch abwärts gleiten. Sie entsteht aus einer Quintfallkette von Dominanten (E7–A7–D7–G7–C), in der jede zweite durch ihr Substitut ersetzt ist.</p>
+  <h4>Die verwandte II</h4>
+  <p>Auch vor ein Tritonussubstitut kann man seine eigene II setzen. Aus Dm7–D♭7–Cmaj7 wird dann A♭m7–D♭7–Cmaj7. A♭m7 ist die II zu D♭7, so wie Dm7 die II zu G7 ist. Es gibt auch die Mischform Dm7–G7 ersetzt durch A♭m7–D♭7 als Ganzes. Solche eingeschobenen II–Vs gehören zu den wichtigsten Mitteln der Reharmonisierung (Kapitel 32).</p>
+
+  <!-- 31.5 -->
+  <h2 id="alteriert">31.5 Alterierte Dominanten</h2>
+  <p>Wenn D♭7 wie ein G7 mit Alterationen klingt, kann man diesen Gedanken auch direkt verfolgen und G7 mit allen Alterationen spielen. Ein solcher Akkord heißt <dfn id="g-alterierte-dominante">alterierte Dominante</dfn> und wird als <strong>G7alt</strong> geschrieben. Er enthält Grundton, Terz und Septime sowie beliebige Alterationen: ♭9, ♯9, ♭5 (♯11) und ♭13 (♯5). Die unveränderten Optionstöne 9 und 13 sowie die reine Quinte fehlen.</p>
+  <p>Die dazugehörige <dfn id="g-alterierte-skala">alterierte Skala</dfn> enthält genau diese Töne: g, as, b (ais), h, des, es, f. Sie ist die siebte Stufe von melodisch Moll, hier von as-Moll melodisch (Abschnitt 30.5).</p>
+  <figure>
+    <div class="kb" data-from="55" data-to="67" data-labels="none" data-marks="55::1 59::3 65::7 56:c2:♭9 58:c2:♯9 61:c2:♭5 63:c2:♭13" aria-label="Alterierte Skala über G"></div>
+    <figcaption>Die alterierte Skala über G: drei Akkordtöne (blau) und vier Alterationen (petrol).</figcaption>
+  </figure>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="55 56 58 59 61 63 65 67" data-bpm="200">▶ alterierte Skala auf g</button>
+    <button class="btn" type="button" data-play="43 53 59 63 68" data-mode="harm">▶ G7alt (G | f h es' as')</button>
+    <button class="btn" type="button" id="alt-res">▶ G7alt → Cmaj9</button>
+  </div>
+  <p>Jede Alteration liegt einen Halbton neben einem Ton des C-Dur-Akkords: as neben g, b (ais) neben h, des neben c und es neben e. Die alterierte Dominante ist damit ein Bündel aus Leittönen, das von allen Seiten auf die Tonika zeigt.</p>
+
+  <section class="layer deep" data-title="Warum die alterierte Skala genau so aussieht">
+    <p><strong>Herleitung über die Alterationen.</strong> Nimm G7 und verändere jeden Ton, der kein Leitlinienton ist: Die 9 wird zu ♭9 und ♯9, die 5 zu ♭5, die 13 zu ♭13. Übrig bleiben g, h und f, dazu as, ais, des und es. Das sind sieben Töne, also eine Skala.</p>
+    <p><strong>Herleitung über melodisch Moll.</strong> Ordnet man die Töne ab as, ergibt sich as–b–ces–des–es–f–g. Das ist as-Moll melodisch (Moll mit großer Sexte f und großer Septime g). Die alterierte Skala ist also ein Modus einer bekannten Tonleiter.</p>
+    <p><strong>Herleitung über die Tritonussubstitution.</strong> Ordnet man dieselben Töne ab des, erhält man des–es–f–g–as–b–ces. Das ist D♭-Lydisch ♭7, die Skala für D♭7♯11 (Abschnitt 30.4). Die alterierte Skala über G und die lydische ♭7-Skala über D♭ bestehen aus denselben Tönen. Wer G7alt spielt, spielt also D♭7♯11 über einem G im Bass. Die drei Herleitungen beschreiben denselben Sachverhalt von verschiedenen Seiten. Das ist ein gutes Zeichen dafür, dass das System in sich stimmig ist.</p>
+  </section>
+
+  <!-- 31.6 -->
+  <h2 id="upper">31.6 Upper-Structure-Dreiklänge</h2>
+  <p>Alterierte Voicings lassen sich am Klavier mit einem einfachen Trick greifen: Die linke Hand spielt Grundton, Septime und Terz (die Shell), die rechte Hand einen gewöhnlichen Dur- oder Molldreiklang darüber. Dieser obere Dreiklang heißt <dfn id="g-upper-structure">Upper Structure</dfn>. Weil der Dreiklang einfach zu greifen ist, entsteht ein komplexer Klang mit geringem Aufwand.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Links (G7-Shell)</th><th>Rechts</th><th>ergibt über G</th><th>Symbol</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="43 53 59 63 67 70" data-mode="harm"><td>G f h</td><td>E♭-Dur: es' g' b'</td><td>♭13, 1, ♯9</td><td>G7♯9♭13</td><td>▶</td></tr>
+        <tr class="play-row" data-play="43 53 59 61 65 68" data-mode="harm"><td>G f h</td><td>D♭-Dur: des' f' as'</td><td>♭5, 7, ♭9</td><td>G7♭9♭5</td><td>▶</td></tr>
+        <tr class="play-row" data-play="43 53 59 68 71 75" data-mode="harm"><td>G f h</td><td>as-Moll: as' ces'' es''</td><td>♭9, 3, ♭13</td><td>G7♭9♭13</td><td>▶</td></tr>
+        <tr class="play-row" data-play="43 53 59 64 68 71" data-mode="harm"><td>G f h</td><td>E-Dur: e' gis' h'</td><td>13, ♭9, 3</td><td>G13♭9</td><td>▶</td></tr>
+        <tr class="play-row" data-play="43 53 59 69 73 76" data-mode="harm"><td>G f h</td><td>A-Dur: a' cis'' e''</td><td>9, ♯11, 13</td><td>G13♯11</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die ersten drei Zeilen sind alteriert und passen vor Dur wie vor Moll. Die letzten beiden enthalten natürliche Optionstöne und passen eher vor Dur.</p>
+
+  <section class="layer piano" data-title="Alterierte Voicings greifen">
+    <p>Drei Griffe für G7alt, die du in alle Tonarten übertragen solltest:</p>
+    <ul>
+      <li><strong>Rootless, eine Hand:</strong> f–h–es'–as' (7, 3, ♭13, ♭9). Linke Hand, Finger 5–3–2–1.</li>
+      <li><strong>Upper Structure E♭/G:</strong> links G–f–h, rechts es'–g'–b'.</li>
+      <li><strong>Upper Structure D♭/G:</strong> links G–f–h, rechts des'–f'–as'.</li>
+    </ul>
+    <p>Spiel nach jedem Griff Cmaj9 (links C–h–e, rechts d'–g') oder Cm6/9 (links C–es–a, rechts d'–g') und achte darauf, wohin die oberen Töne gehen.</p>
+    <div class="progression" data-steps="38 60:c2 64:c2 65:c2 69:c2 | 37 59:c2 63:c2 65:c2 68:c2 | 36 59:c2 62:c2 64:c2 67:c2" data-labels="Dm9|D♭9 = G7alt|Cmaj9" data-from="36" data-to="72" data-bpm="60" data-beats="2" data-caption="Rootless: c' e' f' a' → h es' f' as' → h d' e' g'. Jede Stimme bewegt sich höchstens einen Halbton. Das mittlere Voicing ist zugleich D♭9 und G7alt ohne Grundton."></div>
+    <p><strong>Übung:</strong> Spiel die Folge oben, dann dieselbe mit G statt Des im Bass. Hörst du einen Unterschied? Der Akkord in der rechten Hand ist identisch. Nur der Bass entscheidet, ob es eine Tritonussubstitution oder eine alterierte Dominante ist.</p>
+  </section>
+
+  <!-- 31.7 -->
+  <h2 id="wann">31.7 Wann die Substitution passt</h2>
+  <p>Eine Tritonussubstitution ändert die Grundtöne, also muss die Melodie dazu passen. Prüfe den Melodieton gegen die Tabelle in 31.3:</p>
+  <ul>
+    <li><strong>Gut:</strong> Melodietöne f, h, as, es oder des. Sie sind über D♭7 Akkordtöne oder 9.</li>
+    <li><strong>Farbig:</strong> g (♯11), a (♯5), e (♯9). Klingt alteriert, oft sehr schön.</li>
+    <li><strong>Heikel:</strong> d (♭9) und besonders c (große Septime gegen ces). Hier ist G7 meist besser.</li>
+  </ul>
+  <p>Stilistisch gehört die Tritonussubstitution zum Jazz, zum Soul und zum Gospel. Im Pop klingt sie schnell nach „Jazz-Zitat“. In Balladen mit einer Bassstimme wirkt sie dagegen oft natürlich, weil der chromatische Bass weich und elegant führt.</p>
+
+  <h3 id="trainer-ueberschrift">Gehörtrainer: Dominante oder Substitut?</h3>
+  <div id="sub-trainer"></div>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>G7 und D♭7 teilen den Tritonus h/ces–f. Deshalb kann D♭7 G7 ersetzen. Jede Dominante hat genau ein Tritonussubstitut.</li>
+    <li>Mit Substitut fällt der Bass chromatisch (d–des–c), die Leitlinien bleiben unverändert.</li>
+    <li>Die übrigen Töne von D♭7 sind Alterationen von G7. D♭7 klingt wie G7alt ohne Grundton.</li>
+    <li>G7alt enthält 1, 3, ♭7 und die Alterationen ♭9, ♯9, ♭5, ♭13. Die alterierte Skala ist die 7. Stufe von melodisch Moll einen Halbton über dem Grundton.</li>
+    <li>Upper-Structure-Dreiklänge über der Shell machen alterierte Klänge leicht greifbar.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">31.1</span><div><span class="kind">Theorie</span>Nenne die Tritonussubstitute von C7, A7, E♭7 und H7.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C7 → G♭7 (F♯7). A7 → E♭7. E♭7 → A7. H7 → F7. Das Substitut des Substituts ist wieder der Ausgangsakkord.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">31.2</span><div><span class="kind">Theorie</span>Zeig, dass D7 und A♭7 denselben Tritonus haben.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>D7: Terz fis, Septime c. A♭7: Terz c, Septime ges. fis und ges liegen auf derselben Taste. Beide Akkorde enthalten also den Tritonus c–fis/ges, mit vertauschten Rollen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">31.3</span><div><span class="kind">Theorie</span>Schreib die II–V–I in F-Dur einmal normal und einmal mit Tritonussubstitut. Wie verläuft der Bass?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Normal: Gm7–C7–Fmaj7, Bass g–c–f. Mit Substitut: Gm7–G♭7–Fmaj7, Bass g–ges–f, also chromatisch abwärts.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">31.4</span><div><span class="kind">Theorie</span>Ersetze in | Cmaj7 | A7 | Dm7 | G7 | Cmaj7 | beide Dominanten. Füge dann vor jedes Substitut seine eigene II ein.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Mit Substituten: Cmaj7 | E♭7 | Dm7 | D♭7 | Cmaj7. Mit verwandten IIs: Cmaj7 | B♭m7 E♭7 | Dm7 | A♭m7 D♭7 | Cmaj7. B♭m7 ist die II zu E♭7, A♭m7 die II zu D♭7.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">31.5</span><div><span class="kind">Theorie</span>Gib die alterierte Skala über D7 an. Aus welcher melodischen Molltonleiter stammt sie? Welche lydische ♭7-Skala hat dieselben Töne?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>D-alteriert: d es f fis gis b c (praktisch: d es f ges as b c). Sie stammt aus es-Moll melodisch. Dieselben Töne hat A♭-Lydisch ♭7 (as b c d es f ges), also die Skala des Tritonussubstituts A♭7.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">31.6</span><div><span class="kind">Theorie</span>Die Melodie hat über einem G7 den Ton d. Passt D♭7 als Ersatz? Und wenn die Melodie f ist?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>d ist über D♭7 die ♭9. Das ist möglich, klingt aber hart, vor allem wenn der Ton lange liegt. Bei f passt das Substitut ideal, denn f ist die Terz von D♭7.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">31.7</span><div><span class="kind">Am Klavier</span>Spiel Dm7–D♭7–Cmaj7 mit Shells (1–3–7) in C, F, B♭ und E♭.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C: d–f–c', des–f–h, c–e–h. F: g–b–f', ges–b–e' (fes), f–a–e'. B♭: c–es–b, h–es–a (H7 = C♭7: Terz dis/es, Septime a), b–d–a. E♭: f–as–es', e–as–d' (E7 = F♭7: Terz gis/as, Septime d), es–g–d'.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">31.8</span><div><span class="kind">Am Klavier</span>Greif die drei Upper Structures E♭/G7, D♭/G7 und A♭m/G7 und löse jede nach Cmaj9 und nach Cm6/9 auf.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Achte auf die obersten Töne: b' geht zu a' (Cm6/9) oder h' (Cmaj9), as' geht zu g'. Je deutlicher die Melodie oben, desto überzeugender klingt die Auflösung.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">31.9</span><div><span class="kind">Gehör</span>Löse zehn Aufgaben im Gehörtrainer. Woran erkennst du das Substitut?</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Am Bass: Beim Substitut rutscht er einen Halbton nach unten in die Tonika, bei der normalen Dominante springt er um eine Quinte. Auch die oberen Töne helfen: Im Trainer spielt das Substitut es und as statt e und a. Es klingt dadurch dunkler und alterierter.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">31.10</span><div><span class="kind">Vertiefung</span>Warum gibt es genau sechs Paare von Dominanten mit gemeinsamem Tritonus und nicht zwölf?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Ein Tritonus teilt die Oktave in zwei gleiche Hälften. c–fis und fis–c sind derselbe Tritonus. Von zwölf Tönen aus entstehen daher nur sechs verschiedene Tritoni. Jeder gehört zu zwei Dominantseptakkorden (als Terz–Septime und als Septime–Terz), also gibt es sechs Paare.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(31);
+
+  // Akkordfolgen mit Klaviatur: data-steps="midi midi:klasse | …", data-labels="A|B"
+  document.querySelectorAll(".progression").forEach((el) => {
+    const steps = el.dataset.steps.split("|").map((s) => s.trim().split(/\s+/).map((t) => {
+      const [m, cls] = t.split(":"); return { m: +m, cls: cls || "" };
+    }));
+    const labels = (el.dataset.labels || "").split("|").map((s) => s.trim());
+    const bpm = +el.dataset.bpm || 60, beats = +el.dataset.beats || 2;
+    el.innerHTML = '<div class="prog-chips"></div><div class="prog-kbd"></div>' +
+      `<div class="btn-row"><button class="btn" type="button">${Book.ICON.play}<span>Folge abspielen</span></button></div>` +
+      (el.dataset.caption ? `<p class="cap">${el.dataset.caption}</p>` : "");
+    const chips = el.querySelector(".prog-chips");
+    const kb = Book.keyboard(el.querySelector(".prog-kbd"), { from: +el.dataset.from || 41, to: +el.dataset.to || 76, labels: "c" });
+    const show = (i) => {
+      kb.mark(steps[i]);
+      chips.querySelectorAll(".chip-btn").forEach((c, j) => c.classList.toggle("cur", j === i));
+    };
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip-btn"; b.textContent = labels[i] || String(i + 1);
+      b.addEventListener("click", () => { show(i); Book.audio.chord(s.map((x) => x.m), 0, 1.6); });
+      chips.appendChild(b);
+    });
+    show(0);
+    el.querySelector(".btn-row .btn").addEventListener("click", () => {
+      Book.audio.seq(steps.map((s) => [s.map((x) => x.m), beats]), bpm, (i) => { if (i >= 0) show(i); });
+    });
+  });
+
+  // Ketten mit und ohne Substitut (Shells 1-3-7 / 1-7-3, Bass tief)
+  const chains = {
+    "chain-a": [[36, 52, 59], [33, 55, 61], [38, 53, 60], [43, 53, 59], [36, 52, 59]],
+    "chain-b": [[36, 52, 59], [39, 55, 61], [38, 53, 60], [37, 53, 59], [36, 52, 59]],
+    "chain-c": [[40, 56, 62], [39, 55, 61], [38, 54, 60], [37, 53, 59], [36, 52, 59]]
+  };
+  Object.keys(chains).forEach((id) => {
+    document.getElementById(id).addEventListener("click", () =>
+      Book.audio.seq(chains[id].map((c, i, a) => [c, i === a.length - 1 ? 3 : 2]), 72));
+  });
+
+  document.getElementById("alt-res").addEventListener("click", () =>
+    Book.audio.seq([[[43, 53, 59, 63, 68], 2], [[36, 52, 59, 62, 67], 3]], 60));
+
+  // Gehörtrainer: V7 oder Tritonussubstitut vor der Tonika
+  Book.earTrainer(document.getElementById("sub-trainer"), {
+    title: "G7 oder D♭7?",
+    intro: "Du hörst II–V–I oder II–subV–I in wechselnden Tonarten. Achte auf den Bass.",
+    items: [
+      { id: "v", label: "normale Dominante (V7)" },
+      { id: "sub", label: "Tritonussubstitut (♭II7)" }
+    ],
+    presets: [{ label: "beide", ids: ["v", "sub"] }],
+    from: 34, to: 72,
+    build(it) {
+      const t = Math.floor(Math.random() * 7) - 3;
+      const ii = [38, 53, 57, 60, 64], i = [36, 52, 55, 59, 62];
+      const v = it.id === "v" ? [43, 53, 57, 59, 64] : [37, 53, 59, 63, 68];
+      const ch = [ii, v, i].map((c) => c.map((m) => m + t));
+      const key = Book.name(48 + t, { octave: false, capital: true, flat: true });
+      return {
+        play: () => Book.audio.seq(ch.map((c, k) => [c, k === 2 ? 3 : 2]), 66),
+        marks: ch[1],
+        answer: `${it.label} in ${key}-Dur`
+      };
+    }
+  });
+</script>
+</body>
+</html>

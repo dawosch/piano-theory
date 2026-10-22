@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zwischendominanten · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil III · Kapitel 21</div>
+    <h1>Zwischendominanten</h1>
+    <p class="lede">Jeder Dur- und Mollakkord einer Tonart kann für einen Augenblick wie eine Tonika behandelt werden: Man stellt ihm seine eigene Dominante voran. Diese Zwischendominanten sind die häufigste Quelle für „fremde“ Töne in Liedern, und wer sie erkennt, liest Leadsheets mit ganz anderen Augen.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>zu jedem Dur- und Mollakkord einer Tonart die passende Zwischendominante bilden,</li>
+      <li>Zwischendominanten mit V/x bzw. V7/x bezeichnen und die Doppeldominante erkennen,</li>
+      <li>vorhersagen, welche fremden Töne eine Zwischendominante mitbringt und wohin sie sich auflösen,</li>
+      <li>Zwischendominanten in Leadsheets auf einen Blick erkennen,</li>
+      <li>Ketten von Dominanten am Klavier mit kurzen Wegen spielen.</li>
+    </ul>
+  </div>
+
+  <!-- 21.1 -->
+  <h2 id="idee">21.1 Die Idee: ein Akkord wird kurz zur Tonika</h2>
+  <p>In C-Dur führt G7 zur Tonika C. Der Akkord G7 ist die Dominante von C, weil sein Grundton eine Quinte über C liegt und er den Leitton h enthält (Kapitel 15). Diese Beziehung lässt sich auf jeden anderen Akkord übertragen. Nimm d-Moll, die ii-Stufe von C-Dur. Die Dominante von d-Moll ist A7, also a – cis – e – g. Spielst du in C-Dur A7 und danach d-Moll, klingt d-Moll für einen Moment wie ein Zielpunkt, fast wie eine Tonika.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="48 60 64 67/2|50 62 65 69/2|43 59 65 67/2|48 60 64 67/3">▶ C – Dm – G7 – C</button>
+    <button class="btn" type="button" data-seq="48 60 64 67/2|45 61 64 67/2|50 62 65 69/2|43 59 65 67/2|48 60 64 67/3">▶ C – A7 – Dm – G7 – C</button>
+  </div>
+  <p>Einen solchen Akkord nennt man <dfn id="g-zwischendominante">Zwischendominante</dfn> (englisch <em>secondary dominant</em>). Er ist die Dominante eines anderen Akkords innerhalb der Tonart. Den Vorgang, bei dem ein Akkord kurz wie eine Tonika wirkt, nennt man <dfn id="g-tonikalisierung">Tonikalisierung</dfn>. Die Tonart wechselt dabei nicht. Nach dem kurzen Ausflug geht es in C-Dur weiter.</p>
+  <h4>Bezeichnung</h4>
+  <p>In der Stufentheorie schreibt man die Zwischendominante als Bruch: <strong>V/ii</strong> (gesprochen „fünf von zwei“) oder mit Septime <strong>V7/ii</strong>. Die Zahl unter dem Strich nennt das Ziel, die Zahl darüber die Funktion bezogen auf dieses Ziel. A7 in C-Dur ist also V7/ii.</p>
+
+  <!-- 21.2 -->
+  <h2 id="ziele">21.2 Welche Akkorde Ziel sein können</h2>
+  <p>Ziel einer Zwischendominante kann jeder <strong>Dur- oder Mollakkord</strong> der Tonart sein. Der verminderte Akkord auf der vii-Stufe ist kein Ziel, denn er hat keine reine Quinte und kann nicht einmal kurz als Tonika gehört werden. In C-Dur gibt es damit fünf Zwischendominanten (die Dominante zur I ist ja die normale V):</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Ziel</th><th>Zwischendominante</th><th>Töne</th><th>tonartfremder Ton</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-seq="45 61 64 67/2|50 62 65 69/3"><td>ii (Dm)</td><td><strong>V7/ii</strong> = A7</td><td>a – cis – e – g</td><td>cis</td><td>▶</td></tr>
+        <tr class="play-row" data-seq="47 63 66 69/2|52 64 67 71/3"><td>iii (Em)</td><td><strong>V7/iii</strong> = H7</td><td>h – dis – fis – a</td><td>dis, fis</td><td>▶</td></tr>
+        <tr class="play-row" data-seq="48 64 67 70/2|53 65 69 72/3"><td>IV (F)</td><td><strong>V7/IV</strong> = C7</td><td>c – e – g – b</td><td>b</td><td>▶</td></tr>
+        <tr class="play-row" data-seq="50 66 69 72/2|43 59 62 67/3"><td>V (G)</td><td><strong>V7/V</strong> = D7</td><td>d – fis – a – c</td><td>fis</td><td>▶</td></tr>
+        <tr class="play-row" data-seq="52 68 71 74/2|45 60 64 69/3"><td>vi (Am)</td><td><strong>V7/vi</strong> = E7</td><td>e – gis – h – d</td><td>gis</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="muted">Tippe eine Zeile an: Du hörst die Zwischendominante und danach ihr Ziel.</p>
+  <p>Das Bauprinzip ist immer dasselbe:</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Zwischendominante bilden: Geh vom Grundton des Ziels eine <strong>reine Quinte nach oben</strong> und bau dort einen <strong>Dur-Dreiklang</strong>, auf Wunsch mit <strong>kleiner Septime</strong> (Dominantseptakkord). Das Ziel bleibt so, wie es in der Tonart vorkommt, also Dur oder Moll.</p>
+  </div>
+
+  <section class="layer deep" data-title="Warum ein Akkord kurz zur Tonika werden kann, ohne dass die Tonart wechselt">
+    <p>Der Begriff <em>Tonikalisierung</em> stammt von Heinrich Schenker, der ihn 1906 in seiner <em>Harmonielehre</em> einführte. Er beschreibt eine Erfahrung, die man beim Hören leicht nachvollziehen kann: Für einen Moment klingt d-Moll wie ein Zentrum, und trotzdem hast du nicht das Gefühl, in d-Moll angekommen zu sein.</p>
+    <p>Die Musikpsychologie erklärt das mit zwei Zeitskalen. Unser Gehör verfolgt die Tonart über ein gleitendes Zeitfenster von einigen Sekunden bis Takten. Carol Krumhansl und Edward Kessler haben 1982 in Hörversuchen gemessen, wie gut einzelne Töne nach einer kurzen Akkordfolge „passen“. Aus diesen Bewertungen lässt sich rekonstruieren, welche Tonart ein Hörer gerade wahrnimmt, und wie schnell sich diese Wahrnehmung ändert. Ein einzelnes A7 mit seinem cis erzeugt lokal einen Zug nach d. Die vielen Takte C-Dur davor und danach halten das Gesamtzentrum aber stabil.</p>
+    <p>Für einen echten Tonartwechsel braucht es mehr: neue Töne, die bleiben, und eine Kadenz, die die neue Tonart bestätigt. Das ist das Thema von Kapitel 22. Zwischendominanten sind Modulationen im Kleinformat, die sofort wieder zurückgenommen werden.</p>
+  </section>
+
+  <!-- 21.3 -->
+  <h2 id="doppeldominante">21.3 Die Doppeldominante</h2>
+  <p>Die wichtigste Zwischendominante ist <strong>V/V</strong>, die Dominante der Dominante. In C-Dur ist das D-Dur bzw. D7. Sie heißt <dfn id="g-doppeldominante">Doppeldominante</dfn> und steht sehr oft unmittelbar vor der Dominante, kurz vor einem Schluss: I – V/V – V – I, in C-Dur also C – D7 – G – C.</p>
+  <div class="abc" data-bpm="66" data-caption="I – V7/V – V7 – I in C-Dur. Das fis' steigt als Leitton zum g'.">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[EGc]4 | "D7"[^FAc]4 | "G7"[FGB]4 | "C"[EGc]4 |]
+    [V:LH] C,4 | D,4 | G,,4 | C,4 |]
+  </div>
+  <p>Die Doppeldominante tritt auch als Moll-Akkord der ii-Stufe auf, der durch das fis zu Dur wird. Im Vergleich: ii – V – I (Dm – G – C) klingt weich, V/V – V – I (D – G – C) klingt drängender. Im Pop-Kontext liest man dafür oft „II-Dur“ oder schreibt im Leadsheet einfach D oder D7, wo man Dm erwarten würde.</p>
+  <p>In der <strong>Funktionstheorie</strong> (Kapitel 14) hat die Doppeldominante ein eigenes Symbol: <strong>DD</strong>, in Schulbüchern auch als doppelt übereinandergeschriebenes D. Alle anderen Zwischendominanten werden in der Funktionstheorie in Klammern vor das Ziel geschrieben: (D7) Sp bedeutet „Dominantseptakkord, der zur Subdominantparallele führt“, in C-Dur also A7 → Dm.</p>
+
+  <section class="layer deep" data-title="Woher die Bezeichnung „Doppeldominante“ kommt">
+    <p>Die Funktionstheorie wurde von Hugo Riemann ab den 1890er-Jahren entwickelt. Sie deutet alle Akkorde als Vertreter von nur drei Funktionen: Tonika, Subdominante und Dominante. Ein D-Dur-Akkord in C-Dur passt in dieses Schema zunächst nicht hinein. Riemanns Lösung war, ihn als Dominante einer Dominante zu verstehen, also als Funktion zweiter Ordnung. Daher kommt das verdoppelte D.</p>
+    <p>Dass gerade die V/V einen eigenen Namen bekam, hat einen musikalischen Grund. Die Abfolge DD – D – T verlängert die Spannungskurve vor dem Schluss um einen Schritt. In der klassischen Musik ist sie so verbreitet, dass sie fast als Teil der normalen Kadenz gilt. Die anderen Zwischendominanten sind eher Farbtupfer innerhalb eines Satzes.</p>
+  </section>
+
+  <!-- 21.4 -->
+  <h2 id="aufloesung">21.4 Auflösung und Stimmführung</h2>
+  <p>Eine Zwischendominante verhält sich genau wie eine normale Dominante. Zwei Töne haben eine feste Richtung:</p>
+  <ul>
+    <li>Die <strong>Terz</strong> der Zwischendominante ist der Leitton zum Ziel. Sie <strong>steigt</strong> einen Halbton: in A7 → Dm steigt cis zu d.</li>
+    <li>Die <strong>Septime</strong> <strong>fällt</strong> einen Halb- oder Ganzton: in A7 → Dm fällt g zu f.</li>
+  </ul>
+  <p>Weil diese beiden Töne einen Tritonus bilden, löst er sich wie beim gewöhnlichen Dominantseptakkord in eine Terz oder Sexte auf. Der Grundton der Zwischendominante springt im Bass eine Quinte abwärts (oder eine Quarte aufwärts) zum Grundton des Ziels.</p>
+  <figure>
+    <div class="kb" data-from="57" data-to="74" data-labels="white" data-marks="57 61:c3:cis 64 67:c3:g 62:c2 65:c2 69:c2" aria-label="A7 mit Leitton cis und Septime g, daneben die Zieltöne von d-Moll"></div>
+    <figcaption>A7 (blau, orange) und d-Moll (petrol). Der Leitton cis' steigt zu d', die Septime g' fällt zu f'.</figcaption>
+  </figure>
+  <p>Wird die Zwischendominante <em>nicht</em> wie erwartet aufgelöst, entsteht eine Überraschung. A7 → F statt A7 → Dm ist zum Beispiel eine Art Trugschluss im Kleinen (Kapitel 16).</p>
+
+  <!-- 21.5 -->
+  <h2 id="erkennen">21.5 Zwischendominanten erkennen</h2>
+  <p>Zwischendominanten sind die häufigste Erklärung für Akkorde, die nicht in die Tonart passen. Diese Faustregeln helfen beim Lesen:</p>
+  <ul>
+    <li>Ein <strong>Dur-Akkord oder Septakkord auf II, III oder VI</strong> einer Dur-Tonart ist fast immer eine Zwischendominante. In C-Dur: D, E, A, D7, E7, A7, H7.</li>
+    <li>Ein <strong>Septakkord auf der I</strong> (C7 in C-Dur) ist meist V7/IV und führt zu F.</li>
+    <li>Ein Akkord mit „7“ ohne „maj“ will in der Regel eine <strong>Quinte tiefer</strong> weiter. Das ist die wichtigste Leseregel für Leadsheets.</li>
+    <li>Ein <strong>erhöhter</strong> Ton (in C-Dur ein ♯) ist fast immer ein Leitton zu einem Zwischenziel. Erniedrigte Töne (♭) haben häufiger andere Ursachen, etwa die modale Mischung (Kapitel 23). Die Ausnahme ist das b in C7.</li>
+  </ul>
+  <h4>Bekannte Beispiele</h4>
+  <ul>
+    <li><strong>„Happy Birthday“:</strong> In vielen Begleitungen steht vor der Zeile mit dem Namen ein C7 (in C-Dur), das zu F führt. Das ist V7/IV.</li>
+    <li><strong>„Yesterday“ (The Beatles):</strong> In F-Dur folgt auf F die Verbindung Em7 – A7 – Dm. A7 ist V7/vi und führt zu d-Moll, der vi-Stufe.</li>
+    <li><strong>„Five Foot Two, Eyes of Blue“</strong> und viele Ragtime- und Swing-Stücke: C – E7 – A7 – D7 – G7 – C, eine ganze Kette von Zwischendominanten (Abschnitt 21.6).</li>
+  </ul>
+
+  <section class="layer piano" data-title="Zwischendominanten schnell finden">
+    <p>Der Grundton der Zwischendominante liegt eine Quinte über dem Ziel. In der Fünf-Finger-Lage der rechten Hand ist das genau der Abstand Daumen – kleiner Finger. Leg den Daumen auf den Grundton des Ziels, dann liegt der kleine Finger auf dem Grundton der Zwischendominante.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Ziel in G-Dur</th><th>Daumen</th><th>kleiner Finger</th><th>Zwischendominante</th><th>Leitton</th></tr></thead>
+        <tbody>
+          <tr><td>ii Am</td><td>a</td><td>e</td><td>E7</td><td>gis</td></tr>
+          <tr><td>iii Hm</td><td>h</td><td>fis</td><td>Fis7</td><td>ais</td></tr>
+          <tr><td>IV C</td><td>c</td><td>g</td><td>G7</td><td>h (kein fremder Leitton, fremd ist die Septime f)</td></tr>
+          <tr><td>V D</td><td>d</td><td>a</td><td>A7</td><td>cis</td></tr>
+          <tr><td>vi Em</td><td>e</td><td>h</td><td>H7</td><td>dis</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Den Leitton findest du noch schneller: Er liegt immer <strong>einen Halbton unter dem Grundton des Ziels</strong>.</p>
+    <p><strong>Übung:</strong> Spiel in C-Dur mit der linken Hand nacheinander die Ziele Dm, Em, F, G und Am. Spiel vor jedem Ziel mit der rechten Hand nur zwei Töne: Leitton und Septime der Zwischendominante (bei A7 also cis' und g'). Die linke Hand schlägt dazu den Grundton der Zwischendominante an.</p>
+  </section>
+
+  <!-- 21.6 -->
+  <h2 id="ketten">21.6 Ketten von Zwischendominanten</h2>
+  <p>Ist das Ziel einer Zwischendominante selbst wieder ein Dominantseptakkord, entsteht eine Kette. Jeder Akkord ist Dominante des nächsten, und die Grundtöne fallen in Quinten: E7 → A7 → D7 → G7 → C. In der Stufenschrift: V7/vi → V7/ii → V7/V → V7 → I, oder kürzer in Pop-Notation III7 – VI7 – II7 – V7 – I.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="48 60 64 67/2|40 62 68/2|45 61 67/2|38 60 66/2|43 59 65/2|36 60 64/4">▶ C – E7 – A7 – D7 – G7 – C</button>
+  </div>
+  <p>Diese Folge ist so typisch für Ragtime und frühen Jazz, dass sie oft <dfn id="g-ragtime-progression">Ragtime-Progression</dfn> genannt wird. Das Prinzip der fallenden Quinten ist ein eigenes Thema: die Quintfallsequenz in Kapitel 26.</p>
+  <p>Streng genommen ist in einer Kette nur der jeweils erste Akkord „echt“ aufgelöst. Ein A7, das nicht zu d-Moll, sondern zu D7 geht, löst seinen Leitton cis nicht zum d auf, sondern zum c (der Septime von D7). Das Ohr akzeptiert das, weil es den Grundtonschritt a → d hört und das Muster erkennt.</p>
+
+  <section class="layer piano" data-title="Der Tritonus-Griff: Dominantketten mit zwei Fingern">
+    <p>Für Ketten von Dominantseptakkorden gibt es einen eleganten Griff. Die linke Hand spielt nur den Grundton. Die rechte Hand spielt nur <strong>Terz und Septime</strong>, die beiden Töne, die den Tritonus bilden. Dann bewegt sich die rechte Hand von Akkord zu Akkord nur in Halbtonschritten abwärts:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Akkord</th><th>linke Hand</th><th>rechte Hand</th></tr></thead>
+        <tbody>
+          <tr><td>E7</td><td>E</td><td>d' + gis'</td></tr>
+          <tr><td>A7</td><td>A</td><td>cis' + g'</td></tr>
+          <tr><td>D7</td><td>D</td><td>c' + fis'</td></tr>
+          <tr><td>G7</td><td>G</td><td>h + f'</td></tr>
+          <tr><td>C</td><td>C</td><td>c' + e'</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Schau, was passiert: Der obere Ton der rechten Hand wird abwechselnd zur Terz und zur Septime des nächsten Akkords. Die Hand gleitet chromatisch nach unten, während der Bass in Quinten springt. Fingersatz rechte Hand: 1 und 4 bzw. 1 und 5, je nach Handgröße.</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-seq="40 62 68/2|45 61 67/2|38 60 66/2|43 59 65/2|36 60 64/4" data-bpm="80">▶ Tritonus-Griff</button>
+    </div>
+    <p>Dieser Griff ist die Keimzelle der Jazz-Voicings in Kapitel 29. Er klingt dünn, aber er enthält genau die Töne, die eine Dominante zur Dominante machen.</p>
+  </section>
+
+  <!-- 21.7 -->
+  <h2 id="verkuerzt">21.7 Verkürzte Zwischendominanten</h2>
+  <p>So wie die vii°7 in Moll die Dominante ersetzen kann (Kapitel 20), kann der verminderte Septakkord auf dem Leitton eines Ziels dessen Zwischendominante ersetzen. Man nennt ihn <dfn id="g-verkuerzte-zwischendominante">verkürzte Zwischendominante</dfn>, weil er wie ein Dominantseptnonakkord ohne Grundton klingt.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Ziel in C-Dur</th><th>Zwischendominante</th><th>verkürzt (vii°7/x)</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>Dm (ii)</td><td>A7</td><td>C♯°7: cis – e – g – b</td><td><button class="btn" type="button" data-seq="49 64 67 70/2|50 62 65 69/3">▶</button></td></tr>
+        <tr><td>G (V)</td><td>D7</td><td>F♯°7: fis – a – c – es</td><td><button class="btn" type="button" data-seq="42 57 60 63/2|43 59 62 67/3">▶</button></td></tr>
+        <tr><td>Am (vi)</td><td>E7</td><td>G♯°7: gis – h – d – f</td><td><button class="btn" type="button" data-seq="44 59 62 65/2|45 60 64 69/3">▶</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Besonders beliebt ist der Bass, der dabei chromatisch steigt: C – C♯°7 – Dm (c – cis – d) oder F – F♯°7 – C/G (f – fis – g). Diese chromatischen Basslinien hörst du oft in Gospel, Soul und Musicals.</p>
+
+  <!-- 21.8 -->
+  <h2 id="moll">21.8 Zwischendominanten in Moll</h2>
+  <p>In Moll funktioniert das Prinzip genauso. Ziel kann jeder Dur- oder Mollakkord sein. In a-Moll:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Ziel in a-Moll</th><th>Zwischendominante</th><th>Töne</th></tr></thead>
+      <tbody>
+        <tr><td>III (C)</td><td>V7/III = G7</td><td>g – h – d – f</td></tr>
+        <tr><td>iv (Dm)</td><td>V7/iv = A7</td><td>a – cis – e – g</td></tr>
+        <tr><td>V (E)</td><td>V7/V = H7</td><td>h – dis – fis – a</td></tr>
+        <tr><td>VI (F)</td><td>V7/VI = C7</td><td>c – e – g – b</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Auffällig ist V7/iv: Es ist der Dur-Akkord auf der Tonika, also A7 in a-Moll. Der Wechsel von Am zu A7 vor einem Dm klingt wie ein kurzes Aufhellen und ist in Moll-Liedern sehr häufig.</p>
+
+  <section class="layer deep" data-title="Warum gerade diese fremden Töne? Die Zwischendominanten füllen die Chromatik">
+    <p>Jede Zwischendominante bringt höchstens zwei tonartfremde Töne mit. In C-Dur sind das: cis (A7), dis und fis (H7), b (C7), fis (D7) und gis (E7). Zusammen sind das cis, dis, fis, gis und b, also genau die fünf schwarzen Tasten. Mit den fünf Zwischendominanten erreicht eine Dur-Tonart alle zwölf Töne, ohne die Tonart zu verlassen.</p>
+    <p>Dass es genau diese Töne sind, folgt aus dem Quintenzirkel (Kapitel 7). Eine Zwischendominante bringt den Leitton ihres Ziels mit. Das ist der Ton, der in der Tonart des Ziels vorkommt, aber nicht in C-Dur. V/V (D7) bringt fis, und fis ist der einzige Ton, in dem sich G-Dur von C-Dur unterscheidet. V/IV (C7) bringt b, den einzigen Unterschied zwischen F-Dur und C-Dur. Zwischendominanten sind also Fenster zu den Nachbartonarten. Durch sie hört man kurz in die Tonart des Ziels hinein.</p>
+    <p>Das erklärt auch, warum Zwischendominanten zu nahen Zielen (V, IV, ii, vi) häufiger sind als zu fernen (iii). H7 bringt mit dis und fis zwei fremde Töne und zieht weiter weg von C-Dur als D7 mit nur einem.</p>
+  </section>
+
+  <section class="layer deep" data-title="Warum Zwischendominanten trotz fremder Töne nicht „falsch“ klingen">
+    <p>Ein cis in C-Dur ist eigentlich eine Störung. Trotzdem klingt A7 → Dm vollkommen natürlich. Der Grund ist, dass das Gehör auch die Beziehungen zwischen Akkorden bewertet. Die Beziehung „Dominantseptakkord → Akkord eine Quinte tiefer“ ist eine der am häufigsten gehörten Wendungen der westlichen Musik. Sobald das Ohr dieses Muster erkennt, ordnet es den fremden Ton als Leitton ein und erwartet seine Auflösung.</p>
+    <p>Man kann das ausprobieren: Spiel A7 und danach einen Akkord, der kein Ziel ist, etwa Em. Das cis klingt dann plötzlich wie ein Fehler, weil es ohne Auflösung im Raum stehen bleibt. Ob ein fremder Ton „richtig“ klingt, entscheidet sich also erst durch das, was danach kommt.</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-seq="48 60 64 67/2|45 61 64 67/2|50 62 65 69/3">▶ A7 → Dm (aufgelöst)</button>
+      <button class="btn" type="button" data-seq="48 60 64 67/2|45 61 64 67/2|52 59 64 67/3">▶ A7 → Em (nicht aufgelöst)</button>
+    </div>
+  </section>
+
+  <section class="layer piano" data-title="Ein Kinderlied mit Zwischendominanten neu begleiten">
+    <p>Nimm ein Lied, das du mit I, IV und V begleiten kannst, zum Beispiel „Alle meine Entchen“ in C-Dur. Ersetze probeweise einzelne Akkorde durch Zwischendominanten auf ihr nächstes Ziel. Wenn auf ein G7 ein C folgt, kannst du vor das G7 ein D7 setzen. Wenn auf ein C ein F folgt, kannst du das C zu C7 machen.</p>
+    <div class="abc" data-bpm="100" data-caption="„Alle meine Entchen“ mit V7/V (D7) und V7/IV (C7). Die rechte Hand spielt die Melodie, die linke Grundton und Akkord.">
+      X:1
+      M:4/4
+      L:1/4
+      K:C
+      %%score {RH LH}
+      V:RH clef=treble
+      V:LH clef=bass
+      [V:RH] C D E F | G2 G2 | A A A A | G4 | A A A A | G4 | F F F F | E2 E2 | D D D D | C4 |]
+      [V:LH] "C"[C,E,G,]4 | "C"[C,E,G,]2 "C7"[C,E,_B,]2 | "F"[F,A,C]4 | "C"[C,E,G,]4 | "F"[F,A,C]4 | "C"[C,E,G,]4 | "F"[F,A,C]4 | "C"[C,E,G,]4 | "D7"[D,^F,C]2 "G7"[G,,B,,F,]2 | "C"[C,E,G,]4 |]
+    </div>
+    <p>Hör, wie das C7 am Ende des zweiten Takts zum F zieht und das D7 im vorletzten Takt den Schluss vorbereitet. Experimentiere mit eigenen Stellen. Wichtig ist nur: Der Melodieton sollte nicht mit dem Leitton oder der Septime kollidieren. Wenn es reibt, setz die Zwischendominante eine Zählzeit später.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Eine Zwischendominante ist die Dominante eines anderen Akkords der Tonart (V/x). Das Ziel wird kurz tonikalisiert, die Tonart bleibt.</li>
+    <li>Bauregel: reine Quinte über dem Ziel, Dur-Dreiklang, meist mit kleiner Septime.</li>
+    <li>Die wichtigste ist die Doppeldominante V/V (in C-Dur D bzw. D7), in der Funktionstheorie DD.</li>
+    <li>Die Terz ist Leitton und steigt, die Septime fällt. Ein Akkord mit „7“ will eine Quinte tiefer.</li>
+    <li>Dur-Akkorde auf II, III und VI sowie C7 in C-Dur sind fast immer Zwischendominanten. Ketten aus Zwischendominanten ergeben die Ragtime-Progression.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">21.1</span><div><span class="kind">Theorie</span>Bilde in G-Dur die Zwischendominanten (mit Septime) zu ii, iii, IV, V und vi.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>ii = Am ← E7 (e gis h d). iii = Hm ← Fis7 (fis ais cis e). IV = C ← G7 (g h d f). V = D ← A7 (a cis e g). vi = Em ← H7 (h dis fis a). Die V7/IV ist der Tonika-Akkord mit kleiner Septime, darum ist hier das f der fremde Ton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">21.2</span><div><span class="kind">Theorie</span>Benenne in C-Dur mit Stufen: E7 → Am, D7 → G, C7 → F, H7 → Em.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>V7/vi → vi, V7/V → V (Doppeldominante), V7/IV → IV, V7/iii → iii.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">21.3</span><div><span class="kind">Theorie</span>Welcher tonartfremde Ton entsteht in F-Dur durch die Zwischendominante zur ii-Stufe? Wohin löst er sich auf?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>ii in F-Dur ist g-Moll. Seine Dominante ist D7 (d fis a c). Der fremde Ton ist fis, der Leitton zu g. Er steigt einen Halbton zum g.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">21.4</span><div><span class="kind">Notenlesen</span>Bestimme die Akkorde in F-Dur mit Stufen.</div></div>
+      <div class="abc" data-bpm="60">
+        X:1
+        M:none
+        L:1
+        K:F
+        "^1"[FAc] | "^2"[D^FAc] | "^3"[GBd] | "^4"[CEGB] | "^5"[FAc] |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: F (I). 2: D7 (d fis a c), V7/ii. 3: g-Moll (g b d), ii. 4: C7 (c e g b), V7. 5: F (I). Die Folge I – V7/ii – ii – V7 – I ist eine erweiterte Kadenz.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">21.5</span><div><span class="kind">Theorie</span>Analysiere das Leadsheet in C-Dur: | C | A7 | Dm | G7 | C | E7 | Am | D7 G7 | C |</div></div>
+      <details class="solution"><summary>Lösung</summary><div>I | V7/ii | ii | V7 | I | V7/vi | vi | V7/V V7 | I. Drei Zwischendominanten, jede löst sich regulär auf, D7 dabei zur Dominante G7.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">21.6</span><div><span class="kind">Am Klavier</span>Spiel die Kette mit dem Tritonus-Griff ab H7: H7 – E7 – A7 – D7 – G. Schreib vorher die Töne für die rechte Hand auf.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>H7: dis' + a' (oder a + dis'). E7: d' + gis'. A7: cis' + g'. D7: c' + fis'. G: h + d' (Terz und Quinte, oder einfach der G-Dur-Dreiklang). Jede Stimme fällt um einen Halbton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">21.7</span><div><span class="kind">Am Klavier</span>Spiel in G-Dur: G – H7 – Em – A7 – D7 – G. Welche Akkorde sind Zwischendominanten und zu welchem Ziel?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>H7 = V7/vi (Ziel Em). A7 = V7/V (Ziel D7, die Dominante), also die Doppeldominante. D7 ist die reguläre Dominante V7.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">21.8</span><div><span class="kind">Gehör</span>Welches Beispiel enthält eine Zwischendominante?</div></div>
+      <div class="btn-row">
+        <button class="btn" type="button" data-seq="48 60 64 67/2|41 60 65 69/2|43 59 62 67/2|48 60 64 67/3">▶ Beispiel A</button>
+        <button class="btn" type="button" data-seq="48 60 64 67/2|50 60 66 69/2|43 59 62 67/2|48 60 64 67/3">▶ Beispiel B</button>
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>B: C – D7 – G – C. Das fis im D7 ist ein Leitton zum g. A ist C – F – G – C und bleibt ganz in der Tonart.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">21.9</span><div><span class="kind">Theorie</span>In a-Moll steht im Leadsheet: Am – A7 – Dm – E7 – Am. Warum enthält das A7 ein cis, obwohl a-Moll ein c hat?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>A7 ist hier V7/iv, die Zwischendominante zu d-Moll. Das cis ist der Leitton zu d. Für einen Moment wird d-Moll tonikalisiert, danach führt E7 als reguläre Dominante zurück nach a-Moll.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">21.10</span><div><span class="kind">Vertiefung</span>Warum gibt es in C-Dur keine Zwischendominante zur vii-Stufe (H°)? Und warum tritt F♯7, die Dominante zu h, trotzdem gelegentlich auf?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der verminderte Dreiklang h – d – f hat keine reine Quinte und ist selbst instabil. Er kann nicht einmal kurz als Tonika gehört werden, deshalb ergibt eine Dominante zu ihm keinen Sinn. F♯7 tritt in C-Dur höchstens auf, wenn kurz nach h-Moll oder in eine entfernte Tonart ausgewichen wird. Das ist dann keine Zwischendominante zur vii-Stufe, sondern ein kurzer Ausflug in eine entferntere Tonart (Kapitel 22).</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(21);
+  document.querySelectorAll("[data-seq]").forEach((b) => b.addEventListener("click", () => {
+    const steps = b.dataset.seq.split("|").map((s) => {
+      const [n, d] = s.split("/");
+      return [n.trim().split(/\s+/).map(Number), +(d || 2)];
+    });
+    Book.audio.seq(steps, +b.dataset.bpm || 72);
+  }));
+</script>
+</body>
+</html>

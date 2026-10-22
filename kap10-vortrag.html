@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dynamik, Artikulation und Vortrag · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .sym { font-family: var(--font-mono); font-weight: 500; white-space: nowrap; }
+  .dyn { font-family: var(--font-body); font-style: italic; font-weight: 700; white-space: nowrap; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil I · Kapitel 10</div>
+    <h1>Dynamik, Artikulation und Vortrag</h1>
+    <p class="lede">Noten sagen, welche Töne wann erklingen. Alles Weitere steht in den kleinen Zeichen und Wörtern drumherum: wie laut, wie verbunden, wie betont, in welchem Charakter. Dieses Kapitel erklärt diese Zeichen und zeigt, wie man sie am Klavier umsetzt, wo du einen Ton nach dem Anschlag nicht mehr verändern kannst.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>alle gängigen Dynamik- und Artikulationszeichen lesen und unterscheiden,</li>
+      <li>erklären, wie das Klavier Lautstärke erzeugt und was der Anschlag beeinflusst,</li>
+      <li>Legato, Staccato und Akzente technisch sauber spielen,</li>
+      <li>Phrasen gestalten und die wichtigsten Vortragsbezeichnungen verstehen,</li>
+      <li>Wiederholungen, Klammern, Da capo, Dal segno und Coda sicher lesen.</li>
+    </ul>
+  </div>
+
+  <!-- 10.1 -->
+  <h2 id="dynamik">10.1 Dynamik: laut und leise</h2>
+  <p>Die Lautstärke eines Stücks heißt <dfn id="g-dynamik">Dynamik</dfn>. Sie wird mit Abkürzungen italienischer Wörter angegeben, die kursiv und fett unter den Noten stehen. Zwei Grundwörter genügen: <em>piano</em> (leise) und <em>forte</em> (laut). Alles andere sind Steigerungen und Abstufungen.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Zeichen</th><th>Italienisch</th><th>Bedeutung</th><th></th></tr></thead>
+      <tbody>
+        <tr><td class="dyn">ppp</td><td>pianississimo</td><td>noch leiser als pp</td><td></td></tr>
+        <tr class="play-row" data-dyn="0.12"><td class="dyn">pp</td><td>pianissimo</td><td>sehr leise</td><td>▶</td></tr>
+        <tr class="play-row" data-dyn="0.25"><td class="dyn">p</td><td>piano</td><td>leise</td><td>▶</td></tr>
+        <tr class="play-row" data-dyn="0.4"><td class="dyn">mp</td><td>mezzopiano</td><td>halbleise, „mäßig leise“</td><td>▶</td></tr>
+        <tr class="play-row" data-dyn="0.55"><td class="dyn">mf</td><td>mezzoforte</td><td>halblaut, „mäßig laut“</td><td>▶</td></tr>
+        <tr class="play-row" data-dyn="0.75"><td class="dyn">f</td><td>forte</td><td>laut</td><td>▶</td></tr>
+        <tr class="play-row" data-dyn="1"><td class="dyn">ff</td><td>fortissimo</td><td>sehr laut</td><td>▶</td></tr>
+        <tr><td class="dyn">fff</td><td>fortississimo</td><td>noch lauter als ff</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Diese Angaben sind <strong>relativ</strong>. Ein <span class="dyn">f</span> in einem zarten Mozart-Menuett ist leiser als ein <span class="dyn">f</span> in einer Rachmaninow-Etüde. Es gibt keine Dezibel-Werte, nur Abstufungen innerhalb eines Stücks und eines Stils.</p>
+  <h4>Allmähliche und plötzliche Änderungen</h4>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Zeichen</th><th>Bedeutung</th></tr></thead>
+      <tbody>
+        <tr><td><span class="sym">&lt;</span> (Gabel), <em>cresc.</em></td><td><dfn id="g-crescendo">crescendo</dfn>: allmählich lauter werden</td></tr>
+        <tr><td><span class="sym">&gt;</span> (Gabel), <em>dim.</em>, <em>decresc.</em></td><td>diminuendo, decrescendo: allmählich leiser werden</td></tr>
+        <tr><td class="dyn">sf, sfz</td><td>sforzato, sforzando: ein einzelner Ton plötzlich stark betont</td></tr>
+        <tr><td class="dyn">fp</td><td>fortepiano: laut anschlagen, sofort leise weiter</td></tr>
+        <tr><td><em>subito p</em></td><td>plötzlich leise (ohne Übergang)</td></tr>
+        <tr><td><em>poco a poco</em></td><td>nach und nach (z. B. <em>cresc. poco a poco</em>)</td></tr>
+        <tr><td><em>morendo</em>, <em>smorzando</em></td><td>ersterbend, verlöschend: leiser und meist auch langsamer werden</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="abc" data-bpm="100" data-caption="Leise beginnen, zum forte steigern, wieder zurücknehmen">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    !p!C D E F | !crescendo(!G A B !crescendo)!c | !f!c B A G | !diminuendo(!F E D !diminuendo)!C |]
+  </div>
+  <div class="btn-row">
+    <button class="btn" type="button" id="cresc-demo">▶ Crescendo über eine Tonleiter</button>
+    <button class="btn" type="button" id="subito-demo">▶ forte, dann subito piano</button>
+  </div>
+  <p>Eine praktische Regel: Ein <em>crescendo</em> beginnt leise. Wer bei „cresc.“ sofort lauter wird, hat am Ende keinen Spielraum mehr. Nimm die Lautstärke am Anfang eines Crescendos eher etwas zurück und steigere dann gleichmäßig.</p>
+
+  <section class="layer deep" data-title="Warum das Klavier „Pianoforte“ heißt">
+    <p>Um 1700 baute Bartolomeo Cristofori in Florenz ein Tasteninstrument, das er <em>gravicembalo col piano e forte</em> nannte: ein Cembalo mit leise und laut. Das war die entscheidende Neuerung. Beim Cembalo zupft ein Kiel die Saite immer gleich stark, egal wie man die Taste drückt. Cristofori ersetzte den Kiel durch einen Hammer, der die Saite anschlägt. Je schneller die Taste gedrückt wird, desto schneller fliegt der Hammer, desto lauter der Ton.</p>
+    <p>Aus dem langen Namen wurden <em>Pianoforte</em>, <em>Fortepiano</em> und schließlich einfach <em>Piano</em> bzw. <em>Klavier</em> (vom lateinischen <em>clavis</em>, Schlüssel bzw. Taste). Der Name des Instruments ist also seine Dynamik.</p>
+    <h4>Lauter heißt auch heller</h4>
+    <p>Ein schnellerer Hammer verändert nicht nur die Lautstärke. Er trifft die Saite härter und kürzer und regt dadurch mehr hohe Teiltöne an (Kapitel 5). Ein <span class="dyn">ff</span>-Ton am Klavier ist deshalb heller und schärfer als ein <span class="dyn">pp</span>-Ton, nicht nur lauter. Das Ohr nutzt diesen Klangfarbenunterschied, um Lautstärke einzuschätzen. Ein leise aufgenommener <span class="dyn">ff</span>-Ton klingt beim Abspielen immer noch „laut“.</p>
+    <h4>Lautstärke ist logarithmisch</h4>
+    <p>Unser Gehör empfindet Lautstärke nicht proportional zur Schallenergie. Eine Erhöhung um etwa 10 Dezibel, also die zehnfache Schallleistung, wird ungefähr als Verdopplung der Lautheit wahrgenommen. Darum braucht ein Crescendo am Ende viel mehr Kraft als am Anfang, um gleichmäßig zu klingen.</p>
+  </section>
+
+  <!-- 10.2 -->
+  <h2 id="anschlag">10.2 Wie das Klavier Lautstärke macht</h2>
+  <p>Um Dynamik am Klavier zu kontrollieren, hilft es zu wissen, was in der Mechanik passiert. Drückst du eine Taste, hebt sie über einen Hebelmechanismus einen Hammer an. Kurz bevor der Hammer die Saite erreicht, wird er <strong>ausgelöst</strong>: Er löst sich von der Mechanik und fliegt frei gegen die Saite. Danach fällt er sofort zurück, während die Saite weiterschwingt.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Die Lautstärke eines Klaviertons hängt fast nur von der <strong>Geschwindigkeit</strong> ab, mit der der Hammer die Saite trifft. Diese Geschwindigkeit entsteht im Bruchteil einer Sekunde, in dem du die Taste nach unten bewegst. Was danach passiert, ändert den Ton nicht mehr.</p>
+  </div>
+  <p>Daraus folgen zwei Dinge, die viele Anfänger überraschen. Erstens: Fest auf eine Taste zu drücken, nachdem sie unten ist, macht den Ton nicht lauter. Es kostet nur Kraft und verspannt. Zweitens: Ein Ton kann nach dem Anschlag nur noch leiser werden. Ein Crescendo auf einem einzelnen gehaltenen Ton ist am Klavier unmöglich. Crescendi entstehen durch die Lautstärke der aufeinanderfolgenden Töne.</p>
+  <p>Kontrollieren kannst du nach dem Anschlag nur das <strong>Ende</strong> des Tons: Solange du die Taste hältst, bleibt der Dämpfer von der Saite weg. Lässt du los, fällt der Dämpfer zurück und der Ton endet. Wie schnell du loslässt, beeinflusst, wie weich oder abrupt der Ton aufhört.</p>
+
+  <section class="layer deep" data-title="Kann man am Klavier die Klangfarbe durch den Anschlag ändern?">
+    <p>Pianisten sprechen gern von „singendem“ oder „hartem“ Anschlag. Physiker haben lange gezeigt, dass bei einem <em>einzelnen</em> Ton fast nur die Hammergeschwindigkeit zählt. Zwei Töne, bei denen der Hammer gleich schnell ankommt, klingen nahezu gleich, egal wie die Taste bewegt wurde.</p>
+    <p>Ganz ohne Einfluss ist die Art des Anschlags aber nicht. Schlägt der Finger von oben auf die Taste, entsteht ein kleines Aufprallgeräusch von Finger und Taste und ein Stoß, wenn die Taste unten aufschlägt. Diese Geräuschanteile sind messbar und hörbar, besonders bei leisen Tönen. Wer die Taste aus der Ruhe drückt, vermeidet sie.</p>
+    <p>Der wichtigere Grund für Klangunterschiede liegt im <strong>Zusammenspiel</strong> vieler Töne. Wie laut die Melodie im Verhältnis zur Begleitung ist, wie genau Töne eines Akkords gleichzeitig erklingen, wie Töne ineinander übergehen und wie das Pedal eingesetzt wird: Das alles prägt den Gesamtklang enorm. Ein „schöner Ton“ am Klavier ist deshalb vor allem eine Frage der Balance und Zeitgestaltung, weniger eine Eigenschaft einzelner Anschläge.</p>
+  </section>
+
+  <section class="layer piano" data-title="Dynamik spielen: Gewicht statt Kraft">
+    <p>Lautstärke entsteht durch Tastengeschwindigkeit. Die gesündeste Art, Geschwindigkeit zu erzeugen, ist <strong>Gewicht</strong>: Der Arm ist locker und lässt sein Gewicht durch den Finger in die Taste fallen. Kraft aus verspannten Muskeln klingt härter und ermüdet schnell.</p>
+    <ul>
+      <li><strong>Leise (<span class="dyn">p</span>, <span class="dyn">pp</span>):</strong> Fingerspitze liegt auf der Taste, wenig Armgewicht, langsame Bewegung. Der Finger „streichelt“ die Taste nach unten. Wichtig: bis ganz unten durchdrücken. Wer zu vorsichtig ist, bringt den Hammer nicht bis zur Saite, und der Ton fällt aus.</li>
+      <li><strong>Laut (<span class="dyn">f</span>, <span class="dyn">ff</span>):</strong> Mehr Armgewicht, schnelle Bewegung, stabiles Handgewölbe, damit der Finger nicht einknickt. Nicht aus großer Höhe auf die Taste schlagen: Das erzeugt Geräusche und ist schwer zu kontrollieren. Besser aus geringer Höhe mit schneller Bewegung.</li>
+      <li><strong>Nach dem Anschlag:</strong> sofort lockerlassen. Die Taste bleibt durch das Gewicht der entspannten Hand unten, ohne Druck.</li>
+    </ul>
+    <p><strong>Übung 1 (Dynamikleiter):</strong> Spiel c' fünfmal hintereinander, jedes Mal etwas lauter, von <span class="dyn">pp</span> bis <span class="dyn">f</span>. Dann zurück. Ziel ist, dass jeder Schritt gleich groß klingt.</p>
+    <p><strong>Übung 2 (Crescendo im Fünftonraum):</strong> Spiel c–d–e–f–g aufwärts mit einem gleichmäßigen Crescendo und abwärts mit einem Diminuendo. Hör genau hin, ob ein Finger herausspringt. Meist ist es der Daumen (zu laut) oder der 4. Finger (zu leise).</p>
+  </section>
+
+  <!-- 10.3 -->
+  <h2 id="artikulation">10.3 Artikulation: wie Töne verbunden sind</h2>
+  <p>Die <dfn id="g-artikulation">Artikulation</dfn> beschreibt, wie Töne beginnen, enden und miteinander verbunden sind. Sie ist das musikalische Gegenstück zur Aussprache: Dieselben Wörter klingen ganz anders, wenn man sie gebunden, abgehackt oder betont ausspricht.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Zeichen</th><th>Name</th><th>Bedeutung</th><th>am Klavier</th></tr></thead>
+      <tbody>
+        <tr><td>Bogen über mehreren Noten</td><td><dfn id="g-legato">legato</dfn></td><td>gebunden, ohne Lücke</td><td>Taste erst loslassen, wenn die nächste unten ist</td></tr>
+        <tr><td>kein Zeichen</td><td>non legato</td><td>leicht getrennt, normal</td><td>kurze Lücke zwischen den Tönen</td></tr>
+        <tr><td>Punkt <span class="sym">·</span></td><td><dfn id="g-staccato">staccato</dfn></td><td>kurz, abgestoßen</td><td>etwa halbe Notenlänge oder kürzer</td></tr>
+        <tr><td>Keil <span class="sym">▾</span></td><td>staccatissimo</td><td>sehr kurz, scharf</td><td>so kurz wie möglich</td></tr>
+        <tr><td>Strich <span class="sym">–</span></td><td>tenuto</td><td>volle Länge, leicht gewichtet</td><td>Ton voll aushalten, etwas Gewicht</td></tr>
+        <tr><td>Punkte unter Bogen</td><td>portato</td><td>getragen, leicht getrennt</td><td>zwischen legato und staccato, weich getrennt</td></tr>
+        <tr><td>Keil liegend <span class="sym">&gt;</span></td><td>Akzent</td><td>betont</td><td>dieser Ton lauter als seine Umgebung</td></tr>
+        <tr><td>Dach <span class="sym">^</span></td><td>marcato</td><td>stark betont, markiert</td><td>kräftiger Akzent, meist etwas kürzer</td></tr>
+        <tr><td>Bogen mit Punkt <span class="sym">𝄐</span></td><td><dfn id="g-fermate">Fermate</dfn></td><td>Ton oder Pause länger aushalten</td><td>Länge nach Gefühl, meist etwa doppelt</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="abc" data-bpm="96" data-caption="Legato, staccato, tenuto, Akzent, staccatissimo, marcato und Fermate">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    (C D E F) | .G .G .G .G | !tenuto!A !tenuto!A !accent!B !accent!B | !wedge!c !wedge!c !marcato!c !fermata!c |]
+  </div>
+  <div class="btn-row">
+    <button class="btn" type="button" id="art-legato">▶ legato</button>
+    <button class="btn" type="button" id="art-nonlegato">▶ non legato</button>
+    <button class="btn" type="button" id="art-staccato">▶ staccato</button>
+    <button class="btn" type="button" id="art-accent">▶ mit Akzenten</button>
+  </div>
+  <p>Staccato heißt nicht „lauter“ und nicht „schneller“. Ein Staccato-Ton beginnt pünktlich und endet früher. Die Zeit, die er nicht klingt, ist Stille, und der nächste Ton kommt genau auf seinem Schlag.</p>
+  <p>Achtung bei Bögen: Ein Bogen zwischen zwei Noten <em>gleicher</em> Tonhöhe ist ein Haltebogen (Kapitel 3), kein Legatobogen. Der zweite Ton wird dann nicht neu angeschlagen.</p>
+
+  <section class="layer piano" data-title="Legato und Staccato technisch">
+    <p><strong>Fingerlegato.</strong> Am Klavier gibt es kein echtes Ineinanderfließen von Tönen wie bei einer Stimme. Legato entsteht durch eine saubere Übergabe: Der nächste Finger drückt seine Taste genau in dem Moment, in dem der vorige seine loslässt. Bei langsamen, gesanglichen Stellen dürfen sich die Töne sogar minimal überlappen. Denk an ein Gehen, bei dem immer ein Fuß den Boden berührt.</p>
+    <p>Wenn Fingerlegato nicht möglich ist, etwa bei großen Sprüngen oder Akkordfolgen, hilft das Pedal (Kapitel 45). Gutes Legato beginnt aber immer in den Fingern.</p>
+    <p><strong>Staccato.</strong> Es gibt drei Arten, je nach Tempo und Lautstärke:</p>
+    <ul>
+      <li><strong>Fingerstaccato</strong>: Der Finger zieht sich nach dem Anschlag schnell zur Handfläche zurück. Für leise, schnelle, leichte Stellen.</li>
+      <li><strong>Handgelenkstaccato</strong>: Die Hand federt aus dem lockeren Handgelenk, wie beim Abschütteln von Wassertropfen. Für mittelschnelle Staccati, Akkorde und Oktaven.</li>
+      <li><strong>Armstaccato</strong>: Der ganze Unterarm hebt sich. Für laute, einzelne, kräftige Töne und Akkorde.</li>
+    </ul>
+    <p><strong>Übung:</strong> Spiel die C-Dur-Tonleiter (Kapitel 6) dreimal: einmal legato, einmal non legato, einmal staccato. Achte beim Staccato darauf, dass das Tempo genau gleich bleibt. Viele werden beim Staccato unbewusst schneller.</p>
+  </section>
+
+  <!-- 10.4 -->
+  <h2 id="phrasierung">10.4 Phrasierung und Agogik</h2>
+  <p>Musik besteht aus <dfn id="g-phrase">Phrasen</dfn>, zusammenhängenden Abschnitten, die wie Sätze in der Sprache einen Anfang, einen Höhepunkt und ein Ende haben. Lange Bögen über mehreren Takten sind meist <strong>Phrasierungsbögen</strong>. Sie zeigen, was zusammengehört, und bedeuten: diese Strecke als einen Gedanken spielen. Ob ein Bogen ein Legatobogen oder ein Phrasierungsbogen ist, ergibt sich aus dem Zusammenhang. In vielen Fällen ist er beides.</p>
+  <p>Am Ende einer Phrase wird der letzte Ton meist etwas leiser und kürzer gespielt, damit eine kleine Atempause entsteht. Das heißt <strong>Abphrasieren</strong>. Besonders deutlich ist es bei zweitönigen Bögen, den sogenannten <strong>Seufzern</strong>: Der erste Ton bekommt Gewicht, der zweite wird leicht und leise angehängt.</p>
+  <div class="abc" data-bpm="80" data-caption="Seufzer: erster Ton mit Gewicht, zweiter leicht abgesetzt">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    (e d) (c B) | (A G) (F E) | (D E) (F D) | C4 |]
+  </div>
+  <div class="btn-row">
+    <button class="btn" type="button" id="sigh-good">▶ mit Abphrasieren</button>
+    <button class="btn" type="button" id="sigh-flat">▶ alle Töne gleich</button>
+  </div>
+  <p>Zur Phrasierung gehört auch der Umgang mit dem Tempo innerhalb eines Stücks. Kleine, bewusste Tempoabweichungen heißen <dfn id="g-agogik">Agogik</dfn>. Die wichtigsten Bezeichnungen:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Bezeichnung</th><th>Bedeutung</th></tr></thead>
+      <tbody>
+        <tr><td><em>ritardando</em> (rit.), <em>rallentando</em> (rall.)</td><td>allmählich langsamer werden</td></tr>
+        <tr><td><em>accelerando</em> (accel.)</td><td>allmählich schneller werden</td></tr>
+        <tr><td><em>a tempo</em></td><td>zurück zum ursprünglichen Tempo</td></tr>
+        <tr><td><em>rubato</em></td><td>„geraubte Zeit“: frei im Tempo, dehnen und aufholen</td></tr>
+        <tr><td><em>ritenuto</em> (riten.)</td><td>sofort zurückhalten (plötzlicher als ritardando)</td></tr>
+        <tr><td><span class="sym">//</span> Zäsur, <span class="sym">,</span> Atemzeichen</td><td>kurze Unterbrechung, Luftholen</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die Tempobezeichnungen selbst (Andante, Allegro usw.) behandelt Kapitel 4.</p>
+
+  <section class="layer deep" data-title="Warum Phrasen am Ende langsamer und leiser werden">
+    <p>Fast alle Musiker werden am Ende einer Phrase etwas langsamer, auch wenn kein „rit.“ in den Noten steht. Für dieses Verhalten gibt es Erklärungen aus Sprache und Bewegung.</p>
+    <p><strong>Sprache.</strong> In gesprochenen Sätzen wird die letzte Silbe vor einer Pause in fast allen Sprachen gedehnt und leiser. Linguisten nennen das finale Dehnung. Musik, die wie Sprache phrasiert, wirkt deshalb verständlich und natürlich. Eine Melodie ohne Abphrasieren klingt dagegen wie ein Text, der ohne Punkt und Komma vorgelesen wird.</p>
+    <p><strong>Bewegung.</strong> Die schwedischen Musikforscher Anders Friberg und Johan Sundberg haben das Schluss-Ritardando in Aufnahmen gemessen und mit Läufern verglichen, die zum Stehen kommen. Der Verlauf der Verlangsamung war erstaunlich ähnlich. Ein Ritardando, das so abbremst wie ein natürlicher Körper, empfinden Hörer als überzeugend. Ein zu abruptes oder zu gleichmäßiges dagegen als künstlich.</p>
+    <p><strong>Erwartung.</strong> Eine Phrase erzeugt Spannung bis zu ihrem Ziel und löst sie dann. Lautstärke und Tempo folgen diesem Spannungsbogen. Darum steigen viele Phrasen zum höchsten oder harmonisch wichtigsten Ton an und fallen danach ab. Die Frage „Wohin geht diese Phrase?“ ist einer der besten Leitfäden für das Gestalten am Klavier.</p>
+  </section>
+
+  <section class="layer piano" data-title="Phrasen gestalten">
+    <p>Drei einfache Werkzeuge machen aus richtigen Tönen Musik:</p>
+    <ol>
+      <li><strong>Mitsingen.</strong> Sing die Melodie, bevor du sie spielst. Wo du beim Singen Luft holst, endet eine Phrase. Wo die Stimme natürlich lauter wird, liegt ihr Höhepunkt. Übertrage das aufs Klavier.</li>
+      <li><strong>Zielton suchen.</strong> Markiere in jeder Phrase den Ton, auf den sie zuläuft. Spiel die Töne davor mit leichtem Crescendo dorthin, die Töne danach mit Diminuendo.</li>
+      <li><strong>Seufzer üben.</strong> Spiel die Seufzerkette aus dem Notenbeispiel. Erster Ton: Armgewicht fallen lassen. Zweiter Ton: Handgelenk hebt sich, der Finger löst sich leicht von der Taste. Die Bewegung sieht aus wie ein kleiner Bogen der Hand von unten nach oben.</li>
+    </ol>
+  </section>
+
+  <!-- 10.5 -->
+  <h2 id="vortrag">10.5 Vortragsbezeichnungen</h2>
+  <p>Neben konkreten Zeichen beschreiben Wörter den Charakter einer Stelle. Sie stehen meist über dem System am Anfang eines Abschnitts. Die häufigsten:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Wort</th><th>Bedeutung</th><th>Wort</th><th>Bedeutung</th></tr></thead>
+      <tbody>
+        <tr><td><em>dolce</em></td><td>süß, sanft</td><td><em>agitato</em></td><td>erregt, unruhig</td></tr>
+        <tr><td><em>cantabile</em></td><td>gesanglich</td><td><em>maestoso</em></td><td>majestätisch</td></tr>
+        <tr><td><em>espressivo</em> (espr.)</td><td>ausdrucksvoll</td><td><em>grazioso</em></td><td>anmutig</td></tr>
+        <tr><td><em>leggiero</em></td><td>leicht, locker</td><td><em>semplice</em></td><td>einfach, schlicht</td></tr>
+        <tr><td><em>con brio</em></td><td>mit Schwung, feurig</td><td><em>sostenuto</em></td><td>getragen, gehalten</td></tr>
+        <tr><td><em>sempre</em></td><td>immer (z. B. <em>sempre p</em>)</td><td><em>simile</em></td><td>auf gleiche Weise weiter</td></tr>
+        <tr><td><em>molto</em> / <em>poco</em></td><td>sehr / ein wenig</td><td><em>più</em> / <em>meno</em></td><td>mehr / weniger</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section class="layer deep" data-title="Warum Italienisch?">
+    <p>Im 17. und frühen 18. Jahrhundert war Italien das Zentrum der europäischen Musik. Oper, Violinmusik und die neuen Formen der Instrumentalmusik kamen von dort, italienische Musiker arbeiteten an Höfen in ganz Europa, und italienische Notendrucker setzten Maßstäbe. Die italienischen Spielanweisungen wurden so zur internationalen Fachsprache, ähnlich wie Englisch heute in der Informatik.</p>
+    <p>Ab dem 19. Jahrhundert schrieben viele Komponisten auch in ihrer eigenen Sprache. Beethoven verwendete in späten Werken deutsche Anweisungen, Robert Schumann schrieb Bezeichnungen wie „Innig“ oder „Sehr rasch“. Debussy und Ravel verwendeten Französisch, etwa <em>Cédez</em> (nachgeben, langsamer werden). Das Italienische blieb aber die gemeinsame Basis, die jeder Musiker lesen kann.</p>
+  </section>
+
+  <!-- 10.6 -->
+  <h2 id="wiederholung">10.6 Wiederholungen und Sprünge</h2>
+  <p>Damit lange Stücke nicht doppelt aufgeschrieben werden müssen, gibt es Zeichen, die den Leseweg steuern.</p>
+  <h4>Wiederholungszeichen und Klammern</h4>
+  <p>Zwischen zwei <dfn id="g-wiederholungszeichen">Wiederholungszeichen</dfn> (Doppelstrich mit zwei Punkten, <span class="sym">𝄆 … 𝄇</span>) wird der Abschnitt zweimal gespielt. Fehlt das öffnende Zeichen, geht die Wiederholung zurück zum Anfang. Steht über dem Ende eine <strong>1. Klammer</strong> (Volta), wird sie nur beim ersten Durchgang gespielt. Beim zweiten Durchgang springst du direkt in die <strong>2. Klammer</strong>.</p>
+  <div class="abc" data-bpm="110" data-caption="Leseweg: Takt 1, 2, 3 (1. Klammer), 1, 2, 4 (2. Klammer)">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    |: C D E F | G2 G2 |1 A G F E :|2 E D C2 |]
+  </div>
+  <h4>Da capo, Dal segno, Coda und Fine</h4>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Zeichen</th><th>Bedeutung</th></tr></thead>
+      <tbody>
+        <tr><td><em>D.C.</em> (Da capo)</td><td>„vom Kopf“: zurück zum Anfang des Stücks</td></tr>
+        <tr><td><em>D.S.</em> (Dal segno), <span class="sym">𝄋</span></td><td>„vom Zeichen“: zurück zum Segno-Zeichen</td></tr>
+        <tr><td><em>Fine</em></td><td>Ende: hier hört das Stück nach dem Sprung auf</td></tr>
+        <tr><td><span class="sym">𝄌</span> Coda, „zur Coda“</td><td>beim zweiten Durchgang an dieser Stelle in den Schlussteil (Coda) springen</td></tr>
+        <tr><td><em>D.C. al Fine</em></td><td>zurück zum Anfang, spielen bis Fine</td></tr>
+        <tr><td><em>D.S. al Coda</em></td><td>zurück zum Segno, spielen bis „zur Coda“, dann in die Coda springen</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="abc" data-bpm="110" data-caption="D.C. al Fine. Leseweg: Takt 1–4, dann 1–2 bis Fine">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    C D E F | "^Fine"G4 || A G F E | "^D.C. al Fine"D4 |]
+  </div>
+  <div class="abc" data-bpm="110" data-caption="D.S. al Coda. Leseweg: Takt 1–4, zurück zum Segno (Takt 2), weiter bis „zur Coda“ (Ende Takt 2), dann Coda">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    C D E F | !segno!G A B "^zur Coda"c | d c B A | E D "^D.S. al Coda"C2 || !coda!"^Coda"C E G c | c4 |]
+  </div>
+  <p>Eine verbreitete Konvention: Wiederholungen innerhalb eines Abschnitts werden nach einem D.C. oder D.S. in der Regel nicht noch einmal gespielt, es sei denn, die Noten verlangen es ausdrücklich. Im Zweifel hilft eine Aufnahme des Stücks.</p>
+
+  <section class="layer piano" data-title="Den Leseweg vor dem Spielen klären">
+    <p>Sprungzeichen sind eine häufige Ursache für Stocken beim Vorspielen: Man ist im Fluss, sieht „D.S. al Coda“ und sucht hektisch das Segno.</p>
+    <ol>
+      <li><strong>Vorher durchgehen.</strong> Verfolge vor dem ersten Spielen den kompletten Weg mit dem Finger durch die Noten. Wo sind Wiederholungen, Klammern, Segno, Coda?</li>
+      <li><strong>Markieren.</strong> Mach die Ziele von Sprüngen auffällig, etwa mit einem farbigen Kreis um Segno und Coda.</li>
+      <li><strong>Übergänge üben.</strong> Üb gezielt die Stellen, an denen gesprungen wird: das Ende vor dem Sprung und den Anfang danach, direkt hintereinander. So lernt die Hand den Übergang, als stünde er in den Noten.</li>
+    </ol>
+    <p>In Barock und Klassik wird eine Wiederholung oft beim zweiten Mal anders gestaltet, zum Beispiel leiser (Echo) oder mit kleinen Verzierungen. Das ist kein Muss, aber eine gute Gelegenheit, mit Dynamik zu experimentieren.</p>
+  </section>
+
+  <h2 id="verzierungen">10.7 Verzierungen</h2>
+  <p><dfn id="g-verzierung">Verzierungen</dfn> (auch Ornamente) sind kleine Tonfolgen um eine Hauptnote, die in den Noten nur mit einem Kürzel stehen. Das Kürzel sagt, <em>welche</em> Figur gemeint ist. Wie schnell und wie oft genau gespielt wird, entscheidet der Spieler im Rahmen des Stils. Verzierungen benutzen die <strong>Nebennoten</strong> der Hauptnote, also den nächsthöheren und den nächsttieferen Ton der Tonart. Ein kleines Vorzeichen über oder unter dem Zeichen gilt für diese Nebennote.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Name</th><th>Englisch</th><th>Was gespielt wird</th></tr></thead>
+      <tbody>
+        <tr><td><dfn id="g-vorschlag">Vorschlag</dfn>, lang (Appoggiatura)</td><td>appoggiatura</td><td>kleine Note ohne Strich: nimmt sich Zeit von der Hauptnote, meist die Hälfte, und wird betont</td></tr>
+        <tr><td>Vorschlag, kurz (Acciaccatura)</td><td>grace note, acciaccatura</td><td>kleine Note mit Schrägstrich: so kurz wie möglich, die Hauptnote behält ihr Gewicht</td></tr>
+        <tr><td><dfn id="g-pralltriller">Pralltriller</dfn></td><td>upper mordent, inverted mordent</td><td>Hauptnote, obere Nebennote, Hauptnote, schnell</td></tr>
+        <tr><td><dfn id="g-mordent">Mordent</dfn></td><td>mordent, lower mordent</td><td>Hauptnote, untere Nebennote, Hauptnote, schnell (Zeichen mit senkrechtem Strich)</td></tr>
+        <tr><td><dfn id="g-doppelschlag">Doppelschlag</dfn></td><td>turn</td><td>obere Nebennote, Hauptnote, untere Nebennote, Hauptnote</td></tr>
+        <tr><td><dfn id="g-triller">Triller</dfn> (<em>tr</em>)</td><td>trill</td><td>schneller Wechsel zwischen Hauptnote und oberer Nebennote über die ganze Notenlänge, oft mit Nachschlag</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die Beispiele zeigen jeweils das Zeichen und daneben eine typische Ausführung. Beim Abspielen hörst du die ausgeschriebene Fassung.</p>
+  <div class="abc" data-bpm="60" data-caption="Langer und kurzer Vorschlag: notiert und gespielt">
+    X:1
+    M:2/4
+    L:1/4
+    K:C
+    "^notiert" {d}c2 | "^gespielt" d c | "^notiert" {/d}c2 | "^gespielt" d/4c7/4 |]
+  </div>
+  <div class="abc" data-bpm="60" data-caption="Pralltriller, Mordent und Doppelschlag: notiert und gespielt">
+    X:1
+    M:2/4
+    L:1/4
+    K:C
+    "^Pralltriller" !pralltriller!e2 | "^gespielt" e/4f/4e3/2 | "^Mordent" !mordent!e2 | "^gespielt" e/4d/4e3/2 | "^Doppelschlag" !turn!e2 | "^gespielt" f/2e/2d/2e/2 |]
+  </div>
+  <div class="abc" data-bpm="60" data-caption="Triller mit Nachschlag, Beginn auf der oberen Nebennote">
+    X:1
+    M:2/4
+    L:1/4
+    K:C
+    "^notiert" !trill!e2 | "^gespielt" f/4e/4f/4e/4 f/4e/4d/4e/4 |]
+  </div>
+  <p>Die genaue Ausführung hängt von der Epoche ab. In Barock und früher Klassik beginnt der Triller meist mit der <em>oberen</em> Nebennote, und der Vorschlag fällt auf den Schlag. Ab dem 19. Jahrhundert beginnen Triller oft mit der Hauptnote, und kurze Vorschläge werden häufig knapp vor den Schlag gesetzt. Im Zweifel helfen ein guter Urtext mit Vorwort und Aufnahmen erfahrener Pianisten.</p>
+
+  <section class="layer deep" data-title="Warum gibt es Verzierungen?">
+    <p>Verzierungen haben einen klanglichen und einen ausdrucksbezogenen Grund.</p>
+    <p><strong>Klang.</strong> Auf dem Cembalo, dem wichtigsten Tasteninstrument vor dem Klavier, verklingt ein Ton schnell und lässt sich nicht lauter oder leiser anschlagen. Ein Triller hält eine lange Note hörbar am Leben, und ein Pralltriller oder Mordent setzt einen Akzent, den das Instrument über die Lautstärke nicht setzen kann.</p>
+    <p><strong>Ausdruck.</strong> Der lange Vorschlag ist ein Vorhalt (Kapitel 19): Er setzt eine Dissonanz auf die betonte Zeit, die sich danach in die Hauptnote auflöst. Spannung und Lösung im Kleinformat. Deshalb bekommt er Gewicht, der kurze Vorschlag dagegen nicht.</p>
+    <p><strong>Geschichte.</strong> Im Barock gehörte das Verzieren zur Improvisationspraxis. Die Zeichen waren eine Kurzschrift, deren Bedeutung die Spieler kannten. Johann Sebastian Bach schrieb für seinen Sohn Wilhelm Friedemann im „Clavier-Büchlein“ (begonnen 1720) eine Tabelle mit der Erklärung der Zeichen auf. Carl Philipp Emanuel Bach widmete den „Manieren“ im „Versuch über die wahre Art das Clavier zu spielen“ (1753) ein ganzes Kapitel. Weil die Konventionen sich je nach Land und Zeit unterschieden, gibt es bis heute keine einzige richtige Ausführung.</p>
+  </section>
+
+  <section class="layer piano" data-title="Verzierungen spielen">
+    <ul>
+      <li><strong>Erst ausgeschrieben üben.</strong> Spiel die Verzierung zuerst langsam in genauen Notenwerten, wie in den Beispielen oben. Erst wenn das gleichmäßig sitzt, schneller werden.</li>
+      <li><strong>Fingersätze für Triller:</strong> üblich sind 2–3, 1–3 oder 2–4. Nimm die Finger, die in der Passage gerade frei sind. 3–4 ist für die meisten Hände ungleichmäßiger.</li>
+      <li><strong>Locker bleiben.</strong> Ein Triller kommt aus einer kleinen Drehbewegung des Unterarms und nicht aus festen, hochgehobenen Fingern. Wird er verkrampft, lieber weniger Töne spielen.</li>
+      <li><strong>Die Hauptnote zählt.</strong> Die Verzierung schmückt die Melodie, sie darf den Rhythmus nicht verschieben. Der Ton nach der Verzierung kommt pünktlich.</li>
+    </ul>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Dynamik reicht von <span class="dyn">ppp</span> bis <span class="dyn">fff</span> und ist immer relativ. Crescendo und Diminuendo verändern die Lautstärke allmählich, sf und subito plötzlich.</li>
+    <li>Am Klavier bestimmt fast nur die Tastengeschwindigkeit die Lautstärke. Nach dem Anschlag kannst du nur noch das Ende des Tons beeinflussen.</li>
+    <li>Artikulation: legato (gebunden), non legato, staccato (kurz), tenuto (voll), Akzent, marcato, Fermate.</li>
+    <li>Phrasen haben Anfang, Ziel und Ende. Am Phrasenende abphrasieren: leiser und etwas kürzer.</li>
+    <li>Lesewege: Wiederholungszeichen, 1. und 2. Klammer, D.C., D.S., Fine, Coda. Den Weg vor dem Spielen klären.</li>
+    <li>Verzierungen (Vorschlag, Pralltriller, Mordent, Doppelschlag, Triller) sind Kürzel für kleine Figuren aus Haupt- und Nebennoten. Ihre Ausführung hängt vom Stil ab.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">10.1</span><div><span class="kind">Theorie</span>Ordne von leise nach laut: <span class="dyn">mf, pp, f, p, fff, mp</span>.</div></div>
+      <details class="solution"><summary>Lösung</summary><div><span class="dyn">pp, p, mp, mf, f, fff</span>. Die Reihenfolge folgt der Logik: piano und forte als Grundwerte, „mezzo“ schwächt ab, Verdopplung und Verdreifachung steigern.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">10.2</span><div><span class="kind">Theorie</span>Was ist der Unterschied zwischen <span class="dyn">sf</span> und <span class="dyn">fp</span>?</div></div>
+      <details class="solution"><summary>Lösung</summary><div><span class="dyn">sf</span> betont einen einzelnen Ton plötzlich stark, danach gilt wieder die vorherige Lautstärke. <span class="dyn">fp</span> bedeutet: laut anschlagen und sofort leise weiterspielen. Am Klavier gilt das für die folgenden Töne, denn ein einzelner Ton kann nach dem Anschlag nicht leiser gemacht werden, außer dass er von selbst abklingt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">10.3</span><div><span class="kind">Notenlesen</span>Benenne die Artikulation in jedem Takt.</div></div>
+      <div class="abc" data-bpm="96">
+        X:1
+        M:4/4
+        L:1/4
+        K:G
+        (G A B c) | !accent!d2 !accent!d2 | (.B .B .B .B) | !tenuto!G2 !fermata!G2 |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Takt 1: legato (Bogen). Takt 2: Akzente. Takt 3: portato (Staccatopunkte unter einem Bogen), weich getrennt. Takt 4: tenuto (volle Länge, leicht gewichtet), dann Fermate (länger aushalten).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">10.4</span><div><span class="kind">Notenlesen</span>Ein Stück hat 8 Takte. Um Takt 1–4 stehen Wiederholungszeichen, über Takt 4 eine 1. Klammer, über Takt 5 eine 2. Klammer. Takt 6–8 folgen ohne Zeichen. In welcher Reihenfolge spielst du die Takte?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>1, 2, 3, 4, 1, 2, 3, 5, 6, 7, 8. Beim zweiten Durchgang wird Takt 4 (1. Klammer) übersprungen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">10.5</span><div><span class="kind">Notenlesen</span>Ein Stück hat 10 Takte. Über Takt 3 steht 𝄋 (Segno), am Ende von Takt 6 „zur Coda“, am Ende von Takt 8 „D.S. al Coda“, Takt 9–10 sind die Coda. Wie lautet der Leseweg?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>1–8, zurück zu Takt 3, dann 3–6, Sprung in die Coda: 9–10. Insgesamt: 1, 2, 3, 4, 5, 6, 7, 8, 3, 4, 5, 6, 9, 10.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">10.6</span><div><span class="kind">Theorie</span>Übersetze: <em>dolce</em>, <em>cantabile</em>, <em>rit.</em>, <em>a tempo</em>, <em>cresc. poco a poco</em>, <em>sempre legato</em>.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>sanft; gesanglich; langsamer werden; zurück zum Tempo; nach und nach lauter werden; immer gebunden.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">10.7</span><div><span class="kind">Am Klavier</span>Spiel die C-Dur-Tonleiter aufwärts mit gleichmäßigem Crescendo von <span class="dyn">pp</span> bis <span class="dyn">f</span> und abwärts mit Diminuendo zurück. Nimm dich mit dem Handy auf. Hört man einen gleichmäßigen Verlauf?</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Häufig springen der Daumen (nach dem Untersatz zu laut) und der 4. Finger (zu leise) heraus. Üb die Stelle um den Daumenuntersatz langsam und hör genau auf den Übergang. Denk das Crescendo in kleinen gleichen Stufen, nicht als „leise – laut“.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">10.8</span><div><span class="kind">Am Klavier</span>Spiel die Seufzerkette aus Abschnitt 10.4 in der rechten Hand. Der erste Ton jedes Paares mit Gewicht, der zweite leicht. Spiel sie danach absichtlich falsch herum (zweiter Ton betont). Wie wirkt das?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Richtig gespielt klingen die Paare wie Seufzer oder Sprechmotive („Ach-ja“). Falsch herum betont wirkt es stolpernd und unnatürlich, als würde man ein Wort auf der falschen Silbe betonen. Der zweite Ton eines Seufzers ist meist eine Auflösung, und Auflösungen werden leiser gespielt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">10.9</span><div><span class="kind">Am Klavier</span>Spiel denselben Fünftonraum (c–g) dreimal: legato, staccato, portato. Halte das Tempo mit einem Metronom auf 80 genau gleich.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Beim Staccato beginnt jeder Ton genau auf dem Klick, nur das Ende ist früher. Beim Portato ist die Lücke klein und weich, die Hand bleibt nah an den Tasten. Wenn du beim Staccato schneller wirst, zähle laut mit.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">10.10</span><div><span class="kind">Vertiefung</span>Warum ist es am Klavier unmöglich, einen einzelnen gehaltenen Ton lauter werden zu lassen? Und was könnte ein Komponist meinen, der über einer langen Note trotzdem ein Crescendo notiert?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der Hammer wird kurz vor der Saite ausgelöst und fliegt frei. Danach hat die Taste keinen Einfluss mehr auf die Saite, der Ton kann nur abklingen. Ein notiertes Crescendo über einer langen Note ist meist eine Anweisung für die Intensität der Phrase: Die folgenden Töne sollen lauter einsetzen, oder die Begleitung soll unter dem gehaltenen Ton anwachsen. Manche Komponisten notieren es auch als Ausdrucksgeste, die der Spieler mit Körper, Timing und Begleitung andeutet.</div></details>
+    </div>
+    <div class="exercise">
+      <div class="q"><span class="n">10.11</span><div><span class="kind">Theorie</span>Schreib aus, was ein Mordent und ein Doppelschlag auf g' in C-Dur bedeuten.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Mordent: g'–f'–g' (untere Nebennote der Tonart ist f', nicht fis'). Doppelschlag: a'–g'–f'–g'. Die Nebennoten kommen aus der Tonart, solange kein zusätzliches Vorzeichen am Zeichen steht.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(10);
+
+  (function () {
+    const A = Book.audio;
+    const SCALE = [60, 62, 64, 65, 67, 69, 71, 72];
+    const on = (id, f) => { const el = document.getElementById(id); if (el) el.addEventListener("click", f); };
+    // Dynamikstufen in der Tabelle
+    document.querySelectorAll("tr[data-dyn]").forEach((tr) => tr.addEventListener("click", () => {
+      const v = +tr.dataset.dyn;
+      [60, 64, 67].forEach((m, i) => A.note(m, i * 0.35, 0.33, v));
+      A.chord([60, 64, 67], 1.1, 1.4, v);
+    }));
+    on("cresc-demo", () => SCALE.forEach((m, i) => A.note(m, i * 0.32, 0.3, 0.12 + i * 0.12)));
+    on("subito-demo", () => {
+      [72, 71, 69, 67].forEach((m, i) => A.note(m, i * 0.32, 0.3, 0.95));
+      [65, 64, 62, 60].forEach((m, i) => A.note(m, 1.28 + i * 0.32, 0.3, 0.18));
+    });
+    // Artikulation: gleiche Töne, verschiedene Längen
+    const beat = 0.34;
+    const art = (len, vel) => SCALE.slice(0, 5).forEach((m, i) => A.note(m, i * beat, beat * len, vel ? vel(i) : 0.6));
+    on("art-legato", () => art(1.05));
+    on("art-nonlegato", () => art(0.8));
+    on("art-staccato", () => art(0.3));
+    on("art-accent", () => art(0.8, (i) => (i % 2 === 0 ? 0.95 : 0.35)));
+    // Seufzer
+    const sighs = [[76, 74], [72, 71], [69, 67], [65, 64]];
+    on("sigh-good", () => sighs.forEach((p, i) => { A.note(p[0], i * 0.9, 0.44, 0.8); A.note(p[1], i * 0.9 + 0.45, 0.28, 0.3); }));
+    on("sigh-flat", () => sighs.forEach((p, i) => { A.note(p[0], i * 0.9, 0.44, 0.6); A.note(p[1], i * 0.9 + 0.45, 0.44, 0.6); }));
+  })();
+</script>
+</body>
+</html>

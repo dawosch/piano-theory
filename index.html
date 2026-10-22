@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="de" data-standalone>
+<meta charset="utf-8" data-standalone>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" data-standalone>
+<title>Klavier verstehen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .hero { background: var(--surface); border-bottom: 1px solid var(--line); }
+  .hero .wrap-wide { padding-block: 3.2rem 2.4rem; display: grid; gap: 1.6rem; }
+  .hero h1 { font-size: var(--step-4); letter-spacing: -0.025em; }
+  .hero .lede { font-size: var(--step-1); line-height: 1.5; max-width: 40ch; color: var(--muted); margin: 0.6rem 0 0; }
+  .hero .kbd-wrap { max-width: 100%; }
+  .hero .kbd-wrap .kbd { width: 100%; }
+  .hero .hint { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); margin: 0.4rem 0 0; }
+  .hero .meta { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; }
+  #progress { flex: 1 1 16rem; max-width: 26rem; }
+  #progress .lbl { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); }
+  #progress .bar { height: 6px; background: var(--line); border-radius: 3px; margin-top: 0.35rem; overflow: hidden; }
+  #progress .bar span { display: block; height: 100%; width: 0; background: var(--accent); }
+  #continue a { display: inline-flex; flex-direction: column; text-decoration: none; border: 1px solid var(--line); border-radius: var(--radius); padding: 0.45rem 0.9rem; }
+  #continue .dir { font-family: var(--font-display); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+  #continue .t { font-family: var(--font-display); font-weight: 600; color: var(--ink); }
+
+  .how { padding-block: 2.6rem 0.5rem; }
+  .how h2 { margin-top: 0; font-size: var(--step-2); }
+  .levels { display: grid; gap: 0.2rem; }
+  .levels .layer { margin-block: 0.6rem; }
+  .level-theory { border-top: 2px solid var(--ink); padding-top: 0.7rem; margin-block: 0.6rem; }
+  .level-theory .lbl { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--muted); }
+
+  .toc { padding-block: 2rem 4rem; }
+  .toc > h2 { font-size: var(--step-2); margin: 0 0 0.4rem; }
+  .part { margin-top: 2.4rem; }
+  .part-head { display: grid; grid-template-columns: 3.2rem 1fr auto; gap: 0.8rem; align-items: baseline; border-bottom: 2px solid var(--ink); padding-bottom: 0.6rem; }
+  .part-head .roman { font-family: var(--font-display); font-weight: 800; font-size: var(--step-3); color: var(--accent); line-height: 1; }
+  .part-head h3 { margin: 0; font-size: var(--step-2); }
+  .part-head p { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.95em; line-height: 1.5; }
+  .part-head > div { min-width: 0; }
+  .part-count { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); }
+  .chapters { list-style: none; margin: 0; padding: 0; }
+  .ch { display: grid; grid-template-columns: 3.2rem 1fr; gap: 0.8rem; padding-block: 0.75rem; border-bottom: 1px solid var(--line); }
+  .ch .n { font-family: var(--font-mono); color: var(--muted); padding-top: 0.15rem; text-align: left; }
+  .ch.ready .n { color: var(--accent); }
+  .ch .txt { min-width: 0; }
+  .ch .t { font-family: var(--font-display); font-weight: 600; font-size: var(--step-1); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.6rem; }
+  .ch .t a { color: var(--ink); text-decoration-color: var(--accent); }
+  .ch .t > span:first-child { color: var(--ink); }
+  .ch p { margin: 0.15rem 0 0; color: var(--muted); font-size: 0.95em; line-height: 1.5; }
+  .chip { font-family: var(--font-display); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border: 1px solid var(--deep-line); color: var(--deep); border-radius: 999px; padding: 0.05rem 0.5rem; }
+  .chip.soon { border-color: var(--line); color: var(--muted); }
+  .chip.ok { border-color: var(--ok); color: var(--ok); }
+  @media (max-width: 560px) {
+    .part-head, .ch { grid-template-columns: 2.4rem 1fr; }
+    .part-count { grid-column: 2; }
+  }
+</style>
+
+<header class="hero">
+  <div class="wrap-wide">
+    <div>
+      <p class="eyebrow">Musiktheorie am Klavier · ein interaktives Lehrbuch</p>
+      <h1>Klavier verstehen</h1>
+      <p class="lede">Von der ersten Taste bis zur Fuge. Jedes Kapitel erklärt, wie etwas funktioniert, warum es so ist und wie es sich unter deinen Fingern anfühlt.</p>
+    </div>
+    <div class="kbd-wrap">
+      <div id="hero-kbd"></div>
+      <p class="hint">Die Tasten klingen, wenn du sie anklickst. Das mittlere C heißt c' (eingestrichenes c).</p>
+    </div>
+    <div class="meta">
+      <div id="progress"><div class="lbl">49 Kapitel in sieben Teilen</div><div class="bar"><span></span></div></div>
+      <div id="continue" hidden><a href="#"><span class="dir">Weiterlesen</span><span class="t"></span></a></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="how wrap">
+    <h2>So liest du dieses Buch</h2>
+    <p>Jedes Kapitel hat drei Ebenen, die sich optisch unterscheiden. Du kannst sie nach Bedarf mitnehmen oder überspringen.</p>
+    <div class="levels">
+      <div class="level-theory">
+        <div class="lbl">Theorie</div>
+        <p>Der durchgehende Text ohne Rahmen. Er erklärt, was du wissen musst, und reicht allein aus, um dem Buch zu folgen.</p>
+      </div>
+      <section class="layer deep" data-title="Warum etwas so ist">
+        <p>Diese Einschübe gehen unter die Oberfläche: Physik des Klangs, Mathematik der Stimmung, Geschichte der Begriffe, Wahrnehmungspsychologie. Sie lassen sich einzeln zuklappen. Mit dem Schalter <em>Vertiefungen</em> oben auf jeder Kapitelseite blendest du alle auf einmal aus.</p>
+      </section>
+      <section class="layer piano" data-title="Was das für deine Finger bedeutet">
+        <p>Konkrete Griffe, Fingersätze, kleine Übungen und Hörproben zum Thema des Kapitels. Hier wird Theorie zu etwas, das du am Instrument tun kannst.</p>
+      </section>
+    </div>
+    <p>Am Ende jedes Kapitels stehen Übungen mit aufklappbaren Lösungen. Kapitel mit einem <span class="chip">Gehörtrainer</span> enthalten zusätzlich interaktive Hörübungen. Notenbeispiele und Klaviaturen lassen sich überall abspielen.</p>
+    <p class="muted">Begriffe: deutsche Notennamen (H statt B) mit der englischen Bezeichnung daneben, Akkordstufen in römischen Ziffern.</p>
+  </section>
+
+  <section class="toc wrap">
+    <h2>Inhalt</h2>
+    <div id="toc"></div>
+  </section>
+</main>
+<footer class="wrap">
+  <p class="muted" style="font-size: var(--step--1); padding-block: 0 3rem;">Texte und Notenbeispiele stehen unter <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a>, der Programmcode unter der MIT-Lizenz.<br>Klaviersamples: „FluidR3_GM“ von Frank Wen, als MP3 aufbereitet im Projekt <a href="https://github.com/gleitz/midi-js-soundfonts">midi-js-soundfonts</a> von Benjamin Gleitzman, lizenziert unter <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. Änderungen: Auswahl jedes dritten Tons von C1 bis C7, neu verpackt in piano-samples.js. Notensatz mit <a href="https://github.com/paulrosen/abcjs">abcjs</a> (MIT), Schriften von Google Fonts (SIL Open Font License).</p>
+</footer>
+
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.enhanceLayers();
+  Book.renderToc(document.getElementById("toc"));
+  Book.keyboard(document.getElementById("hero-kbd"), {
+    from: 48, to: 83, labels: "octave",
+    ariaLabel: "Zwei Oktaven der Klaviatur von c bis h'"
+  });
+</script>

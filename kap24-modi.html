@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kirchentonarten · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .explorer { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; margin-block: 1.6rem; }
+  .explorer .modes { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-block: 0.6rem; }
+  .explorer .modes .btn[aria-pressed="true"] { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+  .explorer .info { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); margin: 0.6rem 0 0; }
+  .explorer .info strong { color: var(--ink); }
+  .bright td.bar span { display: inline-block; height: 0.7rem; border-radius: 2px; background: var(--accent); vertical-align: middle; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil III · Kapitel 24</div>
+    <h1>Kirchentonarten</h1>
+    <p class="lede">Dur und Moll sind nur zwei von sieben Tonleitern, die sich aus den weißen Tasten ergeben. Die anderen fünf, die Kirchentonarten oder Modi, prägen Volkslieder, Filmmusik, Rock und Jazz. Dieses Kapitel zeigt, wie sie gebaut sind, woran man sie erkennt und warum sie sich wie eine Helligkeitsskala ordnen lassen.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die sieben Modi von ionisch bis lokrisch benennen und auf beliebigen Grundtönen bilden,</li>
+      <li>für jeden Modus den charakteristischen Ton und einen typischen Akkordwechsel angeben,</li>
+      <li>die Vorzeichen eines Modus über seine Dur-Elterntonart bestimmen,</li>
+      <li>die Modi nach Helligkeit ordnen und begründen, warum diese Ordnung entsteht,</li>
+      <li>die wichtigsten Modi am Klang erkennen und am Klavier über einem Grundton improvisieren.</li>
+    </ul>
+  </div>
+
+  <!-- 24.1 -->
+  <h2 id="weisse-tasten">24.1 Sieben Tonleitern auf den weißen Tasten</h2>
+  <p>Spiel auf den weißen Tasten eine Oktave von c bis c'. Das ist C-Dur. Spiel nun von d bis d', ebenfalls nur weiße Tasten. Es ist dieselbe Tastenmenge, aber der Klang ist ein anderer: weder Dur noch Moll. Der Grund ist, dass die Halbtonschritte (e–f und h–c) jetzt an anderen Stellen der Tonleiter liegen.</p>
+  <p>Jeder der sieben Stammtöne kann so zum Grundton werden. Die sieben Tonleitern, die dabei entstehen, heißen <dfn id="g-modus">Modi</dfn> (Einzahl: Modus) oder <dfn id="g-kirchentonart">Kirchentonarten</dfn>:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Grundton</th><th>Modus</th><th>Schrittfolge (G = Ganzton, H = Halbton)</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 62 64 65 67 69 71 72" data-bpm="220"><td>c</td><td><strong>Ionisch</strong></td><td class="mono">G G H G G G H</td><td>▶</td></tr>
+        <tr class="play-row" data-play="62 64 65 67 69 71 72 74" data-bpm="220"><td>d</td><td><strong>Dorisch</strong></td><td class="mono">G H G G G H G</td><td>▶</td></tr>
+        <tr class="play-row" data-play="64 65 67 69 71 72 74 76" data-bpm="220"><td>e</td><td><strong>Phrygisch</strong></td><td class="mono">H G G G H G G</td><td>▶</td></tr>
+        <tr class="play-row" data-play="65 67 69 71 72 74 76 77" data-bpm="220"><td>f</td><td><strong>Lydisch</strong></td><td class="mono">G G G H G G H</td><td>▶</td></tr>
+        <tr class="play-row" data-play="67 69 71 72 74 76 77 79" data-bpm="220"><td>g</td><td><strong>Mixolydisch</strong></td><td class="mono">G G H G G H G</td><td>▶</td></tr>
+        <tr class="play-row" data-play="69 71 72 74 76 77 79 81" data-bpm="220"><td>a</td><td><strong>Äolisch</strong></td><td class="mono">G H G G H G G</td><td>▶</td></tr>
+        <tr class="play-row" data-play="71 72 74 76 77 79 81 83" data-bpm="220"><td>h</td><td><strong>Lokrisch</strong></td><td class="mono">H G G H G G G</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Zwei davon kennst du bereits: <strong>Ionisch</strong> ist die Dur-Tonleiter, <strong>Äolisch</strong> das natürliche Moll. Die Merkreihe für die Reihenfolge ab c: <em>Ich Darf Pünktlich Lernen, Mama Ärgert Lisa</em> (ionisch, dorisch, phrygisch, lydisch, mixolydisch, äolisch, lokrisch).</p>
+  <p>Wichtig: Ein Modus hängt nicht an den weißen Tasten. Dorisch heißt „Schrittfolge G H G G G H G“, und die lässt sich auf jedem Ton aufbauen. d-Dorisch ist nur der Fall, der zufällig ohne Vorzeichen auskommt.</p>
+
+  <div class="explorer" id="explorer">
+    <h4 style="margin-top:0">Modus-Explorer</h4>
+    <div class="settings" style="font-family:var(--font-display);font-size:var(--step--1);color:var(--muted);display:flex;gap:1rem;flex-wrap:wrap">
+      <label><input type="radio" name="ex-root" id="ex-root-white" value="white" checked> auf den weißen Tasten</label>
+      <label><input type="radio" name="ex-root" id="ex-root-c" value="c"> alle auf c</label>
+    </div>
+    <div class="modes" id="ex-modes"></div>
+    <div id="ex-kbd"></div>
+    <p class="info" id="ex-info"></p>
+  </div>
+  <p class="muted">Wähle einen Modus: Du siehst und hörst die Tonleiter über einem tiefen Grundton. Petrol markiert den Grundton, Orange den charakteristischen Ton.</p>
+
+  <!-- 24.2 -->
+  <h2 id="parallel">24.2 Alle Modi auf demselben Grundton</h2>
+  <p>Die weißen Tasten zeigen, wie die Modi entstehen. Um ihren <em>Klang</em> zu vergleichen, ist eine andere Sicht besser: alle sieben auf demselben Grundton. Dann siehst du genau, welche Töne sich gegenüber Dur oder Moll unterscheiden.</p>
+  <div class="abc" data-bpm="160" data-caption="Die sieben Modi auf c, geordnet nach ihrer Abweichung von Dur">
+    X:1
+    M:none
+    L:1/8
+    K:C
+    "^Lydisch" C D E ^F G A B c |
+    "^Ionisch (Dur)" C D E F G A B c |
+    "^Mixolydisch" C D E F G A _B c |
+    "^Dorisch" C D _E F G A _B c |
+    "^Äolisch (Moll)" C D _E F G _A _B c |
+    "^Phrygisch" C _D _E F G _A _B c |
+    "^Lokrisch" C _D _E F _G _A _B c |]
+  </div>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Modus</th><th>Vergleich</th><th>charakteristischer Ton</th><th>Grundgeschlecht</th></tr></thead>
+      <tbody>
+        <tr><td>Lydisch</td><td>Dur mit übermäßiger Quarte</td><td>♯4 (fis auf c)</td><td>Dur</td></tr>
+        <tr><td>Ionisch</td><td>Dur</td><td>7, der Leitton (h auf c)</td><td>Dur</td></tr>
+        <tr><td>Mixolydisch</td><td>Dur mit kleiner Septime</td><td>♭7 (b auf c)</td><td>Dur</td></tr>
+        <tr><td>Dorisch</td><td>Moll mit großer Sexte</td><td>6 (a auf c)</td><td>Moll</td></tr>
+        <tr><td>Äolisch</td><td>natürliches Moll</td><td>♭6 (as auf c)</td><td>Moll</td></tr>
+        <tr><td>Phrygisch</td><td>Moll mit kleiner Sekunde</td><td>♭2 (des auf c)</td><td>Moll</td></tr>
+        <tr><td>Lokrisch</td><td>Moll mit kleiner Sekunde und verminderter Quinte</td><td>♭5 (ges auf c)</td><td>vermindert</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Ob ein Modus nach Dur oder nach Moll klingt, entscheidet die Terz über dem Grundton. Lydisch, ionisch und mixolydisch haben eine große Terz, dorisch, äolisch und phrygisch eine kleine. Lokrisch hat zusätzlich eine verminderte Quinte und damit einen verminderten Grundakkord.</p>
+  <p>Der <dfn id="g-charakteristischer-ton">charakteristische Ton</dfn> ist der Ton, der einen Modus von seinem nächsten Verwandten unterscheidet, also Dorisch von Moll oder Mixolydisch von Dur. Wer modal spielt oder improvisiert, betont genau diesen Ton, denn ohne ihn klingt der Modus wie gewöhnliches Dur oder Moll.</p>
+
+  <section class="layer deep" data-title="Warum sich die Modi wie eine Helligkeitsskala ordnen">
+    <p>In der Notenreihe oben ändert sich von Zeile zu Zeile genau ein Ton, und zwar immer um einen Halbton nach unten. Lydisch → Ionisch: fis wird f. Ionisch → Mixolydisch: h wird b. Mixolydisch → Dorisch: e wird es. Und so weiter bis Lokrisch. Mit jedem Schritt wird der Klang dunkler. Diese Ordnung ist kein Zufall. Sie folgt aus dem Quintenzirkel.</p>
+    <p>Die sieben weißen Tasten bilden eine Kette aus reinen Quinten: <strong>f – c – g – d – a – e – h</strong>. Jeder Modus ist durch die Stelle bestimmt, an der sein Grundton in dieser Kette steht:</p>
+    <div class="table-scroll">
+      <table class="bright">
+        <thead><tr><th>Modus</th><th>Grundton</th><th class="num">Quinten über dem Grundton</th><th class="num">Quinten darunter</th><th>Helligkeit</th></tr></thead>
+        <tbody>
+          <tr><td>Lydisch</td><td>f</td><td class="num">6</td><td class="num">0</td><td class="bar"><span style="width:6rem"></span></td></tr>
+          <tr><td>Ionisch</td><td>c</td><td class="num">5</td><td class="num">1</td><td class="bar"><span style="width:5rem"></span></td></tr>
+          <tr><td>Mixolydisch</td><td>g</td><td class="num">4</td><td class="num">2</td><td class="bar"><span style="width:4rem"></span></td></tr>
+          <tr><td>Dorisch</td><td>d</td><td class="num">3</td><td class="num">3</td><td class="bar"><span style="width:3rem"></span></td></tr>
+          <tr><td>Äolisch</td><td>a</td><td class="num">2</td><td class="num">4</td><td class="bar"><span style="width:2rem"></span></td></tr>
+          <tr><td>Phrygisch</td><td>e</td><td class="num">1</td><td class="num">5</td><td class="bar"><span style="width:1rem"></span></td></tr>
+          <tr><td>Lokrisch</td><td>h</td><td class="num">0</td><td class="num">6</td><td class="bar"><span style="width:0.2rem"></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Töne, die vom Grundton aus in Quintrichtung nach oben (zu den Kreuztonarten hin) liegen, klingen über ihm „hell“: große Terz, große Septime, übermäßige Quarte. Töne in der Gegenrichtung klingen „dunkel“: kleine Terz, kleine Sexte, kleine Sekunde. Lydisch hat seinen Grundton am unteren Ende der Kette, alle anderen Töne liegen in der hellen Richtung. Lokrisch hat ihn am oberen Ende, alle Töne liegen in der dunklen Richtung. Dorisch steht genau in der Mitte, mit drei hellen und drei dunklen Tönen. Das erklärt, warum Dorisch oft als „ausgewogenes“ oder „neutrales“ Moll beschrieben wird.</p>
+    <p>Die Ordnung nach Helligkeit hat auch eine praktische Seite: Sie zeigt, dass Dur und Moll keine Gegensätze sind, sondern zwei Punkte auf einer Skala mit sieben Stufen.</p>
+  </section>
+
+  <!-- 24.3 -->
+  <h2 id="bestimmen">24.3 Modi bilden und bestimmen</h2>
+  <p>Es gibt zwei Wege, einen Modus auf einem beliebigen Grundton zu bilden. Beide führen zum gleichen Ergebnis.</p>
+  <h4>Weg 1: über die Dur-Elterntonart</h4>
+  <p>Jeder Modus ist eine Dur-Tonleiter, die auf einer anderen Stufe beginnt. Dorisch beginnt auf der 2. Stufe, phrygisch auf der 3., lydisch auf der 4., mixolydisch auf der 5., äolisch auf der 6. und lokrisch auf der 7. Um e-Dorisch zu bilden, fragst du also: In welcher Dur-Tonart ist e die 2. Stufe? In D-Dur. Also hat e-Dorisch die Vorzeichen von D-Dur: fis und cis.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Modus</th><th>Stufe in der Elterntonart</th><th>Beispiel</th><th>Elterntonart</th><th>Vorzeichen</th></tr></thead>
+      <tbody>
+        <tr><td>Dorisch</td><td>2.</td><td>e-Dorisch</td><td>D-Dur</td><td>fis, cis</td></tr>
+        <tr><td>Phrygisch</td><td>3.</td><td>a-Phrygisch</td><td>F-Dur</td><td>b</td></tr>
+        <tr><td>Lydisch</td><td>4.</td><td>g-Lydisch</td><td>D-Dur</td><td>fis, cis</td></tr>
+        <tr><td>Mixolydisch</td><td>5.</td><td>d-Mixolydisch</td><td>G-Dur</td><td>fis</td></tr>
+        <tr><td>Äolisch</td><td>6.</td><td>e-Äolisch</td><td>G-Dur</td><td>fis</td></tr>
+        <tr><td>Lokrisch</td><td>7.</td><td>e-Lokrisch</td><td>F-Dur</td><td>b</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h4>Weg 2: über den Vergleich mit Dur oder Moll</h4>
+  <p>Du nimmst Dur oder Moll auf demselben Grundton und veränderst den charakteristischen Ton. e-Dorisch = e-Moll mit großer Sexte: e – fis – g – a – h – <strong>cis</strong> – d. d-Mixolydisch = D-Dur mit kleiner Septime: d – e – fis – g – a – h – <strong>c</strong>.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Weg 1 ist gut zum Bestimmen von Vorzeichen. Weg 2 ist gut zum Hören und Spielen, weil er den charakteristischen Ton in den Mittelpunkt stellt.</p>
+  </div>
+
+  <section class="layer piano" data-title="Fingersätze für Modi">
+    <p>Für Modi auf den weißen Tasten brauchst du keine neuen Fingersätze. Für die meisten funktioniert dasselbe Muster wie für die C-Dur-Tonleiter: drei Finger, Daumen untersetzen, fünf Finger (1–2–3, 1–2–3–4–5).</p>
+    <p>Beispiel d-Dorisch in der rechten Hand: 1 auf d, 2 auf e, 3 auf f, Daumen untersetzen auf g, dann 2 auf a, 3 auf h, 4 auf c, 5 auf d. Abwärts in umgekehrter Reihenfolge, wobei der 3. Finger über den Daumen auf f übersetzt. Für Modi auf anderen Grundtönen nimmst du den Fingersatz der Elterntonart (Kapitel 44) und beginnst auf der passenden Stufe.</p>
+    <p><strong>Übung:</strong> Spiel jeden Modus auf den weißen Tasten mit der rechten Hand eine Oktave auf und ab, während die linke Hand den Grundton tief und lang hält. Sag beim charakteristischen Ton laut dessen Namen.</p>
+  </section>
+
+  <!-- 24.4 -->
+  <h2 id="akkorde">24.4 Typische Akkorde der Modi</h2>
+  <p>In modaler Musik gibt es meist keine Dominante mit Leitton, die zur Tonika zieht. Der Modus wird stattdessen durch einen <strong>Pendelwechsel</strong> zwischen dem Grundakkord und einem Akkord etabliert, der den charakteristischen Ton enthält. Im Jazz und Pop nennt man so eine kurze, wiederholte Akkordfolge einen <dfn id="g-vamp">Vamp</dfn>.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Modus</th><th>typischer Wechsel</th><th>auf weißen Tasten</th><th>der charakteristische Ton steckt in</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>Dorisch</td><td>i – IV</td><td>Dm – G</td><td>G (h = große Sexte über d)</td><td><button class="btn" type="button" data-seq="50 62 65 69/2|43 62 67 71/2|50 62 65 69/2|43 62 67 71/2|50 62 65 69/4">▶</button></td></tr>
+        <tr><td>Phrygisch</td><td>i – ♭II</td><td>Em – F</td><td>F (f = kleine Sekunde über e)</td><td><button class="btn" type="button" data-seq="52 64 67 71/2|53 65 69 72/2|52 64 67 71/2|53 65 69 72/2|52 64 67 71/4">▶</button></td></tr>
+        <tr><td>Lydisch</td><td>I – II</td><td>F – G (über f im Bass)</td><td>G (h = übermäßige Quarte über f)</td><td><button class="btn" type="button" data-seq="41 65 69 72/2|41 67 71 74/2|41 65 69 72/2|41 67 71 74/2|41 65 69 72/4">▶</button></td></tr>
+        <tr><td>Mixolydisch</td><td>I – ♭VII</td><td>G – F</td><td>F (f = kleine Septime über g)</td><td><button class="btn" type="button" data-seq="43 62 67 71/2|41 60 65 69/2|43 62 67 71/2|41 60 65 69/2|43 62 67 71/4">▶</button></td></tr>
+        <tr><td>Äolisch</td><td>i – ♭VI – ♭VII – i</td><td>Am – F – G – Am</td><td>F (f = kleine Sexte über a)</td><td><button class="btn" type="button" data-seq="45 57 60 64/2|41 57 60 65/2|43 59 62 67/2|45 57 60 64/4">▶</button></td></tr>
+        <tr><td>Lokrisch</td><td>i° – ♭II</td><td>H° – C</td><td>C (c = kleine Sekunde über h)</td><td><button class="btn" type="button" data-seq="47 62 65 71/2|48 64 67 72/2|47 62 65 71/2|48 64 67 72/2|47 62 65 71/4">▶</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Hör dir besonders den Unterschied zwischen dorisch (Dm – G) und äolisch (Am – F) an. Beide sind Moll, aber der Dur-Akkord auf der IV-Stufe macht Dorisch heller und beweglicher.</p>
+
+  <section class="layer piano" data-title="Modale Vamps spielen und darüber improvisieren">
+    <p>Modi lernt man am besten, indem man in ihnen spielt. Ein einfaches Rezept:</p>
+    <ol>
+      <li>Die linke Hand spielt den Vamp aus der Tabelle, zum Beispiel Dm – G für d-Dorisch, jeweils zwei Takte pro Akkord. Für den Anfang genügen Grundton und Quinte (d – a, dann g – d).</li>
+      <li>Die rechte Hand improvisiert nur auf weißen Tasten. Beginne und ende Phrasen auf dem Grundton d.</li>
+      <li>Steuere bewusst den charakteristischen Ton an (bei Dorisch das h) und bleib einen Moment darauf.</li>
+    </ol>
+    <p>Wechsel danach zu e-Phrygisch (Em – F) und g-Mixolydisch (G – F). Die Tasten der rechten Hand bleiben dieselben weißen Tasten, nur der Grundton und der Vamp ändern sich. Du wirst hören, dass sich dieselben Töne in jedem Modus ganz anders anfühlen. Genau das ist die Erfahrung, um die es bei Modi geht.</p>
+  </section>
+
+  <!-- 24.5 -->
+  <h2 id="heute">24.5 Modi in der Musik von heute</h2>
+  <ul>
+    <li><strong>Dorisch:</strong> das häufigste Moll außerhalb der Klassik. Viele englische und irische Volkslieder sind dorisch, etwa „Scarborough Fair“ (durch Simon &amp; Garfunkel bekannt) und das Seemannslied „What Shall We Do with the Drunken Sailor“. Im Latin-Rock pendelt „Oye Como Va“ (Tito Puente, bekannt durch Santana) zwischen Am und D. Im Jazz steht Miles Davis’ „So What“ in d-Dorisch.</li>
+    <li><strong>Phrygisch:</strong> der Klang des Flamenco und vieler Metal-Riffs. Die kleine Sekunde über dem Grundton klingt dunkel und gespannt.</li>
+    <li><strong>Lydisch:</strong> schwebend, staunend, „magisch“. Filmmusik nutzt es gern für Flug- und Fantasyszenen. Die Titelmelodie der „Simpsons“ (Danny Elfman) ist ein bekanntes lydisches Beispiel.</li>
+    <li><strong>Mixolydisch:</strong> Dur ohne Leitton, typisch für Rock, Blues und Folk. „Sweet Home Alabama“ (Lynyrd Skynyrd) und „Norwegian Wood“ (The Beatles) sind mixolydisch geprägt.</li>
+    <li><strong>Äolisch:</strong> das Moll der Pop- und Rockballade, wenn die Dominante nicht erhöht wird (Kapitel 20).</li>
+    <li><strong>Lokrisch:</strong> als Tonart eines ganzen Stücks fast nie, weil der Grundakkord vermindert ist. Im Jazz dient es als Skala über halbverminderten Akkorden (Kapitel 30).</li>
+  </ul>
+
+  <!-- 24.6 -->
+  <h2 id="geschichte">24.6 Woher die Kirchentonarten kommen</h2>
+  <p>Die Modi stammen aus dem einstimmigen Gesang der christlichen Kirche des Mittelalters, dem gregorianischen Choral. Daher der Name Kirchentonarten. Die mittelalterliche Theorie kannte zunächst acht Modi. Sie hatten vier Grundtöne (Finales): d, e, f und g. Zu jedem Grundton gab es eine authentische Form, deren Melodien über dem Grundton lagen, und eine plagale Form („Hypo-“), deren Melodien den Grundton umspielten. Die plagalen Formen waren keine anderen Tonleitern, sondern eine andere Lage derselben.</p>
+  <p>Im Jahr 1547 veröffentlichte der Schweizer Humanist Heinrich Glarean seine Schrift <em>Dodekachordon</em> („Zwölfsaiter“). Er ergänzte die Modi auf a und c, die er äolisch und ionisch nannte, und kam so auf zwölf Modi. Damit waren Moll und Dur zum ersten Mal als eigene Modi theoretisch beschrieben. Den Modus auf h lehnte Glarean als unbrauchbar ab, weil über seinem Grundton keine reine Quinte liegt. Der Name „lokrisch“ setzte sich erst später durch.</p>
+  <p>Im 17. Jahrhundert verdrängten Dur und Moll die übrigen Modi in der Kunstmusik weitgehend. Die anderen Modi lebten in Volksmusik und Kirchenliedern weiter. Im späten 19. und im 20. Jahrhundert wurden sie wiederentdeckt, von Komponisten wie Debussy und Ravel, im Jazz ab den 1950er-Jahren und schließlich in Rock und Filmmusik.</p>
+
+  <section class="layer deep" data-title="Falsche Namen: warum dorisch nicht griechisch-dorisch ist">
+    <p>Die Namen dorisch, phrygisch, lydisch und mixolydisch stammen aus dem antiken Griechenland. Dort bezeichneten sie Oktavausschnitte eines Tonsystems, benannt nach Volksstämmen und Regionen. Mittelalterliche Gelehrte übernahmen die Namen ab etwa dem 9. Jahrhundert für die Kirchentonarten, weil sie ihrem Gesang die Autorität der Antike verleihen wollten.</p>
+    <p>Bei der Übertragung gingen die Bedeutungen allerdings durcheinander. Die griechische dorische Oktavgattung entspricht ungefähr einer Tonleiter von e bis e auf den weißen Tasten, also dem, was wir heute phrygisch nennen. Ähnlich verschoben sind die anderen Namen. Unsere Modi heißen also griechisch, sind es aber nicht. Glareans Neuschöpfungen äolisch und ionisch folgten demselben Prinzip: antike Namen für neu systematisierte Tonleitern.</p>
+    <p>Dazu kommt, dass „Modus“ im Mittelalter mehr bedeutete als eine Tonleiter. Zu einem Modus gehörten auch typische Melodiewendungen, ein Tonumfang und ein zentraler Rezitationston. Wenn heute im Jazz von „Modi“ die Rede ist, meint man dagegen fast nur die Schrittfolge. Beide Bedeutungen haben denselben Namen, sind aber nicht dasselbe.</p>
+  </section>
+
+  <section class="layer deep" data-title="Warum sich Dur und Moll durchgesetzt haben">
+    <p>Wenn sieben Modi gleich gut verfügbar sind, warum dominieren dann zwei? Der Grund liegt in der Harmonik, die sich ab dem 16. Jahrhundert entwickelte.</p>
+    <p>Mehrstimmige Musik braucht Schlüsse, und der stärkste Schluss ist V – I mit Leitton (Kapitel 16). Ionisch hat einen Leitton und eine Dur-Dominante von Haus aus. Äolisch hat beides nicht, lässt sich aber mit einem einzigen erhöhten Ton dazu bringen (Kapitel 20). Lydisch und mixolydisch haben Probleme mit der Subdominante bzw. der Dominante. Phrygisch hat keine reine Quinte über der ii-Stufe und eine Moll-Dominante. Lokrisch hat nicht einmal eine stabile Tonika.</p>
+    <p>Als die Musik immer stärker auf Akkordfolgen und Kadenzen setzte, blieben die beiden Modi übrig, die sich am besten mit der Kadenz V – I vertrugen. Die anderen Modi verschwanden, weil sie für etwas anderes taugen. Ihre Stärke sind Farbe und Stimmung, weniger Spannung und Auflösung. Genau deshalb sind sie in Musik zurückgekehrt, die nicht auf Kadenzen baut, etwa im modalen Jazz oder in Filmmusik.</p>
+  </section>
+
+  <section class="layer deep" data-title="Lokrisch: der Modus ohne Zuhause">
+    <p>Über h liegt auf den weißen Tasten keine reine Quinte, sondern das f, eine verminderte Quinte (Kapitel 5). Der Grundakkord h – d – f ist vermindert. Ein verminderter Akkord klingt instabil und will sich auflösen, meistens nach C. Wer in h-Lokrisch spielt, hört deshalb ständig den Sog nach C-Dur. Der Grundton kann sich nicht als Zentrum behaupten.</p>
+    <p>Das macht Lokrisch zum theoretischen Grenzfall. Es existiert als Schrittfolge und wird im Jazz über halbverminderten Akkorden gespielt, wo es tatsächlich nur eine Farbe über einem flüchtigen Akkord ist. Als Grundlage eines ganzen Stücks funktioniert es kaum. Einige Metal-Bands haben es trotzdem versucht, gerade weil es so unstabil und düster klingt.</p>
+  </section>
+
+  <!-- 24.7 -->
+  <h2 id="hoeren">24.7 Modi hören</h2>
+  <p>Um Modi am Klang zu unterscheiden, stell dir zuerst die Frage nach dem Geschlecht: Klingt der Grundakkord nach Dur oder nach Moll? Danach suchst du den charakteristischen Ton.</p>
+  <ul>
+    <li>Dur-artig: Gibt es einen Leitton zum Grundton? Dann ionisch. Klingt es offen und ohne Zug nach oben, mit einem tiefen Septimton? Mixolydisch. Klingt die Quarte gespannt und schwebend? Lydisch.</li>
+    <li>Moll-artig: Klingt die Sexte hell? Dorisch. Klingt sie dunkel? Äolisch. Liegt direkt über dem Grundton ein Halbton? Phrygisch.</li>
+  </ul>
+  <div class="mode-trainer"></div>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Die sieben Modi entstehen, wenn man die Dur-Tonleiter auf jeder ihrer Stufen beginnt: ionisch, dorisch, phrygisch, lydisch, mixolydisch, äolisch, lokrisch.</li>
+    <li>Ionisch = Dur, äolisch = natürliches Moll. Die anderen unterscheiden sich von Dur oder Moll durch einen charakteristischen Ton.</li>
+    <li>Nach Helligkeit: lydisch – ionisch – mixolydisch – dorisch – äolisch – phrygisch – lokrisch. Jeder Schritt erniedrigt einen Ton, das folgt aus dem Quintenzirkel.</li>
+    <li>Vorzeichen bestimmst du über die Dur-Elterntonart (dorisch = 2. Stufe, phrygisch = 3. usw.).</li>
+    <li>Modale Musik etabliert ihren Grundton über Vamps wie i – IV (dorisch) oder I – ♭VII (mixolydisch) statt über V – I.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">24.1</span><div><span class="kind">Theorie</span>Welcher Modus entsteht, wenn du auf den weißen Tasten von g bis g' spielst? Welcher von a bis a'?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>g bis g': mixolydisch (G G H G G H G). a bis a': äolisch, also natürliches Moll.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">24.2</span><div><span class="kind">Theorie</span>Welche Vorzeichen hat e-Dorisch? Welche hat c-Dorisch?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>e ist die 2. Stufe von D-Dur, also fis und cis. c ist die 2. Stufe von B-Dur, also b und es. Kontrolle über Weg 2: c-Moll hat b, es, as; Dorisch hebt die Sexte as zu a. Übrig bleiben b und es.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">24.3</span><div><span class="kind">Theorie</span>Schreib die Töne von a-Phrygisch und von f-Mixolydisch.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>a-Phrygisch (Elterntonart F-Dur): a – b – c – d – e – f – g. f-Mixolydisch (Elterntonart B-Dur): f – g – a – b – c – d – es.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">24.4</span><div><span class="kind">Theorie</span>Welcher Ton unterscheidet c-Lydisch von C-Dur, und welcher unterscheidet d-Dorisch von d-Moll?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>c-Lydisch hat fis statt f (übermäßige Quarte). d-Dorisch hat h statt b (große Sexte).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">24.5</span><div><span class="kind">Theorie</span>Ordne nach Helligkeit, vom hellsten zum dunkelsten: dorisch, lydisch, phrygisch, mixolydisch, äolisch.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>lydisch – mixolydisch – dorisch – äolisch – phrygisch. (Ionisch läge zwischen lydisch und mixolydisch.)</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">24.6</span><div><span class="kind">Notenlesen</span>Bestimme die Modi der beiden Tonleitern.</div></div>
+      <div class="abc" data-bpm="140">
+        X:1
+        M:none
+        L:1/8
+        K:C
+        "^1" G A B c d e f g | "^2" E F G A B c d e |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: G-Mixolydisch, die Tonleiter von g' bis g'' auf weißen Tasten, große Terz und kleine Septime f. 2: E-Phrygisch, von e' bis e'', kleine Sekunde f über dem Grundton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">24.7</span><div><span class="kind">Am Klavier</span>Spiel den Vamp Dm – G (d-Dorisch) eine Minute lang und improvisiere mit der rechten Hand auf weißen Tasten. Wechsel dann zu Am – F – G – Am (a-Äolisch). Beschreibe den Unterschied in einem Satz.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Mögliche Beschreibung: Dorisch klingt heller und tänzerischer, weil der G-Dur-Akkord die große Sexte h über d bringt. Äolisch klingt schwerer und trauriger, weil der F-Dur-Akkord die kleine Sexte f über a betont.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">24.8</span><div><span class="kind">Am Klavier</span>Spiel auf dem Grundton c nacheinander c-Ionisch, c-Mixolydisch und c-Dorisch. Welche Tasten ändern sich jeweils?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Ionisch → Mixolydisch: h wird b. Mixolydisch → Dorisch: e wird es. Pro Schritt ändert sich genau ein Ton, jeweils um einen Halbton nach unten.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">24.9</span><div><span class="kind">Gehör</span>Üb mit dem Modus-Trainer in der Auswahl „Einstieg“ und der Spielweise „Akkordfolge“, bis du acht von zehn Aufgaben richtig hast. Wechsel dann zur Spielweise „Tonleiter“.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Achte bei der Akkordfolge auf den Grundakkord (Dur oder Moll) und dann auf den zweiten Akkord. Bei Moll: Ist der zweite Akkord Dur und liegt eine Quarte über dem Grundton, ist es dorisch. Bei Dur: Liegt er eine Quinte darüber, ist es ionisch. Liegt er einen Ganzton unter dem Grundton, mixolydisch. Ist der Grundakkord Moll und der zweite Akkord der große Akkord eine kleine Sexte darüber, äolisch.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">24.10</span><div><span class="kind">Vertiefung</span>Begründe mit der Quintenkette f – c – g – d – a – e – h, warum lydisch der hellste Modus ist.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>In f-Lydisch steht der Grundton f am unteren Ende der Kette. Alle anderen sechs Töne liegen in Quintrichtung darüber, also in der „hellen“ Richtung zu den Kreuztonarten hin. Dadurch erhält jede Stufe die größtmögliche Form: große Sekunde, große Terz, übermäßige Quarte, große Sexte, große Septime. Ein noch hellerer Modus ist mit diesen sieben Tönen nicht möglich.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(24);
+  document.querySelectorAll("[data-seq]").forEach((b) => b.addEventListener("click", () => {
+    const steps = b.dataset.seq.split("|").map((s) => {
+      const [n, d] = s.split("/");
+      return [n.trim().split(/\s+/).map(Number), +(d || 2)];
+    });
+    Book.audio.seq(steps, +b.dataset.bpm || 72);
+  }));
+
+  // Die sieben Modi: Schrittfolge in Halbtönen ab Grundton, Stufe des charakteristischen Tons, Stufe des Vamp-Akkords
+  const MODES = [
+    { id: "lyd", label: "Lydisch", white: 65, steps: [0, 2, 4, 6, 7, 9, 11], charDeg: 3, charName: "übermäßige Quarte", vamp: 1 },
+    { id: "ion", label: "Ionisch", white: 60, steps: [0, 2, 4, 5, 7, 9, 11], charDeg: 6, charName: "große Septime (Leitton)", vamp: 4 },
+    { id: "mix", label: "Mixolydisch", white: 67, steps: [0, 2, 4, 5, 7, 9, 10], charDeg: 6, charName: "kleine Septime", vamp: 6 },
+    { id: "dor", label: "Dorisch", white: 62, steps: [0, 2, 3, 5, 7, 9, 10], charDeg: 5, charName: "große Sexte", vamp: 3 },
+    { id: "aeo", label: "Äolisch", white: 69, steps: [0, 2, 3, 5, 7, 8, 10], charDeg: 5, charName: "kleine Sexte", vamp: 5 },
+    { id: "phr", label: "Phrygisch", white: 64, steps: [0, 1, 3, 5, 7, 8, 10], charDeg: 1, charName: "kleine Sekunde", vamp: 1 },
+    { id: "loc", label: "Lokrisch", white: 71, steps: [0, 1, 3, 5, 6, 8, 10], charDeg: 4, charName: "verminderte Quinte", vamp: 1 }
+  ];
+  const scaleOf = (md, root) => md.steps.map((s) => root + s).concat(root + 12);
+  const triad = (md, root, deg) => [0, 2, 4].map((k) => {
+    const i = deg + k;
+    return root + md.steps[i % 7] + 12 * Math.floor(i / 7);
+  });
+  function playScale(md, root) {
+    const sc = scaleOf(md, root);
+    const t = 0.3;
+    Book.audio.note(root - 12, 0, sc.length * 2 * t, 0.6);
+    sc.concat(sc.slice(0, -1).reverse()).forEach((m, i) => Book.audio.note(m, i * t, t * 0.95));
+  }
+  function playVamp(md, root) {
+    const i = [root - 12].concat(triad(md, root, 0));
+    const vb = root - 12 + md.steps[md.vamp];
+    const c = [md.id === "lyd" ? root - 12 : vb].concat(triad(md, root, md.vamp));
+    Book.audio.seq([[i, 2], [c, 2], [i, 2], [c, 2], [i, 3]], 100);
+  }
+
+  // Modus-Explorer
+  (function () {
+    const box = document.getElementById("ex-modes"), info = document.getElementById("ex-info");
+    const kb = Book.keyboard(document.getElementById("ex-kbd"), { from: 60, to: 84, labels: "white", ariaLabel: "Klaviatur des Modus-Explorers" });
+    let cur = MODES[1];
+    MODES.forEach((md) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "btn"; b.textContent = md.label; b.dataset.id = md.id;
+      b.setAttribute("aria-pressed", "false");
+      box.appendChild(b);
+    });
+    const rootMode = () => document.querySelector('input[name="ex-root"]:checked').value;
+    function show(play) {
+      const root = rootMode() === "c" ? 60 : cur.white;
+      const sc = scaleOf(cur, root);
+      const charM = root + cur.steps[cur.charDeg];
+      kb.mark(sc.map((m) => ({ m, cls: m === root || m === root + 12 ? "c2" : (m === charM ? "c3" : "") })));
+      box.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.id === cur.id)));
+      const names = sc.slice(0, 7).map((m, i) => Book.spellUp ? spell(root, i, cur.steps[i]) : Book.name(m)).join(" – ");
+      info.innerHTML = `<strong>${Book.name(root, { octave: false, capital: true })}-${cur.label}:</strong> ${names}. Charakteristischer Ton: ${cur.charName}.`;
+      if (play) playScale(cur, root);
+    }
+    // korrekt benannter Ton über dem Grundton (Stufe i, Halbtöne s); für c als Grundton reicht spellUp
+    function spell(root, i, s) {
+      const nm = Book.spellUp(root, i + 1, s);
+      return nm.replace(/'+$/, "");
+    }
+    box.addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-id]"); if (!b) return;
+      cur = MODES.find((m) => m.id === b.dataset.id); show(true);
+    });
+    document.getElementById("explorer").addEventListener("change", () => show(false));
+    show(false);
+  })();
+
+  // Modus-Trainer
+  Book.earTrainer(document.querySelector(".mode-trainer"), {
+    title: "Gehörtrainer: Modi",
+    intro: "Du hörst einen Modus auf einem zufälligen Grundton, entweder als Tonleiter über einem liegenden Grundton oder als typische Akkordfolge.",
+    items: MODES.map((m) => ({ id: m.id, label: m.label })),
+    presets: [
+      { label: "Einstieg", ids: ["ion", "aeo", "dor", "mix"] },
+      { label: "Dur-artig", ids: ["lyd", "ion", "mix"] },
+      { label: "Moll-artig", ids: ["dor", "aeo", "phr"] },
+      { label: "Alle sieben", ids: MODES.map((m) => m.id) }
+    ],
+    modes: [{ id: "vamp", label: "Akkordfolge" }, { id: "scale", label: "Tonleiter" }, { id: "mix", label: "gemischt" }],
+    from: 45, to: 84,
+    build(item, mode) {
+      const md = MODES.find((m) => m.id === item.id);
+      const root = 55 + Math.floor(Math.random() * 10);
+      const sc = scaleOf(md, root);
+      const charM = root + md.steps[md.charDeg];
+      return {
+        play: mode === "scale" ? () => playScale(md, root) : () => playVamp(md, root),
+        marks: sc.map((m) => ({ m, cls: m === root || m === root + 12 ? "c2" : (m === charM ? "c3" : "") })),
+        answer: `${md.label} auf ${Book.name(root, { octave: false, flat: true })}. Charakteristischer Ton: ${md.charName}.`
+      };
+    }
+  });
+</script>
+</body>
+</html>

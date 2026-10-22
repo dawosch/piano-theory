@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Begleitmuster · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil VII · Kapitel 46</div>
+    <h1>Begleitmuster</h1>
+    <p class="lede">Ein Leadsheet zeigt dir die Akkorde, aber nicht, wie du sie spielen sollst. Dieses Kapitel ist ein Werkzeugkasten: von einfachen Blockakkorden über Arpeggien und Alberti-Bässe bis zu Pop-Patterns, Walzer und Stride. Alle Beispiele benutzen dieselbe Akkordfolge, damit du die Muster direkt vergleichen kannst.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>eine Akkordfolge aus einem Leadsheet mit mindestens sechs verschiedenen Mustern begleiten,</li>
+      <li>Bass, Harmonie und Rhythmus bewusst auf die Hände verteilen,</li>
+      <li>erklären, warum Akkorde in tiefer Lage dumpf klingen und wie du das vermeidest,</li>
+      <li>ein passendes Muster für Stil, Tempo und Taktart auswählen,</li>
+      <li>Muster innerhalb eines Songs abwechseln, um Strophe und Refrain zu unterscheiden.</li>
+    </ul>
+  </div>
+
+  <!-- 46.1 -->
+  <h2 id="aufgaben">46.1 Was eine Begleitung leisten muss</h2>
+  <p>Jede Begleitung erfüllt drei Aufgaben:</p>
+  <ul>
+    <li><strong>Bass:</strong> Er legt das Fundament. Meist ist es der Grundton des Akkords, bei Slash-Akkorden wie C/E der Ton hinter dem Schrägstrich (Kapitel 17).</li>
+    <li><strong>Harmonie:</strong> Die übrigen Akkordtöne geben die Farbe, also Dur, Moll, Septime.</li>
+    <li><strong>Rhythmus:</strong> Wann und wie oft die Töne erklingen, bestimmt den Charakter, also ruhig, treibend, tänzerisch.</li>
+  </ul>
+  <p>Ein <dfn id="g-begleitmuster">Begleitmuster</dfn> ist eine feste Art, diese drei Aufgaben auf die Hände zu verteilen und rhythmisch zu wiederholen. Ist das Muster einmal gelernt, setzt du für jeden Akkord nur noch die passenden Töne ein. Die Hand läuft dann fast von selbst, und der Kopf ist frei für Melodie und Ausdruck.</p>
+  <p>Alle Beispiele dieses Kapitels benutzen die Folge <strong>C – G – Am – F</strong> (I–V–vi–IV in C-Dur). Sie ist eine der häufigsten Akkordfolgen der Popmusik (Kapitel 18).</p>
+
+  <!-- 46.2 -->
+  <h2 id="block">46.2 Blockakkorde</h2>
+  <p>Die einfachste Begleitung: Die linke Hand spielt den Grundton, die rechte den Akkord, beide gleichzeitig. Damit es nicht nach Treppensteigen klingt, wählt die rechte Hand die Umkehrungen so, dass sie sich möglichst wenig bewegt (Kapitel 12). Gemeinsame Töne bleiben liegen, die anderen gehen in den nächstgelegenen Ton.</p>
+  <div class="abc" data-bpm="84" data-caption="Blockakkorde in Vierteln, mit kurzen Wegen in der rechten Hand">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[EGc] [EGc] [EGc] [EGc] | "G"[DGB] [DGB] [DGB] [DGB] | "Am"[EAc] [EAc] [EAc] [EAc] | "F"[FAc] [FAc] [FAc] [FAc] |]
+    [V:LH] C,4 | G,,4 | A,,4 | F,,4 |]
+  </div>
+  <p>Achte auf die rechte Hand: Von C (e'–g'–c'') nach G (d'–g'–h') bleibt g' liegen, die anderen Töne gehen nur einen Schritt. Von Am nach F bleiben c'' und a' liegen. Die Hand bewegt sich kaum.</p>
+
+  <section class="layer piano" data-title="Blockakkorde lebendig machen">
+    <p>Schon kleine Änderungen bringen Bewegung in Blockakkorde:</p>
+    <ul>
+      <li><strong>Akzente:</strong> Betone Zählzeit 2 und 4 etwas mehr. Das ist der Backbeat, das Fundament von Rock und Pop.</li>
+      <li><strong>Bass vorziehen:</strong> Spiel den Grundton auf 1, die rechte Hand erst auf 2, 3 und 4.</li>
+      <li><strong>Verschiedene Längen:</strong> Halbe Noten in der Strophe, Viertel im Refrain. Der Song gewinnt an Energie, ohne dass du etwas Neues lernen musst.</li>
+    </ul>
+    <p>Spiel die Folge C–G–Am–F mit allen drei Varianten, jeweils viermal hintereinander.</p>
+  </section>
+
+  <!-- 46.3 -->
+  <h2 id="arpeggio">46.3 Gebrochene Akkorde in der linken Hand</h2>
+  <p>Statt alle Töne gleichzeitig zu spielen, kannst du sie nacheinander spielen. Das klassische Muster für Balladen ist der <strong>Grundton–Quinte–Oktave-Bass</strong> (1–5–8): Die linke Hand spielt Grundton, Quinte, Oktave und wieder Quinte in Achteln. Die rechte Hand hält den Akkord oder spielt die Melodie.</p>
+  <div class="abc" data-bpm="76" data-caption="Linke Hand 1–5–8–5 in Achteln, rechte Hand in halben Noten">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[EGc]4 [EGc]4 | "G"[DGB]4 [DGB]4 | "Am"[EAc]4 [EAc]4 | "F"[FAc]4 [FAc]4 |]
+    [V:LH] C,,G,,C,G,, C,,G,,C,G,, | G,,D,G,D, G,,D,G,D, | A,,E,A,E, A,,E,A,E, | F,,C,F,C, F,,C,F,C, |]
+  </div>
+  <p>Das Muster klingt voll, weil Grundton und Quinte die stärksten Teiltöne jedes Akkords verstärken (Abschnitt 5.10). Die Terz, die über Dur oder Moll entscheidet, kommt von der rechten Hand. Erweitert man das Muster um die Dezime (die Terz eine Oktave höher), entsteht 1–5–8–10. Es klingt noch breiter, braucht aber eine große Hand.</p>
+
+  <section class="layer piano" data-title="Die linke Hand automatisieren">
+    <p>Begleitmuster leben davon, dass die linke Hand ohne Nachdenken läuft. So kommst du dahin:</p>
+    <ol>
+      <li><strong>Erst die Griffe.</strong> Leg die linke Hand auf C–G–c (Finger 5–2–1). Das ist die Grundform. Für G, Am und F verschiebst du sie nur. Spiel die vier Griffe als Akkorde, bis du sie blind findest.</li>
+      <li><strong>Dann das Muster.</strong> Spiel 1–5–8–5 nur über C, viermal hintereinander, im Tempo 60. Dann nur über G. Dann im Wechsel.</li>
+      <li><strong>Erst dann die rechte Hand dazu.</strong> Halte rechts zunächst nur Akkorde in Halben, später die Melodie.</li>
+    </ol>
+    <p>Wenn die linke Hand beim Akkordwechsel stockt, liegt es fast immer am Sprung vom letzten Achtel zum neuen Grundton. Üb genau diesen Sprung isoliert: letzter Ton von C, erster Ton von G, hin und her.</p>
+  </section>
+
+  <!-- 46.4 -->
+  <h2 id="alberti">46.4 Der Alberti-Bass</h2>
+  <p>Der <dfn id="g-alberti-bass">Alberti-Bass</dfn> bricht einen Akkord in enger Lage nach dem Muster <strong>tief – hoch – mitte – hoch</strong>. Für C-Dur sind das c–g–e–g. Er war das Standardmuster der Wiener Klassik und ist in Sonaten von Haydn, Mozart und dem frühen Beethoven allgegenwärtig, etwa im Anfang von Mozarts Sonate C-Dur KV 545.</p>
+  <div class="abc" data-bpm="84" data-caption="Alberti-Bass mit kurzen Wegen: C, G/H, Am/C, F/C">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"E4 G4 | "G/B"D4 G4 | "Am/C"E4 C4 | "F/C"F4 A4 |]
+    [V:LH] C,G,E,G, C,G,E,G, | B,,G,D,G, B,,G,D,G, | C,A,E,A, C,A,E,A, | C,A,F,A, C,A,F,A, |]
+  </div>
+  <p>Die linke Hand bleibt dabei in einer Lage. Statt immer den Grundton unten zu spielen, wählt sie die Umkehrung, die am nächsten liegt: G als G/H, Am als Am/C, F als F/C. Das klingt geschmeidiger und ist leichter zu spielen. Der Alberti-Bass verlangt eine gleichmäßige, leichte linke Hand. Der Daumen spielt den oberen Ton und darf nicht hervorstechen.</p>
+
+  <section class="layer deep" data-title="Warum der Alberti-Bass um 1750 so beliebt wurde">
+    <p>Benannt ist das Muster nach dem venezianischen Komponisten Domenico Alberti (um 1710–1740), der es in seinen Cembalosonaten sehr häufig verwendete. Erfunden hat er es nicht, aber durch ihn wurde es zum Markenzeichen.</p>
+    <p>Seine Beliebtheit hat einen klanglichen Grund. Auf Cembalo und frühem Hammerklavier verklingt ein Ton schnell, und Haltepedale gab es noch kaum (Kapitel 45). Ein lang gehaltener Akkord wäre nach kurzer Zeit kaum noch zu hören. Der Alberti-Bass schlägt die Akkordtöne ständig neu an und hält die Harmonie so dauerhaft hörbar, ohne dass ein Ton lange klingen muss.</p>
+    <p>Er passt auch zum Stil der Zeit. Die Musik der Klassik bevorzugte eine klare Melodie mit unauffälliger Begleitung, im Gegensatz zum vielstimmigen Barock. Der Alberti-Bass liefert genau das: Er füllt Rhythmus und Harmonie, liegt aber in enger Lage unter der Melodie und drängt sich nicht vor. Kritiker fanden ihn schon damals manchmal zu bequem. Wo er gut eingesetzt ist, etwa bei Mozart, bewegt er sich mit der Harmonie und reagiert auf die Melodie.</p>
+  </section>
+
+  <!-- 46.5 -->
+  <h2 id="pop">46.5 Pop-Patterns</h2>
+  <p>In Pop und Rock trägt die Begleitung den Groove. Zwei Grundmuster decken sehr viele Songs ab.</p>
+  <h4>Oktavbass und Achtelakkorde</h4>
+  <p>Die linke Hand spielt den Grundton als Oktave und hält ihn. Die rechte Hand spielt den Akkord in gleichmäßigen Achteln. Mit Betonung auf 2 und 4 entsteht ein treibender Rock-Groove, leise und gleichmäßig klingt es wie eine ruhige Popballade.</p>
+  <div class="abc" data-bpm="96" data-caption="Linke Hand Oktaven, rechte Hand Achtelakkorde">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[EGc][EGc][EGc][EGc] [EGc][EGc][EGc][EGc] | "G"[DGB][DGB][DGB][DGB] [DGB][DGB][DGB][DGB] | "Am"[EAc][EAc][EAc][EAc] [EAc][EAc][EAc][EAc] | "F"[FAc][FAc][FAc][FAc] [FAc][FAc][FAc][FAc] |]
+    [V:LH] [C,,C,]8 | [G,,G,]8 | [A,,A,]8 | [F,,F,]8 |]
+  </div>
+  <h4>Der 3-3-2-Rhythmus</h4>
+  <p>Teilt man die acht Achtel eines Taktes in Gruppen von 3 + 3 + 2, entsteht ein Rhythmus mit eingebauter Synkope. Er heißt <dfn id="g-tresillo">Tresillo</dfn> und stammt aus afro-kubanischer Musik. Über Habanera, Rhythm and Blues und Rock ’n’ Roll ist er in unzählige Popsongs gelangt.</p>
+  <div class="abc" data-bpm="96" data-caption="Tresillo: Akkorde auf den Achteln 1, 4 und 7">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[EGc]3 [EGc]3 [EGc]2 | "G"[DGB]3 [DGB]3 [DGB]2 | "Am"[EAc]3 [EAc]3 [EAc]2 | "F"[FAc]3 [FAc]3 [FAc]2 |]
+    [V:LH] [C,,C,]8 | [G,,G,]8 | [A,,A,]8 | [F,,F,]8 |]
+  </div>
+  <p>Zähl mit: „<strong>1</strong> und 2 <strong>und</strong> 3 und <strong>4</strong> und“. Die Akkorde fallen auf 1, auf das „und“ nach 2 und auf 4. Der mittlere Anschlag kommt einen halben Schlag zu früh, verglichen mit einem gleichmäßigen Rhythmus. Genau das erzeugt das Ziehen nach vorn.</p>
+
+  <section class="layer deep" data-title="Warum Synkopen grooven">
+    <p>Unser Gehirn hört Musik nicht passiv, es sagt sie voraus. Sobald ein Puls und ein Takt erkennbar sind, bildet es eine innere <strong>metrische Hierarchie</strong>: Zählzeit 1 ist am stärksten, 3 etwas schwächer, 2 und 4 noch schwächer, die „und“-Zeiten am schwächsten (Kapitel 4). Ein Ton auf einer starken Zählzeit bestätigt die Erwartung. Ein betonter Ton auf einer schwachen Zeit, gefolgt von Stille auf der starken, widerspricht ihr. Das ist eine <dfn id="g-synkope-groove">Synkope</dfn>.</p>
+    <p>Der Musikpsychologe David Huron beschreibt in seinem Buch <em>Sweet Anticipation</em> (2006), wie solche Abweichungen von der Erwartung Spannung und Aufmerksamkeit erzeugen. Eine Studie von Witek und Kollegen (2014) fand, dass Versuchspersonen den stärksten Drang zur Bewegung bei Rhythmen mit <em>mittlerer</em> Synkopierung spürten. Rhythmen ganz ohne Synkopen fanden sie langweilig, stark synkopierte verwirrend. Der Tresillo liegt genau in diesem mittleren Bereich: Eine einzige Verschiebung reicht, und der Puls bleibt trotzdem klar erkennbar, weil die 1 erhalten bleibt.</p>
+    <p>Für deine Begleitung heißt das: Eine Synkope wirkt nur, wenn der Grundpuls stabil ist. Spielt die linke Hand einen gleichmäßigen Bass auf 1, darf die rechte Hand gegen ihn arbeiten. Sind beide Hände synkopiert, verliert der Zuhörer schnell den Halt.</p>
+  </section>
+
+  <!-- 46.6 -->
+  <h2 id="walzer-stride">46.6 Walzer und Stride: Bass und Akkord im Wechsel</h2>
+  <p>In vielen Stilen spielt die linke Hand Bass und Akkord <em>abwechselnd</em>. Der Bass liegt tief, der Akkord in der Mittellage. Die rechte Hand ist frei für die Melodie.</p>
+  <h4>Walzer</h4>
+  <p>Im 3/4-Takt fällt der Bass auf 1, der Akkord auf 2 und 3: „Bass – Akkord – Akkord“. Dasselbe Prinzip nutzen viele Volkslieder und Schunkellieder.</p>
+  <div class="abc" data-bpm="132" data-caption="Walzerbegleitung: Bass auf 1, Akkord auf 2 und 3">
+    X:1
+    M:3/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"E2 G | "G7"F3 | "G7"D2 F | "C"E3 |]
+    [V:LH] C, [E,G,] [E,G,] | G,, [F,B,] [F,B,] | G,, [F,B,] [F,B,] | C, [E,G,] [E,G,] |]
+  </div>
+  <h4>Stride</h4>
+  <p>Im 4/4-Takt wird daraus der <dfn id="g-stride">Stride</dfn>: Bass auf 1 und 3, Akkord auf 2 und 4. Die linke Hand springt ständig zwischen tiefer und mittlerer Lage hin und her. Englisch <em>stride</em> heißt „Schritt“. Oft wechselt der Bass zwischen Grundton und Quinte.</p>
+  <div class="abc" data-bpm="100" data-caption="Stride-Grundmuster: Bass auf 1 und 3, Akkord auf 2 und 4">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"c4 | "F"A4 | "G7"B4 | "C"c4 |]
+    [V:LH] C,, [E,G,C] G,, [E,G,C] | F,, [F,A,C] C, [F,A,C] | G,, [F,B,D] D, [F,B,D] | C,, [E,G,C] G,, [E,G,C] |]
+  </div>
+
+  <section class="layer deep" data-title="Vom Ragtime zum Stride">
+    <p>Das Muster „Bass – Akkord“ war um 1900 das Rückgrat des <strong>Ragtime</strong>. Scott Joplin und andere schrieben Stücke, in denen die linke Hand einen gleichmäßigen Marschrhythmus spielt und die rechte darüber stark synkopierte Melodien. Der Reiz entsteht genau aus dem Gegensatz (siehe die Vertiefung in 46.5).</p>
+    <p>In den 1920er-Jahren entwickelten Pianisten in Harlem daraus den <strong>Stride Piano</strong>. James P. Johnson, Willie „The Lion“ Smith und Fats Waller spielten schneller, mit weiten Sprüngen der linken Hand, oft mit Oktaven oder Dezimen im Bass, und sie improvisierten. Stride war Tanz- und Partymusik, und er war ein Wettbewerb: In sogenannten Cutting Contests versuchten Pianisten, einander zu übertrumpfen.</p>
+    <p>Der Stride verlangt von der linken Hand Sprünge von über einer Oktave im Viertel-Tempo. Das gelingt nur, wenn die Hand den Sprung als eine Bewegung lernt und nicht als zwei Einzeltöne. Später übernahmen Swing-Pianisten wie Teddy Wilson und Art Tatum Elemente davon. Spuren des Musters finden sich bis heute im Boogie-Woogie, im Honky-Tonk und in vielen Pop-Klavierbegleitungen.</p>
+  </section>
+
+  <section class="layer piano" data-title="Sprünge in der linken Hand sicher treffen">
+    <ul>
+      <li><strong>Mit dem Blick vorausgehen.</strong> Schau beim Sprung immer zum Ziel, nicht zur Taste, die du gerade spielst. Die Hand folgt dem Blick.</li>
+      <li><strong>Den Sprung als Bogen spielen.</strong> Die Hand fliegt in einem flachen Bogen, nicht hoch hinauf. Je flacher, desto schneller und sicherer.</li>
+      <li><strong>Früh ankommen.</strong> Üb die Sprünge so, dass die Hand schon über dem Ziel schwebt, bevor sie spielt. Zähl dabei: Bass auf „1“, auf „und“ ist die Hand schon über dem Akkord.</li>
+      <li><strong>Blind üben.</strong> Wenn der Sprung sicher sitzt, üb ihn mit geschlossenen Augen. Die schwarzen Tasten dienen dir als Orientierung.</li>
+    </ul>
+  </section>
+
+  <!-- 46.7 -->
+  <h2 id="lage">46.7 Die richtige Lage</h2>
+  <p>Wo eine Begleitung auf der Klaviatur liegt, ist fast so wichtig wie das Muster selbst. Drei Faustregeln:</p>
+  <ul>
+    <li><strong>Im tiefen Bass nur Grundton, Oktave und Quinte.</strong> Terzen unterhalb des kleinen c klingen schnell dumpf und brummig.</li>
+    <li><strong>Akkorde in der Mittellage</strong> (etwa zwischen c und c'') klingen am klarsten.</li>
+    <li><strong>Die Begleitung bleibt unter der Melodie.</strong> Liegen Akkordtöne über der Melodie, wird sie verdeckt.</li>
+  </ul>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="36 40 43" data-mode="harm">▶ C-Dur-Akkord tief (C–E–G)</button>
+    <button class="btn" type="button" data-play="48 52 55" data-mode="harm">▶ derselbe Akkord eine Oktave höher</button>
+    <button class="btn" type="button" data-play="36 43 52 60" data-mode="harm">▶ weit gelegt: C–G–e–c'</button>
+  </div>
+
+  <section class="layer deep" data-title="Warum tiefe Terzen brummen">
+    <p>In Abschnitt 5.10 hast du gesehen, dass zwei Töne rau klingen, wenn Teiltöne nah beieinander liegen, ohne zusammenzufallen. Entscheidend ist dabei die <strong>kritische Bandbreite</strong> des Gehörs: Liegen zwei Frequenzen innerhalb dieser Bandbreite, stören sie sich. Unterhalb von etwa 500 Hz ist sie ungefähr 100 Hz breit, weitgehend unabhängig von der Tonhöhe.</p>
+    <p>Rechnen wir eine große Terz in zwei Lagen durch:</p>
+    <ul>
+      <li>Große Terz c'–e' (261,6 und 329,6 Hz): Die Grundtöne liegen 68 Hz auseinander, also am Rand der kritischen Bandbreite.</li>
+      <li>Große Terz C–E (65,4 und 82,4 Hz): Die Grundtöne liegen nur 17 Hz auseinander, also tief innerhalb der kritischen Bandbreite. Dazu kommen die vielen dicht liegenden Teiltöne beider Töne.</li>
+    </ul>
+    <p>Das Verhältnis ist in beiden Lagen dasselbe (5:4), aber der absolute Abstand in Hertz schrumpft in der Tiefe. Unser Gehör urteilt bei der Rauigkeit nach dem Hertz-Abstand. Deshalb klingt dasselbe Intervall in der Tiefe rau. Oktave (2:1) und Quinte (3:2) halten das länger aus, weil viele ihrer Teiltöne exakt zusammenfallen.</p>
+    <p>Komponisten und Arrangeure kennen das als <em>Tiefengrenzen</em> der Intervalle: Kleine Intervalle brauchen Höhe, große Intervalle vertragen Tiefe. Die Obertonreihe zeigt dasselbe Bild: Unten stehen Oktave und Quinte weit auseinander, oben drängen sich die engen Intervalle.</p>
+  </section>
+
+  <!-- 46.8 -->
+  <h2 id="auswahl">46.8 Muster wählen und kombinieren</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Muster</th><th>Charakter</th><th>passt zu</th></tr></thead>
+      <tbody>
+        <tr><td>Blockakkorde in Halben</td><td>ruhig, offen</td><td>Strophen, Hymnen, Einstieg</td></tr>
+        <tr><td>Blockakkorde in Vierteln</td><td>gleichmäßig, stabil</td><td>Pop, Kinderlieder, Gospel</td></tr>
+        <tr><td>1–5–8-Arpeggio</td><td>fließend, weich</td><td>Balladen, Filmmusik</td></tr>
+        <tr><td>Alberti-Bass</td><td>leicht, klassisch</td><td>Klassik, leise Begleitungen</td></tr>
+        <tr><td>Oktaven + Achtelakkorde</td><td>treibend</td><td>Pop, Rock, Refrains</td></tr>
+        <tr><td>Tresillo 3-3-2</td><td>tänzerisch, synkopisch</td><td>Pop, Latin, R&amp;B</td></tr>
+        <tr><td>Walzer</td><td>schwingend</td><td>3/4-Takt, Volkslieder</td></tr>
+        <tr><td>Stride</td><td>swingend, verspielt</td><td>Ragtime, Jazz, Honky-Tonk</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Ein Song wird lebendig, wenn die Begleitung sich mit ihm entwickelt. Eine bewährte Regel: <strong>Strophe ruhiger, Refrain dichter.</strong> Beginne die Strophe zum Beispiel mit Blockakkorden in Halben, steigere dich im Pre-Chorus zu Vierteln und spiel den Refrain mit Oktavbass und Achtelakkorden. Die Songform selbst behandelt Kapitel 42.</p>
+
+  <section class="layer piano" data-title="Eine Akkordfolge, fünf Begleitungen">
+    <p>Nimm die Folge C–G–Am–F und spiel sie je viermal mit diesen Mustern, ohne anzuhalten:</p>
+    <ol>
+      <li>Blockakkorde in Halben</li>
+      <li>linke Hand 1–5–8–5, rechte Hand Akkord in Halben</li>
+      <li>Oktavbass, rechte Hand Achtelakkorde</li>
+      <li>Oktavbass, rechte Hand Tresillo</li>
+      <li>zurück zu Blockakkorden in Halben als Schluss</li>
+    </ol>
+    <p>Schaffst du die Übergänge im Tempo 80 ohne Stocken, transponiere alles nach G-Dur (G–D–Em–C) und F-Dur (F–C–Dm–B). Danach kannst du jeden Song aus einem Leadsheet begleiten, der diese Akkorde benutzt.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Jede Begleitung verteilt Bass, Harmonie und Rhythmus auf die Hände.</li>
+    <li>Kurze Wege: Umkehrungen so wählen, dass gemeinsame Töne liegen bleiben.</li>
+    <li>Wichtige Muster: Blockakkorde, 1–5–8-Arpeggio, Alberti-Bass, Oktavbass mit Achtelakkorden, Tresillo, Walzer und Stride.</li>
+    <li>Im tiefen Bass nur Grundton, Quinte und Oktave. Enge Intervalle klingen dort rau.</li>
+    <li>Die Begleitung entwickelt sich mit dem Song: Strophe ruhiger, Refrain dichter.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">46.1</span><div><span class="kind">Theorie</span>Welche Töne spielt die rechte Hand für Dm, wenn sie von F (c'–f'–a') kommt und sich möglichst wenig bewegen soll?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>d'–f'–a'. Dm besteht aus d, f und a. f' und a' bleiben liegen, nur c' geht einen Ganzton aufwärts zu d'. Der Akkord liegt dann in Grundstellung.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">46.2</span><div><span class="kind">Theorie</span>Schreib den Alberti-Bass für die Akkorde F, C/E, Dm und C/G in enger Lage auf (Ton für Ton, tief–hoch–mitte–hoch).</div></div>
+      <details class="solution"><summary>Lösung</summary><div>F: f–c'–a–c'. C/E: e–c'–g–c'. Dm: d–a–f–a. C/G: g–e'–c'–e'. Gezählt wird immer der tiefste Ton zuerst, dann der höchste, dann der mittlere, dann wieder der höchste. Die Basstöne f–e–d–g bilden dabei eine kleine Linie.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">46.3</span><div><span class="kind">Am Klavier</span>Spiel die Folge C–G–Am–F mit dem 1–5–8–5-Muster in der linken Hand und halben Akkorden rechts. Nimm dich bei Tempo 72 auf. Hörst du am Taktwechsel eine Verzögerung?</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Am Taktwechsel springt die linke Hand vom letzten Achtel (Quinte) zum neuen Grundton. Wenn es dort hakt, üb nur diesen Übergang. Hilfreich ist, die Hand schon während des letzten Achtels zum neuen Grundton zu bewegen und den letzten Ton etwas kürzer zu spielen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">46.4</span><div><span class="kind">Theorie</span>Auf welche Achtel eines 4/4-Taktes fallen die Anschläge beim Tresillo? Zähl mit „1 und 2 und 3 und 4 und“.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Auf die Achtel 1, 4 und 7, gezählt: „1“, „und“ nach der 2 und „4“. Gruppen von 3 + 3 + 2 Achteln. Der mittlere Anschlag liegt auf einer schwachen Zählzeit und erzeugt die Synkope.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">46.5</span><div><span class="kind">Am Klavier</span>Spiel das Walzerbeispiel aus 46.6 und erfinde dazu eine eigene, einfache Melodie in der rechten Hand, die nur Akkordtöne auf Zählzeit 1 benutzt.</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Über C sind das c, e oder g, über G7 g, h, d oder f. Auf den Zählzeiten 2 und 3 darfst du frei Schritte dazwischen spielen. Wenn die Melodie auf 1 immer einen Akkordton trifft, klingt sie automatisch zur Begleitung passend (Kapitel 19).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">46.6</span><div><span class="kind">Vertiefung</span>Berechne den Abstand in Hertz zwischen den Grundtönen einer kleinen Terz A–c (110 Hz und 130,8 Hz) und einer kleinen Terz a'–c'' (440 Hz und 523,3 Hz). Welche klingt rauer, und warum?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>A–c: 130,8 − 110 = 20,8 Hz. a'–c'': 523,3 − 440 = 83,3 Hz. Die tiefe Terz liegt mit 21 Hz tief in der kritischen Bandbreite (etwa 100 Hz in diesem Bereich) und klingt deutlich rauer. Die hohe Terz liegt am Rand der Bandbreite. Das Frequenzverhältnis ist bei beiden gleich, das Ohr beurteilt Rauigkeit aber nach dem Abstand in Hertz.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">46.7</span><div><span class="kind">Am Klavier</span>Spiel das Stride-Beispiel aus 46.6 nur mit der linken Hand, erst langsam (Tempo 60), dann schneller. Schau bei jedem Sprung zum Ziel.</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Die größte Hürde ist der Sprung vom Akkord zurück zum tiefen Bass. Er ist größer als der Weg nach oben, weil der Bass weiter weg liegt. Üb ihn isoliert und achte auf einen flachen Bogen. Wenn der Bass öfter danebengeht, liegt der Blick meist noch auf dem Akkord.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">46.8</span><div><span class="kind">Theorie</span>Du begleitest einen ruhigen Popsong mit Strophe, Pre-Chorus und Refrain. Schlag für jeden Teil ein Begleitmuster vor und begründe.</div></div>
+      <details class="solution"><summary>Mögliche Lösung</summary><div>Strophe: 1–5–8-Arpeggio links, rechts gehaltene Akkorde oder die Melodie. Fließend und zurückhaltend, damit die Stimme Raum hat. Pre-Chorus: Blockakkorde in Vierteln, die Energie steigt. Refrain: Oktavbass und Achtelakkorde oder Tresillo, der dichteste Rhythmus. Wichtig ist der Unterschied zwischen den Teilen, nicht ein bestimmtes Muster.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(46);
+</script>
+</body>
+</html>

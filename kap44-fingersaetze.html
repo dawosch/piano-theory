@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fingersätze · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .fing td.f { font-family: var(--font-mono); white-space: nowrap; letter-spacing: 0.05em; }
+  .fing tr.sel td { background: var(--accent-soft); }
+  .scale-view { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.8rem 1rem; margin-block: 1rem; }
+  .scale-view .hd { font-family: var(--font-display); font-weight: 600; margin-bottom: 0.4rem; }
+  .scale-view .tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+  .scale-view .tabs .btn[aria-pressed="true"] { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil VII · Kapitel 44</div>
+    <h1>Fingersätze</h1>
+    <p class="lede">Ein guter Fingersatz entscheidet, ob eine Stelle leicht oder unmöglich wirkt. Statt Hunderte Einzelfälle auswendig zu lernen, lernst du hier die Prinzipien, aus denen sich fast jeder Fingersatz ableiten lässt, und die Standard-Fingersätze für alle Dur-Tonleitern.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die Grundprinzipien guter Fingersätze anwenden,</li>
+      <li>Daumenuntersatz und Fingerübersatz sauber ausführen,</li>
+      <li>alle zwölf Dur-Tonleitern mit Standard-Fingersatz spielen und ihre Logik erklären,</li>
+      <li>Fingersätze für Arpeggien, Akkorde und die chromatische Tonleiter wählen,</li>
+      <li>für ein neues Stück selbst einen Fingersatz finden und eintragen.</li>
+    </ul>
+  </div>
+
+  <!-- 44.1 -->
+  <h2 id="zahlen">44.1 Die Fingernummern</h2>
+  <p>Am Klavier tragen die Finger beider Hände dieselben Nummern: <strong>1 = Daumen, 2 = Zeigefinger, 3 = Mittelfinger, 4 = Ringfinger, 5 = kleiner Finger</strong>. Ein <dfn id="g-fingersatz">Fingersatz</dfn> ist die Angabe, welcher Finger welchen Ton spielt. In Noten steht er als kleine Ziffer über oder unter dem Notenkopf.</p>
+  <div class="abc" data-bpm="90" data-caption="C-Dur-Tonleiter der rechten Hand mit Fingersatz">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    !1!C !2!D !3!E !1!F | !2!G !3!A !4!B !5!c |]
+  </div>
+  <p>Weil die Hände spiegelbildlich gebaut sind, laufen die Nummern in der linken Hand in die andere Richtung: Bei einer Fünf-Finger-Lage auf c–g liegt der kleine Finger auf c und der Daumen auf g. Ein Muster, das rechts aufwärts mit 1–2–3 beginnt, beginnt links abwärts mit 1–2–3.</p>
+
+  <!-- 44.2 -->
+  <h2 id="prinzipien">44.2 Die Prinzipien</h2>
+  <p>Gute Fingersätze folgen wenigen Grundsätzen. Wenn zwei davon sich widersprechen, entscheidet der Klang der Stelle.</p>
+  <ol>
+    <li><strong>So wenige Lagenwechsel wie möglich.</strong> Eine Hand deckt ohne Bewegung fünf benachbarte Töne ab. Jede Stelle, die in einer Lage bleibt, ist leichter.</li>
+    <li><strong>Der Daumen gehört auf weiße Tasten.</strong> Er ist kurz und liegt tief. Auf einer schwarzen Taste zwingt er die ganze Hand nach vorn. In Tonleitern und Läufen gilt das fast ausnahmslos, in Akkorden und Sprüngen darf man davon abweichen.</li>
+    <li><strong>Lange Finger auf schwarze Tasten.</strong> Finger 2, 3 und 4 erreichen die schwarzen Tasten bequem, ohne dass sich die Hand verschiebt.</li>
+    <li><strong>Gleiche Muster, gleiche Finger.</strong> Wiederholt sich eine Figur auf einer anderen Tonstufe (Sequenz), nimm denselben Fingersatz. Die Hand lernt dann ein Muster statt vieler.</li>
+    <li><strong>Von der schwierigen Stelle aus planen.</strong> Such zuerst den besten Fingersatz für die heikelste Stelle und rechne dann rückwärts, mit welchem Finger du dort ankommen musst.</li>
+    <li><strong>Für Legato vorausdenken.</strong> Brauchst du eine Bindung, die die Finger nicht schaffen, hilft ein stummer Fingerwechsel: Taste halten, Finger auf derselben Taste austauschen.</li>
+    <li><strong>Tonwiederholungen mit wechselnden Fingern.</strong> Schnell wiederholte Töne gelingen besser mit 3–2–1 oder 4–3–2–1 als mit einem einzigen Finger.</li>
+    <li><strong>Einmal entscheiden, dann dabei bleiben.</strong> Trag den Fingersatz in die Noten ein und spiel ihn jedes Mal gleich.</li>
+  </ol>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Ein Fingersatz ist gut, wenn er die Stelle leicht, sicher und musikalisch richtig klingen lässt. Fingersätze in gedruckten Ausgaben sind Vorschläge der Herausgeber. Deine Hand darf anders entscheiden, wenn sie anders gebaut ist.</p>
+  </div>
+
+  <section class="layer deep" data-title="Warum der gleiche Fingersatz so wichtig ist">
+    <p>Wenn du eine Stelle übst, lernst du nicht die Töne, sondern eine <strong>Bewegungsfolge</strong>. Das motorische Gedächtnis speichert, welcher Finger wann welche Bewegung macht. Mit der Zeit fasst es kurze Bewegungsfolgen zu größeren Einheiten zusammen, die als Ganzes abgerufen werden. Die Lernforschung nennt das Bildung von Chunks (Kapitel 47).</p>
+    <p>Wechselst du den Fingersatz von Mal zu Mal, legst du für dieselbe Stelle mehrere konkurrierende Bewegungsfolgen an. Unter Druck, etwa beim Vorspielen, greift das Gehirn dann mal auf die eine, mal auf die andere zurück. Typische Folge sind „unerklärliche“ Fehler an Stellen, die beim Üben gut liefen. Ein fester Fingersatz verhindert genau das.</p>
+    <p>Dazu kommt: Ein guter Fingersatz macht Stellen nicht nur leichter, sondern auch schneller lernbar. Eine Bewegung, die mit der natürlichen Form der Hand übereinstimmt, braucht weniger Wiederholungen, bis sie automatisch läuft.</p>
+  </section>
+
+  <!-- 44.3 -->
+  <h2 id="daumen">44.3 Daumenuntersatz und Übersatz</h2>
+  <p>Eine Tonleiter hat sieben verschiedene Töne, die Hand hat fünf Finger. Um weiterzukommen, muss die Hand die Lage wechseln, ohne dass eine Lücke entsteht. Dafür gibt es zwei Bewegungen:</p>
+  <ul>
+    <li><dfn id="g-daumenuntersatz">Daumenuntersatz</dfn>: Der Daumen gleitet unter den Fingern hindurch und spielt den nächsten Ton. Rechts aufwärts und links abwärts.</li>
+    <li><dfn id="g-uebersatz">Übersatz</dfn>: Ein Finger (meist 3 oder 4) greift über den Daumen hinweg. Rechts abwärts und links aufwärts.</li>
+  </ul>
+  <p>In der C-Dur-Tonleiter rechts aufwärts spielst du c–d–e mit 1–2–3, dann setzt der Daumen unter und spielt f. Weiter geht es mit g–a–h–c auf 2–3–4–5. Abwärts kehrt sich alles um: Nach f (Daumen) greift der dritte Finger über und spielt e.</p>
+  <div class="kb" data-from="60" data-to="72" data-labels="none" data-marks="60::1 62::2 64::3 65:c2:1 67::2 69::3 71::4 72::5" aria-label="C-Dur rechte Hand: Fingersatz 1 2 3 1 2 3 4 5, der Daumenuntersatz auf f'"></div>
+  <p class="muted">Petrol markiert: Hier setzt der Daumen unter.</p>
+  <p>Das Ziel ist ein Lauf, in dem man den Untersatz nicht hört. Das gelingt, wenn der Daumen sich schon auf den Weg macht, während die anderen Finger spielen, und wenn Ellbogen und Unterarm die Hand gleichmäßig seitlich mitführen. Ein Handgelenk, das beim Untersatz plötzlich abknickt oder hochschnellt, ist das häufigste Problem.</p>
+
+  <section class="layer piano" data-title="Den Daumen vorbereiten">
+    <p><strong>Daumen-Gleiten.</strong> Leg die rechte Hand mit Finger 2 und 3 auf d' und e'. Spiel d' und e' im Wechsel, ganz leise und langsam. Lass dabei den Daumen locker unter der Hand hin und her gleiten, von c' bis zu f' und zurück, ohne dass er eine Taste anschlägt. Ellbogen und Handgelenk bleiben ruhig.</p>
+    <p><strong>Untersatz in Zeitlupe.</strong> Spiel c'–d'–e'–f' (1–2–3–1) zehnmal hintereinander, sehr langsam. Achte darauf, dass der Daumen schon über f' ankommt, während e' noch klingt, und dass er nur hinuntergeht, nicht seitlich hineinschlägt. Dann dasselbe mit 1–2–3–4–1 auf c'–d'–e'–f'–g'.</p>
+    <p><strong>Übersatz.</strong> Spiel abwärts f'–e' (1–3). Der dritte Finger wölbt sich über den Daumen und landet auf e', während der Daumen f' loslässt. Der Unterarm führt die Hand mit, die Finger strecken sich nicht.</p>
+  </section>
+
+  <section class="layer deep" data-title="Woher der Daumenuntersatz kommt">
+    <p>Der Daumen kann sich unter die Hand drehen, weil er an der Handwurzel ein <strong>Sattelgelenk</strong> hat. Es erlaubt ihm, sich den anderen Fingern gegenüberzustellen. Diese Bewegung heißt Opposition und ist auch der Grund, warum wir Dinge greifen können.</p>
+    <p>Bis ins frühe 18. Jahrhundert benutzten viele Tastenspieler den Daumen kaum. Tonleitern spielte man mit sogenannten Paarfingersätzen, etwa rechts aufwärts 3–4–3–4, wobei der dritte Finger immer über den vierten griff. Auf den leichtgängigen Tasten von Cembalo und Orgel war das gut machbar, und die Musik verlangte noch keine durchgehenden Läufe in allen Tonarten.</p>
+    <p>Mit wachsendem Tonumfang, mehr Tonarten und virtuoserer Musik wurde der Daumen unentbehrlich. Carl Philipp Emanuel Bach beschrieb in seinem Lehrwerk „Versuch über die wahre Art das Clavier zu spielen“ (1753) ein System, das den Daumen gleichberechtigt einsetzt und den Untersatz lehrt. Er berief sich dabei ausdrücklich auf die Spielweise seines Vaters Johann Sebastian Bach. Die heutigen Fingersätze bauen auf diesem Prinzip auf.</p>
+  </section>
+
+  <!-- 44.4 -->
+  <h2 id="dur">44.4 Die Fingersätze der Dur-Tonleitern</h2>
+  <p>Die Tabelle zeigt die Standard-Fingersätze für eine Oktave aufwärts. Die Töne der Tonleitern lernst du in Kapitel 6 und 7 genauer kennen. Tippe eine Zeile an: Du hörst die Tonleiter, und die Klaviatur darunter zeigt den Fingersatz der gewählten Hand. Über mehrere Oktaven wiederholt sich das Muster. Nur der Finger auf dem Oktavton ändert sich, weil dieser Ton zugleich die nächste Oktave beginnt. Rechts in C-Dur nimmt dann der Daumen das obere c statt des fünften Fingers.</p>
+
+  <div class="scale-view" id="scale-view">
+    <div class="tabs" role="group" aria-label="Hand wählen">
+      <button class="btn" type="button" data-hand="rh" aria-pressed="true">Rechte Hand</button>
+      <button class="btn" type="button" data-hand="lh" aria-pressed="false">Linke Hand</button>
+    </div>
+    <div class="hd" id="scale-title">C-Dur, rechte Hand</div>
+    <div id="scale-kbd"></div>
+  </div>
+
+  <div class="table-scroll">
+    <table class="fing" id="fing-table">
+      <thead><tr><th>Tonart</th><th>Töne</th><th>rechts</th><th>links</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p>Für die enharmonischen Tonarten gelten dieselben Griffe: Ges-Dur wird wie Fis-Dur gegriffen, Ces-Dur wie H-Dur und Cis-Dur wie Des-Dur.</p>
+
+  <h4>Muster, die das Lernen erleichtern</h4>
+  <ul>
+    <li><strong>C, G, D, A, E:</strong> alle mit demselben Fingersatz. Rechts 1–2–3–1–2–3–4–5, links 5–4–3–2–1–3–2–1. H-Dur rechts ebenfalls.</li>
+    <li><strong>Der vierte Finger rechts</strong> hat in jeder Tonart einen festen Ton: In C, G, D, A, E und H ist es der Ton direkt unter dem Grundton (h, fis, cis, gis, dis, ais). In Fis-Dur liegt er ebenfalls auf ais. In F-Dur und in allen Tonarten mit mehreren ♭ (B, Es, As, Des) liegt er auf b.</li>
+    <li><strong>Die Daumen liegen immer auf weißen Tasten</strong>, und zwar auf der ersten weißen Taste nach einer Gruppe schwarzer Tasten. In Des-Dur sind das f und c, in Fis-Dur h und eis (die einzigen weißen Tasten der Tonleiter).</li>
+  </ul>
+
+  <section class="layer deep" data-title="Die Logik hinter der Tabelle">
+    <p>Die Fingersätze sehen auf den ersten Blick willkürlich aus. Sie folgen aber aus einer einfachen Rechnung und aus der Lage der schwarzen Tasten.</p>
+    <p><strong>Die Rechnung.</strong> Eine Oktave hat sieben verschiedene Töne. Mit einem Daumenuntersatz teilt die Hand sie in zwei Gruppen: eine Gruppe aus drei Fingern (1–2–3) und eine aus vier (1–2–3–4). 3 + 4 = 7. Jede Tonleiter wird deshalb in eine Dreiergruppe und eine Vierergruppe zerlegt. Offen ist nur, wo die Grenzen liegen.</p>
+    <p><strong>Die Grenzen.</strong> Weil der Daumen auf weiße Tasten gehört, beginnt jede Gruppe auf einer weißen Taste, und zwar am besten direkt nach schwarzen Tasten. Dann liegen die langen Finger 2, 3 und 4 genau auf den schwarzen Tasten, und der Daumen setzt hinter ihnen unter.</p>
+    <p>In C-Dur gibt es keine schwarzen Tasten. Hier entscheidet der Abschluss: Damit eine Oktave genau mit dem fünften Finger endet, muss die Vierergruppe am Ende liegen. Daraus folgt 1–2–3 | 1–2–3–4–5. In Des-Dur sind nur f und c weiß. Die Daumen müssen also dorthin, und alles andere ergibt sich: des–es (2–3) | f–ges–as–b (1–2–3–4) | c (1) | des (2).</p>
+    <p><strong>Die linke Hand</strong> ist spiegelbildlich gebaut und läuft aufwärts „rückwärts“ durch ihre Finger. Deshalb liegen ihre Daumen in den b-Tonarten oft an anderen Stellen als rechts, und in C-, G-, D-, A- und E-Dur spielt sie die ersten fünf Töne in einer Lage (5–4–3–2–1) und die letzten drei nach einem Übersatz mit 3–2–1.</p>
+    <p>Wer diese Logik verstanden hat, kann den Fingersatz einer Tonleiter herleiten, statt ihn auswendig zu lernen. Und er versteht, warum ausgerechnet die Tonarten mit vielen schwarzen Tasten oft als <em>angenehmer</em> zu greifen gelten als C-Dur: Die schwarzen Tasten geben der Hand eine natürliche Form vor.</p>
+  </section>
+
+  <section class="layer piano" data-title="Tonleitern üben, ohne dass es öde wird">
+    <ul>
+      <li><strong>Hände getrennt, dann zusammen.</strong> Erst rechts, dann links, jeweils eine Oktave, dann zwei. Erst wenn beide sicher laufen, beide Hände gemeinsam.</li>
+      <li><strong>In Gruppen denken.</strong> Spiel die Dreiergruppe und die Vierergruppe zunächst als Akkorde (Cluster): in C rechts c–d–e zusammen, dann f–g–a–h zusammen. Die Hand lernt so die Lagen, bevor sie die Töne einzeln spielt.</li>
+      <li><strong>Rhythmen variieren.</strong> Spiel die Tonleiter punktiert (lang–kurz, dann kurz–lang). So übst du jeden Übergang einmal langsam und einmal schnell.</li>
+      <li><strong>Eine Tonart pro Woche</strong> in der Reihenfolge des Quintenzirkels (Kapitel 7): C, G, D, A, E, H, dann F, B, Es, As, Des, Fis.</li>
+      <li><strong>Leise und gleichmäßig</strong> ist schwerer und lehrreicher als laut und schnell.</li>
+    </ul>
+  </section>
+
+  <!-- 44.5 -->
+  <h2 id="moll-chromatik">44.5 Moll-Tonleitern und chromatische Tonleiter</h2>
+  <p>Die Moll-Tonleitern (Kapitel 8) werden meistens mit demselben Fingersatz gespielt wie die Dur-Tonleiter auf demselben Grundton, sofern die Daumen dabei auf weißen Tasten bleiben. a-Moll, e-Moll, d-Moll und g-Moll greifst du deshalb wie C-Dur. Wo die erhöhten oder erniedrigten Töne den Daumen auf eine schwarze Taste schicken würden, verschiebt man die Gruppen. Die Regeln aus 44.2 führen dann fast immer zum Standard-Fingersatz.</p>
+  <p>Für die <dfn id="g-chromatische-tonleiter-fingersatz">chromatische Tonleiter</dfn> (alle zwölf Halbtöne nacheinander) gibt es einen einfachen, universellen Fingersatz: <strong>3 auf jeder schwarzen Taste, 1 auf jeder weißen</strong>. Wo zwei weiße Tasten aufeinanderfolgen (e–f und h–c), nimmt man für die zweite bzw. erste davon den zweiten Finger.</p>
+  <div class="table-scroll">
+    <table class="fing">
+      <thead><tr><th>Hand, aufwärts</th><th>c</th><th>cis</th><th>d</th><th>dis</th><th>e</th><th>f</th><th>fis</th><th>g</th><th>gis</th><th>a</th><th>ais</th><th>h</th><th>c</th></tr></thead>
+      <tbody>
+        <tr><td>rechts</td><td class="f">1</td><td class="f">3</td><td class="f">1</td><td class="f">3</td><td class="f">1</td><td class="f">2</td><td class="f">3</td><td class="f">1</td><td class="f">3</td><td class="f">1</td><td class="f">3</td><td class="f">1</td><td class="f">2</td></tr>
+        <tr><td>links</td><td class="f">1</td><td class="f">3</td><td class="f">1</td><td class="f">3</td><td class="f">2</td><td class="f">1</td><td class="f">3</td><td class="f">1</td><td class="f">3</td><td class="f">1</td><td class="f">3</td><td class="f">2</td><td class="f">1</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="btn-row"><button class="btn" type="button" data-play="60 61 62 63 64 65 66 67 68 69 70 71 72" data-bpm="240">▶ chromatische Tonleiter</button></div>
+
+  <!-- 44.6 -->
+  <h2 id="arpeggien">44.6 Arpeggien und Akkorde</h2>
+  <p>Ein <dfn id="g-arpeggio">Arpeggio</dfn> ist ein Akkord, dessen Töne nacheinander gespielt werden, oft über mehrere Oktaven. Für den C-Dur-Dreiklang c–e–g gilt:</p>
+  <ul>
+    <li><strong>rechts aufwärts:</strong> c–e–g (1–2–3), Daumen unter auf c', e'–g' (2–3), Schlusston c'' mit 5.</li>
+    <li><strong>links aufwärts:</strong> c–e–g (5–4–2), dann c' (1), Übersatz mit 4 auf e', g' (2), c'' (1). Kleinere Hände nehmen statt 4 auch 3.</li>
+  </ul>
+  <div class="abc" data-bpm="100" data-caption="C-Dur-Arpeggio über zwei Oktaven, rechte Hand mit Fingersatz">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    !1!C!2!E!3!G!1!c !2!e!3!g!5!c'2 | !3!g!2!e!1!c!3!G !2!E!1!C3 |]
+  </div>
+  <p>Dieser Fingersatz passt für alle Dreiklänge, die nur aus weißen Tasten bestehen (C, F, G, Dm, Em, Am). Bei Dreiklängen mit schwarzen Tasten gilt wieder: Der Daumen sucht sich eine weiße Taste, die langen Finger nehmen die schwarzen.</p>
+  <h4>Akkorde als Griff</h4>
+  <p>Für dreistimmige Akkorde (Kapitel 11 und 12) sind diese Griffe üblich:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Lage</th><th>Beispiel</th><th>rechts</th><th>links</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 64 67" data-mode="harm"><td>Grundstellung</td><td>c'–e'–g'</td><td class="mono">1–3–5</td><td class="mono">5–3–1</td><td>▶</td></tr>
+        <tr class="play-row" data-play="64 67 72" data-mode="harm"><td>1. Umkehrung (Sextakkord)</td><td>e'–g'–c''</td><td class="mono">1–2–5</td><td class="mono">5–3–1</td><td>▶</td></tr>
+        <tr class="play-row" data-play="67 72 76" data-mode="harm"><td>2. Umkehrung (Quartsextakkord)</td><td>g'–c''–e''</td><td class="mono">1–3–5</td><td class="mono">5–2–1</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die Regel dahinter: Der Finger für den mittleren Ton richtet sich nach dem größeren Abstand. Liegt die Quarte oben (Sextakkord, e–g–c), braucht rechts der fünfte Finger Platz, und der zweite nimmt den Mittelton. Liegt die Quarte unten (Quartsextakkord, g–c–e), braucht links der fünfte Finger Abstand zum zweiten.</p>
+
+  <section class="layer deep" data-title="Warum Akkordgriffe sich nach den Abständen richten">
+    <p>Die Hand hat zwischen benachbarten Fingern unterschiedlich viel Spannweite. Zwischen Daumen und Zeigefinger ist sie am größten, zwischen Mittel- und Ringfinger am kleinsten. Das liegt am Daumensattelgelenk, das weit spreizen kann, und an den Bindegewebsbrücken zwischen den Strecksehnen von 3, 4 und 5 (Kapitel 43).</p>
+    <p>Ein Dreiklang in enger Lage besteht aus einer Terz und einer Quarte oder aus zwei Terzen. Eine Quarte ist größer als eine Terz. Ein guter Griff legt das größere Intervall dorthin, wo die Hand mehr Spannweite hat, also zwischen 1 und 2 oder zwischen zwei Finger, die einen anderen überspringen. Deshalb greift die rechte Hand den Sextakkord e–g–c mit 1–2–5: Die Terz e–g liegt zwischen 1 und 2, die Quarte g–c zwischen 2 und 5, die drei Fingerabstände überbrücken.</p>
+    <p>Diese Überlegung gilt für jeden Griff, auch für vierstimmige Akkorde und Voicings (Kapitel 29). Wenn ein Griff unbequem ist, frag dich: Liegt das große Intervall zwischen Fingern, die es gut überspannen können?</p>
+  </section>
+
+  <!-- 44.7 -->
+  <h2 id="eigene">44.7 Einen eigenen Fingersatz finden</h2>
+  <p>Für ein neues Stück gehst du so vor:</p>
+  <ol>
+    <li><strong>Phrase ansehen.</strong> Wie weit reicht die Melodie? Welche Töne liegen in einer Lage, wo muss die Hand wechseln?</li>
+    <li><strong>Schwierige Stellen zuerst.</strong> Probier für die heikelste Stelle zwei oder drei Möglichkeiten langsam aus und nimm die, bei der die Hand am ruhigsten bleibt.</li>
+    <li><strong>Rückwärts verbinden.</strong> Leg fest, mit welchem Finger du die schwierige Stelle erreichen musst, und wähle davor den Fingersatz so, dass du dort ankommst.</li>
+    <li><strong>Im Tempo prüfen.</strong> Ein Fingersatz, der langsam bequem ist, kann im Tempo zu viel Bewegung verlangen. Spiel die Stelle kurz im Zieltempo, auch wenn sie noch nicht sauber ist.</li>
+    <li><strong>Eintragen.</strong> Schreib die Finger mit Bleistift über die Noten. Nicht jede Note, nur dort, wo die Lage wechselt oder wo du dich vertun könntest.</li>
+  </ol>
+
+  <section class="layer piano" data-title="Ein Beispiel durchdenken">
+    <p>Die folgende kleine Melodie liegt zwischen c' und a', also auf sechs Tönen. Eine Lage reicht nicht. Probier zwei Varianten:</p>
+    <div class="abc" data-bpm="96">
+      X:1
+      M:3/4
+      L:1/4
+      K:C
+      !1!C !2!D !3!E | !1!F !2!G !3!A | !2!G !1!F !3!E | !2!D2 !1!C |]
+    </div>
+    <p>Der eingetragene Fingersatz setzt den Daumen auf f' unter und hat dann Platz bis a'. Abwärts landet der Daumen wieder auf f', danach greift 3 über auf e', und 2 und 1 schließen auf d' und c'. Probier zum Vergleich, mit 1 auf c' zu beginnen und ohne Untersatz bis g' mit 5 zu spielen. Für a' fehlt dann ein Finger, und du musst mitten in der Phrase springen. Diese Sackgasse erkennst du am schnellsten, wenn du die Phrase vorher ansiehst.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>1 = Daumen bis 5 = kleiner Finger, in beiden Händen.</li>
+    <li>Wenige Lagenwechsel, Daumen auf weißen Tasten, lange Finger auf schwarzen, gleiche Muster mit gleichen Fingern.</li>
+    <li>Tonleitern teilen sich in eine Dreier- und eine Vierergruppe. Wo die Daumen untersetzen, bestimmen die schwarzen Tasten.</li>
+    <li>Chromatisch: 3 auf Schwarz, 1 auf Weiß, 2 bei zwei aufeinanderfolgenden weißen Tasten.</li>
+    <li>Einmal gewählt, wird ein Fingersatz eingetragen und immer gleich gespielt.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">44.1</span><div><span class="kind">Theorie</span>Warum beginnt die rechte Hand in Des-Dur mit dem zweiten Finger?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Des ist eine schwarze Taste, der Daumen soll auf Weiß bleiben. Die einzigen weißen Tasten der Des-Dur-Tonleiter sind f und c. Die Daumen gehören dorthin. Von f aus rückwärts gerechnet kommen es (3) und des (2) vor dem Daumen. Deshalb beginnt die Tonleiter mit 2.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">44.2</span><div><span class="kind">Theorie</span>Auf welchem Ton liegt der vierte Finger der rechten Hand in G-Dur, D-Dur und Es-Dur?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G-Dur: fis. D-Dur: cis. Es-Dur: b. In G und D ist es der Ton direkt unter dem Grundton, in Es-Dur wie in allen b-Tonarten der Ton b.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">44.3</span><div><span class="kind">Am Klavier</span>Spiel C-Dur zwei Oktaven aufwärts und abwärts, erst rechts, dann links, bei Tempo 60 in Achteln. Wo hörst du kleine Unebenheiten?</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Unebenheiten entstehen fast immer am Daumenuntersatz (rechts aufwärts e–f und h–c, links abwärts) oder am Übersatz. Üb nur diese Stelle isoliert: drei Töne davor, drei danach. Bereite den Daumen früher vor und lass den Unterarm die Hand gleichmäßig führen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">44.4</span><div><span class="kind">Theorie</span>Leite ohne Tabelle den Fingersatz der rechten Hand für As-Dur her (as–b–c–des–es–f–g–as).</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Weiße Tasten in As-Dur: c, f und g. Der Daumen soll direkt nach schwarzen Tasten untersetzen: auf c (nach as–b) und auf f (nach des–es). Daraus folgt as (3), b (4), c (1), des (2), es (3), f (1), g (2), as (3). Das ist der Standard-Fingersatz 3–4–1–2–3–1–2–3.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">44.5</span><div><span class="kind">Am Klavier</span>Spiel die chromatische Tonleiter von c' bis c'' mit der rechten Hand. Achte darauf, dass der dritte Finger auf jeder schwarzen Taste landet. Wie bewegt sich die Hand?</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Die Hand gleitet gleichmäßig seitwärts, der Daumen setzt fast nach jedem Ton ein kleines Stück unter. Wenn du den Ellbogen ruhig mitführst und die Hand etwas zu den schwarzen Tasten hin vorschiebst, wird die Bewegung flüssig.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">44.6</span><div><span class="kind">Theorie</span>Mit welchen Fingern greift die rechte Hand den F-Dur-Dreiklang in Grundstellung (f'–a'–c''), in der ersten Umkehrung (a'–c''–f'') und in der zweiten Umkehrung (c''–f''–a'')?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Grundstellung 1–3–5, erste Umkehrung 1–2–5, zweite Umkehrung 1–3–5. In der ersten Umkehrung liegt die Quarte (c–f) oben, deshalb nimmt der zweite Finger den Mittelton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">44.7</span><div><span class="kind">Am Klavier</span>Spiel die Tonfolge g'–g'–g'–g' (vier schnelle Achtel) einmal nur mit dem dritten Finger und einmal mit 3–2–1–3. Was ist leichter?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Mit wechselnden Fingern geht es schneller und gleichmäßiger. Jeder Finger hat Zeit, sich zu heben, während der nächste spielt. Mit einem einzigen Finger muss dieselbe Taste jedes Mal ganz freigegeben werden, und der Finger ermüdet schnell.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">44.8</span><div><span class="kind">Notenlesen</span>Trag in die Melodie unten einen Fingersatz für die rechte Hand ein (auf Papier oder im Kopf) und spiel sie. Begründe deine Wahl.</div></div>
+      <div class="abc" data-bpm="90">
+        X:1
+        M:4/4
+        L:1/4
+        K:G
+        G A B c | d2 B2 | c A F G | A4 |]
+      </div>
+      <details class="solution"><summary>Mögliche Lösung</summary><div>g' 1, a' 2, h' 3, c'' 4 | d'' 5, h' 3 | c'' 4, a' 3, fis' 2, g' 3 | a' 4. Die ganze Melodie liegt so in einer einzigen Lage zwischen fis' und d''. Der Daumen spielt nur den ersten Ton. Das fis' übernimmt der zweite Finger, sodass der Daumen nie auf eine schwarze Taste muss. Ein Fingersatz mit Daumen auf fis' wäre möglich, zwingt die Hand aber nach vorn und bringt einen unnötigen Lagenwechsel.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">44.9</span><div><span class="kind">Vertiefung</span>Warum endet die linke Hand in C-Dur aufwärts mit 3–2–1 und nicht mit 4–3–2–1?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die linke Hand spielt c–d–e–f–g in einer Lage mit 5–4–3–2–1. Danach bleiben bis zum Oktavton nur noch drei Töne: a, h und c'. Dafür reichen drei Finger, also greift 3 über den Daumen auf a, und 2 und 1 folgen. Mit 4–3–2–1 hätte man einen Finger zu viel. Spielt man weiter in die nächste Oktave, nimmt der Daumen c' und der vierte Finger greift auf d' über. Ab dann wiederholt sich das Muster 4–3–2–1 | 3–2–1.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(44);
+
+  // Dur-Tonleitern: Name, Grundton (MIDI), Töne, Fingersätze aufwärts (eine Oktave)
+  const SCALES = [
+    ["C-Dur", 60, "c d e f g a h c", "12312345", "54321321"],
+    ["G-Dur", 67, "g a h c d e fis g", "12312345", "54321321"],
+    ["D-Dur", 62, "d e fis g a h cis d", "12312345", "54321321"],
+    ["A-Dur", 69, "a h cis d e fis gis a", "12312345", "54321321"],
+    ["E-Dur", 64, "e fis gis a h cis dis e", "12312345", "54321321"],
+    ["H-Dur", 71, "h cis dis e fis gis ais h", "12312345", "43214321"],
+    ["Fis-Dur", 66, "fis gis ais h cis dis eis fis", "23412312", "43213214"],
+    ["Des-Dur", 61, "des es f ges as b c des", "23123412", "32143213"],
+    ["As-Dur", 68, "as b c des es f g as", "34123123", "32143213"],
+    ["Es-Dur", 63, "es f g as b c d es", "31234123", "32143213"],
+    ["B-Dur", 70, "b c d es f g a b", "41231234", "32143213"],
+    ["F-Dur", 65, "f g a b c d e f", "12341234", "54321321"]
+  ];
+  const STEPS = [0, 2, 4, 5, 7, 9, 11, 12];
+  const tbody = document.querySelector("#fing-table tbody");
+  let hand = "rh", current = 0;
+  SCALES.forEach((s, i) => {
+    const notes = STEPS.map((x) => s[1] + x);
+    const tr = document.createElement("tr");
+    tr.className = "play-row";
+    tr.dataset.play = notes.join(" ");
+    tr.dataset.bpm = "200";
+    tr.dataset.idx = i;
+    tr.innerHTML = `<td>${s[0]}</td><td>${s[2]}</td><td class="f">${s[3].split("").join(" ")}</td><td class="f">${s[4].split("").join(" ")}</td><td>▶</td>`;
+    tbody.appendChild(tr);
+  });
+  const kbdHost = document.getElementById("scale-kbd");
+  function show() {
+    const s = SCALES[current];
+    const shift = hand === "lh" ? -12 : 0;
+    const notes = STEPS.map((x) => s[1] + x + shift);
+    const f = hand === "rh" ? s[3] : s[4];
+    const marks = notes.map((m, i) => ({ m, cls: (f[i] === "1") ? "c2" : "", label: f[i] }));
+    kbdHost.textContent = "";
+    Book.keyboard(kbdHost, { from: notes[0] - (notes[0] % 12 === 0 ? 0 : 2), to: notes[7] + 1, labels: "none", marks,
+      ariaLabel: s[0] + ", " + (hand === "rh" ? "rechte" : "linke") + " Hand, Fingersatz " + f.split("").join(" ") });
+    document.getElementById("scale-title").textContent = s[0] + ", " + (hand === "rh" ? "rechte Hand" : "linke Hand") + " (Daumen petrol)";
+    tbody.querySelectorAll("tr").forEach((tr) => tr.classList.toggle("sel", +tr.dataset.idx === current));
+  }
+  tbody.addEventListener("click", (e) => { const tr = e.target.closest("tr"); if (!tr) return; current = +tr.dataset.idx; show(); });
+  document.querySelectorAll("#scale-view [data-hand]").forEach((b) => b.addEventListener("click", () => {
+    hand = b.dataset.hand;
+    document.querySelectorAll("#scale-view [data-hand]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    show();
+  }));
+  show();
+</script>
+</body>
+</html>

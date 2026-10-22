@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Takt, Metrum und Tempo · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .no-kbd .tkbd { display: none !important; }
+  .metro .row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; align-items: center; margin-block: 0.6rem; }
+  .metro .bpm { font-family: var(--font-display); font-size: var(--step-3); font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; min-width: 3.2ch; }
+  .metro .unit { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); }
+  .metro input[type="range"] { flex: 1 1 12rem; min-width: 0; accent-color: var(--accent); }
+  .metro select { font: inherit; font-size: var(--step--1); padding: 0.25rem 0.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink); }
+  .metro label { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); display: inline-flex; gap: 0.4rem; align-items: center; }
+  .metro .dots { display: flex; gap: 0.5rem; min-height: 1.4rem; align-items: center; }
+  .metro .dot { width: 0.8rem; height: 0.8rem; border-radius: 50%; border: 2px solid var(--line); }
+  .metro .dot.strong { width: 1.1rem; height: 1.1rem; }
+  .metro .dot.mid { width: 0.95rem; height: 0.95rem; }
+  .metro .dot.lit { background: var(--accent); border-color: var(--accent); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil I · Kapitel 4</div>
+    <h1>Takt, Metrum und Tempo</h1>
+    <p class="lede">Ein gleichmäßiger Puls allein ist noch keine Musik. Erst wenn manche Schläge schwerer wiegen als andere, entsteht ein Metrum: der Zweierschritt des Marschs, das Wiegen des Walzers, der Groove eines Popsongs. Dieses Kapitel erklärt, wie Taktarten dieses Gewicht ordnen und wie Tempo angegeben wird.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Taktangaben lesen und schwere und leichte Zählzeiten unterscheiden,</li>
+      <li>einfache, zusammengesetzte und ungerade Taktarten erkennen, besonders 3/4 und 6/8,</li>
+      <li>Auftakte und Synkopen lesen, zählen und spielen,</li>
+      <li>Tempoangaben in Italienisch und in Schlägen pro Minute deuten,</li>
+      <li>mit dem Metronom sinnvoll üben,</li>
+      <li>erklären, woher das Zeichen C kommt und wie ein Metronom funktioniert.</li>
+    </ul>
+  </div>
+
+  <!-- 4.1 -->
+  <h2 id="metrum">4.1 Metrum: schwere und leichte Schläge</h2>
+  <p>In Kapitel 3 hast du den Puls kennengelernt, den gleichmäßigen Herzschlag der Musik. In fast aller Musik sind diese Schläge aber nicht gleichwertig. Manche fühlen sich <strong>schwer</strong> an, wie ein Schritt, auf dem das Gewicht landet. Andere sind <strong>leicht</strong> und führen zum nächsten schweren Schlag hin. Die regelmäßige Ordnung von schweren und leichten Schlägen heißt <dfn id="g-metrum">Metrum</dfn>.</p>
+  <p>Ein Marsch hat das Muster schwer–leicht, schwer–leicht, wie linker und rechter Fuß. Ein Walzer hat schwer–leicht–leicht. Diese Muster spürst du, auch ohne sie zu kennen: Beim Marsch möchte man gehen, beim Walzer sich drehen.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-meter="2/4">▶ schwer–leicht (Marsch)</button>
+    <button class="btn" type="button" data-meter="3/4">▶ schwer–leicht–leicht (Walzer)</button>
+    <button class="btn" type="button" data-meter="4/4">▶ schwer–leicht–halbschwer–leicht</button>
+  </div>
+  <p>Wichtig ist der Unterschied zum Rhythmus. Das Metrum ist das gleichbleibende Raster, der Rhythmus das bewegliche Muster der Töne darauf. Ein Rhythmus kann das Metrum bestätigen, indem er auf schweren Schlägen lange Töne setzt. Er kann ihm aber auch widersprechen, wie die Synkope in Abschnitt 4.7.</p>
+
+  <!-- 4.2 -->
+  <h2 id="taktangabe">4.2 Takt und Taktangabe</h2>
+  <p>Ein <dfn id="g-takt">Takt</dfn> ist eine Einheit aus einem schweren Schlag und den folgenden leichteren bis zum nächsten schweren. In den Noten trennen <strong>Taktstriche</strong> die Takte voneinander. Der erste Schlag nach dem Taktstrich ist immer der schwerste. Er heißt auch <strong>Eins</strong> oder englisch <em>downbeat</em>.</p>
+  <p>Am Anfang des Stücks steht die <dfn id="g-taktangabe">Taktangabe</dfn>, die wie ein Bruch aussieht:</p>
+  <ul>
+    <li>Die <strong>obere Zahl</strong> gibt an, wie viele Schläge ein Takt hat.</li>
+    <li>Die <strong>untere Zahl</strong> gibt an, welcher Notenwert einem Schlag entspricht: 4 für Viertel, 8 für Achtel, 2 für Halbe.</li>
+  </ul>
+  <p>3/4 heißt also: drei Viertel pro Takt. 6/8 heißt: sechs Achtel pro Takt. Trotz der Bruchschreibweise darf man nicht kürzen. 2/4 und 4/8 enthalten zwar gleich viel Notenwert, ordnen ihn aber verschieden (Abschnitt 4.4 zeigt das am Beispiel 3/4 und 6/8).</p>
+  <p>Zwei Taktangaben werden oft mit Symbolen geschrieben: <strong>C</strong> steht für 4/4, ein durchgestrichenes <strong>¢</strong> für 2/2, auch <em>alla breve</em> genannt. Im Alla-breve-Takt zählt man in Halben, also zwei Schläge pro Takt. Das wirkt fließender als vier Viertel, auch bei gleicher Notenmenge.</p>
+  <div class="abc" data-bpm="100" data-caption="C (4/4) und ¢ (alla breve, 2/2)">
+    X:1
+    M:C
+    L:1/4
+    K:C
+    B B B B | B2 B2 | [M:C|] B2 B2 | B4 |]
+  </div>
+  <p>Neben dem einfachen Taktstrich gibt es den <strong>doppelten Taktstrich</strong> (zwei dünne Linien), der einen Abschnitt beendet, und den <strong>Schlussstrich</strong> (dünn und dick), der das Stück beendet. Wiederholungszeichen behandelt Kapitel 10.</p>
+
+  <section class="layer deep" data-title="Warum steht C für 4/4?">
+    <p>Es liegt nahe, C als Abkürzung für <em>common time</em> zu lesen, wie es im Englischen heißt. Das ist aber eine nachträgliche Deutung. Das Zeichen ist viel älter und kein Buchstabe, sondern ein <strong>halber Kreis</strong>.</p>
+    <p>In der Mensuralnotation (Kapitel 3, Vertiefung in 3.2) zeigte man mit Zeichen am Anfang an, ob ein Notenwert in drei oder in zwei Teile zerfällt. Ein geschlossener <strong>Kreis</strong> stand für die Dreiteilung, das <em>tempus perfectum</em>, die „vollkommene“ Zeit. Ein <strong>offener Halbkreis</strong> stand für die Zweiteilung, das <em>tempus imperfectum</em>. Aus diesem Halbkreis wurde das C.</p>
+    <p>Der Strich durch das C bedeutete ursprünglich eine Beschleunigung: Alle Notenwerte galten nur noch halb so lang. Man zählte dann nicht mehr in Semibreven (unseren Ganzen), sondern in Breven, daher der Name <em>alla breve</em>. Heute bleibt davon die Bedeutung „in Halben zählen“.</p>
+  </section>
+
+  <!-- 4.3 -->
+  <h2 id="einfache">4.3 Einfache Taktarten</h2>
+  <p>In <dfn id="g-einfacher-takt">einfachen Taktarten</dfn> wird jeder Schlag in <strong>zwei</strong> gleiche Teile geteilt. Die Schläge sind Viertel (oder Halbe), ihre Unterteilung Achtel.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Takt</th><th>Schläge</th><th>Betonung</th><th>typisch für</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-meter="2/4"><td>2/4</td><td>2 Viertel</td><td>schwer – leicht</td><td>Marsch, Polka, viele Kinderlieder</td><td>▶</td></tr>
+        <tr class="play-row" data-meter="3/4"><td>3/4</td><td>3 Viertel</td><td>schwer – leicht – leicht</td><td>Walzer, Menuett, Mazurka</td><td>▶</td></tr>
+        <tr class="play-row" data-meter="4/4"><td>4/4</td><td>4 Viertel</td><td>schwer – leicht – halbschwer – leicht</td><td>der größte Teil von Pop, Rock und Jazz</td><td>▶</td></tr>
+        <tr><td>2/2</td><td>2 Halbe</td><td>schwer – leicht</td><td>schnelle Märsche, Musicals, Barock</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Der 4/4-Takt verhält sich wie zwei verbundene Zweiertakte: Die Eins ist am schwersten, die Drei etwas leichter, Zwei und Vier sind leicht. Diese Abstufung nennt man <strong>metrische Hierarchie</strong>. Sie setzt sich nach unten fort: Innerhalb eines Schlags ist der Schlag selbst schwerer als das „und“, und das „und“ schwerer als die Sechzehntel „e“.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Die Eins ist immer der schwerste Schlag. In 4/4 folgt die Drei als zweitschwerster. Leichte Zeiten sind 2 und 4, und alle „und“.</p>
+  </div>
+
+  <section class="layer piano" data-title="Das Metrum in der linken Hand">
+    <p>In Begleitungen macht die linke Hand das Metrum hörbar. Sie spielt auf den schweren Schlägen einen tiefen Basston und auf den leichten Schlägen Akkordtöne. Zwei Muster brauchst du ständig:</p>
+    <ul>
+      <li><strong>Marsch (2/4 oder 4/4):</strong> Bass – Akkord – Bass – Akkord. Im 4/4-Takt wechselt der Bass oft auf der Drei zu einem anderen Ton, zum Beispiel von c zu G.</li>
+      <li><strong>Walzer (3/4):</strong> Bass – Akkord – Akkord. Der Basston fällt auf die Eins, der Akkord auf zwei und drei.</li>
+    </ul>
+    <div class="abc" data-bpm="120" data-caption="Walzerbegleitung in C-Dur, linke Hand">
+      X:1
+      M:3/4
+      L:1/4
+      K:C clef=bass
+      C, [E,G,] [E,G,] | C, [E,G,] [E,G,] | G,, [F,G,] [F,G,] | C, [E,G,] [E,G,] |]
+    </div>
+    <p>Spiel den Basston etwas kräftiger und die Akkorde leicht. Die Akkorde auf zwei und drei sind kurz und federnd. Hämmert man alle drei Schläge gleich laut, verschwindet das Walzergefühl. Mehr Begleitmuster zeigt Kapitel 46.</p>
+  </section>
+
+  <!-- 4.4 -->
+  <h2 id="zusammengesetzt">4.4 Zusammengesetzte Taktarten: 6/8, 9/8, 12/8</h2>
+  <p>In <dfn id="g-zusammengesetzter-takt">zusammengesetzten Taktarten</dfn> wird jeder Schlag in <strong>drei</strong> Teile geteilt. Der Schlag ist dann eine punktierte Viertel, die drei Achtel enthält. Die obere Zahl der Taktangabe zählt in diesen Taktarten die Achtel, nicht die Schläge:</p>
+  <ul>
+    <li><strong>6/8</strong>: sechs Achtel in zwei Gruppen zu drei, also zwei Schläge pro Takt.</li>
+    <li><strong>9/8</strong>: drei Gruppen zu drei, also drei Schläge.</li>
+    <li><strong>12/8</strong>: vier Gruppen zu drei, also vier Schläge. Typisch für langsamen Blues, Soul-Balladen und Rock ’n’ Roll.</li>
+  </ul>
+  <h4>3/4 oder 6/8?</h4>
+  <p>3/4 und 6/8 enthalten beide sechs Achtel pro Takt. Sie klingen trotzdem völlig verschieden. 3/4 gruppiert die Achtel zu <strong>drei Paaren</strong> (1 und 2 und 3 und). 6/8 gruppiert sie zu <strong>zwei Dreiergruppen</strong> (1 2 3 4 5 6, mit Betonung auf 1 und 4). Die Balken zeigen die Gruppierung an.</p>
+  <div class="abc" data-bpm="90" data-caption="Gleiche Achtel, andere Gruppierung: erst 3/4, dann 6/8">
+    X:1
+    M:3/4
+    L:1/8
+    K:C
+    "^3/4"!>!BB BB BB | !>!B2 B2 B2 | [M:6/8] "^6/8"!>!BBB !>!BBB | !>!B3 !>!B3 |]
+  </div>
+  <div class="btn-row">
+    <button class="btn" type="button" data-meter="3/4">▶ 3/4 hören</button>
+    <button class="btn" type="button" data-meter="6/8">▶ 6/8 hören</button>
+  </div>
+  <p>Gezählt wird 6/8 in langsamem Tempo „1 2 3 4 5 6“, in schnellerem Tempo nur noch „1 – – 2 – –“, also in zwei Schlägen. Dann fühlt sich der Takt wie ein schwingender Zweier an, wie bei vielen Seemannsliedern und Wiegenliedern.</p>
+
+  <section class="layer deep" data-title="Hemiole: wenn 3/4 und 6/8 die Plätze tauschen">
+    <p>Weil 3/4 und 6/8 dieselben sechs Achtel enthalten, kann Musik zwischen beiden Gruppierungen umschalten, ohne dass sich die Notenwerte ändern. Werden zum Beispiel zwei 6/8-Takte so betont, dass man drei Zweiergruppen hört, entsteht ein Wechsel, der dem Ohr kurz den Boden unter den Füßen wegzieht. Dieser Effekt heißt <dfn id="g-hemiole">Hemiole</dfn> (griechisch „anderthalb“, nach dem Verhältnis 3:2).</p>
+    <p>In der Barockmusik kündigen Hemiolen oft das Ende eines Abschnitts an. In Menuetten werden die letzten zwei 3/4-Takte vor dem Schluss gern wie ein großer 3/2-Takt gespielt: drei Halbe statt zweimal drei Viertel. Ein bekanntes modernes Beispiel ist „America“ aus Leonard Bernsteins „West Side Story“, das ständig zwischen 6/8 und 3/4 wechselt.</p>
+    <p>Dass die Hemiole so verblüffend wirkt, zeigt, wie stark wir uns auf ein einmal erkanntes Metrum verlassen. Das Gehör bildet eine Erwartung, wo der nächste schwere Schlag liegt. Wird diese Erwartung umgelenkt, spüren wir das als Spannung oder Schwung. Dasselbe Prinzip steckt hinter der Synkope (Abschnitt 4.7).</p>
+  </section>
+
+  <!-- 4.5 -->
+  <h2 id="ungerade">4.5 Ungerade Taktarten</h2>
+  <p>Manche Taktarten lassen sich nicht in gleich große Gruppen teilen. Sie bestehen aus <strong>Zweier- und Dreiergruppen gemischt</strong> und heißen ungerade oder asymmetrische Taktarten:</p>
+  <ul>
+    <li><strong>5/4</strong> zerfällt in 3 + 2 oder 2 + 3 Viertel. Bekannte Beispiele sind der Jazzklassiker „Take Five“, die Titelmusik von „Mission: Impossible“ und der zweite Satz von Tschaikowskis 6. Sinfonie, ein „hinkender Walzer“.</li>
+    <li><strong>7/8</strong> zerfällt meist in 2 + 2 + 3 oder 3 + 2 + 2 Achtel. Diese Takte sind in der Volksmusik des Balkans verbreitet.</li>
+  </ul>
+  <div class="abc" data-bpm="100" data-caption="5/4 als 3 + 2 und 7/8 als 2 + 2 + 3: Die Akzente zeigen den Beginn jeder Gruppe">
+    X:1
+    M:5/4
+    L:1/4
+    K:C
+    !>!B B B !>!B B | !>!B B B !>!B B | [M:7/8] [L:1/8] !>!BB !>!BB !>!BBB | !>!BB !>!BB !>!BBB |]
+  </div>
+  <div class="btn-row">
+    <button class="btn" type="button" data-meter="5/4">▶ 5/4 hören</button>
+    <button class="btn" type="button" data-meter="7/8">▶ 7/8 hören</button>
+  </div>
+  <p>Ungerade Takte zählt man am besten nach Gruppen statt durchgehend: 7/8 als „1 2, 1 2, 1 2 3“ oder schneller als „kurz, kurz, lang“. So wird aus einer schwer überschaubaren Zahl ein greifbares Muster.</p>
+
+  <!-- 4.6 -->
+  <h2 id="auftakt">4.6 Auftakt</h2>
+  <p>Viele Melodien beginnen nicht auf der Eins, sondern mit einem oder mehreren Tönen davor. Ein solcher unvollständiger Anfangstakt heißt <dfn id="g-auftakt">Auftakt</dfn> (englisch <em>pickup</em> oder <em>anacrusis</em>). Er führt auf die erste Eins hin wie ein Anlauf. Bekannte Lieder mit Auftakt sind „O Tannenbaum“ und „Happy Birthday“.</p>
+  <div class="abc" data-bpm="100" data-caption="Melodie im 3/4-Takt mit einem Viertel Auftakt. Der Schlusstakt ist entsprechend verkürzt">
+    X:1
+    M:3/4
+    L:1/4
+    K:C
+    G | c2 e | g2 e | d2 B | c2 |]
+    w: 3 1 3 1 3 1 3 1
+  </div>
+  <p>Der Auftakt wird gezählt, als wäre er das Ende eines vollständigen Takts. Im Beispiel fällt er auf die „3“. Traditionell ist der letzte Takt um genau so viel kürzer, wie der Auftakt lang ist, sodass beide zusammen einen vollständigen Takt ergeben. Viele moderne Ausgaben halten sich nicht mehr streng daran.</p>
+  <p>Beim Mitzählen hilft ein Trick: Zähl vor dem Auftakt einen ganzen Takt vor („1 2 3 1 2“) und setz auf der passenden Zählzeit ein.</p>
+
+  <!-- 4.7 -->
+  <h2 id="synkope">4.7 Synkope</h2>
+  <p>Eine <dfn id="g-synkope">Synkope</dfn> entsteht, wenn ein Ton auf einer leichten Zählzeit beginnt und über die folgende schwere Zählzeit hinweg klingt. Der Akzent verschiebt sich dadurch auf eine Stelle, an der das Metrum ihn nicht erwartet. Typisch sind lange Töne auf „und“ und Haltebögen über einen Schlag oder Taktstrich.</p>
+  <div class="abc" data-bpm="100" data-caption="Takt 1–2: gerade Viertel. Takt 3–4: derselbe Rhythmus synkopiert, mit einem vorgezogenen Ton vor der Eins von Takt 4">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    c2 c2 c2 c2 | c2 c2 c4 | c c2 c c c2 c- | c2 c2 c4 |]
+  </div>
+  <p>Im dritten Takt kommen die Viertel jeweils eine Achtel zu früh: auf „1 und“ statt „2“ und auf „3 und“ statt „4“. Der letzte Ton beginnt auf „4 und“ und wird über den Taktstrich in die Eins des nächsten Takts gebunden. Man nennt diese Form <strong>Antizipation</strong> (Vorwegnahme). Im Pop ist sie allgegenwärtig: Gesang und Akkordwechsel kommen oft eine Achtel vor der Eins.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Eine Synkope beginnt auf einer leichten Zeit und klingt über die nächste schwere Zeit hinweg. Zähl dabei unbedingt die Unterteilung („1 und 2 und“) mit, sonst rutschen synkopierte Töne auf den Schlag.</p>
+  </div>
+
+  <section class="layer deep" data-title="Warum Synkopen grooven">
+    <p>Musik spielt ständig mit unseren Erwartungen. Sobald wir ein Metrum erkannt haben, sagt das Gehirn voraus, wann der nächste wichtige Ton kommt. Wird die Vorhersage bestätigt, empfinden wir Stabilität. Wird sie verletzt, horchen wir auf.</p>
+    <p>Eine Synkope ist eine kleine, kontrollierte Verletzung. Sie setzt einen Akzent dort, wo keiner erwartet wird, und lässt den erwarteten Schlag leer. Viele Hörer haben dann den Impuls, die Lücke körperlich zu füllen, mit einem Nicken, einem Fußtippen oder einer Tanzbewegung.</p>
+    <p>Eine Studie von Maria Witek und Kollegen (2014) hat das messbar gemacht. Versuchspersonen hörten Schlagzeugrhythmen mit unterschiedlich vielen Synkopen und bewerteten, wie sehr sie sich bewegen wollten und wie angenehm sie den Rhythmus fanden. Am höchsten lagen die Bewertungen bei <strong>mittlerer</strong> Synkopendichte. Ganz ohne Synkopen war der Rhythmus langweilig, mit sehr vielen wurde das Metrum unklar und der Groove ging verloren. Die Synkope braucht also ein stabiles Metrum, gegen das sie sich abheben kann.</p>
+  </section>
+
+  <section class="layer piano" data-title="Synkopen sauber spielen">
+    <p>Synkopen misslingen am Klavier meist auf zwei Arten: Der synkopierte Ton kommt zu spät, nämlich auf den Schlag statt davor. Oder er wird zu früh losgelassen, sodass der Haltebogen nicht hörbar ist.</p>
+    <ol>
+      <li>Zähl die Achtel laut: „1 und 2 und 3 und 4 und“.</li>
+      <li>Klopf mit dem linken Fuß nur die Schläge (1, 2, 3, 4).</li>
+      <li>Spiel den Rhythmus mit der rechten Hand auf einem Ton. Der Fuß darf dabei nicht mitwandern. Synkopierte Töne erklingen <em>zwischen</em> zwei Fußschlägen.</li>
+      <li>Halte jeden übergebundenen Ton bewusst, bis zum Ende seiner Dauer.</li>
+    </ol>
+    <p>Im Pop wird die linke Hand oft gerade auf der Eins gespielt, während die rechte Hand den Akkord eine Achtel vorher antizipiert. Diese Unabhängigkeit der Hände ist anfangs ungewohnt. Üb sie langsam mit Metronom, bis sich die Verschiebung natürlich anfühlt.</p>
+  </section>
+
+  <!-- 4.8 -->
+  <h2 id="tempo">4.8 Tempo</h2>
+  <p>Die Taktart sagt, wie die Schläge geordnet sind, aber nicht, wie schnell sie kommen. Das <dfn id="g-tempo">Tempo</dfn> wird auf zwei Arten angegeben.</p>
+  <h4>Schläge pro Minute</h4>
+  <p>Die genaue Angabe ist eine Zahl in <dfn id="g-bpm">Schlägen pro Minute</dfn> (englisch <em>beats per minute</em>, BPM). Über den Noten steht dann zum Beispiel ♩ = 120: 120 Viertel pro Minute, also zwei pro Sekunde. In älteren Ausgaben steht davor oft „M.M.“ für Mälzels Metronom.</p>
+  <div class="formula">Dauer eines Schlags in Sekunden = 60 / BPM &nbsp;&nbsp;→&nbsp;&nbsp; bei ♩ = 120: 60 / 120 = 0,5 s</div>
+  <h4>Italienische Tempobezeichnungen</h4>
+  <p>Traditionell beschreibt ein Wort das Tempo, meist auf Italienisch. Die Zahlen in der Tabelle sind Richtwerte. Verschiedene Quellen nennen leicht abweichende Bereiche, und die Bezeichnungen beschreiben ursprünglich eher einen Charakter als eine Geschwindigkeit.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Bezeichnung</th><th>wörtlich</th><th class="num">ungefähr ♩ =</th></tr></thead>
+      <tbody>
+        <tr><td>Grave</td><td>schwer, ernst</td><td class="num">25–45</td></tr>
+        <tr><td>Largo</td><td>breit</td><td class="num">40–60</td></tr>
+        <tr><td>Larghetto</td><td>etwas breit</td><td class="num">60–66</td></tr>
+        <tr><td>Adagio</td><td>gemächlich, „mit Muße“</td><td class="num">66–76</td></tr>
+        <tr><td>Andante</td><td>gehend</td><td class="num">76–108</td></tr>
+        <tr><td>Moderato</td><td>mäßig</td><td class="num">108–120</td></tr>
+        <tr><td>Allegretto</td><td>etwas heiter</td><td class="num">100–128</td></tr>
+        <tr><td>Allegro</td><td>heiter, lebhaft</td><td class="num">120–156</td></tr>
+        <tr><td>Vivace</td><td>lebendig</td><td class="num">156–176</td></tr>
+        <tr><td>Presto</td><td>schnell</td><td class="num">168–200</td></tr>
+        <tr><td>Prestissimo</td><td>äußerst schnell</td><td class="num">über 200</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h4>Tempoveränderungen</h4>
+  <ul>
+    <li><strong>accelerando</strong> (accel.): allmählich schneller</li>
+    <li><strong>ritardando</strong> (rit.) und <strong>rallentando</strong> (rall.): allmählich langsamer</li>
+    <li><strong>a tempo</strong>: zurück zum vorherigen Tempo. <strong>Tempo primo</strong>: zurück zum Anfangstempo</li>
+    <li><strong>rubato</strong> („geraubt“): freies Dehnen und Drängen des Tempos im Ausdruck, typisch für Chopin</li>
+    <li><dfn id="g-fermate">Fermate</dfn> 𝄐: Der Ton oder die Pause wird nach Gefühl länger ausgehalten. Danach geht es im Tempo weiter.</li>
+  </ul>
+  <div class="abc" data-bpm="90" data-caption="Eine Fermate über dem Schlusston">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    c B A G | !fermata!c4 |]
+  </div>
+
+  <section class="layer deep" data-title="Warum Italienisch?">
+    <p>Im 17. und 18. Jahrhundert war Italien das Zentrum der europäischen Musik. Oper, Sonate, Konzert und Sinfonie entwickelten sich dort oder nach italienischem Vorbild, und italienische Musiker arbeiteten an Höfen in ganz Europa. Mit der Musik verbreiteten sich die Begriffe. So wurde Italienisch zur Fachsprache der Musik, wie Latein für die Medizin.</p>
+    <p>Die Wörter sind ursprünglich Charakterangaben. <em>Allegro</em> heißt im Alltagsitalienisch „fröhlich“, <em>Andante</em> „gehend“, <em>Largo</em> „breit“. Ein Allegro war also zunächst ein Stück in heiterer Stimmung, die eben meist ein lebhaftes Tempo mit sich bringt. Deshalb kombinieren Komponisten die Wörter gern: <em>Allegro ma non troppo</em> heißt „lebhaft, aber nicht zu sehr“.</p>
+    <p>Nicht alle hielten sich an das Italienische. Beethoven schrieb einige späte Werke mit deutschen Bezeichnungen, etwa die Klaviersonate op. 101 („Etwas lebhaft und mit der innigsten Empfindung“). Schumann und Mahler folgten ihm darin oft. Im Jazz und Pop stehen dagegen meist knappe englische Angaben wie <em>Medium Swing</em> oder <em>Ballad</em> und eine BPM-Zahl.</p>
+  </section>
+
+  <section class="layer deep" data-title="Mälzel, Beethoven und die Physik des Pendels">
+    <p>Das Metronom mit Pendel und verschiebbarem Gewicht ließ sich Johann Nepomuk Mälzel 1815 patentieren. Die entscheidende Idee stammte allerdings vom Niederländer Dietrich Nikolaus Winkel. Eine Kommission gab Winkel einige Jahre später recht, aber der Name blieb an Mälzel hängen: „M.M.“ steht bis heute für Mälzels Metronom.</p>
+    <p>Beethoven, ein Bekannter Mälzels, gehörte zu den ersten Komponisten, die ihre Werke mit Metronomzahlen versahen. Seine Angaben gelten bis heute als rätselhaft schnell. Ob sein Gerät falsch ging, ob er die Zahlen anders meinte oder ob er wirklich so schnelle Tempi wollte, ist umstritten.</p>
+    <h4>Wie das Pendel das Tempo regelt</h4>
+    <p>Ein einfaches Pendel schwingt umso langsamer, je länger es ist. Seine Schwingungsdauer T hängt nur von der Länge L und der Erdbeschleunigung g ab:</p>
+    <div class="formula">T = 2π · √(L / g)</div>
+    <p>Die Dauer wächst mit der Wurzel der Länge. Ein viermal so langes Pendel schwingt doppelt so langsam. Ein Metronom ist ein umgekehrtes Pendel mit einem festen Gegengewicht unten und einem verschiebbaren Gewicht oben. Schiebt man das obere Gewicht nach oben, wandert der Schwerpunkt, das Pendel verhält sich wie ein längeres und tickt langsamer. Deshalb stehen die langsamen Tempi oben auf der Skala.</p>
+  </section>
+
+  <!-- 4.9 -->
+  <h2 id="metronom">4.9 Metronom und Taktarten-Trainer</h2>
+  <p>Das folgende Metronom betont die Eins jedes Takts. Wähle eine Taktart, ein Tempo und auf Wunsch eine Unterteilung. Mit „Tippen“ kannst du ein Tempo vorgeben: Tippe mindestens dreimal im gewünschten Tempo.</p>
+
+  <div class="trainer metro" id="metro">
+    <h4>Metronom</h4>
+    <div class="row">
+      <span class="bpm" id="metro-bpm-out">80</span><span class="unit" id="metro-unit">Viertel pro Minute</span>
+      <input type="range" id="metro-bpm" min="30" max="240" value="80" aria-label="Tempo">
+    </div>
+    <div class="row">
+      <label for="metro-meter">Takt
+        <select id="metro-meter">
+          <option value="1">ohne Betonung</option>
+          <option value="2/4">2/4</option>
+          <option value="3/4">3/4</option>
+          <option value="4/4" selected>4/4</option>
+          <option value="5/4">5/4 (3 + 2)</option>
+          <option value="6/8">6/8</option>
+          <option value="7/8">7/8 (2 + 2 + 3)</option>
+        </select>
+      </label>
+      <label for="metro-sub">Unterteilung
+        <select id="metro-sub">
+          <option value="1">keine</option>
+          <option value="2">Achtel</option>
+          <option value="3">Triolen</option>
+          <option value="4">Sechzehntel</option>
+        </select>
+      </label>
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" type="button" id="metro-toggle">Start</button>
+      <button class="btn" type="button" id="metro-tap">Tippen</button>
+    </div>
+    <div class="dots" id="metro-dots" aria-hidden="true"></div>
+  </div>
+
+  <section class="layer piano" data-title="Sinnvoll mit dem Metronom üben">
+    <p>Das Metronom ist kein Taktgeber, dem man hinterherläuft, sondern ein Spiegel für das eigene Zeitgefühl. Ein paar Regeln machen es zum nützlichsten Übungswerkzeug:</p>
+    <ul>
+      <li><strong>Langsam beginnen.</strong> Wähl ein Tempo, in dem du das Stück fehlerfrei spielen kannst, auch wenn es sehr langsam ist. Steigere dann in kleinen Schritten, etwa 4 bis 8 BPM.</li>
+      <li><strong>Unterteilung nutzen.</strong> In langsamen Tempi verliert man zwischen den Klicks leicht die Orientierung. Mit hörbaren Achteln wird das Raster dichter.</li>
+      <li><strong>Klick auf 2 und 4.</strong> Für Pop, Swing und Jazz stell das Metronom auf halbe Geschwindigkeit und hör die Klicks als Schläge 2 und 4. Das entspricht dem Backbeat der Snare im Schlagzeug und trainiert das Gefühl für Groove.</li>
+      <li><strong>Nicht nur mit Metronom.</strong> Spiel das Stück zwischendurch ohne Klick und nimm dich auf. Ob das Tempo hält, hörst du beim Abspielen sofort.</li>
+    </ul>
+    <p>Mehr über effektives Üben steht in Kapitel 47.</p>
+  </section>
+
+  <p>Im Taktarten-Trainer hörst du einige Takte einer einfachen Begleitung: tiefe Basstöne auf den schweren Schlägen, Akkorde auf den leichten. Bestimme die Taktart. 2/4 und 4/4 sind dabei zusammengefasst, weil sie sich ohne Melodie kaum unterscheiden lassen.</p>
+  <div class="no-kbd" id="meter-trainer"></div>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Das Metrum ordnet den Puls in schwere und leichte Schläge. Ein Takt beginnt immer mit dem schwersten Schlag, der Eins.</li>
+    <li>Die Taktangabe nennt oben die Zahl der Schläge, unten ihren Notenwert. C = 4/4, ¢ = 2/2.</li>
+    <li>Einfache Takte teilen den Schlag in zwei (2/4, 3/4, 4/4), zusammengesetzte in drei (6/8, 9/8, 12/8). Ungerade Takte (5/4, 7/8) mischen Zweier- und Dreiergruppen.</li>
+    <li>Ein Auftakt ist ein unvollständiger Anfangstakt. Eine Synkope beginnt auf einer leichten Zeit und klingt über die schwere hinweg.</li>
+    <li>Tempo wird in BPM oder mit italienischen Charakterbezeichnungen angegeben. Ein Schlag dauert 60 / BPM Sekunden.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">4.1</span><div><span class="kind">Theorie</span>Welche Zählzeiten sind in 3/4, 4/4 und 6/8 jeweils schwer, welche halbschwer?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>3/4: 1 schwer, 2 und 3 leicht. 4/4: 1 schwer, 3 halbschwer, 2 und 4 leicht. 6/8: 1 schwer, 4 halbschwer, die übrigen Achtel leicht. Der 6/8-Takt verhält sich also wie ein Zweiertakt mit dreigeteilten Schlägen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">4.2</span><div><span class="kind">Notenlesen</span>Die Taktangabe fehlt. Welche Taktart passt zu jedem der beiden Beispiele?</div></div>
+      <div class="abc" data-bpm="90">
+        X:1
+        M:none
+        L:1/8
+        K:C
+        "^A"B2 B2 B2 | B4 B2 | B6 |] "^B"BBB BBB | B3 B3 | B6 |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>A: 3/4. Jeder Takt hat drei Viertel, und die Notenwerte gruppieren sich in Vierteln. B: 6/8. Die Achtel sind in Dreiergruppen gebalkt, und die Takte enthalten zwei punktierte Viertel. Beide Takte enthalten sechs Achtel, unterscheiden sich aber in der Gruppierung.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">4.3</span><div><span class="kind">Theorie</span>Ein Lied im 4/4-Takt beginnt mit einem Auftakt aus einer Viertel. Auf welche Zählzeit fällt der Auftakt, und wie lang ist der letzte Takt, wenn die traditionelle Regel eingehalten wird?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der Auftakt fällt auf die „4“. Der letzte Takt enthält drei Viertel, damit Auftakt und Schlusstakt zusammen einen vollständigen 4/4-Takt ergeben.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">4.4</span><div><span class="kind">Notenlesen</span>Wo stehen in diesem Takt Synkopen? Schreib die Zählsilben dazu.</div></div>
+      <div class="abc" data-bpm="90">
+        X:1
+        M:4/4
+        L:1/8
+        K:C
+        B2 B B2 B B2 | B B3 B4 |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Takt 1: 1, 2, 2 und, 3 und, 4. Synkopisch ist die Viertel auf „2 und“: Sie klingt über die schwere 3 hinweg. Die Achtel auf „3 und“ liegt im Offbeat, ist aber keine Synkope, weil sie vor der 4 endet. Takt 2: 1, 1 und, 3. Die punktierte Viertel auf „1 und“ klingt über die 2 hinweg, auch sie ist eine Synkope.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">4.5</span><div><span class="kind">Theorie</span>Ein Stück im 4/4-Takt hat das Tempo ♩ = 120 und 32 Takte. Wie lange dauert es? Wie lange dauert eine Achtel?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Eine Viertel dauert 60 / 120 = 0,5 s, ein Takt 4 · 0,5 = 2 s, 32 Takte 64 s. Eine Achtel dauert 0,25 s.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">4.6</span><div><span class="kind">Theorie</span>Ordne von langsam nach schnell: Allegro, Largo, Presto, Andante, Adagio, Moderato.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Largo, Adagio, Andante, Moderato, Allegro, Presto.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">4.7</span><div><span class="kind">Am Klavier</span>Spiel die Walzerbegleitung aus Abschnitt 4.3 mit dem Metronom auf ♩ = 100. Betone die Eins und spiel die Akkorde kurz und leicht. Dann dieselben Akkorde als Marsch im 2/4-Takt: Bass – Akkord.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Lass die Hand nach dem Basston locker zum Akkord federn. Wenn die Eins nicht hörbar schwerer ist als zwei und drei, verschwindet das Walzergefühl. Nimm dich auf und hör nach, ob man den Dreier erkennt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">4.8</span><div><span class="kind">Am Klavier</span>Spiel den synkopierten Rhythmus aus Abschnitt 4.7 (Takt 3–4) auf c'', während der linke Fuß gleichmäßig Viertel klopft. Starte mit Metronom auf ♩ = 70.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Der Fuß bleibt auf den Schlägen, die Hand spielt dazwischen. Die schwierigste Stelle ist der letzte Ton auf „4 und“, der in die nächste Eins übergebunden wird: Auf der Eins darfst du ihn nicht neu anschlagen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">4.9</span><div><span class="kind">Gehör</span>Löse im Taktarten-Trainer zehn Aufgaben in der Auswahl „Gerade, 3/4, 6/8“ hintereinander richtig.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Achte auf die tiefen Basstöne. Zähl die Schläge zwischen zwei Basstönen: Bei 3/4 sind es drei gleich schnelle Schläge. Bei 6/8 kommen die Schläge schneller und gruppieren sich zu Dreien, wobei der Bass zweimal pro Takt erklingt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">4.10</span><div><span class="kind">Vertiefung</span>Ein Pendel von 25 cm Länge schwingt mit einer bestimmten Dauer. Wie lang muss ein Pendel sein, das genau halb so schnell schwingt? Und warum liegen beim Metronom die langsamen Tempi oben auf der Skala?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die Schwingungsdauer wächst mit der Wurzel der Länge. Für die doppelte Dauer braucht man die vierfache Länge, also 1 m. Beim Metronom verlängert ein höher geschobenes Gewicht das Pendel wirksam, deshalb tickt es langsamer, je weiter oben das Gewicht sitzt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">4.11</span><div><span class="kind">Vertiefung</span>Woher stammt das Zeichen C für den 4/4-Takt, und was bedeutete der Strich durch das C ursprünglich?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Das C ist ein offener Halbkreis aus der Mensuralnotation. Er bezeichnete das <em>tempus imperfectum</em> mit Zweiteilung, im Gegensatz zum geschlossenen Kreis für die Dreiteilung. Der Strich bedeutete eine Verkürzung aller Werte auf die Hälfte, also ein Zählen in Breven statt Semibreven, daher <em>alla breve</em>.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(4);
+
+  // Betonungsmuster: 2 = schwer, 1 = halbschwer, 0 = leicht. unit: 4 = Viertel, 8 = Achtel
+  const METERS = {
+    "1":   { acc: [0], unit: 4 },
+    "2/4": { acc: [2, 0], unit: 4 },
+    "3/4": { acc: [2, 0, 0], unit: 4 },
+    "4/4": { acc: [2, 0, 1, 0], unit: 4 },
+    "5/4": { acc: [2, 0, 0, 1, 0], unit: 4 },
+    "6/8": { acc: [2, 0, 0, 1, 0, 0], unit: 8 },
+    "7/8": { acc: [2, 0, 1, 0, 1, 0, 0], unit: 8 }
+  };
+
+  // Einfache Begleitung: Bass auf schweren, Akkord auf leichten Schlägen
+  function playMeter(key, bars, bpm) {
+    const M = METERS[key];
+    const sec = 60 / bpm;
+    let t = 0;
+    for (let b = 0; b < bars; b++) {
+      M.acc.forEach((a) => {
+        if (a === 2) Book.audio.note(36, t, sec * 0.9, 0.95);
+        else if (a === 1) Book.audio.note(43, t, sec * 0.9, 0.7);
+        else Book.audio.chord([60, 64, 67], t, sec * 0.45, 0.4);
+        t += sec;
+      });
+    }
+    Book.audio.note(36, t, sec * 1.5, 0.95);
+  }
+  document.addEventListener("click", (e) => {
+    const el = e.target.closest("[data-meter]");
+    if (!el) return;
+    const key = el.dataset.meter;
+    playMeter(key, 4, METERS[key].unit === 8 ? 210 : 104);
+  });
+
+  // Metronom
+  (function () {
+    const $ = (id) => document.getElementById(id);
+    const range = $("metro-bpm"), out = $("metro-bpm-out"), meterSel = $("metro-meter"), subSel = $("metro-sub");
+    const toggle = $("metro-toggle"), dots = $("metro-dots"), unit = $("metro-unit");
+    let running = false, timer = null, next = 0, pulse = 0, sub = 0, taps = [];
+    const cfg = () => METERS[meterSel.value];
+    function drawDots() {
+      const acc = cfg().acc;
+      dots.innerHTML = acc.map((a) => `<span class="dot${a === 2 ? " strong" : a === 1 ? " mid" : ""}"></span>`).join("");
+      unit.textContent = cfg().unit === 8 ? "Achtel pro Minute" : "Viertel pro Minute";
+      subSel.disabled = cfg().unit === 8;
+    }
+    function click(t, level) {
+      const ctx = Book.audio.ctx;
+      const o = ctx.createOscillator(), g = ctx.createGain();
+      o.frequency.value = [1760, 1320, 990, 700][level];
+      const v = [0.6, 0.45, 0.35, 0.18][level];
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(v, t + 0.002);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.05);
+      o.connect(g); g.connect(Book.audio.out);
+      o.start(t); o.stop(t + 0.06);
+    }
+    function schedule() {
+      const ctx = Book.audio.ctx;
+      const acc = cfg().acc;
+      const subs = cfg().unit === 8 ? 1 : +subSel.value;
+      const step = 60 / +range.value / subs;
+      while (next < ctx.currentTime + 0.12) {
+        if (sub === 0) {
+          const a = acc[pulse % acc.length];
+          click(next, meterSel.value === "1" ? 2 : a === 2 ? 0 : a === 1 ? 1 : 2);
+          const idx = pulse % acc.length;
+          setTimeout(() => {
+            [...dots.children].forEach((d, i) => d.classList.toggle("lit", i === idx));
+          }, Math.max(0, (next - ctx.currentTime) * 1000));
+        } else click(next, 3);
+        next += step;
+        sub++;
+        if (sub >= subs) { sub = 0; pulse++; }
+      }
+    }
+    function start() {
+      const ctx = Book.audio.ensure(); if (!ctx) return;
+      running = true; pulse = 0; sub = 0; next = ctx.currentTime + 0.08;
+      timer = setInterval(schedule, 25);
+      toggle.textContent = "Stopp";
+    }
+    function stop() {
+      running = false; clearInterval(timer);
+      toggle.textContent = "Start";
+      [...dots.children].forEach((d) => d.classList.remove("lit"));
+    }
+    toggle.addEventListener("click", () => (running ? stop() : start()));
+    range.addEventListener("input", () => (out.textContent = range.value));
+    meterSel.addEventListener("change", () => { drawDots(); pulse = 0; sub = 0; });
+    subSel.addEventListener("change", () => { sub = 0; });
+    $("metro-tap").addEventListener("click", () => {
+      const now = performance.now();
+      if (taps.length && now - taps[taps.length - 1] > 2000) taps = [];
+      taps.push(now);
+      if (taps.length > 5) taps.shift();
+      if (taps.length >= 3) {
+        const iv = (taps[taps.length - 1] - taps[0]) / (taps.length - 1);
+        const bpm = Math.max(30, Math.min(240, Math.round(60000 / iv)));
+        range.value = bpm; out.textContent = bpm;
+      }
+    });
+    drawDots();
+  })();
+
+  // Taktarten-Trainer
+  (function () {
+    const items = [
+      { id: "g", label: "gerade (2/4 oder 4/4)", key: "4/4" },
+      { id: "3", label: "3/4", key: "3/4" },
+      { id: "6", label: "6/8", key: "6/8" },
+      { id: "5", label: "5/4", key: "5/4" },
+      { id: "7", label: "7/8", key: "7/8" }
+    ];
+    Book.earTrainer(document.getElementById("meter-trainer"), {
+      title: "Gehörtrainer: Taktarten",
+      intro: "Hör auf die tiefen Basstöne und zähl die Schläge dazwischen.",
+      items,
+      presets: [
+        { label: "Gerade, 3/4, 6/8", ids: ["g", "3", "6"] },
+        { label: "alle", ids: items.map((i) => i.id) }
+      ],
+      build(it) {
+        const base = METERS[it.key].unit === 8 ? 210 : 104;
+        const bpm = Math.round(base * (0.9 + Math.random() * 0.2));
+        return { play: () => playMeter(it.key, 3, bpm), marks: [], answer: it.label };
+      }
+    });
+  })();
+</script>
+</body>
+</html>

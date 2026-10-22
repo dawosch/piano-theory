@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Umkehrungen und Lagen · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil II · Kapitel 12</div>
+    <h1>Umkehrungen und Lagen</h1>
+    <p class="lede">Ein Akkord muss nicht mit dem Grundton unten stehen. Welcher Ton im Bass liegt und wie die übrigen Töne verteilt sind, verändert seinen Klang. Vor allem entscheidet es, wie bequem und wie schön du von einem Akkord zum nächsten kommst.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Grundstellung, Sextakkord und Quartsextakkord unterscheiden und benennen,</li>
+      <li>bei jedem Dreiklang Grundton und Umkehrung bestimmen, auch wenn die Töne durcheinanderliegen,</li>
+      <li>enge und weite Lage sowie Oktav-, Terz- und Quintlage auseinanderhalten,</li>
+      <li>Akkorde am Klavier mit kurzen Wegen verbinden,</li>
+      <li>erklären, warum der Basston so viel Gewicht hat und woher die Namen „Sextakkord“ und „Quartsextakkord“ kommen.</li>
+    </ul>
+  </div>
+
+  <!-- 12.1 -->
+  <h2 id="umkehrungen">12.1 Grundstellung und Umkehrungen</h2>
+  <p>In Kapitel 11 standen alle Dreiklänge in <dfn id="g-grundstellung">Grundstellung</dfn>: Der Grundton lag unten, darüber Terz und Quinte. Legt man den untersten Ton eine Oktave höher, entsteht eine <dfn id="g-umkehrung-akkord">Umkehrung</dfn>. Ein Dreiklang hat zwei Umkehrungen:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Stellung</th><th>im Bass</th><th>C-Dur</th><th>Name</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 64 67" data-mode="both"><td>Grundstellung</td><td>Grundton</td><td>c'–e'–g'</td><td>Grundstellung, „5/3“</td><td>▶</td></tr>
+        <tr class="play-row" data-play="64 67 72" data-mode="both"><td>1. Umkehrung</td><td>Terz</td><td>e'–g'–c''</td><td><dfn id="g-sextakkord">Sextakkord</dfn>, „6“</td><td>▶</td></tr>
+        <tr class="play-row" data-play="67 72 76" data-mode="both"><td>2. Umkehrung</td><td>Quinte</td><td>g'–c''–e''</td><td><dfn id="g-quartsextakkord">Quartsextakkord</dfn>, „6/4“</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <div class="kb" data-from="60" data-to="79" data-labels="white" data-marks="60 64 67 72:c2 76:c3" aria-label="C-Dur über zwei Oktaven: Grundstellung, Sextakkord und Quartsextakkord nutzen dieselben Töne"></div>
+    <figcaption>Dieselben drei Töne c, e, g in verschiedenen Reihenfolgen. Grundstellung: c'–e'–g'. Sextakkord: e'–g'–c''. Quartsextakkord: g'–c''–e''.</figcaption>
+  </figure>
+  <div class="abc" data-bpm="60" data-caption="C-Dur in Grundstellung, als Sextakkord und als Quartsextakkord">
+    X:1
+    M:none
+    L:1
+    K:C
+    "^Grundstellung" [CEG] | "^Sextakkord" [EGc] | "^Quartsextakkord" [Gce] |]
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Eine Umkehrung ändert nicht den Akkord, sondern nur seinen Basston. Entscheidend ist immer der <strong>tiefste</strong> Ton. Wie die oberen Töne verteilt sind, spielt für die Umkehrung keine Rolle.</p>
+  </div>
+  <p>Am Klavier heißt das: Spielt deine linke Hand ein tiefes c und die rechte Hand e'–g'–c'', ist der Akkord in Grundstellung, obwohl die rechte Hand für sich wie ein Sextakkord aussieht. Der Bass gehört zum Akkord dazu.</p>
+
+  <!-- 12.2 -->
+  <h2 id="namen">12.2 Woher die Namen kommen: Generalbass</h2>
+  <p>Die Namen „Sextakkord“ und „Quartsextakkord“ beschreiben die Intervalle über dem Basston. Beim Sextakkord e–g–c liegt über dem Bass e eine Terz (g) und eine Sexte (c). Beim Quartsextakkord g–c–e liegt über dem Bass g eine Quarte (c) und eine Sexte (e). Die Grundstellung c–e–g hat Terz und Quinte über dem Bass.</p>
+  <p>Diese Zählweise stammt aus der <dfn id="g-generalbass">Generalbass</dfn>-Praxis. Dabei schrieben Komponisten nur die Basslinie aus und notierten mit kleinen Ziffern darüber, welche Intervalle der Spieler dazu greifen soll. Man nennt diese Ziffern <dfn id="g-bezifferung">Bezifferung</dfn>. Selbstverständliches lässt man weg:</p>
+  <ul>
+    <li>keine Ziffer: Grundstellung (eigentlich 5 und 3),</li>
+    <li><strong>6</strong>: Sextakkord (eigentlich 6 und 3),</li>
+    <li><strong>6/4</strong> (übereinander geschrieben): Quartsextakkord.</li>
+  </ul>
+  <p>Die Bezifferung begegnet dir heute vor allem in der klassischen Harmonielehre, oft kombiniert mit Stufenziffern: I<sup>6</sup> ist die erste Stufe als Sextakkord, V<sup>6/4</sup> die fünfte Stufe als Quartsextakkord. In Pop und Jazz schreibt man Umkehrungen dagegen als Slash-Akkorde (Abschnitt 12.4).</p>
+
+  <section class="layer deep" data-title="Generalbass: die Kurzschrift des Barock">
+    <p>Von etwa 1600 bis 1750 war fast jede Ensemblemusik auf ein Fundament gebaut, den <em>basso continuo</em>. Ein Cembalist oder Organist, oft zusammen mit Cello oder Laute, spielte die Basslinie und improvisierte darüber passende Akkorde. Aufgeschrieben war nur der Bass mit seinen Ziffern. Wer Generalbass spielte, musste also aus Ziffern blitzschnell Griffe machen, so wie heute ein Pop-Pianist aus Akkordsymbolen.</p>
+    <p>Die Generalbass-Denkweise geht vom <em>Bass</em> aus. Ein e mit einer 6 darüber ist zuerst ein „e mit Terz und Sexte“. Dass es sich um einen C-Dur-Akkord handelt, war für die Praxis zweitrangig.</p>
+    <p>Die Idee, dass c–e–g, e–g–c und g–c–e derselbe Akkord sind, formulierte erst Jean-Philippe Rameau 1722 in seinem „Traité de l’harmonie“. Er nannte das Prinzip <em>renversement</em> (Umkehrung) und führte den Begriff des Grundtons ein, den er <em>son fondamental</em> nannte. Seine <em>basse fondamentale</em> ist eine gedachte Basslinie aus den Grundtönen der Akkorde, auch wenn tatsächlich eine Umkehrung erklingt. Damit begann die moderne Harmonielehre. Die Begriffe „Sextakkord“ und „Quartsextakkord“ sind ein Überbleibsel der älteren Generalbass-Sicht.</p>
+  </section>
+
+  <!-- 12.3 -->
+  <h2 id="erkennen">12.3 Umkehrungen erkennen</h2>
+  <p>Liegen die Töne eines Akkords nicht als Schneemann übereinander, gehst du so vor:</p>
+  <ol>
+    <li><strong>Töne sammeln:</strong> Schreib die Tonnamen ohne Verdopplungen auf.</li>
+    <li><strong>Terzen ordnen:</strong> Ordne sie so um, dass zwischen benachbarten Tönen jeweils eine Terz liegt. Der unterste Ton dieser Ordnung ist der Grundton, und damit kennst du den Akkord.</li>
+    <li><strong>Bass prüfen:</strong> Schau, welcher Ton tatsächlich am tiefsten liegt. Grundton = Grundstellung, Terz = Sextakkord, Quinte = Quartsextakkord.</li>
+  </ol>
+  <h4>Beispiel: a–d–f (a unten)</h4>
+  <p>Töne a, d, f. In Terzen geordnet: d–f–a. Grundton d, d–f ist eine kleine Terz, also d-Moll. Im Bass liegt a, die Quinte. Ergebnis: <strong>d-Moll als Quartsextakkord</strong>.</p>
+  <h4>Beispiel: fis–d–a (fis unten)</h4>
+  <p>Töne fis, d, a. In Terzen geordnet: d–fis–a, also D-Dur. Im Bass liegt fis, die Terz. Ergebnis: <strong>D-Dur als Sextakkord</strong>.</p>
+  <p>Mit etwas Übung erkennst du die Umkehrung auch an der <strong>Lücke</strong>. Ein Dreiklang in enger Lage hat bei einer Umkehrung einen Quartabstand zwischen zwei Tönen. Der obere Ton dieser Quarte ist der Grundton.</p>
+  <ul>
+    <li>Grundstellung: Terz + Terz, keine Quarte.</li>
+    <li>Sextakkord: Terz unten, Quarte oben. Der Grundton liegt oben.</li>
+    <li>Quartsextakkord: Quarte unten, Terz oben. Der Grundton liegt in der Mitte.</li>
+  </ul>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Bei einem Dreiklang in enger Lage ist der obere Ton der Quarte immer der Grundton.</p>
+  </div>
+
+  <section class="layer piano" data-title="Umkehrungen greifen">
+    <p>Für Dreiklänge in enger Lage gelten diese Standard-Fingersätze:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Stellung</th><th>rechte Hand</th><th>linke Hand</th></tr></thead>
+        <tbody>
+          <tr><td>Grundstellung</td><td>1–3–5</td><td>5–3–1</td></tr>
+          <tr><td>Sextakkord</td><td>1–2–5</td><td>5–3–1</td></tr>
+          <tr><td>Quartsextakkord</td><td>1–3–5</td><td>5–2–1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Die Regel dahinter: Die Quarte braucht mehr Platz, deshalb liegt dort, wo die Quarte ist, ein Finger mehr dazwischen. In der rechten Hand liegt die Quarte beim Sextakkord oben (2–5), in der linken Hand liegt sie beim Quartsextakkord unten (5–2).</p>
+    <p><strong>Die Umkehrungsleiter:</strong> Spiel C-Dur in Grundstellung auf c', dann den Sextakkord auf e', dann den Quartsextakkord auf g', dann wieder Grundstellung auf c''. Und den ganzen Weg zurück. Danach dasselbe mit F-Dur, G-Dur und a-Moll. Achte darauf, dass alle drei Töne exakt gleichzeitig erklingen. Ein häufiger Fehler ist, dass der Daumen etwas früher anschlägt.</p>
+    <div class="btn-row">
+      <button class="btn" type="button" id="ladder-demo">▶ Umkehrungsleiter in C-Dur</button>
+    </div>
+  </section>
+
+  <!-- 12.4 -->
+  <h2 id="slash">12.4 Umkehrungen in Akkordsymbolen</h2>
+  <p>In Leadsheets schreibt man eine Umkehrung als <dfn id="g-slash-akkord">Slash-Akkord</dfn>: Vor dem Schrägstrich steht der Akkord, dahinter der Basston. C/E bedeutet „C-Dur mit e im Bass“, also einen Sextakkord. C/G ist C-Dur mit g im Bass, also ein Quartsextakkord.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Symbol</th><th>Akkord</th><th>Bass</th><th>Stellung</th></tr></thead>
+      <tbody>
+        <tr><td>C/E</td><td>C-Dur</td><td>e</td><td>Sextakkord</td></tr>
+        <tr><td>C/G</td><td>C-Dur</td><td>g</td><td>Quartsextakkord</td></tr>
+        <tr><td>Am/C</td><td>a-Moll</td><td>c</td><td>Sextakkord</td></tr>
+        <tr><td>G/B (englisch)</td><td>G-Dur</td><td>h</td><td>Sextakkord</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Vorsicht bei <strong>G/B</strong>: In englischen Leadsheets steht B für unser h. G/B bedeutet also G-Dur mit h im Bass, nicht mit b. Slash-Akkorde können auch einen Basston angeben, der gar nicht zum Akkord gehört, etwa C/D. Das behandelt Kapitel 17.</p>
+
+  <!-- 12.5 -->
+  <h2 id="lagen">12.5 Enge und weite Lage</h2>
+  <p>Das Wort <dfn id="g-lage">Lage</dfn> hat in der Harmonielehre zwei Bedeutungen. Beide beziehen sich auf die oberen Stimmen eines Akkords, also alles außer dem Bass.</p>
+  <h4>1. Enge und weite Lage</h4>
+  <p>In <strong>enger Lage</strong> liegen die Oberstimmen so dicht wie möglich: Zwischen zwei benachbarten Oberstimmen passt kein weiterer Akkordton. In <strong>weiter Lage</strong> sind die Oberstimmen gespreizt, zwischen ihnen ist Platz für einen Akkordton, der nicht gespielt wird.</p>
+  <div class="abc" data-bpm="60" data-caption="C-Dur über dem Bass c: enge Lage und weite Lage">
+    X:1
+    M:none
+    L:1
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "^eng" [EGc] | "^weit" [Gec'] |]
+    [V:LH] C, | C, |]
+  </div>
+  <p>Enge Lage klingt kompakt und ist am Klavier mit einer Hand zu greifen. Weite Lage klingt offener und voller, braucht aber oft beide Hände. Viele Arrangements im Pop und Jazz nutzen weite Lagen, weil sie transparenter klingen und die Töne einander weniger verdecken.</p>
+  <h4>2. Oktav-, Terz- und Quintlage</h4>
+  <p>Hier geht es um den <strong>obersten</strong> Ton. Liegt oben der Grundton, spricht man von <strong>Oktavlage</strong>, liegt oben die Terz, von <strong>Terzlage</strong>, liegt oben die Quinte, von <strong>Quintlage</strong>. Der oberste Ton ist besonders wichtig, weil das Ohr ihn als Melodie wahrnimmt. Wenn du eine Melodie begleitest, wählst du die Lage so, dass der Melodieton oben liegt.</p>
+  <div class="abc" data-bpm="60" data-caption="C-Dur in Oktavlage, Terzlage und Quintlage">
+    X:1
+    M:none
+    L:1
+    K:C
+    "^Oktavlage" [EGc] | "^Terzlage" [Gce] | "^Quintlage" [CEG] |]
+  </div>
+
+  <!-- 12.6 -->
+  <h2 id="verdopplung">12.6 Vier Stimmen: welcher Ton doppelt?</h2>
+  <p>Ein Dreiklang hat drei Töne, am Klavier und im Chor spielt man aber oft vier oder mehr. Dann muss ein Ton verdoppelt werden. Die klassische Faustregel lautet:</p>
+  <ul>
+    <li>In Grundstellung verdoppelt man am besten den <strong>Grundton</strong>.</li>
+    <li>Im Quartsextakkord verdoppelt man den <strong>Basston</strong>, also die Quinte.</li>
+    <li>Im Sextakkord ist die Verdopplung freier. Man vermeidet aber, den Leitton (Kapitel 14) zu verdoppeln.</li>
+  </ul>
+  <p>Am Klavier spielst du die Verdopplung meist ohne nachzudenken: linke Hand Grundton, rechte Hand ein Dreiklang, und schon ist der Grundton doppelt. Das klingt stabil. Die Regeln für den vierstimmigen Satz vertieft Kapitel 37.</p>
+
+  <!-- 12.7 -->
+  <h2 id="wege">12.7 Kurze Wege: Akkorde verbinden</h2>
+  <p>Hier liegt der praktische Wert der Umkehrungen. Spielst du jeden Akkord in Grundstellung, springt die Hand bei jedem Wechsel. Wählst du die Umkehrungen geschickt, bewegen sich die Töne nur um kleine Schritte. Zwei Regeln reichen dafür:</p>
+  <ol>
+    <li><strong>Gemeinsame Töne liegen lassen.</strong> Haben zwei Akkorde einen Ton gemeinsam, bleibt dieser Finger einfach liegen.</li>
+    <li><strong>Die anderen Töne gehen zum nächstgelegenen Ton.</strong> Meist ist das ein Halb- oder Ganztonschritt.</li>
+  </ol>
+  <p>Vergleiche die Folge C – F – G – C einmal mit Sprüngen und einmal mit kurzen Wegen. In beiden Versionen spielt die linke Hand die Grundtöne.</p>
+  <div class="abc" data-bpm="70" data-caption="Mit Sprüngen: alle Akkorde rechts in Grundstellung">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "^C"[CEG]4 | "^F"[FAc]4 | "^G"[GBd]4 | "^C"[CEG]4 |]
+    [V:LH] C,4 | F,,4 | G,,4 | C,4 |]
+  </div>
+  <div class="abc" data-bpm="70" data-caption="Mit kurzen Wegen: c' bleibt liegen, dann gehen die Finger in kleinen Schritten">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "^C"[CEG]4 | "^F"[CFA]4 | "^G"[B,DG]4 | "^C"[CEG]4 |]
+    [V:LH] C,4 | F,,4 | G,,4 | C,4 |]
+  </div>
+  <p>In der zweiten Version bleibt c' von C nach F liegen, e' und g' gehen um einen Halb- bzw. Ganzton nach oben. Von F nach G geht jede Stimme um einen Schritt nach unten. Von G nach C bleibt g' liegen, h geht zu c' und d' zu e'. Die rechte Hand bewegt sich kaum, und die Akkorde klingen zusammenhängend.</p>
+  <p>Dasselbe Prinzip funktioniert für die häufigste Akkordfolge im Pop, a-Moll – F – C – G:</p>
+  <div class="abc" data-bpm="80" data-caption="Am – F – C – G mit kurzen Wegen in der rechten Hand">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "^Am"[A,CE]4 | "^F"[A,CF]4 | "^C"[G,CE]4 | "^G"[G,B,D]4 |]
+    [V:LH] A,,4 | F,,4 | C,4 | G,,4 |]
+  </div>
+
+  <section class="layer deep" data-title="Warum kurze Wege besser klingen">
+    <p>Dass kleine Schritte „zusammenhängend“ klingen, ist eine Eigenschaft unseres Gehörs. Der Psychologe Albert Bregman hat in seinem Buch „Auditory Scene Analysis“ (1990) beschrieben, wie das Gehirn eine Klangmischung in getrennte Ströme zerlegt, ähnlich wie man auf einer Party einer Stimme folgen kann. Eines der wichtigsten Kriterien ist die Tonhöhennähe: Töne, die dicht beieinanderliegen, ordnet das Gehör demselben Strom zu.</p>
+    <p>Bewegt sich jeder Akkordton nur um einen kleinen Schritt, hört das Ohr drei oder vier durchgehende Linien. Der Akkordwechsel klingt dann wie eine Veränderung <em>innerhalb</em> eines Klangs. Springen alle Töne gleichzeitig, reißen die Linien ab, und jeder Akkord klingt wie ein neuer Block.</p>
+    <p>Gemeinsame Töne wirken dabei wie eine Klammer. Sie bleiben stehen, während sich der Rest des Klangs um sie herum verändert. Die Musiktheorie hat aus diesen Beobachtungen über Jahrhunderte die Regeln der <em>Stimmführung</em> entwickelt. Teil V dieses Buchs behandelt sie ausführlich.</p>
+  </section>
+
+  <section class="layer piano" data-title="Begleiten mit kurzen Wegen">
+    <p>Für das Begleiten nach Akkordsymbolen ist das wichtigste Muster: <strong>linke Hand Grundton, rechte Hand Dreiklang in der Umkehrung, die am nächsten liegt.</strong> Die rechte Hand bleibt dabei in einem Bereich von etwa einer Oktave rund um c'.</p>
+    <p>Vorgehen beim Üben:</p>
+    <ol>
+      <li>Spiel den ersten Akkord in einer bequemen Lage, zum Beispiel C-Dur als c'–e'–g'.</li>
+      <li>Schau beim nächsten Akkord zuerst, welche Töne gleich bleiben. Diese Finger bleiben liegen.</li>
+      <li>Bewege die übrigen Finger zum nächsten passenden Ton.</li>
+      <li>Spiel die Folge langsam, bis die Hand die Wege kennt. Erst dann das Tempo erhöhen.</li>
+    </ol>
+    <p><strong>Übung:</strong> Spiel C – Am – F – G – C mit kurzen Wegen, Start in c'–e'–g'. Danach dieselbe Folge mit Start in e'–g'–c'' und in g'–c''–e''. Jede Startlage ergibt einen anderen Melodieton oben. Hör, wie sich die oberste Linie jeweils anders bewegt.</p>
+  </section>
+
+  <!-- 12.8 -->
+  <h2 id="klang">12.8 Der Klang der Umkehrungen</h2>
+  <p>Obwohl es derselbe Akkord ist, klingen die drei Stellungen verschieden:</p>
+  <ul>
+    <li>Die <strong>Grundstellung</strong> klingt am stabilsten. Stücke beginnen und enden meist mit der Tonika in Grundstellung.</li>
+    <li>Der <strong>Sextakkord</strong> klingt leichter und weniger endgültig. Er eignet sich gut, um eine Basslinie in Schritten zu führen, etwa C – C/E – F.</li>
+    <li>Der <strong>Quartsextakkord</strong> klingt am wenigsten stabil, fast wie ein Vorhalt. In der klassischen Musik erscheint er fast nur in bestimmten Zusammenhängen, am bekanntesten als Quartsextvorhalt vor der Dominante am Schluss (Kapitel 16).</li>
+  </ul>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="36 48 64 67" data-mode="harm">▶ C in Grundstellung</button>
+    <button class="btn" type="button" data-play="40 52 60 67" data-mode="harm">▶ C/E, Sextakkord</button>
+    <button class="btn" type="button" data-play="43 55 64 72" data-mode="harm">▶ C/G, Quartsextakkord</button>
+  </div>
+
+  <section class="layer deep" data-title="Warum der Bass so viel Gewicht hat">
+    <p>Warum bestimmt gerade der tiefste Ton den Charakter eines Akkords? Drei Erklärungen greifen ineinander.</p>
+    <p><strong>Obertöne.</strong> Der tiefste Ton hat die meisten hörbaren Teiltöne innerhalb des Akkordbereichs. Seine Obertöne verstärken oder reiben sich mit den oberen Tönen. Liegt der Grundton unten, fallen viele Akkordtöne mit seinen Obertönen zusammen (c, g, c', e', g' sind alle Teiltöne von C). Liegt die Quinte unten, passt der Akkordgrundton c nicht in die Obertonreihe von G. Der Klang bekommt dadurch eine Spannung.</p>
+    <p><strong>Die Quarte über dem Bass.</strong> In Kapitel 5 hast du gelesen, dass die Quarte über dem tiefsten Ton als Dissonanz behandelt wird. Im Quartsextakkord g–c–e liegt genau diese Quarte (g–c) über dem Bass. Das Ohr hört das c als eigentlichen Grundton und das g im Bass als etwas, das sich noch bewegen muss. Deshalb wirkt der Quartsextakkord wie ein Akkord „im Übergang“. Der Sextakkord enthält über dem Bass nur Terz und Sexte, beides Konsonanzen. Er ist deshalb stabil, nur weniger endgültig als die Grundstellung.</p>
+    <p><strong>Wahrnehmung.</strong> Die Hörforschung zeigt, dass Menschen die tiefste Stimme eines mehrstimmigen Klangs als Fundament hören und Veränderungen dort besonders stark für harmonische Veränderungen halten. Hohe Stimmen nehmen wir eher als Melodie wahr, die tiefste eher als Harmonieträger.</p>
+  </section>
+
+  <!-- 12.9 -->
+  <h2 id="hoeren">12.9 Umkehrungen hören</h2>
+  <p>Ob ein Akkord Dur oder Moll ist, hört man schnell. Die Umkehrung zu hören ist schwieriger, weil man auf den Bass achten muss. Ein Hörtipp: Sing nach dem Hören den tiefsten Ton und dann den Grundton des Akkords. Sind beide gleich, ist es die Grundstellung. Ist der Grundton eine Sexte über dem Bass, ist es ein Sextakkord. Ist er eine Quarte darüber, ein Quartsextakkord.</p>
+  <div class="inversion-trainer"></div>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Ein Dreiklang hat drei Stellungen: Grundstellung (Grundton im Bass), Sextakkord (Terz im Bass) und Quartsextakkord (Quinte im Bass).</li>
+    <li>Entscheidend ist der tiefste Ton. Die Namen stammen aus der Generalbass-Bezifferung: Intervalle über dem Bass.</li>
+    <li>Erkennen: Töne in Terzen ordnen, um den Grundton zu finden, dann den Bass prüfen. In enger Lage ist der obere Ton der Quarte der Grundton.</li>
+    <li>Enge/weite Lage beschreibt den Abstand der Oberstimmen. Oktav-, Terz- und Quintlage beschreiben den obersten Ton.</li>
+    <li>Am Klavier verbindest du Akkorde mit kurzen Wegen: gemeinsame Töne liegen lassen, die anderen zum nächstgelegenen Ton führen.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">12.1</span><div><span class="kind">Theorie</span>Bestimme Akkord und Stellung (der erste Ton liegt im Bass): e–g–c, a–d–f, fis–a–d, g–h–e, c–f–a, h–d–g.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>e–g–c: C-Dur, Sextakkord. a–d–f: d-Moll, Quartsextakkord. fis–a–d: D-Dur, Sextakkord. g–h–e: e-Moll, Sextakkord (e–g–h, g ist die Terz). c–f–a: F-Dur, Quartsextakkord. h–d–g: G-Dur, Sextakkord.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">12.2</span><div><span class="kind">Theorie</span>Schreib A-Dur und d-Moll in allen drei Stellungen.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>A-Dur: a–cis–e, cis–e–a, e–a–cis. d-Moll: d–f–a, f–a–d, a–d–f.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">12.3</span><div><span class="kind">Theorie</span>Welche Bezifferung gehört zu G-Dur mit h im Bass, und welche zu G-Dur mit d im Bass? Erkläre die Ziffern.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>h im Bass: 6 (Sextakkord). Über h liegen d (Terz) und g (Sexte), die 3 wird weggelassen. d im Bass: 6/4 (Quartsextakkord). Über d liegen g (Quarte) und h (Sexte).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">12.4</span><div><span class="kind">Theorie</span>Welcher Ton liegt im Bass, und welche Stellung ist es: C/E, F/C, G/B (englisches Leadsheet), Am/C, D/Fis?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C/E: e, Sextakkord. F/C: c, Quartsextakkord. G/B: h (englisches B), Sextakkord. Am/C: c, Sextakkord. D/Fis: fis, Sextakkord.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">12.5</span><div><span class="kind">Notenlesen</span>Bestimme Akkord und Stellung der sechs Dreiklänge.</div></div>
+      <div class="abc" data-bpm="50">
+        X:1
+        M:none
+        L:1
+        K:C
+        "^1"[EGc] | "^2"[Adf] | "^3"[^FAd] | "^4"[Ace] | "^5"[Gce] | "^6"[Bdg] |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: C-Dur, Sextakkord (e' unten). 2: d-Moll, Quartsextakkord (a' unten). 3: D-Dur, Sextakkord (fis' unten). 4: a-Moll, Grundstellung. 5: C-Dur, Quartsextakkord (g' unten). 6: G-Dur, Sextakkord (h' unten). Probe mit der Lückenregel: Bei 1 liegt die Quarte oben (g'–c''), c ist der Grundton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">12.6</span><div><span class="kind">Theorie</span>Bestimme die Lage (Oktav-, Terz- oder Quintlage): C-Dur mit g oben, F-Dur mit a oben, G-Dur mit g oben, a-Moll mit c oben.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C-Dur mit g oben: Quintlage. F-Dur mit a oben: Terzlage. G-Dur mit g oben: Oktavlage. a-Moll mit c oben: Terzlage (c ist die Terz von a-Moll).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">12.7</span><div><span class="kind">Am Klavier</span>Verbinde C – Am – F – G – C in der rechten Hand mit kurzen Wegen. Starte mit c'–e'–g'. Schreib die Griffe auf.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C: c'–e'–g'. Am: c'–e'–a' (c' und e' bleiben, g' geht zu a'). F: c'–f'–a' (c' und a' bleiben, e' geht zu f'). G: h–d'–g' (alle Töne gehen einen Schritt abwärts). C: c'–e'–g' (g' bleibt, h geht zu c', d' zu e').</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">12.8</span><div><span class="kind">Am Klavier</span>Spiel die Umkehrungsleiter (Grundstellung – Sextakkord – Quartsextakkord – Grundstellung) aufwärts und abwärts in C-Dur, G-Dur, F-Dur und d-Moll. Nutze die Fingersätze aus der Tabelle.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G-Dur: g–h–d, h–d–g, d–g–h, g–h–d. F-Dur: f–a–c, a–c–f, c–f–a, f–a–c. d-Moll: d–f–a, f–a–d, a–d–f, d–f–a. Rechts jeweils 1–3–5, 1–2–5, 1–3–5, 1–3–5.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">12.9</span><div><span class="kind">Gehör</span>Üb mit dem Trainer, bis du Grundstellung und Sextakkord sicher unterscheidest. Nimm dann den Quartsextakkord dazu.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Achte auf das Gefühl am Ende: Die Grundstellung „steht“, der Sextakkord „schwebt leicht“, der Quartsextakkord will sich bewegen. Wenn du unsicher bist, sing den Basston.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">12.10</span><div><span class="kind">Vertiefung</span>Erkläre mit Kapitel 5, warum ein Quartsextakkord instabiler wirkt als ein Sextakkord, obwohl beide eine Umkehrung desselben Akkords sind.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Im Quartsextakkord liegt über dem Bass eine reine Quarte. Über dem tiefsten Ton wird die Quarte als Dissonanz empfunden, weil das Ohr den oberen Ton der Quarte als Grundton hört. Der Sextakkord hat über dem Bass nur Terz und Sexte, also unvollkommene Konsonanzen. Er ist deshalb stabil, nur nicht so endgültig wie die Grundstellung.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(12);
+
+  document.getElementById("ladder-demo").addEventListener("click", () => {
+    const up = [[[60, 64, 67], 1], [[64, 67, 72], 1], [[67, 72, 76], 1], [[72, 76, 79], 1]];
+    Book.audio.seq(up.concat(up.slice(0, 3).reverse()), 84);
+  });
+
+  // Gehörtrainer: Umkehrungen
+  (function () {
+    const POS = [
+      { id: "gs", label: "Grundstellung", n: "Grundstellung" },
+      { id: "s6", label: "Sextakkord", n: "Sextakkord" },
+      { id: "q64", label: "Quartsextakkord", n: "Quartsextakkord" }
+    ];
+    const ROOTS = [53, 55, 57, 60, 62, 64];
+    document.querySelectorAll(".inversion-trainer").forEach((el) => Book.earTrainer(el, {
+      title: "Gehörtrainer: Umkehrungen",
+      intro: "Du hörst einen Dur- oder Molldreiklang. Der Basston erklingt zusätzlich eine Oktave tiefer. Welche Stellung ist es?",
+      items: POS,
+      presets: [
+        { label: "Grundstellung und Sextakkord", ids: ["gs", "s6"] },
+        { label: "Alle drei", ids: ["gs", "s6", "q64"] }
+      ],
+      modes: [{ id: "harm", label: "zusammen" }, { id: "arp", label: "von unten gebrochen" }],
+      from: 36, to: 84,
+      build(it, md) {
+        const r = ROOTS[Math.floor(Math.random() * ROOTS.length)];
+        const t = Math.random() < 0.5 ? 4 : 3;
+        const chord = it.id === "gs" ? [r, r + t, r + 7] : it.id === "s6" ? [r + t, r + 7, r + 12] : [r + 7, r + 12, r + 12 + t];
+        const ms = [chord[0] - 12].concat(chord);
+        const name = Book.name(r, { octave: false, capital: t === 4 }) + (t === 4 ? "-Dur" : "-Moll");
+        const plain = (x) => x.replace(/['0-9]/g, "").toLowerCase();
+        const bass = it.id === "gs" ? Book.name(r, { octave: false }) : it.id === "s6" ? plain(Book.spellUp(r, 3, t)) : plain(Book.spellUp(r, 5, 7));
+        const play = md === "arp"
+          ? () => { ms.forEach((m, i) => Book.audio.note(m, i * 0.35, 0.6)); Book.audio.chord(ms, 1.5, 1.6); }
+          : () => Book.audio.chord(ms, 0, 1.9);
+        return { play, marks: [{ m: ms[0], cls: "c3" }].concat(chord), answer: `${it.n}, ${name} mit ${bass} im Bass` };
+      }
+    }));
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Die Sonatenhauptsatzform · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .sonata svg { width: 100%; height: auto; display: block; }
+  .sonata .sec { fill: none; stroke: var(--line); stroke-width: 1; }
+  .sonata .tonic { fill: var(--accent-soft); }
+  .sonata .dom { fill: var(--piano-bg); }
+  .sonata .dev { fill: var(--deep-bg); }
+  .sonata .blk { stroke: var(--surface); stroke-width: 2; }
+  .sonata .blk.now { stroke: var(--ink); stroke-width: 2.5; }
+  .sonata text { fill: var(--ink); font-family: var(--font-display); font-size: 11.5px; text-anchor: middle; }
+  .sonata text.big { font-size: 13px; font-weight: 650; }
+  .sonata text.key { fill: var(--muted); font-family: var(--font-mono); font-size: 10.5px; }
+  .sonata .legend rect { stroke: var(--line); }
+  .sonata .legend text { text-anchor: start; fill: var(--muted); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil VI · Kapitel 41</div>
+    <h1>Die Sonatenhauptsatzform</h1>
+    <p class="lede">Die Sonatenhauptsatzform ist die wichtigste Großform der Klassik. Fast jeder erste Satz einer Sonate, Sinfonie oder eines Streichquartetts von Haydn, Mozart und Beethoven folgt ihr. Ihr Kern ist ein Drama der Tonarten: Ein Konflikt wird aufgebaut, zugespitzt und am Ende gelöst. Wer ihn kennt, hört eine zehnminütige Sonate als Geschichte statt als lange Folge von Noten.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die Teile Exposition, Durchführung, Reprise und Coda mit ihren Unterabschnitten benennen,</li>
+      <li>den Tonartenplan einer Sonatenform für Dur und Moll vorhersagen,</li>
+      <li>erklären, warum der Seitensatz in der Reprise in der Grundtonart steht,</li>
+      <li>einen Sonatensatz beim Hören grob gliedern,</li>
+      <li>eine Sonate mit Hilfe ihres Formplans gezielter üben.</li>
+    </ul>
+  </div>
+
+  <!-- 41.1 -->
+  <h2 id="begriffe">41.1 Sonate, Sonatensatz, Sonatenform</h2>
+  <p>Das Wort Sonate wird in drei Bedeutungen benutzt, die man auseinanderhalten muss:</p>
+  <ul>
+    <li><strong>Sonate</strong> als Gattung: ein mehrsätziges Werk für ein oder zwei Instrumente, etwa eine Klaviersonate. Eine Sinfonie ist im Prinzip eine Sonate für Orchester, ein Streichquartett eine Sonate für vier Streicher.</li>
+    <li><strong>Sonatensatz</strong>: ein einzelner Satz eines solchen Werkes.</li>
+    <li><dfn id="g-sonatenhauptsatzform">Sonatenhauptsatzform</dfn> (kurz Sonatenform): eine bestimmte Bauweise eines Satzes. Sie heißt so, weil sie typischerweise im ersten Satz, dem <em>Hauptsatz</em> oder Kopfsatz, verwendet wird. Sie kommt aber auch in langsamen Sätzen und Finalsätzen vor.</li>
+  </ul>
+  <p>Dieses Kapitel behandelt die Sonatenhauptsatzform. Ein Hinweis zur Verwirrung der Begriffe: Das Wort „Satz“ hat in der Formenlehre also drei Bedeutungen. Es kann einen Teil eines Werkes meinen, eine achttaktige Themenform (Kapitel 39) und einen Abschnitt der Sonatenform wie Haupt- und Seitensatz. Der Zusammenhang klärt fast immer, welche gemeint ist.</p>
+
+  <!-- 41.2 -->
+  <h2 id="ueberblick">41.2 Der Bauplan im Überblick</h2>
+  <p>Die Sonatenform besteht aus drei großen Teilen, manchmal ergänzt durch eine langsame Einleitung und eine Coda:</p>
+  <figure class="sonata" id="sonata-plan"></figure>
+  <div class="btn-row">
+    <button class="btn" type="button" id="mini-play">▶ Den Tonartenplan in einer halben Minute hören</button>
+  </div>
+  <p class="muted">Das Hörbeispiel spielt nur Akkorde, aber es folgt genau dem Tonartenplan: Hauptsatz in C, Wechsel nach G, Seitensatz in G, unruhige Durchführung, langer Dominantakkord, dann Hauptsatz und Seitensatz beide in C.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Teil</th><th>Abschnitt</th><th>Tonart (Dur)</th><th>Tonart (Moll)</th><th>Aufgabe</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="4"><strong>Exposition</strong></td><td>Hauptsatz</td><td>I</td><td>i</td><td>stellt die Grundtonart und das Hauptthema vor</td></tr>
+        <tr><td>Überleitung</td><td>I → V</td><td>i → III</td><td>moduliert, baut Energie auf</td></tr>
+        <tr><td>Seitensatz</td><td>V</td><td>III</td><td>Gegenthema in der neuen Tonart</td></tr>
+        <tr><td>Schlussgruppe</td><td>V</td><td>III</td><td>bestätigt die neue Tonart mit Kadenzen</td></tr>
+        <tr><td><strong>Durchführung</strong></td><td></td><td>wechselnd</td><td>wechselnd</td><td>verarbeitet die Themen, wandert durch Tonarten</td></tr>
+        <tr><td rowspan="3"><strong>Reprise</strong></td><td>Hauptsatz</td><td>I</td><td>i</td><td>Rückkehr</td></tr>
+        <tr><td>Überleitung</td><td>I</td><td>i</td><td>umgebaut, moduliert nicht mehr</td></tr>
+        <tr><td>Seitensatz, Schlussgruppe</td><td>I</td><td>i (oder I)</td><td>löst den Tonartenkonflikt</td></tr>
+        <tr><td><strong>Coda</strong></td><td></td><td>I</td><td>i</td><td>bekräftigt den Schluss (optional)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die Exposition wird in der Klassik meist wiederholt (Wiederholungszeichen am Ende). Bei langen Werken lassen Interpreten die Wiederholung heute manchmal weg.</p>
+
+  <!-- 41.3 -->
+  <h2 id="exposition">41.3 Die Exposition</h2>
+  <p>Die <dfn id="g-exposition">Exposition</dfn> stellt das Material vor und baut den Tonartenkonflikt auf.</p>
+  <h4>Hauptsatz</h4>
+  <p>Der <dfn id="g-hauptsatz">Hauptsatz</dfn> bringt das erste Thema in der Grundtonart. Er ist oft eine Periode oder ein Satz im Sinne von Kapitel 39, häufig markant und energisch. Er soll die Grundtonart so fest verankern, dass das Ohr sie danach nicht mehr vergisst.</p>
+  <h4>Überleitung</h4>
+  <p>Die <dfn id="g-ueberleitung">Überleitung</dfn> verlässt die Grundtonart. Sie ist meist bewegt, voller Läufe, Sequenzen und schneller Akkordwechsel. Typischerweise endet sie mit einem Halbschluss in der neuen Tonart und einer kurzen Pause. Diesen markanten Einschnitt nennen die Theoretiker James Hepokoski und Warren Darcy die <em>mediale Zäsur</em>. Er kündigt an: Jetzt kommt etwas Neues.</p>
+  <h4>Seitensatz</h4>
+  <p>Der <dfn id="g-seitensatz">Seitensatz</dfn> bringt ein zweites Thema in der neuen Tonart. In Dur ist das die Dominante (C-Dur → G-Dur), in Moll die Paralleltonart (c-Moll → Es-Dur). Oft kontrastiert er im Charakter zum Hauptsatz: lyrischer, ruhiger, gesanglicher. Zwingend ist das nicht. Haydn baut seinen Seitensatz gern aus dem Hauptthema selbst, sodass nur die Tonart den Unterschied macht. Man spricht dann von einer monothematischen Exposition.</p>
+  <h4>Schlussgruppe</h4>
+  <p>Die <dfn id="g-schlussgruppe">Schlussgruppe</dfn> bestätigt die neue Tonart mit mehreren Kadenzen. Am Ende der Exposition steht die Musik also fest in der Dominanttonart. Das ist der Zustand der größten Spannung im Großen: Alles klingt geschlossen, aber in der falschen Tonart.</p>
+
+  <section class="layer deep" data-title="Warum der Tonartenplan Spannung erzeugt">
+    <p>In Kapitel 14 hast du gelernt, dass ein Dominantakkord zur Tonika strebt. Die Sonatenform überträgt dieses Prinzip von einzelnen Akkorden auf ganze Tonarten und Minuten.</p>
+    <p>Der Pianist und Musikwissenschaftler Charles Rosen hat das in „The Classical Style“ (1971) und „Sonata Forms“ (1980) so beschrieben: Der Seitensatz in der Dominante ist eine <em>Dissonanz im Großen</em>. Er klingt in sich völlig stabil, steht aber in der falschen Tonart. Das Stück kann so nicht enden, genauso wenig wie ein Choral auf einem Dominantakkord endet.</p>
+    <p>Die Lösung liegt in der Reprise. Dort wird der Seitensatz nicht wörtlich wiederholt, sondern in die Grundtonart versetzt. Material, das vorher „fremd“ war, wird in die Heimat geholt. Das ist der eigentliche Sinn der Form: Nicht die Wiederkehr des Hauptthemas löst die Spannung, sondern die Wiederkehr des Seitensatzes in der Tonika.</p>
+    <p>Warum gerade die Dominante als Gegenpol? Sie ist der Tonika nah genug, um verständlich zu bleiben, und gegensätzlich genug, um Spannung zu erzeugen. Auf dem Quintenzirkel (Kapitel 7) liegt sie einen Schritt in Richtung Kreuz, also „heller“ und „gespannter“. In Moll ist die Wahl anders: Die Paralleltonart in Dur bildet einen deutlicheren Charakterkontrast als eine Moll-Dominante und ist mit der Grundtonart durch dieselben Vorzeichen verbunden.</p>
+  </section>
+
+  <!-- 41.4 -->
+  <h2 id="durchfuehrung">41.4 Die Durchführung</h2>
+  <p>In der <dfn id="g-durchfuehrung">Durchführung</dfn> werden die Themen der Exposition verarbeitet. Hier kommt der Werkzeugkasten aus Kapitel 39 zum Einsatz: Abspaltung, Sequenz, Umkehrung, Engführung von Motiven. Gleichzeitig wandert die Musik durch verschiedene Tonarten, häufig auch durch Moll-Tonarten und entferntere Bereiche (Kapitel 22). Sequenzen (Kapitel 26) sind das typische Mittel, um schnell und zielstrebig durch Tonarten zu ziehen.</p>
+  <p>Die Durchführung ist der instabilste Teil der Form. Sie vermeidet meist längere Abschnitte in der Grundtonart, denn die soll für die Reprise aufgespart werden.</p>
+  <p>Am Ende steht die <dfn id="g-rueckfuehrung">Rückführung</dfn>. Sie lenkt die Musik zur Dominante der Grundtonart und hält sie oft lange fest, nicht selten als <strong>Orgelpunkt</strong>: Der Basston G liegt viele Takte, während oben die Spannung steigt. Je länger die Dominante dauert, desto stärker wird der Wunsch nach der Tonika und desto größer die Wirkung, wenn die Reprise einsetzt.</p>
+
+  <section class="layer deep" data-title="Die Form kam nach den Werken">
+    <p>Haydn, Mozart und der junge Beethoven haben nie ein Lehrbuch über die Sonatenform gelesen. Es gab keines. Die Begriffe, die du gerade lernst, wurden erst später aus ihren Werken abgeleitet.</p>
+    <p>Anton Reicha beschrieb das Muster 1826 in seinem „Traité de haute composition musicale“. Carl Czerny, Beethovens Schüler, folgte in den 1840er-Jahren. Die einflussreichste Darstellung stammt von Adolf Bernhard Marx im dritten Band seiner „Lehre von der musikalischen Komposition“ (1845). Von ihm stammen die Begriffe Hauptsatz und Seitensatz. Marx charakterisierte den Hauptsatz als „männlich“ und den Seitensatz als „weiblich“, eine Zuschreibung, die man heute als zeitgebunden betrachtet und nicht mehr verwendet.</p>
+    <p>Das hat eine wichtige Konsequenz: Das Lehrbuchschema beschreibt den Durchschnitt, nicht die Regel. Die Komponisten der Klassik dachten in Tonarten, Kontrasten und Erwartungen, und sie spielten bewusst mit diesen Erwartungen. Es gibt Expositionen mit drei Tonarten, Reprisen in der falschen Tonart und Durchführungen mit neuen Themen. Wenn ein Stück vom Schema abweicht, ist das kein Fehler, sondern meistens genau die Stelle, die es interessant macht.</p>
+    <p>Moderne Theorien wie die „Sonata Theory“ von Hepokoski und Darcy (2006) tragen dem Rechnung. Sie beschreiben die Form als ein Bündel von Normen, gegen die einzelne Werke bewusst verstoßen können, und fragen bei jeder Abweichung, was sie ausdrückt.</p>
+  </section>
+
+  <!-- 41.5 -->
+  <h2 id="reprise">41.5 Die Reprise und die Coda</h2>
+  <p>Mit der <dfn id="g-reprise">Reprise</dfn> kehrt der Hauptsatz in der Grundtonart zurück. Dieser Moment ist der dramatische Höhepunkt der Form, weil zwei Dinge gleichzeitig zurückkehren: das bekannte Thema und die Heimattonart. Man spricht von der <em>doppelten Rückkehr</em>.</p>
+  <p>Danach folgt die Exposition ein zweites Mal, aber mit einer entscheidenden Änderung. Die Überleitung muss jetzt <strong>nicht</strong> modulieren, denn der Seitensatz soll in der Grundtonart erscheinen. Sie wird deshalb umgebaut, oft nur an wenigen Stellen. Seitensatz und Schlussgruppe stehen dann in der Tonika. In Moll-Sonaten erscheint der Seitensatz in der Reprise meist in Moll, manchmal auch in Dur.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Exposition: Hauptsatz in I, Seitensatz in V (bzw. III in Moll). Reprise: beide in I. Die Überleitung ist die Stelle, an der sich Exposition und Reprise unterscheiden.</p>
+  </div>
+  <p>Eine <dfn id="g-coda">Coda</dfn> (italienisch „Schwanz“) kann sich anschließen und den Schluss bekräftigen. Bei Beethoven werden Codas oft so lang und gewichtig, dass sie wie eine zweite Durchführung wirken.</p>
+  <p>Manche Sätze beginnen mit einer langsamen <strong>Einleitung</strong>, die noch nicht zur Exposition gehört. Beethovens Sonate „Pathétique“ op. 13 ist ein berühmtes Beispiel. Ihre Grave-Einleitung kehrt sogar später im Satz zurück, zu Beginn der Durchführung und in der Coda.</p>
+
+  <!-- 41.6 -->
+  <h2 id="kv545">41.6 Ein Beispiel: Mozart, Sonate C-Dur KV 545, 1. Satz</h2>
+  <p>Mozarts Sonate KV 545, oft „Sonata facile“ genannt, gehört zum Standardrepertoire fortgeschrittener Anfänger. Ihr erster Satz ist ein klares Beispiel für die Sonatenform und enthält eine berühmte Überraschung. Der Satz beginnt so:</p>
+  <div class="abc" data-bpm="110" data-caption="Mozart, KV 545, 1. Satz, Takt 1–2 (rechte Hand)">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    "C" c4 e2 g2 | "G7" B3 c/d/ "C" c4 |]
+  </div>
+  <p>Der Hauptsatz entfaltet in den ersten beiden Takten die Kadenz I–V7–I: zuerst der C-Dur-Dreiklang, dann das h als Leitton, das zum c zurückkehrt. Darunter spielt die linke Hand einen Alberti-Bass, also einen gebrochenen Akkord im Muster tief–hoch–mitte–hoch (Kapitel 46).</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Takte</th><th>Teil</th><th>Tonart</th><th>Was du hörst</th></tr></thead>
+      <tbody>
+        <tr><td>1–28</td><td>Exposition</td><td>C → G</td><td>Hauptthema in C, Tonleiterläufe als Überleitung, Seitensatz und Schlussgruppe in G-Dur. Wiederholung.</td></tr>
+        <tr><td>29–41</td><td>Durchführung</td><td>g-Moll → …</td><td>Beginnt mit dem Schlussmotiv in g-Moll, wandert durch mehrere Tonarten, führt zur Reprise.</td></tr>
+        <tr><td>ab 42</td><td>Reprise</td><td><strong>F-Dur</strong> → C</td><td>Das Hauptthema kehrt in F-Dur zurück, nicht in C-Dur. Seitensatz und Schluss dann in C-Dur.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die Reprise in der Subdominante ist ein Regelverstoß, aber ein sehr ökonomischer. Die Erklärung steht in der folgenden Vertiefung.</p>
+
+  <section class="layer deep" data-title="Mozarts Abkürzung: warum die Reprise in F-Dur beginnt">
+    <p>In der Exposition führt die Überleitung von C-Dur nach G-Dur, also eine Quinte aufwärts. Damit der Seitensatz in der Reprise in C-Dur steht, müsste Mozart die Überleitung umschreiben, sodass sie in C-Dur bleibt.</p>
+    <p>Mozart wählt einen anderen Weg. Er beginnt die Reprise eine Quinte tiefer, in F-Dur, und lässt die Überleitung fast unverändert ablaufen. Sie führt wieder eine Quinte aufwärts, diesmal von F nach C. Der Seitensatz landet so automatisch in der Grundtonart.</p>
+    <div class="formula">Exposition: C →(Quinte aufwärts)→ G &nbsp;&nbsp;&nbsp; Reprise: F →(Quinte aufwärts)→ C</div>
+    <p>Daran sieht man, was in der Sonatenform wirklich zählt: Der Seitensatz muss in der Grundtonart ankommen. Dass der Hauptsatz in der Reprise in der Grundtonart beginnt, ist zwar die Norm, aber für die Lösung des Tonartenkonflikts weniger wichtig. Mozart opfert die doppelte Rückkehr und gewinnt eine elegante, beinahe mechanische Lösung, die zum leichten Charakter der Sonate passt.</p>
+  </section>
+
+  <section class="layer piano" data-title="Eine Sonate mit Formplan üben">
+    <p>Ein Sonatensatz ist lang. Mit dem Formplan kannst du die Arbeit trotzdem stark verkürzen, denn ein großer Teil des Materials kommt zweimal vor.</p>
+    <ul>
+      <li><strong>Formplan anlegen.</strong> Markiere in den Noten Beginn von Exposition, Seitensatz, Durchführung, Reprise und Coda. Notiere die Tonarten am Rand.</li>
+      <li><strong>Exposition und Reprise nebeneinanderlegen.</strong> Vergleiche Takt für Takt. Meist sind große Teile identisch oder nur transponiert. Markiere farbig, wo die Reprise abweicht. Das ist fast immer die Überleitung.</li>
+      <li><strong>Abweichungen gezielt üben.</strong> Genau an den Stellen, wo die Reprise anders weitergeht als die Exposition, „rutscht“ das Gedächtnis gern in die falsche Version. Übe diese Takte im direkten Wechsel: erst die Stelle der Exposition, dann die der Reprise.</li>
+      <li><strong>Transponierten Seitensatz bewusst lernen.</strong> Der Seitensatz der Reprise liegt eine Quinte tiefer bzw. eine Quarte höher als in der Exposition. Andere Tasten können einen anderen Fingersatz brauchen. Prüfe ihn neu, statt den alten blind zu übernehmen.</li>
+      <li><strong>Durchführung harmonisch verstehen.</strong> Schreib zu jedem Abschnitt die Tonart oder den Akkord. Wenn du weißt, dass zwei Takte eine Sequenz sind, lernst du einen und verschiebst ihn.</li>
+    </ul>
+  </section>
+
+  <section class="layer piano" data-title="Themen gestalten: Charakter, Kontrast und die Rückkehr">
+    <ul>
+      <li><strong>Haupt- und Seitensatz unterscheiden.</strong> Wenn der Seitensatz gesanglicher ist, spiel ihn auch so: weicher Anschlag, Melodie deutlich über der Begleitung, eine Spur mehr Zeit an Phrasenenden. Der Kontrast ist Teil der Form, also Teil deiner Interpretation.</li>
+      <li><strong>Begleitung zurücknehmen.</strong> Alberti-Bässe wie in KV 545 sollen gleichmäßig und leise laufen, wie ein Teppich. Lass die Hand locker, spiel aus dem Handgelenk mit kleinen Drehbewegungen statt mit einzelnen Fingerschlägen.</li>
+      <li><strong>Die Rückführung aufbauen.</strong> Wenn am Ende der Durchführung lange die Dominante steht, ist das kein Leerlauf. Steigere die Spannung, damit die Reprise als Ankunft wirkt.</li>
+      <li><strong>Den Reprisenbeginn markieren.</strong> Ein winziges Innehalten vor dem Einsatz der Reprise und ein bewusst klarer Beginn des Hauptthemas machen die doppelte Rückkehr hörbar.</li>
+    </ul>
+  </section>
+
+  <!-- 41.7 -->
+  <h2 id="zyklus">41.7 Der Sonatenzyklus</h2>
+  <p>Eine klassische Sonate besteht meist aus drei, eine Sinfonie oder ein Streichquartett meist aus vier Sätzen. Die Sätze folgen einem typischen Wechsel von Tempo und Charakter:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Satz</th><th>Tempo</th><th>Typische Form</th></tr></thead>
+      <tbody>
+        <tr><td>1.</td><td>schnell (Allegro), manchmal mit langsamer Einleitung</td><td>Sonatenhauptsatzform</td></tr>
+        <tr><td>2.</td><td>langsam (Andante, Adagio)</td><td>dreiteilige Liedform, Variation oder Sonatenform</td></tr>
+        <tr><td>3.</td><td>Menuett bzw. bei Beethoven oft Scherzo</td><td>Menuett/Scherzo – Trio – Menuett/Scherzo (Kapitel 40)</td></tr>
+        <tr><td>4. (bzw. 3.)</td><td>schnell (Allegro, Presto)</td><td>Rondo, Sonatenrondo oder Sonatenform</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Klaviersonaten der Klassik haben oft nur drei Sätze und lassen das Menuett weg. Ausnahmen gibt es viele. Mozarts Sonate KV 331 beginnt zum Beispiel mit Variationen statt mit einer Sonatenform.</p>
+
+  <section class="layer deep" data-title="Hört man den Tonartenplan überhaupt?">
+    <p>Die Theorie behauptet, dass der Hörer nach mehreren Minuten spürt, ob ein Stück in der richtigen Tonart endet. Ist das realistisch?</p>
+    <p>Der Musikwissenschaftler Nicholas Cook hat das 1987 in einem bekannten Experiment geprüft. Er spielte Hörern, darunter Musikstudenten, Klavierstücke in Originalfassung und in Fassungen vor, die in einer anderen Tonart endeten. Bei kurzen Stücken bevorzugten die Hörer das tonal geschlossene Original. Bei Stücken von mehr als etwa einer Minute verschwand dieser Unterschied weitgehend.</p>
+    <p>Das bedeutet nicht, dass die Tonartenlogik bedeutungslos ist. Es bedeutet, dass sie nicht über ein absolutes Tonartgedächtnis wirkt, sondern über lokale Signale, die das Ohr gut verfolgen kann:</p>
+    <ul>
+      <li>die <strong>Wiederkehr bekannter Themen</strong>, die man sofort erkennt,</li>
+      <li>die <strong>lange Dominante</strong> vor der Reprise, die eine Auflösung fordert,</li>
+      <li>der <strong>Seitensatz in neuer Lage</strong>, den man als „gleiche Melodie, aber anders, irgendwie heimischer“ wahrnimmt,</li>
+      <li>die <strong>Häufung von Schlusskadenzen</strong> am Ende.</li>
+    </ul>
+    <p>Die Komponisten verlassen sich also nicht darauf, dass du dir eine Tonart minutenlang merkst. Sie inszenieren die Rückkehr so deutlich, dass du sie auch ohne absolutes Gehör erlebst.</p>
+  </section>
+
+  <!-- Hörempfehlungen -->
+  <h2 id="hoeren">41.8 Hörempfehlungen</h2>
+  <p>Hör dir die folgenden ersten Sätze mit den Noten oder mit diesem Kapitel in der Hand an. Versuch, Hauptsatz, Seitensatz, Beginn der Durchführung und Reprise zu erkennen.</p>
+  <ul>
+    <li><strong>Mozart, Sonate C-Dur KV 545, 1. Satz:</strong> kurz und klar, mit der Reprise in F-Dur.</li>
+    <li><strong>Beethoven, Sonate f-Moll op. 2 Nr. 1, 1. Satz:</strong> Hauptsatz als Lehrbuch-Satz (Kapitel 39), Seitensatz in der Paralleltonart As-Dur.</li>
+    <li><strong>Beethoven, Sonate c-Moll op. 13 „Pathétique“, 1. Satz:</strong> mit langsamer Einleitung, die später wiederkehrt.</li>
+    <li><strong>Haydn, eine beliebige späte Klaviersonate oder Sinfonie:</strong> Achte darauf, ob der Seitensatz neues Material bringt oder das Hauptthema in der Dominante wiederholt.</li>
+  </ul>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Die Sonatenhauptsatzform besteht aus <strong>Exposition, Durchführung, Reprise</strong>, oft mit Coda, manchmal mit Einleitung.</li>
+    <li>Exposition: Hauptsatz in I, Überleitung, Seitensatz und Schlussgruppe in V (in Moll: III).</li>
+    <li>Durchführung: Verarbeitung der Themen, Wanderung durch Tonarten, Rückführung zur Dominante.</li>
+    <li>Reprise: Hauptsatz und Seitensatz in der Grundtonart. Die umgebaute Überleitung macht das möglich.</li>
+    <li>Der Seitensatz in V ist eine „Dissonanz im Großen“, die erst in der Reprise gelöst wird.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">41.1</span><div><span class="kind">Theorie</span>Bring in die richtige Reihenfolge: Rückführung, Seitensatz, Hauptsatz (Reprise), Überleitung, Schlussgruppe, Hauptsatz (Exposition), Durchführung.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Hauptsatz (Exposition) – Überleitung – Seitensatz – Schlussgruppe – Durchführung – Rückführung – Hauptsatz (Reprise). Die Rückführung ist der letzte Abschnitt der Durchführung.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">41.2</span><div><span class="kind">Theorie</span>Eine Sonate steht in D-Dur. In welcher Tonart steht der Seitensatz in der Exposition und in der Reprise? Und bei einer Sonate in e-Moll?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>D-Dur: Exposition A-Dur (Dominante), Reprise D-Dur. e-Moll: Exposition G-Dur (Paralleltonart), Reprise meist e-Moll, gelegentlich E-Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">41.3</span><div><span class="kind">Theorie</span>Warum muss die Überleitung in der Reprise umgebaut werden?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>In der Exposition moduliert sie zur Dominante. Würde sie in der Reprise unverändert erklingen, stünde der Seitensatz wieder in der Dominante, und der Tonartenkonflikt bliebe ungelöst. Sie muss also in der Grundtonart bleiben oder so verändert werden, dass sie dort ankommt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">41.4</span><div><span class="kind">Theorie</span>Mozart beginnt die Reprise von KV 545 in F-Dur. Angenommen, eine andere Sonate in G-Dur würde denselben Trick verwenden. In welcher Tonart begänne ihre Reprise, und wohin führte die unveränderte Überleitung?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>In C-Dur, der Subdominante von G-Dur. Die Überleitung führt in der Exposition eine Quinte aufwärts (G → D), in der Reprise daher von C nach G. Der Seitensatz landet in der Grundtonart G-Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">41.5</span><div><span class="kind">Theorie</span>Was ist mit „doppelter Rückkehr“ gemeint, und welcher der beiden Teile fehlt in KV 545?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Zu Beginn der Reprise kehren gleichzeitig das Hauptthema und die Grundtonart zurück. In KV 545 kehrt nur das Thema zurück, die Tonart ist zunächst F-Dur. Die Grundtonart wird erst mit dem Seitensatz erreicht.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">41.6</span><div><span class="kind">Notenlesen</span>Bestimme in den ersten beiden Takten von KV 545 (Abschnitt 41.6) die Melodietöne und ordne sie den Akkorden I und V7 zu. Welcher Ton wirkt als Leitton?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Takt 1: c'', e'', g'' sind die Töne des C-Dur-Dreiklangs (I). Takt 2: h' gehört zum Dominantseptakkord G7, c''–d'' sind kurze Umspielungen, der Takt endet auf c'' (I). Das h' ist der Leitton, der einen Halbton aufwärts zum c'' strebt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">41.7</span><div><span class="kind">Am Klavier</span>Spiel die ersten beiden Takte von KV 545 mit der rechten Hand. Begleite in der linken Hand mit einem Alberti-Bass in Achteln: im ersten Takt zweimal c'–g'–e'–g', im zweiten Takt erst h–g'–d'–g' (G-Dur) und dann c'–g'–e'–g'.</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Fingersatz links für c'–g'–e'–g': 5–1–3–1. Halte die Hand dabei über allen drei Tönen ruhig und spiel die Achtel aus einer leichten Drehbewegung des Handgelenks. Die linke Hand bleibt deutlich leiser als die Melodie. Weil beide Hände nah beieinander liegen, ist die Lautstärkebalance besonders wichtig.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">41.8</span><div><span class="kind">Gehör</span>Hör den ersten Satz von KV 545 vollständig. Notiere die Zeitpunkte, an denen (a) der Seitensatz beginnt, (b) die Durchführung beginnt, (c) das Hauptthema in F-Dur zurückkehrt.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Der Seitensatz beginnt nach den schnellen Tonleiterläufen der Überleitung und einem deutlichen Einschnitt. Die Durchführung beginnt nach der Wiederholung der Exposition mit einem plötzlichen Wechsel nach Moll. Das Hauptthema in F-Dur erkennst du an der bekannten Melodie, die etwas tiefer und weicher klingt als am Anfang. Die genauen Zeiten hängen von der Aufnahme ab.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">41.9</span><div><span class="kind">Vertiefung</span>Nicholas Cook fand, dass Hörer bei längeren Stücken kaum merken, ob sie in der Ausgangstonart enden. Widerlegt das Rosens Idee von der „Dissonanz im Großen“? Argumentiere.</div></div>
+      <details class="solution"><summary>Mögliche Antwort</summary><div>Nicht unbedingt. Cooks Ergebnis zeigt, dass Hörer sich eine Tonart nicht als abstrakte Größe über Minuten merken. Die Sonatenform macht die Lösung aber über konkrete, gut wahrnehmbare Ereignisse erfahrbar: wiederkehrende Themen, eine lang vorbereitete Dominante und den bekannten Seitensatz in neuer Lage. Rosens Beschreibung erklärt die Logik des Bauplans, Cooks Experiment zeigt, über welche Wege sie beim Hörer ankommt.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(41);
+
+  (function () {
+    // Abschnitte des Formplans: Breite, Name, Tonart, Farbklasse, Gruppe
+    const SECS = [
+      { w: 2, t: "Hauptsatz", k: "I", c: "tonic", g: "Exposition" },
+      { w: 1.4, t: "Überl.", k: "I→V", c: "tonic", g: "Exposition" },
+      { w: 2, t: "Seitensatz", k: "V", c: "dom", g: "Exposition" },
+      { w: 1.2, t: "Schl.", k: "V", c: "dom", g: "Exposition" },
+      { w: 3, t: "Durchführung", k: "wechselnd", c: "dev", g: "Durchführung" },
+      { w: 1.2, t: "Rückf.", k: "V von I", c: "dev", g: "Durchführung" },
+      { w: 2, t: "Hauptsatz", k: "I", c: "tonic", g: "Reprise" },
+      { w: 1.4, t: "Überl.", k: "I", c: "tonic", g: "Reprise" },
+      { w: 2, t: "Seitensatz", k: "I", c: "tonic", g: "Reprise" },
+      { w: 1.2, t: "Coda", k: "I", c: "tonic", g: "Reprise" }
+    ];
+    const W = 700, L = 4, R = 4, total = SECS.reduce((a, s) => a + s.w, 0);
+    let x = L, svg = `<svg viewBox="0 0 ${W} 150" role="img" aria-label="Formplan der Sonatenhauptsatzform mit Tonarten">`;
+    const groups = {};
+    SECS.forEach((s, i) => {
+      const w = (s.w / total) * (W - L - R);
+      s.x = x; s.wpx = w;
+      (groups[s.g] = groups[s.g] || []).push(s);
+      svg += `<rect class="blk ${s.c}" id="sec-${i}" x="${x}" y="34" width="${w}" height="44" rx="3"/>`;
+      svg += `<text x="${x + w / 2}" y="60">${s.t}</text>`;
+      svg += `<text class="key" x="${x + w / 2}" y="96">${s.k}</text>`;
+      x += w;
+    });
+    Object.keys(groups).forEach((g) => {
+      const a = groups[g][0], b = groups[g][groups[g].length - 1];
+      svg += `<path class="sec" d="M${a.x + 2} 26 V20 H${b.x + b.wpx - 2} V26"/>`;
+      svg += `<text class="big" x="${(a.x + b.x + b.wpx) / 2}" y="14">${g}</text>`;
+    });
+    svg += `<g class="legend"><rect class="tonic" x="4" y="116" width="14" height="12" rx="2"/><text x="24" y="126">Grundtonart</text>` +
+      `<rect class="dom" x="120" y="116" width="14" height="12" rx="2"/><text x="140" y="126">Dominante bzw. Nebentonart</text>` +
+      `<rect class="dev" x="320" y="116" width="14" height="12" rx="2"/><text x="340" y="126">instabil, modulierend</text></g>`;
+    svg += "</svg>";
+    document.getElementById("sonata-plan").innerHTML = svg +
+      "<figcaption>Formplan der Sonatenhauptsatzform in Dur. Überl. = Überleitung, Schl. = Schlussgruppe, Rückf. = Rückführung. In Moll steht statt V die Paralleltonart III.</figcaption>";
+
+    // Mini-Sonate aus Akkorden, Abschnitte werden im Plan hervorgehoben
+    const C = [48, 64, 67, 72], F = [53, 65, 69, 72], G = [43, 62, 67, 71], G7 = [43, 62, 65, 71],
+      Am = [45, 64, 69, 72], D7 = [50, 66, 69, 72], Em = [40, 64, 67, 71], A7 = [45, 64, 67, 73],
+      Dm = [50, 65, 69, 74], E7 = [40, 62, 68, 71], Gped = [43, 65, 71, 74];
+    const parts = [
+      [0, [[C, 2], [F, 2], [G7, 2], [C, 2]]],
+      [1, [[C, 1], [Am, 1], [D7, 2]]],
+      [2, [[G, 2], [D7, 2], [G, 2], [D7, 1], [G, 1]]],
+      [3, [[G, 1], [D7, 1], [G, 2]]],
+      [4, [[Em, 2], [A7, 2], [Dm, 2], [E7, 2], [Am, 2]]],
+      [5, [[Gped, 4], [G7, 4]]],
+      [6, [[C, 2], [F, 2], [G7, 2], [C, 2]]],
+      [7, [[C, 1], [Am, 1], [Dm, 1], [G7, 1]]],
+      [8, [[C, 2], [G7, 2], [C, 2], [G7, 1], [C, 1]]],
+      [9, [[F, 1], [G7, 1], [C, 4]]]
+    ];
+    const steps = [], owner = [];
+    parts.forEach(([sec, list]) => list.forEach((s) => { steps.push(s); owner.push(sec); }));
+    const btn = document.getElementById("mini-play");
+    let playing = false;
+    btn.addEventListener("click", () => {
+      if (playing) return;
+      playing = true;
+      btn.disabled = true;
+      Book.audio.seq(steps, 132, (i) => {
+        document.querySelectorAll(".sonata .blk").forEach((r) => r.classList.remove("now"));
+        if (i < 0) { playing = false; btn.disabled = false; return; }
+        const r = document.getElementById("sec-" + owner[i]);
+        if (r) r.classList.add("now");
+      });
+    });
+  })();
+</script>
+</body>
+</html>

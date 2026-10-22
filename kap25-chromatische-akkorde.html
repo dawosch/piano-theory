@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chromatische Spezialakkorde · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil III · Kapitel 25</div>
+    <h1>Chromatische Spezialakkorde</h1>
+    <p class="lede">Einige Akkorde der klassischen und romantischen Musik sind so markant, dass sie eigene Namen tragen: der Neapolitaner, die übermäßigen Sextakkorde und der verminderte Septakkord als Drehpunkt. Sie bereiten die Dominante mit besonderer Dramatik vor oder öffnen Türen in entfernte Tonarten. Dieses Kapitel erklärt, wie sie gebaut sind und warum sie so stark wirken.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>den neapolitanischen Sextakkord in jeder Moll-Tonart bilden und richtig auflösen,</li>
+      <li>italienischen, deutschen und französischen übermäßigen Sextakkord bauen und unterscheiden,</li>
+      <li>erklären, warum der deutsche Sextakkord wie ein Dominantseptakkord klingt,</li>
+      <li>die Symmetrie des verminderten Septakkords und des übermäßigen Dreiklangs nutzen,</li>
+      <li>diese Akkorde in Noten erkennen und am Klavier greifen.</li>
+    </ul>
+  </div>
+
+  <!-- 25.1 -->
+  <h2 id="ueberblick">25.1 Akkorde vor der Dominante</h2>
+  <p>In einer Kadenz steht vor der Dominante meist ein Akkord mit Subdominant-Funktion: IV, ii oder iv (Kapitel 14 und 16). Die Akkorde dieses Kapitels sind <strong>chromatisch geschärfte Varianten</strong> dieser Funktion. Sie stehen an derselben Stelle, enthalten aber Töne, die der Tonart fremd sind. Diese Töne bewegen sich mit Halbtonschritten auf die Dominante zu und machen deren Eintritt dringlicher.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Akkord</th><th>in a-Moll</th><th>in c-Moll / C-Dur</th><th>führt zu</th></tr></thead>
+      <tbody>
+        <tr><td>Neapolitaner N6</td><td>d – f – b</td><td>f – as – des</td><td>V</td></tr>
+        <tr><td>italienischer Sextakkord It+6</td><td>f – a – dis</td><td>as – c – fis</td><td>V</td></tr>
+        <tr><td>deutscher Sextakkord Ger+6</td><td>f – a – c – dis</td><td>as – c – es – fis</td><td>(I6/4 –) V</td></tr>
+        <tr><td>französischer Sextakkord Fr+6</td><td>f – a – h – dis</td><td>as – c – d – fis</td><td>V</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Alle stammen ursprünglich aus Moll, werden aber auch in Dur verwendet, dann als modale Mischung (Kapitel 23).</p>
+
+  <!-- 25.2 -->
+  <h2 id="neapolitaner">25.2 Der Neapolitaner</h2>
+  <p>Der <dfn id="g-neapolitaner">neapolitanische Sextakkord</dfn>, kurz Neapolitaner, ist ein Dur-Dreiklang auf der <strong>erniedrigten zweiten Stufe</strong>, meist in Sextakkord-Lage, also mit der Terz im Bass. In a-Moll ist die zweite Stufe h. Erniedrigt wird sie zu b, der Akkord ist B-Dur (b – d – f), und in Sextlage liegt d im Bass: <strong>d – f – b</strong>.</p>
+  <p>Das Symbol ist <strong>N6</strong> oder <strong>♭II6</strong>. In der Funktionstheorie schreibt man s<sup>n</sup>. Der Grund für dieses Symbol ist aufschlussreich: Vergleich den Neapolitaner mit der Moll-Subdominante d – f – a. Er ist derselbe Akkord, nur dass die Quinte a durch die kleine Sexte b ersetzt ist. Der Neapolitaner ist also eine Subdominante mit „neapolitanischer“ Sexte.</p>
+  <div class="abc" data-bpm="60" data-caption="i – iv – N6 – V7 – i in a-Moll. Aus a' wird b', das dann über gis' nach a' zurückkehrt.">
+    X:1
+    M:4/4
+    L:1/4
+    K:Am
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "Am"[EAc]2 "Dm"[FAd]2 | "^N6"[F_Bd]4 | "E7"[E^Gd]4 | "Am"[EAc]4 |]
+    [V:LH] A,,2 D,2 | D,4 | E,4 | A,,4 |]
+  </div>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="50 65 69 74/2|52 64 68 74/2|45 64 69 72/4">▶ iv – V7 – i</button>
+    <button class="btn" type="button" data-seq="50 65 70 74/2|52 64 68 74/2|45 64 69 72/4">▶ N6 – V7 – i</button>
+  </div>
+  <h4>Auflösung</h4>
+  <ul>
+    <li>Der Neapolitaner führt zur <strong>Dominante</strong>, oft über den Quartsextakkord der Tonika (N6 – i6/4 – V – i).</li>
+    <li>Der charakteristische Ton b fällt. Er geht entweder direkt zum Leitton gis (Schritt einer verminderten Terz) oder über a zum gis.</li>
+    <li>Der Basston d steigt meist zum e, dem Grundton der Dominante.</li>
+  </ul>
+  <p>Der Name verweist auf die neapolitanische Opernschule des späten 17. und 18. Jahrhunderts, etwa auf Alessandro Scarlatti. Der Akkord kommt aber auch schon früher vor und war bei Komponisten in ganz Europa verbreitet. Ein berühmtes Beispiel steht gleich im dritten Takt der „Mondscheinsonate“ von Beethoven (op. 27 Nr. 2, erster Satz): Ein D-Dur-Akkord in Sextlage färbt das cis-Moll kurz dunkel ein.</p>
+
+  <section class="layer piano" data-title="Den Neapolitaner greifen: ein Finger von iv zum N6">
+    <p>Weil der Neapolitaner eine veränderte Moll-Subdominante ist, findest du ihn am schnellsten über die iv. Spiel in a-Moll d-Moll in der rechten Hand als f' – a' – d''. Ersetze das a' durch b'. Das ist schon der Neapolitaner. Die linke Hand bleibt auf d.</p>
+    <figure>
+      <div class="kb" data-from="62" data-to="76" data-labels="white" data-marks="65 69:c2 70:c3:b 74" aria-label="d-Moll und Neapolitaner in der rechten Hand: a' wird zu b'"></div>
+      <figcaption>f' – a' – d'' ist d-Moll. Mit b' (orange) statt a' (petrol) wird daraus der Neapolitaner.</figcaption>
+    </figure>
+    <ul>
+      <li>Rechte Hand: f' – b' – d'' mit 1–3–5 oder 1–4–5.</li>
+      <li>Zur Dominante E7: f'→e', b'→gis', d'' bleibt. Der Mittelfinger macht den großen Schritt b' – gis', eine verminderte Terz.</li>
+    </ul>
+    <p><strong>Übung:</strong> Spiel i – iv – N6 – V7 – i in a-Moll, d-Moll (Neapolitaner Es-Dur: g – b – es) und e-Moll (Neapolitaner F-Dur: a – c – f).</p>
+  </section>
+
+  <section class="layer deep" data-title="Warum der Neapolitaner so dramatisch wirkt">
+    <p>Drei Eigenschaften machen den Neapolitaner zu einem der ausdrucksstärksten Akkorde der Tonalität.</p>
+    <p><strong>1. Große Entfernung.</strong> In a-Moll gehört B-Dur zu keiner nahen Tonart. Im Quintenzirkel liegt b fünf Quinten vom e der Dominante entfernt. Der Klang wirkt deshalb wie ein plötzlicher Blick in eine fremde Gegend, kurz bevor die Dominante kommt.</p>
+    <p><strong>2. Gegenleitton.</strong> Das b liegt einen Halbton über dem Grundton a. So wie der Leitton gis von unten zum a zieht, drückt das b von oben. Im Neapolitaner und der folgenden Dominante werden beide Nachbarn des Grundtons hörbar, der obere (b) und der untere (gis). Der Grundton wird von beiden Seiten eingekreist.</p>
+    <p><strong>3. Die verminderte Terz.</strong> Wenn b direkt zum gis geht, entsteht ein Schritt von drei Halbtönen, der als Terz geschrieben wird, aber wie eine große Sekunde klingt. Solche verminderten Intervalle sind in der klassischen Melodik selten und fallen deshalb auf. In Klagegesängen und langsamen Moll-Sätzen ist genau diese Linie b – gis – a ein typischer Ausdruck von Schmerz.</p>
+  </section>
+
+  <!-- 25.3 -->
+  <h2 id="uebermaessig">25.3 Die übermäßigen Sextakkorde</h2>
+  <p>Die <dfn id="g-uebermaessiger-sextakkord">übermäßigen Sextakkorde</dfn> haben ihren Namen von dem Intervall zwischen Bass und einer Oberstimme: einer übermäßigen Sexte (zehn Halbtöne). In c-Moll ist das as – fis. Beide Töne streben auseinander zur Oktave g – g, dem Grundton der Dominante. Der Bass fällt einen Halbton (as → g), die Oberstimme steigt einen Halbton (fis → g).</p>
+  <figure>
+    <div class="kb" data-from="53" data-to="69" data-labels="white" data-marks="56:c3:as 66:c3:fis 55:c2 67:c2" aria-label="Übermäßige Sexte as-fis, die sich zur Oktave g-g öffnet"></div>
+    <figcaption>Die übermäßige Sexte as – fis' (orange) öffnet sich zur Oktave g – g' (petrol).</figcaption>
+  </figure>
+  <p>Zur übermäßigen Sexte kommt immer das c, der Grundton der Tonart. Je nachdem, welcher vierte Ton dazukommt, unterscheidet man drei Formen. Ihre Ländernamen sind eine Konvention, die sich im 19. Jahrhundert durchgesetzt hat. Mit der tatsächlichen Herkunft haben sie wenig zu tun.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Name</th><th>Symbol</th><th>Töne in c-Moll</th><th>Zusatzton</th><th></th></tr></thead>
+      <tbody>
+        <tr><td><strong>italienisch</strong></td><td>It+6</td><td>as – c – fis</td><td>keiner (nur drei Töne)</td><td><button class="btn" type="button" data-seq="44 60 66/2|43 59 67/4">▶</button></td></tr>
+        <tr><td><strong>deutsch</strong></td><td>Ger+6</td><td>as – c – es – fis</td><td>es (kleine Terz über c)</td><td><button class="btn" type="button" data-seq="44 60 63 66/2|43 60 63 67/2|43 59 62 67/4">▶</button></td></tr>
+        <tr><td><strong>französisch</strong></td><td>Fr+6</td><td>as – c – d – fis</td><td>d (große Sekunde über c)</td><td><button class="btn" type="button" data-seq="44 60 62 66/2|43 59 62 67/4">▶</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Der Bau lässt sich gut merken: Bass auf der erniedrigten 6. Stufe (as), darüber der Grundton (c) und die erhöhte 4. Stufe (fis). Der deutsche ergänzt die Moll-Terz (es), der französische die 2. Stufe (d).</p>
+  <h4>Auflösung</h4>
+  <p>Italienischer und französischer Sextakkord gehen direkt zur Dominante G. Der deutsche Sextakkord löst sich meist erst in den Quartsextakkord der Tonika auf (c-Moll mit g im Bass) und dann zur Dominante: Ger+6 – i6/4 – V – i. Der Grund ist die Stimmführung: Würde man ihn direkt nach G auflösen, entstünden parallele Quinten (as – es → g – d), die in der klassischen Satzlehre vermieden werden (Kapitel 33).</p>
+  <div class="abc" data-bpm="60" data-caption="Deutscher Sextakkord in C-Dur: Ger+6 – I6/4 – V – I. Bass as → g, Oberstimme fis' → g'.">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[EGc]2 "^Ger+6"[_E^Fc]2 | "^I6/4"[EGc]2 "G"[DGB]2 | "C"[EGc]4 |]
+    [V:LH] C,2 _A,,2 | G,,2 G,,2 | C,4 |]
+  </div>
+  <p>In Dur wird das es beim Weitergehen meist zu e, wie im Beispiel. Manche Lehrbücher schreiben den deutschen Sextakkord in Dur deshalb auch mit dis statt es (as – c – dis – fis), weil dis nach oben zu e strebt. Auf dem Klavier ist das dieselbe Taste.</p>
+
+  <section class="layer deep" data-title="Zwei Leittöne, die auseinanderstreben">
+    <p>Der Dominantseptakkord hat einen Leitton, der zur Tonika steigt. Der übermäßige Sextakkord hat gleich <em>zwei</em>, und sie zielen beide auf denselben Ton, den Grundton der Dominante: fis steigt von unten zum g, as fällt von oben zum g. Das Ziel wird also von beiden Seiten im Halbtonabstand angesteuert, wie beim Neapolitaner, nur jetzt auf die Dominante bezogen statt auf die Tonika.</p>
+    <p>Dazu kommt das Intervall selbst. Die übermäßige Sexte klingt auf dem Klavier wie eine kleine Septime (zehn Halbtöne), ist aber anders geschrieben. Eine kleine Septime zieht sich in der Auflösung zusammen (die Septime fällt). Die übermäßige Sexte öffnet sich. Das Ohr hört zunächst einen bekannten Klang und wird dann von der „falschen“ Richtung der Auflösung überrascht. Genau dieser Doppelcharakter macht den Akkord zum idealen Werkzeug für enharmonische Modulationen (Abschnitt 25.4).</p>
+    <p>Warum ist die übermäßige Sexte so wirkungsvoll vor einer Dominante? Weil eine Dominante selbst schon Spannung ist. Ein Akkord, der sie mit zwei Halbtonschritten ansteuert, staut die Spannung noch einmal auf. Die Dominante wirkt danach umso mehr wie ein Ziel, bevor sie selbst weiterführt.</p>
+  </section>
+
+  <section class="layer piano" data-title="Der Keil: übermäßige Sextakkorde in den Händen">
+    <p>Die übermäßige Sexte lässt sich am Klavier als <strong>Keil</strong> spielen, der sich öffnet. Die linke Hand nimmt den Bass, die rechte Hand die erhöhte vierte Stufe oben.</p>
+    <ul>
+      <li>In C-Dur/c-Moll: linke Hand as, rechte Hand c' – es' – fis' (deutsch). Danach geht die linke Hand zu g, der kleine Finger der rechten Hand zu g'.</li>
+      <li>In a-Moll: linke Hand f, rechte Hand a – c' – dis' (deutsch) bzw. a – h – dis' (französisch). Ziel ist E-Dur mit e im Bass und e' oben.</li>
+      <li>In G-Dur/g-Moll: linke Hand es, rechte Hand g – b – cis' (deutsch). Ziel ist D-Dur.</li>
+    </ul>
+    <p><strong>Merkhilfe:</strong> Der Bass liegt einen Halbton über dem Grundton der Dominante, die obere Stimme einen Halbton darunter. Wenn du die Dominante kennst, findest du beide Töne sofort.</p>
+    <p><strong>Übung:</strong> Spiel in c-Moll nacheinander It+6, Ger+6 und Fr+6, jeweils mit Auflösung. Hör auf den Unterschied: italienisch klingt hohl, deutsch voll und weich, französisch scharf und fremd (wegen der zwei Tritoni im Akkord).</p>
+  </section>
+
+  <!-- 25.4 -->
+  <h2 id="deutsch-dominant">25.4 Der deutsche Sextakkord und der Dominantseptakkord</h2>
+  <p>Spiel den deutschen Sextakkord in C-Dur: as – c – es – fis. Spiel dann As7: as – c – es – ges. Es sind <em>dieselben Tasten</em>. Nur die Schreibweise von fis bzw. ges unterscheidet sich. Das hat zwei wichtige Folgen.</p>
+  <p><strong>1. Enharmonische Modulation.</strong> Der Akkord kann als As7 zur Dominante von Des-Dur werden oder als Ger+6 zur Dominante G führen. Mit einem einzigen Akkord lässt sich so zwischen C-Dur und Des-Dur wechseln, die im Quintenzirkel weit auseinanderliegen (Kapitel 22).</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="44 60 63 66/2|43 60 64 67/2|43 59 62 67/2|48 60 64 67/4">▶ als Ger+6 nach C-Dur</button>
+    <button class="btn" type="button" data-seq="44 60 63 66/2|49 61 65 68/4">▶ als As7 nach Des-Dur</button>
+  </div>
+  <p><strong>2. Verbindung zum Jazz.</strong> Im Jazz ersetzt man D7, die Doppeldominante zu G, gerne durch As7. Das nennt man Tritonussubstitution (Kapitel 31). As7 → G ist aber nichts anderes als ein deutscher Sextakkord, der direkt in die Dominante geht. Klassische und Jazz-Harmonik beschreiben hier denselben Klang mit zwei verschiedenen Theorien.</p>
+
+  <section class="layer deep" data-title="Mozart-Quinten: wann die Regel nachgibt">
+    <p>Die klassische Satzlehre verbietet parallele Quinten zwischen zwei Stimmen (Kapitel 33). Beim deutschen Sextakkord sind sie bei direkter Auflösung zur Dominante kaum zu vermeiden: Bass as → g und Mittelstimme es → d bilden zwei Quinten hintereinander.</p>
+    <p>Komponisten haben dafür zwei Lösungen benutzt. Die erste ist der Umweg über den Quartsextakkord (Ger+6 – I6/4 – V), wie im Notenbeispiel oben. Die zweite war, die Quinten einfach stehen zu lassen. Weil sie bei Mozart gelegentlich vorkommen, nennt man sie in der deutschen Theorie <em>Mozart-Quinten</em>. Sie gelten als tolerierte Ausnahme, weil die beiden Stimmen hier so klar verschiedene Funktionen haben (Bass fällt als Gegenleitton, Mittelstimme als Terz zur Quinte), dass das Ohr sie nicht als verschmelzende Parallele wahrnimmt.</p>
+    <p>Das zeigt, wie Satzregeln gemeint sind: als Beschreibung dessen, was im Normalfall gut klingt, nicht als Naturgesetz. Wo ein stärkerer Effekt wichtiger ist, weicht die Praxis ab.</p>
+  </section>
+
+  <!-- 25.5 -->
+  <h2 id="vermindert">25.5 Der verminderte Septakkord als Drehpunkt</h2>
+  <p>Den verminderten Septakkord kennst du aus Kapitel 20 als vii°7 im harmonischen Moll und aus Kapitel 22 als Mittel der enharmonischen Modulation. Er besteht aus drei kleinen Terzen übereinander. Die vierte kleine Terz, vom obersten Ton zur Oktave des untersten, schließt den Kreis. Daraus folgen zwei Eigenschaften, die ihn zum vielseitigsten Akkord der Tonalität machen.</p>
+  <h4>Es gibt nur drei verschiedene verminderte Septakkorde</h4>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Akkord</th><th>Tasten</th><th>mögliche Schreibweisen</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>I</td><td>c – es – fis – a</td><td>C°7, E♭°7, F♯°7, A°7</td><td><button class="btn" type="button" data-play="60 63 66 69" data-mode="harm">▶</button></td></tr>
+        <tr><td>II</td><td>cis – e – g – b</td><td>C♯°7, E°7, G°7, B♭°7</td><td><button class="btn" type="button" data-play="61 64 67 70" data-mode="harm">▶</button></td></tr>
+        <tr><td>III</td><td>d – f – as – h</td><td>D°7, F°7, A♭°7, B°7 (H°7)</td><td><button class="btn" type="button" data-play="62 65 68 71" data-mode="harm">▶</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Jeder Ton der Klaviatur gehört zu genau einem dieser drei Akkorde.</p>
+  <h4>Jeder Ton kann Leitton sein</h4>
+  <p>Weil der Akkord symmetrisch ist, kann jeder seiner vier Töne als Leitton gedeutet werden. Ein verminderter Septakkord kann deshalb in vier verschiedene Tonarten führen, jeweils in Dur oder Moll. Kapitel 22 hat das am Akkord gis – h – d – f gezeigt: Ziele sind A, C, Es und Fis (bzw. Ges).</p>
+
+  <section class="layer piano" data-title="Ein Griff, vier Ausgänge: der Erniedrigungstrick">
+    <p>Es gibt einen verblüffend einfachen Weg, von einem verminderten Septakkord zu einem Dominantseptakkord zu kommen: <strong>Erniedrige einen beliebigen Ton um einen Halbton.</strong> Das Ergebnis ist immer ein Dominantseptakkord, und welcher Ton du erniedrigst, bestimmt das Ziel.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>aus gis – h – d – f</th><th>ergibt</th><th>führt nach</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>gis → g</td><td>g – h – d – f = G7</td><td>C</td><td><button class="btn" type="button" data-seq="56 59 62 65/2|55 59 62 65/2|48 60 64 67/3">▶</button></td></tr>
+          <tr><td>h → b</td><td>as – b – d – f = B7 (B♭7)</td><td>Es</td><td><button class="btn" type="button" data-seq="56 59 62 65/2|46 56 62 65/2|51 58 63 67/3">▶</button></td></tr>
+          <tr><td>d → des</td><td>gis – h – des – f = Des7 (des – f – as – ces)</td><td>Ges</td><td><button class="btn" type="button" data-seq="56 59 62 65/2|49 56 59 65/2|54 58 61 66/3">▶</button></td></tr>
+          <tr><td>f → e</td><td>gis – h – d – e = E7</td><td>A</td><td><button class="btn" type="button" data-seq="56 59 62 65/2|52 56 59 62/2|45 57 61 64/3">▶</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Der Grund: Der verminderte Septakkord ist ein Dominantseptakkord mit kleiner None, bei dem der Grundton fehlt (G7♭9 ohne g ist h – d – f – as). Senkst du die kleine None um einen Halbton, landest du auf dem Grundton und hast den vollständigen Dominantseptakkord.</p>
+    <p><strong>Übung:</strong> Greif gis – h – d – f mit der rechten Hand (1–2–3–5 oder 1–2–4–5) und spiel nacheinander alle vier Erniedrigungen mit Auflösung. Die linke Hand spielt jeweils den Grundton des entstandenen Septakkords.</p>
+  </section>
+
+  <section class="layer deep" data-title="Symmetrie: warum es drei verminderte Septakkorde und vier übermäßige Dreiklänge gibt">
+    <p>Die zwölf Halbtöne der Oktave lassen sich nur auf wenige Arten in gleich große Abstände teilen. Teilt man durch 3 (Halbtöne pro kleiner Terz), erhält man vier Töne pro Akkord und 12 : 4 = 3 verschiedene Akkorde. Das ist der verminderte Septakkord. Teilt man durch 4 (Halbtöne pro großer Terz), erhält man drei Töne pro Akkord und 12 : 3 = 4 verschiedene Akkorde. Das ist der übermäßige Dreiklang (Abschnitt 25.6). Teilt man durch 6, erhält man den Tritonus mit sechs verschiedenen Paaren. Teilt man durch 2, erhält man die Ganztonleiter mit nur zwei verschiedenen Formen (Kapitel 9).</p>
+    <p>Alle diese Gebilde haben eine gemeinsame Eigenschaft: Man kann sie um einen Teil ihres Abstands verschieben, und sie bleiben dieselben Tasten. Ihnen fehlt damit der eindeutige Grundton, den unser Gehör in Dur- und Moll-Akkorden findet. Für Komponisten ist das Freiheit: Ein symmetrischer Akkord gehört zu keiner Tonart fest und kann überallhin führen.</p>
+    <p>Der französische Komponist Olivier Messiaen hat dieses Prinzip im 20. Jahrhundert systematisiert. Er beschrieb Tonleitern, die sich nur wenige Male transponieren lassen, bevor sie wieder dieselben Töne ergeben, und nannte sie <em>Modi mit begrenzter Transpositionsmöglichkeit</em>. Die Ganztonleiter und die Ganzton-Halbton-Leiter (die Tonleiter zum verminderten Septakkord) gehören dazu.</p>
+  </section>
+
+  <!-- 25.6 -->
+  <h2 id="uebermaessiger-dreiklang">25.6 Der übermäßige Dreiklang</h2>
+  <p>Der übermäßige Dreiklang aus zwei großen Terzen (c – e – gis) ist ebenfalls symmetrisch. Seine Umkehrungen ergeben wieder übermäßige Dreiklänge: e – gis – his, as – c – e. Es gibt nur vier verschiedene. Er kommt als III+ im harmonischen Moll vor (Kapitel 20), wird aber meist als <strong>Durchgangsakkord</strong> verwendet, wenn eine Stimme chromatisch steigt:</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="48 60 64 67/2|48 60 64 68/2|48 60 64 69/2|48 60 64 70/2|41 60 65 69/4">▶ C – C+ – C6 – C7 – F</button>
+  </div>
+  <p>In dieser Folge steigt die Quinte g über gis, a und b. Der übermäßige Dreiklang ist hier nur ein Zwischenschritt dieser Linie. Eine solche Linie über einem liegenden Akkord heißt auch <em>Line Cliché</em> und ist in Pop, Musical und Jazz sehr verbreitet. Die bekannteste Moll-Variante steigt abwärts: Am – Am(maj7) – Am7 – Am6 (a – gis – g – fis über dem a-Moll-Akkord).</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="45 60 64 69/2|45 60 64 68/2|45 60 64 67/2|45 60 64 66/2|50 62 65 69/4">▶ Am – Am(maj7) – Am7 – Am6 – Dm</button>
+  </div>
+
+  <!-- 25.7 -->
+  <h2 id="erkennen">25.7 Die Spezialakkorde erkennen</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Hinweis im Notenbild</th><th>wahrscheinlich</th></tr></thead>
+      <tbody>
+        <tr><td>Moll-Stück, ♭2 im Akkord, Bass auf der 4. Stufe, danach Dominante</td><td>Neapolitaner</td></tr>
+        <tr><td>Bass auf ♭6, darüber ♯4, beide gehen zur 5. Stufe</td><td>übermäßiger Sextakkord</td></tr>
+        <tr><td>wie oben, dazu ♭3 (Moll-Terz)</td><td>deutscher Sextakkord</td></tr>
+        <tr><td>wie oben, dazu 2. Stufe</td><td>französischer Sextakkord</td></tr>
+        <tr><td>vier Töne im Abstand kleiner Terzen</td><td>verminderter Septakkord: prüfe, welcher Ton als Leitton aufgelöst wird</td></tr>
+        <tr><td>Septakkord, der sich nicht eine Quinte tiefer, sondern einen Halbton tiefer auflöst</td><td>deutscher Sextakkord in Dominantseptakkord-Schreibweise</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Im Leadsheet sieht man diese Akkorde meist nur als gewöhnliche Akkordsymbole. Den Neapolitaner in a-Moll findest du als B/D oder B♭/D, den deutschen Sextakkord als A♭7 vor einem G, den verminderten Septakkord als G♯dim7 oder G♯°7. Erst der Zusammenhang verrät die Funktion.</p>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Der Neapolitaner N6 ist ein Dur-Dreiklang auf ♭2 in Sextlage (in a-Moll d – f – b). Er ersetzt die Subdominante und führt zur Dominante.</li>
+    <li>Übermäßige Sextakkorde haben ♭6 im Bass und ♯4 oben. Beide streben zur 5. Stufe. Italienisch: + Grundton. Deutsch: + Grundton und ♭3. Französisch: + Grundton und 2.</li>
+    <li>Der deutsche Sextakkord klingt wie ein Dominantseptakkord und eignet sich für enharmonische Modulation. Im Jazz entspricht er der Tritonussubstitution.</li>
+    <li>Es gibt nur drei verminderte Septakkorde und vier übermäßige Dreiklänge. Jeder Ton eines verminderten Septakkords kann Leitton sein.</li>
+    <li>Erniedrigt man einen Ton eines verminderten Septakkords, entsteht ein Dominantseptakkord.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">25.1</span><div><span class="kind">Theorie</span>Bilde den Neapolitaner in d-Moll und in e-Moll in Sextlage.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>d-Moll: ♭2 = es, Akkord Es-Dur (es g b), in Sextlage g – b – es. e-Moll: ♭2 = f, Akkord F-Dur (f a c), in Sextlage a – c – f. Der Bass ist jeweils die 4. Stufe der Tonart (g bzw. a).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">25.2</span><div><span class="kind">Theorie</span>Bilde in a-Moll den italienischen, deutschen und französischen Sextakkord. Wohin lösen sie sich auf?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Bass f (♭6), ♯4 = dis, Grundton a. It+6: f – a – dis. Ger+6: f – a – c – dis. Fr+6: f – a – h – dis. Alle führen zur Dominante E (f → e, dis → e). Der deutsche meist über a-Moll mit e im Bass (i6/4).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">25.3</span><div><span class="kind">Theorie</span>Welcher Dominantseptakkord klingt genauso wie der deutsche Sextakkord in a-Moll? Zu welcher Tonart wäre er die Dominante?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>f – a – c – dis klingt wie F7 (f – a – c – es). F7 ist die Dominante von B-Dur. Über diesen Akkord lässt sich also von a-Moll nach B-Dur modulieren.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">25.4</span><div><span class="kind">Theorie</span>Zu welchem der drei verminderten Septakkorde gehört der Ton e? Nenne seine vier Töne und vier Zieltonarten (mit Leitton als Grundlage).</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Zu cis – e – g – b. Gelesen mit Leitton cis → D(-Moll), Leitton e → F, Leitton g → As, Leitton b (als ais gelesen) → H. Je nach Schreibweise: C♯°7, E°7, G°7, A♯°7.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">25.5</span><div><span class="kind">Theorie</span>Erniedrige nacheinander jeden Ton von h – d – f – as um einen Halbton. Welche Dominantseptakkorde entstehen?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>h → b: b – d – f – as = B7 (führt nach Es). d → des: h – des – f – as = Des7, geschrieben des – f – as – ces (führt nach Ges). f → e: h – d – e – as = E7, geschrieben e – gis – h – d (führt nach A). as → g: h – d – f – g = G7 (führt nach C).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">25.6</span><div><span class="kind">Notenlesen</span>Bestimme den zweiten Akkord und erkläre, warum er sich so auflöst.</div></div>
+      <div class="abc" data-bpm="60">
+        X:1
+        M:4/4
+        L:1/4
+        K:Am
+        %%score {RH LH}
+        V:RH clef=treble
+        V:LH clef=bass
+        [V:RH] "^1"[EAc]2 "^2"[FAc^d]2 | "^3"[EAce]2 "^4"[E^GBe]2 | "^5"[EAc]4 |]
+        [V:LH] A,,2 F,,2 | E,,2 E,,2 | A,,4 |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Akkord 2 ist f – f' – a' – c'' – dis'', ein deutscher Sextakkord in a-Moll. Die übermäßige Sexte f – dis'' öffnet sich zur Oktave e – e'' (Bass f → e, oben dis'' → e''). Danach folgen a-Moll mit e im Bass (i6/4), E-Dur (V) und a-Moll.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">25.7</span><div><span class="kind">Am Klavier</span>Spiel i – iv – N6 – V7 – i in a-Moll, d-Moll und e-Moll.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>a-Moll: Am – Dm – B/D – E7 – Am. d-Moll: Dm – Gm – Es/G – A7 – Dm. e-Moll: Em – Am – F/A – H7 – Em. In der rechten Hand ersetzt jeweils der Ton einen Halbton über der Quinte der iv die Quinte (a → b, d → es, e → f).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">25.8</span><div><span class="kind">Am Klavier</span>Spiel in C-Dur den Keil as/fis' → g/g' mit allen drei übermäßigen Sextakkorden. Welcher klingt für dich am fremdesten?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Meist wird der französische (as – c – d – fis) als am fremdesten empfunden. Er enthält zwei Tritoni (as – d und c – fis) und klingt wie ein Ausschnitt aus der Ganztonleiter. Der deutsche klingt am vertrautesten, weil er dieselben Tasten wie As7 hat.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">25.9</span><div><span class="kind">Gehör</span>Welches Beispiel enthält einen Neapolitaner?</div></div>
+      <div class="btn-row">
+        <button class="btn" type="button" data-seq="45 64 69 72/2|50 65 70 74/2|52 64 68 74/2|45 64 69 72/4">▶ Beispiel A</button>
+        <button class="btn" type="button" data-seq="45 64 69 72/2|50 65 69 74/2|52 64 68 74/2|45 64 69 72/4">▶ Beispiel B</button>
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>A: Am – B/D – E7 – Am. Der zweite Akkord hat b statt a und klingt deutlich dunkler und fremder. B verwendet d-Moll (iv).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">25.10</span><div><span class="kind">Vertiefung</span>Warum gibt es genau vier verschiedene übermäßige Dreiklänge? Nenne sie mit Tasten.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Ein übermäßiger Dreiklang teilt die Oktave in drei große Terzen (je 4 Halbtöne). Jeder Akkord deckt drei der zwölf Töne ab, also gibt es 12 : 3 = 4 Akkorde: c – e – gis, cis – f – a, d – fis – ais (b), es – g – h. Danach wiederholt sich das Muster: e – gis – his ist wieder der erste.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(25);
+  document.querySelectorAll("[data-seq]").forEach((b) => b.addEventListener("click", () => {
+    const steps = b.dataset.seq.split("|").map((s) => {
+      const [n, d] = s.split("/");
+      return [n.trim().split(/\s+/).map(Number), +(d || 2)];
+    });
+    Book.audio.seq(steps, +b.dataset.bpm || 72);
+  }));
+</script>
+</body>
+</html>

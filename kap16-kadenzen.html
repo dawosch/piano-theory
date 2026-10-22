@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kadenzen und Schlüsse · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .prog { margin-block: 1.2rem; }
+  .prog-bar { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: center; }
+  .prog-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0; padding: 0; }
+  .prog-chips li { display: inline-flex; flex-direction: column; align-items: center; min-width: 2.8rem; padding: 0.2rem 0.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); font-family: var(--font-display); line-height: 1.25; }
+  .prog-chips .rn { font-weight: 650; }
+  .prog-chips .cn { font-size: var(--step--1); color: var(--muted); }
+  .prog-chips li.on { border-color: var(--accent); background: var(--accent-soft); }
+  .prog-kb { margin-top: 0.6rem; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil II · Kapitel 16</div>
+    <h1>Kadenzen und Schlüsse</h1>
+    <p class="lede">Eine Kadenz ist die Akkordfolge, mit der ein musikalischer Abschnitt endet. Sie wirkt wie ein Satzzeichen: Manche Schlüsse klingen wie ein Punkt, andere wie ein Komma oder wie eine überraschende Wendung. Wer Kadenzen kennt, hört die Gliederung eines Stücks und kann selbst Schlüsse spielen, die überzeugen.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die vier Grundschlüsse benennen und spielen: Ganzschluss, Halbschluss, Plagalschluss und Trugschluss,</li>
+      <li>vollkommene und unvollkommene Ganzschlüsse unterscheiden,</li>
+      <li>die Kadenz I–IV–V–I mit guter Stimmführung in mehreren Tonarten greifen,</li>
+      <li>den Quartsextvorhalt erkennen und erklären, warum er zur Dominante gehört,</li>
+      <li>begründen, warum die Dominante so stark zur Tonika zieht,</li>
+      <li>Schlussarten am Klang erkennen.</li>
+    </ul>
+  </div>
+
+  <!-- 16.1 -->
+  <h2 id="satzzeichen">16.1 Musik hat Satzzeichen</h2>
+  <p>Musik gliedert sich in Abschnitte, ähnlich wie Sprache in Sätze. Ein solcher Abschnitt heißt <strong>Phrase</strong> (genauer in Kapitel 39). Am Ende einer Phrase steht fast immer eine typische Akkordverbindung, die den Abschnitt abschließt. Diese Schlusswendung heißt <dfn id="g-kadenz">Kadenz</dfn>. Das Wort kommt vom lateinischen <em>cadere</em>, „fallen“, über das italienische <em>cadenza</em>. Die Musik „fällt“ am Phrasenende in einen Ruhepunkt.</p>
+  <p>Je nachdem, auf welchem Akkord eine Phrase endet und woher sie kommt, wirkt der Schluss verschieden stark. Die Musiktheorie unterscheidet vier Grundtypen:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Schluss</th><th>Stufen</th><th>wirkt wie</th><th>Englisch</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Ganzschluss</strong></td><td>V–I</td><td>Punkt</td><td>authentic cadence</td></tr>
+        <tr><td><strong>Halbschluss</strong></td><td>… –V</td><td>Komma oder Fragezeichen</td><td>half cadence</td></tr>
+        <tr><td><strong>Plagalschluss</strong></td><td>IV–I</td><td>nachträgliche Bekräftigung („Amen“)</td><td>plagal cadence</td></tr>
+        <tr><td><strong>Trugschluss</strong></td><td>V–vi</td><td>überraschende Wendung</td><td>deceptive cadence</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Das Wort Kadenz hat noch zwei weitere Bedeutungen, die dir begegnen werden. Mit „Kadenz“ meint man oft die ganze Folge I–IV–V–I (Abschnitt 16.2). Und in einem Solokonzert ist die Kadenz die Stelle, an der das Orchester schweigt und der Solist frei improvisiert oder eine ausgeschriebene virtuose Passage spielt. Warum beides denselben Namen trägt, zeigt Abschnitt 16.7.</p>
+
+  <!-- 16.2 -->
+  <h2 id="vollstaendig">16.2 Die vollständige Kadenz I–IV–V–I</h2>
+  <p>Aus Kapitel 14 kennst du die drei Hauptfunktionen einer Tonart: Tonika (I), Subdominante (IV) und Dominante (V). Stellt man sie in der Reihenfolge I–IV–V–I hintereinander, entsteht die <dfn id="g-vollstaendige-kadenz">vollständige Kadenz</dfn>. Sie bewegt sich von der Ruhe (I) über eine erste Entfernung (IV) zur größten Spannung (V) und zurück zur Ruhe (I). In der Funktionstheorie schreibt man T–S–D–T.</p>
+  <div class="abc" data-bpm="72" data-caption="Die vollständige Kadenz in C-Dur. Oben die Akkordsymbole, unten die Stufen.">
+    X:1
+    M:4/4
+    L:1/2
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[CEG] "F"[CFA] | "G7"[B,FG] "C"[CEG] |]
+    [V:LH] "_I"C, "_IV"F,, | "_V7"G,, "_I"C, |]
+  </div>
+  <p>Achte auf die rechte Hand. Sie springt nicht, sondern bewegt sich in winzigen Schritten. Der Ton c' bleibt von I nach IV liegen, g' bleibt von V7 nach I liegen, und die übrigen Töne rücken jeweils nur um einen Halb- oder Ganzton. Nur der Bass springt von Grundton zu Grundton. Diese Arbeitsteilung ist das Grundprinzip guter <strong>Stimmführung</strong>: gemeinsame Töne liegen lassen, alle anderen Stimmen auf dem kürzesten Weg bewegen (ausführlich in Kapitel 33).</p>
+  <div class="prog" data-prog="I IV V7 I" data-key="0" data-names="none"></div>
+
+  <section class="layer deep" data-title="Warum legt I–IV–V–I die Tonart so eindeutig fest?">
+    <p>Ein einzelner C-Dur-Akkord sagt noch nicht, in welcher Tonart du bist. C-Dur ist die I in C-Dur, aber auch die IV in G-Dur und die V in F-Dur. Erst die Folge I–IV–V–I beseitigt jeden Zweifel. Dafür gibt es eine genaue Begründung.</p>
+    <p><strong>Alle sieben Töne kommen vor.</strong> I enthält c, e, g. IV enthält f, a, c. V enthält g, h, d. Zusammen sind das c, d, e, f, g, a, h, also die komplette C-Dur-Tonleiter. Drei Akkorde genügen, um die ganze Tonart hörbar zu machen.</p>
+    <p><strong>Zwei Töne grenzen die Nachbarn aus.</strong> Die nächsten Verwandten von C-Dur auf dem Quintenzirkel (Kapitel 7) sind G-Dur und F-Dur. Sie unterscheiden sich von C-Dur jeweils nur in einem einzigen Ton: G-Dur hat fis statt f, F-Dur hat b statt h. Die Subdominante F-Dur bringt das f und schließt damit G-Dur aus. Die Dominante G-Dur bringt das h und schließt F-Dur aus. IV und V halten die Tonart von beiden Seiten fest.</p>
+    <div class="kb" data-from="60" data-to="72" data-labels="white" data-marks="65:c2 71:c3" aria-label="Die Töne f' und h' auf der Klaviatur markiert"></div>
+    <p class="muted">f (petrol, aus der IV) und h (orange, aus der V): die beiden Töne, die C-Dur von seinen Nachbartonarten unterscheiden.</p>
+    <p><strong>Ein Stück Geschichte.</strong> Dass Akkorde einen Grundton haben und dass die Bewegung dieser Grundtöne im Quintabstand die Harmonik trägt, hat der französische Komponist Jean-Philippe Rameau 1722 in seinem „Traité de l’harmonie“ erstmals systematisch beschrieben. Seine Idee eines „Fundamentbasses“ unter allen Akkorden liegt sowohl der Stufentheorie als auch der Funktionstheorie zugrunde. Auch der Begriff <em>sous-dominante</em> (Subdominante) geht auf Rameau zurück.</p>
+  </section>
+
+  <section class="layer piano" data-title="Die Kadenz in die Hand bekommen">
+    <p>Die Kadenz ist die wichtigste Akkordübung am Klavier. Spiel sie mit der rechten Hand in enger Lage und mit der linken Hand nur die Grundtöne. Es gibt drei Ausgangsstellungen. Sie heißen nach dem Ton, der oben liegt:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Lage</th><th>I</th><th>IV</th><th>V7</th><th>I</th><th>Finger</th></tr></thead>
+        <tbody>
+          <tr class="play-row" data-play="60 64 67" data-mode="harm"><td>Quintlage (g oben)</td><td>c'–e'–g'</td><td>c'–f'–a'</td><td>h–f'–g'</td><td>c'–e'–g'</td><td>135 · 135 · 145 · 135</td></tr>
+          <tr class="play-row" data-play="64 67 72" data-mode="harm"><td>Oktavlage (c oben)</td><td>e'–g'–c''</td><td>f'–a'–c''</td><td>f'–g'–h'</td><td>e'–g'–c''</td><td>125 · 135 · 124 · 125</td></tr>
+          <tr class="play-row" data-play="67 72 76" data-mode="harm"><td>Terzlage (e oben)</td><td>g'–c''–e''</td><td>a'–c''–f''</td><td>g'–h'–f''</td><td>g'–c''–e''</td><td>135 · 125 · 125 · 135</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Die Dominante ist hier als Septakkord ohne Quinte gegriffen (h, f, g bzw. g, h, f). Das spart einen Finger und ergibt die glatteste Stimmführung. Die linke Hand spielt c – F – G – c. Lass die Hand bei jedem Akkordwechsel locker und schau, welche Finger einfach liegen bleiben können.</p>
+    <p><strong>Übung:</strong> Spiel die Kadenz in allen drei Lagen in C-Dur, dann in G-Dur (G–C–D7–G) und F-Dur (F–B–C7–F). Achtung: Das deutsche „B-Dur“ ist der Akkord B♭ mit den Tönen b, d, f. Die Griffe bleiben gleich, die Hand verschiebt sich nur. Ziel ist, die Kadenz in jeder Tonart spielen zu können, ohne über die Töne nachzudenken.</p>
+  </section>
+
+  <!-- 16.3 -->
+  <h2 id="ganzschluss">16.3 Der Ganzschluss</h2>
+  <p>Der <dfn id="g-ganzschluss">Ganzschluss</dfn> (auch <em>authentischer Schluss</em>) ist die Verbindung V–I oder V7–I am Ende einer Phrase. Er ist der stärkste und endgültigste Schluss. Ein Stück in Dur endet fast immer mit einem Ganzschluss.</p>
+  <p>Ganzschlüsse unterscheiden sich in ihrer Stärke:</p>
+  <ul>
+    <li><strong>Vollkommener Ganzschluss:</strong> Beide Akkorde stehen in Grundstellung, und im Schlussakkord liegt der Grundton in der Oberstimme. Das ist der eigentliche Schlusspunkt.</li>
+    <li><strong>Unvollkommener Ganzschluss:</strong> Im Schlussakkord liegt die Terz oder Quinte oben, oder einer der Akkorde steht in einer Umkehrung. Der Schluss wirkt dann schwächer, eher wie ein Semikolon.</li>
+  </ul>
+  <div class="abc" data-bpm="64" data-caption="Links ein vollkommener Ganzschluss (oben h'→c''), rechts ein unvollkommener (oben d''→e'')">
+    X:1
+    M:4/4
+    L:1/2
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "^vollkommen""G7"[DFB] "C"[CEc] | "^unvollkommen""G"[GBd] "C"[Gce] |]
+    [V:LH] G,, C, | G,, C, |]
+  </div>
+  <p>Im englischen Sprachraum heißen die beiden Formen <em>perfect authentic cadence</em> (PAC) und <em>imperfect authentic cadence</em> (IAC). Komponisten setzen den unvollkommenen Ganzschluss gern in der Mitte eines Stücks ein und heben sich den vollkommenen für das Ende auf.</p>
+
+  <!-- 16.4 -->
+  <h2 id="halbschluss">16.4 Der Halbschluss</h2>
+  <p>Ein <dfn id="g-halbschluss">Halbschluss</dfn> endet auf der Dominante. Davor kann fast jeder Akkord stehen: I–V, IV–V, ii–V oder vi–IV–V. Weil die Dominante selbst Spannung trägt, bleibt die Musik offen. Der Halbschluss klingt wie ein Komma oder eine Frage, auf die eine Antwort folgen muss.</p>
+  <div class="prog" data-prog="I vi IV V" data-key="0" data-names="none"></div>
+  <p>In der klassischen Musik bilden Halbschluss und Ganzschluss oft ein Paar. Eine erste Phrase endet mit einem Halbschluss (Frage), eine zweite, ähnlich gebaute Phrase mit einem Ganzschluss (Antwort). Diese Form heißt Periode und ist eines der Grundmodelle der Formenlehre (Kapitel 39).</p>
+  <p>In Moll gibt es einen besonderen Halbschluss, den <em>phrygischen Halbschluss</em>: iv–V mit der Subdominante in erster Umkehrung, sodass der Bass einen Halbton abwärts in die Dominante fällt (in a-Moll: d-Moll mit f im Bass, dann E-Dur). Er stammt aus der Musik des 16. und 17. Jahrhunderts und klingt altertümlich-feierlich (Kapitel 20).</p>
+
+  <!-- 16.5 -->
+  <h2 id="plagalschluss">16.5 Der Plagalschluss</h2>
+  <p>Der <dfn id="g-plagalschluss">Plagalschluss</dfn> ist die Verbindung IV–I. Ihm fehlt der Leitton h, der beim Ganzschluss so stark zum c zieht. Er wirkt deshalb weicher und weniger zwingend. Meist steht er nicht allein, sondern folgt einem Ganzschluss als nachträgliche Bekräftigung. In vielen Kirchenliedern wird das abschließende „Amen“ auf IV–I gesungen, daher der Spitzname <em>Amen-Schluss</em>.</p>
+  <div class="prog" data-prog="V7 I IV I" data-key="0" data-names="none"></div>
+  <p>In Pop und Rock ist IV–I sehr häufig, auch ohne vorherigen Ganzschluss. Eine besonders ausdrucksvolle Variante ersetzt die Dur-Subdominante durch die Moll-Subdominante: IV–iv–I (in C-Dur: F – Fm – C). Das as in f-Moll rutscht als Halbton zum g hinab. Diese Leihgabe aus Moll gehört zur modalen Mischung (Kapitel 23).</p>
+  <div class="prog" data-prog="I IV iv I" data-key="0" data-names="none"></div>
+  <p>Die Namen „authentisch“ und „plagal“ stammen aus der Lehre von den Kirchentonarten (Kapitel 24). Dort unterschied man authentische Tonarten, deren Melodien über dem Grundton liegen, von plagalen Tonarten (griechisch <em>plagios</em>, „seitlich, schräg“), deren Umfang um den Grundton herum gelagert ist. Die Begriffe wurden später auf die Schlüsse übertragen.</p>
+
+  <!-- 16.6 -->
+  <h2 id="trugschluss">16.6 Der Trugschluss</h2>
+  <p>Beim <dfn id="g-trugschluss">Trugschluss</dfn> führt die Dominante nicht zur I, sondern zur vi. In C-Dur folgt auf G7 also a-Moll statt C-Dur. Das Ohr erwartet den Schlusspunkt und bekommt stattdessen eine Fortsetzung. Der Trugschluss verlängert eine Phrase: Nach ihm braucht es einen neuen Anlauf, der dann meist mit einem echten Ganzschluss endet.</p>
+  <div class="prog" data-prog="I IV V7 vi IV V7 I" data-key="0" data-names="none"></div>
+  <p>Warum funktioniert gerade die vi als Ersatz? Der a-Moll-Akkord (a, c, e) hat zwei Töne mit C-Dur (c, e, g) gemeinsam. Die Oberstimmen verhalten sich deshalb fast genau wie beim Ganzschluss: Der Leitton h löst sich zum c auf, die Septime f fällt zum e. Nur der Bass tanzt aus der Reihe. Er steigt einen Ganzton von g nach a, statt zum c zu fallen. Die Funktionstheorie nennt die vi deshalb <em>Tonikaparallele</em> (Tp): ein naher Verwandter der Tonika (Kapitel 14).</p>
+  <p>Im Englischen heißt der Trugschluss <em>deceptive cadence</em>, im britischen Englisch auch <em>interrupted cadence</em>. In Moll führt er von V nach VI (in a-Moll: E-Dur nach F-Dur).</p>
+
+  <section class="layer deep" data-title="Warum überrascht uns ein Trugschluss? Erwartung im Gehirn">
+    <p>Ein Trugschluss funktioniert nur, weil wir etwas anderes erwarten. Woher kommt diese Erwartung? Niemand hat dir beigebracht, dass nach G7 ein C-Dur kommen muss. Trotzdem hörst du es.</p>
+    <p><strong>Statistisches Lernen.</strong> Wer mit westlicher Musik aufwächst, hört Tausende von V–I-Verbindungen. Das Gehirn lernt dabei unbewusst, welche Akkordfolgen wahrscheinlich sind, ähnlich wie es beim Sprechenlernen lernt, welche Wörter aufeinander folgen. Der Musikwissenschaftler David Huron hat dieses Prinzip in seinem Buch „Sweet Anticipation“ (2006) ausgearbeitet. Musik erzeugt Gefühle zu einem großen Teil dadurch, dass sie Vorhersagen bestätigt, verzögert oder enttäuscht. Schon 1956 hatte Leonard B. Meyer in „Emotion and Meaning in Music“ argumentiert, dass musikalische Spannung aus aufgeschobenen Erwartungen entsteht.</p>
+    <p><strong>Messbar im Gehirn.</strong> Hirnstrommessungen der Forschungsgruppe um Stefan Koelsch haben ab etwa 2000 gezeigt, dass das Gehirn auf einen unerwarteten Akkord am Ende einer Akkordfolge mit einem typischen elektrischen Signal reagiert, schon etwa 200 Millisekunden nach dem Akkord. Das passiert auch bei Menschen ohne jede musikalische Ausbildung. Die Erwartung ist also keine Frage der Theoriekenntnis, sondern eine Folge des Hörens.</p>
+    <p><strong>Warum Überraschung schön sein kann.</strong> Eine enttäuschte Vorhersage löst zunächst eine kurze Alarmreaktion aus. Wenn die Bewertung dann ergibt, dass keine Gefahr besteht, kann die Überraschung als angenehm empfunden werden. Huron erklärt damit, warum ein gut gesetzter Trugschluss berührt, statt zu stören. Er ist eine sichere Überraschung.</p>
+  </section>
+
+  <!-- 16.7 -->
+  <h2 id="quartsext">16.7 Der Quartsextvorhalt</h2>
+  <p>In klassischer Musik geht der Dominante vor dem Schluss oft ein Akkord voraus, der wie die Tonika in zweiter Umkehrung aussieht: C-Dur mit g im Bass (C/G). Diese Verbindung heißt <dfn id="g-quartsextvorhalt">Quartsextvorhalt</dfn>. Über dem Bass g liegen eine Sexte (e) und eine Quarte (c). Beide rutschen anschließend einen Schritt abwärts, die Sexte zur Quinte (e→d) und die Quarte zur Terz (c→h). Erst dann steht der reine G-Dur-Akkord da.</p>
+  <div class="abc" data-bpm="66" data-caption="Kadenz mit Quartsextvorhalt: Über dem liegenden Bass g wird aus c–e erst h–d.">
+    X:1
+    M:4/4
+    L:1/2
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[CEG] "F"[CFA] | "C/G"[CEG] "G"[B,DG] | "C"[CEG]2 |]
+    [V:LH] "_I"C, "_IV"F,, | "_I6/4"G,, "_V"G,, | "_I"C,2 |]
+  </div>
+  <div class="prog" data-prog="I IV I64 V7 I" data-key="0" data-names="none"></div>
+  <p>Man schreibt den Quartsextvorhalt in Stufen als I⁶₄–V oder, genauer, als V⁶₄–⁵₃: eine Dominante, deren Terz und Quinte durch Vorhalte verzögert werden. In der Funktionstheorie heißt er D⁶₄ ⁵₃. Beide Schreibweisen sagen dasselbe: Der Akkord gehört zur Dominante, auch wenn er aus den Tönen der Tonika besteht.</p>
+  <p>Hier liegt die Verbindung zur Solokadenz im Konzert. In Konzerten der Klassik hält das Orchester auf einem Quartsextvorhalt mit Fermate an. Dann spielt der Solist seine Kadenz, und an ihrem Ende führt ein Triller auf der Dominante das Orchester zurück zur Tonika. Die Solokadenz ist also buchstäblich ein riesig ausgedehnter Quartsextvorhalt.</p>
+
+  <section class="layer deep" data-title="Ein Tonika-Akkord, der keiner ist">
+    <p>Warum soll C/G zur Dominante gehören, obwohl alle drei Töne aus C-Dur stammen? Die Antwort hat mit der Quarte über dem Bass zu tun.</p>
+    <p>In Abschnitt 5.10 hast du gelesen, dass die reine Quarte ein Sonderfall ist. Allein klingt sie konsonant, über dem tiefsten Ton eines Satzes wird sie aber als Dissonanz behandelt. Der Grund: Wir hören den Bass als Fundament eines Klangs und alle anderen Töne in Bezug auf ihn. Eine Quarte über dem Bass klingt wie eine „falsche Terz“, die noch an ihren Platz rücken will. Der Quartsextakkord ist deshalb instabil, und seine Quarte will einen Schritt abwärts zur Terz.</p>
+    <p>Der Bass bleibt bei dieser Auflösung auf g liegen. Das g ist der Grundton des Klangs, der sich am Ende herausschält. Das Ohr ordnet den ganzen Vorgang deshalb der Dominante zu. Über dem Bass g erklingen zuerst zwei verzögerte Töne (c und e) und dann die eigentlichen Akkordtöne (h und d). Solche verzögerten Töne heißen <em>Vorhalte</em> und sind ein eigenes Thema in Kapitel 19.</p>
+    <p>Daraus folgt eine praktische Regel: Ein Quartsextakkord in der Kadenz steht immer auf betonter Zählzeit, und auf ihn folgt die Dominante mit demselben Basston. Steht C/G woanders, etwa als Durchgang zwischen zwei anderen Akkorden, hat er eine andere Funktion (Kapitel 37).</p>
+  </section>
+
+  <!-- 16.8 -->
+  <h2 id="moll">16.8 Kadenzen in Moll</h2>
+  <p>In Moll lautet die Kadenz i–iv–V–i, in a-Moll also a-Moll – d-Moll – E-Dur – a-Moll. Die Dominante ist dabei ein <strong>Dur</strong>-Akkord, obwohl sie aus der natürlichen Moll-Tonleiter eigentlich e-Moll (e, g, h) wäre. Das g wird zum gis erhöht, wie in der harmonischen Moll-Tonleiter (Kapitel 8). Erst dieses gis liefert einen Leitton, der einen Halbton unter dem Grundton a liegt und kräftig dorthin zieht.</p>
+  <div class="abc" data-bpm="70" data-caption="Kadenz in a-Moll mit erhöhtem Leitton gis in der Dominante">
+    X:1
+    M:4/4
+    L:1/2
+    K:Am
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "Am"[A,CE] "Dm"[A,DF] | "E"[^G,B,E] "Am"[A,CE] |]
+    [V:LH] "_i"A,, "_iv"D, | "_V"E,, "_i"A,, |]
+  </div>
+  <div class="prog" data-prog="i iv V7 i" data-key="9" data-names="none"></div>
+  <p>Ein Moll-Stück kann auch mit einem Dur-Akkord enden. Die Kadenz führt dann zu A-Dur statt zu a-Moll. Diese aufhellende Schlusswendung heißt <dfn id="g-picardische-terz">picardische Terz</dfn>. Sie war in der Barockmusik so üblich, dass ein Moll-Schluss mit Moll-Akkord eher die Ausnahme war.</p>
+  <div class="prog" data-prog="i iv V7 I" data-key="9" data-names="none"></div>
+  <p class="muted">Der Name „tierce de Picardie“ ist erst 1768 im Musiklexikon von Jean-Jacques Rousseau belegt. Woher er stammt, ist ungeklärt.</p>
+
+  <!-- 16.9 -->
+  <h2 id="warum">16.9 Warum die Dominante zur Tonika zieht</h2>
+  <p>Dass V–I so endgültig klingt, liegt an drei Kräften, die gleichzeitig wirken:</p>
+  <ol>
+    <li><strong>Der Leitton.</strong> Die Terz der Dominante (h in C-Dur) liegt einen Halbton unter dem Grundton der Tonika. Ein Halbtonschritt ist die kleinste Bewegung im System, und das h „lehnt“ sich förmlich an das c an.</li>
+    <li><strong>Der Tritonus.</strong> Im Dominantseptakkord G7 bilden h und f einen Tritonus. Dieses instabile Intervall löst sich auf, indem beide Töne in Halbtonschritten nach innen rücken: h→c und f→e. Aus dem Tritonus wird die Terz c–e der Tonika (Kapitel 15).</li>
+    <li><strong>Der Bass.</strong> Der Bass fällt eine Quinte (g→c) oder steigt eine Quarte. Diese Grundtonbewegung gilt seit Rameau als die stärkste Verbindung zweier Akkorde.</li>
+  </ol>
+  <div class="kb" data-from="55" data-to="72" data-labels="white" data-marks="59:c3:h 65:c3:f 60:c2:c 64:c2:e" aria-label="Tritonus h–f und seine Auflösung nach c–e"></div>
+  <p class="muted">Der Tritonus h–f (orange) löst sich in Halbtonschritten nach innen zur Terz c–e (petrol) auf.</p>
+
+  <section class="layer deep" data-title="Die Bausteine der Kadenz: Klauseln aus der Renaissance">
+    <p>Die moderne Kadenz ist älter als das Akkorddenken. Bevor man in Akkorden dachte, dachte man in Stimmen. Die Musik des 15. und 16. Jahrhunderts war mehrstimmig gesetzt, und jede Stimme hatte am Phrasenende eine typische Schlussformel. Diese Formeln heißen <dfn id="g-klausel">Klauseln</dfn> (lateinisch <em>clausula</em>, „Schluss“).</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Klausel</th><th>Bewegung (Stufen)</th><th>in C-Dur</th></tr></thead>
+        <tbody>
+          <tr><td>Diskantklausel (Sopran)</td><td>7 → 8, Halbton aufwärts</td><td>h → c</td></tr>
+          <tr><td>Tenorklausel</td><td>2 → 1, Ganzton abwärts</td><td>d → c</td></tr>
+          <tr><td>Bassklausel</td><td>5 → 1, Quinte abwärts oder Quarte aufwärts</td><td>g → c</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Legt man diese drei Klauseln übereinander, entsteht genau die Verbindung G-Dur → C-Dur: oben h→c, in der Mitte d→c, im Bass g→c. Die Dominante ist also ursprünglich kein „Akkord“, sondern das Zusammentreffen von Stimmen, die alle gleichzeitig in ihre Schlussformel einlaufen. Mit dem Generalbass im 17. Jahrhundert und Rameaus Theorie im 18. Jahrhundert begann man, diesen Zusammenklang als Akkord mit Grundton zu verstehen.</p>
+    <p>Dieser Blick erklärt, warum gute Stimmführung bei Kadenzen so wichtig ist. Die Kraft des Schlusses steckt in den einzelnen Linien: im Leitton, der aufwärts strebt, und im Bass, der springt. Wer am Klavier den Leitton nach oben auflöst, spielt die Diskantklausel, ob er es weiß oder nicht.</p>
+  </section>
+
+  <!-- 16.10 -->
+  <h2 id="hoeren">16.10 Schlüsse hören</h2>
+  <p>Beim Hören musst du nicht jeden Akkord bestimmen. Achte auf das Ende einer Phrase und stell dir zwei Fragen:</p>
+  <ul>
+    <li><strong>Ist es zu Ende?</strong> Klingt der letzte Akkord wie ein Punkt, ist es ein Ganz- oder Plagalschluss. Bleibt eine Frage offen, ist es ein Halbschluss. Klingt es wie ein „Doch nicht!“, ist es ein Trugschluss.</li>
+    <li><strong>Wie stark war der Schritt davor?</strong> Ein Ganzschluss hat den spürbaren Sog des Leittons. Ein Plagalschluss klingt sanfter, wie ein Nicken.</li>
+  </ul>
+  <div id="cad-trainer"></div>
+
+  <section class="layer piano" data-title="Enden, die tragen: Schlüsse in deinen Stücken">
+    <p>Wenn du Lieder nach Akkordsymbolen begleitest (Kapitel 17), kannst du jedes Ende mit wenigen Handgriffen überzeugender machen:</p>
+    <ul>
+      <li><strong>Dominantseptakkord vor dem Schluss:</strong> Ersetze die letzte V durch V7. Der Tritonus gibt dem Schluss mehr Zug.</li>
+      <li><strong>Langsamer werden:</strong> Ein leichtes Ritardando in den letzten beiden Takten und ein voller, mit Pedal gehaltener Schlussakkord signalisieren das Ende unmissverständlich.</li>
+      <li><strong>Trugschluss als Verlängerung:</strong> Spiel beim letzten Refrain statt V7–I einmal V7–vi, wiederhole die letzte Zeile und ende dann mit IV–V7–I. Das ist ein klassischer Trick, um ein Ende hinauszuzögern.</li>
+      <li><strong>Amen anhängen:</strong> Nach dem Schlussakkord noch IV–I spielen, eventuell mit iv statt IV. Das wirkt wie ein ruhiges Ausatmen.</li>
+    </ul>
+    <p><strong>Übung:</strong> Nimm ein Lied, das du schon spielst, und probier nacheinander alle vier Varianten am Schluss aus. Entscheide, welche dir am besten gefällt, und begründe es mit den Begriffen aus diesem Kapitel.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Kadenzen sind Schlusswendungen am Ende von Phrasen. Die vollständige Kadenz I–IV–V–I legt die Tonart eindeutig fest.</li>
+    <li><strong>Ganzschluss</strong> V–I (Punkt), <strong>Halbschluss</strong> auf V (Komma, Frage), <strong>Plagalschluss</strong> IV–I (Amen), <strong>Trugschluss</strong> V–vi (überraschende Fortsetzung).</li>
+    <li>Ein Ganzschluss ist vollkommen, wenn beide Akkorde in Grundstellung stehen und der Grundton am Ende oben liegt.</li>
+    <li>Der <strong>Quartsextvorhalt</strong> sieht aus wie I in zweiter Umkehrung, gehört aber zur Dominante: Quarte und Sexte über dem Bass lösen sich in Terz und Quinte auf.</li>
+    <li>In Moll wird die Dominante durch den erhöhten Leitton zum Dur-Akkord. Die Kraft von V–I kommt aus Leitton, Tritonus und Quintfall im Bass.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">16.1</span><div><span class="kind">Theorie</span>Welcher Schluss liegt vor? Alle Beispiele in C-Dur: (a) F → C, (b) G7 → C, (c) C → G, (d) G → a-Moll, (e) d-Moll → G.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>(a) Plagalschluss (IV–I). (b) Ganzschluss (V7–I). (c) Halbschluss (I–V). (d) Trugschluss (V–vi). (e) Halbschluss (ii–V). Entscheidend ist immer der letzte Akkord und der Schritt dorthin.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">16.2</span><div><span class="kind">Theorie</span>Schreib die vollständige Kadenz I–IV–V–I in G-Dur, F-Dur und D-Dur auf (Akkordnamen).</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G-Dur: G – C – D – G. F-Dur: F – B – C – F (deutsches B = B♭-Dur mit b, d, f). D-Dur: D – G – A – D. Die IV liegt immer eine Quarte, die V eine Quinte über dem Grundton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">16.3</span><div><span class="kind">Theorie</span>Wie lautet der Trugschluss V7–vi in G-Dur, in F-Dur und in a-Moll (dort V–VI)?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G-Dur: D7 → e-Moll. F-Dur: C7 → d-Moll. a-Moll: E-Dur → F-Dur. In allen Fällen löst sich der Leitton (fis, e bzw. gis) regulär auf, nur der Bass steigt einen Schritt statt zu fallen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">16.4</span><div><span class="kind">Theorie</span>Vollkommen oder unvollkommen? (a) G → C, oben c''. (b) G → C, oben e''. (c) G7 → C mit e im Bass (C/E). (d) G/H → C, oben c''.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>(a) vollkommen. (b) unvollkommen, weil die Terz oben liegt. (c) unvollkommen, weil der Schlussakkord in Umkehrung steht. (d) unvollkommen, weil die Dominante in Umkehrung steht (h im Bass), auch wenn oben der Grundton liegt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">16.5</span><div><span class="kind">Notenlesen</span>Bestimme die vier Schlüsse. Benenne zuerst die Bässe, dann die Akkorde, dann den Schluss.</div></div>
+      <div class="abc" data-bpm="64">
+        X:1
+        M:4/4
+        L:1/2
+        K:C
+        %%score {RH LH}
+        V:RH clef=treble
+        V:LH clef=bass
+        [V:RH] "^1"[CFA] [B,DG] | "^2"[B,FG] [CEG] | "^3"[B,DG] [CEA] | "^4"[CFA] [CEG] |]
+        [V:LH] F,, G,, | G,, C, | G,, A,, | F,, C, |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: F → G, IV–V, Halbschluss. 2: G7 → C, V7–I, Ganzschluss (unvollkommen, oben liegt die Quinte g'). 3: G → a-Moll, V–vi, Trugschluss. 4: F → C, IV–I, Plagalschluss.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">16.6</span><div><span class="kind">Theorie</span>Warum ist die Dominante in a-Moll E-Dur und nicht e-Moll? Welcher Ton macht den Unterschied?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Das gis. Aus der natürlichen Moll-Tonleiter ergäbe sich e-Moll (e, g, h). Dann läge unter dem Grundton a ein Ganzton (g), und es gäbe keinen Leitton. Mit gis entsteht ein Halbtonschritt gis→a, der den Schluss so zwingend macht wie in Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">16.7</span><div><span class="kind">Theorie</span>Schreib den Quartsextvorhalt in G-Dur auf: Welche Töne erklingen über dem Bass, und wie lösen sie sich auf?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Bass d. Darüber zuerst g und h (G-Dur mit d im Bass, also G/D). Dann rückt g zu fis (Quarte → Terz) und h zu a (Sexte → Quinte), sodass D-Dur entsteht. Danach folgt G-Dur. Der Akkord G/D gehört zur Dominante D, weil der Bass d liegen bleibt und g und h nur verzögerte Töne sind.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">16.8</span><div><span class="kind">Am Klavier</span>Spiel I–IV–V7–I in Oktavlage (Grundton oben) in C-Dur, G-Dur und F-Dur. Welche Töne greift die rechte Hand jeweils?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C-Dur: e'g'c'' – f'a'c'' – f'g'h' – e'g'c''. G-Dur: h d' g' – c' e' g' – c' d' fis' – h d' g'. F-Dur: a c' f' – b d' f' – b c' e' – a c' f'. Das Muster ist immer gleich, die Hand verschiebt sich nur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">16.9</span><div><span class="kind">Am Klavier</span>Spiel I–IV–V7–vi–IV–V7–I in C-Dur. Welche Töne der rechten Hand ändern sich zwischen V7–vi und V7–I?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Mit dem Griff h–f'–g' für G7 wird bei V7–I daraus c'–e'–g', bei V7–vi c'–e'–a'. Nur ein Ton ist anders: g' bleibt liegen bzw. steigt nach a'. Leitton und Septime lösen sich in beiden Fällen gleich auf. Der Bass macht den eigentlichen Unterschied (g→c gegenüber g→a).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">16.10</span><div><span class="kind">Gehör</span>Üb mit dem Gehörtrainer, bis du im Modus „Ganz- oder Halbschluss“ zehn Aufgaben hintereinander richtig hast. Wechsel dann zu „Vier Grundschlüsse“.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Halbschluss und Plagalschluss werden am häufigsten verwechselt. Frag dich: Will die Musik nach dem letzten Akkord weitergehen? Dann ist es ein Halbschluss. Beim Trugschluss hilft der Bass: Er steigt am Ende, statt zu fallen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">16.11</span><div><span class="kind">Vertiefung</span>Im Griff h–f' (G7) bildet der Tritonus eine verminderte Quinte, im Griff f–h' eine übermäßige Quarte. Wohin lösen sich die beiden Töne jeweils auf, und welches Intervall entsteht?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>h–f' (verminderte Quinte): h steigt zu c', f' fällt zu e'. Die Töne rücken nach innen und bilden eine große Terz c'–e'. f–h' (übermäßige Quarte): f fällt zu e, h' steigt zu c''. Die Töne rücken nach außen und bilden eine kleine Sexte e–c''. Die Umkehrung des Tritonus löst sich also in die Umkehrung der Terz auf (Abschnitt 5.8).</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(16);
+
+  // Akkordfolgen-Player (kapitelspezifisch). Voicings in C-Dur bzw. c-Moll: Bass + rechte Hand in enger Lage.
+  const CH = {
+    "I":    { r: 0,  q: "",    v: [48, 60, 64, 67] },
+    "ii":   { r: 2,  q: "m",   v: [50, 62, 65, 69] },
+    "iii":  { r: 4,  q: "m",   v: [52, 59, 64, 67] },
+    "IV":   { r: 5,  q: "",    v: [41, 60, 65, 69] },
+    "V":    { r: 7,  q: "",    v: [43, 59, 62, 67] },
+    "V7":   { r: 7,  q: "7",   v: [43, 59, 65, 67] },
+    "vi":   { r: 9,  q: "m",   v: [45, 60, 64, 69] },
+    "vii°": { r: 11, q: "dim", v: [47, 59, 62, 65] },
+    "I64":  { r: 0,  q: "", b: 7, v: [43, 60, 64, 67] },
+    "i":    { r: 0,  q: "m",   v: [48, 60, 63, 67] },
+    "iv":   { r: 5,  q: "m",   v: [41, 60, 65, 68] },
+    "VI":   { r: 8,  q: "",    v: [44, 60, 63, 68] },
+    "VII":  { r: 10, q: "",    v: [46, 58, 62, 65] }
+  };
+  const LABEL = { "I64": "I⁶₄" };
+  const off = (key) => ((((key % 12) + 12) % 12 + 6) % 12) - 6;
+  const voicing = (t, key) => CH[t].v.map((m) => m + off(key));
+  const steps = (toks, key, beats, last) => toks.map((t, i) => [voicing(t, key), i === toks.length - 1 ? last : beats]);
+  const marks = (v) => v.map((m, i) => (i === 0 ? { m, cls: "c2" } : m));
+
+  document.querySelectorAll(".prog").forEach((el) => {
+    const toks = el.dataset.prog.trim().split(/\s+/);
+    el.innerHTML = `<div class="prog-bar"><button class="btn" type="button">${Book.ICON.play}<span>Abspielen</span></button><ol class="prog-chips">` +
+      toks.map((t) => `<li><span class="rn">${LABEL[t] || t}</span></li>`).join("") + `</ol></div><div class="prog-kb"></div>`;
+    const kb = Book.keyboard(el.querySelector(".prog-kb"), { from: 36, to: 77, labels: "c" });
+    const chips = el.querySelectorAll(".prog-chips li");
+    let busy = false;
+    el.querySelector("button").addEventListener("click", () => {
+      if (busy) return;
+      busy = true;
+      const st = steps(toks, +(el.dataset.key || 0), 2, 4);
+      Book.audio.seq(st, +(el.dataset.bpm || 92), (i) => {
+        chips.forEach((c) => c.classList.remove("on"));
+        if (i < 0) { busy = false; kb.mark([]); return; }
+        chips[i].classList.add("on");
+        kb.mark(marks(st[i][0]));
+      });
+    });
+  });
+
+  // Gehörtrainer: Schlussarten
+  const KEYS = [[0, "C-Dur"], [7, "G-Dur"], [5, "F-Dur"], [2, "D-Dur"], [10, "B-Dur"], [9, "A-Dur"], [3, "Es-Dur"]];
+  const CAD = [
+    { id: "ganz", label: "Ganzschluss", toks: "I IV V7 I" },
+    { id: "halb", label: "Halbschluss", toks: "I vi IV V" },
+    { id: "plagal", label: "Plagalschluss", toks: "I vi IV I" },
+    { id: "trug", label: "Trugschluss", toks: "I IV V7 vi" },
+    { id: "qsv", label: "Ganzschluss mit Quartsextvorhalt", toks: "I IV I64 V7 I" }
+  ];
+  Book.earTrainer(document.getElementById("cad-trainer"), {
+    title: "Gehörtrainer: Schlüsse",
+    intro: "Achte vor allem auf die letzten beiden Akkorde. Die Tonart wechselt bei jeder Aufgabe.",
+    items: CAD,
+    presets: [
+      { label: "Ganz- oder Halbschluss", ids: ["ganz", "halb"] },
+      { label: "Vier Grundschlüsse", ids: ["ganz", "halb", "plagal", "trug"] },
+      { label: "Alle mit Quartsextvorhalt", ids: CAD.map((c) => c.id) }
+    ],
+    from: 36, to: 77,
+    build(it) {
+      const [k, kn] = KEYS[Math.floor(Math.random() * KEYS.length)];
+      const toks = it.toks.split(" ");
+      const st = steps(toks, k, 2, 4);
+      return {
+        play: () => Book.audio.seq(st, 96),
+        marks: marks(st[st.length - 1][0]),
+        answer: `${it.label}: ${toks.map((t) => LABEL[t] || t).join("–")} in ${kn}`
+      };
+    }
+  });
+</script>
+</body>
+</html>

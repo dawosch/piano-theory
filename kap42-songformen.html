@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Songformen in Pop und Jazz · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .formplan svg { width: 100%; height: auto; display: block; }
+  .formplan .blk { stroke: var(--surface); stroke-width: 2; }
+  .formplan .I { fill: var(--line); }
+  .formplan .V { fill: var(--accent-soft); }
+  .formplan .P { fill: var(--piano-bg); }
+  .formplan .C { fill: var(--deep-bg); }
+  .formplan .B { fill: var(--piano-line); }
+  .formplan text { fill: var(--ink); font-family: var(--font-display); font-size: 11.5px; font-weight: 600; text-anchor: middle; }
+  .formplan text.n { fill: var(--muted); font-family: var(--font-mono); font-size: 10px; font-weight: 400; }
+
+  .blues { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; margin-block: 1.4rem; }
+  .blues .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.4rem; margin-block: 0.9rem; }
+  .blues .bar { border: 1px solid var(--line); border-radius: 4px; padding: 0.5rem 0.4rem; min-height: 3.6rem; display: flex; flex-direction: column; gap: 0.15rem; }
+  .blues .bar .no { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); }
+  .blues .bar .ch { font-family: var(--font-display); font-weight: 650; font-size: 1rem; }
+  .blues .bar.now { background: var(--accent-soft); border-color: var(--accent); }
+  .blues .bar.alt .ch { color: var(--deep); }
+  .blues .settings { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); }
+  .blues .settings label { display: inline-flex; gap: 0.3rem; align-items: center; cursor: pointer; }
+  @media (max-width: 460px) { .blues .bar .ch { font-size: 0.85rem; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil VI · Kapitel 42</div>
+    <h1>Songformen in Pop und Jazz</h1>
+    <p class="lede">Popsongs, Jazzstandards und Blues folgen wenigen, sehr stabilen Bauplänen. Wenn du sie kennst, kannst du ein Leadsheet auf einen Blick überblicken, Songs schneller auswendig spielen und beim Begleiten jeden Formteil passend gestalten.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die Teile eines Songs benennen und ihre Aufgabe erklären,</li>
+      <li>Strophenlied, Strophe-Refrain-Form und AABA-Form unterscheiden,</li>
+      <li>den 12-Takt-Blues in mehreren Varianten spielen,</li>
+      <li>die Form eines Jazzstandards samt Rhythm Changes lesen,</li>
+      <li>Formteile am Klavier durch Lage, Dichte und Begleitmuster unterscheidbar machen.</li>
+    </ul>
+  </div>
+
+  <!-- 42.1 -->
+  <h2 id="teile">42.1 Die Teile eines Songs</h2>
+  <p>In Pop, Rock und vielen anderen Stilen haben sich feste Namen für die Formteile eingebürgert, meist auf Englisch:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Teil</th><th>Englisch</th><th>Aufgabe</th></tr></thead>
+      <tbody>
+        <tr><td>Intro</td><td>intro</td><td>stellt Tonart, Tempo und Klangwelt vor, oft mit Material aus dem Refrain</td></tr>
+        <tr><td><dfn id="g-strophe">Strophe</dfn></td><td>verse</td><td>erzählt, jede Strophe hat einen neuen Text bei gleicher Musik</td></tr>
+        <tr><td><dfn id="g-pre-chorus">Pre-Chorus</dfn></td><td>pre-chorus, build</td><td>baut Spannung auf und leitet zum Refrain über</td></tr>
+        <tr><td><dfn id="g-refrain-song">Refrain</dfn></td><td>chorus</td><td>Kern des Songs, gleicher Text bei jeder Wiederkehr, enthält meist den Titel</td></tr>
+        <tr><td><dfn id="g-bridge">Bridge</dfn></td><td>bridge, middle eight</td><td>einmaliger Kontrastteil, meist nach dem zweiten Refrain</td></tr>
+        <tr><td>Solo, Zwischenspiel</td><td>solo, instrumental</td><td>Instrumentalteil, oft über die Akkorde der Strophe oder des Refrains</td></tr>
+        <tr><td>Outro</td><td>outro, coda</td><td>Schluss, oft ein wiederholter Refrain, der ausgeblendet wird</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die <dfn id="g-hook">Hook</dfn> ist kein eigener Formteil, sondern die eingängigste Stelle eines Songs, die „hängen bleibt“. Meist steckt sie im Refrain, oft in der Zeile mit dem Titel, manchmal auch in einem Instrumentalriff.</p>
+
+  <!-- 42.2 -->
+  <h2 id="strophenlied">42.2 Das Strophenlied</h2>
+  <p>Die einfachste Songform ist das <dfn id="g-strophenlied">Strophenlied</dfn>: Dieselbe Musik wird mehrmals mit neuem Text gesungen, Form A A A … Die meisten Volks- und Kirchenlieder sind so gebaut, etwa „Der Mond ist aufgegangen“ oder „Stille Nacht“. Auch im Folk ist die Form verbreitet, zum Beispiel in Bob Dylans „The Times They Are A-Changin’“.</p>
+  <p>Die Strophe selbst ist oft eine kleine Liedform aus Kapitel 40, etwa a a b a. Damit das Strophenlied nicht eintönig wird, tragen Text und Vortrag die Entwicklung. Am Klavier bedeutet das: Die Begleitung darf sich von Strophe zu Strophe verändern, auch wenn die Akkorde gleich bleiben.</p>
+
+  <!-- 42.3 -->
+  <h2 id="verse-chorus">42.3 Die Strophe-Refrain-Form</h2>
+  <p>Die meisten Popsongs seit den 1960er-Jahren folgen der <dfn id="g-strophe-refrain">Strophe-Refrain-Form</dfn> (verse-chorus form). Strophen mit wechselndem Text wechseln sich mit einem gleichbleibenden Refrain ab. Ein sehr häufiger Ablauf ist:</p>
+  <figure class="formplan" id="plan-pop"></figure>
+  <p>Die Teile unterscheiden sich nicht nur im Text. Sie haben jeweils typische musikalische Eigenschaften:</p>
+  <ul>
+    <li><strong>Strophe:</strong> eher tiefe Lage der Melodie, viele Töne pro Takt (erzählend), zurückhaltende Begleitung. Harmonisch oft um die Tonika kreisend.</li>
+    <li><strong>Pre-Chorus:</strong> steigende Melodie, dichtere Begleitung, häufig ein Crescendo. Harmonisch meidet er die Tonika und endet oft auf IV oder V, also mit einer offenen Frage (Kapitel 39).</li>
+    <li><strong>Refrain:</strong> höchste Lage, längere Töne, Titelzeile, volle Begleitung. Er beginnt oft auf I oder IV und löst die Spannung des Pre-Chorus.</li>
+    <li><strong>Bridge:</strong> neue Akkorde, oft beginnend auf IV, vi oder einem geliehenen Akkord aus Moll (Kapitel 23). Sie endet meist auf V, um den letzten Refrain vorzubereiten.</li>
+  </ul>
+  <p>Beispiele: „Let It Be“ von den Beatles (Strophe und Refrain, dazu Instrumentalteil), „Smells Like Teen Spirit“ von Nirvana (berühmt für den Wechsel von leiser Strophe und lautem Refrain mit Pre-Chorus dazwischen), „Someone Like You“ von Adele (Strophe, Pre-Chorus, Refrain, Bridge).</p>
+  <p>Ein beliebter Effekt am Ende ist die <strong>Rückung</strong>: Der letzte Refrain wird plötzlich einen Halb- oder Ganzton höher gesungen. Sie erzeugt einen letzten Energieschub (Kapitel 22).</p>
+
+  <section class="layer deep" data-title="Was macht einen Refrain eingängig?">
+    <p>Ein Refrain soll beim ersten Hören wiedererkennbar und beim zehnten Hören immer noch angenehm sein. Mehrere Mechanismen wirken dabei zusammen.</p>
+    <p><strong>Wiederholung auf mehreren Ebenen.</strong> Der Refrain kehrt im Song mehrmals wieder, und innerhalb des Refrains wiederholt sich oft noch einmal eine Zeile oder ein Motiv. So hörst du die Hook in einem Drei-Minuten-Song leicht acht- bis zwölfmal. Der Mere-Exposure-Effekt (Kapitel 40) sorgt dafür, dass sie mit jeder Wiederholung vertrauter wirkt.</p>
+    <p><strong>Kontrast zur Strophe.</strong> Höhere Lage, mehr Lautstärke, längere Notenwerte und eine andere Textdichte markieren den Refrain deutlich als „Ankunft“. Der Pre-Chorus verstärkt das, indem er gezielt Erwartung aufbaut. Nach David Huron entsteht der größte Genuss, wenn eine aufgebaute Erwartung eintrifft.</p>
+    <p><strong>Einfache, aber nicht banale Melodie.</strong> Eine Studie von Jakubowski und Kollegen (2016) untersuchte Songs, die Menschen besonders häufig als „Ohrwurm“ im Kopf hatten. Diese Songs waren im Durchschnitt eher schnell, hatten eine häufige, leicht singbare Gesamtkontur, enthielten aber gleichzeitig ungewöhnliche Intervallsprünge oder Wiederholungen. Vertrautes Muster plus kleine Besonderheit scheint das Erfolgsrezept zu sein.</p>
+    <p><strong>Text.</strong> Der Titel steht meist im Refrain, oft am Anfang oder Ende einer Zeile, und wird dort mehrfach gesungen. Musik und Sprache verstärken sich gegenseitig beim Einprägen.</p>
+  </section>
+
+  <section class="layer piano" data-title="Formteile am Klavier unterscheidbar machen">
+    <p>Wenn du einen Song begleitest, spielst du in Strophe und Refrain oft dieselben Akkorde. Damit die Form trotzdem hörbar wird, verändere je Teil diese vier Stellschrauben:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Stellschraube</th><th>Strophe</th><th>Pre-Chorus</th><th>Refrain</th><th>Bridge</th></tr></thead>
+        <tbody>
+          <tr><td>Lage</td><td>mittel, eng</td><td>steigend</td><td>höher, weiter</td><td>anders als bisher</td></tr>
+          <tr><td>Dichte</td><td>wenige Anschläge, ganze oder halbe Noten</td><td>Achtel, dichter werdend</td><td>volle Achtel- oder Sechzehntelmuster</td><td>neues Muster</td></tr>
+          <tr><td>Linke Hand</td><td>Grundton</td><td>Grundton in Achteln</td><td>Oktaven</td><td>z. B. gebrochene Akkorde</td></tr>
+          <tr><td>Lautstärke</td><td>p–mp</td><td>crescendo</td><td>f</td><td>Kontrast</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Übung:</strong> Nimm die Folge C–G–Am–F (I–V–vi–IV, Kapitel 18). Spiel sie als „Strophe“ mit halben Noten in der rechten Hand um c' herum und Grundtönen links. Dann als „Pre-Chorus“ mit Achteln und leichtem Crescendo. Dann als „Refrain“ eine Oktave höher, links in Oktaven. Du wirst hören, dass dieselben vier Akkorde wie drei verschiedene Formteile klingen.</p>
+    <p><strong>Auswendig spielen:</strong> Schreib dir den Formablauf als Zeile auf einen Zettel oder oben auf das Leadsheet, zum Beispiel „Intro – V – PC – C – V – PC – C – Br – C – C“. Die meisten Fehler beim Begleiten sind keine falschen Akkorde, sondern ein verwechselter Formteil.</p>
+  </section>
+
+  <!-- 42.4 -->
+  <h2 id="aaba">42.4 Die AABA-Form</h2>
+  <p>Die <dfn id="g-aaba">AABA-Form</dfn> ist die klassische Form des amerikanischen Songs der 1920er- bis 1950er-Jahre, des sogenannten Great American Songbook, und damit die Form vieler Jazzstandards. Sie besteht aus vier Teilen zu je acht Takten, zusammen 32 Takte:</p>
+  <figure class="formplan" id="plan-aaba"></figure>
+  <ul>
+    <li><strong>A</strong> (Takt 1–8): das Hauptthema, meist mit Ganzschluss oder offenem Ende.</li>
+    <li><strong>A</strong> (Takt 9–16): Wiederholung mit neuem Text, Schluss oft geschlossener.</li>
+    <li><strong>B</strong> (Takt 17–24): die Bridge, im Jazz auch <em>Release</em> oder <em>Middle Eight</em> genannt. Neue Melodie, meist in einer anderen Tonart oder mit einer Kette von Zwischendominanten, endet auf V.</li>
+    <li><strong>A</strong> (Takt 25–32): Rückkehr des Hauptthemas, meist mit endgültigem Schluss.</li>
+  </ul>
+  <p>Du kennst die Form im Kleinen schon aus der „Ode an die Freude“ (Kapitel 40, a a' b a'). Bekannte Beispiele sind „Over the Rainbow“ und Gershwins „I Got Rhythm“ (im Original mit zwei angehängten Schlusstakten). Auch Popsongs greifen das Prinzip auf, etwa „Yesterday“ von den Beatles. Dort sind die A-Teile allerdings nur sieben Takte lang, und die Bridge kommt zweimal vor.</p>
+  <h4>Form im Jazz: Head und Chorusse</h4>
+  <p>Im Jazz wird ein Standard meist so gespielt: Zuerst erklingt die Melodie einmal komplett, der <dfn id="g-head">Head</dfn>. Dann improvisieren die Musiker nacheinander über die Akkordfolge. Jeder vollständige Durchgang durch die 32 Takte heißt ein <dfn id="g-chorus-jazz">Chorus</dfn>. Am Ende kommt noch einmal der Head. Ein Jazzstück ist also eine Kette von Variationen über eine feste Form (Kapitel 40).</p>
+
+  <h4>Rhythm Changes</h4>
+  <p>Die Akkordfolge von Gershwins „I Got Rhythm“ (1930) wurde so oft für neue Melodien verwendet, dass sie einen eigenen Namen bekam: <dfn id="g-rhythm-changes">Rhythm Changes</dfn>. Bekannte Stücke darauf sind „Anthropology“ von Charlie Parker und „Oleo“ von Sonny Rollins. In B-Dur, der üblichen Tonart, lautet das Gerüst vereinfacht:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Teil</th><th>Akkorde (je Zeile vier Takte)</th><th>Stufen</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td class="mono">| B♭ Gm7 | Cm7 F7 | B♭ Gm7 | Cm7 F7 |<br>| B♭ B♭7 | E♭ E°7 | B♭ F7 | B♭ |</td><td>I–vi–ii–V zweimal, dann I–I7–IV–♯iv°, Schluss</td></tr>
+        <tr><td>B</td><td class="mono">| D7 | D7 | G7 | G7 |<br>| C7 | C7 | F7 | F7 |</td><td>III7–VI7–II7–V7: eine Kette von Dominanten im Quintfall</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die Bridge ist ein Lehrbuchfall für Zwischendominanten (Kapitel 21) und die Quintfallsequenz (Kapitel 26): D7 löst sich nach G7 auf, G7 nach C7, C7 nach F7, und F7 ist die Dominante, die zum B♭ des letzten A-Teils zurückführt.</p>
+
+  <section class="layer deep" data-title="Verse und Chorus: warum die Begriffe verwirren">
+    <p>Wer alte Songbooks aufschlägt, findet „Verse“ und „Chorus“ in einer anderen Bedeutung als im heutigen Pop.</p>
+    <p>Die Songs der Tin Pan Alley, wie man das New Yorker Musikverlagsviertel um 1900 bis 1950 nannte, begannen mit einer meist freien, erzählenden Einleitung, dem <em>Verse</em>. Danach kam der eigentliche Song, der <em>Chorus</em> oder <em>Refrain</em>, fast immer in der 32-taktigen AABA-Form. Der Chorus war der Teil, den jeder kannte, der im Radio lief und der auf Tanzböden mehrfach wiederholt wurde. Viele Sänger und fast alle Jazzmusiker ließen den Verse bald ganz weg.</p>
+    <p>Daher stammt die Jazz-Bedeutung von „Chorus“: ein Durchgang durch die ganze Form. Ein Saxofonist, der „drei Chorusse spielt“, improvisiert dreimal über die 32 Takte.</p>
+    <p>Im Rock und Pop ab den 1960er-Jahren verschob sich die Bedeutung. Jetzt heißen die wechselnden Erzählteile „Verse“ und der wiederkehrende Kehrreim „Chorus“. Und der B-Teil der AABA-Form, im alten System die „Bridge“, wanderte in die Strophe-Refrain-Form als einmaliger Kontrastteil. Wenn du mit Musikern sprichst, lohnt sich deshalb manchmal die Rückfrage, welche Bedeutung gerade gemeint ist.</p>
+  </section>
+
+  <!-- 42.5 -->
+  <h2 id="blues">42.5 Der 12-Takt-Blues</h2>
+  <p>Der <dfn id="g-zwoelftakt-blues">12-Takt-Blues</dfn> ist die wohl einflussreichste Form der populären Musik. Rhythm and Blues, Rock ’n’ Roll, Rock und Jazz haben ihn übernommen. Songs wie „Johnny B. Goode“, „Hound Dog“ oder „Rock Around the Clock“ beruhen auf ihm, ebenso Jazzstücke wie Ellingtons „C Jam Blues“, Monks „Blue Monk“ oder Parkers „Now’s the Time“.</p>
+  <p>Die Grundform besteht aus drei Zeilen zu je vier Takten mit den Akkorden I, IV und V, im Blues meist alle als Septakkorde gespielt:</p>
+  <div class="blues" id="blues-player">
+    <div class="settings" role="radiogroup" aria-label="Variante">
+      <span>Variante:</span>
+      <label><input type="radio" name="bv" id="bv-0" value="0" checked> Grundform</label>
+      <label><input type="radio" name="bv" id="bv-1" value="1"> Quick Change und Turnaround</label>
+      <label><input type="radio" name="bv" id="bv-2" value="2"> Jazz-Blues</label>
+      <label><input type="radio" name="bv" id="bv-3" value="3"> Moll-Blues</label>
+    </div>
+    <div class="grid" id="blues-grid"></div>
+    <div class="btn-row">
+      <button class="btn primary" type="button" id="blues-play">▶ Abspielen</button>
+      <span class="muted" id="blues-note" style="font-size: var(--step--1)"></span>
+    </div>
+  </div>
+  <p>Die wichtigsten Varianten:</p>
+  <ul>
+    <li><strong>Quick Change:</strong> Schon in Takt 2 erklingt kurz die IV, dann geht es zurück zur I.</li>
+    <li><strong>Turnaround:</strong> Takt 12 bringt die V statt der I. Sie führt in den nächsten Durchgang zurück. Ein Blues wird ja selten nur einmal gespielt.</li>
+    <li><strong>Takt 10:</strong> Manche Blues bleiben in Takt 10 auf der V statt zur IV zu gehen.</li>
+    <li><strong>Jazz-Blues:</strong> Jazzmusiker füllen das Gerüst mit II–V-Verbindungen und Zwischendominanten (Kapitel 21 und 28): In Takt 4 führt Gm7–C7 zur IV, in Takt 8 bereitet A7 das Dm7 in Takt 9 vor, und die Takte 11–12 bilden einen Turnaround I–VI–II–V.</li>
+    <li><strong>Moll-Blues:</strong> i und iv als Moll-Septakkorde, in Takt 9 oft ♭VI7 statt V.</li>
+  </ul>
+  <p>Es gibt auch kürzere und längere Bluesformen, etwa den 8-Takt-Blues („Key to the Highway“) und den 16-Takt-Blues. Die zwölftaktige Form ist aber mit großem Abstand die häufigste. Über den Blues improvisiert man oft mit der Blues-Skala aus Kapitel 9.</p>
+
+  <section class="layer deep" data-title="Warum hat der Blues zwölf Takte?">
+    <p>Die Antwort steckt im Text. Eine typische Blues-Strophe besteht aus drei Zeilen nach dem Muster <strong>A A B</strong>: Die erste Zeile stellt eine Situation dar, die zweite wiederholt sie, oft mit kleiner Änderung, die dritte bringt eine Antwort oder Pointe. Jede Zeile bekommt vier Takte, macht zusammen zwölf.</p>
+    <p>Innerhalb jeder Zeile gilt ein zweites Prinzip aus der afroamerikanischen Musiktradition: <strong>Call and Response</strong>. Der Sänger füllt etwa die ersten zwei Takte einer Zeile, die übrigen zwei Takte gehören einem Instrument, das antwortet, etwa einer Gitarre oder einem Klavier. Wenn du einen Blues begleitest, sind das die Takte, in denen du eine kleine Melodie spielen darfst.</p>
+    <p>Die frühen Bluesmusiker hielten sich keineswegs streng an zwölf Takte. Viele Aufnahmen aus den 1920er-Jahren haben Zeilen von unregelmäßiger Länge, weil der Sänger frei dehnte oder kürzte. Die Normierung auf genau zwölf Takte setzte sich durch, als der Blues zur Musik von Bands wurde, in denen mehrere Musiker gleichzeitig wissen mussten, wann der Akkord wechselt.</p>
+    <p>Harmonisch ist der Blues ein Sonderfall. In der klassischen Harmonik ist ein Septakkord auf der I eine Dominante, die zur IV strebt. Im Blues klingt C7 dagegen als stabile Tonika. Die kleine Septime b ist hier keine Spannung, sondern Teil der Bluesfarbe, die auch in der Melodie als „Blue Note“ auftaucht (Kapitel 9). Das ist ein gutes Beispiel dafür, dass Spannung und Ruhe nicht nur von der Akustik, sondern auch vom Stil und von Hörgewohnheiten abhängen.</p>
+  </section>
+
+  <section class="layer piano" data-title="Blues-Begleitung: das Shuffle-Muster der linken Hand">
+    <p>Das bekannteste Begleitmuster für den Blues ist das <strong>Quint-Sext-Pattern</strong> der linken Hand. Du hältst den Grundton fest und spielst darüber in Achteln zweimal die Quinte und zweimal die Sexte:</p>
+    <div class="abc" data-bpm="110" data-caption="Linke Hand, 12-Takt-Blues in C (Grundform). Gerade notiert, aber mit Swing gespielt.">
+      X:1
+      M:4/4
+      L:1/8
+      K:C clef=bass
+      "C7" [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] | [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] | [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] | [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] |
+      "F7" [F,,C,] [F,,C,] [F,,D,] [F,,D,] [F,,C,] [F,,C,] [F,,D,] [F,,D,] | [F,,C,] [F,,C,] [F,,D,] [F,,D,] [F,,C,] [F,,C,] [F,,D,] [F,,D,] | "C7" [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] | [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] |
+      "G7" [G,,D,] [G,,D,] [G,,E,] [G,,E,] [G,,D,] [G,,D,] [G,,E,] [G,,E,] | "F7" [F,,C,] [F,,C,] [F,,D,] [F,,D,] [F,,C,] [F,,C,] [F,,D,] [F,,D,] | "C7" [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] | [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] [C,,G,,] [C,,G,,] [C,,A,,] [C,,A,,] |]
+    </div>
+    <ul>
+      <li><strong>Fingersatz:</strong> 5 auf dem Grundton, 2 auf der Quinte, 1 auf der Sexte. Der kleine Finger bleibt liegen, nur 2 und 1 wechseln. Die Hand bewegt sich kaum.</li>
+      <li><strong>Swing:</strong> Spiel jedes Achtelpaar ungleichmäßig, lang-kurz, ungefähr im Verhältnis 2 : 1, als würdest du „Tschu-ba, tschu-ba“ sagen. Die Notenschrift zeigt gleiche Achtel, gemeint ist der Swing.</li>
+      <li><strong>Rechte Hand:</strong> Beginn mit kurzen Akkorden auf den Zählzeiten 2 und 4, zum Beispiel e'–g'–b' für C7, es'–f'–a' für F7 und f'–g'–h' für G7. Diese Griffe liegen nah beieinander, die Hand muss kaum springen.</li>
+      <li><strong>Mitzählen:</strong> Zähl die Takte laut „eins, zwei, drei, vier“ pro Zeile. Wer die Form im Körper hat, kann später frei darüber improvisieren (Kapitel 49).</li>
+    </ul>
+  </section>
+
+  <!-- 42.6 -->
+  <h2 id="lesen">42.6 Die Form im Leadsheet lesen</h2>
+  <p>Leadsheets (Kapitel 17) schreiben die Form selten vollständig aus. Stattdessen sagen Zeichen und Abkürzungen, wie man durch das Blatt navigiert. Diese Wegbeschreibung heißt im Englischen <em>roadmap</em>.</p>
+  <ul>
+    <li><strong>Buchstaben am Rand</strong> (A, B, Verse, Chorus) markieren die Formteile. In Jazz-Leadsheets stehen oft Studierzeichen wie A1, A2, B, A3.</li>
+    <li><strong>Wiederholungszeichen mit Klammern</strong> sparen den zweiten A-Teil. Die 1. Klammer enthält oft einen Turnaround zurück zum Anfang, die 2. Klammer den Übergang zur Bridge.</li>
+    <li><strong>D.S. al Coda und Coda-Zeichen</strong> steuern den Schluss: zurück zum Segno, dann beim Coda-Zeichen zur Coda springen (Kapitel 40).</li>
+    <li><strong>Angaben wie „2×“ oder „Solos on AABA“</strong> sagen, wie oft ein Teil gespielt wird und über welche Form improvisiert wird.</li>
+  </ul>
+  <p>Bevor du ein neues Leadsheet spielst, geh es einmal ohne Instrument durch und zeichne den Weg mit dem Finger nach. Zähl dabei die Takte jedes Teils. Wenn ein A-Teil statt acht Takten zehn hat, merkst du es dann vorher und nicht mitten im Spiel.</p>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Songteile: Intro, Strophe, Pre-Chorus, Refrain, Bridge, Solo, Outro. Die Hook ist die eingängigste Stelle, meist im Refrain.</li>
+    <li><strong>Strophenlied:</strong> A A A, gleiche Musik, neuer Text.</li>
+    <li><strong>Strophe-Refrain-Form:</strong> Strophen mit wechselndem Text, gleichbleibender Refrain, oft Pre-Chorus und eine Bridge.</li>
+    <li><strong>AABA:</strong> 4 × 8 = 32 Takte, die Form vieler Jazzstandards. Rhythm Changes sind die Akkordfolge von „I Got Rhythm“.</li>
+    <li><strong>12-Takt-Blues:</strong> drei Zeilen zu vier Takten, I–IV–V, Text oft A A B, viele Varianten bis zum Jazz-Blues.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">42.1</span><div><span class="kind">Theorie</span>Ein Song läuft so ab: Intro, Teil mit Text 1, Teil mit Text „Hold on …“, Teil mit Text 2, Teil mit Text „Hold on …“, neuer einmaliger Teil, Teil mit Text „Hold on …“ zweimal. Benenne die Teile und die Form.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Intro – Strophe 1 – Refrain – Strophe 2 – Refrain – Bridge – Refrain – Refrain. Strophe-Refrain-Form mit Bridge. Der Refrain ist an seinem gleichbleibenden Text erkennbar.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">42.2</span><div><span class="kind">Theorie</span>Warum endet ein Pre-Chorus harmonisch oft auf IV oder V und nicht auf I?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der Pre-Chorus soll Spannung aufbauen, die der Refrain löst. Ein Schluss auf der Tonika würde die Spannung vorwegnehmen. IV und besonders V wirken offen und lassen den Beginn des Refrains wie eine Ankunft klingen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">42.3</span><div><span class="kind">Theorie</span>Schreib die Akkorde eines 12-Takt-Blues in G-Dur auf, mit Quick Change und Turnaround.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>| G7 | C7 | G7 | G7 | C7 | C7 | G7 | G7 | D7 | C7 | G7 | D7 |. Quick Change in Takt 2 (C7), Turnaround in Takt 12 (D7).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">42.4</span><div><span class="kind">Theorie</span>Im Jazz-Blues in C stehen C7 in Takt 4 (nach Gm7) und A7 in Takt 8. Welche Funktion haben diese beiden Akkorde?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Beide sind Zwischendominanten. Gm7–C7 ist eine II–V-Verbindung, die zu F7 in Takt 5 führt: C7 ist hier V von IV. A7 ist die Dominante von Dm7 (V von ii) und bereitet Takt 9 vor.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">42.5</span><div><span class="kind">Theorie</span>In einem 32-taktigen AABA-Standard: In welchem Takt beginnt die Bridge, und in welchem Takt beginnt der zweite Chorus eines Solos?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die Bridge beginnt in Takt 17 (nach zweimal acht Takten A). Ein Chorus hat 32 Takte, der zweite Chorus beginnt also in Takt 33 der Improvisation, gezählt ab dem Beginn des Solos.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">42.6</span><div><span class="kind">Theorie</span>Erkläre, warum die Bridge der Rhythm Changes (D7–G7–C7–F7) so zielstrebig zum letzten A-Teil in B-Dur zurückführt.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Jeder Akkord ist die Dominante des nächsten: D7 → G7 → C7 → F7, eine Quintfallsequenz von Dominantseptakkorden. Der letzte, F7, ist die Dominante von B-Dur. Die Kette erzeugt mit jedem Schritt neue Spannung, die erst mit der Rückkehr zur Tonika im letzten A-Teil gelöst wird.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">42.7</span><div><span class="kind">Am Klavier</span>Spiel den 12-Takt-Blues in C mit dem Quint-Sext-Pattern der linken Hand (42.5). Wenn er sicher läuft, ergänze die Akkorde der rechten Hand auf 2 und 4. Wechsle dann zur Variante mit Quick Change.</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Fang langsam an (etwa 70 Schläge pro Minute) und spiel zuerst gerade Achtel. Füge den Swing erst hinzu, wenn die Wechsel C → F → G ohne Nachdenken klappen. Beim Quick Change wechselt die linke Hand schon in Takt 2 nach F und in Takt 3 zurück. Das ist am Anfang ungewohnt, weil die Hand „erwartet“, dass C noch vier Takte bleibt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">42.8</span><div><span class="kind">Am Klavier</span>Spiel die Folge C–G–Am–F nacheinander als Strophe, Pre-Chorus und Refrain, wie im Klavier-Einschub in 42.3 beschrieben. Nimm dich auf und prüf, ob man die drei Teile ohne Gesang unterscheiden kann.</div></div>
+      <details class="solution"><summary>Prüfliste</summary><div>Unterscheiden sich die Teile in Lage, Rhythmusdichte, linker Hand und Lautstärke? Steigt im „Pre-Chorus“ die Spannung hörbar an? Klingt der „Refrain“ wie eine Ankunft? Wenn zwei Teile gleich klingen, verändere mindestens zwei Stellschrauben stärker.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">42.9</span><div><span class="kind">Gehör</span>Wähl einen Song, den du gut kennst. Hör ihn mit einer Uhr und schreib die Formteile mit Startzeit auf. Welche Form hat er? Gibt es einen Pre-Chorus, eine Bridge, eine Rückung?</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Achte auf Textwiederholungen (Refrain), auf Stellen, an denen die Energie ansteigt (Pre-Chorus), und auf einen Teil, der nur einmal vorkommt (Bridge). Eine Rückung erkennst du daran, dass ein bekannter Refrain plötzlich spürbar höher klingt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">42.10</span><div><span class="kind">Vertiefung</span>Erkläre, wie der AAB-Text und das Prinzip Call and Response zusammen zur zwölftaktigen Form führen. Wo hat der Begleiter Raum für eigene Melodien?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Eine Blues-Strophe hat drei Textzeilen (A, A, B), jede Zeile füllt vier Takte: 3 × 4 = 12. Innerhalb jeder Zeile singt der Sänger etwa zwei Takte (Call), die übrigen zwei Takte beantwortet ein Instrument (Response). Der Begleiter hat seinen Raum also jeweils in der zweiten Hälfte jeder Zeile, ungefähr in den Takten 3–4, 7–8 und 11–12.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(42);
+
+  // Formpläne
+  (function () {
+    function plan(id, parts, label, numbers) {
+      const W = 680, L = 2, R = 2, H = numbers ? 70 : 54;
+      const total = parts.reduce((a, p) => a + p.w, 0);
+      let x = L, s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${label}">`;
+      parts.forEach((p) => {
+        const w = (p.w / total) * (W - L - R);
+        s += `<rect class="blk ${p.c}" x="${x}" y="6" width="${w}" height="36" rx="3"/>`;
+        s += `<text x="${x + w / 2}" y="28">${p.t}</text>`;
+        if (p.n) s += `<text class="n" x="${x + w / 2}" y="60">${p.n}</text>`;
+        x += w;
+      });
+      s += "</svg>";
+      document.getElementById(id).innerHTML = s + `<figcaption>${label}</figcaption>`;
+    }
+    plan("plan-pop", [
+      { t: "Intro", w: 0.8, c: "I" }, { t: "Str. 1", w: 1.6, c: "V" }, { t: "PC", w: 0.8, c: "P" }, { t: "Refrain", w: 1.6, c: "C" },
+      { t: "Str. 2", w: 1.6, c: "V" }, { t: "PC", w: 0.8, c: "P" }, { t: "Refrain", w: 1.6, c: "C" },
+      { t: "Bridge", w: 1.2, c: "B" }, { t: "Refrain", w: 1.6, c: "C" }, { t: "Refrain", w: 1.6, c: "C" }, { t: "Outro", w: 0.8, c: "I" }
+    ], "Ein typischer Ablauf der Strophe-Refrain-Form. Str. = Strophe, PC = Pre-Chorus.");
+    plan("plan-aaba", [
+      { t: "A", w: 1, c: "V", n: "T. 1–8" }, { t: "A", w: 1, c: "V", n: "T. 9–16" },
+      { t: "B (Bridge)", w: 1, c: "B", n: "T. 17–24" }, { t: "A", w: 1, c: "V", n: "T. 25–32" }
+    ], "Die 32-taktige AABA-Form.", true);
+  })();
+
+  // Blues-Spieler
+  (function () {
+    const V = {
+      C7: [48, 64, 67, 70], F7: [41, 63, 65, 69], G7: [43, 62, 65, 71], Gm7: [43, 62, 65, 70],
+      "F♯°7": [42, 60, 63, 69], A7: [45, 61, 64, 67], Dm7: [38, 60, 65, 69],
+      Cm7: [48, 63, 67, 70], Fm7: [41, 63, 68, 72], "A♭7": [44, 63, 66, 72]
+    };
+    const FORMS = [
+      { bars: ["C7", "C7", "C7", "C7", "F7", "F7", "C7", "C7", "G7", "F7", "C7", "C7"], alt: [], note: "I I I I | IV IV I I | V IV I I" },
+      { bars: ["C7", "F7", "C7", "C7", "F7", "F7", "C7", "C7", "G7", "F7", "C7", "G7"], alt: [1, 11], note: "Quick Change in Takt 2, Turnaround in Takt 12" },
+      { bars: ["C7", "F7", "C7", "Gm7 C7", "F7", "F♯°7", "C7", "A7", "Dm7", "G7", "C7 A7", "Dm7 G7"], alt: [3, 5, 7, 8, 10, 11], note: "II–V-Verbindungen und Zwischendominanten" },
+      { bars: ["Cm7", "Cm7", "Cm7", "Cm7", "Fm7", "Fm7", "Cm7", "Cm7", "A♭7", "G7", "Cm7", "G7"], alt: [8], note: "i und iv in Moll, ♭VI7 in Takt 9" }
+    ];
+    const grid = document.getElementById("blues-grid");
+    const note = document.getElementById("blues-note");
+    const btn = document.getElementById("blues-play");
+    let form = FORMS[0], playing = false;
+    function draw() {
+      grid.innerHTML = form.bars.map((b, i) =>
+        `<div class="bar${form.alt.includes(i) ? " alt" : ""}" id="bb-${i}"><span class="no">${i + 1}</span><span class="ch">${b}</span></div>`).join("");
+      note.textContent = form.note;
+    }
+    document.querySelectorAll("#blues-player input[name=\"bv\"]").forEach((r) => r.addEventListener("change", () => {
+      if (playing) return;
+      form = FORMS[+r.value]; draw();
+    }));
+    btn.addEventListener("click", () => {
+      if (playing) return;
+      playing = true; btn.disabled = true;
+      const steps = [], barOf = [];
+      form.bars.forEach((b, i) => {
+        const chords = b.split(" ");
+        if (chords.length === 1) { steps.push([V[chords[0]], 2], [V[chords[0]], 2]); barOf.push(i, i); }
+        else { steps.push([V[chords[0]], 2], [V[chords[1]], 2]); barOf.push(i, i); }
+      });
+      steps.push([V[form.bars[0].split(" ")[0]], 4]); barOf.push(0);
+      Book.audio.seq(steps, 112, (i) => {
+        grid.querySelectorAll(".bar").forEach((el) => el.classList.remove("now"));
+        if (i < 0) { playing = false; btn.disabled = false; return; }
+        const el = document.getElementById("bb-" + barOf[i]);
+        if (el) el.classList.add("now");
+      });
+    });
+    draw();
+  })();
+</script>
+</body>
+</html>

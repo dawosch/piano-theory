@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Notenschrift · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .reader .staff { max-width: 14rem; margin: 0.4rem 0; }
+  .reader .staff .paper svg { max-width: 100%; }
+  .reader .feedback { min-height: 1.6em; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil I · Kapitel 2</div>
+    <h1>Notenschrift</h1>
+    <p class="lede">Noten sind eine Landkarte der Tonhöhe auf Papier. Dieses Kapitel zeigt, wie das Notensystem aufgebaut ist, wie man Violin- und Bassschlüssel liest und wie die Noten auf dem Papier zu den Tasten unter deinen Fingern finden.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Noten im Violin- und im Bassschlüssel benennen und auf der Klaviatur finden,</li>
+      <li>Noten mit Hilfslinien lesen und das große System des Klaviers verstehen,</li>
+      <li>Kreuz, b und Auflösungszeichen in Noten richtig anwenden,</li>
+      <li>Oktavierungszeichen und Halsrichtungen deuten,</li>
+      <li>erklären, warum Schlüssel Buchstaben sind und warum die Linien Terzen auseinanderliegen.</li>
+    </ul>
+  </div>
+
+  <!-- 2.1 -->
+  <h2 id="system">2.1 Das Notensystem</h2>
+  <p>Noten werden auf ein <dfn id="g-notensystem">Notensystem</dfn> geschrieben (englisch <em>staff</em> oder <em>stave</em>). Es besteht aus <strong>fünf Linien</strong> und den <strong>vier Zwischenräumen</strong> dazwischen. Linien und Zwischenräume werden von unten nach oben gezählt: Die unterste Linie ist die erste, die oberste die fünfte.</p>
+  <p>Das Prinzip ist einfach: <strong>Je höher eine Note steht, desto höher klingt sie.</strong> Jede Linie und jeder Zwischenraum entspricht einem Stammton. Steigt eine Note von einer Linie in den nächsten Zwischenraum, geht sie einen Stammton höher, also auf der Klaviatur eine weiße Taste nach rechts.</p>
+  <div class="abc" data-bpm="120" data-caption="Von Linie zu Zwischenraum zu Linie: Jeder Schritt ist eine weiße Taste weiter">
+    X:1
+    M:none
+    L:1/4
+    K:C
+    C D E F G A B c |]
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Ein Schritt im Notensystem (Linie → Zwischenraum oder Zwischenraum → Linie) ist ein Schritt zur nächsten weißen Taste. Ob das ein Halbton oder ein Ganzton ist, siehst du am Notenbild nicht. Das musst du von der Klaviatur wissen (Kapitel 1.4).</p>
+  </div>
+  <p>Fünf Linien allein verraten noch nicht, welcher Ton wo steht. Dafür braucht man einen Schlüssel.</p>
+
+  <!-- 2.2 -->
+  <h2 id="violinschluessel">2.2 Der Violinschlüssel</h2>
+  <p>Der <dfn id="g-violinschluessel">Violinschlüssel</dfn> (englisch <em>treble clef</em>) ist ein verschnörkeltes <strong>G</strong>. Seine innere Schnecke umkreist die <strong>zweite Linie</strong> und legt fest: Auf dieser Linie steht das <strong>g'</strong>. Deshalb heißt er auch <dfn id="g-g-schluessel">G-Schlüssel</dfn>. Alle anderen Noten ergeben sich durch Weiterzählen.</p>
+  <div class="abc" data-bpm="100" data-caption="Die Noten auf den Linien (e' g' h' d'' f'') und in den Zwischenräumen (f' a' c'' e'')">
+    X:1
+    M:none
+    L:1/2
+    K:C
+    "^Linien" E G B d f | "^Zwischenräume" F A c e |]
+  </div>
+  <ul>
+    <li><strong>Linien</strong> von unten: e', g', h', d'', f''. Englische Eselsbrücke: <em>Every Good Boy Does Fine</em> (E G B D F).</li>
+    <li><strong>Zwischenräume</strong> von unten: f', a', c'', e''. Englisch ergeben sie das Wort <em>FACE</em>.</li>
+  </ul>
+  <p>Im Klaviersatz spielt die rechte Hand meist die Noten im Violinschlüssel. Er deckt grob den Bereich vom c' bis etwa zum g'' ab, also die Mitte und die rechte Hälfte der Klaviatur.</p>
+
+  <!-- 2.3 -->
+  <h2 id="bassschluessel">2.3 Der Bassschlüssel</h2>
+  <p>Der <dfn id="g-bassschluessel">Bassschlüssel</dfn> (englisch <em>bass clef</em>) ist ein stilisiertes <strong>F</strong>. Er beginnt auf der <strong>vierten Linie</strong>, und seine zwei Punkte rahmen diese Linie ein. Dort steht das <strong>f</strong> (kleines f, unterhalb des mittleren C). Er heißt deshalb auch <dfn id="g-f-schluessel">F-Schlüssel</dfn>.</p>
+  <div class="abc" data-bpm="100" data-caption="Bassschlüssel: Linien (G H d f a) und Zwischenräume (A c e g)">
+    X:1
+    M:none
+    L:1/2
+    K:C clef=bass
+    "^Linien" G,, B,, D, F, A, | "^Zwischenräume" A,, C, E, G, |]
+  </div>
+  <ul>
+    <li><strong>Linien</strong> von unten: G, H, d, f, a. Englisch: <em>Good Boys Do Fine Always</em>.</li>
+    <li><strong>Zwischenräume</strong> von unten: A, c, e, g. Englisch: <em>All Cows Eat Grass</em>.</li>
+  </ul>
+  <p>Die linke Hand spielt meist im Bassschlüssel. Er reicht grob vom großen F bis zum mittleren C.</p>
+  <p>Ein häufiger Anfängerfehler: Im Bassschlüssel liest man aus Gewohnheit die Noten so, als stünde dort ein Violinschlüssel. Die Noten liegen aber um eine Terz verschoben. Auf der untersten Linie steht im Violinschlüssel e', im Bassschlüssel G. Gewöhne dir von Anfang an an, beide Schlüssel als eigene Systeme zu lesen.</p>
+
+  <section class="layer deep" data-title="Warum sind Schlüssel Buchstaben?">
+    <p>Die Schlüssel sind keine Ornamente, sondern stark verschnörkelte Buchstaben. Der Violinschlüssel ist ein G, der Bassschlüssel ein F, und es gibt noch einen dritten, den C-Schlüssel. Sie stammen aus einer Zeit, in der man Tonhöhen mit Buchstaben bezeichnete. Ein Schreiber setzte den Buchstaben des Tons an den Anfang der Linie, auf der dieser Ton stehen sollte.</p>
+    <p>Diese Idee geht auf Guido von Arezzo zurück, den du in Kapitel 1 kennengelernt hast. Er beschrieb um 1025 ein System aus Linien im Terzabstand. Um Sängern die Orientierung zu erleichtern, schlug er vor, die Linie des F rot und die Linie des C gelb zu färben und den Buchstaben davor zu schreiben. Über die Jahrhunderte verschliffen sich die Buchstaben zu den heutigen Formen. Beim Bassschlüssel sind die zwei Punkte die Reste der beiden Querstriche des F.</p>
+    <p>Daraus folgt eine wichtige Einsicht: <strong>Ein Schlüssel ist nur ein Anker.</strong> Er sagt, welcher Ton auf welcher Linie steht. Das Notensystem selbst ist neutral. Deshalb lassen sich Schlüssel verschieben, wie der nächste Abschnitt zeigt.</p>
+  </section>
+
+  <section class="layer deep" data-title="Der C-Schlüssel: ein beweglicher Anker">
+    <p>Neben G und F gibt es den <dfn id="g-c-schluessel">C-Schlüssel</dfn>. Seine Mitte zeigt auf die Linie, auf der das <strong>c'</strong> steht. Steht er auf der dritten Linie, heißt er <strong>Altschlüssel</strong>. Diesen liest die Bratsche. Steht er auf der vierten Linie, heißt er <strong>Tenorschlüssel</strong>. Diesen benutzen Cello, Fagott und Posaune in hoher Lage.</p>
+    <div class="abc" data-bpm="100" data-caption="Dieselben Töne c' d' e' f' im Altschlüssel: Das c' steht hier auf der Mittellinie">
+      X:1
+      M:none
+      L:1/2
+      K:C clef=alto
+      C D E F |]
+    </div>
+    <p>Früher wanderten die Schlüssel häufig. Komponisten wählten für jede Stimme die Schlüssellage, bei der die Melodie möglichst ohne Hilfslinien ins System passte. Für dich am Klavier spielt der C-Schlüssel kaum eine Rolle. Er zeigt aber, dass Violin- und Bassschlüssel nur zwei gebräuchliche Wahlen aus einem allgemeinen Prinzip sind.</p>
+  </section>
+
+  <!-- 2.4 -->
+  <h2 id="hilfslinien">2.4 Hilfslinien</h2>
+  <p>Viele Töne passen nicht in die fünf Linien. Für sie setzt man kurze Zusatzlinien über oder unter das System, sogenannte <dfn id="g-hilfslinie">Hilfslinien</dfn> (englisch <em>ledger lines</em>). Sie funktionieren wie verlängerte Linien: Auch hier wechseln Linie und Zwischenraum einander ab.</p>
+  <div class="abc" data-bpm="110" data-caption="Hilfslinien im Violinschlüssel: unter dem System c' und h, darüber a'' und c'''">
+    X:1
+    M:none
+    L:1/2
+    K:C
+    B, C D | g a b c' |]
+  </div>
+  <p>Die wichtigste Hilfslinie ist die erste unter dem Violinschlüssel. Auf ihr steht das <strong>c'</strong>, das mittlere C. Im Bassschlüssel steht dasselbe c' auf der ersten Hilfslinie <em>über</em> dem System. Es ist ein und derselbe Ton auf derselben Taste.</p>
+  <p>Ab etwa drei Hilfslinien wird das Lesen mühsam. Dann wechselt man entweder den Schlüssel oder benutzt ein Oktavierungszeichen (Abschnitt 2.8).</p>
+
+  <!-- 2.5 -->
+  <h2 id="grosses-system">2.5 Das große System</h2>
+  <p>Klaviermusik wird auf zwei Systemen gleichzeitig notiert: oben im Violinschlüssel, unten im Bassschlüssel. Eine geschweifte Klammer am Anfang verbindet beide zum <dfn id="g-grosses-system">großen System</dfn> (englisch <em>grand staff</em>). Meist spielt die rechte Hand das obere und die linke Hand das untere System. Diese Zuordnung ist aber nicht fest. Manchmal wandern beide Hände in dasselbe System.</p>
+  <p>Zwischen den beiden Systemen liegt genau das <strong>c'</strong>, eine Hilfslinie vom Violin- und eine vom Bassschlüssel entfernt. Die beiden Systeme ergeben zusammen eine durchgehende Leiter von Linien, in der nur die mittlere Linie fehlt.</p>
+  <div class="abc" data-bpm="70" data-caption="Die fünf C von C bis c''' liegen symmetrisch um das c' in der Mitte">
+    X:1
+    M:none
+    L:1
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] x | x | "^c'"C | "^c''"c | "^c'''"c' |]
+    [V:LH] "_C"C,, | "_c"C, | x | x | x |]
+  </div>
+  <p>Diese fünf C eignen sich hervorragend als <strong>Ankernoten</strong>. Sie liegen symmetrisch: das große C auf der zweiten Hilfslinie unter dem Bassschlüssel, das kleine c im zweiten Zwischenraum des Bassschlüssels, das c' in der Mitte, das c'' im dritten Zwischenraum des Violinschlüssels und das c''' auf der zweiten Hilfslinie darüber.</p>
+  <figure>
+    <div class="kb" data-from="36" data-to="84" data-labels="c" data-marks="36:c2 48:c2 60 72:c2 84:c2" aria-label="Die fünf Ankernoten C, c, c', c'', c''' auf der Klaviatur"></div>
+    <figcaption>Dieselben fünf C auf der Klaviatur.</figcaption>
+  </figure>
+
+  <section class="layer deep" data-title="Warum liegen die Linien eine Terz auseinander?">
+    <p>Zwischen zwei benachbarten Linien liegt genau ein Zwischenraum. Von einer Linie zur nächsten sind es also immer zwei Stammtonschritte, eine Terz (Kapitel 5). Dieses Prinzip hat Folgen, die das Lesen sehr erleichtern.</p>
+    <p>Die wichtigsten Akkorde der europäischen Musik sind aus Terzen geschichtet (Kapitel 11). Ein Dreiklang in Grundstellung steht deshalb immer auf drei benachbarten Linien oder in drei benachbarten Zwischenräumen. Er sieht aus wie ein kleiner Schneemann. Ein geübter Leser erkennt diese Form mit einem Blick, ohne die einzelnen Noten zu benennen.</p>
+    <p>Mehr als fünf Linien lassen sich kaum mit einem Blick erfassen. Die Fünfzahl hat sich ab dem späten Mittelalter für die meisten Stimmen durchgesetzt. Der gregorianische Choral wird bis heute auf vier Linien notiert, und für Tasteninstrumente waren lange auch Systeme mit sechs und mehr Linien üblich. Das große System des Klaviers ist im Grunde ein System aus elf Linien, bei dem man die mittlere weglässt und nur bei Bedarf als Hilfslinie für das c' einsetzt. So bleiben beide Hälften für sich überschaubar.</p>
+  </section>
+
+  <section class="layer piano" data-title="Notenlesen mit Ankernoten">
+    <p>Niemand liest flüssig, indem er bei jeder Note von unten durchzählt. Gute Leser kennen einige Ankernoten auswendig und lesen die übrigen als kleinen Abstand zu einem Anker.</p>
+    <ul>
+      <li><strong>Violinschlüssel:</strong> c' (Hilfslinie unten), g' (zweite Linie, Schlüssel), c'' (dritter Zwischenraum), f'' (oberste Linie).</li>
+      <li><strong>Bassschlüssel:</strong> c' (Hilfslinie oben), f (vierte Linie, Schlüssel), c (zweiter Zwischenraum), G (unterste Linie).</li>
+    </ul>
+    <p>Liegt eine Note neben einem Anker, zählst du nur einen oder zwei Schritte. Der Rest geht über Intervalle: Statt jede Note neu zu benennen, liest du „eine Terz höher“ und lässt die Hand springen (Kapitel 5, Abschnitt 5.6).</p>
+    <p><strong>Übung:</strong> Leg die rechte Hand auf c' bis g' und die linke auf c bis g (Fünf-Finger-Lage aus Kapitel 1). Lies eine einfache Melodie und sag vor jedem Ton nur, welcher Finger dran ist. Nach kurzer Zeit verbindet das Auge Notenpositionen direkt mit Fingern.</p>
+    <p>Täglich fünf Minuten mit dem Notenlese-Trainer in Abschnitt 2.9 bringen mehr als eine Stunde pro Woche. Kurze, häufige Wiederholung festigt das Wiedererkennen am besten (Kapitel 47).</p>
+  </section>
+
+  <!-- 2.6 -->
+  <h2 id="vorzeichen">2.6 Vorzeichen in den Noten</h2>
+  <p>Die Zeichen ♯, ♭ und ♮ aus Kapitel 1 stehen in den Noten <strong>vor</strong> der Note, auf derselben Linie oder im selben Zwischenraum. Gesprochen und gedacht werden sie aber nach dem Notennamen: Man schreibt ♯f, sagt aber „fis“. Vor einzelnen Noten heißen sie <dfn id="g-versetzungszeichen">Versetzungszeichen</dfn> (englisch <em>accidentals</em>).</p>
+  <div class="abc" data-bpm="90" data-caption="f', fis', b', h' (aufgelöst) und es''">
+    X:1
+    M:none
+    L:1/2
+    K:C
+    F ^F _B =B _e |]
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Ein Versetzungszeichen gilt bis zum Ende des Takts für alle Noten auf derselben Linie bzw. im selben Zwischenraum. Mit dem Taktstrich verfällt es. Ein ♮ hebt es innerhalb des Takts vorzeitig auf.</p>
+  </div>
+  <div class="abc" data-bpm="100" data-caption="Takt 1: f', fis', fis', g'. Takt 2: f' (Kreuz verfallen), f'', fis'', f'">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    F ^F F G | F f ^f =f |]
+  </div>
+  <p>Streng genommen gilt das Zeichen nur für die Note in genau dieser Höhe. Das f'' im zweiten Takt ist vom Kreuz vor dem f' nicht betroffen. Weil das leicht übersehen wird, setzen viele Verlage in solchen Fällen ein zusätzliches <strong>Warnungsvorzeichen</strong>, oft in Klammern. Es ändert nichts am Ton, sondern erinnert nur.</p>
+  <p>Daneben gibt es <strong>Vorzeichen am Zeilenanfang</strong>, direkt nach dem Schlüssel. Sie gelten für das ganze Stück und in allen Oktaven. Sie legen die Tonart fest und heißen deshalb <em>Tonartvorzeichen</em> oder <em>Generalvorzeichen</em>. Wie sie entstehen und warum sie immer in derselben Reihenfolge stehen, ist Thema von Kapitel 7.</p>
+  <div class="abc" data-bpm="110" data-caption="Mit einem ♯ am Anfang (G-Dur) wird jedes f als fis gespielt, in jeder Oktave">
+    X:1
+    M:none
+    L:1/4
+    K:G
+    G A B c d e f g |]
+  </div>
+
+  <section class="layer deep" data-title="Warum gilt ein Vorzeichen nur bis zum Taktstrich?">
+    <p>Die heutige Regel ist eine Vereinbarung, die sich im 18. und 19. Jahrhundert festigte. In älterer Musik war die Lage weniger eindeutig. Ein Versetzungszeichen galt mal nur für die nächste Note, mal für eine ganze Gruppe gleicher Töne. Manche Erhöhungen schrieb man gar nicht, weil Sänger sie nach festen Gewohnheiten von selbst ausführten.</p>
+    <p>Der Taktstrich ist eine praktische Grenze. Er ist im Notenbild unübersehbar, und ein Takt ist kurz genug, um den Überblick zu behalten. Damit gilt eine einfache Leseregel: Im neuen Takt ist alles wieder so, wie die Tonart es vorgibt. Die Kehrseite: Innerhalb eines Takts musst du dir Vorzeichen merken. Gerade bei schnellen Läufen passiert hier der häufigste Lesefehler, nämlich das zweite fis im selben Takt als f zu spielen.</p>
+  </section>
+
+  <!-- 2.7 -->
+  <h2 id="haelse">2.7 Notenhälse und Lesbarkeit</h2>
+  <p>Viele Noten haben einen senkrechten Strich, den <strong>Hals</strong>. Seine Richtung folgt einer festen Regel, damit die Noten möglichst im System bleiben:</p>
+  <ul>
+    <li>Noten <strong>unterhalb der Mittellinie</strong>: Hals nach oben, rechts am Notenkopf.</li>
+    <li>Noten <strong>auf oder über der Mittellinie</strong>: Hals nach unten, links am Notenkopf.</li>
+  </ul>
+  <div class="abc" data-bpm="110" data-caption="Die Halsrichtung wechselt an der Mittellinie (h')">
+    X:1
+    M:none
+    L:1/4
+    K:C
+    D E F G A B c d e |]
+  </div>
+  <p>Die Halsrichtung sagt nichts über den Klang. Sie hat aber eine Ausnahme mit Bedeutung: Stehen zwei Stimmen in einem System, zeigen die Hälse der oberen Stimme nach oben und die der unteren nach unten, unabhängig von der Lage. So kannst du in Klaviernoten erkennen, dass eine Hand zwei Melodien gleichzeitig spielt. Diese <em>Stimmen</em> sind Thema von Teil V.</p>
+
+  <!-- 2.8 -->
+  <h2 id="oktavierung">2.8 Oktavierungszeichen</h2>
+  <p>Sehr hohe oder sehr tiefe Passagen bräuchten viele Hilfslinien. Stattdessen schreibt man sie eine Oktave tiefer bzw. höher und setzt ein <dfn id="g-oktavierungszeichen">Oktavierungszeichen</dfn> darüber oder darunter:</p>
+  <ul>
+    <li><strong>8va</strong> (<em>all’ottava</em>) über den Noten, mit gestrichelter Linie: eine Oktave <em>höher</em> spielen als notiert.</li>
+    <li><strong>8vb</strong> oder <strong>8va bassa</strong> unter den Noten: eine Oktave <em>tiefer</em> spielen.</li>
+    <li><strong>15ma</strong>: zwei Oktaven höher (selten auch 15mb: zwei Oktaven tiefer).</li>
+    <li><strong>loco</strong> („am Ort“) oder das Ende der gestrichelten Linie: wieder wie notiert spielen.</li>
+  </ul>
+  <p>Achte darauf, wo die gestrichelte Linie endet. Ein häufiger Fehler ist, nach dem Ende der Linie in der hohen Lage weiterzuspielen.</p>
+
+  <section class="layer piano" data-title="Vom Notenbild zur Taste in einer Bewegung">
+    <p>Lesen am Klavier ist mehr als Benennen. Ziel ist, dass das Auge eine Note sieht und die Hand sich bewegt, ohne dass der Name dazwischen bewusst auftaucht. Dahin führen drei Gewohnheiten.</p>
+    <ol>
+      <li><strong>Erst die Hand platzieren, dann lesen.</strong> Schau vor dem Spielen auf die erste Note jeder Hand und auf die Lage, in der das Stück liegt. Leg die Hände dorthin, bevor du anfängst.</li>
+      <li><strong>Augen auf den Noten lassen.</strong> Wer bei jeder Note auf die Tasten schaut, verliert die Stelle im Notentext. Nutz die Orientierung über schwarze Tasten aus Kapitel 1 und schau nur bei großen Sprüngen hinunter.</li>
+      <li><strong>Vorauslesen.</strong> Während du einen Ton spielst, liest du schon den nächsten. Am Anfang ist das ein Ton voraus, später ein ganzer Takt (Kapitel 48).</li>
+    </ol>
+    <p><strong>Übung:</strong> Lies die Melodie aus Übung 2.8 ohne auf die Tasten zu schauen. Spiel sie dreimal und versuch beim dritten Mal, beim Spielen jeder Note schon die nächste im Blick zu haben.</p>
+  </section>
+
+  <!-- 2.9 -->
+  <h2 id="trainer">2.9 Notenlese-Trainer</h2>
+  <p>Der Trainer zeigt eine Note. Tippe die passende Taste in der richtigen Oktave an. Beginn mit dem Violinschlüssel und nimm den Bassschlüssel dazu, sobald du sicher bist.</p>
+
+  <div class="trainer reader" id="reader">
+    <h4>Notenlese-Trainer</h4>
+    <div class="settings">
+      <span>Schlüssel:</span>
+      <label><input type="radio" name="reader-clef" id="reader-clef-t" value="treble" checked> Violinschlüssel</label>
+      <label><input type="radio" name="reader-clef" id="reader-clef-b" value="bass"> Bassschlüssel</label>
+      <label><input type="radio" name="reader-clef" id="reader-clef-m" value="mix"> gemischt</label>
+    </div>
+    <div class="btn-row"><button class="btn primary" type="button" id="reader-new">Neue Note</button></div>
+    <div class="score staff"><div class="paper" id="reader-paper"></div></div>
+    <p class="feedback" id="reader-fb" aria-live="polite">Tippe auf „Neue Note“.</p>
+    <div id="reader-kbd"></div>
+    <p class="score-line" id="reader-score"></p>
+  </div>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Das Notensystem hat fünf Linien und vier Zwischenräume. Jeder Schritt nach oben ist der nächste Stammton.</li>
+    <li>Der Violinschlüssel (G) legt g' auf die zweite Linie, der Bassschlüssel (F) legt f auf die vierte Linie.</li>
+    <li>Das c' steht auf der ersten Hilfslinie unter dem Violin- bzw. über dem Bassschlüssel. Die fünf C von C bis c''' sind gute Ankernoten.</li>
+    <li>Versetzungszeichen gelten bis zum Taktstrich für dieselbe Notenhöhe. Vorzeichen am Zeilenanfang gelten im ganzen Stück und in allen Oktaven.</li>
+    <li>8va heißt eine Oktave höher, 8vb eine Oktave tiefer, loco wieder wie notiert.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">2.1</span><div><span class="kind">Notenlesen</span>Benenne die acht Noten im Violinschlüssel.</div></div>
+      <div class="abc" data-bpm="80">
+        X:1
+        M:none
+        L:1
+        K:C
+        "^1"G | "^2"B | "^3"d | "^4"f | "^5"A | "^6"e | "^7"C | "^8"a |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: g' (Schlüssellinie). 2: h' (Mittellinie). 3: d'' (vierte Linie). 4: f'' (oberste Linie). 5: a' (zweiter Zwischenraum). 6: e'' (oberster Zwischenraum). 7: c' (Hilfslinie unten). 8: a'' (erste Hilfslinie oben).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">2.2</span><div><span class="kind">Notenlesen</span>Benenne die acht Noten im Bassschlüssel.</div></div>
+      <div class="abc" data-bpm="80">
+        X:1
+        M:none
+        L:1
+        K:C clef=bass
+        "^1"G,, | "^2"D, | "^3"F, | "^4"A, | "^5"C, | "^6"E,, | "^7"C | "^8"B,, |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: G (unterste Linie). 2: d (Mittellinie). 3: f (Schlüssellinie). 4: a (oberste Linie). 5: c (zweiter Zwischenraum). 6: E (erste Hilfslinie unten). 7: c' (erste Hilfslinie oben). 8: H (zweite Linie).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">2.3</span><div><span class="kind">Theorie</span>Welche Note steht jeweils auf der Mittellinie des Violin-, des Bass- und des Altschlüssels?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Violinschlüssel: h'. Bassschlüssel: d. Altschlüssel: c'. Der Abstand zwischen h' und d beträgt eine Oktave plus eine Sexte. Deshalb hilft es nicht, Bassnoten aus dem Violinschlüssel „umzurechnen“.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">2.4</span><div><span class="kind">Notenlesen</span>Welche Töne klingen in diesen zwei Takten genau?</div></div>
+      <div class="abc" data-bpm="90">
+        X:1
+        M:4/4
+        L:1/4
+        K:C
+        _B A _B B | c B =B _B |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Takt 1: b', a', b', b' (das ♭ gilt bis zum Taktende). Takt 2: c'', h' (das ♭ ist mit dem Taktstrich verfallen), h' (das ♮ ist hier nur Warnungsvorzeichen), b'.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">2.5</span><div><span class="kind">Notenlesen</span>Lies den Akkord im großen System von unten nach oben und spiel ihn mit beiden Händen.</div></div>
+      <div class="abc" data-bpm="60">
+        X:1
+        M:none
+        L:1
+        K:C
+        %%score {RH LH}
+        V:RH clef=treble
+        V:LH clef=bass
+        [V:RH] [EGc] | [FAc] | [DGB] | [EGc] |]
+        [V:LH] C, | F,, | G,, | C, |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Akkord 1: c (links), e' g' c'' (rechts). Akkord 2: F, f' a' c''. Akkord 3: G, d' g' h'. Akkord 4: c, e' g' c''. Das ist eine der häufigsten Akkordfolgen überhaupt, die Kadenz I–IV–V–I (Kapitel 16). Die rechte Hand bewegt sich dabei kaum.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">2.6</span><div><span class="kind">Theorie</span>Wie viele Hilfslinien braucht a'' im Violinschlüssel? Wie viele das große E im Bassschlüssel? Und das c''' im Violinschlüssel?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>a'': eine Hilfslinie über dem System. E: eine Hilfslinie unter dem System. c''': zwei Hilfslinien darüber (a'' auf der ersten, c''' auf der zweiten).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">2.7</span><div><span class="kind">Theorie</span>Über einer Passage, die mit c'' beginnt, steht „8va“. Welche Taste schlägst du zuerst an? Und welche, wenn darunter „8vb“ steht?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>8va: c''' (eine Oktave höher). 8vb: c' (eine Oktave tiefer). Die notierte Note bleibt c'', das Zeichen verschiebt nur die gespielte Lage.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">2.8</span><div><span class="kind">Am Klavier</span>Lies und spiel diese Melodie mit der rechten Hand in Fünf-Finger-Lage (Daumen auf c'). Woher kennst du sie?</div></div>
+      <div class="abc" data-bpm="100">
+        X:1
+        M:4/4
+        L:1/4
+        K:C
+        E E F G | G F E D | C C D E | E3/2 D/ D2 |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>e' e' f' g' | g' f' e' d' | c' c' d' e' | e' d' d'. Fingersatz: 3 3 4 5 | 5 4 3 2 | 1 1 2 3 | 3 2 2. Das ist der Anfang der „Ode an die Freude“ aus Beethovens 9. Sinfonie. Die Melodie bewegt sich fast nur in Sekundschritten, deshalb bleibt die Hand in einer Lage.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">2.9</span><div><span class="kind">Notenlesen</span>Schreib (oder denk dir) die Note g in drei Lagen: G, g und g''. In welchem Schlüssel und an welcher Stelle steht jede?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G: unterste Linie im Bassschlüssel. g: oberster Zwischenraum im Bassschlüssel. g'': Zwischenraum direkt über der obersten Linie des Violinschlüssels. Zum Vergleich: g' steht auf der zweiten Linie des Violinschlüssels.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">2.10</span><div><span class="kind">Vertiefung</span>Im Altschlüssel steht c' auf der Mittellinie. Welche Noten stehen auf den übrigen vier Linien?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Von unten: f, a, c', e', g'. Jede Linie liegt eine Terz über der vorigen. Der Altschlüssel liegt damit genau zwischen Bass- und Violinschlüssel, was für die mittlere Lage der Bratsche ideal ist.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(2);
+
+  // Notenlese-Trainer
+  (function () {
+    const root = document.getElementById("reader");
+    const paper = document.getElementById("reader-paper");
+    const fb = document.getElementById("reader-fb");
+    const sc = document.getElementById("reader-score");
+    const NAT = [0, 2, 4, 5, 7, 9, 11], LET = ["C", "D", "E", "F", "G", "A", "B"];
+    const whites = (a, b) => { const r = []; for (let m = a; m <= b; m++) if (!Book.isBlack(m)) r.push(m); return r; };
+    const POOL = { treble: whites(60, 81), bass: whites(40, 60) };
+    function toAbc(m) {
+      const L = LET[NAT.indexOf(m % 12)];
+      const sci = Math.floor(m / 12) - 1;
+      if (sci >= 5) return L.toLowerCase() + "'".repeat(sci - 5);
+      return L + ",".repeat(4 - sci);
+    }
+    let cur = null, last = null, tried = false, right = 0, total = 0;
+    const kb = Book.keyboard(document.getElementById("reader-kbd"), {
+      from: 36, to: 84, labels: "c", ariaLabel: "Klaviatur zum Antippen",
+      onKey(m) {
+        if (!cur) return;
+        const ok = m === cur.m;
+        if (!tried) { total++; if (ok) right++; tried = true; }
+        if (ok) { fb.textContent = "Richtig: " + Book.name(m) + "."; kb.mark([{ m, cls: "c2" }]); cur = null; }
+        else if ((m - cur.m) % 12 === 0) fb.textContent = "Richtiger Name, aber falsche Oktave. Du hast " + Book.name(m) + " gespielt.";
+        else fb.textContent = "Das war " + Book.name(m) + ". Versuch es noch einmal.";
+        sc.textContent = `${right} von ${total} beim ersten Versuch richtig`;
+      }
+    });
+    function ask() {
+      if (!window.ABCJS) { fb.textContent = "Die Notenschrift braucht eine Internetverbindung."; return; }
+      let clef = root.querySelector('input[name="reader-clef"]:checked').value;
+      if (clef === "mix") clef = Math.random() < 0.5 ? "treble" : "bass";
+      const pool = POOL[clef];
+      let m;
+      do { m = pool[Math.floor(Math.random() * pool.length)]; } while (m === last && pool.length > 1);
+      last = m; cur = { m }; tried = false;
+      kb.mark([]);
+      window.ABCJS.renderAbc(paper, `X:1\nM:none\nL:1\nK:C clef=${clef}\n${toAbc(m)} |]`, {
+        foregroundColor: "currentColor", staffwidth: 140, paddingleft: 0, paddingright: 0, paddingtop: 4, paddingbottom: 4, scale: 1.2
+      });
+      fb.textContent = "Welche Taste ist das?";
+    }
+    document.getElementById("reader-new").addEventListener("click", ask);
+    root.addEventListener("change", () => { cur = null; paper.innerHTML = ""; kb.mark([]); fb.textContent = "Tippe auf „Neue Note“."; });
+  })();
+</script>
+</body>
+</html>

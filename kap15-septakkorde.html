@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Septakkorde · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .sev td, .sev th { text-align: center; }
+  .sev td:first-child, .sev th:first-child { text-align: left; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil II · Kapitel 15</div>
+    <h1>Septakkorde</h1>
+    <p class="lede">Legt man auf einen Dreiklang eine weitere Terz, entsteht ein Septakkord. Diese Vierklänge geben der Harmonik Farbe und Richtung. Der Dominantseptakkord treibt die Musik mit seinem Tritonus zur Tonika. Der große Septakkord klingt weich und schwebend, typisch für Jazz und Soul.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die fünf wichtigen Septakkordtypen bauen, benennen und als Symbol lesen (C7, Cmaj7, Cm7, Cø7, C°7),</li>
+      <li>die Septakkorde auf allen Stufen einer Durtonart bilden,</li>
+      <li>einen Dominantseptakkord korrekt in die Tonika auflösen und erklären, warum er das „will“,</li>
+      <li>die Umkehrungen eines Septakkords benennen,</li>
+      <li>Septakkorde am Klavier schnell greifen und am Klang unterscheiden.</li>
+    </ul>
+  </div>
+
+  <!-- 15.1 -->
+  <h2 id="vierklang">15.1 Vom Dreiklang zum Vierklang</h2>
+  <p>Ein <dfn id="g-septakkord">Septakkord</dfn> entsteht, wenn man auf einen Dreiklang eine weitere Terz schichtet. Über g–h–d kommt die Terz f dazu: g–h–d–f. Der neue Ton liegt eine Septime über dem Grundton und heißt deshalb <strong>Septime</strong> (englisch <em>seventh</em>). Ein Septakkord besteht also aus Grundton, Terz, Quinte und Septime.</p>
+  <figure>
+    <div class="kb" data-from="55" data-to="72" data-labels="white" data-marks="55::Gt 59:c2:T 62:c3:Q 65:c2:7" aria-label="G-Dur-Septakkord g–h–d'–f' mit Grundton, Terz, Quinte und Septime"></div>
+    <figcaption>Der Septakkord auf g: Grundton g, Terz h, Quinte d', Septime f'. Wieder jede zweite weiße Taste.</figcaption>
+  </figure>
+  <p>Weil die Septime mit dem Grundton eine Dissonanz bildet (Kapitel 5), ist jeder Septakkord dissonant. Das macht ihn lebendiger als einen Dreiklang. In der klassischen Musik verlangt die Septime eine Auflösung. In Jazz, Soul und vielen Popstilen sind Septakkorde dagegen so selbstverständlich, dass sie auch als Ruhepunkt dienen können.</p>
+
+  <!-- 15.2 -->
+  <h2 id="typen">15.2 Die fünf wichtigen Typen</h2>
+  <p>Ein Septakkord ergibt sich aus einem Dreiklangstyp und einer Septime (groß, klein oder vermindert). Von den möglichen Kombinationen sind fünf in der Praxis wichtig:</p>
+  <div class="table-scroll">
+    <table class="sev">
+      <thead><tr><th>Name</th><th>Dreiklang</th><th>Septime</th><th>Terzen</th><th>auf c</th><th>Symbol</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 64 67 70" data-mode="both"><td><dfn id="g-dominantseptakkord">Dominantseptakkord</dfn></td><td>Dur</td><td>klein</td><td>g – k – k</td><td>c–e–g–b</td><td>C7</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 64 67 71" data-mode="both"><td><dfn id="g-grosser-septakkord">großer Septakkord</dfn> (Major-Sept)</td><td>Dur</td><td>groß</td><td>g – k – g</td><td>c–e–g–h</td><td>Cmaj7, CΔ7</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 67 70" data-mode="both"><td><dfn id="g-mollseptakkord">Mollseptakkord</dfn></td><td>Moll</td><td>klein</td><td>k – g – k</td><td>c–es–g–b</td><td>Cm7, C–7</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 66 70" data-mode="both"><td><dfn id="g-halbvermindert">halbverminderter Septakkord</dfn></td><td>vermindert</td><td>klein</td><td>k – k – g</td><td>c–es–ges–b</td><td>Cø7, Cm7♭5</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 66 69" data-mode="both"><td><dfn id="g-verminderter-septakkord">verminderter Septakkord</dfn></td><td>vermindert</td><td>vermindert</td><td>k – k – k</td><td>c–es–ges–heses</td><td>C°7, Cdim7</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="muted">Terzen: g = große Terz, k = kleine Terz, von unten nach oben.</p>
+  <div class="abc" data-bpm="60" data-caption="Die fünf Typen auf c': C7, Cmaj7, Cm7, Cø7, C°7">
+    X:1
+    M:none
+    L:1
+    K:C
+    "^C7" [CEG_B] | "^Cmaj7" [CEGB] | "^Cm7" [C_EG_B] | "^Cø7" [C_E_G_B] | "^C°7" [C_E_G__B] |]
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Das Symbol „7“ allein bedeutet immer die <strong>kleine</strong> Septime. C7 ist c–e–g–b. Für die große Septime schreibt man <strong>maj7</strong> (von <em>major seventh</em>): Cmaj7 ist c–e–g–h. Das „m“ in Cm7 bezieht sich auf den Dreiklang (Moll), nicht auf die Septime.</p>
+  </div>
+  <p>Zu den Namen: Der Dominantseptakkord heißt so, weil er in Dur nur auf der Dominante vorkommt (Abschnitt 15.3). Klingt er aber auf einer anderen Stufe, heißt er trotzdem so. Der halbverminderte Septakkord ist „halb“ vermindert, weil nur der Dreiklang vermindert ist, die Septime aber klein. Beim verminderten Septakkord ist auch die Septime vermindert: c–heses. Auf dem Klavier ist heses die Taste a. Geschrieben wird heses, weil die Septime über c ein h-Name sein muss.</p>
+  <p>Seltener sind der Moll-Major-Septakkord (c–es–g–h, CmMaj7) und der übermäßige große Septakkord (c–e–gis–h, Cmaj7♯5). Sie kommen vor allem im Jazz vor. Ihre Symbole stehen in Kapitel 17, ihre Verwendung als Klangfarbe und die passenden Skalen in Kapitel 30.</p>
+
+  <section class="layer piano" data-title="Ein Finger, fünf Akkorde">
+    <p>Die fünf Typen lassen sich als Kette spielen, bei der jedes Mal nur ein einziger Ton einen Halbton nach unten rutscht:</p>
+    <div class="table-scroll">
+      <table class="sev">
+        <thead><tr><th>Schritt</th><th>Akkord</th><th>Töne</th><th>was sich ändert</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Cmaj7</td><td>c–e–g–h</td><td></td></tr>
+          <tr><td>2</td><td>C7</td><td>c–e–g–b</td><td>Septime h → b</td></tr>
+          <tr><td>3</td><td>Cm7</td><td>c–es–g–b</td><td>Terz e → es</td></tr>
+          <tr><td>4</td><td>Cø7</td><td>c–es–ges–b</td><td>Quinte g → ges</td></tr>
+          <tr><td>5</td><td>C°7</td><td>c–es–ges–heses</td><td>Septime b → heses (a)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="btn-row">
+      <button class="btn" type="button" id="chain-demo">▶ Die Kette auf c'</button>
+    </div>
+    <p><strong>Griff:</strong> Septakkorde in Grundstellung greifst du rechts mit 1–2–3–5, links mit 5–3–2–1. In der Praxis spielt man selten alle vier Töne in einer Hand. Üblich ist: links der Grundton, rechts Terz, Quinte und Septime. Oder noch sparsamer: links der Grundton, rechts nur Terz und Septime. Diese beiden Töne bestimmen den Typ, die Quinte ist am wenigsten wichtig (Kapitel 29 nennt solche Griffe Shell-Voicings).</p>
+    <p><strong>Übung:</strong> Spiel die Kette auf c', f' und g'. Danach rückwärts (C°7 → Cmaj7). Sag bei jedem Akkord laut das Symbol.</p>
+  </section>
+
+  <!-- 15.3 -->
+  <h2 id="stufen">15.3 Septakkorde auf den Stufen</h2>
+  <p>Baut man auf jeder Stufe der Dur-Tonleiter einen Vierklang aus leitereigenen Tönen, erhält man in jeder Durtonart dasselbe Muster:</p>
+  <div class="table-scroll">
+    <table class="sev">
+      <thead><tr><th>Stufe</th><th>Imaj7</th><th>ii7</th><th>iii7</th><th>IVmaj7</th><th>V7</th><th>vi7</th><th>viiø7</th></tr></thead>
+      <tbody>
+        <tr><td>Typ</td><td>maj7</td><td>m7</td><td>m7</td><td>maj7</td><td>7</td><td>m7</td><td>ø7</td></tr>
+        <tr><td>C-Dur</td><td>Cmaj7</td><td>Dm7</td><td>Em7</td><td>Fmaj7</td><td>G7</td><td>Am7</td><td>Hø7</td></tr>
+        <tr><td>G-Dur</td><td>Gmaj7</td><td>Am7</td><td>Hm7</td><td>Cmaj7</td><td>D7</td><td>Em7</td><td>Fisø7</td></tr>
+        <tr><td>F-Dur</td><td>Fmaj7</td><td>Gm7</td><td>Am7</td><td>Bmaj7</td><td>C7</td><td>Dm7</td><td>Eø7</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="abc" data-bpm="70" data-caption="Die leitereigenen Septakkorde von C-Dur">
+    X:1
+    M:none
+    L:1
+    K:C
+    "^Cmaj7""_I"[CEGB] | "^Dm7""_ii"[DFAc] | "^Em7""_iii"[EGBd] | "^Fmaj7""_IV"[FAce] | "^G7""_V"[GBdf] | "^Am7""_vi"[Aceg] | "^Hø7""_vii"[Bdfa] |]
+  </div>
+  <p>Zwei Beobachtungen sind wichtig:</p>
+  <ul>
+    <li>Der Dominantseptakkord kommt in Dur <strong>nur auf der V. Stufe</strong> vor. Hörst du einen Dominantseptakkord, weißt du deshalb sofort, wo die Tonika liegt: eine Quinte tiefer.</li>
+    <li>Der verminderte Septakkord kommt in Dur gar nicht leitereigen vor. Er entsteht in Moll auf der VII. Stufe, wenn man den Leitton einführt (harmonisches Moll, Kapitel 20).</li>
+  </ul>
+  <p>Im natürlichen Moll ergeben sich dieselben Vierklänge wie in der parallelen Durtonart, nur auf anderen Stufen. In a-Moll: Am7 (i), Hø7 (ii), Cmaj7 (III), Dm7 (iv), Em7 (v), Fmaj7 (VI), G7 (VII).</p>
+
+  <section class="layer deep" data-title="Warum es nur einen Dominantseptakkord pro Tonart gibt">
+    <p>Ein Dominantseptakkord braucht drei Dinge: eine große Terz, eine reine Quinte und eine kleine Septime über dem Grundton. Zwischen Terz und Septime liegt dann immer ein Tritonus (beim G7: h–f).</p>
+    <p>Die Dur-Tonleiter enthält aber nur einen einzigen Tritonus, zwischen der 7. und der 4. Stufe (h und f in C-Dur). Ein Dominantseptakkord muss diesen Tritonus als Terz und Septime enthalten. Damit ist sein Grundton festgelegt: eine große Terz unter h, also g. Es gibt keine andere Möglichkeit.</p>
+    <p>Daraus folgt eine wichtige Eigenschaft: Der Dominantseptakkord ist der Akkord, der eine Tonart am eindeutigsten anzeigt. G7 gehört leitereigen nur zu C-Dur und, mit dem Leitton aus harmonischem Moll, zu c-Moll. Ein einzelner C-Dur-Dreiklang könnte dagegen zu C-Dur, G-Dur, F-Dur, a-Moll, e-Moll und weiteren Tonarten gehören. Deshalb nutzen Komponisten den Dominantseptakkord, um eine Tonart zu bestätigen oder eine neue einzuführen (Kapitel 21 und 22).</p>
+  </section>
+
+  <!-- 15.4 -->
+  <h2 id="aufloesung">15.4 Der Dominantseptakkord und seine Auflösung</h2>
+  <p>In Kapitel 14 hast du gesehen, dass die Dominante zur Tonika zieht. Mit der Septime wird dieser Zug noch stärker. Im G7 (g–h–d–f) stecken zwei Töne, die einen Halbton neben einem Ton der Tonika liegen:</p>
+  <ul>
+    <li>Der <strong>Leitton h</strong> geht einen Halbton <em>aufwärts</em> zu c.</li>
+    <li>Die <strong>Septime f</strong> geht einen Halbton <em>abwärts</em> zu e.</li>
+  </ul>
+  <p>Zusammen bilden h und f einen Tritonus. Bei der Auflösung bewegen sich beide Töne in Gegenrichtung, jeweils um einen Halbton. Aus dem unruhigen Tritonus wird eine ruhige Terz oder Sexte. In Kapitel 5 wurde angekündigt, dass der Tritonus hier „der Motor“ ist. Das ist gemeint: Der Tritonus ist die Kraft, die den Dominantseptakkord in die Tonika treibt.</p>
+  <div class="abc" data-bpm="56" data-caption="G7 → C: h geht zu c, f geht zu e, der Bass fällt von g nach c">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "^G7"[B,FG]4 | "^C"[CEG]4 | "^G7"[DFB]4 | "^C"[CEc]4 |]
+    [V:LH] G,,4 | C,4 | G,,4 | C,4 |]
+  </div>
+  <figure>
+    <div class="kb" data-from="59" data-to="72" data-labels="white" data-marks="59:c3:h 60::c 64::e 65:c3:f" aria-label="Der Tritonus h–f löst sich in c–e auf"></div>
+    <figcaption>Die Auflösung des Tritonus: h (orange) geht einen Halbton hoch zu c, f (orange) einen Halbton runter zu e.</figcaption>
+  </figure>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Im Dominantseptakkord geht der <strong>Leitton aufwärts</strong> zum Grundton der Tonika und die <strong>Septime abwärts</strong> zur Terz der Tonika. Der Bass fällt eine Quinte (oder steigt eine Quarte).</p>
+  </div>
+  <p>Die Abwärtsauflösung der Septime ist eine der ältesten Regeln der Harmonielehre. Eine Septime, die nach oben springt, klingt „falsch“, weil die Erwartung des Ohrs enttäuscht wird. In Jazz und Pop wird die Regel freier gehandhabt, aber in der Oberstimme gilt sie fast immer.</p>
+
+  <section class="layer deep" data-title="Warum der Tritonus nach Auflösung drängt">
+    <p>Der Tritonus hat drei Eigenschaften, die ihn zum stärksten Spannungsintervall der tonalen Musik machen.</p>
+    <p><strong>1. Er hat kein einfaches Verhältnis.</strong> Die gängigen „reinen“ Werte sind 45:32 oder 7:5. Beide sind komplizierter als die Verhältnisse der Konsonanzen, und die Obertöne der beiden Töne fallen kaum zusammen (Kapitel 5, Abschnitt 5.10).</p>
+    <p><strong>2. Beide Töne sind Strebetöne.</strong> h liegt einen Halbton unter c, f einen Halbton über e. Beide Zieltöne gehören zur Tonika. Der Tritonus enthält also zwei Leittöne in entgegengesetzter Richtung. Bei der Auflösung bewegen sie sich gleichzeitig nach innen (h–f wird zu c–e) oder nach außen (f–h wird zu e–c'). Diese Gegenbewegung wirkt wie ein Einrasten.</p>
+    <p><strong>3. Er ist symmetrisch.</strong> Der Tritonus teilt die Oktave in zwei gleiche Hälften. h–f und f–h (= f–ces) sind auf dem Klavier dasselbe Intervall. Deshalb gehört derselbe Tritonus zu zwei Dominantseptakkorden: G7 (g–h–d–f) und Des7 (des–f–as–ces, mit ces = h). Beide können sich nach C auflösen. Diese Mehrdeutigkeit ist die Grundlage der Tritonussubstitution im Jazz (Kapitel 31).</p>
+    <div class="btn-row">
+      <button class="btn" type="button" id="tt-demo">▶ G7 → C und D♭7 → C im Vergleich</button>
+    </div>
+    <p><strong>Geschichte:</strong> Lange musste jede Dissonanz vorbereitet werden: Der dissonante Ton musste vorher schon als Konsonanz erklungen sein. Um 1600 begannen Komponisten wie Claudio Monteverdi, Septimen frei einzusetzen. Der Theoretiker Giovanni Maria Artusi kritisierte das im Jahr 1600 scharf als Regelverstoß. Monteverdi verteidigte seine „zweite Praxis“, in der der Textausdruck die Dissonanz rechtfertigt. Im Lauf des 17. Jahrhunderts wurde der Dominantseptakkord dann zum Normalfall.</p>
+  </section>
+
+  <section class="layer deep" data-title="Die Naturseptime: der Septakkord in der Obertonreihe">
+    <p>Der 7. Teilton liegt nahe an der kleinen Septime über dem Grundton, allerdings etwas tiefer als auf dem Klavier (Kapitel 5). Die Teiltöne 4, 5, 6 und 7 eines Tons bilden deshalb fast einen Dominantseptakkord. Über einem tiefen G (49 Hz) sind das:</p>
+    <div class="formula">4 : 5 : 6 : 7 &nbsp;→&nbsp; 196 Hz (g) : 245 Hz (h) : 294 Hz (d') : 343 Hz (f')</div>
+    <p>Die Septime 7:4 hat rund 969 Cent, die Klavierseptime 1000 Cent. Die Differenz von etwa 31 Cent ist deutlich hörbar. Der Akkord 4:5:6:7 klingt dafür ungewöhnlich glatt, fast ohne Schwebungen. Barbershop-Sänger intonieren ihre Dominantseptakkorde gezielt so tief, weil sie dann besonders verschmelzen.</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-tone="196 245 294 343" data-partials="6" data-dur="4">▶ Naturseptakkord 4:5:6:7</button>
+      <button class="btn" type="button" data-tone="196 246.94 293.66 349.23" data-partials="6" data-dur="4">▶ G7 auf dem Klavier</button>
+    </div>
+    <p>Daraus folgt eine interessante Unterscheidung. Der Dominantseptakkord ist der einzige Septakkord, der sich als Ausschnitt aus der Obertonreihe deuten lässt. Das erklärt, warum er trotz seiner Dissonanz so natürlich und „vollständig“ klingt. Die anderen Septakkordtypen kommen in der Obertonreihe nur mit viel höheren Teiltönen vor.</p>
+  </section>
+
+  <!-- 15.5 -->
+  <h2 id="umkehrungen">15.5 Umkehrungen von Septakkorden</h2>
+  <p>Ein Vierklang hat vier Stellungen. Die Namen stammen wieder aus der Generalbass-Bezifferung (Kapitel 12) und beschreiben die wichtigsten Intervalle über dem Bass:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Stellung</th><th>im Bass</th><th>G7</th><th>Name</th><th>Bezifferung</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="43 59 62 65" data-mode="harm"><td>Grundstellung</td><td>Grundton</td><td>g–h–d–f</td><td><dfn id="g-septakkord-grundstellung">Septakkord</dfn></td><td>7</td><td>▶</td></tr>
+        <tr class="play-row" data-play="47 62 65 67" data-mode="harm"><td>1. Umkehrung</td><td>Terz</td><td>h–d–f–g</td><td><dfn id="g-quintsextakkord">Quintsextakkord</dfn></td><td>6/5</td><td>▶</td></tr>
+        <tr class="play-row" data-play="50 65 67 71" data-mode="harm"><td>2. Umkehrung</td><td>Quinte</td><td>d–f–g–h</td><td><dfn id="g-terzquartakkord">Terzquartakkord</dfn></td><td>4/3</td><td>▶</td></tr>
+        <tr class="play-row" data-play="53 67 71 74" data-mode="harm"><td>3. Umkehrung</td><td>Septime</td><td>f–g–h–d</td><td><dfn id="g-sekundakkord">Sekundakkord</dfn></td><td>2</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="abc" data-bpm="60" data-caption="G7 in Grundstellung und in den drei Umkehrungen">
+    X:1
+    M:none
+    L:1
+    K:C
+    "^7" [G,B,DF] | "^6/5" [B,DFG] | "^4/3" [DFGB] | "^2" [FGBd] |]
+  </div>
+  <p>Beim Quintsextakkord h–d–f–g liegen über dem Bass h eine Quinte (f) und eine Sexte (g). Beim Terzquartakkord d–f–g–h eine Terz (f) und eine Quarte (g). Beim Sekundakkord f–g–h–d eine Sekunde (g). Die übrigen Intervalle lässt man in der Bezifferung weg.</p>
+  <p>Auch in der Umkehrung gelten die Auflösungsregeln. Besonders wichtig ist der <strong>Sekundakkord</strong>: Hier liegt die Septime im Bass, und sie muss abwärts gehen. G7 mit f im Bass löst sich deshalb nach C/E auf, also in einen Sextakkord der Tonika.</p>
+
+  <!-- 15.6 -->
+  <h2 id="vermindert">15.6 Der verminderte Septakkord</h2>
+  <p>Der verminderte Septakkord besteht aus drei kleinen Terzen. Legt man noch eine kleine Terz darauf, ist man wieder beim Ausgangston: c–es–ges–heses–(deses = c). Der Akkord teilt die Oktave in <strong>vier gleiche Teile</strong> zu je drei Halbtönen.</p>
+  <figure>
+    <div class="kb" data-from="59" data-to="83" data-labels="none" data-marks="59::h 62::d 65::f 68::as 71:c2:h 74:c2:d 77:c2:f 80:c2:as" aria-label="Der verminderte Septakkord h–d–f–as wiederholt sich alle drei Halbtöne"></div>
+    <figcaption>h–d–f–as: lauter kleine Terzen. Jede Umkehrung sieht auf dem Klavier gleich aus.</figcaption>
+  </figure>
+  <p>Wegen dieser Symmetrie klingen alle Umkehrungen gleich, und jeder der vier Töne kann der Grundton sein. Erst die Schreibweise und die Auflösung legen fest, welcher Ton gemeint ist. Seine häufigste Rolle: In Moll steht er auf der VII. Stufe (vii°7) und enthält den Leitton. h–d–f–as ist vii°7 von c-Moll und löst sich nach c-Moll (oder C-Dur) auf. Man kann ihn auch als Dominantseptakkord G7 mit einer kleinen None as anstelle des Grundtons g verstehen.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" id="dim-demo">▶ H°7 → c-Moll</button>
+  </div>
+
+  <section class="layer deep" data-title="Drei verminderte Septakkorde für alle zwölf Tonarten">
+    <p>Weil der verminderte Septakkord nach drei Halbtönen wieder dieselben Tasten benutzt, gibt es auf dem Klavier nur <strong>drei</strong> verschiedene: einen mit c, einen mit cis und einen mit d. Alle anderen sind enharmonische Umdeutungen davon.</p>
+    <p>Dafür kann jeder verminderte Septakkord in vier Tonarten als vii°7 dienen, je nachdem, welcher Ton als Leitton gedeutet wird. Die Tasten h–d–f–as zum Beispiel:</p>
+    <ul>
+      <li>als <strong>h</strong>–d–f–as: Leitton h, Auflösung nach c-Moll,</li>
+      <li>als <strong>d</strong>–f–as–ces: Leitton d, Auflösung nach es-Moll,</li>
+      <li>als <strong>f</strong>–as–ces–eses: Leitton f, Auflösung nach ges-Moll (= fis-Moll),</li>
+      <li>als <strong>gis</strong>–h–d–f: Leitton gis, Auflösung nach a-Moll.</li>
+    </ul>
+    <p>Ein einziger Akkord öffnet also Türen in vier Tonarten, die im Quintenzirkel weit auseinanderliegen. Komponisten der Romantik haben diese Eigenschaft ausgiebig genutzt, um überraschend in entfernte Tonarten zu modulieren (Kapitel 25). In Stummfilmen war der verminderte Septakkord das Standardmittel für Gefahr und Schrecken, weil er so wenig Halt bietet.</p>
+  </section>
+
+  <!-- 15.7 -->
+  <h2 id="praxis">15.7 Septakkorde in Pop und Jazz</h2>
+  <p>Jeder Septakkordtyp hat eine typische Klangwirkung, die in verschiedenen Stilen genutzt wird:</p>
+  <ul>
+    <li><strong>maj7</strong> klingt weich, warm, leicht träumerisch. Typisch für Bossa Nova, Soul und Balladen. Imaj7 und IVmaj7 können ein Stück auch beenden.</li>
+    <li><strong>m7</strong> klingt weich und offen, weniger dunkel als ein reiner Molldreiklang. Grundklang vieler Funk- und Soul-Grooves.</li>
+    <li><strong>7</strong> klingt nach Bewegung. Im Blues stehen alle drei Hauptakkorde als Dominantseptakkorde (I7, IV7, V7), ohne dass sie sich auflösen müssen. Daher kommt der typisch „bluesige“ Klang.</li>
+    <li><strong>ø7</strong> ist im Jazz der Standardakkord auf der ii. Stufe in Moll (Kapitel 28).</li>
+    <li><strong>°7</strong> dient als Durchgang zwischen zwei Akkorden, etwa C – C♯°7 – Dm7.</li>
+  </ul>
+  <div class="btn-row">
+    <button class="btn" type="button" id="maj7-demo">▶ Cmaj7 – Fmaj7 (weich)</button>
+    <button class="btn" type="button" id="blues-demo">▶ C7 – F7 – C7 – G7 (Blues)</button>
+    <button class="btn" type="button" id="pass-demo">▶ C – C♯°7 – Dm7 – G7 – C</button>
+  </div>
+
+  <section class="layer piano" data-title="G7 → C mit kurzen Wegen">
+    <p>Die Auflösung des Dominantseptakkords ist die wichtigste Akkordverbindung, die du am Klavier üben kannst. Zwei bewährte Griffe für die rechte Hand, während die linke Hand G und dann C spielt:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Griff</th><th>G7 (rechts)</th><th>C (rechts)</th><th>Bewegung</th></tr></thead>
+        <tbody>
+          <tr class="play-row" data-play="59 65 67" data-mode="harm"><td>A</td><td>h–f'–g'</td><td>c'–e'–g'</td><td>h → c', f' → e', g' bleibt</td></tr>
+          <tr class="play-row" data-play="62 65 71" data-mode="harm"><td>B</td><td>d'–f'–h'</td><td>c'–e'–c''</td><td>d' → c', f' → e', h' → c''</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>In beiden Griffen lösen sich Leitton und Septime vorschriftsmäßig auf. Griff A lässt die Quinte d weg, Griff B den Grundton (den spielt ja die linke Hand). Das ist typisch: In der Praxis fehlt beim Dominantseptakkord oft ein Ton, aber nie die Terz und die Septime.</p>
+    <p><strong>Übung:</strong> Spiel beide Griffe in C-Dur (G7 → C), F-Dur (C7 → F) und G-Dur (D7 → G). In F-Dur heißt Griff A e–b–c' → f–a–c'. In G-Dur fis–c'–d' → g–h–d'.</p>
+  </section>
+
+  <!-- 15.8 -->
+  <h2 id="hoeren">15.8 Septakkorde hören</h2>
+  <p>Hörhilfen für die fünf Typen:</p>
+  <ul>
+    <li><strong>maj7:</strong> hell und weich, mit einer leichten Reibung zwischen Grundton und großer Septime (Halbton unter der Oktave).</li>
+    <li><strong>7:</strong> hell, aber mit einem Drang weiterzugehen.</li>
+    <li><strong>m7:</strong> dunkler, weich und ruhig.</li>
+    <li><strong>ø7:</strong> dunkel und etwas düster, aber nicht so scharf wie °7.</li>
+    <li><strong>°7:</strong> gespannt, dramatisch, ohne klaren Grundton.</li>
+  </ul>
+  <div class="seventh-trainer"></div>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Ein Septakkord ist ein Dreiklang plus Septime. Die fünf wichtigen Typen: Dominantsept (7), großer Sept (maj7), Mollsept (m7), halbvermindert (ø7), vermindert (°7).</li>
+    <li>„7“ bedeutet kleine Septime, „maj7“ große Septime.</li>
+    <li>Leitereigen in Dur: Imaj7, ii7, iii7, IVmaj7, V7, vi7, viiø7. Der Dominantseptakkord kommt nur auf der V. Stufe vor und zeigt die Tonart eindeutig an.</li>
+    <li>Auflösung V7 → I: Leitton aufwärts, Septime abwärts. Der Tritonus zwischen beiden ist der Motor.</li>
+    <li>Umkehrungen: Quintsextakkord (6/5), Terzquartakkord (4/3), Sekundakkord (2).</li>
+    <li>Der verminderte Septakkord ist symmetrisch. Es gibt nur drei verschiedene, und jeder kann in vier Tonarten führen.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">15.1</span><div><span class="kind">Theorie</span>Bestimme den Typ und das Symbol: g–h–d–f, d–f–a–c, f–a–c–e, h–d–f–a, cis–e–g–b, e–gis–h–d.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G7 (Dur + kleine Septime). Dm7. Fmaj7 (Dur + große Septime). Hø7 (vermindert + kleine Septime). Cis°7 (drei kleine Terzen). E7.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">15.2</span><div><span class="kind">Theorie</span>Baue und schreib richtig: D7, Esmaj7, Am7, Fø7, H°7.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>D7: d–fis–a–c. Esmaj7: es–g–b–d. Am7: a–c–e–g. Fø7: f–as–ces–es (ces, nicht h, weil die Quinte über f ein c-Name sein muss). H°7: h–d–f–as.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">15.3</span><div><span class="kind">Theorie</span>Bilde die leitereigenen Septakkorde von D-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Dmaj7 (d–fis–a–cis), Em7 (e–g–h–d), Fism7 (fis–a–cis–e), Gmaj7 (g–h–d–fis), A7 (a–cis–e–g), Hm7 (h–d–fis–a), Cisø7 (cis–e–g–h).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">15.4</span><div><span class="kind">Theorie</span>In welcher Durtonart ist A7 der Dominantseptakkord? Und Es7? Und H7?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>A7: D-Dur. Es7: As-Dur. H7: E-Dur. Die Tonika liegt immer eine Quinte unter dem Grundton des Dominantseptakkords.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">15.5</span><div><span class="kind">Theorie</span>Löse D7 (d–fis–a–c) nach G-Dur auf. Wohin gehen fis und c?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>fis ist der Leitton und geht aufwärts zu g. c ist die Septime und geht abwärts zu h. Der Bass geht von d nach g. a geht meist einen Ganzton abwärts zu g. Ergebnis zum Beispiel: g–h–d–g.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">15.6</span><div><span class="kind">Theorie</span>Welcher Ton liegt im Bass bei C7 als Quintsextakkord, als Terzquartakkord und als Sekundakkord? Wohin löst sich der Sekundakkord auf?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Quintsextakkord: e. Terzquartakkord: g. Sekundakkord: b. C7 ist die Dominante von F-Dur. Der Sekundakkord mit b im Bass löst sich nach F/A auf, weil die Septime b abwärts zu a geht.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">15.7</span><div><span class="kind">Notenlesen</span>Bestimme die sechs Septakkorde mit Symbol.</div></div>
+      <div class="abc" data-bpm="50">
+        X:1
+        M:none
+        L:1
+        K:C
+        "^1"[GBdf] | "^2"[DFAc] | "^3"[FAce] | "^4"[Bdfa] | "^5"[^CEG_B] | "^6"[E^GBd] |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: G7 (g'–h'–d''–f''). 2: Dm7. 3: Fmaj7. 4: Hø7 (h'–d''–f''–a''). 5: Cis°7 (cis'–e'–g'–b'). 6: E7 (e'–gis'–h'–d'').</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">15.8</span><div><span class="kind">Am Klavier</span>Spiel die Kette Cmaj7 – C7 – Cm7 – Cø7 – C°7 auf f' und auf g'. Schreib die Töne auf.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Auf f': f–a–c–e, f–a–c–es, f–as–c–es, f–as–ces–es, f–as–ces–eses. Auf g': g–h–d–fis, g–h–d–f, g–b–d–f, g–b–des–f, g–b–des–fes. Fes ist auf dem Klavier die Taste e.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">15.9</span><div><span class="kind">Am Klavier</span>Spiel V7 → I mit Griff A und Griff B in C-Dur, F-Dur und G-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C-Dur: h–f'–g' → c'–e'–g' und d'–f'–h' → c'–e'–c''. F-Dur: e–b–c' → f–a–c' und g–b–e' → f–a–f'. G-Dur: fis–c'–d' → g–h–d' und a–c'–fis' → g–h–g'. Linke Hand jeweils Grundton der Dominante, dann der Tonika.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">15.10</span><div><span class="kind">Gehör</span>Üb mit dem Trainer zuerst „maj7, 7, m7“. Nimm die anderen beiden dazu, wenn du zehn Aufgaben in Folge richtig hast.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>maj7 und 7 klingen beide hell. Unterscheide sie am oberen Rand: Bei maj7 reibt die Septime sanft gegen den Grundton (Halbton unter der Oktave), bei 7 klingt die Septime offener, will aber weiter.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">15.11</span><div><span class="kind">Vertiefung</span>Warum gibt es auf dem Klavier nur drei verschiedene verminderte Septakkorde, aber zwölf verschiedene Dominantseptakkorde?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der verminderte Septakkord besteht aus vier gleichen Abständen von drei Halbtönen. Verschiebt man ihn um drei Halbtöne, liegen wieder dieselben Tasten unter den Fingern. Von zwölf Verschiebungen ergeben also nur 12 : 4 = 3 verschiedene Tastenkombinationen. Der Dominantseptakkord ist asymmetrisch (4 + 3 + 3 Halbtöne) und wiederholt sich erst nach zwölf Halbtönen.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(15);
+
+  const on = (id, steps, bpm) => document.getElementById(id).addEventListener("click", () => Book.audio.seq(steps, bpm || 80));
+  on("chain-demo", [[[60, 64, 67, 71], 1], [[60, 64, 67, 70], 1], [[60, 63, 67, 70], 1], [[60, 63, 66, 70], 1], [[60, 63, 66, 69], 2]], 72);
+  on("tt-demo", [[[43, 59, 65, 67], 2], [[48, 60, 64, 67], 2], [null, 1], [[49, 59, 65, 68], 2], [[48, 60, 64, 67], 2]], 76);
+  on("dim-demo", [[[47, 62, 65, 68], 2], [[48, 60, 63, 67], 3]], 70);
+  on("maj7-demo", [[[48, 59, 64, 67], 3], [[41, 57, 64, 69], 3]], 70);
+  on("blues-demo", [[[48, 58, 64, 67], 2], [[41, 57, 63, 69], 2], [[48, 58, 64, 67], 2], [[43, 59, 65, 67], 2], [[48, 58, 64, 67], 2]], 96);
+  on("pass-demo", [[[48, 60, 64, 67], 2], [[49, 58, 64, 67], 2], [[50, 60, 65, 69], 2], [[43, 59, 65, 67], 2], [[48, 60, 64, 67], 3]], 84);
+
+  // Gehörtrainer: Septakkorde
+  (function () {
+    const TYPES = [
+      { id: "maj7", label: "maj7", name: "großer Septakkord", s: [4, 7, 11] },
+      { id: "dom7", label: "7", name: "Dominantseptakkord", s: [4, 7, 10] },
+      { id: "m7", label: "m7", name: "Mollseptakkord", s: [3, 7, 10] },
+      { id: "hv", label: "ø7", name: "halbverminderter Septakkord", s: [3, 6, 10] },
+      { id: "dim7", label: "°7", name: "verminderter Septakkord", s: [3, 6, 9] }
+    ];
+    const ROOTS = [53, 55, 57, 59, 60, 62];
+    document.querySelectorAll(".seventh-trainer").forEach((el) => Book.earTrainer(el, {
+      title: "Gehörtrainer: Septakkorde",
+      intro: "Du hörst einen Septakkord in Grundstellung auf wechselndem Grundton. Bestimme den Typ.",
+      items: TYPES,
+      presets: [
+        { label: "maj7, 7, m7", ids: ["maj7", "dom7", "m7"] },
+        { label: "dazu ø7", ids: ["maj7", "dom7", "m7", "hv"] },
+        { label: "Alle fünf", ids: ["maj7", "dom7", "m7", "hv", "dim7"] }
+      ],
+      modes: [{ id: "harm", label: "zusammen" }, { id: "arp", label: "gebrochen" }, { id: "mix", label: "gemischt" }],
+      from: 48, to: 84,
+      build(it, md) {
+        const r = ROOTS[Math.floor(Math.random() * ROOTS.length)];
+        const ms = [r, r + it.s[0], r + it.s[1], r + it.s[2]];
+        const names = [Book.name(r), Book.spellUp(r, 3, it.s[0]), Book.spellUp(r, 5, it.s[1]), Book.spellUp(r, 7, it.s[2])];
+        const play = md === "arp"
+          ? () => { ms.forEach((m, i) => Book.audio.note(m, i * 0.4, 0.5)); Book.audio.chord(ms, 1.75, 1.8); }
+          : () => Book.audio.chord(ms, 0, 2);
+        return { play, marks: [r, { m: ms[1], cls: "c2" }, { m: ms[2], cls: "c3" }, { m: ms[3], cls: "c2" }], answer: `${it.name}, ${it.label} (${names.join("–")})` };
+      }
+    }));
+  })();
+</script>
+</body>
+</html>

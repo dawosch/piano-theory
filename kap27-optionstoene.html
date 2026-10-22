@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Erweiterte Akkorde und Optionstöne · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .progression { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.8rem 1rem; margin-block: 1.4rem; }
+  .progression .prog-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
+  .progression .chip-btn { font-family: var(--font-display); font-weight: 600; font-size: var(--step--1); border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 999px; padding: 0.2rem 0.7rem; cursor: pointer; }
+  .progression .chip-btn.cur { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+  .progression .cap { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); margin: 0.3rem 0 0; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil IV · Kapitel 27</div>
+    <h1>Erweiterte Akkorde und Optionstöne</h1>
+    <p class="lede">Ein Septakkord sagt, welche Funktion ein Akkord hat. Die Töne darüber, 9, 11 und 13, geben ihm Farbe. Dieses Kapitel zeigt, woher diese Töne kommen, welche zu welchem Akkord passen und warum manche Töne trotz „richtiger“ Tonart stören.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Akkordsymbole wie C9, Fmaj9, Am11, G13 oder G7♭9 lesen und greifen,</li>
+      <li>zu jedem leitereigenen Akkord die passenden Optionstöne nennen,</li>
+      <li>die Alterationen ♭9, ♯9, ♯11 und ♭13 bei Dominanten einsetzen,</li>
+      <li>Avoid Notes erkennen und begründen, warum sie stören,</li>
+      <li>erweiterte Akkorde am Klavier sinnvoll ausdünnen.</li>
+    </ul>
+  </div>
+
+  <!-- 27.1 -->
+  <h2 id="stapel">27.1 Weiter Terzen stapeln</h2>
+  <p>In Kapitel 11 und 15 sind Akkorde durch Übereinanderschichten von Terzen entstanden: Grundton, Terz und Quinte ergeben den Dreiklang, eine weitere Terz die Septime. Nichts hindert uns daran, weiterzustapeln. Über Cmaj7 (c–e–g–h) folgen in C-Dur die Töne d, f und a.</p>
+  <figure>
+    <div class="kb" data-from="48" data-to="72" data-labels="none" data-marks="48::1 52::3 55::5 59::7 62:c2:9 65:c2:11 69:c2:13" aria-label="Terzenstapel über c: c, e, g, h, d', f', a' mit den Stufenzahlen 1 bis 13"></div>
+    <figcaption>Sieben Terzen über c. Blau: der Septakkord. Petrol: die Optionstöne 9, 11 und 13.</figcaption>
+  </figure>
+  <p>Die neuen Töne heißen nach ihrem Abstand zum Grundton: <strong>9</strong> (None), <strong>11</strong> (Undezime) und <strong>13</strong> (Tredezime). Du kennst die Namen aus Abschnitt 5.9. Die 9 ist derselbe Tonname wie die Sekunde, die 11 wie die Quarte und die 13 wie die Sexte, jeweils eine Oktave höher gedacht.</p>
+  <p>Nach der 13 ist Schluss. Die nächste Terz über a wäre wieder c, zwei Oktaven über dem Grundton. Der Stapel 1–3–5–7–9–11–13 enthält damit alle sieben Töne der Tonleiter.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="48 52 55 59 62 65 69" data-mode="mel" data-bpm="140">▶ Stapel aufwärts</button>
+    <button class="btn" type="button" data-play="48 52 55 59 62 69" data-mode="harm">▶ Cmaj13 (ohne 11)</button>
+  </div>
+  <p>Die Töne über der Septime nennt man <dfn id="g-optionston">Optionstöne</dfn> oder Spannungstöne (englisch <em>tensions</em>). „Option“ heißt: Sie dürfen dazukommen, müssen aber nicht. Die Funktion des Akkords hängt an Grundton, Terz und Septime. Die Optionstöne verändern seine Farbe.</p>
+
+  <section class="layer deep" data-title="Warum 9, 11 und 13 und nicht 2, 4 und 6?">
+    <p>Die 9 ist derselbe Ton wie die 2, nur eine Oktave höher. Warum also die großen Zahlen? Dafür gibt es drei Gründe.</p>
+    <p><strong>1. Die Zahl zeigt die Position im Stapel.</strong> Eine 9 setzt voraus, dass darunter ein vollständiger Septakkord steht. „C9“ heißt deshalb immer: c, e, g, b und d. Würde man „C2“ schreiben, wüsste niemand, ob eine Septime dabei ist.</p>
+    <p><strong>2. Die Zählung schließt sich.</strong> Jede weitere Terz erhöht die Stufenzahl um 2, weil der gemeinsame Ton doppelt gezählt wird (Vertiefung in Abschnitt 5.2). So entstehen 1, 3, 5, 7, 9, 11, 13. Die nächste Zahl wäre 15, die Doppeloktave, und damit wieder der Grundton. Die ungeraden Zahlen bis 13 nummerieren also genau einen vollständigen Terzenturm.</p>
+    <p><strong>3. Klangliche Lage.</strong> Eine 9 klingt im Akkord anders als eine 2. Liegt d direkt neben c, entsteht eine reibende Sekunde. Liegt es eine Oktave höher, klingt es offen und schwebend. Die Bezeichnung „9“ deutet diese Lage an, auch wenn Pianisten den Ton in der Praxis oft eng greifen.</p>
+    <p>Ausnahmen bestätigen die Logik. <strong>C6</strong> heißt so, weil keine Septime dabei ist: c, e, g, a. Und <strong>Cadd9</strong> (auch Cadd2) bedeutet Dreiklang plus d, ebenfalls ohne Septime. Das „add“ kennzeichnet genau diese Lücke im Stapel.</p>
+  </section>
+
+  <!-- 27.2 -->
+  <h2 id="symbole">27.2 Akkordsymbole lesen</h2>
+  <p>Für erweiterte Akkorde gelten dieselben Regeln wie für Septakkorde (Kapitel 17), ergänzt um eine wichtige Konvention:</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Eine Zahl über 7 im Symbol schließt die Septime mit ein. <strong>C9</strong> enthält b, <strong>Cmaj9</strong> enthält h, <strong>Cm9</strong> enthält b. Ohne Septime schreibt man <strong>add</strong> (Cadd9) oder <strong>6</strong> (C6, C6/9).</p>
+  </div>
+  <p>Die Art der Septime bestimmt das Wort davor: ohne Zusatz kleine Septime (Dominantcharakter), <em>maj</em> große Septime, <em>m</em> Mollterz mit kleiner Septime. Tippe eine Zeile an, um den Akkord zu hören.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Symbol</th><th>Formel</th><th>Töne über c</th><th>Klang</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="48 52 55 62" data-mode="harm"><td><strong>Cadd9</strong></td><td>1 3 5 9</td><td>c e g d</td><td>Pop-Dur, offen</td><td>▶</td></tr>
+        <tr class="play-row" data-play="48 52 55 57" data-mode="harm"><td><strong>C6</strong></td><td>1 3 5 6</td><td>c e g a</td><td>rund, Swing-Schluss</td><td>▶</td></tr>
+        <tr class="play-row" data-play="48 52 55 57 62" data-mode="harm"><td><strong>C6/9</strong></td><td>1 3 5 6 9</td><td>c e g a d</td><td>weich, schwebend</td><td>▶</td></tr>
+        <tr class="play-row" data-play="48 52 55 59 62" data-mode="harm"><td><strong>Cmaj9</strong></td><td>1 3 5 7 9</td><td>c e g h d</td><td>hell, ruhig</td><td>▶</td></tr>
+        <tr class="play-row" data-play="48 52 55 59 62 66" data-mode="harm"><td><strong>Cmaj7♯11</strong></td><td>1 3 5 7 9 ♯11</td><td>c e g h d fis</td><td>lydisch, glänzend</td><td>▶</td></tr>
+        <tr class="play-row" data-play="48 52 55 58 62" data-mode="harm"><td><strong>C9</strong></td><td>1 3 5 ♭7 9</td><td>c e g b d</td><td>Dominante, funkig</td><td>▶</td></tr>
+        <tr class="play-row" data-play="48 52 58 62 69" data-mode="harm"><td><strong>C13</strong></td><td>1 3 ♭7 9 13</td><td>c e b d a</td><td>Dominante, satt</td><td>▶</td></tr>
+        <tr class="play-row" data-play="48 53 55 58 62" data-mode="harm"><td><strong>C9sus4</strong></td><td>1 4 5 ♭7 9</td><td>c f g b d</td><td>schwebend, ohne Terz</td><td>▶</td></tr>
+        <tr class="play-row" data-play="48 51 55 58 62" data-mode="harm"><td><strong>Cm9</strong></td><td>1 ♭3 5 ♭7 9</td><td>c es g b d</td><td>weich, Moll</td><td>▶</td></tr>
+        <tr class="play-row" data-play="48 51 58 62 65" data-mode="harm"><td><strong>Cm11</strong></td><td>1 ♭3 ♭7 9 11</td><td>c es b d f</td><td>offen, modal</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Bei C13 fehlt in der Tabelle die 11 (f). Das ist kein Versehen. Die 11 würde sich mit der Terz e reiben und wird bei Dominantakkorden fast immer weggelassen. Abschnitt 27.6 erklärt warum. Auch die Quinte fehlt oft, weil sie wenig zur Farbe beiträgt.</p>
+  <p>Leider ist die Schreibweise nicht einheitlich. Für Cmaj7 findest du auch CΔ7, CM7 oder Cj7, für Cm7 auch C–7 oder Cmi7. Kapitel 17 enthält eine Übersicht der Varianten.</p>
+
+  <section class="layer piano" data-title="Was man weglässt, wenn die Finger nicht reichen">
+    <p>Ein voller C13 hat sieben Töne. Zwei Hände könnten das, aber es klingt dick und schwerfällig. Pianisten wählen aus. Dafür gibt es eine klare Rangfolge:</p>
+    <ol>
+      <li><strong>Terz und Septime</strong> bleiben fast immer. Sie entscheiden über Dur oder Moll und über die Funktion. Man nennt sie <dfn id="g-guide-tones">Guide Tones</dfn>, auf Deutsch manchmal Leitlinientöne. Sie zeigen den Weg durch die Harmonik.</li>
+      <li><strong>Der Optionston</strong>, der im Symbol steht, bleibt. Er ist die gewünschte Farbe.</li>
+      <li><strong>Die Quinte</strong> fällt als Erstes weg, außer sie ist verändert (♭5, ♯5).</li>
+      <li><strong>Der Grundton</strong> fällt weg, wenn ein Bass ihn spielt. Allein am Klavier spielt ihn die linke Hand tief.</li>
+    </ol>
+    <p>Ein C13 schrumpft so auf vier Töne: linke Hand c und b, rechte Hand e, a und d'. Das klingt klarer als alle sieben.</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-play="36 46 52 55 58 62 65 69" data-mode="harm">▶ C13 mit allen Tönen</button>
+      <button class="btn" type="button" data-play="36 46 64 69 74" data-mode="harm">▶ C13 ausgedünnt (c b | e a d)</button>
+    </div>
+    <div class="kb" data-from="36" data-to="76" data-labels="c" data-marks="36::1 46::7 64:c2:3 69:c2:13 74:c2:9" aria-label="C13 ausgedünnt: linke Hand C und b, rechte Hand e', a', d''"></div>
+    <p><strong>Übung:</strong> Greif mit der linken Hand c und b (Finger 5 und 1). Spiel mit der rechten Hand nacheinander e'–a'–d'' (C13), e'–g'–d'' (C9) und es'–g'–d'' über c und b (Cm9). Achte darauf, wie sich mit einem einzigen Ton der Charakter ändert.</p>
+  </section>
+
+  <!-- 27.3 -->
+  <h2 id="farbe">27.3 Optionstöne: Farbe ohne Funktionswechsel</h2>
+  <p>Ein G7 bleibt eine Dominante, ob du ihn als G7, G9 oder G13 spielst. Er strebt in allen Fassungen nach C. Das liegt daran, dass der Tritonus h–f (Terz und Septime) unangetastet bleibt (Kapitel 15). Die Optionstöne sitzen darüber und färben, ohne die Richtung zu ändern.</p>
+  <div class="progression" data-steps="43 53 59 64 | 48 52 55 59 62" data-labels="G13|Cmaj9" data-from="36" data-to="72" data-bpm="60" data-beats="2" data-caption="Dominante mit 13 (e) löst sich nach C auf."></div>
+  <p>Damit wird der Unterschied zwischen zwei Arten von Tönen wichtig:</p>
+  <ul>
+    <li><dfn id="g-akkordton">Akkordtöne</dfn> (1, 3, 5, 7) bestimmen, <em>was</em> der Akkord ist.</li>
+    <li><strong>Optionstöne</strong> (9, 11, 13) bestimmen, <em>wie</em> er klingt.</li>
+  </ul>
+  <p>In der Popmusik sind 9 und add9 die häufigsten Erweiterungen. Im Jazz gehören Optionstöne zum Grundklang: Ein Jazzpianist spielt einen Dm7 selten ohne 9, einen G7 selten ohne 9 oder 13.</p>
+
+  <section class="layer deep" data-title="Ein Nonenakkord steckt in der Obertonreihe">
+    <p>In Abschnitt 5.10 hast du gesehen, dass die Teiltöne 4, 5 und 6 eines Tons einen Durdreiklang bilden. Die Reihe geht weiter. Über dem großen C (65,4 Hz) liegen die Teiltöne 4 bis 9 bei c', e', g', einem tiefen b', c'' und d''.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th class="num">Teilton</th><th>Ton</th><th class="num">Cent über c</th><th>Abweichung vom Klavier</th></tr></thead>
+        <tbody>
+          <tr><td class="num">4</td><td>c'</td><td class="num">0</td><td>0</td></tr>
+          <tr><td class="num">5</td><td>e'</td><td class="num">386,3</td><td>−13,7 Cent</td></tr>
+          <tr><td class="num">6</td><td>g'</td><td class="num">702,0</td><td>+2,0 Cent</td></tr>
+          <tr><td class="num">7</td><td>b'</td><td class="num">968,8</td><td>−31,2 Cent</td></tr>
+          <tr><td class="num">9</td><td>d''</td><td class="num">203,9</td><td>+3,9 Cent</td></tr>
+          <tr><td class="num">11</td><td>zwischen f'' und fis''</td><td class="num">551,3</td><td>fast genau ein Viertelton</td></tr>
+          <tr><td class="num">13</td><td>zwischen as'' und a''</td><td class="num">840,5</td><td>+40,5 über as</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Die Teiltöne 4, 5, 6, 7 und 9 ergeben c–e–g–b–d, also einen C9. Der Dominantnonenakkord ist damit in gewissem Sinn „von Natur aus“ in einem einzigen Ton enthalten. Das erklärt einen Teil seiner Geschlossenheit: Die Töne fügen sich zu einer Struktur, die das Ohr aus jedem Klavierton kennt.</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-tone="261.63 327.03 392.44 457.85 588.66" data-partials="3" data-dur="4">▶ Teiltöne 4–5–6–7–9</button>
+      <button class="btn" type="button" data-tone="261.63 329.63 392.00 466.16 587.33" data-partials="3" data-dur="4">▶ C9 gleichstufig</button>
+    </div>
+    <p>Die höheren Teiltöne 11 und 13 liegen zwischen den Klaviertasten. Der 11. Teilton sitzt genau in der Mitte zwischen f und fis. Deshalb ist die „richtige“ 11 über einer Dominante umstritten. Die Jazzpraxis entscheidet sich meist für fis (♯11), was dem 11. Teilton etwas näher kommt als f. Die Tonleiter aus den Teiltönen 8 bis 14 (c, d, e, ≈fis, g, ≈a, b) heißt deshalb manchmal <em>akustische Skala</em>. Sie entspricht der Skala „lydisch ♭7“, die dir in Kapitel 30 begegnet.</p>
+    <p>Vorsicht vor dem Kurzschluss, alles sei damit physikalisch erklärt. Der 7. Teilton liegt 31 Cent unter dem b des Klaviers, und Akkorde mit 11 und 13 entfernen sich weit von der Obertonreihe. Die Obertöne liefern eine Verwandtschaft, keine vollständige Begründung. Der Rest ist Stilgeschichte und Hörgewohnheit.</p>
+  </section>
+
+  <!-- 27.4 -->
+  <h2 id="passend">27.4 Welche Optionstöne zu welchem Akkord passen</h2>
+  <p>Welche 9, 11 und 13 ein Akkord verträgt, hängt von der Tonart ab. Die Optionstöne sind normalerweise leitereigen, kommen also aus derselben Tonleiter wie der Akkord. Für die sieben Septakkorde in C-Dur ergibt das:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Stufe</th><th>Akkord</th><th>passende Optionstöne</th><th>Avoid Note</th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="48 52 59 62 69" data-mode="harm"><td>I</td><td>Cmaj7</td><td>9 (d), 13 (a)</td><td>11 (f)</td></tr>
+        <tr class="play-row" data-play="50 53 60 64 67" data-mode="harm"><td>ii</td><td>Dm7</td><td>9 (e), 11 (g), 13 (h)*</td><td>–</td></tr>
+        <tr class="play-row" data-play="52 55 62 69" data-mode="harm"><td>iii</td><td>Em7</td><td>11 (a)</td><td>♭9 (f), ♭13 (c)</td></tr>
+        <tr class="play-row" data-play="53 57 64 67 71" data-mode="harm"><td>IV</td><td>Fmaj7</td><td>9 (g), ♯11 (h), 13 (d)</td><td>–</td></tr>
+        <tr class="play-row" data-play="43 53 59 64 69" data-mode="harm"><td>V</td><td>G7</td><td>9 (a), 13 (e)</td><td>11 (c)</td></tr>
+        <tr class="play-row" data-play="45 55 60 71 74" data-mode="harm"><td>vi</td><td>Am7</td><td>9 (h), 11 (d)</td><td>♭13 (f)</td></tr>
+        <tr class="play-row" data-play="47 53 57 64" data-mode="harm"><td>vii</td><td>Hm7♭5</td><td>11 (e), ♭13 (g)</td><td>♭9 (c)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="muted">* Die 13 auf der II. Stufe gilt in manchen Lehrbüchern als heikel, weil sie mit der Terz einen Tritonus bildet (Kapitel 30). In der Praxis wird sie oft gespielt.</p>
+  <p>Ein Muster fällt auf: Die Avoid Notes sind immer Töne, die einen Halbton über einem Akkordton liegen. Darum geht es in Abschnitt 27.6. Vorher kommen die Ausnahmen, bei denen genau solche Reibungen erwünscht sind.</p>
+
+  <!-- 27.5 -->
+  <h2 id="alterationen">27.5 Alterierte Optionstöne bei Dominanten</h2>
+  <p>Dominantseptakkorde sind von Natur aus Spannungsakkorde. Bei ihnen darf man die Optionstöne zusätzlich chromatisch verändern. Diese <dfn id="g-alteration">Alterationen</dfn> sind:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Alteration</th><th>Abstand zum Grundton</th><th>über G</th><th>Zielton in C</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="43 53 59 68" data-mode="harm"><td><strong>♭9</strong></td><td>kleine None (13 HT)</td><td>as</td><td>as → g (Quinte)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="43 53 59 70" data-mode="harm"><td><strong>♯9</strong></td><td>übermäßige None (15 HT)</td><td>ais (oft als b notiert)</td><td>ais → h oder → a</td><td>▶</td></tr>
+        <tr class="play-row" data-play="43 53 59 61" data-mode="harm"><td><strong>♯11</strong></td><td>übermäßige Undezime (18 HT)</td><td>cis</td><td>cis → c oder → d</td><td>▶</td></tr>
+        <tr class="play-row" data-play="43 53 59 63" data-mode="harm"><td><strong>♭13</strong></td><td>kleine Tredezime (20 HT)</td><td>es</td><td>es → e (Terz) oder → d</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Im Symbol stehen sie hinter der 7: G7♭9, G7♯9, G7♯11, G7♭13, auch kombiniert (G7♭9♭13). Die ♯11 klingt wie eine ♭5 und die ♭13 wie eine ♯5. Viele Leadsheets schreiben deshalb G7♭5 oder G7♯5 (G+7). Gemeint ist im Wesentlichen derselbe Klang.</p>
+  <p>Jede Alteration liegt einen Halbton neben einem Ton des Zielakkords. Das macht sie zu zusätzlichen Leittönen. Hör dir an, wie das as im G7♭9 in das g des C-Dur-Akkords rutscht:</p>
+  <div class="progression" data-steps="43 53 59 68:c3 | 48 52 55 67:c3" data-labels="G7♭9|C" data-from="36" data-to="72" data-bpm="56" data-beats="2" data-caption="Orange: die ♭9 as' führt einen Halbton abwärts zum g'."></div>
+  <p>In <strong>Moll</strong> sind ♭9 und ♭13 sogar leitereigen. In c-Moll (harmonisch) gehören as und es zur Tonart. Der G7♭9♭13 ist deshalb die natürliche Dominante vor c-Moll. Das es bleibt beim Übergang liegen und wird zur Mollterz:</p>
+  <div class="progression" data-steps="43 53 59 63:c2 68:c3 | 48 55 63:c2 67:c3" data-labels="G7♭9♭13|Cm" data-from="36" data-to="72" data-bpm="56" data-beats="2" data-caption="Petrol: es' bleibt liegen. Orange: as' sinkt zu g'."></div>
+
+  <section class="layer deep" data-title="Warum nur Dominanten alteriert werden">
+    <p>Ein Cmaj7 mit as klingt unruhig und unklar. Bei G7 funktioniert dieselbe Reibung. Warum?</p>
+    <p><strong>Systemlogik.</strong> Eine Dominante ist ein Übergangsakkord. Ihre Aufgabe ist das Weiterleiten. Jede zusätzliche Spannung verstärkt diesen Zweck, solange sie sich auflöst. Die Alterationen ♭9, ♯9, ♯11 und ♭13 liegen alle einen Halbton neben Tönen des Zielakkords C-Dur: as neben g, ais neben h, cis neben c und es neben e. Ein alterierter G7 ist damit ein Bündel aus Leittönen, die alle auf C zeigen.</p>
+    <p><strong>Wahrnehmung.</strong> Spannung ist erträglich, wenn das Ohr ihre Auflösung erwartet. Bei einer Dominante hört man die Auflösung voraus, die Reibung wirkt als Ankündigung. Eine Tonika dagegen ist das Ziel. Dort gibt es nichts mehr anzukündigen, die Reibung bleibt einfach stehen.</p>
+    <p><strong>Geschichte.</strong> Alterierte Dominanten gab es schon lange vor dem Jazz. Der verminderte Septakkord h–d–f–as (Kapitel 15) ist im Grunde ein G7♭9 ohne Grundton und war im 18. und 19. Jahrhundert allgegenwärtig. Die Dominante mit übermäßiger Quinte (G7♯5) ist in der Romantik verbreitet, etwa bei Liszt und Wagner. Der Bebop der 1940er-Jahre hat diese Klänge systematisiert und zur Grundausstattung gemacht. Charlie Parker hat in einem Interview von 1949 beschrieben, wie er die höheren Intervalle eines Akkords als Melodielinie zu nutzen begann.</p>
+  </section>
+
+  <!-- 27.6 -->
+  <h2 id="avoid">27.6 Avoid Notes</h2>
+  <p>Spiel einen Cmaj7 und leg ein f darüber. Obwohl f zur Tonart C-Dur gehört, klingt es falsch, als hätte man daneben gegriffen. Solche Töne heißen <dfn id="g-avoid-note">Avoid Notes</dfn> (englisch „zu vermeidende Töne“).</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="48 52 55 59 62" data-mode="harm">▶ Cmaj7 + d (9): gut</button>
+    <button class="btn" type="button" data-play="48 52 55 59 65" data-mode="harm">▶ Cmaj7 + f (11): Avoid</button>
+    <button class="btn" type="button" data-play="48 52 55 59 66" data-mode="harm">▶ Cmaj7 + fis (♯11): gut</button>
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Eine Avoid Note ist ein Ton, der eine <strong>kleine None (♭9) über einem Akkordton</strong> bildet, also einen Halbton plus Oktave darüber liegt. Bei Dominantakkorden ist die ♭9 über dem <em>Grundton</em> erlaubt, sie ist dann eine Alteration.</p>
+  </div>
+  <p>Mit dieser Regel kannst du jede Zeile der Tabelle in 27.4 nachprüfen:</p>
+  <ul>
+    <li>Cmaj7: f liegt eine kleine None über e (Terz). Avoid. Dasselbe gilt für G7 mit c über h.</li>
+    <li>Em7: f liegt eine kleine None über e (Grundton), c eine kleine None über h (Quinte). Beides Avoid. Em7 als iii verträgt nur die 11.</li>
+    <li>Am7: f liegt eine kleine None über e (Quinte). Avoid.</li>
+    <li>Hm7♭5: c liegt eine kleine None über h (Grundton). Avoid. Hm7♭5 ist keine Dominante, deshalb gilt die Ausnahme nicht.</li>
+  </ul>
+  <p>Avoid heißt nicht verboten. In einer Melodie darfst du diese Töne kurz und auf leichten Zählzeiten spielen, etwa als Durchgang. Vermeiden sollst du sie als gehaltenen Ton im Akkord oder auf betonter Zählzeit.</p>
+  <p>Für den Dominantakkord mit 11 gibt es eine elegante Lösung: Man lässt die Terz weg. Ohne h reibt sich c an nichts, und es entsteht ein <strong>sus4-Akkord</strong> (G7sus4, G9sus4). Diese Klänge sind im modernen Jazz und im Pop sehr verbreitet.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="43 53 59 72" data-mode="harm">▶ G7 + c (11): reibt</button>
+    <button class="btn" type="button" data-play="43 53 57 60" data-mode="harm">▶ G9sus4 (g f a c): schwebt</button>
+  </div>
+
+  <section class="layer deep" data-title="Warum ausgerechnet die kleine None?">
+    <p><strong>Akustik.</strong> Die kleine None ist eine kleine Sekunde, um eine Oktave gespreizt. Weil die Töne weiter auseinanderliegen, ist die Reibung schwächer als bei der Sekunde. Sie verschwindet aber nicht: Der zweite Teilton des unteren Tons liegt nun genau eine kleine Sekunde unter dem oberen Ton. Bei e' und f'' etwa treffen 659 Hz (2. Teilton von e') und 698 Hz (f'') aufeinander, rund 40 Hz Abstand. Nach Abschnitt 5.10 liegt das im Bereich größter Rauigkeit.</p>
+    <p><strong>Funktion.</strong> Wichtiger als die Rauigkeit ist, was der Ton harmonisch anrichtet. Das f über Cmaj7 bildet mit dem h einen Tritonus h–f, genau den Tritonus des G7. Plötzlich klingt die Tonika wie eine Dominante, und das Ohr weiß nicht mehr, ob es angekommen ist. Dasselbe passiert beim c über G7: Es reibt sich mit h, dem Leitton, und verwischt die Richtung zu C. Die Regel schützt also die Identität des Akkords.</p>
+    <p><strong>Warum dann die Ausnahme bei Dominanten?</strong> Die ♭9 über dem Grundton einer Dominante zerstört keine Funktion. Im Gegenteil: G7♭9 enthält mit h–d–f–as einen verminderten Septakkord, also eine noch stärkere Dominante. Außerdem liegt der Grundton meist tief im Bass oder wird ganz weggelassen. Die Reibung wird dadurch weit gespreizt und klingt als Farbe.</p>
+    <p>Ein Wort zur Herkunft: Der Begriff <em>Avoid Note</em> stammt aus der Lehrtradition des Berklee College of Music, die Kapitel 30 genauer vorstellt. Als feste Regel ist er ein Werkzeug für Lernende. Erfahrene Musiker setzen Avoid Notes manchmal gezielt als Reibung ein.</p>
+  </section>
+
+  <!-- 27.7 -->
+  <h2 id="sexten">27.7 Sextakkorde und add-Akkorde</h2>
+  <p>Zwei Akkordtypen fallen aus dem Terzenstapel heraus, weil sie keine Septime haben:</p>
+  <ul>
+    <li><strong>C6</strong> (c–e–g–a) und <strong>Cm6</strong> (c–es–g–a): Dreiklang plus große Sexte. In der Swing-Ära war C6 der typische Schlussakkord. Die große Septime setzte sich als Schlussklang erst später durch. C6/9 (plus d) ist bis heute ein beliebter weicher Schluss.</li>
+    <li><strong>Cadd9</strong> (c–e–g–d) und <strong>Cm(add9)</strong>: Dreiklang plus None. Der typische Klang von Pop-Balladen und Singer-Songwritern.</li>
+  </ul>
+  <p>Ein Detail mit Folgen: C6 und Am7 bestehen aus denselben vier Tönen. c–e–g–a ist von a aus gelesen a–c–e–g. Welcher Akkord gemeint ist, entscheidet der Basston und der Zusammenhang.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="36 52 55 57 60" data-mode="harm">▶ C6 (Bass c)</button>
+    <button class="btn" type="button" data-play="33 52 55 57 60" data-mode="harm">▶ Am7 (Bass a)</button>
+  </div>
+
+  <section class="layer piano" data-title="Pop-Farben: add9, sus2 und 6/9 greifen">
+    <p>In Pop-Begleitungen kommen die Optionstöne oft ohne Septime. Drei Griffe, die du sofort einsetzen kannst:</p>
+    <ul>
+      <li><strong>Cadd9:</strong> Linke Hand c und g (Quinte, Finger 5 und 1). Rechte Hand e'–g'–d'' oder enger d'–e'–g'. Die enge Lage mit der Sekunde d'–e' klingt besonders „pianistisch“.</li>
+      <li><strong>Csus2:</strong> c–d–g, ohne Terz. Offen, weder Dur noch Moll. Gut für Intros.</li>
+      <li><strong>C6/9:</strong> Linke Hand c und g. Rechte Hand a–d'–e'. Ein Quartenklang über dem Bass, der weich und modern klingt.</li>
+    </ul>
+    <div class="btn-row">
+      <button class="btn" type="button" data-play="36 43 62 64 67" data-mode="harm">▶ Cadd9 eng</button>
+      <button class="btn" type="button" data-play="36 43 60 62 67" data-mode="harm">▶ Csus2</button>
+      <button class="btn" type="button" data-play="36 43 57 62 64" data-mode="harm">▶ C6/9</button>
+    </div>
+    <p><strong>Übung:</strong> Spiel die Folge C–G–Am–F (Kapitel 18) zuerst mit einfachen Dreiklängen. Ersetze dann jeden Akkord durch die add9-Variante: Cadd9, Gadd9 (g–h–d–a), Am(add9) (a–c–e–h), Fadd9 (f–a–c–g). Halte in der rechten Hand möglichst viele Töne liegen.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Über dem Septakkord folgen 9, 11 und 13. Sie heißen Optionstöne und färben den Akkord, ohne seine Funktion zu ändern.</li>
+    <li>Eine Zahl über 7 im Symbol schließt die Septime ein (C9 = c e g b d). Ohne Septime schreibt man add oder 6.</li>
+    <li>Passende Optionstöne sind meist leitereigen. Dominanten vertragen zusätzlich die Alterationen ♭9, ♯9, ♯11 und ♭13.</li>
+    <li>Avoid Notes bilden eine kleine None über einem Akkordton. Sie verwischen die Funktion, etwa f über Cmaj7.</li>
+    <li>Am Klavier zählen Terz, Septime und der gewünschte Optionston. Quinte und Grundton dürfen fehlen.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">27.1</span><div><span class="kind">Theorie</span>Nenne alle Töne von D9, Fmaj9, Am11 und E♭13 (ohne 11).</div></div>
+      <details class="solution"><summary>Lösung</summary><div>D9: d, fis, a, c, e. Fmaj9: f, a, c, e, g. Am11: a, c, e, g, h, d. E♭13: es, g, b, des, f, c. Bei E♭13 gehört die kleine Septime des dazu, weil kein „maj“ im Symbol steht.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">27.2</span><div><span class="kind">Theorie</span>Welcher Ton ist die 9, die 11 und die 13 über G? Und über B♭?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Über G: 9 = a, 11 = c, 13 = e. Über B♭: 9 = c, 11 = es, 13 = g. Rechenhilfe: 9 ist eine große Sekunde, 11 eine reine Quarte, 13 eine große Sexte über dem Grundton, jeweils eine Oktave höher.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">27.3</span><div><span class="kind">Theorie</span>Schreib die alterierten Töne über G richtig: ♭9, ♯9, ♯11, ♭13.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>♭9 = as, ♯9 = ais, ♯11 = cis, ♭13 = es. In Leadsheets wird ais oft als b notiert, weil es leichter zu lesen ist. Theoretisch korrekt ist ais, denn eine None über G muss ein a-Name sein.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">27.4</span><div><span class="kind">Theorie</span>Finde die Avoid Notes für Em7 als III. Stufe in C-Dur und für Fmaj7 als IV. Stufe. Begründe.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Em7 (e g h d): f ist eine kleine None über e, c eine kleine None über h. Beides Avoid. Fmaj7 (f a c e): Die leitereigenen Optionstöne g, h und d liegen nirgends einen Halbton über einem Akkordton. Fmaj7 hat deshalb keine Avoid Note. Das h ergibt die ♯11 und macht den lydischen Klang aus.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">27.5</span><div><span class="kind">Theorie</span>Warum ist die ♭9 bei G7 erlaubt, bei Cmaj7 (des über c) aber nicht?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G7 ist eine Dominante und soll Spannung erzeugen. Das as wirkt als zusätzlicher Leitton zum g des Zielakkords. Cmaj7 ist eine Tonika, also ein Ruhepunkt. Ein des darüber hätte kein Ziel und würde den Ruhepunkt nur trüben.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">27.6</span><div><span class="kind">Notenlesen</span>Bestimme die vier Akkorde mit Symbol.</div></div>
+      <div class="abc" data-bpm="50">
+        X:1
+        M:none
+        L:1
+        K:C
+        "^1"[CEGd] | "^2"[CEGBd] | "^3"[CEG_Bd] | "^4"[C_EG_Bd] |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: c' e' g' d'' = Cadd9 (keine Septime). 2: c' e' g' h' d'' = Cmaj9. 3: c' e' g' b' d'' = C9. 4: c' es' g' b' d'' = Cm9. Achtung: Das abc-Zeichen „B“ steht für h, „_B“ für b.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">27.7</span><div><span class="kind">Am Klavier</span>Greif C13 ausgedünnt (links c und b, rechts e', a', d''). Verschieb das Griffbild unverändert auf F13 und G13. Welche Töne spielt die rechte Hand?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>F13: links f und es, rechts a, d', g'. G13: links g und f, rechts h, e', a'. Die rechte Hand spielt jeweils Terz, 13 und 9 des Akkords.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">27.8</span><div><span class="kind">Am Klavier</span>Spiel G7 und dann nacheinander G7♭9, G7♯9 und G7♭13, jeweils gefolgt von C. Beschreib den Unterschied im Klang.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>G7♭9 klingt dunkel und klassisch (verminderter Klang), G7♯9 hart und bluesig (Dur- und Mollterz zugleich), G7♭13 düster und weich. Am deutlichsten wird es, wenn die rechte Hand die Alteration oben spielt und du hörst, wohin sie bei C wandert.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">27.9</span><div><span class="kind">Gehör</span>Spiel abwechselnd Cmaj7 mit d und Cmaj7 mit f oben (Buttons in 27.6). Kannst du die Avoid Note auch mit geschlossenen Augen erkennen?</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Achte auf die Reibung zwischen e und f. Der Klang mit f wirkt, als wolle er sich irgendwohin bewegen, meist zu e oder zu einem G7. Der Klang mit d bleibt ruhig stehen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">27.10</span><div><span class="kind">Vertiefung</span>Welche Teiltöne über dem großen C bilden einen C9? Warum klingt der „natürliche“ Akkord trotzdem nicht genau wie auf dem Klavier?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die Teiltöne 4, 5, 6, 7 und 9 (c', e', g', b', d''). Die 5 liegt 13,7 Cent, die 7 sogar 31,2 Cent tiefer als auf dem gleichstufigen Klavier. Der Teiltonakkord klingt deshalb ruhiger, die Septime aber für unsere Ohren etwas zu tief.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(27);
+
+  // Akkordfolgen mit Klaviatur: data-steps="midi midi:klasse | …", data-labels="A|B"
+  document.querySelectorAll(".progression").forEach((el) => {
+    const steps = el.dataset.steps.split("|").map((s) => s.trim().split(/\s+/).map((t) => {
+      const [m, cls] = t.split(":"); return { m: +m, cls: cls || "" };
+    }));
+    const labels = (el.dataset.labels || "").split("|").map((s) => s.trim());
+    const bpm = +el.dataset.bpm || 60, beats = +el.dataset.beats || 2;
+    el.innerHTML = '<div class="prog-chips"></div><div class="prog-kbd"></div>' +
+      `<div class="btn-row"><button class="btn" type="button">${Book.ICON.play}<span>Folge abspielen</span></button></div>` +
+      (el.dataset.caption ? `<p class="cap">${el.dataset.caption}</p>` : "");
+    const chips = el.querySelector(".prog-chips");
+    const kb = Book.keyboard(el.querySelector(".prog-kbd"), { from: +el.dataset.from || 41, to: +el.dataset.to || 76, labels: "c" });
+    const show = (i) => {
+      kb.mark(steps[i]);
+      chips.querySelectorAll(".chip-btn").forEach((c, j) => c.classList.toggle("cur", j === i));
+    };
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip-btn"; b.textContent = labels[i] || String(i + 1);
+      b.addEventListener("click", () => { show(i); Book.audio.chord(s.map((x) => x.m), 0, 1.6); });
+      chips.appendChild(b);
+    });
+    show(0);
+    el.querySelector(".btn-row .btn").addEventListener("click", () => {
+      Book.audio.seq(steps.map((s) => [s.map((x) => x.m), beats]), bpm, (i) => { if (i >= 0) show(i); });
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Die II–V–I-Verbindung · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .progression { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.8rem 1rem; margin-block: 1.4rem; }
+  .progression .prog-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
+  .progression .chip-btn { font-family: var(--font-display); font-weight: 600; font-size: var(--step--1); border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 999px; padding: 0.2rem 0.7rem; cursor: pointer; }
+  .progression .chip-btn.cur { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+  .progression .cap { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); margin: 0.3rem 0 0; }
+  .ana { display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; align-items: flex-start; font-family: var(--font-display); font-weight: 600; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.8rem 1rem; margin-block: 1.2rem; }
+  .ana .grp { display: inline-flex; gap: 0.9rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent); position: relative; }
+  .ana .grp.sub { border-bottom-style: dashed; }
+  .ana .arrow { color: var(--accent); }
+  .ana .bar { color: var(--muted); font-weight: 400; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil IV · Kapitel 28</div>
+    <h1>Die II–V–I-Verbindung</h1>
+    <p class="lede">Dm7–G7–Cmaj7: Diese drei Akkorde sind der wichtigste Baustein des Jazz und kommen auch in Pop und Klassik ständig vor. Wer die II–V–I erkennt und in allen Tonarten greifen kann, versteht den Großteil der Akkordfolgen in Jazz-Standards.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die II–V–I in Dur und Moll in jeder Tonart bilden,</li>
+      <li>erklären, warum diese Verbindung so zwingend klingt,</li>
+      <li>die Leitlinien aus Terz und Septime spielen und hören,</li>
+      <li>II–V-Ketten und versteckte II–Vs in Leadsheets erkennen,</li>
+      <li>die II–V–I am Klavier mit sparsamen Griffen begleiten.</li>
+    </ul>
+  </div>
+
+  <!-- 28.1 -->
+  <h2 id="grundform">28.1 Die Grundform</h2>
+  <p>Die <dfn id="g-ii-v-i">II–V–I</dfn> (gesprochen „zwei-fünf-eins“, englisch <em>two-five-one</em>) besteht aus drei leitereigenen Septakkorden einer Dur-Tonart: der II., V. und I. Stufe. In C-Dur sind das Dm7, G7 und Cmaj7.</p>
+  <div class="progression" data-steps="38 53:c2 57 60:c3 | 43 53:c3 59:c2 62 | 48 52:c2 55 59:c3" data-labels="Dm7|G7|Cmaj7" data-from="36" data-to="72" data-bpm="60" data-beats="2" data-caption="Petrol: Terz des Akkords. Orange: Septime. Tippe einen Akkord an oder spiel die Folge ab."></div>
+  <p>In der Sprache der Funktionen aus Kapitel 14 durchläuft die Verbindung die vollständige Kadenz: Subdominante (Dm7 vertritt F), Dominante (G7), Tonika (Cmaj7). Spannung wird aufgebaut, zugespitzt und aufgelöst. Das erklärt, warum sie wie ein vollständiger musikalischer Satz klingt.</p>
+  <p>Im Jazz ist die II. Stufe als Subdominante beliebter als die IV. Der Grund liegt in der Bewegung der Grundtöne, um die es im nächsten Abschnitt geht.</p>
+
+  <!-- 28.2 -->
+  <h2 id="quintfall">28.2 Warum die Verbindung so stark ist</h2>
+  <p>Die Grundtöne d, g und c fallen jeweils um eine Quinte (oder steigen um eine Quarte, was auf dasselbe Ziel führt). Dieser <dfn id="g-quintfall">Quintfall</dfn> ist die stärkste Grundtonbewegung der tonalen Musik. G7 führt mit einem Quintfall nach C, und Dm7 führt mit einem weiteren Quintfall zu G7. Die II–V–I ist also eine Kette aus zwei Quintfällen.</p>
+  <p>Mit IV statt II (F–G7–C) entsteht ein Sekundschritt f–g im Bass, kein Quintfall. Das klingt ebenfalls schlüssig, aber weniger zwingend. Hör den Vergleich:</p>
+  <div class="btn-row">
+    <button class="btn" type="button" id="cmp-iv">▶ IV–V–I (Fmaj7–G7–Cmaj7)</button>
+    <button class="btn" type="button" id="cmp-ii">▶ II–V–I (Dm7–G7–Cmaj7)</button>
+  </div>
+
+  <section class="layer deep" data-title="Warum gerade der Quintfall?">
+    <p><strong>Akustik.</strong> Die Quinte g ist der dritte Teilton von C (Abschnitt 5.10). Ein Ton „enthält“ gewissermaßen seine Oberquinte. Fällt der Grundton um eine Quinte, landet die Musik auf dem Ton, aus dessen Obertonreihe der vorige stammt. Jean-Philippe Rameau hat 1722 in seinem <em>Traité de l’harmonie</em> daraus eine ganze Harmonielehre gebaut. Er beschrieb einen gedachten Fundamentalbass (<em>basse fondamentale</em>) aus den Grundtönen der Akkorde und erklärte den Quintfall zur natürlichsten Bewegung.</p>
+    <p><strong>Systemlogik.</strong> Zwei Akkorde im Quintabstand teilen einen Ton (Dm7 und G7: das f und das d), und die übrigen Töne bewegen sich in kleinen Schritten. Viel Gemeinsames plus kleine Bewegung ergibt eine Verbindung, die zugleich logisch und zielgerichtet wirkt.</p>
+    <p><strong>Wahrnehmung.</strong> Die Akustik erklärt nicht alles. Wir haben die Quintfallkette tausendfach gehört, in Kirchenliedern, Popsongs und Filmmusik. Der Musikpsychologe David Huron hat 2006 beschrieben, wie das Gehör statistische Regelmäßigkeiten lernt und daraus Erwartungen bildet. Wenn nach Dm7 und G7 das Cmaj7 erklingt, wird eine starke Erwartung erfüllt. Diese Bestätigung erleben wir als Auflösung und Befriedigung.</p>
+  </section>
+
+  <!-- 28.3 -->
+  <h2 id="leitlinien">28.3 Leitlinien: Terz und Septime</h2>
+  <p>Terz und Septime sind die <em>Guide Tones</em> eines Akkords (Kapitel 27). Spielt man nur sie, ist der Akkordtyp schon eindeutig. In der II–V–I bilden sie zwei <dfn id="g-leitlinie">Leitlinien</dfn>, die sich kaum bewegen:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th></th><th>Dm7</th><th></th><th>G7</th><th></th><th>Cmaj7</th></tr></thead>
+      <tbody>
+        <tr><td>Linie 1</td><td>c (7)</td><td>→</td><td>h (3)</td><td>→</td><td>h (7)</td></tr>
+        <tr><td>Linie 2</td><td>f (3)</td><td>→</td><td>f (7)</td><td>→</td><td>e (3)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Im Quintfall wird die <strong>Septime</strong> eines Akkords zur <strong>Terz</strong> des nächsten, indem sie einen Halb- oder Ganzton abwärts geht. Die <strong>Terz</strong> bleibt liegen und wird zur <strong>Septime</strong> des nächsten.</p>
+  </div>
+  <div class="abc" data-bpm="50" data-caption="Nur Leitlinien (oben) und Grundtöne (unten)">
+    X:1
+    M:4/4
+    L:1
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "Dm7"[Fc] | "G7"[FB] | "Cmaj7"[EB] |]
+    [V:LH] D, | G,, | C, |]
+  </div>
+  <p>Diese Regel gilt für jeden Quintfall, nicht nur für die II–V–I. Wer sie verinnerlicht hat, kann ganze Quintfallketten mit zwei Fingern pro Akkord sauber verbinden.</p>
+
+  <section class="layer deep" data-title="Warum kleine Schritte als Linien gehört werden">
+    <p>Wenn drei Akkorde nacheinander erklingen, hören wir nicht nur drei Klangblöcke. Unser Gehör verbindet Töne zu Linien, und zwar bevorzugt die Töne, die am nächsten beieinanderliegen. Der Psychologe Albert Bregman hat dieses Prinzip 1990 als Teil der <em>auditory scene analysis</em> beschrieben: Das Ohr ordnet Klänge zu Strömen, ähnlich wie das Auge nahe beieinanderliegende Punkte zu Figuren gruppiert.</p>
+    <p>In der II–V–I entstehen so zwei Linien mit Halbtonschritten (c → h und f → e). Halbtonschritte gelten seit Jahrhunderten als die stärksten melodischen Bewegungen, weil sie dem Ziel am nächsten liegen. Das h in G7 ist der Leitton der Tonart, das f die Septime, die nach unten strebt (Kapitel 15). In der II–V–I bekommt das Ohr also zwei Leittonbewegungen auf einmal geliefert. Das macht die Auflösung so deutlich hörbar.</p>
+    <p>Die Lehre der klassischen Stimmführung (Kapitel 33) kodifiziert genau diese Beobachtung: Töne sollen sich möglichst in kleinen Schritten bewegen, gemeinsame Töne liegen bleiben.</p>
+  </section>
+
+  <section class="layer piano" data-title="Die II–V–I mit drei Tönen in der linken Hand">
+    <p>Die einfachste brauchbare Jazzbegleitung besteht aus Grundton, Terz und Septime in der linken Hand. Kapitel 29 nennt diese Griffe Shell-Voicings. Für die II–V–I wechseln sich zwei Formen ab:</p>
+    <ul>
+      <li><strong>Dm7:</strong> d–f–c' (1–3–7), Finger 5–3–1.</li>
+      <li><strong>G7:</strong> G–f–h (1–7–3), Finger 5–2–1.</li>
+      <li><strong>Cmaj7:</strong> c–e–h (1–3–7), Finger 5–4–1 oder 5–3–1.</li>
+    </ul>
+    <div class="progression" data-steps="50 53:c2 60:c3 | 43 53:c3 59:c2 | 48 52:c2 59:c3" data-labels="Dm7|G7|Cmaj7" data-from="36" data-to="64" data-bpm="60" data-beats="2" data-caption="Linke Hand allein. Der Bass springt, die oberen beiden Töne bewegen sich höchstens einen Halbton."></div>
+    <p><strong>Übung:</strong> Spiel die Folge zehnmal langsam, ohne auf die Hand zu sehen. Achte darauf, dass der Daumen von c' zu h rutscht und das f liegen bleibt. Spiel dann mit der rechten Hand eine einfache Melodie aus Akkordtönen dazu.</p>
+  </section>
+
+  <!-- 28.4 -->
+  <h2 id="moll">28.4 II–V–I in Moll</h2>
+  <p>In Moll sieht die Verbindung anders aus, weil die Akkorde aus den Moll-Tonleitern stammen (Kapitel 8 und 20). In c-Moll:</p>
+  <ul>
+    <li><strong>II:</strong> Dm7♭5 (d–f–as–c), auch Dø geschrieben. Das as stammt aus natürlichem c-Moll.</li>
+    <li><strong>V:</strong> G7, meist mit ♭9 (as) und oft mit ♭13 (es). Das h als Leitton stammt aus harmonischem Moll.</li>
+    <li><strong>I:</strong> Cm7, Cm6 oder Cm(maj7). Im Jazz klingen Cm6 und Cm(maj7) schlussfähiger, Cm7 eher offen.</li>
+  </ul>
+  <div class="progression" data-steps="38 53:c2 56 60:c3 | 43 53:c3 56 59:c2 | 48 51:c2 55 57" data-labels="Dm7♭5|G7♭9|Cm6" data-from="36" data-to="72" data-bpm="60" data-beats="2" data-caption="Die II–V–i in c-Moll. Das as wandert von Dm7♭5 über G7♭9 zum g."></div>
+  <p>Man schreibt die Moll-Form oft als <strong>II–V–i</strong> mit kleinem i, oder als iiø–V7–i. Das as verbindet alle drei Akkorde: Es ist Quinte in Dø, ♭9 in G7 und löst sich im i zu g auf.</p>
+
+  <section class="layer deep" data-title="Dm7 ist auch ein F6: die Sixte ajoutée">
+    <p>Dm7 besteht aus d, f, a und c. Von f aus gelesen ergibt das f–a–c–d, also einen F-Dur-Dreiklang mit hinzugefügter Sexte (F6). Rameau nannte diesen Klang <em>sixte ajoutée</em>, „hinzugefügte Sexte“, und sah darin eine Subdominante. Die Funktionstheorie (Kapitel 14) übernimmt diese Sicht und schreibt S<sup>6</sup> oder versteht Dm7 als Subdominantparallele Sp mit Septime.</p>
+    <p>Dasselbe gilt in Moll: Dm7♭5 (d–f–as–c) ist f–as–c–d, also Fm6, eine Moll-Subdominante mit Sexte. Die II–V–I ist damit die klassische Kadenz S–D–T in neuer Kleidung. Schon bei Bach und Mozart ist die Folge ii⁶–V–I (die II. Stufe mit der Terz im Bass) eine der häufigsten Schlusswendungen.</p>
+    <p>Der Unterschied zwischen Klassik und Jazz liegt weniger in den Akkorden als in der Lage: Klassische Musik stellt oft f in den Bass (dann wirkt der Akkord wie F6), Jazz meist d (dann wirkt er wie Dm7 und erzeugt den Quintfall d–g–c).</p>
+  </section>
+
+  <h3 id="trainer-ueberschrift">Gehörtrainer: Dur, Moll oder Trugschluss?</h3>
+  <div id="iivi-trainer"></div>
+
+  <!-- 28.5 -->
+  <h2 id="ketten">28.5 Ketten und Varianten</h2>
+  <h4>Quintfallketten</h4>
+  <p>Die II–V–I lässt sich nach vorn verlängern, indem man weitere Quintfälle davorsetzt. In C-Dur ergibt das Em7–A7–Dm7–G7–Cmaj7 (III–VI–II–V–I). Das A7 ist eine Zwischendominante zu Dm7 (Kapitel 21), Em7 und A7 bilden selbst eine kleine II–V zu D-Moll.</p>
+  <div class="progression" data-steps="40 50:c3 55:c2 | 45 49:c2 55:c3 | 38 48:c3 53:c2 | 43 47:c2 53:c3 | 36 47:c3 52:c2" data-labels="Em7|A7|Dm7|G7|Cmaj7" data-from="36" data-to="60" data-bpm="66" data-beats="2" data-caption="Quintfallkette mit Grundton, Terz und Septime. Die oberen Töne wandern in Halbtonschritten abwärts."></div>
+  <h4>Der Turnaround</h4>
+  <p>Am Ende eines Formteils führt ein <dfn id="g-turnaround">Turnaround</dfn> zurück zum Anfang. Die häufigste Form ist I–vi–ii–V (Cmaj7–Am7–Dm7–G7), auch als I–VI7–ii–V mit A7 statt Am7. Er besteht aus einer ganzen Quintfallkette ab der vi.</p>
+  <h4>II–V ohne I</h4>
+  <p>Nicht jede II–V löst sich auf. Manchmal folgt eine andere II–V oder ein überraschender Akkord. Die II–V wird dann als Baustein verwendet, der kurz eine Tonart andeutet. Ein bekanntes Muster sind II–V–I-Gruppen, die sich in Ganztonschritten abwärts verschieben: Em7–A7–Dmaj7, Dm7–G7–Cmaj7, Cm7–F7–B♭maj7. Dieses Muster prägt etwa den Standard „Tune Up“.</p>
+
+  <!-- 28.6 -->
+  <h2 id="erkennen">28.6 II–Vs im Leadsheet erkennen</h2>
+  <p>Jazzmusiker markieren II–Vs beim Analysieren mit einer Klammer unter beiden Akkorden. Ein Pfeil zeigt eine aufgelöste Dominante. Mit etwas Übung springt das Muster sofort ins Auge:</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Ein m7-Akkord (oder m7♭5), gefolgt von einem Dominantseptakkord eine Quarte höher, ist eine II–V. Dm7 → G7, Am7 → D7, F♯m7♭5 → H7.</p>
+  </div>
+  <p>Als Beispiel die ersten Takte von „Autumn Leaves“ in der üblichen Leadsheet-Tonart:</p>
+  <div class="ana" aria-label="Analyse: Cm7 F7 Bbmaj7 Ebmaj7 Am7b5 D7 Gm">
+    <span class="grp">Cm7 <span class="arrow">→</span> F7</span><span class="arrow">→</span><span>B♭maj7</span><span class="bar">|</span><span>E♭maj7</span><span class="bar">|</span>
+    <span class="grp">Am7♭5 <span class="arrow">→</span> D7</span><span class="arrow">→</span><span>Gm</span>
+  </div>
+  <p>Zwei II–V–Is: eine in B♭-Dur, eine in g-Moll, der Paralleltonart. Das E♭maj7 dazwischen führt die Quintfallkette fort (B♭ → E♭ → A …). Fast der ganze Song besteht aus diesem Wechsel.</p>
+  <p>Weitere Standards, in denen II–Vs das Bild prägen und die du dir als Übungsmaterial in einem Leadsheet ansehen kannst: „Fly Me to the Moon“ (eine lange Quintfallkette), „All the Things You Are“ (II–Vs in vielen Tonarten), „Satin Doll“ (II–Vs, die sich verschieben), „Honeysuckle Rose“ (wiederholte II–V am Anfang) und „Blue Bossa“ (II–V–i in Moll und ein Abstecher nach D♭-Dur).</p>
+
+  <section class="layer piano" data-title="Leitlinien greifen und singen">
+    <p>Die Leitlinien sind die beste Abkürzung, um Harmonik in die Hände zu bekommen. Drei Stufen:</p>
+    <ol>
+      <li><strong>Nur Leitlinien:</strong> Linke Hand spielt den Grundton, rechte Hand nur Terz und Septime (wie im Notenbeispiel in 28.3). Spiel Dm7–G7–Cmaj7 und hör, wie sich die rechte Hand kaum bewegt.</li>
+      <li><strong>Eine Linie singen:</strong> Spiel die Folge mehrmals und sing dazu nur die obere Leitlinie (c–h–h). Dann die untere (f–f–e).</li>
+      <li><strong>Melodie aus Leitlinien:</strong> Spiel mit der rechten Hand pro Akkord zuerst den Leitlinienton auf Zählzeit 1, danach frei andere Akkordtöne. Das ist der Kern des Improvisierens über Akkordfolgen.</li>
+    </ol>
+    <p>Typischer Fehler: Die rechte Hand springt in jedem Akkord in die Grundstellung. Das klingt abgehackt. Bleib in der Lage und bewege nur die Finger, die sich bewegen müssen.</p>
+  </section>
+
+  <!-- 28.7 -->
+  <h2 id="zwoelf">28.7 Die II–V–I in allen zwölf Tonarten</h2>
+  <p>Jazz-Standards wechseln oft die Tonart, und jede II–V–I kann in jeder Tonart auftauchen. Die Tabelle folgt dem Quintenzirkel abwärts, so wie viele Stücke die Tonarten durchlaufen (Kapitel 7). In Akkordsymbolen verwenden wir ♭ und ♯ und für h den deutschen Buchstaben H (englisch B).</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Tonart</th><th>ii</th><th>V</th><th>I</th><th>ii (Moll)</th><th>V (Moll)</th><th>i</th><th></th></tr></thead>
+      <tbody id="twelve"></tbody>
+    </table>
+  </div>
+
+  <section class="layer piano" data-title="Ein Übeplan für alle Tonarten">
+    <p>Zwölf Tonarten wirken einschüchternd. Mit System geht es schneller, als man denkt:</p>
+    <ul>
+      <li><strong>Woche 1:</strong> C, F, B♭. Nur linke Hand mit den Griffen aus 28.3, dann rechte Hand mit Leitlinien dazu.</li>
+      <li><strong>Woche 2:</strong> E♭, A♭, D♭. Die schwarzen Tasten fühlen sich anders an, das Prinzip bleibt.</li>
+      <li><strong>Woche 3:</strong> G♭/F♯, H, E. Hier helfen die Leitlinien: Die Septime geht immer einen Halbton abwärts zur Terz des nächsten Akkords.</li>
+      <li><strong>Woche 4:</strong> A, D, G, dann alle zwölf am Stück in Quintfallreihenfolge.</li>
+    </ul>
+    <p>Spiel mit Metronom auf den Zählzeiten 2 und 4, wie ein Schlagzeuger im Swing. Lieber langsam und ohne Stocken als schnell mit Pausen. Nach einem Monat hast du ein Werkzeug, das in fast jedem Jazz-Standard funktioniert.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Die II–V–I verbindet Subdominante, Dominante und Tonika über zwei Quintfälle: Dm7–G7–Cmaj7.</li>
+    <li>Terz und Septime bilden Leitlinien: Die Septime geht einen Schritt abwärts zur Terz des nächsten Akkords, die Terz bleibt liegen.</li>
+    <li>In Moll lautet die Folge iiø–V7(♭9)–i, in c-Moll Dm7♭5–G7♭9–Cm6.</li>
+    <li>Quintfallketten (III–VI–II–V–I), Turnarounds und verschobene II–Vs bauen auf demselben Muster auf.</li>
+    <li>Im Leadsheet erkennst du eine II–V an einem m7-Akkord, dem ein Dominantseptakkord eine Quarte höher folgt.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">28.1</span><div><span class="kind">Theorie</span>Bilde die II–V–I in F-Dur, B♭-Dur, D-Dur und A-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>F: Gm7–C7–Fmaj7. B♭: Cm7–F7–B♭maj7. D: Em7–A7–Dmaj7. A: Hm7–E7–Amaj7. Die II ist immer ein Ganzton über dem Grundton der Tonart, die V eine Quinte darüber.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">28.2</span><div><span class="kind">Theorie</span>Bilde die II–V–i in a-Moll und d-Moll.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>a-Moll: Hm7♭5–E7(♭9)–Am6 (oder Am7, Am(maj7)). d-Moll: Em7♭5–A7(♭9)–Dm6. Die ♭9 ist jeweils die kleine Sexte der Molltonart (f in a-Moll, b in d-Moll).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">28.3</span><div><span class="kind">Theorie</span>Bestimme die Leitlinien in Gm7–C7–Fmaj7.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Gm7: Terz b, Septime f. C7: Terz e, Septime b. Fmaj7: Terz a, Septime e. Linien: f → e → e und b → b → a. Wieder geht die Septime abwärts zur Terz, die Terz bleibt als Septime liegen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">28.4</span><div><span class="kind">Theorie</span>Markiere alle II–Vs: | Cmaj7 | Am7 | Dm7 | G7 | Em7 A7 | Dm7 G7 | Cmaj7 |</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Dm7–G7 (Takte 3–4, Ziel C), Em7–A7 (Takt 5, Ziel D-Moll, aufgelöst in Takt 6), Dm7–G7 (Takt 6, aufgelöst nach Cmaj7). Am7 gehört zur Quintfallkette Am7–Dm7–G7–C, ist aber kein m7 vor einer Dominante.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">28.5</span><div><span class="kind">Theorie</span>„Fly Me to the Moon“ beginnt in C-Dur mit Am7–Dm7–G7–Cmaj7–Fmaj7. Welche Akkorde folgen, wenn die Quintfallkette leitereigen weitergeht und schließlich nach a-Moll führt?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Nach Fmaj7 folgt die VII. Stufe Hm7♭5, dann E7 als Dominante zu a-Moll und schließlich Am. Hm7♭5–E7–Am ist eine II–V–i in a-Moll. Die Quintfallkette durchläuft damit alle sieben Stufen: a, d, g, c, f, h, e, a.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">28.6</span><div><span class="kind">Theorie</span>Warum ist Dm7♭5 und nicht Dm7 die II. Stufe in c-Moll?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>In c-Moll ist die sechste Stufe as. Der Akkord auf d enthält deshalb as statt a: d–f–as–c, also eine verminderte Quinte. Das as führt später als ♭9 in G7 und als Zielton g in Cm weiter.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">28.7</span><div><span class="kind">Am Klavier</span>Spiel die II–V–I mit den Griffen aus 28.3 (1–3–7, 1–7–3, 1–3–7) in F, B♭ und E♭. Welche Töne behält die linke Hand jeweils von Akkord zu Akkord?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>F: g–b–f, C–b–e, f–a–e. Das b bleibt (Terz → Septime), f geht nach e und e bleibt. B♭: c–es–b, F–es–a, b–d–a. E♭: f–as–es, B♭–as–d, es–g–d. Prinzip immer gleich: Terz bleibt, Septime fällt einen Halbton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">28.8</span><div><span class="kind">Am Klavier</span>Spiel die Quintfallkette Em7–A7–Dm7–G7–Cmaj7 nur mit Leitlinien in der rechten Hand und Grundtönen in der linken. Beginne mit g' und d'' (Terz und Septime von Em7).</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Em7: g', d''. A7: g', cis''. Dm7: f', c''. G7: f', h'. Cmaj7: e', h'. Die beiden Stimmen fallen abwechselnd um einen Halbton. Diese chromatisch absteigenden Linien sind ein typischer Jazzklang.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">28.9</span><div><span class="kind">Gehör</span>Löse im Gehörtrainer zehn Aufgaben in der Auswahl „Alle drei“. Woran erkennst du den Trugschluss?</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Beim Trugschluss klingt der dritte Akkord weich, aber nicht abgeschlossen. Der Bass steigt einen Ganzton (g → a), statt um eine Quinte zu fallen. Die Moll-Variante erkennst du schon am ersten Akkord: Dm7♭5 klingt dunkler und angespannter als Dm7.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">28.10</span><div><span class="kind">Vertiefung</span>Zeig, dass Dm7♭5 und Fm6 aus denselben Tönen bestehen. Was folgt daraus für die Funktion der II in Moll?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Dm7♭5 = d–f–as–c, Fm6 = f–as–c–d. Gleiche Töne, anderer Basston. Die II in Moll ist damit eine Moll-Subdominante (f–as–c) mit hinzugefügter Sexte d. Sie vertritt die Subdominante, genau wie Dm7 in Dur als F6 gelesen werden kann.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(28);
+
+  // Akkordfolgen mit Klaviatur: data-steps="midi midi:klasse | …", data-labels="A|B"
+  document.querySelectorAll(".progression").forEach((el) => {
+    const steps = el.dataset.steps.split("|").map((s) => s.trim().split(/\s+/).map((t) => {
+      const [m, cls] = t.split(":"); return { m: +m, cls: cls || "" };
+    }));
+    const labels = (el.dataset.labels || "").split("|").map((s) => s.trim());
+    const bpm = +el.dataset.bpm || 60, beats = +el.dataset.beats || 2;
+    el.innerHTML = '<div class="prog-chips"></div><div class="prog-kbd"></div>' +
+      `<div class="btn-row"><button class="btn" type="button">${Book.ICON.play}<span>Folge abspielen</span></button></div>` +
+      (el.dataset.caption ? `<p class="cap">${el.dataset.caption}</p>` : "");
+    const chips = el.querySelector(".prog-chips");
+    const kb = Book.keyboard(el.querySelector(".prog-kbd"), { from: +el.dataset.from || 41, to: +el.dataset.to || 76, labels: "c" });
+    const show = (i) => {
+      kb.mark(steps[i]);
+      chips.querySelectorAll(".chip-btn").forEach((c, j) => c.classList.toggle("cur", j === i));
+    };
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip-btn"; b.textContent = labels[i] || String(i + 1);
+      b.addEventListener("click", () => { show(i); Book.audio.chord(s.map((x) => x.m), 0, 1.6); });
+      chips.appendChild(b);
+    });
+    show(0);
+    el.querySelector(".btn-row .btn").addEventListener("click", () => {
+      Book.audio.seq(steps.map((s) => [s.map((x) => x.m), beats]), bpm, (i) => { if (i >= 0) show(i); });
+    });
+  });
+
+  // Vergleich IV–V–I und II–V–I
+  document.getElementById("cmp-iv").addEventListener("click", () =>
+    Book.audio.seq([[[41, 57, 60, 64], 2], [[43, 59, 62, 65], 2], [[36, 55, 59, 64], 3]], 60));
+  document.getElementById("cmp-ii").addEventListener("click", () =>
+    Book.audio.seq([[[38, 57, 60, 65], 2], [[43, 59, 62, 65], 2], [[36, 55, 59, 64], 3]], 60));
+
+  // Tabelle: II–V–I in zwölf Tonarten (Quintenzirkel abwärts)
+  (function () {
+    const keys = [
+      ["C", "Dm7", "G7", "Cmaj7", "Dm7♭5", "G7♭9", "Cm6"],
+      ["F", "Gm7", "C7", "Fmaj7", "Gm7♭5", "C7♭9", "Fm6"],
+      ["B♭", "Cm7", "F7", "B♭maj7", "Cm7♭5", "F7♭9", "B♭m6"],
+      ["E♭", "Fm7", "B♭7", "E♭maj7", "Fm7♭5", "B♭7♭9", "E♭m6"],
+      ["A♭", "B♭m7", "E♭7", "A♭maj7", "B♭m7♭5", "E♭7♭9", "A♭m6"],
+      ["D♭", "E♭m7", "A♭7", "D♭maj7", "E♭m7♭5", "A♭7♭9", "D♭m6 (= C♯m6)"],
+      ["G♭ / F♯", "A♭m7", "D♭7", "G♭maj7", "G♯m7♭5", "C♯7♭9", "F♯m6"],
+      ["H", "C♯m7", "F♯7", "Hmaj7", "C♯m7♭5", "F♯7♭9", "Hm6"],
+      ["E", "F♯m7", "H7", "Emaj7", "F♯m7♭5", "H7♭9", "Em6"],
+      ["A", "Hm7", "E7", "Amaj7", "Hm7♭5", "E7♭9", "Am6"],
+      ["D", "Em7", "A7", "Dmaj7", "Em7♭5", "A7♭9", "Dm6"],
+      ["G", "Am7", "D7", "Gmaj7", "Am7♭5", "D7♭9", "Gm6"]
+    ];
+    // Grundtöne der Tonika als MIDI (um c), für das Abspielen
+    const tonic = [48, 53, 46, 51, 44, 49, 54, 47, 52, 45, 50, 43];
+    const body = document.getElementById("twelve");
+    keys.forEach((k, i) => {
+      const t = tonic[i] - 48;
+      const tr = document.createElement("tr");
+      tr.className = "play-row";
+      tr.innerHTML = k.map((c, j) => j === 0 ? `<td><strong>${c}</strong></td>` : `<td>${c}</td>`).join("") + "<td>▶</td>";
+      tr.addEventListener("click", () => Book.audio.seq([
+        [[50 + t, 53 + t, 60 + t], 2], [[43 + t, 53 + t, 59 + t], 2], [[48 + t, 52 + t, 59 + t], 3]
+      ], 72));
+      body.appendChild(tr);
+    });
+  })();
+
+  // Gehörtrainer: II–V–I in Dur, Moll oder mit Trugschluss
+  (function () {
+    const V = {
+      dur: [[38, 53, 57, 60], [43, 53, 59, 62], [48, 52, 55, 59]],
+      moll: [[38, 53, 56, 60], [43, 53, 56, 59], [48, 51, 55, 60]],
+      trug: [[38, 53, 57, 60], [43, 53, 59, 62], [45, 52, 57, 60]]
+    };
+    Book.earTrainer(document.getElementById("iivi-trainer"), {
+      title: "Welche Verbindung hörst du?",
+      intro: "Drei Akkorde in wechselnden Tonarten. Achte auf den Charakter des ersten Akkords und auf das Ziel.",
+      items: [
+        { id: "dur", label: "II–V–I in Dur" },
+        { id: "moll", label: "II–V–i in Moll" },
+        { id: "trug", label: "II–V–vi (Trugschluss)" }
+      ],
+      presets: [
+        { label: "Dur oder Moll", ids: ["dur", "moll"] },
+        { label: "Alle drei", ids: ["dur", "moll", "trug"] }
+      ],
+      from: 36, to: 72,
+      build(it) {
+        const t = Math.floor(Math.random() * 7) - 3;
+        const chords = V[it.id].map((c) => c.map((m) => m + t));
+        const key = Book.name(48 + t, { octave: false, capital: true, flat: true });
+        return {
+          play: () => Book.audio.seq(chords.map((c) => [c, 2]), 72),
+          marks: chords[2],
+          answer: `${it.label}, Tonika ${it.id === "moll" ? key.toLowerCase() + "-Moll" : key + "-Dur"}${it.id === "trug" ? " (Ziel war die vi)" : ""}`
+        };
+      }
+    });
+  })();
+</script>
+</body>
+</html>

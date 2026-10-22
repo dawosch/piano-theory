@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harmonik in Moll · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil III · Kapitel 20</div>
+    <h1>Harmonik in Moll</h1>
+    <p class="lede">Eine Kadenz in Moll klingt nur dann nach einem echten Schluss, wenn sie sich einen Ton aus einer anderen Tonleiter leiht. Dieses Kapitel zeigt, warum das so ist, welche Akkorde die drei Moll-Formen bereitstellen und wie du Moll-Stücke am Klavier sicher begleitest.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die leitereigenen Akkorde des natürlichen Moll bilden und mit Stufen benennen,</li>
+      <li>erklären, warum die Moll-Dominante fast immer zu einem Dur-Akkord erhöht wird,</li>
+      <li>die zusätzlichen Akkorde aus harmonischem und melodischem Moll ableiten,</li>
+      <li>die typischen Kadenzen und Pop-Folgen in Moll am Klavier spielen,</li>
+      <li>in einem Moll-Leadsheet erkennen, welcher Akkord aus welcher Moll-Form stammt.</li>
+    </ul>
+  </div>
+
+  <!-- 20.1 -->
+  <h2 id="natuerlich">20.1 Die Akkorde des natürlichen Moll</h2>
+  <p>In Kapitel 13 hast du die sieben leitereigenen Dreiklänge einer Dur-Tonart gebildet. Dasselbe Verfahren funktioniert in Moll: Über jedem Ton der Tonleiter stapelst du zwei Terzen aus Tönen derselben Tonleiter. Wir nehmen a-Moll, weil es ohne Vorzeichen auskommt. Das natürliche a-Moll besteht aus a, h, c, d, e, f, g.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Stufe</th><th>Akkord</th><th>Töne</th><th>Typ</th><th>Symbol</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="57 60 64" data-mode="both"><td><strong>i</strong></td><td>a-Moll</td><td>a – c – e</td><td>Moll</td><td>Am</td><td>▶</td></tr>
+        <tr class="play-row" data-play="59 62 65" data-mode="both"><td><strong>ii°</strong></td><td>h-vermindert</td><td>h – d – f</td><td>vermindert</td><td>Hdim (Bdim)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 64 67" data-mode="both"><td><strong>III</strong></td><td>C-Dur</td><td>c – e – g</td><td>Dur</td><td>C</td><td>▶</td></tr>
+        <tr class="play-row" data-play="62 65 69" data-mode="both"><td><strong>iv</strong></td><td>d-Moll</td><td>d – f – a</td><td>Moll</td><td>Dm</td><td>▶</td></tr>
+        <tr class="play-row" data-play="64 67 71" data-mode="both"><td><strong>v</strong></td><td>e-Moll</td><td>e – g – h</td><td>Moll</td><td>Em</td><td>▶</td></tr>
+        <tr class="play-row" data-play="65 69 72" data-mode="both"><td><strong>VI</strong></td><td>F-Dur</td><td>f – a – c</td><td>Dur</td><td>F</td><td>▶</td></tr>
+        <tr class="play-row" data-play="67 71 74" data-mode="both"><td><strong>VII</strong></td><td>G-Dur</td><td>g – h – d</td><td>Dur</td><td>G</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Vergleiche das mit C-Dur. Es sind <em>dieselben sieben Akkorde</em>, denn a-Moll und C-Dur haben dieselben Töne (Paralleltonarten, Kapitel 8). Nur der Mittelpunkt ist ein anderer. Was in C-Dur die vi-Stufe war, ist in a-Moll die Tonika i. Deshalb verschiebt sich das Muster:</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Dur: I – ii – iii – IV – V – vi – vii°<br>
+    natürliches Moll: i – ii° – III – iv – v – VI – VII</p>
+  </div>
+  <p>Großbuchstaben stehen für Dur-, Kleinbuchstaben für Mollakkorde, ° für vermindert. In Moll sind also Tonika, Subdominante und Dominante (i, iv, v) alle drei Mollakkorde. Genau hier beginnt das Problem, um das sich dieses Kapitel dreht.</p>
+
+  <!-- 20.2 -->
+  <h2 id="problem">20.2 Das Problem der Moll-Dominante</h2>
+  <p>In Dur führt die Dominante mit großer Kraft zur Tonika zurück. Ein Grund dafür ist der <strong>Leitton</strong>: Die Terz des Dominantakkords (in C-Dur das h im G-Dur-Akkord) liegt einen Halbton unter dem Grundton der Tonart und strebt dorthin (Kapitel 6 und 14).</p>
+  <p>Im natürlichen Moll fehlt dieser Leitton. Die v-Stufe in a-Moll ist e-Moll mit den Tönen e, g, h. Das g liegt einen <em>Ganzton</em> unter dem a. Die Verbindung v → i klingt deshalb weich und offen, eher wie ein Schulterzucken als wie ein Punkt am Satzende.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="40 55 59 64/2|45 57 60 64/3">▶ v → i: e-Moll → a-Moll</button>
+    <button class="btn" type="button" data-seq="40 56 59 64/2|45 57 60 64/3">▶ V → i: E-Dur → a-Moll</button>
+  </div>
+  <p>Die Lösung der Musikpraxis ist einfach: Man erhöht die siebte Stufe von g zu gis. Aus e-Moll wird E-Dur (e, gis, h), aus v wird <strong>V</strong>. Mit Septime entsteht E7 (e, gis, h, d), der Dominantseptakkord von a-Moll. Die Tonleiter, die dabei entsteht, kennst du aus Kapitel 8: das <strong>harmonische Moll</strong>. Es heißt so, weil es aus einem harmonischen Bedürfnis entstanden ist, nämlich aus dem Wunsch nach einer Dur-Dominante.</p>
+  <div class="abc" data-bpm="60" data-caption="v → i und V → i im Vergleich. Achte auf g' und gis' in der Oberstimme.">
+    X:1
+    M:4/4
+    L:1/4
+    K:Am
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "Em"[GBe]2 "Am"[Ace]2 | "E"[^GBe]2 "Am"[Ace]2 |]
+    [V:LH] E,2 A,,2 | E,2 A,,2 |]
+  </div>
+  <figure>
+    <div class="kb" data-from="52" data-to="72" data-labels="white" data-marks="52 56:c3:gis 59 57:c2" aria-label="E-Dur-Akkord mit Leitton gis und Zielton a"></div>
+    <figcaption>E-Dur (blau) mit dem Leitton gis (orange). Er liegt einen Halbton unter dem a (petrol), dem Grundton von a-Moll.</figcaption>
+  </figure>
+
+  <section class="layer deep" data-title="Warum zieht ein Halbton so stark?">
+    <p>Dass der Leitton „zieht“, ist keine Eigenschaft des Tons selbst. Es ist eine Erwartung, die in unserem Hören entsteht. Dafür gibt es drei Erklärungen, die sich ergänzen.</p>
+    <p><strong>1. Nähe.</strong> In Melodien weltweit sind kleine Schritte viel häufiger als große Sprünge. Unser Gehör hat diese Statistik gelernt und erwartet nach einem Ton am ehesten einen benachbarten. Der Halbton ist der kleinste Schritt, den unser Tonsystem kennt. Ein Ton, der nur einen Halbton neben dem Zentrum liegt, wird deshalb als „fast angekommen“ gehört. Der Musikpsychologe David Huron beschreibt dieses Prinzip in seinem Buch <em>Sweet Anticipation</em> (2006) als Zusammenspiel von gelernten Wahrscheinlichkeiten und der Belohnung, wenn eine Erwartung eintritt.</p>
+    <p><strong>2. Stabilität.</strong> Der Grundton ist der stabilste Ton einer Tonart, der Leitton einer der instabilsten. Hörversuche zeigen das deutlich: Spielt man Versuchspersonen eine Tonart vor und dann einen einzelnen Ton, bewerten sie den Grundton als besonders passend und die Töne einen Halbton daneben als besonders unpassend. Ein instabiler Ton direkt neben dem stabilsten erzeugt maximale Spannung auf minimalem Weg.</p>
+    <p><strong>3. Der Tritonus.</strong> Im Dominantseptakkord E7 bilden gis und d einen Tritonus (Kapitel 5 und 15). Beim Übergang nach a-Moll lösen sich beide Töne mit einem Halbtonschritt nach innen auf: gis steigt zu a, d fällt zu c. Die Instabilität des Tritonus wird so in die Ruhe einer Terz überführt. Im natürlichen e-Moll fehlt das gis, also fehlt auch dieser Tritonus.</p>
+  </section>
+
+  <!-- 20.3 -->
+  <h2 id="leihen">20.3 Warum Moll seine Dominante „leiht“</h2>
+  <p>Der E-Dur-Akkord gehört streng genommen nicht zum natürlichen a-Moll. Er gehört zu A-Dur, wo er ganz regulär die V-Stufe ist. a-Moll und A-Dur haben denselben Grundton. Solche Tonarten heißen <strong>Varianttonarten</strong> (Kapitel 8). Die Dominante von a-Moll ist also genau dieselbe wie die von A-Dur. Man kann sagen: Moll leiht sich die Dominante von seiner Dur-Variante.</p>
+  <p>Daraus folgt eine wichtige Regel für das Lesen und Spielen:</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>In Moll ist die Dominante in klassischer Musik fast immer ein <strong>Dur</strong>akkord (V bzw. V7) mit erhöhter siebter Stufe. In a-Moll ist das E bzw. E7 mit gis, in d-Moll A bzw. A7 mit cis, in e-Moll H bzw. H7 mit dis.</p>
+  </div>
+  <p>Das erhöhte Vorzeichen steht <em>nicht</em> in der Tonartvorzeichnung. Es wird jedes Mal als Versetzungszeichen geschrieben. Wenn du in einem Moll-Stück immer wieder dasselbe Kreuz oder Auflösungszeichen siehst, ist es fast immer dieser Leitton. In g-Moll (zwei ♭) ist das zum Beispiel das fis, in c-Moll (drei ♭) das h mit Auflösungszeichen.</p>
+
+  <section class="layer deep" data-title="Musica ficta: als Sänger den Leitton selbst hinzufügten">
+    <p>Das Bedürfnis nach einem Leitton vor dem Schluss ist viel älter als unser Dur-Moll-System. In der Vokalmusik des Mittelalters und der Renaissance stand der Leitton oft gar nicht in den Noten. Die Sänger wussten aber, dass sie an Schlüssen die Stufe unter dem Schlusston um einen Halbton erhöhen sollten. Diese ungeschriebenen Vorzeichen nannte man <em>musica ficta</em>, „erdachte Musik“, weil die Töne außerhalb des offiziellen Tonsystems lagen.</p>
+    <p>Spätere Theoretiker nannten diesen Halbton unter dem Schlusston <em>subsemitonium modi</em>, den „Halbton unter dem Modus“. Sie galt auch in Tonarten, die wir heute als Moll hören würden. Das harmonische Moll ist so gesehen nur die schriftliche Festlegung einer Praxis, die Sänger seit Jahrhunderten nach Gehör angewandt hatten.</p>
+    <p>Das zeigt einen allgemeinen Zug der Musiktheorie: Sie beschreibt meist im Nachhinein, was Musiker schon tun. Die Regel „In Moll wird die Dominante erhöht“ ist keine Erfindung von Theoretikern. Sie ist das Protokoll einer Hörgewohnheit.</p>
+  </section>
+
+  <!-- 20.4 -->
+  <h2 id="harmonisch">20.4 Die Akkorde des harmonischen Moll</h2>
+  <p>Wenn das g zu gis wird, ändern sich alle Akkorde, die ein g enthalten. Im harmonischen a-Moll (a, h, c, d, e, f, gis) entstehen diese Dreiklänge:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Stufe</th><th>Akkord</th><th>Töne</th><th>Typ</th><th>Änderung</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="57 60 64" data-mode="both"><td>i</td><td>a-Moll</td><td>a – c – e</td><td>Moll</td><td>unverändert</td><td>▶</td></tr>
+        <tr class="play-row" data-play="59 62 65" data-mode="both"><td>ii°</td><td>h-vermindert</td><td>h – d – f</td><td>vermindert</td><td>unverändert</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 64 68" data-mode="both"><td><strong>III+</strong></td><td>C-übermäßig</td><td>c – e – gis</td><td>übermäßig</td><td>g → gis</td><td>▶</td></tr>
+        <tr class="play-row" data-play="62 65 69" data-mode="both"><td>iv</td><td>d-Moll</td><td>d – f – a</td><td>Moll</td><td>unverändert</td><td>▶</td></tr>
+        <tr class="play-row" data-play="64 68 71" data-mode="both"><td><strong>V</strong></td><td>E-Dur</td><td>e – gis – h</td><td>Dur</td><td>g → gis</td><td>▶</td></tr>
+        <tr class="play-row" data-play="65 69 72" data-mode="both"><td>VI</td><td>F-Dur</td><td>f – a – c</td><td>Dur</td><td>unverändert</td><td>▶</td></tr>
+        <tr class="play-row" data-play="56 59 62" data-mode="both"><td><strong>vii°</strong></td><td>gis-vermindert</td><td>gis – h – d</td><td>vermindert</td><td>g → gis</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die beiden wichtigsten neuen Akkorde sind die <strong>V</strong> (E-Dur, mit Septime E7) und die <strong>vii°</strong> auf dem Leitton. Ergänzt man auf der vii-Stufe eine Septime, entsteht gis – h – d – f, ein Akkord aus lauter kleinen Terzen: der <dfn id="g-verminderter-septakkord">verminderte Septakkord</dfn> (Symbol G♯°7 oder G♯dim7). Er klingt wie eine Dominante ohne Grundton und führt ebenso stark zur Tonika. Seine besonderen Eigenschaften behandelt Kapitel 25.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="56 59 62 65" data-mode="harm">▶ G♯°7: gis – h – d – f</button>
+    <button class="btn" type="button" data-seq="40 56 59 62 65/2|45 57 60 64/3">▶ G♯°7 → a-Moll</button>
+    <button class="btn" type="button" data-seq="40 56 59 62 64/2|45 57 60 64/3">▶ E7 → a-Moll</button>
+  </div>
+  <p>Der übermäßige Dreiklang III+ (c – e – gis) ist selten. Er klingt schwebend und unbestimmt, weil er aus zwei großen Terzen besteht und die Oktave in drei gleiche Teile teilt. Du triffst ihn eher als Durchgangsakkord, wenn eine Stimme chromatisch von g über gis nach a steigt.</p>
+
+  <!-- 20.5 -->
+  <h2 id="melodisch">20.5 Die Akkorde des melodischen Moll</h2>
+  <p>Das harmonische Moll hat eine melodische Schwäche: Zwischen f und gis liegt eine übermäßige Sekunde mit drei Halbtönen. Für Sänger und Melodieinstrumente ist dieser Sprung unbequem. Das melodische Moll erhöht deshalb aufwärts auch die sechste Stufe: a, h, c, d, e, <strong>fis</strong>, <strong>gis</strong>. Abwärts wird meist das natürliche Moll gespielt (Kapitel 8).</p>
+  <p>Mit fis und gis ergeben sich weitere Akkorde:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Stufe</th><th>Akkord</th><th>Töne</th><th>Typ</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="57 60 64" data-mode="both"><td>i</td><td>a-Moll</td><td>a – c – e</td><td>Moll</td><td>▶</td></tr>
+        <tr class="play-row" data-play="59 62 66" data-mode="both"><td><strong>ii</strong></td><td>h-Moll</td><td>h – d – fis</td><td>Moll</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 64 68" data-mode="both"><td>III+</td><td>C-übermäßig</td><td>c – e – gis</td><td>übermäßig</td><td>▶</td></tr>
+        <tr class="play-row" data-play="62 66 69" data-mode="both"><td><strong>IV</strong></td><td>D-Dur</td><td>d – fis – a</td><td>Dur</td><td>▶</td></tr>
+        <tr class="play-row" data-play="64 68 71" data-mode="both"><td>V</td><td>E-Dur</td><td>e – gis – h</td><td>Dur</td><td>▶</td></tr>
+        <tr class="play-row" data-play="54 57 60" data-mode="both"><td><strong>vi°</strong></td><td>fis-vermindert</td><td>fis – a – c</td><td>vermindert</td><td>▶</td></tr>
+        <tr class="play-row" data-play="56 59 62" data-mode="both"><td>vii°</td><td>gis-vermindert</td><td>gis – h – d</td><td>vermindert</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>In der klassischen Musik bleibt das melodische Moll vor allem eine Sache der Melodie. Als Akkord taucht am ehesten die Dur-Subdominante <strong>IV</strong> (D-Dur in a-Moll) auf, typischerweise wenn die Bassstimme stufenweise zur Tonika aufsteigt: e – fis – gis – a. Die IV in Moll hat einen hellen, leicht altertümlichen Klang. Du kennst ihn aus dem dorischen Modus (Kapitel 24), der genau diese große Sexte besitzt.</p>
+  <p>Im Jazz ist das melodische Moll dagegen eine eigenständige Tonleiter mit eigenen Akkorden, die auch abwärts erhöht bleibt. Darum geht es in Kapitel 30.</p>
+
+  <section class="layer deep" data-title="Warum das harmonische Moll eine Lücke hat und das melodische sie schließt">
+    <p>Die drei Moll-Formen sind keine willkürliche Liste. Sie sind Lösungen für zwei verschiedene Probleme, die sich gegenseitig in die Quere kommen.</p>
+    <p><strong>Problem 1: die Harmonie.</strong> Für eine starke Dominante braucht man den Leitton gis. Das ergibt das harmonische Moll.</p>
+    <p><strong>Problem 2: die Melodie.</strong> Mit gis, aber weiterhin f, entsteht zwischen der sechsten und siebten Stufe ein Abstand von drei Halbtönen. Alle anderen Schritte der Tonleiter sind Ganz- oder Halbtöne. Die übermäßige Sekunde fällt deshalb aus dem Muster und war in der traditionellen Satzlehre als melodischer Schritt verpönt. (Heute verbindet man sie oft mit einem „orientalischen“ Klang, etwa in Klezmer oder im Flamenco.)</p>
+    <p><strong>Die Lösung:</strong> Wer zum Leitton aufsteigt, erhöht auch das f zu fis. Damit liegen nur noch Ganz- und Halbtöne vor dem Ziel. Wer abwärts geht, braucht keinen Leitton, denn er strebt ja nicht nach oben zum a. Deshalb darf die Melodie abwärts wieder natürlich werden (g, f) und den dunklen Moll-Charakter behalten.</p>
+    <p>Die drei Formen sind also drei Kompromisse zwischen Moll-Charakter, harmonischer Kraft und melodischer Glätte. In echter Musik wechseln sie sich innerhalb weniger Takte ab, je nachdem, was die einzelne Stimme gerade braucht.</p>
+  </section>
+
+  <!-- 20.6 -->
+  <h2 id="praxis">20.6 Der Akkordvorrat in Moll in der Praxis</h2>
+  <p>Fasst man alles zusammen, ergibt sich der Vorrat, aus dem Moll-Musik tatsächlich schöpft. Die fett gedruckten Akkorde sind die häufigsten.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Funktion</th><th>Akkorde in a-Moll</th><th>Herkunft</th></tr></thead>
+      <tbody>
+        <tr><td>Tonika</td><td><strong>i</strong> Am, selten III C</td><td>natürlich</td></tr>
+        <tr><td>Subdominante</td><td><strong>iv</strong> Dm, <strong>ii°</strong> H°, <strong>VI</strong> F, selten IV D</td><td>natürlich, IV melodisch</td></tr>
+        <tr><td>Dominante</td><td><strong>V</strong> E, <strong>V7</strong> E7, <strong>vii°7</strong> G♯°7</td><td>harmonisch</td></tr>
+        <tr><td>Pop und Rock zusätzlich</td><td><strong>VII</strong> G, <strong>v</strong> Em, <strong>III</strong> C</td><td>natürlich</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>In der Klassik ist die Moll-Dominante fast immer Dur. In Pop, Rock und Filmmusik bleibt sie dagegen oft Moll, oder man ersetzt sie durch die VII-Stufe. Das klingt weniger zielgerichtet und mehr nach „Stimmung“. Diesen Klang des unveränderten natürlichen Moll nennt man auch <strong>äolisch</strong> (Kapitel 24). Einige typische Folgen:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Folge</th><th>in a-Moll</th><th>Charakter</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>i – iv – V – i</td><td>Am – Dm – E – Am</td><td>klassische Moll-Kadenz</td><td><button class="btn" type="button" data-seq="45 57 60 64/2|50 57 62 65/2|52 56 59 64/2|45 57 60 64/3">▶</button></td></tr>
+        <tr><td>i – VII – VI – V</td><td>Am – G – F – E</td><td>„andalusische Kadenz“, Flamenco, „Hit the Road Jack“</td><td><button class="btn" type="button" data-seq="45 60 64 69/2|43 59 62 67/2|41 57 60 65/2|40 56 59 64/3">▶</button></td></tr>
+        <tr><td>i – VI – III – VII</td><td>Am – F – C – G</td><td>Pop-Ballade in Moll, z. B. „Zombie“ (The Cranberries)</td><td><button class="btn" type="button" data-seq="45 57 60 64/2|41 57 60 65/2|48 55 60 64/2|43 55 59 62/2|45 57 60 64/3">▶</button></td></tr>
+        <tr><td>i – VII – VI – VII</td><td>Am – G – F – G</td><td>Rock-Schleife, z. B. „All Along the Watchtower“</td><td><button class="btn" type="button" data-seq="45 57 60 64/2|43 55 59 62/2|41 57 60 65/2|43 55 59 62/2|45 57 60 64/3">▶</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="muted">Die Lieder sind in ihrer Originaltonart meist nicht in a-Moll. Die Stufenfolge ist aber dieselbe.</p>
+  <p>Die <dfn id="g-andalusische-kadenz">andalusische Kadenz</dfn> ist ein schönes Beispiel für das Mischen der Formen: Am, G und F stammen aus dem natürlichen Moll, das abschließende E-Dur aus dem harmonischen. Der Bass steigt dabei stufenweise ab: a – g – f – e.</p>
+
+  <section class="layer piano" data-title="Die Moll-Kadenz greifen: i – iv – V7 – i">
+    <p>Diese Kadenz ist das Grundgerüst unzähliger Moll-Stücke. Spiel sie so, dass sich die rechte Hand möglichst wenig bewegt:</p>
+    <div class="abc" data-bpm="66" data-caption="i – iv – V7 – i in a-Moll mit kurzen Wegen in der rechten Hand">
+      X:1
+      M:4/4
+      L:1/4
+      K:Am
+      %%score {RH LH}
+      V:RH clef=treble
+      V:LH clef=bass
+      [V:RH] "Am"[Ace]4 | "Dm"[Adf]4 | "E7"[^GBd]4 | "Am"[Ace]4 |]
+      [V:LH] A,,4 | D,4 | E,4 | A,,4 |]
+    </div>
+    <ul>
+      <li><strong>Rechte Hand:</strong> Fingersatz 1–3–5 für alle vier Akkorde. Der Daumen geht a' – a' – gis' – a', das ist der Leitton, der sich auflöst. Der Mittelfinger geht c'' – d'' – h' – c''. Der kleine Finger geht e'' – f'' – d'' – e''.</li>
+      <li><strong>Linke Hand:</strong> nur die Grundtöne, mit 5 auf dem A und 1 bzw. 2 auf d und e.</li>
+      <li><strong>Typischer Fehler:</strong> Beim E7 wird g statt gis gegriffen, weil die Vorzeichnung keins hat. Sag dir beim Spielen innerlich „Leitton“, sobald du zur Dominante kommst.</li>
+    </ul>
+    <p><strong>Übung:</strong> Spiel dieselbe Kadenz in d-Moll (Dm – Gm – A7 – Dm, Leitton cis) und in e-Moll (Em – Am – H7 – Em, Leitton dis). Die Griffform der rechten Hand bleibt identisch, nur die Lage ändert sich.</p>
+  </section>
+
+  <!-- 20.7 -->
+  <h2 id="picardie">20.7 Die picardische Terz</h2>
+  <p>Ein Moll-Stück kann auch mit einem <em>Dur</em>-Akkord auf der Tonika enden. In a-Moll endet es dann auf A-Dur statt a-Moll. Dieser Schluss heißt <dfn id="g-picardische-terz">picardische Terz</dfn>. Er war besonders im Barock beliebt. Viele Moll-Präludien und -Fugen von Johann Sebastian Bach enden so.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="50 57 62 65/2|52 56 59 62 64/2|45 57 60 64/3">▶ Schluss in a-Moll</button>
+    <button class="btn" type="button" data-seq="50 57 62 65/2|52 56 59 62 64/2|45 57 61 64/3">▶ Schluss mit picardischer Terz (A-Dur)</button>
+  </div>
+  <p>Auch hier wird also ein Akkord von der Dur-Variante geliehen. Das Prinzip, zwischen Dur und Moll auf demselben Grundton hin- und herzuwechseln, heißt <strong>modale Mischung</strong> und ist das Thema von Kapitel 23.</p>
+
+  <section class="layer deep" data-title="Woher der Name „picardische Terz“ kommt und warum der Schluss in Dur so lange Pflicht war">
+    <p>Den Namen <em>tierce de Picardie</em> hat Jean-Jacques Rousseau 1768 in seinem <em>Dictionnaire de musique</em> verwendet. Woher er stammt, ist unklar. Die Erklärung, die Praxis sei besonders in Kirchen der nordfranzösischen Picardie verbreitet gewesen, ist eine Vermutung und nicht belegt.</p>
+    <p>Der Grund für den Dur-Schluss lässt sich dagegen gut erklären. In der Musik der Renaissance und des Frühbarock galt ein Schlussklang mit kleiner Terz als nicht vollkommen ruhig. Akustisch hat das eine Grundlage: Die große Terz kommt in der Obertonreihe des Grundtons vor (als 5. Teilton, Kapitel 5), die kleine Terz über dem Grundton nicht. Ein Dur-Dreiklang verhält sich wie 4 : 5 : 6, ein Moll-Dreiklang wie 10 : 12 : 15. Der Moll-Dreiklang braucht also deutlich größere Zahlen, um als Obertonausschnitt beschrieben zu werden. Für Ohren, die ganz auf vollkommene Ruhe am Schluss eingestellt waren, blieb er ein wenig offen. Erst im Lauf des 18. Jahrhunderts wurde der Moll-Schluss zum Normalfall.</p>
+  </section>
+
+  <section class="layer deep" data-title="Ist Moll wirklich traurig?">
+    <p>Die Verbindung „Dur = fröhlich, Moll = traurig“ ist in westlich geprägten Kulturen sehr stabil. Schon Kinder im Grundschulalter ordnen Moll-Melodien eher traurigen Gesichtern zu. Woher kommt das?</p>
+    <ul>
+      <li><strong>Akustik:</strong> Wie oben beschrieben, passt der Moll-Dreiklang weniger glatt in die Obertonreihe. Das allein erklärt aber keine Traurigkeit, sondern höchstens weniger Ruhe.</li>
+      <li><strong>Sprache:</strong> Traurige Sprechstimmen bewegen sich in kleineren Tonschritten und tieferer Lage. Moll senkt drei Stufen der Tonleiter. Manche Forscher vermuten, dass wir Musik teilweise wie Sprachmelodie deuten.</li>
+      <li><strong>Gewohnheit:</strong> Wir haben Tausende Stücke gehört, in denen Moll zu traurigen Texten und Filmszenen erklang. Diese Verknüpfung ist zu einem großen Teil gelernt. In anderen Musikkulturen und auch in vielen Tänzen Osteuropas ist Moll keineswegs traurig.</li>
+    </ul>
+    <p>Für das Spielen heißt das: Behandle Moll als Klangfarbe. Welches Gefühl daraus wird, entscheiden Tempo, Rhythmus und Ausdruck. Ein schnelles, rhythmisches Stück in Moll klingt eher energisch und dunkel als traurig.</p>
+  </section>
+
+  <section class="layer piano" data-title="Den Leitton in jeder Moll-Tonart finden">
+    <p>Am Klavier gibt es einen schnellen Weg zum Leitton: Er liegt immer <strong>einen Halbton unter dem Grundton</strong>. Nimm einfach die Taste direkt links vom Grundton, ohne über Vorzeichen nachzudenken.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Moll-Tonart</th><th>Leitton</th><th>Dominante</th><th>vii°7</th></tr></thead>
+        <tbody>
+          <tr><td>a-Moll</td><td>gis</td><td>E / E7</td><td>gis – h – d – f</td></tr>
+          <tr><td>e-Moll</td><td>dis</td><td>H / H7</td><td>dis – fis – a – c</td></tr>
+          <tr><td>d-Moll</td><td>cis</td><td>A / A7</td><td>cis – e – g – b</td></tr>
+          <tr><td>g-Moll</td><td>fis</td><td>D / D7</td><td>fis – a – c – es</td></tr>
+          <tr><td>c-Moll</td><td>h</td><td>G / G7</td><td>h – d – f – as</td></tr>
+          <tr><td>h-Moll</td><td>ais</td><td>Fis / Fis7</td><td>ais – cis – e – g</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Beachte die Schreibweise: Der Leitton von a-Moll heißt gis und nicht as, denn er ist die (erhöhte) siebte Stufe, also ein g-Name. Ebenso heißt der Leitton von c-Moll h und nicht ces.</p>
+    <p><strong>Übung:</strong> Spiel in jeder Tonart der Tabelle nur die Bewegung Leitton → Grundton mit der rechten Hand, während die linke Hand erst den Grundton der Dominante und dann den der Tonika anschlägt. Hör, wie der Halbtonschritt den Schluss trägt.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Die Akkorde des natürlichen Moll folgen dem Muster i – ii° – III – iv – v – VI – VII. Es sind dieselben Akkorde wie in der parallelen Dur-Tonart.</li>
+    <li>Der v-Stufe fehlt der Leitton. Deshalb wird die siebte Stufe erhöht: Aus v wird <strong>V</strong> bzw. V7, und es entsteht der verminderte Septakkord vii°7.</li>
+    <li>Diese Dominante gehört eigentlich zur Dur-Variante. Moll „leiht“ sie sich.</li>
+    <li>Das melodische Moll liefert zusätzlich ii (Moll) und IV (Dur). Die IV klingt hell und leicht dorisch.</li>
+    <li>Pop und Rock lassen die Dominante oft Moll oder nutzen VII. Klassik nutzt fast immer V. Die picardische Terz beendet ein Moll-Stück in Dur.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">20.1</span><div><span class="kind">Theorie</span>Bilde die sieben leitereigenen Dreiklänge des natürlichen e-Moll und benenne sie mit Stufen.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>e-Moll natürlich: e, fis, g, a, h, c, d. i Em (e g h), ii° Fis° (fis a c), III G (g h d), iv Am (a c e), v Hm (h d fis), VI C (c e g), VII D (d fis a). Es sind dieselben Akkorde wie in G-Dur, der Paralleltonart.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">20.2</span><div><span class="kind">Theorie</span>Welcher Ton wird in d-Moll erhöht, um eine Dur-Dominante zu bilden? Wie heißen V, V7 und vii°7?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die siebte Stufe c wird zu cis erhöht. V = A-Dur (a cis e), V7 = A7 (a cis e g), vii°7 = cis°7 (cis e g b). Das cis ist der Leitton zum d.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">20.3</span><div><span class="kind">Theorie</span>Bilde in c-Moll (harmonisch) den Akkord auf der III-Stufe und den verminderten Septakkord auf der vii-Stufe. Achte auf die Schreibweise.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Harmonisches c-Moll: c, d, es, f, g, as, h. III+ = es – g – h, ein übermäßiger Dreiklang. Das h ist die erhöhte siebte Stufe (aus b wird h), deshalb schreibt man h und nicht ces. vii°7 = h – d – f – as.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">20.4</span><div><span class="kind">Theorie</span>Erkläre in zwei Sätzen, warum e-Moll → a-Moll weniger schlüssig klingt als E-Dur → a-Moll.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Im e-Moll-Akkord liegt das g einen Ganzton unter dem Zielton a, es fehlt also ein Leitton. Im E-Dur-Akkord liegt das gis einen Halbton darunter und strebt mit kleinstmöglichem Schritt zum Grundton. Mit Septime kommt noch der Tritonus gis–d hinzu, der sich nach innen auflöst.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">20.5</span><div><span class="kind">Notenlesen</span>Bestimme Akkord und Stufe der vier Akkorde in d-Moll.</div></div>
+      <div class="abc" data-bpm="60">
+        X:1
+        M:none
+        L:1
+        K:Dm
+        "^1"[DFA] | "^2"[GBd] | "^3"[A^ceg] | "^4"[DFA] |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: d-Moll (d f a), i. 2: g-Moll (g b d, das b kommt aus der Vorzeichnung), iv. 3: A7 (a cis e g), V7 mit Leitton cis als Versetzungszeichen. 4: d-Moll, i. Zusammen: die Kadenz i – iv – V7 – i.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">20.6</span><div><span class="kind">Am Klavier</span>Spiel i – iv – V7 – i in a-Moll, d-Moll und e-Moll mit der Griffform aus dem Klavier-Einschub. Sprich vor jeder Tonart laut den Leitton aus.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>a-Moll: Am – Dm – E7 – Am, Leitton gis. d-Moll: Dm – Gm – A7 – Dm, Leitton cis. e-Moll: Em – Am – H7 – Em, Leitton dis. In der rechten Hand bleiben die Wege gleich: Daumen Grundton – Grundton – Leitton – Grundton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">20.7</span><div><span class="kind">Am Klavier</span>Spiel die andalusische Kadenz in a-Moll und danach in e-Moll. Welcher Akkord braucht jeweils eine schwarze Taste, die nicht aus der Tonart stammt?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>a-Moll: Am – G – F – E. Nur das E-Dur braucht das gis. e-Moll: Em – D – C – H. Das H-Dur braucht das dis. D-Dur enthält zwar fis, aber das gehört zur Tonart e-Moll.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">20.8</span><div><span class="kind">Theorie</span>Welcher Akkord entsteht im melodischen a-Moll auf der IV-Stufe, und welcher Ton macht ihn zum Dur-Akkord?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>D-Dur (d fis a). Das fis ist die erhöhte sechste Stufe des melodischen Moll. Im natürlichen Moll wäre es f, und der Akkord wäre d-Moll.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">20.9</span><div><span class="kind">Gehör</span>Hör dir beide Beispiele an. Welches endet mit einer Moll-Dominante (v → i), welches mit einer Dur-Dominante (V → i)?</div></div>
+      <div class="btn-row">
+        <button class="btn" type="button" data-seq="45 57 60 64/2|50 57 62 65/2|40 56 59 64/2|45 57 60 64/3">▶ Beispiel A</button>
+        <button class="btn" type="button" data-seq="45 57 60 64/2|50 57 62 65/2|40 55 59 64/2|45 57 60 64/3">▶ Beispiel B</button>
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>A hat die Dur-Dominante (E-Dur mit gis), B die Moll-Dominante (e-Moll mit g). B klingt am Ende weicher und weniger abgeschlossen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">20.10</span><div><span class="kind">Vertiefung</span>Ein Dur-Dreiklang entspricht den Teiltönen 4, 5 und 6 einer Obertonreihe. Prüfe, dass die Teiltöne 10, 12 und 15 einen Moll-Dreiklang ergeben: Welche Intervalle liegen zwischen 10 und 12, zwischen 12 und 15 und zwischen 10 und 15?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>12 : 10 = 6 : 5, eine reine kleine Terz (315,6 Cent). 15 : 12 = 5 : 4, eine reine große Terz (386,3 Cent). 15 : 10 = 3 : 2, eine reine Quinte (702,0 Cent). Unten kleine Terz, oben große Terz, außen Quinte: das ist ein Moll-Dreiklang. Er erscheint aber erst weit oben in der Obertonreihe, der Grundton dieser Reihe liegt mehr als drei Oktaven tiefer.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(20);
+  // Akkordfolgen: data-seq="midi midi …/Schläge|…"
+  document.querySelectorAll("[data-seq]").forEach((b) => b.addEventListener("click", () => {
+    const steps = b.dataset.seq.split("|").map((s) => {
+      const [n, d] = s.split("/");
+      return [n.trim().split(/\s+/).map(Number), +(d || 2)];
+    });
+    Book.audio.seq(steps, +b.dataset.bpm || 72);
+  }));
+</script>
+</body>
+</html>

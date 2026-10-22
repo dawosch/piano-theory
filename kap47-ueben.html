@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Effektiv üben · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .metro { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; margin-block: 1.4rem; }
+  .metro h4 { margin-top: 0; }
+  .metro .row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; }
+  .metro .bpm { font-family: var(--font-mono); font-size: var(--step-2); min-width: 4ch; }
+  .metro input[type="range"] { flex: 1 1 12rem; min-width: 0; accent-color: var(--accent); }
+  .metro .beats { display: flex; gap: 0.4rem; }
+  .metro .beats span { width: 0.9rem; height: 0.9rem; border-radius: 50%; border: 1px solid var(--line); }
+  .metro .beats span.on { background: var(--accent); border-color: var(--accent); }
+  .metro label { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); display: inline-flex; gap: 0.3rem; align-items: center; }
+  .metro select { font: inherit; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil VII · Kapitel 47</div>
+    <h1>Effektiv üben</h1>
+    <p class="lede">Wie viel du lernst, hängt weniger davon ab, wie lange du übst, als davon, wie. Dieses Kapitel stellt die Übemethoden vor, die sich am Klavier bewährt haben, und erklärt, was die Lernforschung über sie weiß und was nicht.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Üben vom bloßen Durchspielen unterscheiden,</li>
+      <li>schwierige Stellen gezielt langsam, in Abschnitten und mit dem Metronom erarbeiten,</li>
+      <li>deine Übezeit so verteilen und abwechseln, dass mehr hängen bleibt,</li>
+      <li>erklären, was Chunking, verteiltes Üben und Interleaving bedeuten,</li>
+      <li>einen eigenen Übeplan aufstellen.</li>
+    </ul>
+  </div>
+
+  <!-- 47.1 -->
+  <h2 id="was">47.1 Üben ist nicht Spielen</h2>
+  <p>Ein Stück immer wieder von vorn bis hinten durchzuspielen, fühlt sich nach Üben an. Es ist aber vor allem <em>Spielen</em>. Die leichten Stellen werden dabei hundertfach wiederholt, die schweren nur so oft, wie das Stück durchlaufen wird, und meist mit denselben Fehlern.</p>
+  <p><dfn id="g-ueben">Üben</dfn> heißt, gezielt an etwas zu arbeiten, das du noch nicht kannst. Dazu gehören drei Dinge:</p>
+  <ul>
+    <li>ein klares, kleines <strong>Ziel</strong> („Takt 9 bis 12 fehlerfrei im Tempo 70“),</li>
+    <li>volle <strong>Aufmerksamkeit</strong> auf genau diese Aufgabe,</li>
+    <li>sofortige <strong>Rückmeldung</strong>: Du hörst genau hin oder nimmst dich auf und korrigierst.</li>
+  </ul>
+  <p>Durchspielen hat trotzdem seinen Platz. Es zeigt dir, wo du stehst, und es trainiert, ein Stück ohne Anhalten zu Ende zu bringen. Aber es ersetzt das gezielte Arbeiten nicht.</p>
+
+  <section class="layer deep" data-title="Die 10.000-Stunden-Regel und was davon bleibt">
+    <p>1993 untersuchten K. Anders Ericsson, Ralf Krampe und Clemens Tesch-Römer Geigenstudierende an der Berliner Musikhochschule. Die besten unter ihnen hatten bis zum 20. Lebensjahr im Durchschnitt rund 10.000 Stunden allein geübt, deutlich mehr als die weniger guten. Ericsson nannte diese Art des Übens <em>deliberate practice</em>, „bewusstes, gezieltes Üben“: Arbeit an den eigenen Schwächen, mit Konzentration und Rückmeldung, oft unter Anleitung.</p>
+    <p>Der Journalist Malcolm Gladwell machte daraus 2008 in seinem Buch „Outliers“ die „10.000-Stunden-Regel“: Wer 10.000 Stunden übt, wird Meister. Das hat Ericsson selbst nie behauptet. Die Zahl war ein Durchschnittswert einer bestimmten Gruppe, kein Schwellenwert.</p>
+    <p>Spätere Forschung hat das Bild weiter differenziert. Eine Metaanalyse von Brooke Macnamara, David Hambrick und Frederick Oswald (2014) fasste viele Studien zusammen. Im Bereich Musik erklärte die Menge an gezieltem Üben etwa ein Fünftel (21 Prozent) der Leistungsunterschiede zwischen Personen. Der Rest hängt mit anderen Faktoren zusammen: Alter beim Beginn, Qualität des Unterrichts, Motivation, Arbeitsgedächtnis, Veranlagung.</p>
+    <p>Für dich bedeutet das zweierlei. Erstens: Üben wirkt, und mehr gezieltes Üben wirkt mehr. Zweitens: Die Qualität zählt. Eine Stunde konzentrierte Arbeit an schwierigen Stellen bringt mehr als drei Stunden Durchspielen.</p>
+  </section>
+
+  <!-- 47.2 -->
+  <h2 id="langsam">47.2 Langsam üben</h2>
+  <p>Die wichtigste Übemethode ist zugleich die unbeliebteste: <strong>langsam spielen</strong>. Langsam heißt so langsam, dass du die Stelle fehlerfrei und locker spielen kannst, mit dem richtigen Fingersatz, den richtigen Tönen und dem richtigen Rhythmus. Für eine neue, schwierige Stelle ist das oft ein Viertel bis die Hälfte des Zieltempos.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Jede Wiederholung wird gelernt, auch die falschen. Übe nur in einem Tempo, in dem du die Stelle richtig spielen kannst.</p>
+  </div>
+  <p>Dann steigerst du das Tempo in kleinen Schritten mit dem Metronom. Bewährt hat sich die <dfn id="g-metronom-treppe">Metronom-Treppe</dfn>: Spiel die Stelle dreimal hintereinander fehlerfrei, dann erhöhe um 4 Schläge pro Minute. Gelingt es nicht mehr, geh zwei Stufen zurück. Am nächsten Tag beginnst du einige Stufen unter dem Vortagesrekord.</p>
+
+  <div class="metro" id="metro">
+    <h4>Metronom</h4>
+    <div class="row">
+      <button class="btn primary" type="button" id="metro-btn">▶ Start</button>
+      <span class="bpm" id="metro-bpm">80</span>
+      <input type="range" id="metro-range" min="30" max="208" value="80" aria-label="Tempo in Schlägen pro Minute">
+    </div>
+    <div class="row" style="margin-top:0.6rem">
+      <button class="btn" type="button" id="metro-down">− 4</button>
+      <button class="btn" type="button" id="metro-up">+ 4</button>
+      <label>Taktart
+        <select id="metro-meter"><option value="2">2/4</option><option value="3">3/4</option><option value="4" selected>4/4</option><option value="6">6/8 (Tempo in punktierten Vierteln)</option></select>
+      </label>
+      <div class="beats" id="metro-beats" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <section class="layer deep" data-title="Warum langsames Üben schneller zum Ziel führt">
+    <p>Schon 1954 beschrieb der Psychologe Paul Fitts einen Zusammenhang, der heute als <strong>Fitts’sches Gesetz</strong> bekannt ist: Je schneller eine zielgerichtete Bewegung ausgeführt wird, desto ungenauer wird sie. Geschwindigkeit und Genauigkeit stehen in einem Tauschverhältnis.</p>
+    <p>Beim Lernen einer neuen Bewegungsfolge hat das eine wichtige Folge. Am Anfang muss das Gehirn jede Einzelbewegung bewusst steuern: welcher Finger, welche Taste, wann. Das braucht Zeit. Ist das Tempo zu hoch, reicht diese Zeit nicht, und es entstehen Fehler. Das motorische System lernt dann eine fehlerhafte Folge, oder es lernt mehrere Varianten nebeneinander (Kapitel 44).</p>
+    <p>Langsames Üben gibt dem Gehirn die Zeit, die richtige Folge sauber anzulegen. Mit der Wiederholung wird die Steuerung automatischer, die bewusste Kontrolle tritt zurück, und das Tempo kann steigen, ohne dass die Genauigkeit leidet. Langsamkeit ist also kein Umweg, sondern die Voraussetzung dafür, dass Schnelligkeit später überhaupt stabil wird.</p>
+    <p>Eine Einschränkung gibt es: Manche Bewegungen ändern sich mit dem Tempo grundlegend. Ein schneller Lauf wird mit einer fließenden Armbewegung gespielt, ein langsamer eher Ton für Ton. Deshalb gehört zum langsamen Üben auch, die Stelle gelegentlich kurz im Zieltempo anzuspielen. So lernst du die Bewegung, die du am Ende brauchst.</p>
+  </section>
+
+  <!-- 47.3 -->
+  <h2 id="abschnitte">47.3 In Abschnitten üben</h2>
+  <p>Teil das Stück in kleine Abschnitte, meist ein bis vier Takte, oft entlang der musikalischen Phrasen. Übe jeden Abschnitt einzeln, bis er sitzt. Erst dann verbindest du zwei Abschnitte, dann drei und so weiter.</p>
+  <ul>
+    <li><strong>Schwierige Stellen zuerst.</strong> Du hast am Anfang der Übezeit die meiste Konzentration. Nutz sie für das Schwerste.</li>
+    <li><strong>Übergänge mitüben.</strong> Lass jeden Abschnitt mit dem ersten Ton des nächsten enden. Viele Fehler entstehen genau an den Nahtstellen.</li>
+    <li><strong>Von hinten anfangen.</strong> Übe zuerst den letzten Abschnitt, dann den vorletzten plus den letzten und so weiter. So spielst du immer auf Bekanntes zu, und der Schluss eines Stücks, der sonst am wenigsten geübt wird, ist am sichersten.</li>
+    <li><strong>Hände getrennt</strong>, wenn eine Hand allein schon schwierig ist. Sobald beide Hände sicher sind, zusammensetzen.</li>
+  </ul>
+
+  <section class="layer deep" data-title="Chunking: wie das Gehirn große Einheiten bildet">
+    <p>Das Arbeitsgedächtnis, also der Teil des Gedächtnisses, mit dem wir gerade bewusst hantieren, ist klein. George Miller schätzte 1956, dass wir etwa sieben Elemente gleichzeitig behalten können. Neuere Untersuchungen, etwa von Nelson Cowan (2001), kommen eher auf drei bis fünf.</p>
+    <p>Trotzdem können Experten scheinbar viel mehr verarbeiten. Das liegt daran, dass sie nicht einzelne Elemente speichern, sondern größere, bedeutungsvolle Einheiten, sogenannte <dfn id="g-chunk">Chunks</dfn>. Berühmt sind die Schachstudien von William Chase und Herbert Simon (1973): Meister konnten realistische Stellungen nach kurzem Hinsehen fast fehlerfrei nachbauen, zufällig aufgestellte Figuren aber kaum besser als Anfänger. Sie sahen Muster, keine Einzelfiguren.</p>
+    <p>Beim Klavierspielen passiert dasselbe auf zwei Ebenen. Beim <strong>Lesen</strong> erkennst du einen Dreiklang als einen Akkord statt als drei Noten (Kapitel 48). Beim <strong>Spielen</strong> wird eine Folge von Fingerbewegungen mit der Zeit zu einer einzigen, automatisierten Einheit. Üben in Abschnitten unterstützt genau diesen Prozess: Jeder Abschnitt wird zu einem Chunk, und mehrere Chunks werden später zu größeren zusammengefügt.</p>
+  </section>
+
+  <section class="layer piano" data-title="Werkzeuge für schwierige Stellen">
+    <p><strong>Rhythmusvarianten.</strong> Spiel eine gleichmäßige Achtel- oder Sechzehntelpassage punktiert (lang–kurz), dann umgekehrt (kurz–lang). Jeder Übergang wird so einmal langsam und einmal schnell geübt. Unter Pianisten ist diese Methode weit verbreitet. Wissenschaftlich ist ihr Nutzen allerdings kaum untersucht. Sie ist ein Erfahrungswert.</p>
+    <p><strong>Stopp-Methode.</strong> Spiel die Stelle in Gruppen und halte nach jeder Gruppe kurz an. Während der Pause bereitest du die nächste Handposition vor. Die Gruppen werden dann schrittweise verbunden.</p>
+    <p><strong>Ankerpunkte.</strong> Markiere in jeder Phrase einen oder zwei Punkte, an denen du sicher einsteigen kannst. Übe, von jedem dieser Punkte aus zu beginnen. Passiert beim Vorspielen ein Fehler, springst du zum nächsten Anker und spielst weiter.</p>
+    <p><strong>Leise üben.</strong> Spiel eine Passage einmal bewusst pianissimo. Das deckt ungleichmäßige Finger auf, weil laute Töne kleine Unebenheiten überdecken.</p>
+  </section>
+
+  <!-- 47.4 -->
+  <h2 id="verteilt">47.4 Verteilt statt am Stück</h2>
+  <p>Viermal 15 Minuten über den Tag oder die Woche verteilt bringen in der Regel mehr als eine Stunde am Stück. Das gilt besonders für neue Stücke und schwierige Stellen. Kurze, häufige Einheiten halten die Konzentration hoch und geben dem Gedächtnis zwischen den Einheiten Zeit, das Gelernte zu festigen.</p>
+  <p>Praktische Folgen:</p>
+  <ul>
+    <li>Lieber täglich 20 Minuten als einmal pro Woche zwei Stunden.</li>
+    <li>Eine neue schwierige Stelle mehrmals am Tag kurz üben, statt sie einmal lange zu bearbeiten.</li>
+    <li>Nicht frustriert sein, wenn eine Stelle am Ende der Übezeit noch nicht sitzt. Oft läuft sie am nächsten Tag besser als am Ende des Vortags.</li>
+  </ul>
+
+  <section class="layer deep" data-title="Was die Forschung über Pausen und Schlaf weiß">
+    <p>Der Vorteil verteilten Lernens ist einer der am besten belegten Befunde der Lernpsychologie. Hermann Ebbinghaus beschrieb ihn 1885 in Selbstversuchen mit sinnlosen Silben. Seitdem ist der <dfn id="g-spacing">Spacing-Effekt</dfn> in hunderten Studien bestätigt worden, vor allem für das Lernen von Wissen. Für Bewegungsfertigkeiten zeigten zum Beispiel Charles Shea und Kollegen (2000), dass dieselbe Übemenge, auf mehrere Tage verteilt, zu besseren Ergebnissen im Behaltenstest führt als die Übung an einem einzigen Tag.</p>
+    <p>Ein Grund dafür ist die <strong>Konsolidierung</strong>: Neu Gelerntes ist zunächst instabil und wird in den Stunden nach dem Üben gefestigt. Zu viel neues Material in einer Einheit kann diese Festigung stören.</p>
+    <p>Welche Rolle der Schlaf genau spielt, ist differenzierter, als oft behauptet wird. Eine viel zitierte Studie von Matthew Walker und Kollegen (2002) fand, dass Versuchspersonen eine gelernte Fingertipp-Folge nach einer Nacht Schlaf deutlich schneller ausführten als direkt nach dem Üben, während Wachzeit keinen solchen Gewinn brachte. Eine Metaanalyse von Steven Pan und Timothy Rickard (2015) kam jedoch zu dem Schluss, dass ein Teil dieses Effekts auf die Versuchsanordnung zurückgeht, etwa auf Ermüdung am Ende der Übephase. Ob Schlaf Fertigkeiten über die bloße Erholung hinaus aktiv verbessert, ist deshalb umstritten.</p>
+    <p>Unstrittig ist: Müdigkeit verschlechtert das Üben, und ein Fortschritt zeigt sich oft erst nach einer Pause. Der praktische Rat bleibt derselbe: kurze, verteilte Einheiten, ausgeschlafen üben und am nächsten Tag noch einmal prüfen.</p>
+  </section>
+
+  <!-- 47.5 -->
+  <h2 id="abwechseln">47.5 Abwechseln statt blockweise üben</h2>
+  <p>Die meisten Menschen üben blockweise: erst 20 Minuten Stelle A, dann 20 Minuten Stelle B. Beim <dfn id="g-interleaving">abwechselnden Üben</dfn> (engl. <em>interleaving</em>) wechselst du dagegen häufig: A, B, C, A, C, B … Jede Stelle wird dabei genauso oft geübt, aber immer wieder neu „hervorgeholt“.</p>
+  <p>Das fühlt sich anstrengender an, und während der Übezeit wirkt der Fortschritt kleiner. Am nächsten Tag und beim Vorspielen sitzen die Stellen aber oft besser. Du übst dabei nämlich auch, eine Stelle aus dem Stand abzurufen, und genau das verlangt ein Vorspiel.</p>
+
+  <section class="layer deep" data-title="Kontextinterferenz: warum schwereres Üben besser hält">
+    <p>Den Effekt beschrieben John Shea und Robyn Morgan 1979 in einer Studie mit Bewegungsaufgaben. Eine Gruppe übte drei Bewegungsmuster blockweise, die andere in zufälliger Reihenfolge. Während des Übens war die Blockgruppe besser. In späteren Tests drehte sich das Bild um: Die gemischt übende Gruppe behielt die Bewegungen besser und konnte sie leichter übertragen. Man nennt das den <strong>Kontextinterferenz-Effekt</strong>.</p>
+    <p>Eine verbreitete Erklärung: Beim ständigen Wechsel muss das Gehirn jede Aufgabe neu „laden“ und sie mit den anderen vergleichen. Diese zusätzliche Anstrengung führt zu einer tieferen, besser abrufbaren Speicherung. Blockweises Üben dagegen erzeugt eine Illusion von Können: Nach der zehnten Wiederholung in Folge geht es leicht, weil die Bewegung noch im Arbeitsgedächtnis liegt.</p>
+    <p>Für Musik haben Christine Carter und Jessica Grahn (2016) den Effekt mit fortgeschrittenen Klarinettisten untersucht. Die Musiker übten Stücke teils blockweise, teils abwechselnd. Expertinnen und Experten, die die Aufnahmen bewerteten, schätzten die Ergebnisse der abwechselnden Übung als besser ein. Die Studie war klein, passt aber zu den Ergebnissen aus der Bewegungsforschung.</p>
+    <p>Ein Vorbehalt: Ganz am Anfang, wenn eine Stelle noch gar nicht läuft, ist blockweises Üben oft nötig. Abwechseln lohnt sich, sobald die Grundbewegung steht.</p>
+  </section>
+
+  <!-- 47.6 -->
+  <h2 id="abrufen">47.6 Abrufen, aufnehmen, im Kopf üben</h2>
+  <ul>
+    <li><strong>Abrufen statt nur ablesen.</strong> Spiel Abschnitte, die du kennst, ohne Noten. Steig an zufälligen Stellen ein. Das trainiert das Gedächtnis und deckt Lücken auf.</li>
+    <li><strong>Aufnehmen.</strong> Nimm dich regelmäßig mit dem Handy auf und hör es mit etwas Abstand an. Beim Spielen hört man sich anders, als man klingt. Die Aufnahme zeigt Tempo-Schwankungen, unsaubere Pedale und unklare Melodien gnadenlos.</li>
+    <li><strong>Mental üben.</strong> Geh ein Stück im Kopf durch: Hör es innerlich, stell dir die Bewegungen vor, sieh die Noten. Das eignet sich für unterwegs und als Ergänzung zum echten Üben.</li>
+  </ul>
+
+  <section class="layer deep" data-title="Was mentales Üben bewirkt">
+    <p>Alvaro Pascual-Leone und Kollegen ließen 1995 Versuchspersonen, die nicht Klavier spielten, fünf Tage lang eine Fünf-Finger-Übung lernen. Eine Gruppe übte am Klavier, eine zweite stellte sich die Übung nur vor, eine dritte übte gar nicht. Gemessen wurde unter anderem, wie groß das Hirnareal war, das die beteiligten Fingermuskeln steuert.</p>
+    <p>Bei der Gruppe, die nur mental übte, veränderte sich dieses Areal ähnlich wie bei der Gruppe, die tatsächlich spielte. Beim Spielen selbst war sie besser als die Kontrollgruppe, aber schlechter als die Gruppe, die körperlich geübt hatte. Mit einer zusätzlichen kurzen Übungseinheit am Klavier holte sie diesen Rückstand weitgehend auf.</p>
+    <p>Mentales Üben ersetzt also das Klavier nicht, aber es bereitet das Gehirn vor und macht das anschließende Üben am Instrument wirksamer. Es eignet sich besonders zum Auswendiglernen, zur Vorbereitung auf Auftritte und wenn kein Instrument in der Nähe ist.</p>
+  </section>
+
+  <!-- 47.7 -->
+  <h2 id="plan">47.7 Ein Übeplan</h2>
+  <p>Ein fester Ablauf spart Entscheidungen und sorgt dafür, dass nichts zu kurz kommt. Ein Beispiel für 30 Minuten am Tag:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th class="num">Minuten</th><th>Inhalt</th><th>Warum</th></tr></thead>
+      <tbody>
+        <tr><td class="num">5</td><td>Aufwärmen: Tonleiter, Arpeggio oder ein leichtes Stück, langsam und locker</td><td>Hände und Ohr einstimmen (Kapitel 43, 44)</td></tr>
+        <tr><td class="num">15</td><td>Neues Stück: die zwei schwierigsten Stellen, langsam, in Abschnitten, abwechselnd</td><td>Volle Konzentration für das Schwerste</td></tr>
+        <tr><td class="num">5</td><td>Bekannte Stücke: einmal durchspielen ohne Anhalten</td><td>Abrufen, Repertoire pflegen, Spaß</td></tr>
+        <tr><td class="num">5</td><td>Blattspiel oder freies Spiel nach Gehör</td><td>Lesen und Hören trainieren (Kapitel 48, 49)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section class="layer piano" data-title="Ein Übetagebuch führen">
+    <p>Schreib nach jeder Übeeinheit zwei oder drei Zeilen auf:</p>
+    <ul>
+      <li>Was habe ich geübt? (Stück, Takte)</li>
+      <li>Wie weit bin ich gekommen? (Tempo auf der Metronom-Treppe, „Takt 9–12 sitzt“)</li>
+      <li>Was ist morgen dran?</li>
+    </ul>
+    <p>Das klingt bürokratisch, hat aber zwei große Vorteile. Du beginnst die nächste Einheit sofort mit einem klaren Ziel statt mit Durchspielen. Und du siehst nach einigen Wochen schwarz auf weiß, wie viel du gelernt hast. Das motiviert gerade dann, wenn der Fortschritt sich langsam anfühlt.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Üben heißt gezielt an Schwierigem arbeiten: kleines Ziel, volle Aufmerksamkeit, Rückmeldung.</li>
+    <li>Langsam und fehlerfrei üben, Tempo mit der Metronom-Treppe steigern.</li>
+    <li>In kleinen Abschnitten üben, Übergänge mitnehmen, schwere Stellen zuerst.</li>
+    <li>Verteilt und abwechselnd üben: kurze, häufige Einheiten und mehrere Stellen im Wechsel.</li>
+    <li>Abrufen, aufnehmen, mental üben. Ein Übetagebuch macht Fortschritt sichtbar.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">47.1</span><div><span class="kind">Theorie</span>Was ist der Unterschied zwischen Üben und Durchspielen? Nenne die drei Merkmale gezielten Übens.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Durchspielen wiederholt das ganze Stück und damit vor allem das, was schon geht. Gezieltes Üben arbeitet an dem, was noch nicht geht. Merkmale: ein klares, kleines Ziel, volle Aufmerksamkeit auf diese Aufgabe, sofortige Rückmeldung und Korrektur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">47.2</span><div><span class="kind">Am Klavier</span>Wähle eine Stelle, die du noch nicht sicher kannst. Bestimme mit dem Metronom das höchste Tempo, in dem du sie dreimal hintereinander fehlerfrei spielst. Steigere dann nach der Metronom-Treppe. Notier Start- und Endtempo.</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Typisch ist ein Gewinn von 8 bis 16 Schlägen pro Minute in einer Einheit. Am nächsten Tag liegt das fehlerfreie Starttempo oft etwas unter dem Endtempo des Vortags, aber über dem Starttempo. Das ist normal und ein Zeichen für Konsolidierung.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">47.3</span><div><span class="kind">Theorie</span>Warum ist es sinnvoll, ein Stück vom Ende her zu üben?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Beim Üben vom Anfang wird der Anfang am häufigsten wiederholt und der Schluss am seltensten. Übt man von hinten, ist der Schluss am sichersten, und man spielt beim Durchspielen immer auf Bekanntes zu. Das gibt Sicherheit, gerade beim Vorspielen, wenn die Nervosität gegen Ende oft zunimmt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">47.4</span><div><span class="kind">Theorie</span>Du hast drei schwierige Stellen A, B und C und 30 Minuten Zeit. Wie sieht ein blockweiser, wie ein abwechselnder Übeplan aus? Welcher ist wahrscheinlich langfristig besser, und warum fühlt er sich schlechter an?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Blockweise: 10 Minuten A, 10 Minuten B, 10 Minuten C. Abwechselnd: zum Beispiel je 3 bis 4 Minuten in der Folge A, B, C, A, C, B, B, A, C. Langfristig ist der abwechselnde Plan meist besser, weil jede Stelle immer wieder neu abgerufen werden muss (Kontextinterferenz). Er fühlt sich schlechter an, weil die Stelle beim Wiederholen nicht mehr frisch im Arbeitsgedächtnis liegt und deshalb zunächst holpriger läuft.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">47.5</span><div><span class="kind">Am Klavier</span>Spiel eine Achtelpassage deines aktuellen Stücks erst punktiert (lang–kurz), dann umgekehrt punktiert (kurz–lang), dann gerade. Was fällt dir auf?</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Meist ist eine der beiden Varianten deutlich schwerer. Sie zeigt die Übergänge, bei denen Finger oder Hand noch unsicher sind. Genau diese Übergänge lohnen sich isoliert zu üben. Danach läuft die gerade Fassung oft gleichmäßiger.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">47.6</span><div><span class="kind">Am Klavier</span>Nimm ein Stück, das du gut kannst, mit dem Handy auf. Hör die Aufnahme am nächsten Tag an und notier drei Dinge, die dir beim Spielen nicht aufgefallen sind.</div></div>
+      <details class="solution"><summary>Typische Befunde</summary><div>Häufig sind: das Tempo wird an schweren Stellen langsamer und an leichten schneller, die Melodie ist zu leise gegenüber der Begleitung, das Pedal verwischt Akkordwechsel, Pausen werden verkürzt, Schlüsse werden überhastet.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">47.7</span><div><span class="kind">Vertiefung</span>In der Studie von Pascual-Leone (1995) übte eine Gruppe nur mental. Was zeigten die Ergebnisse, und welche Grenzen hat mentales Üben?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die Hirnareale für die beteiligten Fingermuskeln veränderten sich ähnlich wie beim echten Üben, und die Gruppe spielte besser als eine Gruppe ohne Übung. Sie spielte aber schlechter als die Gruppe, die am Klavier geübt hatte. Mentales Üben ersetzt das Instrument also nicht, macht aber das anschließende Üben wirksamer.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">47.8</span><div><span class="kind">Vertiefung</span>Was hat die 10.000-Stunden-Regel mit der Studie von Ericsson und Kollegen (1993) zu tun, und was ist an ihr irreführend?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die Zahl stammt aus dieser Studie: Die besten Geigenstudierenden hatten bis 20 im Schnitt etwa 10.000 Stunden geübt. Irreführend ist, daraus eine Schwelle zu machen, ab der man Meister wird. Es war ein Durchschnitt einer Gruppe, die Streuung war groß, und spätere Metaanalysen zeigen, dass die Übemenge in der Musik nur etwa ein Fünftel der Leistungsunterschiede erklärt. Art und Qualität des Übens zählen ebenso.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">47.9</span><div><span class="kind">Am Klavier</span>Stell für die nächste Woche einen eigenen Übeplan auf, der Aufwärmen, gezielte Arbeit, Durchspielen und Blattspiel enthält. Führ dazu ein Übetagebuch.</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Ein guter Plan ist realistisch. Lieber 20 Minuten an sechs Tagen als 90 Minuten, die dann nicht stattfinden. Prüf am Ende der Woche im Tagebuch, ob die Ziele erreicht wurden, und pass den Plan an.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(47);
+
+  // Einfaches Metronom mit vorausschauender Planung
+  (function () {
+    const btn = document.getElementById("metro-btn");
+    const range = document.getElementById("metro-range");
+    const out = document.getElementById("metro-bpm");
+    const meterSel = document.getElementById("metro-meter");
+    const beatsEl = document.getElementById("metro-beats");
+    let bpm = 80, running = false, timer = null, nextTime = 0, beat = 0;
+    const visual = [];
+    function drawBeats() {
+      const n = +meterSel.value;
+      beatsEl.innerHTML = "";
+      for (let i = 0; i < n; i++) beatsEl.appendChild(document.createElement("span"));
+    }
+    function setBpm(v) {
+      bpm = Math.max(30, Math.min(208, v));
+      range.value = bpm; out.textContent = bpm;
+    }
+    function click(t, accent) {
+      const ctx = Book.audio.ctx;
+      const o = ctx.createOscillator(), g = ctx.createGain();
+      o.type = "square";
+      o.frequency.value = accent ? 1600 : 1000;
+      g.gain.setValueAtTime(accent ? 0.35 : 0.2, t);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.04);
+      o.connect(g); g.connect(Book.audio.out);
+      o.start(t); o.stop(t + 0.05);
+    }
+    function schedule() {
+      const ctx = Book.audio.ctx;
+      const n = +meterSel.value;
+      const spb = (n === 6 ? 30 : 60) / bpm; // 6/8: Achtel zählen, bpm gilt für punktierte Viertel
+      while (nextTime < ctx.currentTime + 0.12) {
+        const b = beat % n;
+        click(nextTime, b === 0 || (n === 6 && b === 3));
+        const delay = Math.max(0, (nextTime - ctx.currentTime) * 1000);
+        setTimeout(() => {
+          beatsEl.querySelectorAll("span").forEach((s, i) => s.classList.toggle("on", i === b));
+        }, delay);
+        nextTime += n === 6 ? spb / 1.5 : spb;
+        beat++;
+      }
+    }
+    function start() {
+      const ctx = Book.audio.ensure(); if (!ctx) return;
+      running = true; beat = 0; nextTime = ctx.currentTime + 0.05;
+      timer = setInterval(schedule, 25);
+      btn.textContent = "■ Stopp";
+    }
+    function stop() {
+      running = false; clearInterval(timer);
+      btn.textContent = "▶ Start";
+      beatsEl.querySelectorAll("span").forEach((s) => s.classList.remove("on"));
+    }
+    btn.addEventListener("click", () => (running ? stop() : start()));
+    range.addEventListener("input", () => setBpm(+range.value));
+    document.getElementById("metro-down").addEventListener("click", () => setBpm(bpm - 4));
+    document.getElementById("metro-up").addEventListener("click", () => setBpm(bpm + 4));
+    meterSel.addEventListener("change", () => { drawBeats(); beat = 0; });
+    drawBeats();
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Intervalle · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .partials svg { width: 100%; height: auto; display: block; }
+  .partials .axis { stroke: var(--line); }
+  .partials .pa { stroke: var(--ink); stroke-width: 2; }
+  .partials .pb { stroke: var(--accent); stroke-width: 2; }
+  .partials .hit { stroke: var(--deep); stroke-width: 6; opacity: 0.35; }
+  .partials .rough { fill: var(--bad); opacity: 0.25; }
+  .partials text { fill: var(--muted); font-family: var(--font-display); font-size: 11px; }
+  .partials text.h { fill: var(--ink); font-weight: 600; font-size: 12px; }
+  .songs td:first-child { white-space: nowrap; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil I · Kapitel 5</div>
+    <h1>Intervalle</h1>
+    <p class="lede">Ein Intervall ist der Abstand zwischen zwei Tönen. Wer Intervalle erkennt, liest Noten schneller, versteht Akkorde von innen und hört Melodien als Bewegung statt als Folge einzelner Töne.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>jedes Intervall bis zur Oktave nach Zahl und Qualität benennen,</li>
+      <li>Intervalle in Noten und auf der Klaviatur schnell erkennen und greifen,</li>
+      <li>Umkehrungen, enharmonische und zusammengesetzte Intervalle bestimmen,</li>
+      <li>die wichtigsten Intervalle am Klang erkennen,</li>
+      <li>erklären, warum eine Quinte „rein“ klingt und warum das Klavier dabei einen Kompromiss eingeht.</li>
+    </ul>
+  </div>
+
+  <!-- 5.1 -->
+  <h2 id="was">5.1 Was ein Intervall ist</h2>
+  <p>Ein <dfn id="g-intervall">Intervall</dfn> (lateinisch <em>intervallum</em>, „Zwischenraum“) beschreibt, wie weit zwei Töne auseinanderliegen. Erklingen die Töne nacheinander, spricht man von einem <dfn id="g-melodisches-intervall">melodischen Intervall</dfn>. Erklingen sie gleichzeitig, ist es ein <dfn id="g-harmonisches-intervall">harmonisches Intervall</dfn>. Der Abstand ist in beiden Fällen derselbe.</p>
+  <div class="abc" data-bpm="70" data-caption="Dasselbe Intervall c'–g' erst melodisch, dann harmonisch">
+    X:1
+    M:none
+    L:1/2
+    K:C
+    C G | [CG]2 |]
+  </div>
+  <p>Die kleinste Maßeinheit auf dem Klavier kennst du aus Kapitel 1: den <strong>Halbton</strong>, also den Schritt von einer Taste zur unmittelbar benachbarten, egal ob weiß oder schwarz. Jedes Intervall lässt sich in Halbtönen ausdrücken. Von c' nach g' sind es sieben Halbtöne.</p>
+  <figure>
+    <div class="kb" data-from="60" data-to="72" data-labels="white" data-marks="60 67:c2" data-brackets="60-67:7 Halbtöne" aria-label="Klaviatur mit markiertem c' und g', dazwischen sieben Halbtöne"></div>
+    <figcaption>c' und g' liegen sieben Halbtöne auseinander. Tippe die Tasten an, um sie zu hören.</figcaption>
+  </figure>
+  <p>Halbtöne zählen ist genau, aber es reicht nicht. Die Musiktheorie benennt ein Intervall mit <strong>zwei</strong> Angaben: einer <em>Zahl</em> und einer <em>Qualität</em>. Aus c'–g' wird so eine <em>reine Quinte</em>. Die nächsten beiden Abschnitte erklären beide Teile.</p>
+
+  <!-- 5.2 -->
+  <h2 id="zahl">5.2 Die Zahl: Stammtöne zählen</h2>
+  <p>Die Zahl eines Intervalls ergibt sich aus den <strong>Notennamen</strong>. Du zählst die Stammtöne vom unteren bis zum oberen Ton und nimmst dabei <em>beide</em> Endtöne mit. Von c bis e zählst du c, d, e: drei Töne, also eine Terz. Die Intervalle tragen lateinische Ordnungszahlen:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th class="num">Zahl</th><th>Name</th><th>Bedeutung</th><th>Beispiel</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>Prime</td><td>die erste</td><td>c–c</td></tr>
+        <tr><td class="num">2</td><td>Sekunde</td><td>die zweite</td><td>c–d</td></tr>
+        <tr><td class="num">3</td><td>Terz</td><td>die dritte</td><td>c–e</td></tr>
+        <tr><td class="num">4</td><td>Quarte</td><td>die vierte</td><td>c–f</td></tr>
+        <tr><td class="num">5</td><td>Quinte</td><td>die fünfte</td><td>c–g</td></tr>
+        <tr><td class="num">6</td><td>Sexte</td><td>die sechste</td><td>c–a</td></tr>
+        <tr><td class="num">7</td><td>Septime</td><td>die siebte</td><td>c–h</td></tr>
+        <tr><td class="num">8</td><td>Oktave</td><td>die achte</td><td>c–c'</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Die Zahl hängt nur von den Buchstaben ab, nicht von Vorzeichen. c–e, c–es und cis–e sind alle Terzen. c–dis ist dagegen eine Sekunde, obwohl dis auf derselben Taste liegt wie es.</p>
+  </div>
+  <p>Diese Regel wirkt am Anfang pedantisch. Sie hat aber einen praktischen Grund: In der Notenschrift steht jeder Buchstabe auf einer festen Linie oder in einem festen Zwischenraum. Die Zahl eines Intervalls siehst du deshalb sofort am Notenbild (Abschnitt 5.6), ganz ohne Halbtöne zu zählen.</p>
+
+  <section class="layer deep" data-title="Warum zählt man beide Töne mit?">
+    <p>Dass c–e eine Terz (3) ist, obwohl nur zwei Schritte dazwischen liegen, wirkt unlogisch. Die Zählweise stammt aus einer Zeit, in der Zählen bei 1 begann und die Null als Zahl in Europa noch nicht gebräuchlich war. Die Namen sind lateinische Ordnungszahlen: <em>prima, secunda, tertia, quarta, quinta …</em> Gezählt wird also „der wievielte Ton ist es?“ und nicht „wie viele Schritte sind es?“.</p>
+    <p>Dieselbe Logik steckt noch in der Alltagssprache. „Heute in acht Tagen“ meint eine Woche, also sieben Tage später, weil heute mitgezählt wird. Im Französischen heißen zwei Wochen <em>quinze jours</em>, fünfzehn Tage.</p>
+    <p>Die Zählweise hat Folgen, die dir später begegnen:</p>
+    <ul>
+      <li>Zwei Terzen übereinander ergeben keine Sechs, sondern eine Quinte: c–e plus e–g ergibt c–g. Der mittlere Ton wird doppelt gezählt, also gilt 3 + 3 − 1 = 5.</li>
+      <li>Zwei Oktaven ergeben 8 + 8 − 1 = 15. Deshalb heißt die Doppeloktave in alten Lehrbüchern <em>Quindezime</em> (die fünfzehnte).</li>
+      <li>Bei der Umkehrung (Abschnitt 5.8) addieren sich Intervall und Umkehrung zu 9 statt zu 8.</li>
+    </ul>
+    <p>Die Halbtonzählung ist dagegen eine echte Abstandsmessung mit Null als Startpunkt. Die Prime hat 0 Halbtöne, die Oktave 12. Beide Systeme existieren nebeneinander, und du brauchst beide.</p>
+  </section>
+
+  <!-- 5.3 -->
+  <h2 id="qualitaet">5.3 Die Qualität: rein, groß, klein, übermäßig, vermindert</h2>
+  <p>Die Zahl allein ist ungenau. c–e und c–es sind beide Terzen, klingen aber deutlich verschieden: c–e hat vier Halbtöne, c–es nur drei. Die <dfn id="g-qualitaet">Qualität</dfn> eines Intervalls gibt an, welche Größe genau gemeint ist.</p>
+  <p>Die Intervalle teilen sich in zwei Familien:</p>
+  <ul>
+    <li><strong>Prime, Quarte, Quinte, Oktave</strong> haben eine Normalform, die <dfn id="g-rein">rein</dfn> heißt.</li>
+    <li><strong>Sekunde, Terz, Sexte, Septime</strong> haben zwei Normalformen, <dfn id="g-gross-klein">groß</dfn> und <dfn>klein</dfn>. Klein ist einen Halbton kleiner als groß.</li>
+  </ul>
+  <p>Ist ein Intervall um einen Halbton größer als die große bzw. reine Form, heißt es <dfn id="g-uebermaessig">übermäßig</dfn>. Ist es um einen Halbton kleiner als die kleine bzw. reine Form, heißt es <dfn id="g-vermindert">vermindert</dfn>.</p>
+  <div class="table-scroll">
+    <table>
+      <caption class="eyebrow" style="text-align:left">Halbtöne je Zahl und Qualität</caption>
+      <thead><tr><th>Intervall</th><th class="num">vermindert</th><th class="num">klein</th><th class="num">rein</th><th class="num">groß</th><th class="num">übermäßig</th></tr></thead>
+      <tbody>
+        <tr><td>Prime</td><td class="num">–</td><td class="num">–</td><td class="num">0</td><td class="num">–</td><td class="num">1</td></tr>
+        <tr><td>Sekunde</td><td class="num">0</td><td class="num">1</td><td class="num">–</td><td class="num">2</td><td class="num">3</td></tr>
+        <tr><td>Terz</td><td class="num">2</td><td class="num">3</td><td class="num">–</td><td class="num">4</td><td class="num">5</td></tr>
+        <tr><td>Quarte</td><td class="num">4</td><td class="num">–</td><td class="num">5</td><td class="num">–</td><td class="num">6</td></tr>
+        <tr><td>Quinte</td><td class="num">6</td><td class="num">–</td><td class="num">7</td><td class="num">–</td><td class="num">8</td></tr>
+        <tr><td>Sexte</td><td class="num">7</td><td class="num">8</td><td class="num">–</td><td class="num">9</td><td class="num">10</td></tr>
+        <tr><td>Septime</td><td class="num">9</td><td class="num">10</td><td class="num">–</td><td class="num">11</td><td class="num">12</td></tr>
+        <tr><td>Oktave</td><td class="num">11</td><td class="num">–</td><td class="num">12</td><td class="num">–</td><td class="num">13</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Diese Tabelle musst du nicht auswendig lernen. Merk dir die fett markierten Normalformen in der nächsten Tabelle, der Rest folgt durch „einen Halbton mehr oder weniger“.</p>
+
+  <section class="layer deep" data-title="Warum gibt es zwei Familien?">
+    <p>Die Einteilung in „rein“ und „groß/klein“ ist keine Willkür. Sie folgt aus zwei unabhängigen Beobachtungen, die zum selben Ergebnis führen.</p>
+    <h4>1. Die Logik der weißen Tasten</h4>
+    <p>Spiel auf den weißen Tasten alle Terzen: c–e, d–f, e–g, f–a, g–h, a–c, h–d. Sie kommen in zwei Größen vor: Drei haben vier Halbtöne (c–e, f–a, g–h), vier haben drei Halbtöne (d–f, e–g, a–c, h–d). Dasselbe gilt für Sekunden, Sexten und Septimen. Sie kommen im System der Stammtöne <em>natürlicherweise in zwei Größen</em> vor, deshalb brauchen sie zwei Namen: groß und klein.</p>
+    <p>Spiel nun alle Quinten auf weißen Tasten. Sechs von sieben haben genau sieben Halbtöne. Nur h–f fällt aus der Reihe. Bei den Quarten ist es genauso, nur f–h ist größer. Quarten und Quinten haben also eine <em>einzige</em> Normalgröße, und die Ausnahme ist ein Sonderfall: der Tritonus (Abschnitt 5.4). Eine Größe braucht nur einen Namen: rein.</p>
+    <div class="kb" data-from="60" data-to="77" data-labels="white" data-marks="71:c3 77:c3" aria-label="Die verminderte Quinte h'–f'' auf den weißen Tasten"></div>
+    <p class="muted">h'–f'': die einzige Quinte auf weißen Tasten mit nur sechs Halbtönen.</p>
+    <h4>2. Die Akustik</h4>
+    <p>Die reinen Intervalle sind zugleich die mit den einfachsten Frequenzverhältnissen: Prime 1:1, Oktave 2:1, Quinte 3:2, Quarte 4:3 (Abschnitt 5.10 erklärt, was das bedeutet). Diese Intervalle verschmelzen beim Hören besonders stark, daher das Wort <em>rein</em> (lateinisch <em>perfectus</em>, im Englischen bis heute <em>perfect</em>).</p>
+    <p>Die reinen Intervalle bleiben auch bei der Umkehrung rein. Die Umkehrung einer Quinte ist eine Quarte, und 2:1 geteilt durch 3:2 ergibt genau 4:3. Diese Familie bildet also ein geschlossenes System.</p>
+  </section>
+
+  <!-- 5.4 -->
+  <h2 id="tabelle">5.4 Alle Intervalle innerhalb der Oktave</h2>
+  <p>Hier sind alle Intervalle mit ihren üblichen Namen, nach Halbtönen geordnet. Tippe eine Zeile an: Du hörst das Intervall erst melodisch und dann harmonisch.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th class="num">HT</th><th>Name</th><th>Kürzel</th><th>Englisch</th><th>von c'</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 60" data-mode="both"><td class="num">0</td><td><strong>reine Prime</strong></td><td>r1</td><td>P1, unison</td><td>c'–c'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 61" data-mode="both"><td class="num">1</td><td><strong>kleine Sekunde</strong></td><td>k2</td><td>m2</td><td>c'–des'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 62" data-mode="both"><td class="num">2</td><td><strong>große Sekunde</strong></td><td>g2</td><td>M2</td><td>c'–d'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63" data-mode="both"><td class="num">3</td><td><strong>kleine Terz</strong></td><td>k3</td><td>m3</td><td>c'–es'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 64" data-mode="both"><td class="num">4</td><td><strong>große Terz</strong></td><td>g3</td><td>M3</td><td>c'–e'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 65" data-mode="both"><td class="num">5</td><td><strong>reine Quarte</strong></td><td>r4</td><td>P4</td><td>c'–f'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 66" data-mode="both"><td class="num">6</td><td><strong>Tritonus</strong>: übermäßige Quarte oder verminderte Quinte</td><td>ü4 / v5</td><td>A4 / d5, tritone</td><td>c'–fis' / c'–ges'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 67" data-mode="both"><td class="num">7</td><td><strong>reine Quinte</strong></td><td>r5</td><td>P5</td><td>c'–g'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 68" data-mode="both"><td class="num">8</td><td><strong>kleine Sexte</strong></td><td>k6</td><td>m6</td><td>c'–as'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 69" data-mode="both"><td class="num">9</td><td><strong>große Sexte</strong></td><td>g6</td><td>M6</td><td>c'–a'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 70" data-mode="both"><td class="num">10</td><td><strong>kleine Septime</strong></td><td>k7</td><td>m7</td><td>c'–b'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 71" data-mode="both"><td class="num">11</td><td><strong>große Septime</strong></td><td>g7</td><td>M7</td><td>c'–h'</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 72" data-mode="both"><td class="num">12</td><td><strong>reine Oktave</strong></td><td>r8</td><td>P8, octave</td><td>c'–c''</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die englischen Kürzel brauchst du für Akkordsymbole und englischsprachige Lernvideos: <em>m</em> steht für <em>minor</em> (klein), <em>M</em> für <em>major</em> (groß), <em>P</em> für <em>perfect</em> (rein), <em>A</em> für <em>augmented</em> (übermäßig) und <em>d</em> für <em>diminished</em> (vermindert). Vorsicht bei der Schreibweise: Das englische <em>B</em> ist unser <em>H</em>. Das deutsche <em>b</em> heißt auf Englisch <em>B♭</em>.</p>
+  <p>Der <dfn id="g-tritonus">Tritonus</dfn> teilt die Oktave genau in der Mitte und heißt so, weil er aus drei Ganztönen besteht (c–d–e–fis). Je nach Schreibweise ist er eine übermäßige Quarte (c–fis) oder eine verminderte Quinte (c–ges).</p>
+
+  <section class="layer deep" data-title="Der Tritonus und der „Teufel in der Musik“">
+    <p>Über den Tritonus hält sich hartnäckig die Geschichte, die Kirche habe ihn im Mittelalter als <em>diabolus in musica</em> („Teufel in der Musik“) verboten. Belegt ist das nicht. Der lateinische Merkspruch <em>mi contra fa est diabolus in musica</em> taucht erst in späteren Lehrschriften auf. Er bezeichnet eine satztechnische Regel und kein Verbot.</p>
+    <p>Wahr ist: Im mittelalterlichen Tonsystem wurde der Tritonus zwischen f und h als besonders unbequem empfunden und in Melodien gezielt umgangen, oft indem man h zu b erniedrigte. Daher stammt übrigens unser deutsches „b“ als Name für den erniedrigten Ton (Kapitel 1 erzählt die ganze Geschichte von b und h).</p>
+    <p>Dass der Tritonus instabil klingt, hat zwei Gründe. Akustisch hat er kein einfaches Frequenzverhältnis. Und weil er die Oktave halbiert, ist er symmetrisch: Seine Umkehrung ist wieder ein Tritonus. Dem Ohr fehlt damit ein Anhaltspunkt, welcher Ton „unten“ und welcher „oben“ ist. Genau diese Unruhe macht ihn später so wertvoll. Im Dominantseptakkord (Kapitel 15) ist der Tritonus der Motor, der eine Auflösung erzwingt.</p>
+  </section>
+
+  <!-- 5.5 -->
+  <h2 id="bestimmen">5.5 Intervalle bestimmen in drei Schritten</h2>
+  <p>Mit Zahl und Halbtönen kannst du jedes Intervall sicher bestimmen:</p>
+  <ol>
+    <li><strong>Zahl:</strong> Zähle die Stammtöne (Buchstaben) vom unteren zum oberen Ton, beide eingeschlossen. Vorzeichen ignorierst du dabei.</li>
+    <li><strong>Halbtöne:</strong> Zähle die Halbtonschritte auf der Klaviatur.</li>
+    <li><strong>Qualität:</strong> Schlag in der Tabelle aus 5.3 nach, welche Qualität diese Zahl mit dieser Halbtonzahl hat.</li>
+  </ol>
+  <h4>Beispiel 1: e–g</h4>
+  <p>Zahl: e, f, g ergibt eine Terz. Halbtöne: e→f→fis→g sind drei. Eine Terz mit drei Halbtönen ist eine <strong>kleine Terz</strong>.</p>
+  <h4>Beispiel 2: f–h</h4>
+  <p>Zahl: f, g, a, h ergibt eine Quarte. Halbtöne: sechs. Eine Quarte mit sechs Halbtönen ist <strong>übermäßig</strong>. Das ist der Tritonus auf den weißen Tasten.</p>
+  <h4>Beispiel 3: cis–e</h4>
+  <p>Zahl: c(is), d, e ergibt eine Terz, das Kreuz ändert die Zahl nicht. Halbtöne: cis→d→dis→e sind drei, also eine <strong>kleine Terz</strong>. Zum Vergleich: c–e ist eine große Terz. Wird der untere Ton erhöht, schrumpft das Intervall.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Ein Vorzeichen am <em>oberen</em> Ton wirkt direkt: ♯ vergrößert, ♭ verkleinert. Ein Vorzeichen am <em>unteren</em> Ton wirkt umgekehrt: ♯ verkleinert, ♭ vergrößert. Die Zahl bleibt immer gleich.</p>
+  </div>
+  <p>Wenn du in Kapitel 6 die Dur-Tonleiter kennst, gibt es eine noch schnellere Methode: Stell dir den unteren Ton als Grundton einer Dur-Tonleiter vor. Gehört der obere Ton zu dieser Tonleiter, ist das Intervall groß oder rein.</p>
+
+  <section class="layer piano" data-title="Intervalle sehen statt zählen">
+    <p>Halbtöne zählen ist am Anfang nötig, beim Spielen aber zu langsam. Mit der Zeit erkennt die Hand Intervalle als <strong>Formen</strong>. Ein paar Muster helfen dabei:</p>
+    <ul>
+      <li><strong>Terzen auf weißen Tasten:</strong> immer eine Taste überspringen. Liegen zwei schwarze Tasten dazwischen, ist die Terz groß (c–e, f–a, g–h). Liegt nur eine dazwischen, ist sie klein (d–f, e–g, a–c, h–d).</li>
+      <li><strong>Quinten:</strong> Weiß zu weiß ist immer rein, außer h–f. Schwarz zu schwarz ist ebenfalls rein (cis–gis, dis–ais, fis–cis, gis–dis), außer bei b–f und h–fis, wo eine Taste weiß ist. Kurz gesagt: Eine reine Quinte hat an beiden Enden dieselbe Tastenfarbe, außer wenn h oder b beteiligt ist.</li>
+      <li><strong>Quarten:</strong> Weiß zu weiß ist immer rein, außer f–h.</li>
+      <li><strong>Oktaven:</strong> Beide Töne haben denselben Namen und dieselbe Lage zu den schwarzen Tasten. Die Hand spürt die Oktave schnell als feste Spannweite.</li>
+    </ul>
+    <div class="kb" data-from="60" data-to="83" data-labels="white" data-marks="60 64 65:c2 69:c2 67:c3 71:c3" aria-label="Die drei großen Terzen auf weißen Tasten: c'–e', f'–a', g'–h'"></div>
+    <p class="muted">Die drei großen Terzen auf weißen Tasten: c'–e' (blau), f'–a' (petrol), g'–h' (orange).</p>
+    <p><strong>Übung:</strong> Spiel mit der rechten Hand auf den weißen Tasten alle Terzen von c' aufwärts (c'–e', d'–f', e'–g' …) und sag laut „groß“ oder „klein“. Wiederhole dasselbe mit Quinten. Nach einigen Tagen musst du nicht mehr nachdenken.</p>
+  </section>
+
+  <!-- 5.6 -->
+  <h2 id="notenbild">5.6 Intervalle im Notenbild</h2>
+  <p>Im Notensystem kannst du die Zahl eines Intervalls ablesen, ohne die Noten zu benennen. Es gibt eine einfache Regel:</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p><strong>Ungerade Intervalle</strong> (Prime, Terz, Quinte, Septime): beide Noten auf Linien oder beide in Zwischenräumen.<br>
+    <strong>Gerade Intervalle</strong> (Sekunde, Quarte, Sexte, Oktave): eine Note auf einer Linie, die andere in einem Zwischenraum.</p>
+  </div>
+  <p>Eine Terz reicht von einer Linie zur nächsten Linie. Eine Quinte überspringt eine Linie, eine Septime zwei. Bei harmonischen Sekunden stehen die Notenköpfe versetzt nebeneinander, weil sie übereinander keinen Platz haben.</p>
+  <div class="abc" data-bpm="60" data-caption="Terzen, Quinten, Sekunden und Quarten im Notenbild">
+    X:1
+    M:none
+    L:1/2
+    K:C
+    "^Terz" [EG] [FA] | "^Quinte" [EB] [Fc] | "^Sekunde" [EF] [FG] | "^Quarte" [EA] [DG] |]
+  </div>
+  <p>Die Qualität kannst du am Notenbild allein nicht ablesen. Dafür brauchst du die Vorzeichen und die Tonart. Das Zusammenspiel von beidem behandelt Kapitel 7.</p>
+
+  <section class="layer piano" data-title="Relativ lesen: vom Notenbild direkt in die Hand">
+    <p>Viele Anfänger lesen jede Note einzeln: „Das ist ein g, wo ist das g?“ Geübte Spieler lesen vor allem die <strong>Abstände</strong>: „Nächste Note eine Terz höher.“ Die Hand weiß dann, dass der Finger einen Finger weiter springt, ohne dass der Kopf den Notennamen braucht.</p>
+    <p>Bei Fünf-Finger-Lage (jeder Finger auf einer eigenen weißen Taste) gilt eine einfache Zuordnung: Ein Sekundschritt ist der Nachbarfinger, ein Terzschritt überspringt einen Finger, und vom Daumen zum kleinen Finger ist eine Quinte.</p>
+    <p><strong>Übung:</strong> Nimm ein einfaches Stück, das du kennst. Benenne beim Lesen nur die erste Note und für alle weiteren nur das Intervall zur vorigen („Sekunde hoch, Terz runter …“). Das trainiert genau die Fähigkeit, die Blattspiel schnell macht (Kapitel 48).</p>
+  </section>
+
+  <!-- 5.7 -->
+  <h2 id="enharmonik">5.7 Enharmonische Intervalle</h2>
+  <p>Auf dem Klavier haben manche Intervalle verschiedene Namen, obwohl sie gleich klingen und dieselben Tasten benutzen. c'–dis' und c'–es' haben beide drei Halbtöne. c'–dis' ist aber eine <em>übermäßige Sekunde</em> (c, d), c'–es' eine <em>kleine Terz</em> (c, d, e). Solche Paare heißen <dfn id="g-enharmonisch">enharmonisch</dfn> verwechselt.</p>
+  <div class="kb" data-from="60" data-to="67" data-labels="none" data-marks="60:: 63:c2:dis/es" aria-label="Die Taste dis'/es' über c'"></div>
+  <p>Welcher Name richtig ist, entscheidet der Zusammenhang. In einer Melodie, die von dis zu e weitergeht, schreibt man dis. In c-Moll, wo es ein fester Ton der Tonart ist, schreibt man es.</p>
+
+  <section class="layer deep" data-title="Warum unterscheiden, wenn es dieselbe Taste ist?">
+    <p>Für das Klavier ist dis gleich es. Für die Musik nicht, und dafür gibt es drei Gründe.</p>
+    <p><strong>1. Lesbarkeit.</strong> Notenschrift ist nach Buchstaben organisiert. Eine Tonleiter oder ein Akkord wird nur dann übersichtlich, wenn jeder Buchstabe einmal vorkommt. Der Akkord c–es–g sieht wie ein Terzenstapel aus (Linie, Linie, Linie). Als c–dis–g wäre die Struktur nicht mehr zu erkennen.</p>
+    <p><strong>2. Richtung.</strong> Der Name verrät, wohin ein Ton strebt. Ein dis ist ein „erhöhtes d“ und zieht meist nach oben zum e. Ein es ist ein „erniedrigtes e“ und sinkt meist zum d. Wer Noten liest, bekommt diese Information gratis mit.</p>
+    <p><strong>3. Andere Instrumente.</strong> Sänger, Geiger oder Bläser können die Tonhöhe frei anpassen. In anderen Stimmungssystemen liegen dis und es tatsächlich nicht gleich hoch. Je nach System beträgt der Unterschied etwa ein Viertel bis zwei Fünftel eines Halbtons. Das Klavier legt beide auf eine Taste. Warum das ein bewusster Kompromiss ist, erklärt die Vertiefung in Abschnitt 5.10.</p>
+  </section>
+
+  <!-- 5.8 -->
+  <h2 id="umkehrung">5.8 Umkehrung</h2>
+  <p>Ein Intervall wird <dfn id="g-umkehrung">umgekehrt</dfn>, wenn man den unteren Ton eine Oktave nach oben legt (oder den oberen eine Oktave nach unten). Aus c'–e' wird e'–c''. Für Umkehrungen gelten zwei feste Regeln:</p>
+  <ul>
+    <li><strong>Die Zahlen ergänzen sich zu 9:</strong> Prime ↔ Oktave, Sekunde ↔ Septime, Terz ↔ Sexte, Quarte ↔ Quinte.</li>
+    <li><strong>Die Qualität kippt:</strong> groß ↔ klein, übermäßig ↔ vermindert, rein bleibt rein.</li>
+  </ul>
+  <p>Beispiel: c'–e' ist eine große Terz (4 Halbtöne). Die Umkehrung e'–c'' ist eine kleine Sexte (8 Halbtöne). 4 + 8 = 12.</p>
+  <figure>
+    <div class="kb" data-from="60" data-to="76" data-labels="white" data-marks="60 64:c2 72" data-brackets="60-64:g3 (4);64-72:k6 (8)" aria-label="Große Terz c'–e' und ihre Umkehrung e'–c'', die kleine Sexte"></div>
+    <figcaption>Große Terz und kleine Sexte ergänzen sich zur Oktave.</figcaption>
+  </figure>
+  <p>Umkehrungen sind praktisch: Statt zu zählen, wie weit c–a ist, kannst du denken „a–c ist eine kleine Terz, also ist c–a eine große Sexte“. Kleine Intervalle erkennt man leichter als große.</p>
+
+  <section class="layer deep" data-title="Warum 9 und warum die Qualität kippt">
+    <p>Intervall und Umkehrung füllen zusammen genau eine Oktave. In Halbtönen gerechnet ist das sauber: Beide Teile ergeben zusammen 12. In der Zählung mit Stammtönen wird der gemeinsame Mittelton doppelt gezählt (siehe die Vertiefung in 5.2). Aus 8 wird so 8 + 1 = 9.</p>
+    <p>Das Kippen der Qualität folgt aus der Summe 12. Eine große Terz (4) lässt für die Sexte 8 übrig, und 8 ist bei der Sexte die kleine Form. Ist das eine Intervall größer als normal, muss das andere kleiner als normal sein, damit die Summe gleich bleibt. Rein bleibt rein, weil Quarte (5) und Quinte (7) einander genau zu 12 ergänzen.</p>
+    <p>In Frequenzverhältnissen wird aus der Addition eine Division: Oktave 2:1 geteilt durch große Terz 5:4 ergibt 8:5, das Verhältnis der kleinen Sexte. Warum Intervalle sich wie Brüche verhalten, erklärt Abschnitt 5.10.</p>
+  </section>
+
+  <!-- 5.9 -->
+  <h2 id="ueber-oktave">5.9 Intervalle über die Oktave hinaus</h2>
+  <p>Intervalle, die größer als eine Oktave sind, heißen <dfn id="g-zusammengesetzt">zusammengesetzte Intervalle</dfn>. Sie haben eigene Namen, verhalten sich aber wie das entsprechende einfache Intervall plus eine Oktave. Ziehst du von der Zahl 7 ab, bekommst du das einfache Intervall (wegen der doppelten Zählung 7 und nicht 8).</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th class="num">Zahl</th><th>Name</th><th>entspricht</th><th class="num">HT (klein/rein · groß)</th><th>von c'</th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 74" data-mode="both"><td class="num">9</td><td>None</td><td>Oktave + Sekunde</td><td class="num">13 · 14</td><td>c'–d''</td></tr>
+        <tr class="play-row" data-play="60 76" data-mode="both"><td class="num">10</td><td>Dezime</td><td>Oktave + Terz</td><td class="num">15 · 16</td><td>c'–e''</td></tr>
+        <tr class="play-row" data-play="60 77" data-mode="both"><td class="num">11</td><td>Undezime</td><td>Oktave + Quarte</td><td class="num">17</td><td>c'–f''</td></tr>
+        <tr class="play-row" data-play="60 79" data-mode="both"><td class="num">12</td><td>Duodezime</td><td>Oktave + Quinte</td><td class="num">19</td><td>c'–g''</td></tr>
+        <tr class="play-row" data-play="60 81" data-mode="both"><td class="num">13</td><td>Tredezime</td><td>Oktave + Sexte</td><td class="num">20 · 21</td><td>c'–a''</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>None, Undezime und Tredezime begegnen dir wieder als <strong>9, 11 und 13</strong> in Akkordsymbolen wie C9 oder G13 (Kapitel 27). In der Praxis nennt man die anderen meist einfach „Terz plus Oktave“ usw.</p>
+
+  <!-- 5.10 -->
+  <h2 id="konsonanz">5.10 Konsonanz und Dissonanz</h2>
+  <p>Manche Intervalle klingen ruhig und verschmolzen, andere spannungsvoll oder reibend. Die traditionelle Musiktheorie teilt sie so ein:</p>
+  <ul>
+    <li><dfn id="g-konsonanz">Vollkommene Konsonanzen</dfn>: reine Prime, reine Oktave, reine Quinte. Die Töne verschmelzen fast zu einem Klang.</li>
+    <li><strong>Unvollkommene Konsonanzen</strong>: große und kleine Terz, große und kleine Sexte. Wohlklingend und voll, aber mit eigenem Charakter.</li>
+    <li><dfn id="g-dissonanz">Dissonanzen</dfn>: Sekunden, Septimen, der Tritonus und alle übermäßigen und verminderten Intervalle. Sie erzeugen Spannung, die nach Auflösung verlangt.</li>
+  </ul>
+  <p>Die <strong>reine Quarte</strong> ist ein Sonderfall. Für sich allein klingt sie konsonant. Liegt sie aber über dem tiefsten Ton eines Satzes, wird sie in der klassischen Satzlehre wie eine Dissonanz behandelt (mehr dazu in Kapitel 33).</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="60 67" data-mode="harm">▶ Quinte (verschmolzen)</button>
+    <button class="btn" type="button" data-play="60 64" data-mode="harm">▶ große Terz (voll)</button>
+    <button class="btn" type="button" data-play="60 71" data-mode="harm">▶ große Septime (reibend)</button>
+    <button class="btn" type="button" data-play="60 61" data-mode="harm">▶ kleine Sekunde (scharf)</button>
+  </div>
+  <p>„Dissonant“ heißt nicht „falsch“ oder „hässlich“. Ohne Dissonanzen hätte Musik keine Bewegung. Spannung und Lösung sind der Atem der tonalen Musik, und sie ziehen sich durch das ganze Buch.</p>
+
+  <section class="layer deep" data-title="Warum klingt eine Quinte rein? Frequenzen, Obertöne und Schwebungen">
+    <h4>Ton als Schwingung</h4>
+    <p>Ein Ton ist eine periodische Luftdruckschwankung. Die Zahl der Schwingungen pro Sekunde heißt <dfn id="g-frequenz">Frequenz</dfn> und wird in Hertz (Hz) gemessen. Der Stimmton a' schwingt mit 440 Hz, das c' in der Mitte des Klaviers mit etwa 261,6 Hz. Je höher die Frequenz, desto höher der Ton.</p>
+    <p>Entscheidend ist: Unser Ohr hört Tonhöhen nicht als <em>Differenz</em> von Frequenzen, sondern als <em>Verhältnis</em>. Eine Oktave höher bedeutet immer die doppelte Frequenz: von 110 auf 220 Hz genauso wie von 440 auf 880 Hz. Deshalb verhalten sich Intervalle wie Brüche. Intervalle übereinanderlegen heißt, ihre Verhältnisse zu multiplizieren.</p>
+
+    <h4>Die Obertonreihe</h4>
+    <p>Eine Klaviersaite schwingt nicht nur als Ganzes, sondern gleichzeitig in Hälften, Dritteln, Vierteln und so weiter. Jede dieser Teilschwingungen erzeugt einen eigenen, leiseren Ton mit der doppelten, dreifachen, vierfachen … Frequenz. Diese <dfn id="g-oberton">Teiltöne</dfn> (auch Obertöne oder Partialtöne) hörst du nicht einzeln. Sie verschmelzen zur Klangfarbe des Tons.</p>
+    <p>Auf dem großen C (65,4 Hz) ergeben die ersten acht Teiltöne diese Töne:</p>
+    <div class="kb" data-from="36" data-to="72" data-labels="none" data-marks="36::1 48::2 55::3 60::4 64::5 67::6 70:c3:7 72::8" aria-label="Die ersten acht Teiltöne über dem großen C"></div>
+    <div class="btn-row">
+      <button class="btn" type="button" id="ot-seq">▶ Teiltöne einzeln nacheinander</button>
+      <button class="btn" type="button" id="ot-all">▶ Alle zusammen</button>
+    </div>
+    <p>Wenn du alle zusammen spielst, hörst du keinen Akkord, sondern einen einzigen hellen Ton auf C. So verschmelzen Teiltöne zu einer Klangfarbe. (Der 7. Teilton liegt etwas tiefer als das b auf dem Klavier und ist deshalb anders markiert.)</p>
+    <p>Die Abstände zwischen benachbarten Teiltönen sind genau unsere wichtigsten Intervalle, mit immer kleiner werdenden Verhältnissen:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Teiltöne</th><th>Verhältnis</th><th>Intervall</th></tr></thead>
+        <tbody>
+          <tr><td>1 → 2</td><td class="mono">2:1</td><td>Oktave (C–c)</td></tr>
+          <tr><td>2 → 3</td><td class="mono">3:2</td><td>Quinte (c–g)</td></tr>
+          <tr><td>3 → 4</td><td class="mono">4:3</td><td>Quarte (g–c')</td></tr>
+          <tr><td>4 → 5</td><td class="mono">5:4</td><td>große Terz (c'–e')</td></tr>
+          <tr><td>5 → 6</td><td class="mono">6:5</td><td>kleine Terz (e'–g')</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Die Reihenfolge, in der die Intervalle auftauchen, entspricht ziemlich genau der traditionellen Rangfolge der Konsonanz: Oktave, Quinte, Quarte, Terzen. Das ist kein Zufall.</p>
+
+    <h4>Warum einfache Verhältnisse glatt klingen</h4>
+    <p>Spielst du zwei Töne zusammen, erklingen auch beide Obertonreihen. Bei einem einfachen Verhältnis fallen viele Teiltöne exakt zusammen. Bei einer Quinte über einem gedachten Ton von 100 Hz hat der untere Ton Teiltöne bei 100, 200, 300, 400 … Hz und der obere bei 150, 300, 450, 600 … Hz. Jeder zweite Teilton des oberen Tons deckt sich mit einem des unteren. Der Klang wirkt dadurch wie aus einem Guss.</p>
+    <figure class="partials" id="partials-fig"></figure>
+    <p>Liegen zwei Teiltöne dagegen <em>nah beieinander, aber nicht genau aufeinander</em>, überlagern sie sich zu einem schnellen Lauter-Leiser-Pulsieren. Das nennt man <dfn id="g-schwebung">Schwebung</dfn>. Bis etwa 15 Schwebungen pro Sekunde hörst du sie als Pulsieren oder Wabern. Schnellere Schwebungen nimmt das Ohr als <em>Rauigkeit</em> wahr, und genau die macht eine kleine Sekunde scharf. Diese Erklärung geht auf Hermann von Helmholtz (1863) zurück. Plomp und Levelt haben sie 1965 experimentell bestätigt: Am rauesten klingen zwei Sinustöne, wenn ihr Abstand ungefähr ein Viertel der sogenannten kritischen Bandbreite des Gehörs beträgt.</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-tone="440 445" data-dur="4">▶ 440 + 445 Hz: langsame Schwebung</button>
+      <button class="btn" type="button" data-tone="440 466.16" data-dur="3">▶ 440 + 466 Hz: Rauigkeit</button>
+    </div>
+
+    <h4>Nicht nur Physik</h4>
+    <p>Die Akustik erklärt viel, aber nicht alles. Was als konsonant gilt, hat sich historisch verschoben. Im frühen Mittelalter galten nur Oktave, Quinte und Quarte als Konsonanzen, die Terz nicht. Ab dem 13. Jahrhundert wurden Terzen und Sexten nach und nach als unvollkommene Konsonanzen anerkannt. Als Schlussklang setzte sich die Terz erst im 15. und 16. Jahrhundert durch. Heute klingt für Ohren, die mit Jazz aufgewachsen sind, ein Akkord mit großer Septime eher weich als scharf. Konsonanz ist also eine Mischung aus Physik (Obertöne, Rauigkeit) und Hörgewohnheit.</p>
+  </section>
+
+  <section class="layer deep" data-title="Warum zwölf Töne und warum das Klavier ein Kompromiss ist">
+    <h4>Die Quinten schließen sich fast</h4>
+    <p>Stapelt man von c aus reine Quinten (3:2) übereinander, erhält man c, g, d, a, e, h, fis, cis, gis, dis, ais, eis, his. Nach zwölf Quinten landet man wieder auf einem c (his), sieben Oktaven höher. Rechnet man nach, passt es fast:</p>
+    <div class="formula">(3/2)<sup>12</sup> ≈ 129,75 &nbsp;&nbsp;aber&nbsp;&nbsp; 2<sup>7</sup> = 128</div>
+    <p>Zwölf reine Quinten sind etwas größer als sieben Oktaven. Die Differenz heißt <dfn id="g-komma">pythagoreisches Komma</dfn> und beträgt etwa ein Viertel Halbton. Dass zwölf Quinten den Kreis <em>beinahe</em> schließen, ist der eigentliche Grund für zwölf Töne pro Oktave. Bei kleineren Zahlen passt es schlechter. Genauer schließen sich die Quinten erst mit deutlich mehr Tönen pro Oktave, etwa 41 oder 53. Dieser Quintenkreis kehrt in Kapitel 7 als Quintenzirkel wieder. Und wer nur fünf bzw. sieben Töne im Quintabstand stapelt, erhält genau die schwarzen (ges, des, as, es, b) bzw. die weißen Tasten (f, c, g, d, a, e, h). Mehr dazu in Kapitel 6 und 9.</p>
+
+    <h4>Cent: ein Maß für Intervalle</h4>
+    <p>Um kleine Unterschiede vergleichen zu können, teilt man die Oktave in 1200 <dfn id="g-cent">Cent</dfn>. Ein Halbton auf dem Klavier hat genau 100 Cent. Für ein Frequenzverhältnis berechnet man:</p>
+    <div class="formula">Cent = 1200 · log<sub>2</sub>(f<sub>2</sub> / f<sub>1</sub>)</div>
+    <p>Das pythagoreische Komma hat damit rund 23,5 Cent.</p>
+
+    <h4>Gleichstufige Stimmung</h4>
+    <p>Mit reinen Intervallen lässt sich kein Tasteninstrument bauen, das in allen Tonarten gut klingt. Irgendwo muss das Komma untergebracht werden. Die heute übliche Lösung ist die <dfn id="g-gleichstufig">gleichstufige Stimmung</dfn>: Die Oktave wird in zwölf exakt gleiche Halbtöne geteilt. Jeder Halbton hat das Verhältnis</p>
+    <div class="formula"><sup>12</sup>√2 = 2<sup>1/12</sup> ≈ 1,05946</div>
+    <p>Dafür ist außer der Oktave kein Intervall mehr ganz rein. Die Abweichungen sind unterschiedlich groß:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Intervall</th><th>rein</th><th class="num">Cent rein</th><th class="num">Cent Klavier</th><th class="num">Abweichung</th></tr></thead>
+        <tbody>
+          <tr><td>kleine Sekunde</td><td class="mono">16:15</td><td class="num">111,7</td><td class="num">100</td><td class="num">−11,7</td></tr>
+          <tr><td>große Sekunde</td><td class="mono">9:8</td><td class="num">203,9</td><td class="num">200</td><td class="num">−3,9</td></tr>
+          <tr><td>kleine Terz</td><td class="mono">6:5</td><td class="num">315,6</td><td class="num">300</td><td class="num">−15,6</td></tr>
+          <tr><td>große Terz</td><td class="mono">5:4</td><td class="num">386,3</td><td class="num">400</td><td class="num">+13,7</td></tr>
+          <tr><td>reine Quarte</td><td class="mono">4:3</td><td class="num">498,0</td><td class="num">500</td><td class="num">+2,0</td></tr>
+          <tr><td>Tritonus</td><td class="mono">45:32</td><td class="num">590,2</td><td class="num">600</td><td class="num">+9,8</td></tr>
+          <tr><td>reine Quinte</td><td class="mono">3:2</td><td class="num">702,0</td><td class="num">700</td><td class="num">−2,0</td></tr>
+          <tr><td>kleine Sexte</td><td class="mono">8:5</td><td class="num">813,7</td><td class="num">800</td><td class="num">−13,7</td></tr>
+          <tr><td>große Sexte</td><td class="mono">5:3</td><td class="num">884,4</td><td class="num">900</td><td class="num">+15,6</td></tr>
+          <tr><td>kleine Septime</td><td class="mono">16:9</td><td class="num">996,1</td><td class="num">1000</td><td class="num">+3,9</td></tr>
+          <tr><td>große Septime</td><td class="mono">15:8</td><td class="num">1088,3</td><td class="num">1100</td><td class="num">+11,7</td></tr>
+          <tr><td>Oktave</td><td class="mono">2:1</td><td class="num">1200,0</td><td class="num">1200</td><td class="num">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Quinten und Quarten sind auf dem Klavier also fast rein, nur um 2 Cent verstimmt. Die Terzen und Sexten weichen dagegen um 14 bis 16 Cent ab, etwa ein Siebtel Halbton. Für Tritonus und Septimen gibt es mehrere „reine“ Verhältnisse, die Tabelle zeigt jeweils ein gängiges.</p>
+    <p>Hör dir den Unterschied an. Beide Beispiele spielen c' zusammen mit einer großen Terz darüber, einmal rein (5:4) und einmal so, wie das Klavier sie stimmt. Achte auf das Wabern in der zweiten Version:</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-tone="261.63 327.03" data-partials="6" data-dur="4">▶ reine große Terz (ruhig)</button>
+      <button class="btn" type="button" data-tone="261.63 329.63" data-partials="6" data-dur="4">▶ Klavier-Terz (wabert)</button>
+    </div>
+    <p>Das Wabern hat einen messbaren Grund. Der 5. Teilton von c' (5 × 261,63 ≈ 1308,1 Hz) und der 4. Teilton des gleichstufigen e' (4 × 329,63 ≈ 1318,5 Hz) liegen etwa 10 Hz auseinander. Daraus entstehen rund zehn Schwebungen pro Sekunde. Klavierstimmer nutzen genau solche Schwebungen, um nach Gehör gleichstufig zu stimmen.</p>
+    <h4>Warum man das in Kauf nimmt</h4>
+    <p>Der Gewinn ist enorm: Jede Tonart klingt gleich gut, und man kann frei modulieren. In älteren Stimmungen wie der mitteltönigen waren die Terzen in gängigen Tonarten rein, entfernte Tonarten aber unbrauchbar. Ab dem späten 17. Jahrhundert verbreiteten sich die <em>wohltemperierten</em> Stimmungen, etwa von Andreas Werckmeister. Sie machten alle Tonarten spielbar, gaben aber jeder eine leicht andere Färbung. Bachs „Wohltemperiertes Klavier“ (1722) mit Präludien und Fugen in allen 24 Tonarten feiert diese Möglichkeit. Gemeint war dabei vermutlich eine solche wohltemperierte, nicht unbedingt eine streng gleichstufige Stimmung. Die exakt gleichstufige Stimmung setzte sich erst im 19. Jahrhundert allgemein durch.</p>
+  </section>
+
+  <!-- 5.11 -->
+  <h2 id="hoeren">5.11 Intervalle hören</h2>
+  <p>Intervalle am Klang zu erkennen ist eine Fähigkeit, die man trainieren kann wie Vokabeln. Am Anfang helfen Lieder, deren Anfang ein bestimmtes Intervall enthält. Du rufst dir den Liedanfang ins Gedächtnis und vergleichst ihn mit dem Gehörten. Mit der Zeit erkennst du die Intervalle direkt an ihrem Charakter.</p>
+  <div class="table-scroll">
+    <table class="songs">
+      <thead><tr><th>Intervall</th><th>aufwärts</th><th>abwärts</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 61"><td>kleine Sekunde</td><td>Filmmusik „Der weiße Hai“</td><td>„Für Elise“ (Beethoven)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 62"><td>große Sekunde</td><td>„Alle meine Entchen“, „Bruder Jakob“</td><td>„Mary Had a Little Lamb“</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63"><td>kleine Terz</td><td>„Greensleeves“, „Smoke on the Water“ (Riff)</td><td>„Kuckuck, Kuckuck, ruft’s aus dem Wald“</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 64"><td>große Terz</td><td>„Oh When the Saints“, „Morning Has Broken“</td><td>„Swing Low, Sweet Chariot“</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 65"><td>reine Quarte</td><td>„O Tannenbaum“, Brautchor „Treulich geführt“</td><td>„Eine kleine Nachtmusik“ (Mozart)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 66"><td>Tritonus</td><td>„Maria“ (West Side Story)</td><td>„Black Sabbath“ (Riff der gleichnamigen Band, nach dem Oktavsprung)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 67"><td>reine Quinte</td><td>„Morgen kommt der Weihnachtsmann“ (= „Twinkle, Twinkle“), „Star Wars“-Thema</td><td>„Feuerstein“-Titelmelodie (Flintstones)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 68"><td>kleine Sexte</td><td>„The Entertainer“ (Joplin), Sprung nach dem Auftakt</td><td>selten, als Umkehrung der großen Terz hören</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 69"><td>große Sexte</td><td>„My Bonnie Is Over the Ocean“</td><td>„Nobody Knows the Trouble I’ve Seen“</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 70"><td>kleine Septime</td><td>Titelmelodie „Raumschiff Enterprise“ (Originalserie)</td><td>selten, als „eine Oktave minus Ganzton“ hören</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 71"><td>große Septime</td><td>kaum in Liedanfängen, klingt wie eine Oktave, die nicht ganz ankommt</td><td>ebenso</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 72"><td>Oktave</td><td>„Somewhere Over the Rainbow“</td><td>„Willow Weep for Me“</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="muted">Die Beispiele nennen nur die Lieder. Kennst du eines nicht, ignorier es und such dir ein eigenes. Ein selbst gefundenes Lied bleibt ohnehin besser hängen.</p>
+
+  <div class="interval-trainer"></div>
+
+  <section class="layer piano" data-title="Intervalle greifen: Finger und Handspanne">
+    <p>Für harmonische Intervalle in der rechten Hand sind diese Fingersätze üblich (1 = Daumen, 5 = kleiner Finger). In der linken Hand gilt dasselbe gespiegelt, also mit 5 auf dem unteren Ton.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Intervall</th><th>übliche Finger</th><th>Hinweis</th></tr></thead>
+        <tbody>
+          <tr><td>Sekunde</td><td>1–2, 2–3</td><td>Nachbarfinger</td></tr>
+          <tr><td>Terz</td><td>1–3, 2–4, 3–5</td><td>Terzen-Läufe wechseln zwischen diesen Paaren</td></tr>
+          <tr><td>Quarte</td><td>1–4, 1–3</td><td></td></tr>
+          <tr><td>Quinte</td><td>1–5</td><td>die „Grundspannung“ der Hand in Fünf-Finger-Lage</td></tr>
+          <tr><td>Sexte</td><td>1–5, 1–4</td><td>1–4 bei großen Händen, um 5 für Legato frei zu haben</td></tr>
+          <tr><td>Septime</td><td>1–5</td><td></td></tr>
+          <tr><td>Oktave</td><td>1–5</td><td>auf schwarzen Tasten bei großen Händen auch 1–4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Eine Oktave misst von Tastenmitte zu Tastenmitte etwa 16,5 cm. Kleinere Hände erreichen sie anfangs nur mit Mühe. Die wichtigste Regel: <strong>Spann die Hand nur für den Anschlag und lass sie danach sofort wieder locker.</strong> Wer eine Oktave mit Dauerspannung hält, ermüdet schnell und riskiert auf Dauer Überlastungsbeschwerden (Kapitel 43). Ist eine Oktave noch zu groß, spiel sie gebrochen: erst den unteren, dann den oberen Ton.</p>
+    <p>Um Intervalle blind zu finden, orientiere dich an den schwarzen Tasten. Die Zweier- und Dreiergruppen sind mit den Fingerspitzen zu ertasten, ohne hinzusehen. Ein c liegt immer links von der Zweiergruppe, ein f immer links von der Dreiergruppe.</p>
+    <p><strong>Fünf-Minuten-Routine:</strong> Wähl jeden Tag ein Intervall. Spiel es von jeder weißen Taste aus, erst melodisch, dann harmonisch, und sing den oberen Ton mit. Singen verbindet Ohr und Hand stärker als bloßes Zuhören.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Ein Intervall hat eine <strong>Zahl</strong> (Stammtöne zählen, beide Enden mit) und eine <strong>Qualität</strong> (aus der Zahl der Halbtöne).</li>
+    <li>Prime, Quarte, Quinte und Oktave sind <strong>rein</strong>. Sekunde, Terz, Sexte und Septime sind <strong>groß oder klein</strong>. Einen Halbton darüber oder darunter liegen übermäßig und vermindert.</li>
+    <li>Im Notenbild sind ungerade Intervalle Linie–Linie oder Zwischenraum–Zwischenraum, gerade Intervalle gemischt.</li>
+    <li>Umkehrungen ergänzen sich zu 9 (bzw. 12 Halbtöne). Groß wird klein, übermäßig wird vermindert, rein bleibt rein.</li>
+    <li>Konsonanz hängt mit einfachen Frequenzverhältnissen und übereinstimmenden Obertönen zusammen. Das Klavier ist gleichstufig gestimmt: Quinten sind fast rein, Terzen etwas zu weit.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">5.1</span><div><span class="kind">Theorie</span>Bestimme nur die Zahl: c'–a', e'–h', d'–c'', f–f'.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>c'–a': Sexte. e'–h': Quinte. d'–c'': Septime. f–f': Oktave.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">5.2</span><div><span class="kind">Theorie</span>Bestimme Zahl und Qualität: e–g, f–h, d–a, h–f', es–g, c–as, cis–e, a–fis'.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>
+        e–g: kleine Terz (3 HT). f–h: übermäßige Quarte (6 HT). d–a: reine Quinte (7 HT). h–f': verminderte Quinte (6 HT). es–g: große Terz (4 HT). c–as: kleine Sexte (8 HT). cis–e: kleine Terz (3 HT). a–fis': große Sexte (9 HT).
+        <p class="muted">f–h und h–f' haben beide sechs Halbtöne. Das eine ist eine Quarte, das andere eine Quinte, weil die Buchstaben anders gezählt werden.</p>
+      </div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">5.3</span><div><span class="kind">Theorie</span>Baue das Intervall über dem gegebenen Ton und schreib den oberen Ton richtig: über g eine große Terz, eine kleine Septime, eine reine Quarte und eine übermäßige Quinte. Über d eine kleine Terz und eine große Sexte. Über es eine kleine Terz.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>
+        Über g: große Terz h, kleine Septime f', reine Quarte c', übermäßige Quinte dis' (nicht es', denn eine Quinte über g muss ein d-Name sein). Über d: kleine Terz f, große Sexte h. Über es: kleine Terz ges (nicht fis, denn die Terz über e(s) muss ein g-Name sein).
+      </div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">5.4</span><div><span class="kind">Theorie</span>Nenne die Umkehrungen: kleine Terz, reine Quarte, übermäßige Quarte, große Septime, verminderte Septime.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>große Sexte, reine Quinte, verminderte Quinte, kleine Sekunde, übermäßige Sekunde.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">5.5</span><div><span class="kind">Notenlesen</span>Bestimme die sechs Intervalle mit Zahl und Qualität. Nutz zuerst die Linien-und-Zwischenraum-Regel für die Zahl.</div></div>
+      <div class="abc" data-bpm="50">
+        X:1
+        M:none
+        L:1
+        K:C
+        "^1"[DF] | "^2"[Ge] | "^3"[Bf] | "^4"[_EG] | "^5"[Ec] | "^6"[CB] |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>
+        1: d'–f', kleine Terz. 2: g'–e'', große Sexte. 3: h'–f'', verminderte Quinte. 4: es'–g', große Terz. 5: e'–c'', kleine Sexte. 6: c'–h', große Septime.
+      </div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">5.6</span><div><span class="kind">Theorie</span>c'–dis' und c'–es' liegen auf denselben Tasten. Wie heißen die beiden Intervalle, und woran erkennst du den Unterschied im Notenbild?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>c'–dis' ist eine übermäßige Sekunde, c'–es' eine kleine Terz. Im Notenbild steht dis eine Stufe tiefer (Position des d, mit ♯), es eine Stufe höher (Position des e, mit ♭). Die Sekunde ist Linie–Zwischenraum, die Terz Linie–Linie.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">5.7</span><div><span class="kind">Am Klavier</span>Spiel von jeder weißen Taste zwischen c' und h' eine große Terz aufwärts. Bei welchen Grundtönen brauchst du eine schwarze Taste?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Nur weiße Tasten: c–e, f–a, g–h. Eine schwarze Taste brauchst du bei d–fis, e–gis, a–cis und h–dis.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">5.8</span><div><span class="kind">Am Klavier</span>Spiel von jeder weißen Taste eine reine Quinte aufwärts, dann von jeder schwarzen. Welche Quinten verbinden zwei verschiedene Tastenfarben?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>h–fis (weiß → schwarz) und b–f (schwarz → weiß). Alle anderen reinen Quinten verbinden gleiche Farben, etwa c–g, d–a, fis–cis oder es–b.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">5.9</span><div><span class="kind">Gehör</span>Üb mit dem Gehörtrainer oben, bis du im Modus „Einstieg“ zehn Aufgaben hintereinander richtig hast. Wechsel dann zu „Terzen und Sexten“.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Wenn du große und kleine Terz verwechselst: Die große Terz klingt offen und hell (Anfang eines Dur-Dreiklangs), die kleine enger und dunkler (Anfang eines Moll-Dreiklangs). Sing nach dem Hören den Anfang von „Oh When the Saints“ bzw. „Greensleeves“.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">5.10</span><div><span class="kind">Vertiefung</span>Wie viele Schwebungen pro Sekunde erzeugt eine gleichstufige Quinte c'–g'? Benutze c' = 261,63 Hz und g' = 392,00 Hz und vergleiche den 3. Teilton von c' mit dem 2. Teilton von g'.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>3 × 261,63 = 784,89 Hz und 2 × 392,00 = 784,00 Hz. Die Differenz beträgt etwa 0,9 Hz, also knapp eine Schwebung pro Sekunde. Das ist so langsam, dass die Quinte praktisch ruhig klingt. Bei der großen Terz sind es etwa zehn pro Sekunde.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(5);
+
+  // Obertonreihe über dem großen C
+  (function () {
+    const C = 65.406;
+    document.getElementById("ot-seq").addEventListener("click", () => {
+      for (let k = 1; k <= 8; k++) Book.audio.tone([C * k], (k - 1) * 0.55, 0.5, 1);
+    });
+    document.getElementById("ot-all").addEventListener("click", () => {
+      const fs = []; for (let k = 1; k <= 8; k++) fs.push(C * k);
+      Book.audio.tone(fs, 0, 3, 1);
+    });
+  })();
+
+  // Abbildung: zusammenfallende und reibende Teiltöne
+  (function () {
+    const fig = document.getElementById("partials-fig");
+    const panels = [
+      { title: "Reine Quinte 3:2", a: 100, b: 150 },
+      { title: "Große Terz 5:4", a: 100, b: 125 },
+      { title: "Kleine Sekunde 16:15", a: 100, b: 106.67 }
+    ];
+    const W = 640, L = 40, R = 16, MAX = 1000, PH = 70;
+    const x = (f) => L + (f / MAX) * (W - L - R);
+    let s = `<svg viewBox="0 0 ${W} ${panels.length * PH + 24}" role="img" aria-label="Teiltöne zweier Töne für Quinte, große Terz und kleine Sekunde">`;
+    panels.forEach((p, i) => {
+      const y0 = i * PH + 16;
+      s += `<text class="h" x="${L}" y="${y0}">${p.title}</text>`;
+      const ya = y0 + 14, yb = y0 + 34;
+      const A = [], B = [];
+      for (let k = 1; p.a * k <= MAX; k++) A.push(p.a * k);
+      for (let k = 1; p.b * k <= MAX; k++) B.push(p.b * k);
+      A.forEach((fa) => B.forEach((fb) => {
+        const d = Math.abs(fa - fb);
+        if (d < 0.5) s += `<line class="hit" x1="${x(fa)}" x2="${x(fa)}" y1="${ya - 2}" y2="${yb + 16}"/>`;
+        else if (d < 0.07 * Math.min(fa, fb)) s += `<rect class="rough" x="${x(Math.min(fa, fb)) - 2}" y="${ya - 2}" width="${x(Math.max(fa, fb)) - x(Math.min(fa, fb)) + 4}" height="${yb - ya + 18}"/>`;
+      }));
+      A.forEach((f) => (s += `<line class="pa" x1="${x(f)}" x2="${x(f)}" y1="${ya}" y2="${ya + 14}"/>`));
+      B.forEach((f) => (s += `<line class="pb" x1="${x(f)}" x2="${x(f)}" y1="${yb}" y2="${yb + 14}"/>`));
+      s += `<text x="4" y="${ya + 11}">unten</text><text x="4" y="${yb + 11}">oben</text>`;
+    });
+    const ya = panels.length * PH + 12;
+    s += `<line class="axis" x1="${L}" x2="${W - R}" y1="${ya}" y2="${ya}"/>`;
+    for (let f = 0; f <= MAX; f += 200) s += `<text x="${x(f)}" y="${ya + 12}" text-anchor="middle">${f} Hz</text>`;
+    s += "</svg>";
+    fig.innerHTML = s + `<figcaption>Teiltöne eines Tons von 100 Hz (schwarz) und des Tons darüber (blau). Petrol: Teiltöne fallen genau zusammen. Rot: Teiltöne liegen nah beieinander und reiben. Je einfacher das Verhältnis, desto mehr Übereinstimmungen und desto weniger Reibung.</figcaption>`;
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tonika, Subdominante, Dominante · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .fn td, .fn th { text-align: center; }
+  .fn td:first-child, .fn th:first-child { text-align: left; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil II · Kapitel 14</div>
+    <h1>Tonika, Subdominante, Dominante</h1>
+    <p class="lede">Akkorde haben in einer Tonart Rollen. Einer ist das Zuhause, einer erzeugt Spannung, einer führt vom Zuhause weg. Wer diese Rollen kennt, versteht, warum eine Akkordfolge „funktioniert“, und kann Melodien schneller begleiten.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die drei Funktionen Tonika, Subdominante und Dominante benennen und hören,</li>
+      <li>erklären, warum die Dominante so stark zur Tonika zieht,</li>
+      <li>die Nebendreiklänge den drei Funktionen zuordnen,</li>
+      <li>Akkordfolgen sowohl in Stufen als auch in Funktionssymbolen (T, S, D, Tp …) lesen,</li>
+      <li>eine einfache Melodie mit Tonika und Dominante begleiten.</li>
+    </ul>
+  </div>
+
+  <!-- 14.1 -->
+  <h2 id="rollen">14.1 Ruhe, Spannung, Bewegung</h2>
+  <p>Spiel in C-Dur die Folge C – F – G und hör auf. Die Musik klingt unvollständig, sie wartet auf etwas. Spielst du danach C, ist sie angekommen. Diese Erfahrung ist der Kern der tonalen Harmonik: Akkorde unterscheiden sich darin, wie stabil sie wirken.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" id="open-demo">▶ C – F – G … (offen)</button>
+    <button class="btn" type="button" id="closed-demo">▶ C – F – G – C (geschlossen)</button>
+  </div>
+  <p>Die drei Hauptdreiklänge (Kapitel 13) haben drei verschiedene Rollen, die man <dfn id="g-funktion">Funktionen</dfn> nennt:</p>
+  <ul>
+    <li>Die <dfn id="g-tonika">Tonika</dfn> (I) ist das Zentrum. Auf ihr kommt die Musik zur Ruhe. Sie gibt der Tonart den Namen.</li>
+    <li>Die <dfn id="g-dominante">Dominante</dfn> (V) ist der Akkord der größten Spannung. Sie drängt zur Tonika zurück.</li>
+    <li>Die <dfn id="g-subdominante">Subdominante</dfn> (IV) führt von der Tonika weg. Sie ist weniger gespannt als die Dominante und bereitet sie oft vor.</li>
+  </ul>
+  <figure>
+    <div class="kb" data-from="53" data-to="74" data-labels="white" data-marks="53:c2:S 60::T 67:c3:D" aria-label="Die Grundtöne von Subdominante f, Tonika c' und Dominante g' liegen im Quintabstand"></div>
+    <figcaption>Die Grundtöne der drei Funktionen in C-Dur: f (Subdominante), c' (Tonika), g' (Dominante). Subdominante und Dominante liegen eine Quinte unter bzw. über der Tonika.</figcaption>
+  </figure>
+
+  <section class="layer deep" data-title="Warum gerade diese drei? Die Tonart als Ausschnitt aus der Quintenreihe">
+    <p>In Kapitel 13 hast du gesehen, dass die Grundtöne von IV, I und V im Quintabstand nebeneinanderliegen: f – c – g. Die Tonika sitzt in der Mitte, die Dominante eine Quinte darüber, die Subdominante eine Quinte darunter. Daher kommen die Namen. <em>Dominante</em> heißt „die Herrschende“, weil dieser Akkord die Musik am stärksten zur Tonika lenkt. Jean-Philippe Rameau prägte im 18. Jahrhundert den Begriff <em>sous-dominante</em>, wörtlich „Unter-Dominante“, weil sie den gleichen Abstand zur Tonika hat wie die Dominante, nur in der anderen Richtung.</p>
+    <p>Das erklärt auch den unterschiedlichen Charakter. Die Dominante G-Dur bringt den Ton h in die Tonart, einen Ton von der „Kreuzseite“ des Quintenzirkels (Kapitel 7). Die Subdominante F-Dur bringt den Ton f, einen Ton von der „B-Seite“. Die Tonika in der Mitte enthält keinen dieser beiden Töne. Sie ist der Gleichgewichtspunkt zwischen den beiden Polen.</p>
+    <p>Bemerkenswert ist das Verhältnis von Tonika und Subdominante: C ist die Dominante von F. Wer von C nach F geht, macht also dieselbe Bewegung wie von G nach C, nur eine Stufe tiefer im Quintenkreis. Deshalb fühlt sich der Weg von der Tonika zur Subdominante wie ein „Loslassen“ an, wie eine kleine Auflösung, die von der Heimat wegführt.</p>
+  </section>
+
+  <!-- 14.2 -->
+  <h2 id="dominante">14.2 Warum die Dominante zur Tonika zieht</h2>
+  <p>Die Bewegung V → I ist die stärkste Akkordverbindung der tonalen Musik. Drei Kräfte wirken dabei zusammen:</p>
+  <h4>1. Der Leitton</h4>
+  <p>Die Dominante enthält die 7. Stufe der Tonleiter, in C-Dur das h. Das h liegt nur einen Halbton unter dem Grundton c. Ein Ton, der so dicht unter dem Grundton liegt und zu ihm strebt, heißt <dfn id="g-leitton">Leitton</dfn>. Er „will“ einen Halbton nach oben. Hör selbst, wie unvollständig eine Melodie klingt, die auf dem Leitton endet:</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="72 74 72 71" data-bpm="100">▶ c'' – d'' – c'' – h' … </button>
+    <button class="btn" type="button" data-play="72 74 72 71 72" data-bpm="100">▶ … – c''</button>
+  </div>
+  <h4>2. Der Quintfall im Bass</h4>
+  <p>Der Grundton der Dominante (g) liegt eine Quinte über dem der Tonika (c). Wenn der Bass von g nach c geht, fällt er eine Quinte (oder steigt eine Quarte). Dieser <dfn id="g-quintfall">Quintfall</dfn> ist die stärkste Grundtonbewegung. Er wirkt wie ein Schritt „nach Hause“.</p>
+  <h4>3. Die Töne lösen sich in Schritten auf</h4>
+  <p>Die Dominante G-Dur (g–h–d) und die Tonika C-Dur (c–e–g) haben einen gemeinsamen Ton (g). Die übrigen Töne gehen in kleinen Schritten weiter: h → c (Halbton aufwärts), d → c oder e (Ganzton). Kommt noch die Septime f dazu (G7, Kapitel 15), geht f → e (Halbton abwärts). Leitton und Septime bilden zusammen den Tritonus h–f, der sich auf c–e auflöst.</p>
+  <div class="abc" data-bpm="60" data-caption="V – I in C-Dur: der Leitton h' geht zu c'', der Bass fällt eine Quinte">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "^G (V)"[DGB]4 | "^C (I)"[EGc]4 |]
+    [V:LH] G,,4 | C,4 |]
+  </div>
+
+  <section class="layer deep" data-title="Warum der Quintfall so stark wirkt">
+    <p>Für die Stärke des Quintfalls gibt es eine akustische Erklärung und eine psychologische. Beide sind Modelle, keine Naturgesetze.</p>
+    <p><strong>Die akustische Erklärung</strong> stammt im Kern von Rameau. Der Ton g ist der 3. Teilton von c (Kapitel 5). Das c „enthält“ das g bereits in seiner Obertonreihe. Wenn der Bass von g nach c fällt, landet er auf dem Ton, aus dem das g gewissermaßen stammt. Umgekehrt kommt c in der Obertonreihe von g nicht vor. Die Bewegung g → c geht also zum „Ursprung“, die Bewegung c → g weg davon. Rameau nannte den Quintfall deshalb die natürlichste Bewegung seiner <em>basse fondamentale</em>.</p>
+    <p><strong>Die psychologische Erklärung</strong> betont das Lernen. David Huron hat in „Sweet Anticipation“ (2006) gezeigt, dass Hörer Erwartungen aus statistischer Erfahrung bilden. In der westlichen Musik folgt auf V sehr oft I. Wer diese Musik ein Leben lang hört, erwartet die Auflösung. Erfüllte Erwartung empfinden wir als befriedigend, verzögerte als spannend, enttäuschte als überraschend. Darauf beruhen der Trugschluss (Kapitel 16) und viele andere Wirkungen.</p>
+    <p>Beide Erklärungen ergänzen sich. Die Akustik erklärt, warum sich gerade diese Bewegung durchgesetzt hat. Die Erfahrung erklärt, warum sie heute so selbstverständlich wirkt.</p>
+  </section>
+
+  <section class="layer deep" data-title="Der Leitton: warum ein Halbton so viel Sog hat">
+    <p>Der Leitton h hat zwei Eigenschaften, die ihn besonders machen. Er liegt so dicht wie möglich an einem Ton, und dieser Ton ist der stabilste der ganzen Tonart, der Grundton.</p>
+    <p>Die Hörforschung zeigt, dass Melodien überwiegend in kleinen Schritten verlaufen und dass Hörer genau das erwarten. Ein Halbtonschritt ist der kleinste Schritt im System. Wenn ein unstabiler Ton einen Halbton neben einem sehr stabilen liegt, entsteht die stärkste mögliche Erwartung. Der Musiktheoretiker Fred Lerdahl hat dafür ein Modell der <em>tonalen Anziehung</em> formuliert: Die Anziehung ist umso größer, je stabiler der Zielton im Vergleich zum Ausgangston ist und je näher er liegt.</p>
+    <p>Historisch ist interessant, dass der Leitton nicht immer selbstverständlich war. In den Kirchentonarten (Kapitel 24) lag unter dem Grundton oft ein Ganzton, etwa in dorisch d–c–d. Spätestens ab dem 14. Jahrhundert erhöhten Sänger und Instrumentalisten diesen Ton an Schlüssen trotzdem zum Halbton, auch wenn es nicht notiert war (<em>musica ficta</em>). Der Leitton hat sich also aus der Praxis durchgesetzt, weil er Schlüsse überzeugender macht. Die Dur-Tonleiter hat ihn eingebaut.</p>
+  </section>
+
+  <!-- 14.3 -->
+  <h2 id="subdominante">14.3 Die Subdominante</h2>
+  <p>Die Subdominante F-Dur (f–a–c) enthält den Grundton c der Tonika, aber nicht als Grundton, sondern als Quinte. Gleichzeitig bringt sie das f, einen Ton, der in der Tonika nicht vorkommt. Sie klingt deshalb verwandt mit der Tonika, aber „verschoben“. Sie öffnet den Raum, ohne viel Spannung aufzubauen.</p>
+  <p>Typische Verwendungen:</p>
+  <ul>
+    <li><strong>Vor der Dominante:</strong> I – IV – V – I. Die Subdominante führt weg, die Dominante baut Spannung auf, die Tonika löst. Diese Reihenfolge ist die Grundform der klassischen Kadenz (Kapitel 16).</li>
+    <li><strong>Direkt zur Tonika:</strong> IV – I. Diese Verbindung klingt weicher als V – I, ohne Leitton. Weil sie als Schluss vieler Kirchenlieder auf „A-men“ gesungen wird, heißt sie auch Amen-Schluss oder Plagalschluss.</li>
+    <li><strong>Als Pendel:</strong> I – IV – I – IV. Ein ruhiges Hin und Her, typisch für Gospel und viele Popsongs.</li>
+  </ul>
+  <div class="btn-row">
+    <button class="btn" type="button" id="plagal-demo">▶ F – C (Amen-Schluss)</button>
+    <button class="btn" type="button" id="pendel-demo">▶ C – F – C – F – C (Pendel)</button>
+  </div>
+
+  <!-- 14.4 -->
+  <h2 id="kadenz">14.4 Die Grundkadenz</h2>
+  <p>Die Folge I – IV – V – I heißt <dfn id="g-kadenz">Kadenz</dfn> (von lateinisch <em>cadere</em>, fallen). Sie enthält alle drei Funktionen in ihrer klassischen Reihenfolge: Ruhe – Wegbewegung – Spannung – Ruhe. Weil I, IV und V zusammen alle Töne der Tonleiter enthalten, legt die Kadenz die Tonart eindeutig fest. Wer sie hört, weiß, in welcher Tonart die Musik steht.</p>
+  <div class="abc" data-bpm="66" data-caption="Die Kadenz I – IV – V – I in C-Dur mit kurzen Wegen">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "^I"[CEG]4 | "^IV"[CFA]4 | "^V"[B,DG]4 | "^I"[CEG]4 |]
+    [V:LH] C,4 | F,,4 | G,,4 | C,4 |]
+  </div>
+  <p>In der klassischen Musik gilt die Regel: Die Subdominante steht vor der Dominante, nicht danach. V – IV – I wirkt dort wie ein Rückschritt. In Blues und Rock ist V – IV – I dagegen völlig normal, etwa am Ende des 12-Takt-Blues (Kapitel 42). Die Funktionen bleiben dieselben, nur die Stilregeln unterscheiden sich.</p>
+
+  <section class="layer piano" data-title="Die Kadenz in allen Lagen">
+    <p>Die Kadenz ist die wichtigste Fingerübung für Harmonik am Klavier. Spiel sie mit der Handform aus Kapitel 13 (Grundstellung – Quartsextakkord – Sextakkord – Grundstellung) und linker Hand auf den Grundtönen.</p>
+    <p>Dann spiel sie in den drei Lagen. Die Lage bestimmt, welcher Ton oben liegt (Kapitel 12):</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Start</th><th>I</th><th>IV</th><th>V</th><th>I</th><th>Oberstimme</th></tr></thead>
+        <tbody>
+          <tr class="play-row" data-play="67 69 67 67" data-bpm="80"><td>Quintlage</td><td>c'–e'–g'</td><td>c'–f'–a'</td><td>h–d'–g'</td><td>c'–e'–g'</td><td>g' – a' – g' – g'</td></tr>
+          <tr class="play-row" data-play="72 72 71 72" data-bpm="80"><td>Oktavlage</td><td>e'–g'–c''</td><td>f'–a'–c''</td><td>d'–g'–h'</td><td>e'–g'–c''</td><td>c'' – c'' – h' – c''</td></tr>
+          <tr class="play-row" data-play="76 77 74 76" data-bpm="80"><td>Terzlage</td><td>g'–c''–e''</td><td>a'–c''–f''</td><td>g'–h'–d''</td><td>g'–c''–e''</td><td>e'' – f'' – d'' – e''</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">Ein Klick auf eine Zeile spielt nur die Oberstimme. Hör, wie jede Lage eine eigene kleine Melodie ergibt.</p>
+    <p>Übe die Kadenz in allen drei Lagen in C-Dur, G-Dur, F-Dur und D-Dur. Das ist anfangs mühsam, zahlt sich aber aus. Du lernst dabei die Griffe der drei wichtigsten Akkorde in vier Tonarten und in allen Umkehrungen.</p>
+  </section>
+
+  <!-- 14.5 -->
+  <h2 id="stellvertreter">14.5 Die Nebendreiklänge als Stellvertreter</h2>
+  <p>In Kapitel 13 hast du gesehen, dass jeder Nebendreiklang zwei Töne mit einem Hauptdreiklang teilt. Deshalb kann er dessen Funktion übernehmen, mit etwas anderer Farbe:</p>
+  <div class="table-scroll">
+    <table class="fn">
+      <thead><tr><th>Funktion</th><th>Hauptakkord</th><th>Stellvertreter</th><th>gemeinsame Töne</th></tr></thead>
+      <tbody>
+        <tr><td>Tonika</td><td>I (C)</td><td>vi (Am), seltener iii (Em)</td><td>c, e bzw. e, g</td></tr>
+        <tr><td>Subdominante</td><td>IV (F)</td><td>ii (Dm)</td><td>f, a</td></tr>
+        <tr><td>Dominante</td><td>V (G)</td><td>vii° (H°), seltener iii (Em)</td><td>h, d bzw. g, h</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Ein Beispiel: In der Folge I – ii – V – I übernimmt ii (d-Moll) die Rolle der Subdominante. Sie klingt etwas weicher und fließender als IV und ist besonders im Jazz die Standardvorbereitung der Dominante (Kapitel 28).</p>
+  <div class="btn-row">
+    <button class="btn" type="button" id="iv-demo">▶ I – IV – V – I</button>
+    <button class="btn" type="button" id="ii-demo">▶ I – ii – V – I</button>
+    <button class="btn" type="button" id="vi-demo">▶ I – vi – IV – V</button>
+  </div>
+  <p>Die iii. Stufe (e-Moll) ist ein Sonderfall. Sie teilt Töne mit der Tonika (e, g) und mit der Dominante (g, h). Je nach Zusammenhang wirkt sie tonikal oder dominantisch. Sie kommt seltener vor als ii und vi.</p>
+  <p>Auch die vii° (h–d–f) ist mehr, als sie scheint. Sie enthält Leitton (h) und Septime (f) der Dominante, also den Tritonus. Sie wirkt wie ein Dominantseptakkord ohne Grundton (Kapitel 15).</p>
+
+  <!-- 14.6 -->
+  <h2 id="funktionstheorie">14.6 Die Funktionstheorie</h2>
+  <p>Bisher hast du Akkorde mit Stufen beschrieben. Im deutschsprachigen Raum gibt es ein zweites System, das statt der Position die Rolle eines Akkords benennt: die <dfn id="g-funktionstheorie">Funktionstheorie</dfn>. Sie geht auf Hugo Riemann zurück und wird bis heute in deutschen Schulen und Hochschulen unterrichtet. Du solltest sie lesen können.</p>
+  <h4>Die Grundsymbole</h4>
+  <ul>
+    <li><strong>T</strong> = Tonika, <strong>S</strong> = Subdominante, <strong>D</strong> = Dominante.</li>
+    <li>Großbuchstaben stehen für Durakkorde, Kleinbuchstaben für Mollakkorde: <strong>t</strong>, <strong>s</strong>, <strong>d</strong> in Moll.</li>
+    <li><strong>D⁷</strong> ist der Dominantseptakkord.</li>
+  </ul>
+  <h4>Parallelen und Gegenklänge</h4>
+  <p>Die Nebendreiklänge werden als Verwandte der Hauptdreiklänge benannt:</p>
+  <ul>
+    <li>Die <dfn id="g-parallele">Parallele</dfn> (<strong>p</strong>) ist in Dur der Mollakkord eine kleine Terz <em>unter</em> dem Hauptakkord. Die Tonikaparallele <strong>Tp</strong> von C-Dur ist a-Moll, die Subdominantparallele <strong>Sp</strong> ist d-Moll, die Dominantparallele <strong>Dp</strong> ist e-Moll.</li>
+    <li>Der <dfn id="g-gegenklang">Gegenklang</dfn> (<strong>g</strong>) ist in Dur der Mollakkord eine große Terz <em>über</em> dem Hauptakkord. Der Tonikagegenklang <strong>Tg</strong> von C-Dur ist e-Moll.</li>
+  </ul>
+  <div class="table-scroll">
+    <table class="fn">
+      <thead><tr><th>Stufe</th><th>C-Dur</th><th>Funktion</th><th>gesprochen</th></tr></thead>
+      <tbody>
+        <tr><td>I</td><td>C</td><td>T</td><td>Tonika</td></tr>
+        <tr><td>ii</td><td>Dm</td><td>Sp</td><td>Subdominantparallele</td></tr>
+        <tr><td>iii</td><td>Em</td><td>Dp oder Tg</td><td>Dominantparallele oder Tonikagegenklang</td></tr>
+        <tr><td>IV</td><td>F</td><td>S</td><td>Subdominante</td></tr>
+        <tr><td>V</td><td>G</td><td>D</td><td>Dominante</td></tr>
+        <tr><td>vi</td><td>Am</td><td>Tp (auch Sg)</td><td>Tonikaparallele</td></tr>
+        <tr><td>vii°</td><td>H°</td><td>verkürzter D⁷</td><td>Dominantseptakkord ohne Grundton</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>In Moll werden die Funktionen kleingeschrieben und die Parallelen groß, weil sie Durakkorde sind. In a-Moll ist C-Dur die Tonikaparallele <strong>tP</strong>, F-Dur die Subdominantparallele <strong>sP</strong> und G-Dur die Dominantparallele <strong>dP</strong>. Die Dominante in Moll ist meistens ein Durakkord und heißt dann <strong>D</strong> (Kapitel 20). Je nach Lehrbuch unterscheiden sich die Schreibweisen im Detail. Die Grundidee ist überall dieselbe.</p>
+  <p>Einige Akkorde haben zwei mögliche Funktionsnamen. a-Moll in C-Dur kann Tonikaparallele (Tp) oder Subdominantgegenklang (Sg) sein. Welcher Name passt, hängt davon ab, wie der Akkord im Zusammenhang wirkt. Darin zeigt sich der Unterschied der beiden Systeme.</p>
+
+  <!-- 14.7 -->
+  <h2 id="vergleich">14.7 Stufen oder Funktionen?</h2>
+  <p>Beide Systeme beschreiben dieselbe Musik, aber mit unterschiedlicher Absicht:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th></th><th>Stufentheorie</th><th>Funktionstheorie</th></tr></thead>
+      <tbody>
+        <tr><td>beschreibt</td><td>Position des Grundtons in der Tonleiter</td><td>Rolle des Akkords im Zusammenhang</td></tr>
+        <tr><td>Beispiel C–Am–Dm–G–C</td><td>I – vi – ii – V – I</td><td>T – Tp – Sp – D – T</td></tr>
+        <tr><td>Stärke</td><td>neutral, eindeutig, international, in Pop und Jazz üblich</td><td>zeigt die Wirkung, gut für klassische Analyse</td></tr>
+        <tr><td>Schwäche</td><td>sagt nichts über die Rolle</td><td>mehrdeutig, außerhalb Deutschlands kaum bekannt</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Dieses Buch verwendet vor allem Stufen. Wo die Rolle eines Akkords wichtig ist, nennt es zusätzlich die Funktion. Für dich als Pianist ist das die praktischste Kombination: Stufen zum Spielen, Transponieren und Kommunizieren mit anderen Musikern, Funktionen zum Verstehen, warum etwas wirkt.</p>
+
+  <section class="layer deep" data-title="Hugo Riemann und die Geschichte der Funktionstheorie">
+    <p>Hugo Riemann (1849–1919) war einer der einflussreichsten Musiktheoretiker seiner Zeit. In seiner „Vereinfachten Harmonielehre oder die Lehre von den tonalen Funktionen der Akkorde“ (1893) führte er die Idee ein, dass sich alle Akkorde einer Tonart auf drei Grundfunktionen zurückführen lassen.</p>
+    <p>Riemanns ursprüngliches System war <em>dualistisch</em>. Er dachte Moll als Spiegelbild von Dur und leitete den Mollakkord aus einer „Untertonreihe“ ab, die nach unten statt nach oben verläuft. Physikalisch existiert eine solche Untertonreihe aber nicht als Eigenschaft schwingender Saiten. Kapitel 11 hat gezeigt, dass Moll in der Obertonreihe nur mit hohen Teiltönen vorkommt.</p>
+    <p>Spätere Theoretiker gaben den Dualismus auf und vereinfachten die Schreibweise. Die in Deutschland verbreitete Form geht vor allem auf Wilhelm Maler zurück („Beitrag zur durmolltonalen Harmonielehre“, 1931). Riemanns eigentliche Einsicht hat sich aber gehalten: Akkorde wirken nicht nur durch ihre Töne, sondern durch ihr Verhältnis zur Tonika. Im englischsprachigen Raum spricht man heute von <em>tonic, predominant</em> und <em>dominant function</em> und benutzt dazu Stufenziffern. Die Idee der Funktion hat sich also international durchgesetzt, Riemanns Symbole nicht.</p>
+  </section>
+
+  <!-- 14.8 -->
+  <h2 id="pop">14.8 Funktionen in der Popmusik</h2>
+  <p>Auch Popmusik lässt sich mit Funktionen beschreiben. Die Folge I – V – vi – IV (C – G – Am – F) lautet in Funktionen T – D – Tp – S. Sie bewegt sich von der Ruhe zur Spannung, dann zur „weichen“ Tonika und zur Subdominante. Da sie nicht mit der Dominante endet, sondern mit der Subdominante, kann sie sich endlos wiederholen, ohne je richtig abzuschließen. Kapitel 18 untersucht solche Folgen genauer.</p>
+  <p>Im Pop sind die Funktionen oft schwächer ausgeprägt als in der Klassik. Die Dominante erscheint ohne Septime, manchmal fehlt sie ganz, und Akkorde aus Moll werden in Dur gemischt (Kapitel 23). Trotzdem hilft das Denken in Funktionen: Es erklärt, welcher Akkord sich nach „Ankommen“ anfühlt und welcher nach „Unterwegssein“.</p>
+
+  <section class="layer piano" data-title="Eine Melodie mit Tonika und Dominante begleiten">
+    <p>Viele Kinder- und Volkslieder lassen sich mit nur zwei Akkorden begleiten, Tonika und Dominante. „Hänschen klein“ ist ein Beispiel. Die Regel zum Finden der Akkorde: Gehören die betonten Melodietöne eines Takts zu C-Dur (c, e, g), spielst du die Tonika. Gehören sie zu G-Dur oder G7 (g, h, d, f), spielst du die Dominante.</p>
+    <div class="abc" data-bpm="110" data-caption="„Hänschen klein“ (Volkslied) mit Tonika (C) und Dominante (G7)">
+      X:1
+      M:2/4
+      L:1/8
+      K:C
+      %%score {RH LH}
+      V:RH clef=treble
+      V:LH clef=bass
+      [V:RH] "^C"G E E2 | "^G7"F D D2 | "^C"C D E F | G G G2 | "^C"G E E2 | "^G7"F D D2 | "^C"C E G G | C4 |]
+      [V:LH] [C,G,]4 | [G,,F,]4 | [C,G,]4 | [C,G,]4 | [C,G,]4 | [G,,F,]4 | [C,G,]4 | [C,G,]4 |]
+    </div>
+    <p>In den Takten 2 und 6 bestehen die Melodietöne aus f und d, beides Töne von G7. Überall sonst passt C-Dur. In Takt 3 sind d und f nur Durchgangstöne zwischen den Akkordtönen c, e und g (Kapitel 19).</p>
+    <p><strong>Übung:</strong> Spiel die Melodie rechts und links die Zweiklänge c–g (Tonika) und G–f (Dominante, Grundton und Septime). Danach transponiere das Lied nach G-Dur: Melodie ab d'', Tonika G, Dominante D7.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Die <strong>Tonika</strong> (I) ist das Zentrum, die <strong>Dominante</strong> (V) die Spannung, die <strong>Subdominante</strong> (IV) die Wegbewegung.</li>
+    <li>V → I ist so stark wegen Leitton, Quintfall im Bass und schrittweiser Auflösung der Töne.</li>
+    <li>Die Kadenz I – IV – V – I enthält alle Töne der Tonart und legt sie eindeutig fest.</li>
+    <li>Nebendreiklänge vertreten Hauptdreiklänge: vi für I, ii für IV, vii° für V.</li>
+    <li>Die Funktionstheorie (T, S, D, Tp, Sp, Dp, Tg) benennt Rollen, die Stufentheorie (I, ii, V …) Positionen. Dieses Buch nutzt vor allem Stufen.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">14.1</span><div><span class="kind">Theorie</span>Nenne Tonika, Subdominante und Dominante in G-Dur, F-Dur, D-Dur und B-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G-Dur: G, C, D. F-Dur: F, B, C. D-Dur: D, G, A. B-Dur: B, Es, F. Subdominante und Dominante liegen jeweils eine Quinte unter und über der Tonika.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">14.2</span><div><span class="kind">Theorie</span>Welche Funktion haben in C-Dur die Akkorde d-Moll, a-Moll, e-Moll und h vermindert? Begründe mit gemeinsamen Tönen.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>d-Moll: Subdominante (Sp), teilt f und a mit F-Dur. a-Moll: Tonika (Tp), teilt c und e mit C-Dur. e-Moll: mehrdeutig, Dp (teilt g und h mit G) oder Tg (teilt e und g mit C). h vermindert: Dominante, enthält h, d und f aus G7 (verkürzter Dominantseptakkord).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">14.3</span><div><span class="kind">Theorie</span>Übersetze in Funktionssymbole: I – vi – ii – V – I und I – IV – I – V – I.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>T – Tp – Sp – D – T. T – S – T – D – T.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">14.4</span><div><span class="kind">Theorie</span>Welche Akkorde sind gemeint? In A-Dur: T – Sp – D – T. In F-Dur: T – Tp – S – D – T.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>A-Dur: A – Hm – E – A. F-Dur: F – Dm – B – C – F.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">14.5</span><div><span class="kind">Theorie</span>Wie heißt der Leitton in F-Dur, in D-Dur und in B-Dur? In welchem Hauptdreiklang kommt er jeweils vor?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>F-Dur: e (in der Dominante C-Dur). D-Dur: cis (in der Dominante A-Dur). B-Dur: a (in der Dominante F-Dur). Der Leitton ist immer die Terz der Dominante.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">14.6</span><div><span class="kind">Theorie</span>Ordne in D-Dur jeden Ton der Tonleiter den Hauptdreiklängen zu, in denen er vorkommt.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>D-Dur: I = d–fis–a, IV = g–h–d, V = a–cis–e. d: I und IV. e: V. fis: I. g: IV. a: I und V. h: IV. cis: V. Jeder Ton kommt mindestens einmal vor.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">14.7</span><div><span class="kind">Notenlesen</span>Die Tonart ist G-Dur. Bestimme Akkord, Stellung, Stufe und Funktion.</div></div>
+      <div class="abc" data-bpm="60">
+        X:1
+        M:none
+        L:1
+        K:G
+        "^1"[GBd] | "^2"[Gce] | "^3"[FAd] | "^4"[GBd] |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: G-Dur, Grundstellung, I, T. 2: C-Dur (g'–c''–e''), Quartsextakkord, IV, S. 3: D-Dur (fis'–a'–d''), Sextakkord, V, D. 4: G-Dur, Grundstellung, I, T. Das ist die Kadenz mit kurzen Wegen aus Abschnitt 14.4, nach G-Dur transponiert.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">14.8</span><div><span class="kind">Am Klavier</span>Spiel die Kadenz I – IV – V – I in Quint-, Oktav- und Terzlage in G-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Quintlage: g–h–d', g–c'–e', fis–a–d', g–h–d'. Oktavlage: h–d'–g', c'–e'–g', a–d'–fis', h–d'–g'. Terzlage: d'–g'–h', e'–g'–c'', d'–fis'–a', d'–g'–h'. Linke Hand jeweils G, C, D, G.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">14.9</span><div><span class="kind">Am Klavier</span>Begleite „Hänschen klein“ in G-Dur mit Tonika und Dominante. Welche Akkorde spielst du in welchen Takten?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Takte 1, 3, 4, 5, 7, 8: G-Dur (Tonika). Takte 2 und 6: D7 (Dominante), weil die Melodie dort c'' und a' hat, die Septime und Quinte von D7. Linke Hand zum Beispiel G–d bzw. D–c.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">14.10</span><div><span class="kind">Gehör</span>Lass dir von jemandem (oder mit den Knöpfen in 14.1) eine Folge aus I, IV und V vorspielen und stopp nach dem letzten Akkord. Endet sie auf Tonika, Subdominante oder Dominante?</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Endet sie auf der Tonika, klingt sie abgeschlossen. Endet sie auf der Dominante, will sie eindeutig weiter. Endet sie auf der Subdominante, wirkt sie offen, aber ohne Drängen, eher wie ein Komma.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">14.11</span><div><span class="kind">Vertiefung</span>Warum heißt die Subdominante „Sub“-Dominante, obwohl sie in C-Dur (f) über der Tonika liegt, wenn man aufwärts zählt?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der Name bezieht sich auf den Quintabstand, nicht auf die Lage am Klavier. Die Dominante liegt eine Quinte über der Tonika (c → g), die Subdominante eine Quinte darunter (c → F). Weil Oktavversetzungen den Akkord nicht ändern, kann man f auch eine Quarte über c spielen. Funktional bleibt es die „untere Dominante“. Rameau hat sie deshalb <em>sous-dominante</em> genannt.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(14);
+
+  const C = [48, 60, 64, 67], F = [41, 60, 65, 69], G = [43, 59, 62, 67], Am = [45, 60, 64, 69], Dm = [38, 62, 65, 69], G2 = [43, 62, 67, 71];
+  const on = (id, steps, bpm) => document.getElementById(id).addEventListener("click", () => Book.audio.seq(steps, bpm || 80));
+  on("open-demo", [[C, 2], [F, 2], [G, 3]]);
+  on("closed-demo", [[C, 2], [F, 2], [G, 2], [C, 3]]);
+  on("plagal-demo", [[F, 2], [C, 3]], 70);
+  on("pendel-demo", [[C, 2], [F, 2], [C, 2], [F, 2], [C, 3]]);
+  on("iv-demo", [[C, 2], [F, 2], [G, 2], [C, 3]]);
+  on("ii-demo", [[C, 2], [Dm, 2], [G2, 2], [[48, 64, 67, 72], 3]]);
+  on("vi-demo", [[C, 2], [Am, 2], [F, 2], [G, 2], [C, 3]]);
+</script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Das Pedal · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .timing svg { width: 100%; height: auto; display: block; }
+  .timing .lane { stroke: var(--line); }
+  .timing .key { fill: var(--accent); }
+  .timing .ped { fill: var(--deep); }
+  .timing .snd { fill: var(--piano); opacity: 0.55; }
+  .timing text { fill: var(--muted); font-family: var(--font-display); font-size: 12px; }
+  .timing text.h { fill: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil VII · Kapitel 45</div>
+    <h1>Das Pedal</h1>
+    <p class="lede">Das rechte Pedal lässt Töne weiterklingen, wenn die Finger längst woanders sind. Richtig eingesetzt verbindet es Harmonien, macht den Klang größer und wärmer. Falsch eingesetzt verwischt es alles. Dieses Kapitel erklärt alle drei Pedale, die wichtigste Pedaltechnik und was physikalisch dabei passiert.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die Pedale von Flügel, Klavier und Digitalpiano unterscheiden und ihre Wirkung erklären,</li>
+      <li>das synkopische Pedal (Legato-Pedal) sauber ausführen,</li>
+      <li>direktes Pedal, Vorpedal und Halbpedal gezielt einsetzen,</li>
+      <li>Pedalzeichen in Noten lesen und Stücke ohne Pedalangaben sinnvoll pedalisieren,</li>
+      <li>erklären, warum das Pedal den Klang nicht nur verlängert, sondern verändert.</li>
+    </ul>
+  </div>
+
+  <!-- 45.1 -->
+  <h2 id="drei">45.1 Drei Pedale und was sie tun</h2>
+  <p>Ein moderner Flügel hat drei Pedale:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Position</th><th>Name</th><th>Wirkung</th></tr></thead>
+      <tbody>
+        <tr><td>rechts</td><td><strong>Haltepedal</strong> (Dämpferpedal, Fortepedal; engl. <em>sustain</em> oder <em>damper pedal</em>)</td><td>hebt alle Dämpfer von den Saiten. Alle angeschlagenen Töne klingen weiter, auch nach dem Loslassen der Tasten.</td></tr>
+        <tr><td>links</td><td><strong>Una corda</strong> (Verschiebung; engl. <em>soft pedal</em>)</td><td>verschiebt die ganze Mechanik etwas nach rechts. Die Hämmer treffen weniger Saiten und mit einer weicheren Stelle des Filzes. Der Ton wird leiser und matter.</td></tr>
+        <tr><td>Mitte</td><td><strong>Sostenuto</strong> (Tonhaltepedal)</td><td>hält nur die Dämpfer der Tasten oben, die im Moment des Tretens gedrückt sind. Alle anderen Töne werden normal gedämpft.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Ein <strong>aufrechtes Klavier</strong> hat rechts ebenfalls ein Haltepedal. Das linke Pedal funktioniert aber anders: Es schiebt die Hämmer näher an die Saiten heran. Sie haben weniger Anlauf, und der Ton wird leiser. Das mittlere Pedal ist beim Klavier oft ein <em>Moderator</em> oder Übungsdämpfer: Ein Filzstreifen senkt sich zwischen Hämmer und Saiten und macht das Instrument sehr leise. Manche Klaviere haben dort auch ein Sostenuto oder ein Pedal, das nur die Basssaiten hält.</p>
+  <p><strong>Digitalpianos</strong> ahmen die Pedale elektronisch nach. Gute Modelle unterstützen das Halbpedal (Abschnitt 45.5) und simulieren sogar das Mitschwingen der Saiten. Wenn du ein Digitalpiano kaufst, achte auf ein festes, stufenlos arbeitendes Pedal statt eines kleinen Schalters, der auf dem Boden wegrutscht.</p>
+  <p>Fast alles in diesem Kapitel betrifft das rechte Pedal. Es ist das mit Abstand wichtigste.</p>
+
+  <!-- 45.2 -->
+  <h2 id="halten">45.2 Das Haltepedal</h2>
+  <p>Ohne Pedal endet ein Ton, sobald du die Taste loslässt: Der Dämpfer fällt auf die Saite (Kapitel 43). Mit getretenem Pedal bleiben alle Dämpfer oben. Jeder Ton klingt weiter, bis er von selbst verklingt oder bis du das Pedal wieder hebst. Hör den Unterschied an derselben Tonleiter:</p>
+  <div class="btn-row">
+    <button class="btn" type="button" id="demo-dry">▶ ohne Pedal</button>
+    <button class="btn" type="button" id="demo-wet">▶ mit durchgetretenem Pedal</button>
+  </div>
+  <p>Mit Pedal verschwimmen die Töne der Tonleiter zu einem Klangbrei, weil benachbarte Töne gleichzeitig klingen und sich reiben (Abschnitt 5.10). Daraus folgt die wichtigste Pedalregel:</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Das Pedal hält eine Harmonie zusammen. Wechselt die Harmonie, wechselt das Pedal. Töne, die nicht zur aktuellen Harmonie gehören, dürfen nicht mit ins Pedal geraten.</p>
+  </div>
+  <h4>Die Fußtechnik</h4>
+  <ul>
+    <li>Die Ferse bleibt am Boden. Der Fußballen liegt auf dem Pedal, etwa auf dessen vorderer Hälfte.</li>
+    <li>Das Pedal wird aus dem Fußgelenk bewegt, nicht aus dem Knie und nicht durch Anheben des ganzen Beins.</li>
+    <li>Der Fuß verlässt das Pedal nicht. Auch wenn das Pedal oben ist, bleibt der Ballen in Kontakt. So entstehen keine Klopfgeräusche.</li>
+    <li>Das Pedal hat einen <strong>Leerweg</strong>: Die ersten Millimeter bewegen noch keine Dämpfer. Fühl, wo die Dämpfer beginnen, sich zu heben. Für das Wechseln brauchst du nur den Bereich ab dort.</li>
+  </ul>
+
+  <h4>Pedalzeichen</h4>
+  <p>In Noten steht <em>Ped.</em> (oder ein verschnörkeltes 𝒫𝑒𝒹.) für „Pedal treten“ und ein Sternchen ✻ für „Pedal heben“. Moderne Ausgaben verwenden oft eine Linie unter dem System: Sie beginnt mit dem Treten, eine Kerbe ∧ zeigt einen Wechsel, und das Ende zeigt das Heben. <em>con pedale</em> oder <em>con Ped.</em> bedeutet „mit Pedal nach eigenem Ermessen“, <em>senza pedale</em> „ohne Pedal“.</p>
+  <div class="abc" data-bpm="70" data-caption="Akkordfolge mit Pedalangaben: unter jedem Takt treten, vor dem nächsten heben">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[EGc]4 | "Am"[EAc]4 | "F"[FAc]4 | "G"[DGB]4 |]
+    [V:LH] "_Ped."C,2 G,,2 | "_✻ Ped."A,,2 E,2 | "_✻ Ped."F,,2 C,2 | "_✻ Ped."G,,2 "_✻"D,2 |]
+  </div>
+
+  <section class="layer deep" data-title="Warum das Pedal den Klang verändert: Mitschwingen">
+    <p>Das Pedal lässt nicht nur die angeschlagenen Töne weiterklingen. Es befreit <em>alle</em> Saiten des Instruments, über 200 Stück. Und die schwingen mit.</p>
+    <p>Eine Saite gerät in Schwingung, wenn sie im Rhythmus ihrer eigenen Frequenz angestoßen wird. Das nennt man <dfn id="g-resonanz">Resonanz</dfn>. Der Anstoß kommt beim Klavier über den Steg und den Resonanzboden, an dem alle Saiten befestigt sind. Spielst du ein C, schwingt seine Saite mit allen Teiltönen: C, c, g, c', e', g' und so weiter (Abschnitt 5.10). Die freien Saiten, deren Grundton oder Teiltöne mit diesen Frequenzen übereinstimmen, werden angeregt und klingen leise mit. Das ist das <dfn id="g-mitschwingen">Mitschwingen</dfn> (sympathetische Resonanz).</p>
+    <p>Mit getretenem Pedal klingt deshalb sogar ein einzelner Ton voller und räumlicher als ohne. Ein feiner Hall aus dem Inneren des Instruments legt sich um ihn. Pianisten nutzen das bewusst: Ein Akkord, der mit Pedal angeschlagen wird, klingt größer als derselbe Akkord, bei dem nur die Finger halten, obwohl beide gleich lang klingen.</p>
+    <p>Du kannst das Mitschwingen an jedem akustischen Klavier selbst nachweisen:</p>
+    <ol>
+      <li>Drück c' ganz langsam hinunter, sodass kein Ton entsteht. Halte die Taste. Ihr Dämpfer ist jetzt oben.</li>
+      <li>Schlag das große C (zwei Oktaven tiefer) kräftig und kurz an und lass es sofort los.</li>
+      <li>Das C verstummt, aber du hörst leise ein c'. Die Saite von c' wurde vom 4. Teilton des C angeregt.</li>
+    </ol>
+    <p>Probier das auch mit g' (3. Teilton von c, also Quinte darüber) und mit cis' (kein Teilton von C). Bei cis' bleibt es still.</p>
+    <div class="btn-row"><button class="btn" type="button" id="demo-sympathy">▶ Simulation: C kurz, danach klingt c' nach</button></div>
+    <p class="muted">Die Simulation ist eine Annäherung. Am echten Instrument ist der Effekt feiner und überzeugender.</p>
+  </section>
+
+  <!-- 45.3 -->
+  <h2 id="synkopisch">45.3 Das synkopische Pedal</h2>
+  <p>Die wichtigste Pedaltechnik ist das <dfn id="g-synkopisches-pedal">synkopische Pedal</dfn> (auch Legato-Pedal oder nachgetretenes Pedal). Es verbindet zwei Harmonien lückenlos, ohne dass sie sich vermischen. Der Ablauf hat drei Schritte:</p>
+  <ol>
+    <li><strong>Taste:</strong> Du schlägst den neuen Akkord an. Das Pedal ist noch unten, kurz klingen alter und neuer Akkord zusammen.</li>
+    <li><strong>Pedal hoch:</strong> Genau in diesem Moment hebst du das Pedal. Die Dämpfer fallen, der alte Akkord verstummt. Der neue klingt weiter, weil deine Finger die Tasten halten.</li>
+    <li><strong>Pedal runter:</strong> Sofort danach trittst du wieder. Jetzt ist nur der neue Akkord im Pedal.</li>
+  </ol>
+  <p>Der Fuß bewegt sich also immer <em>nach</em> der Hand, gegen den Takt versetzt. Daher der Name „synkopisch“. Ein Merkspruch: „Hand runter, Fuß hoch, Fuß runter.“</p>
+  <figure class="timing" id="timing-fig"></figure>
+  <div class="btn-row">
+    <button class="btn" type="button" id="demo-legato">▶ richtig: synkopisches Pedal</button>
+    <button class="btn" type="button" id="demo-mud">▶ falsch: Pedal nie gewechselt</button>
+    <button class="btn" type="button" id="demo-gap">▶ falsch: Pedal zu früh gehoben</button>
+  </div>
+
+  <section class="layer deep" data-title="Warum man erst nach dem Anschlag wechselt">
+    <p>Auf den ersten Blick wäre es logischer, das Pedal <em>vor</em> dem neuen Akkord zu heben und mit ihm wieder zu treten. Das funktioniert aus zwei Gründen nicht.</p>
+    <p><strong>1. Die Hände sind langsamer als die Dämpfer.</strong> Wenn du das Pedal vor dem neuen Akkord hebst, fallen die Dämpfer sofort, aber deine Hand muss noch zum neuen Akkord springen. In dieser Zeit klingt nichts: Es entsteht eine Lücke. Genau diese Lücke soll das Pedal vermeiden.</p>
+    <p><strong>2. Die Dämpfer brauchen Zeit.</strong> Ein Dämpfer bringt eine schwingende Saite nicht schlagartig zur Ruhe. Er braucht einen kurzen Moment, um die Schwingung zu schlucken, vor allem bei den langen, kräftig schwingenden Basssaiten. Trittst du das Pedal gleichzeitig mit dem Anschlag wieder, sind die alten Töne noch nicht gedämpft und geraten mit in das neue Pedal.</p>
+    <p>Das synkopische Pedal löst beide Probleme. Die Finger übernehmen den neuen Akkord, bevor der Fuß die alten Töne löscht. Die Dämpfer bekommen einen kurzen Moment zum Dämpfen, und erst dann wird neu getreten. Wie lang dieser Moment sein muss, hängt von Instrument, Lage und Raum ab. Deshalb ist Pedalisieren am Ende immer eine Sache des Hörens: Du wechselst, bis der Klang sauber ist, nicht nach der Uhr.</p>
+  </section>
+
+  <section class="layer piano" data-title="Das synkopische Pedal lernen">
+    <p><strong>Schritt 1: nur der Fuß.</strong> Sitz am Klavier, zähl laut „1 und 2 und 3 und 4 und“. Hebe das Pedal auf jede Zahl und tritt es auf jedes „und“. Die Ferse bleibt am Boden, der Ballen am Pedal.</p>
+    <p><strong>Schritt 2: eine Hand dazu.</strong> Spiel mit der rechten Hand c'–e'–g' auf „1“, halte es, tritt das Pedal auf „und“. Auf „2“ spielst du f'–a'–c'' und hebst gleichzeitig das Pedal, auf „und“ trittst du wieder. Dann g'–h'–d'' und wieder c'–e'–g'. Hör genau hin: Kein Ton des alten Akkords darf in den neuen hineinklingen, und zwischen den Akkorden darf keine Lücke sein.</p>
+    <p><strong>Schritt 3: Kontrolle.</strong> Lass nach dem Treten die Akkordtasten los. Klingt der Akkord weiter, hat das Pedal ihn erwischt. Klingt auch der vorige Akkord noch mit, hast du zu früh wieder getreten.</p>
+    <p><strong>Schritt 4: mit Bass.</strong> Spiel links die Grundtöne C, F, G, C eine Oktave tiefer dazu. Gerade die tiefen Saiten zeigen, ob du sauber wechselst.</p>
+  </section>
+
+  <!-- 45.4 -->
+  <h2 id="direkt">45.4 Direktes Pedal und Vorpedal</h2>
+  <p>Beim <dfn id="g-direktes-pedal">direkten Pedal</dfn> (auch rhythmisches Pedal) trittst du das Pedal genau mit dem Anschlag und hebst es im Rhythmus der Musik wieder. Das betont einzelne Akkorde, gibt ihnen Glanz und lässt dazwischen Luft. Typisch ist es für kurze, kräftige Akkorde, für Tanzrhythmen wie den Walzer (Pedal nur auf dem Bass auf Zählzeit 1) und für Stellen, an denen die Musik atmen soll.</p>
+  <p>Beim <dfn id="g-vorpedal">Vorpedal</dfn> trittst du das Pedal, bevor du den ersten Ton spielst. Alle Saiten sind dann schon frei und schwingen vom ersten Moment an mit. Das gibt dem Anfang eines Stücks oder einem leisen Einsatz sofort einen runden Klang.</p>
+
+  <!-- 45.5 -->
+  <h2 id="halb">45.5 Halbpedal und Pedal nach Gehör</h2>
+  <p>Das Pedal ist kein Schalter. Zwischen „ganz oben“ und „ganz unten“ liegt ein Bereich, in dem die Dämpfer die Saiten nur noch leicht berühren. Dieses <dfn id="g-halbpedal">Halbpedal</dfn> dämpft die Saiten nur teilweise. Die langen Basssaiten mit ihren großen Schwingungen werden stärker gebremst als die kurzen hohen Saiten.</p>
+  <p>Mit Halbpedal lassen sich Stellen spielen, an denen ein Basston lange klingen soll, die Melodie darüber aber nicht verschwimmen darf. Ebenso nützlich ist das schnelle, flache Wechseln, bei dem das Pedal nur ein kleines Stück gehoben wird. Es reinigt den Klang, ohne ihn ganz zu löschen.</p>
+  <p>Ob ein Halbpedal funktioniert, hängt stark vom Instrument ab. Jedes Klavier reagiert anders, und viele einfache Digitalpianos können es gar nicht. Gutes Pedalspiel ist deshalb immer an das Ohr gebunden: Die Noten sagen, <em>wo</em> pedalisiert wird, dein Ohr entscheidet, <em>wie viel</em>.</p>
+
+  <section class="layer deep" data-title="Warum hohe Töne kaum ein Pedal brauchen">
+    <p>Die obersten etwa anderthalb Oktaven eines Flügels haben gar keine Dämpfer. Das ist kein Sparen am falschen Ende. Die Saiten dort sind kurz und dünn und verklingen ohnehin innerhalb weniger Sekunden. Ein Dämpfer würde kaum etwas ändern. Ohne Dämpfer schwingen sie dafür ständig mit und geben dem Instrument zusätzlichen Glanz.</p>
+    <p>Im Bass ist es umgekehrt. Die langen, schweren Saiten speichern viel Energie und klingen lange nach, beim großen C oft über 30 Sekunden. Gleichzeitig liegen ihre Teiltöne dicht beieinander, sodass Mischklänge im Bass schnell rau werden (Kapitel 46). Deshalb sind fast alle Pedalprobleme Bassprobleme: Ein tiefer Ton aus dem vorigen Akkord, der ins neue Pedal gerät, ist deutlich hörbar. In der Höhe verzeiht das Instrument viel mehr.</p>
+    <p>Daraus ergibt sich eine praktische Regel: Achte beim Pedalwechsel vor allem auf den Bass. Wenn der Bass sauber ist, ist es meist alles.</p>
+  </section>
+
+  <!-- 45.6 -->
+  <h2 id="unacorda">45.6 Una corda</h2>
+  <p>Das linke Pedal macht den Klang leiser und vor allem <em>anders</em>: weicher, entfernter, etwas verschleiert. Es ist kein Ersatz für leises Spielen, sondern eine Klangfarbe. In Noten steht <em>una corda</em> (u. c.) zum Treten und <em>tre corde</em> (t. c.) zum Lösen.</p>
+
+  <section class="layer deep" data-title="Woher der Name „una corda“ kommt">
+    <p>Im mittleren und hohen Bereich hat ein moderner Flügel drei Saiten pro Ton, im Übergang zum Bass zwei, im tiefen Bass eine. Das linke Pedal schiebt die Mechanik so weit zur Seite, dass jeder Hammer bei dreisaitigen Tönen nur noch zwei Saiten trifft. Die dritte Saite schwingt ungeschlagen mit, angeregt durch die anderen beiden. Gleichzeitig trifft der Hammer mit einer Stelle seines Filzes auf, die im normalen Spiel nicht verdichtet wird. Sie ist weicher, und der Ton wird dunkler (Kapitel 43).</p>
+    <p>Der Name stammt aus der Zeit der frühen Hammerklaviere um 1800. Dort konnte die Verschiebung so weit gehen, dass der Hammer tatsächlich nur eine Saite traf: <em>una corda</em>, „eine Saite“. Beethoven verlangt in seiner Sonate op. 101 ausdrücklich „mit einer Saite“ und den allmählichen Übergang zu „nach und nach mehrere Saiten“. Auf heutigen Flügeln ist das nicht mehr möglich, der Name ist geblieben.</p>
+  </section>
+
+  <!-- 45.7 -->
+  <h2 id="sostenuto">45.7 Sostenuto</h2>
+  <p>Das mittlere Pedal des Flügels hält nur die Töne, deren Tasten im Moment des Tretens unten sind. Damit kannst du einen tiefen Basston liegen lassen, während du darüber mit freien Händen und ohne Pedal klar artikulierst. In Noten steht dafür <em>Sost. Ped.</em> oder <em>S. P.</em>.</p>
+  <p>Der Ablauf: Bass anschlagen und halten, Sostenuto treten, Tasten loslassen. Der Bass klingt weiter, alles andere ist normal gedämpft. Du kannst sogar zusätzlich das rechte Pedal benutzen und wechseln, ohne dass der Bass verloren geht. Im klassischen Repertoire wird das Sostenuto selten verlangt, in Musik des 20. Jahrhunderts häufiger.</p>
+
+  <section class="layer deep" data-title="Eine kurze Geschichte der Pedale">
+    <p>Die frühen Hammerklaviere des 18. Jahrhunderts hatten oft gar keine Pedale. Die Dämpfer wurden mit Handzügen oder mit <strong>Kniehebeln</strong> unter der Tastatur gehoben. Das Instrument von Johann Andreas Stein, das Mozart 1777 in einem Brief begeistert beschreibt, hatte einen solchen Kniehebel. Gegen 1800 setzten sich Fußpedale durch, zunächst oft mit zusätzlichen Effektpedalen wie Fagottzug oder Janitscharenzug (Trommel und Glöckchen).</p>
+    <p>Beethoven nutzte die neuen Möglichkeiten früh und mutig. Über den ersten Satz der „Mondscheinsonate“ (op. 27 Nr. 2, 1801) schrieb er: <em>Si deve suonare tutto questo pezzo delicatissimamente e senza sordino</em>, „Dieses ganze Stück muss sehr zart und ohne Dämpfer gespielt werden“. Auf dem leiseren, schneller verklingenden Instrument seiner Zeit klang das anders als heute. Pianisten pedalisieren den Satz auf modernen Flügeln deshalb meistens mit regelmäßigen Wechseln.</p>
+    <p>Das Sostenuto ist die jüngste Erfindung. Der französische Klavierbauer Boisselot stellte 1844 ein solches Pedal aus. Allgemein verbreitet hat es die Firma Steinway, die es 1874 patentieren ließ. Bis heute haben fast alle Konzertflügel drei Pedale, viele europäische Flügel aber auch nur zwei.</p>
+  </section>
+
+  <!-- 45.8 -->
+  <h2 id="ohne-angabe">45.8 Pedalisieren ohne Angaben</h2>
+  <p>Viele Noten, vor allem Leadsheets und Popsong-Ausgaben, enthalten keine Pedalzeichen. Dann pedalisierst du selbst. Diese Regeln helfen dabei:</p>
+  <ul>
+    <li><strong>Bei jedem Akkordwechsel wechseln.</strong> Im Leadsheet ist das jedes neue Akkordsymbol (Kapitel 17).</li>
+    <li><strong>Bei Durchgangstönen im Bass wechseln.</strong> Wenn der Bass schrittweise läuft (c–h–a), braucht oft jeder Basston ein neues Pedal.</li>
+    <li><strong>Melodieläufe nicht in einem Pedal.</strong> Schnelle Tonleitern in der Melodie verschwimmen. Entweder häufiger wechseln, flacher pedalisieren oder für diese Stelle ohne Pedal spielen.</li>
+    <li><strong>Pausen ernst nehmen.</strong> Eine Pause bedeutet Stille. Steht eine Pause in allen Stimmen, gehört das Pedal hoch.</li>
+    <li><strong>Stil beachten.</strong> Bei Bach und in vielen Stücken der Wiener Klassik pedalisiert man sparsam, damit die einzelnen Stimmen klar bleiben. Romantische Musik (Chopin, Schumann, Liszt) und impressionistische Musik (Debussy, Ravel) leben vom Pedalklang. In Pop-Balladen wird meist reichlich, aber sauber gewechselt.</li>
+  </ul>
+
+  <section class="layer piano" data-title="Pedalisieren mit den Ohren">
+    <p><strong>Die Nachhörprobe.</strong> Spiel eine Stelle mit Pedal, und mach am Ende eines Taktes eine kurze Pause, in der nur das Pedal hält. Hör, was klingt. Ist da noch ein Ton, der nicht zum Akkord gehört? Dann ist irgendwo ein Wechsel zu spät oder zu flach.</p>
+    <p><strong>Erst ohne, dann mit.</strong> Lern jedes Stück zuerst ohne Pedal, bis die Finger alle Bindungen schaffen, die möglich sind. Das Pedal kommt danach dazu. Wer von Anfang an mit Pedal übt, versteckt ungenaue Finger und Lücken unter dem Klang.</p>
+    <p><strong>Bass-Test.</strong> Spiel nur die linke Hand mit Pedal. Da der Bass die meisten Pedalfehler verursacht, hörst du sie hier am deutlichsten.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Rechts: Haltepedal hebt alle Dämpfer. Links: Una corda (Flügel) bzw. Pianopedal (Klavier). Mitte: Sostenuto (Flügel) bzw. oft Moderator (Klavier).</li>
+    <li>Wechselt die Harmonie, wechselt das Pedal.</li>
+    <li>Synkopisches Pedal: Hand runter, Fuß hoch, Fuß runter. Der Fuß folgt der Hand.</li>
+    <li>Das Pedal lässt alle Saiten mitschwingen. Deshalb klingt der Ton nicht nur länger, sondern voller.</li>
+    <li>Wie viel Pedal richtig ist, entscheidet das Ohr, vor allem im Bass.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">45.1</span><div><span class="kind">Theorie</span>Was passiert mechanisch, wenn du das rechte Pedal trittst? Was passiert beim Loslassen?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Treten hebt alle Dämpfer gleichzeitig von den Saiten. Angeschlagene Saiten klingen weiter, auch wenn die Tasten losgelassen werden, und alle anderen Saiten können mitschwingen. Loslassen senkt die Dämpfer wieder auf alle Saiten, deren Tasten nicht gedrückt sind. Diese Töne verstummen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">45.2</span><div><span class="kind">Theorie</span>Beschreibe die drei Schritte des synkopischen Pedals und erkläre, warum man das Pedal nicht vor dem Anschlag des neuen Akkords hebt.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>1. Neuen Akkord anschlagen, 2. Pedal heben, 3. Pedal wieder treten. Hebt man das Pedal vor dem Anschlag, entsteht eine Lücke, weil die Finger noch nicht auf dem neuen Akkord sind. Das Pedal soll die Akkorde aber verbinden. Zudem brauchen die Dämpfer einen Moment, um die alten Töne zu schlucken, bevor neu getreten wird.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">45.3</span><div><span class="kind">Am Klavier</span>Spiel die Akkordfolge aus dem Notenbeispiel in 45.2 (C, Am, F, G) mit synkopischem Pedal. Mach am Ende jedes Taktes die Nachhörprobe aus 45.8.</div></div>
+      <details class="solution"><summary>Worauf du achten solltest</summary><div>Am Ende jedes Taktes darf nur der aktuelle Akkord klingen. Hörst du noch den Bass des vorigen Akkords, trittst du zu früh wieder. Hörst du beim Akkordwechsel ein kurzes Loch, hebst du das Pedal zu früh oder deine Hand kommt zu spät.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">45.4</span><div><span class="kind">Am Klavier</span>Führe das Mitschwing-Experiment aus der Vertiefung in 45.2 durch: c' stumm halten, C kurz anschlagen. Wiederhole es mit g', e', b' und cis'. Bei welchen Tönen hörst du etwas?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>c' (4. Teilton), g' (6. Teilton) und e' (5. Teilton) klingen deutlich nach. b' liegt in der Nähe des 7. Teiltons, der etwas tiefer ist als b'. Es klingt schwach oder gar nicht mit. cis' entspricht keinem Teilton von C und bleibt still. Das Experiment zeigt die Obertonreihe direkt am Instrument.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">45.5</span><div><span class="kind">Notenlesen</span>Was bedeuten <em>Ped.</em>, ✻, <em>con Ped.</em>, <em>senza Ped.</em>, <em>u. c.</em> und <em>t. c.</em>?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Ped.: rechtes Pedal treten. ✻: Pedal heben. con Ped.: mit Pedal, nach eigenem Ermessen. senza Ped.: ohne Pedal. u. c. (una corda): linkes Pedal treten. t. c. (tre corde): linkes Pedal lösen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">45.6</span><div><span class="kind">Am Klavier</span>Spiel links das große C und halte es mit dem Sostenuto (falls dein Instrument eins hat). Spiel darüber rechts eine C-Dur-Tonleiter staccato. Klingt der Bass weiter, während die Tonleiter trocken bleibt?</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Wichtig ist die Reihenfolge: Bass anschlagen, Taste halten, dann erst Sostenuto treten, dann Taste loslassen. Trittst du das Sostenuto vor dem Anschlag, hält es nichts fest. Hat dein Instrument kein Sostenuto, kannst du den Effekt nicht mit dem rechten Pedal nachbilden. Das ist genau der Grund für die Erfindung des dritten Pedals.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">45.7</span><div><span class="kind">Theorie</span>Ein Walzer hat in der linken Hand das Muster Bass–Akkord–Akkord. Wo trittst du das Pedal, und welche Pedaltechnik ist das?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Typisch ist: Pedal mit dem Basston auf Zählzeit 1 treten (direktes Pedal) und auf Zählzeit 2 oder 3 wieder heben, damit die Akkorde leicht und kurz klingen. Wird der ganze Takt in einem Pedal gehalten, klingt der Walzer schwer. Bei langsamen, lyrischen Walzern hält man das Pedal länger.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">45.8</span><div><span class="kind">Vertiefung</span>Warum verursachen Pedalfehler im Bass mehr Klangbrei als in der Höhe? Nenne zwei Gründe.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>1. Tiefe Saiten klingen viel länger nach und haben mehr Energie, ein falscher Ton bleibt also lange hörbar. 2. Die Teiltöne tiefer Töne liegen in einem Bereich, in dem sie dicht beieinander liegen und sich leicht reiben (Abschnitt 5.10). Zusätzlich haben die höchsten Saiten gar keine Dämpfer und klingen ohnehin rasch aus. Fehler in der Höhe fallen deshalb weniger auf.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">45.9</span><div><span class="kind">Am Klavier</span>Wähle ein einfaches Stück oder eine Liedbegleitung ohne Pedalangaben. Trag mit Bleistift ein, wo du das Pedal wechseln würdest, und spiel es dann. Wo musstest du deinen Plan nach Gehör ändern?</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>Typische Stellen, an denen der Plan nicht aufgeht: Durchgangstöne im Bass, Melodieläufe über einem Akkord und Stellen mit Pausen. Dort braucht es häufigere oder flachere Wechsel oder gar kein Pedal. Halte die Änderungen in den Noten fest.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(45);
+  const A = Book.audio;
+  const on = (id, f) => document.getElementById(id).addEventListener("click", f);
+
+  // Tonleiter mit und ohne Pedal
+  const SCALE = [60, 62, 64, 65, 67, 69, 71, 72];
+  on("demo-dry", () => SCALE.forEach((m, i) => A.note(m, i * 0.3, 0.28)));
+  on("demo-wet", () => SCALE.forEach((m, i) => A.note(m, i * 0.3, (SCALE.length - i) * 0.3 + 1.2)));
+
+  // Akkordfolge C–F–G–C: drei Pedalvarianten
+  const CH = [[48, 60, 64, 67], [41, 60, 65, 69], [43, 59, 62, 67], [48, 60, 64, 67]];
+  const B = 1.1;
+  on("demo-legato", () => CH.forEach((c, i) => A.chord(c, i * B, i === CH.length - 1 ? 2 : B + 0.05)));
+  on("demo-mud", () => CH.forEach((c, i) => A.chord(c, i * B, (CH.length - i) * B + 1.5)));
+  on("demo-gap", () => CH.forEach((c, i) => A.chord(c, i * B + 0.25, B - 0.45)));
+
+  // Mitschwingen (Annäherung): C kurz, danach leiser Nachklang von c'
+  on("demo-sympathy", () => {
+    A.note(36, 0, 0.18, 1);
+    A.tone([261.63], 0.25, 2.5, 3);
+  });
+
+  // Zeitdiagramm synkopisches Pedal
+  (function () {
+    const W = 620, L = 90;
+    const x = (t) => L + t * 120;
+    let s = `<svg viewBox="0 0 ${W} 150" role="img" aria-label="Zeitdiagramm: Akkorde, Pedal und Klang beim synkopischen Pedal">`;
+    s += `<text class="h" x="4" y="32">Hände</text><text class="h" x="4" y="72">Pedal</text><text class="h" x="4" y="112">Klang</text>`;
+    [28, 68, 108].forEach((y) => (s += `<line class="lane" x1="${L}" x2="${W - 8}" y1="${y + 14}" y2="${y + 14}"/>`));
+    ["C", "F", "G", "C"].forEach((n, i) => {
+      s += `<rect class="key" x="${x(i)}" y="18" width="${118}" height="16" rx="3"/><text x="${x(i) + 6}" y="14">${n}</text>`;
+    });
+    for (let i = 0; i < 4; i++) {
+      const a = i === 0 ? 0.15 : i + 0.18, b = i === 3 ? 4 : i + 1.02;
+      s += `<rect class="ped" x="${x(a)}" y="58" width="${x(b) - x(a)}" height="16" rx="3"/>`;
+    }
+    s += `<rect class="snd" x="${x(0)}" y="98" width="${x(4) - x(0)}" height="16" rx="3"/>`;
+    s += `<text x="${x(1) - 4}" y="92" text-anchor="end">hoch</text><text x="${x(1) + 26}" y="92">runter</text>`;
+    s += `</svg>`;
+    document.getElementById("timing-fig").innerHTML = s +
+      `<figcaption>Die Hand schlägt den neuen Akkord an (blau), kurz danach hebt der Fuß das Pedal und tritt sofort wieder (petrol). Der Klang (ocker) bleibt ohne Lücke, und kein Akkord gerät in das Pedal des nächsten.</figcaption>`;
+  })();
+</script>
+</body>
+</html>

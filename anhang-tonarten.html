@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tonarten-Übersicht · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .circle { max-width: 30rem; margin: 1rem auto; }
+  .circle svg { width: 100%; height: auto; display: block; }
+  .circle .ring { fill: none; stroke: var(--line); }
+  .circle .seg { cursor: pointer; }
+  .circle .seg circle { fill: var(--surface); stroke: var(--line); }
+  .circle .seg:hover circle, .circle .seg.sel circle { fill: var(--accent-soft); stroke: var(--accent); }
+  .circle .maj { font-family: var(--font-display); font-weight: 700; font-size: 15px; fill: var(--ink); text-anchor: middle; }
+  .circle .min { font-family: var(--font-display); font-size: 12px; fill: var(--muted); text-anchor: middle; }
+  .circle .acc { font-family: var(--font-mono); font-size: 11px; fill: var(--accent); text-anchor: middle; }
+  .circle .mid { font-family: var(--font-display); font-size: 12px; fill: var(--muted); text-anchor: middle; }
+  tr.sel td { background: var(--accent-soft); }
+  td.notes { font-family: var(--font-mono); font-size: 0.85em; }
+  #key-name { font-family: var(--font-display); font-weight: 650; margin: 0.2rem 0 0; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Anhang</div>
+    <h1>Tonarten-Übersicht</h1>
+    <p class="lede">Alle Dur- und Moll-Tonarten mit ihren Vorzeichen. Im Quintenzirkel steht jede Tonart eine Quinte über ihrem linken Nachbarn und hat ein Kreuz mehr bzw. ein ♭ weniger. Die Herleitung steht in Kapitel 7.</p>
+  </header>
+
+  <div class="circle" id="circle"></div>
+  <div id="kbd-host"></div>
+  <p id="key-name" aria-live="polite"></p>
+
+  <div class="table-scroll">
+    <table id="keys">
+      <thead><tr><th class="num">Vorz.</th><th>Dur</th><th>Moll (parallel)</th><th>Vorzeichen in Reihenfolge</th><th>Englisch</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="muted">Kreuze kommen immer in der Reihenfolge fis, cis, gis, dis, ais, eis, his hinzu, ♭ in der Reihenfolge b, es, as, des, ges, ces, fes. Die Tonarten mit sechs Vorzeichen (Fis-Dur und Ges-Dur) klingen auf dem Klavier gleich. Bei sieben Vorzeichen (Cis/Des, Ces/H) wählt man in der Praxis meist die Schreibweise mit weniger Vorzeichen.</p>
+</main>
+
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script src="anhang.js"></script>
+<script>
+  Book.page("Tonarten-Übersicht");
+  const { de, en, cap, LET, NAT } = Anhang;
+  const SH = [[3, 1], [0, 1], [4, 1], [1, 1], [5, 1], [2, 1], [6, 1]];   // fis cis gis dis ais eis his
+  const FL = [[6, -1], [2, -1], [5, -1], [1, -1], [4, -1], [0, -1], [3, -1]]; // b es as des ges ces fes
+  // Dur-Grundtöne von 7 ♭ bis 7 ♯ (Quintenreihe)
+  const MAJ = [[0, -1], [4, -1], [1, -1], [5, -1], [2, -1], [6, -1], [3, 0], [0, 0], [4, 0], [1, 0], [5, 0], [2, 0], [6, 0], [3, 1], [0, 1]];
+  const KEYS = MAJ.map((r, i) => {
+    const k = i - 7;
+    const minor = Anhang.above(r, 6, 9); // Paralleltonart: große Sexte über dem Dur-Grundton
+    const acc = k > 0 ? SH.slice(0, k) : k < 0 ? FL.slice(0, -k) : [];
+    return { k, r, maj: cap(de(LET[r[0]], r[1])), min: de(minor.letter, minor.acc), majEn: en(LET[r[0]], r[1]), minEn: en(minor.letter, minor.acc) + "m",
+      acc: acc.map(([l, a]) => de(LET[l], a)) };
+  });
+  const tbody = document.querySelector("#keys tbody");
+  tbody.innerHTML = KEYS.map((K, i) =>
+    `<tr class="play-row" data-i="${i}"><td class="num">${K.k === 0 ? "0" : Math.abs(K.k) + (K.k > 0 ? "♯" : "♭")}</td><td>${K.maj}-Dur</td><td>${K.min}-Moll</td>` +
+    `<td class="notes">${K.acc.join(", ") || "keine"}</td><td>${K.majEn} / ${K.minEn}</td></tr>`).join("");
+
+  // Quintenzirkel: 12 Positionen, C oben, im Uhrzeigersinn Kreuztonarten
+  const POS = [];
+  for (let p = 0; p < 12; p++) {
+    const k = p <= 6 ? p : p - 12; // 0..6 Kreuze, 7..11 → −5..−1
+    POS.push([k]);
+  }
+  POS[5].push(-7); POS[6].push(-6); POS[7] = [-5, 7];
+  const C = 160, R = 120, Rm = 82;
+  let s = `<svg viewBox="0 0 320 320" role="img" aria-label="Quintenzirkel mit Dur- und Molltonarten">`;
+  s += `<circle class="ring" cx="${C}" cy="${C}" r="${R}"/><circle class="ring" cx="${C}" cy="${C}" r="${Rm}"/>`;
+  POS.forEach((ks, p) => {
+    const a = (p * 30 - 90) * Math.PI / 180;
+    const x = C + R * Math.cos(a), y = C + R * Math.sin(a);
+    const xm = C + Rm * Math.cos(a), ym = C + Rm * Math.sin(a);
+    const xa = C + (R + 30) * Math.cos(a), ya = C + (R + 30) * Math.sin(a);
+    const Ks = ks.map((k) => KEYS[k + 7]);
+    s += `<g class="seg" data-i="${ks[0] + 7}"><circle cx="${x}" cy="${y}" r="22"/>` +
+      `<text class="maj" x="${x}" y="${y + (Ks.length > 1 ? -1 : 5)}">${Ks[0].maj}</text>` +
+      (Ks.length > 1 ? `<text class="min" x="${x}" y="${y + 13}">${Ks[1].maj}</text>` : "") +
+      `<text class="min" x="${xm}" y="${ym + 4}">${Ks.map((K) => K.min).join("/")}</text>` +
+      `<text class="acc" x="${xa}" y="${ya + 4}">${ks.map((k) => (k === 0 ? "0" : Math.abs(k) + (k > 0 ? "♯" : "♭"))).join("/")}</text></g>`;
+  });
+  s += `<text class="mid" x="${C}" y="${C - 4}">außen Dur</text><text class="mid" x="${C}" y="${C + 12}">innen Moll</text></svg>`;
+  document.getElementById("circle").innerHTML = s;
+
+  const host = document.getElementById("kbd-host");
+  const nameEl = document.getElementById("key-name");
+  function show(i, play) {
+    const K = KEYS[i];
+    const r0 = 60 + NAT[K.r[0]] + K.r[1];
+    const ms = [0, 2, 4, 5, 7, 9, 11, 12].map((x) => r0 + x);
+    host.textContent = "";
+    Book.keyboard(host, { from: 60, to: 84, labels: "c", marks: ms.map((m, j) => ({ m, cls: j === 0 || j === 7 ? "c2" : "" })) });
+    nameEl.textContent = `${K.maj}-Dur / ${K.min}-Moll: ${K.acc.length ? K.acc.join(", ") : "keine Vorzeichen"}`;
+    tbody.querySelectorAll("tr").forEach((t) => t.classList.toggle("sel", +t.dataset.i === i));
+    document.querySelectorAll(".seg").forEach((g) => g.classList.toggle("sel", +g.dataset.i === i || (+g.dataset.i === 12 && i === 0) || (+g.dataset.i === 13 && i === 1) || (+g.dataset.i === 2 && i === 14)));
+    if (play) Book.audio.seq(ms.map((m) => [m, 1]), 170);
+  }
+  tbody.addEventListener("click", (e) => { const tr = e.target.closest("tr[data-i]"); if (tr) show(+tr.dataset.i, true); });
+  document.getElementById("circle").addEventListener("click", (e) => { const g = e.target.closest(".seg"); if (g) show(+g.dataset.i, true); });
+  show(7, false);
+</script>
+</body>
+</html>

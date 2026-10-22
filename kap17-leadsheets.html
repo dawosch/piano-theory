@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Akkordsymbole und Leadsheets · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .builder { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; margin-block: 1.6rem; }
+  .builder h4 { margin-top: 0; }
+  .builder .controls { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: end; margin-bottom: 0.8rem; }
+  .builder label { display: flex; flex-direction: column; gap: 0.2rem; font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); }
+  .builder select { font: inherit; font-family: var(--font-display); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.3rem 0.5rem; }
+  .builder .out { display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 1rem; margin: 0 0 0.8rem; font-size: 0.95em; }
+  .builder .out dt { font-family: var(--font-display); color: var(--muted); font-size: var(--step--1); padding-top: 0.15rem; }
+  .builder .out dd { margin: 0; font-family: var(--font-mono); }
+  .builder .sym { font-family: var(--font-display); font-weight: 700; font-size: var(--step-2); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil II · Kapitel 17</div>
+    <h1>Akkordsymbole und Leadsheets</h1>
+    <p class="lede">Ein Leadsheet besteht aus einer Melodie und darübergeschriebenen Akkordsymbolen wie Am7 oder F/G. Fast alle Pop- und Jazzstücke werden so notiert. Wer die Symbole schnell in Griffe übersetzen kann, kann aus einer einzigen Notenzeile eine vollständige Klavierbegleitung machen.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>jedes gängige Akkordsymbol lesen und die Töne des Akkords nennen,</li>
+      <li>gleichbedeutende Schreibweisen erkennen (Cmaj7, CΔ, CM7 …),</li>
+      <li>Slash-Akkorde als Umkehrung oder als Akkord mit fremdem Bass deuten,</li>
+      <li>die H/B-Falle zwischen deutscher und englischer Notation sicher umgehen,</li>
+      <li>ein Leadsheet am Klavier in drei Ausbaustufen umsetzen.</li>
+    </ul>
+  </div>
+
+  <!-- 17.1 -->
+  <h2 id="leadsheet">17.1 Was ein Leadsheet ist</h2>
+  <p>Ein <dfn id="g-leadsheet">Leadsheet</dfn> (englisch <em>lead</em>, die Hauptstimme) notiert nur das Nötigste: die Melodie in einem einzigen Notensystem, darüber die Akkorde als <dfn id="g-akkordsymbol">Akkordsymbole</dfn> und darunter oft den Text. Wie die Begleitung genau aussieht, steht nicht da. Welche Töne die linke Hand spielt, in welcher Lage die Akkorde liegen und welcher Rhythmus erklingt, entscheidest du selbst.</p>
+  <div class="abc" data-bpm="110" data-caption="Leadsheet der ersten acht Takte von „When the Saints Go Marching In“ (Traditional)">
+    X:1
+    T:When the Saints Go Marching In
+    C:Traditional
+    M:4/4
+    L:1/4
+    K:C
+    "C"z C E F | G4 | z C E F | G4 | z C E F | G2 E2 | C2 E2 | "G7"D4 |]
+  </div>
+  <p>Ein Akkordsymbol gilt so lange, bis ein neues kommt. Im Beispiel klingt sieben Takte lang C-Dur, im achten Takt G7. Sammlungen solcher Leadsheets heißen <em>Fakebooks</em>. Das bekannteste ist das „Real Book“ mit Jazzstandards. Ausführliche Klaviernoten mit beiden Händen nennt man dagegen einen <em>Klaviersatz</em> oder ein Arrangement.</p>
+
+  <!-- 17.2 -->
+  <h2 id="aufbau">17.2 Wie ein Akkordsymbol aufgebaut ist</h2>
+  <p>Jedes Akkordsymbol liest du in derselben Reihenfolge, von links nach rechts:</p>
+  <ol>
+    <li><strong>Grundton:</strong> ein Großbuchstabe, eventuell mit ♯ oder ♭. Er nennt den Ton, auf dem der Akkord aufgebaut ist.</li>
+    <li><strong>Geschlecht:</strong> Nichts dahinter heißt Dur. Ein <strong>m</strong> (oder mi, min, –) heißt Moll.</li>
+    <li><strong>Zusätze:</strong> Zahlen wie 6, 7, maj7 oder 9 fügen Töne hinzu. Wörter wie sus, dim oder aug verändern den Dreiklang.</li>
+    <li><strong>Bass:</strong> Ein Schrägstrich mit Buchstabe dahinter nennt den tiefsten Ton, wenn er nicht der Grundton ist.</li>
+  </ol>
+  <p>So zerlegt sich zum Beispiel <strong>Am7/G</strong> in: Grundton a, Moll, kleine Septime dazu, g im Bass. Das ergibt a, c, e, g mit dem g unten.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Akkordsymbole verwenden die <strong>englischen</strong> Tonnamen. Das englische <strong>B</strong> ist unser <strong>H</strong>. Unser <strong>B</strong> heißt im Symbol <strong>B♭</strong> (oft geschrieben als <strong>Bb</strong>).</p>
+  </div>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Symbol</th><th>deutsch</th><th>Töne</th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="59 63 66" data-mode="both"><td><strong>B</strong></td><td>H-Dur</td><td>h, dis, fis</td></tr>
+        <tr class="play-row" data-play="58 62 65" data-mode="both"><td><strong>B♭</strong> (Bb)</td><td>B-Dur</td><td>b, d, f</td></tr>
+        <tr class="play-row" data-play="59 62 66" data-mode="both"><td><strong>Bm</strong></td><td>h-Moll</td><td>h, d, fis</td></tr>
+        <tr class="play-row" data-play="58 61 65" data-mode="both"><td><strong>B♭m</strong></td><td>b-Moll</td><td>b, des, f</td></tr>
+        <tr class="play-row" data-play="59 63 66 69" data-mode="both"><td><strong>B7</strong></td><td>H7</td><td>h, dis, fis, a</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>In deutschen Liederbüchern findest du manchmal deutsche Symbole wie „H7“ oder „e“ für e-Moll. Ein schneller Test: Taucht irgendwo ein <strong>H</strong> auf, ist das Leadsheet deutsch, und „B“ bedeutet B♭. Steht irgendwo <strong>Bb</strong> oder <strong>B♭</strong>, ist es englisch, und „B“ bedeutet H.</p>
+
+  <section class="layer deep" data-title="Woher kommen Akkordsymbole? Vom Generalbass zum Real Book">
+    <p>Die Idee, nur Bass oder Harmonien aufzuschreiben und den Rest dem Spieler zu überlassen, ist rund 400 Jahre alt. Zwischen etwa 1600 und 1750 begleiteten Tasteninstrumente fast jede Musik nach dem <dfn id="g-generalbass">Generalbass</dfn> (italienisch <em>basso continuo</em>). Notiert war nur die Basslinie, darunter standen Ziffern, die angaben, welche Intervalle über dem Bass erklingen sollen. Eine „6“ unter dem Basston e bedeutete zum Beispiel: Sexte und Terz über e, also e, g, c. Das ist C-Dur in erster Umkehrung.</p>
+    <p>Akkordsymbole mit Buchstaben entstanden erst im 20. Jahrhundert in der amerikanischen Unterhaltungsmusik. Notenausgaben für Gitarre und Ukulele druckten über der Melodie Griffsymbole, damit Amateure mitspielen konnten. Im Jazz wurden die Symbole zum Standard, und in den 1970er-Jahren verbreitete sich das „Real Book“, eine zunächst inoffiziell kopierte Sammlung von Jazz-Leadsheets. Eine verbindliche Norm für Akkordsymbole gibt es bis heute nicht. Deshalb existieren so viele gleichbedeutende Schreibweisen.</p>
+    <p>Die beiden Systeme denken unterschiedlich:</p>
+    <ul>
+      <li>Der <strong>Generalbass</strong> denkt vom <em>Bass</em> aus. Er sagt, welche Intervalle über dem tiefsten Ton liegen, und überlässt dem Spieler, welcher Akkord daraus entsteht.</li>
+      <li>Das <strong>Akkordsymbol</strong> denkt vom <em>Grundton</em> aus. Es nennt Grundton und Akkordtyp. Der Bass wird nur erwähnt, wenn er vom Grundton abweicht (Slash-Akkord).</li>
+    </ul>
+    <p>Beide lassen die konkrete Lage der Töne offen. Das ist kein Mangel, sondern Absicht: Die Aufschreibenden vertrauen darauf, dass der Spieler eine passende Umsetzung findet.</p>
+  </section>
+
+  <!-- 17.3 -->
+  <h2 id="dreiklaenge">17.3 Dreiklänge und ihre Symbole</h2>
+  <p>Die vier Dreiklangsarten aus Kapitel 11 und die beiden sus-Akkorde haben diese Symbole. Die Formel zählt die Töne als Stufen der Dur-Tonleiter über dem Grundton: 3 ist die große Terz, ♭3 die kleine, 5 die reine Quinte. Tippe eine Zeile an, um den Akkord zu hören.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Symbol</th><th>Name</th><th>Formel</th><th>von C</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 64 67" data-mode="both"><td><strong>C</strong></td><td>Dur</td><td>1 3 5</td><td>c e g</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 67" data-mode="both"><td><strong>Cm</strong></td><td>Moll</td><td>1 ♭3 5</td><td>c es g</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 66" data-mode="both"><td><strong>Cdim</strong>, C°</td><td>vermindert</td><td>1 ♭3 ♭5</td><td>c es ges</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 64 68" data-mode="both"><td><strong>Caug</strong>, C+</td><td>übermäßig</td><td>1 3 ♯5</td><td>c e gis</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 65 67" data-mode="both"><td><strong>Csus4</strong></td><td>Quartvorhalt</td><td>1 4 5</td><td>c f g</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 62 67" data-mode="both"><td><strong>Csus2</strong></td><td>Sekundvorhalt</td><td>1 2 5</td><td>c d g</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>„sus“ steht für <em>suspended</em>, englisch für „aufgehängt, in der Schwebe“. Bei einem <dfn id="g-sus-akkord">sus-Akkord</dfn> wird die Terz durch die Quarte (sus4) oder die Sekunde (sus2) ersetzt. Weil die Terz fehlt, ist der Akkord weder Dur noch Moll. Er klingt offen und will sich oft in den normalen Dreiklang auflösen, so wie ein Vorhalt (Kapitel 19).</p>
+
+  <!-- 17.4 -->
+  <h2 id="vierklaenge">17.4 Septakkorde und Sextakkorde</h2>
+  <p>Die Septakkorde aus Kapitel 15 sind die wichtigsten Vierklänge. Dazu kommen Akkorde mit hinzugefügter Sexte oder None.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Symbol</th><th>Name</th><th>Formel</th><th>von C</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 64 67 70" data-mode="both"><td><strong>C7</strong></td><td>Dominantseptakkord</td><td>1 3 5 ♭7</td><td>c e g b</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 64 67 71" data-mode="both"><td><strong>Cmaj7</strong></td><td>großer Septakkord</td><td>1 3 5 7</td><td>c e g h</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 67 70" data-mode="both"><td><strong>Cm7</strong></td><td>Moll-Septakkord</td><td>1 ♭3 5 ♭7</td><td>c es g b</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 67 71" data-mode="both"><td><strong>CmMaj7</strong>, Cm(maj7)</td><td>Moll mit großer Septime</td><td>1 ♭3 5 7</td><td>c es g h</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 66 70" data-mode="both"><td><strong>Cm7♭5</strong>, Cø</td><td>halbverminderter Septakkord</td><td>1 ♭3 ♭5 ♭7</td><td>c es ges b</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 66 69" data-mode="both"><td><strong>Cdim7</strong>, C°7</td><td>verminderter Septakkord</td><td>1 ♭3 ♭5 𝄫7</td><td>c es ges heses (klingt wie a)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 65 67 70" data-mode="both"><td><strong>C7sus4</strong></td><td>Dominantsept mit Quarte statt Terz</td><td>1 4 5 ♭7</td><td>c f g b</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 64 67 69" data-mode="both"><td><strong>C6</strong></td><td>Dur mit Sexte</td><td>1 3 5 6</td><td>c e g a</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 67 69" data-mode="both"><td><strong>Cm6</strong></td><td>Moll mit großer Sexte</td><td>1 ♭3 5 6</td><td>c es g a</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 64 67 74" data-mode="both"><td><strong>Cadd9</strong></td><td>Dur mit None</td><td>1 3 5 9</td><td>c e g d</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="abc" data-bpm="60" data-caption="Die wichtigsten Vierklänge auf c' im Notenbild">
+    X:1
+    M:none
+    L:1
+    K:C
+    "C7"[CEG_B] | "Cmaj7"[CEGB] | "Cm7"[C_EG_B] | "Cm7b5"[C_E_G_B] | "Cdim7"[C_E_G__B] | "C6"[CEGA] | "Cadd9"[CEGd] |]
+  </div>
+  <p>Zwei Unterscheidungen sorgen oft für Verwirrung:</p>
+  <ul>
+    <li><strong>C9 und Cadd9.</strong> C9 ist ein Dominantseptakkord mit None: c, e, g, b, d. Bei Cadd9 fehlt die Septime: c, e, g, d. Eine Zahl ab 9 setzt in einem Akkordsymbol normalerweise die Septime voraus. Wer sie ausschließen will, schreibt „add“. Die erweiterten Akkorde mit 9, 11 und 13 behandelt Kapitel 27.</li>
+    <li><strong>C6 und Am7.</strong> C6 (c, e, g, a) und Am7 (a, c, e, g) enthalten genau dieselben Töne. Welcher Name gemeint ist, hängt vom Bass und vom Zusammenhang ab. Liegt c unten und klingt der Akkord als Tonika, ist es C6.</li>
+  </ul>
+
+  <section class="layer deep" data-title="Warum bedeutet „7“ die kleine Septime?">
+    <p>Nach der Logik von Kapitel 5 wäre „7“ eigentlich die große Septime, denn in der Dur-Tonleiter über c liegt h. Trotzdem bedeutet C7 im Akkordsymbol c, e, g, <strong>b</strong>. Die große Septime braucht den Zusatz „maj“.</p>
+    <p>Der Grund ist die Häufigkeit. Der mit Abstand wichtigste Septakkord der tonalen Musik ist der Dominantseptakkord auf der V. Stufe (Kapitel 15). In C-Dur ist das G7 mit g, h, d, f, und sein f ist eine kleine Septime über g. Weil dieser Akkord so oft vorkommt, wurde er zum Normalfall, der mit der kürzesten Schreibweise auskommt. Das seltenere Gegenstück mit großer Septime bekam einen Zusatz: <em>major seventh</em>, kurz maj7.</p>
+    <p>Dieselbe Logik steckt in Cm7. Die Septime ist auch hier klein, weil der Moll-Septakkord auf der ii., iii. und vi. Stufe der Dur-Tonleiter von selbst eine kleine Septime hat (d–c, e–d, a–g). Das Symbol beschreibt also immer den häufigsten Fall mit der kürzesten Bezeichnung. Ein großes Intervall muss man ausdrücklich verlangen.</p>
+  </section>
+
+  <section class="layer deep" data-title="Symmetrische Akkorde: Warum es nur drei verminderte Septakkorde gibt">
+    <p>Der verminderte Septakkord besteht nur aus kleinen Terzen: c–es–ges–heses, und von heses (a) bis zum nächsten c ist es wieder eine kleine Terz. Vier kleine Terzen zu je drei Halbtönen ergeben genau zwölf Halbtöne. Der Akkord teilt die Oktave in vier gleiche Teile.</p>
+    <p>Daraus folgt etwas Erstaunliches. Cdim7, E♭dim7, G♭dim7 und Adim7 bestehen auf dem Klavier aus genau denselben vier Tasten, nur jeweils anders gestapelt. Es gibt deshalb nur <strong>drei</strong> verschiedene verminderte Septakkorde:</p>
+    <ul>
+      <li>c, es, ges, a (= Cdim7, E♭dim7, G♭dim7, Adim7)</li>
+      <li>cis, e, g, b (= C♯dim7, Edim7, Gdim7, B♭dim7)</li>
+      <li>d, f, as, h (= Ddim7, Fdim7, A♭dim7, Bdim7)</li>
+    </ul>
+    <div class="kb" data-from="60" data-to="83" data-labels="none" data-marks="60 63 66 69 72 75 78 81" data-brackets="60-63:3;63-66:3;66-69:3;69-72:3" aria-label="Der verminderte Septakkord c, es, ges, a über zwei Oktaven"></div>
+    <p>Beim übermäßigen Dreiklang ist es ähnlich. Er besteht aus zwei großen Terzen, und bis zur Oktave fehlt noch eine dritte. Drei große Terzen zu je vier Halbtönen teilen die Oktave in drei gleiche Teile. Es gibt deshalb nur vier verschiedene übermäßige Dreiklänge.</p>
+    <p>Diese Symmetrie macht die beiden Akkorde mehrdeutig. Ein verminderter Septakkord kann in vier verschiedene Richtungen aufgelöst werden, je nachdem, welchen seiner Töne man als Leitton deutet. Komponisten nutzen das, um überraschend in entfernte Tonarten zu wechseln (Kapitel 25). Die korrekte Schreibweise im Notenbild hängt deshalb immer von der Auflösung ab, auch wenn der Klang derselbe ist.</p>
+  </section>
+
+  <!-- 17.5 -->
+  <h2 id="slash">17.5 Slash-Akkorde und Bassangaben</h2>
+  <p>Ein <dfn id="g-slash-akkord">Slash-Akkord</dfn> (englisch <em>slash</em>, Schrägstrich) schreibt den Basston hinter einen Schrägstrich. C/E liest man „C über E“ (englisch „C over E“): ein C-Dur-Akkord mit e als tiefstem Ton. Es gibt zwei Arten:</p>
+  <ul>
+    <li><strong>Umkehrung:</strong> Der Basston gehört zum Akkord. C/E und C/G sind C-Dur in erster und zweiter Umkehrung (Kapitel 12). Auch Am/G gehört dazu, denn g ist die Septime von Am7. Es ist also eigentlich Am7 mit der Septime im Bass.</li>
+    <li><strong>Fremder Bass:</strong> Der Basston gehört nicht zum Akkord. F/G klingt wie eine weiche Dominante in C-Dur: Über dem Bass g liegen f, a und c, also Septime, None und Undezime von G. D/C (d, fis, a über c) entspricht D7 mit der Septime im Bass.</li>
+  </ul>
+  <p>Slash-Akkorde zeigen oft eine bewusst geführte Basslinie. Die Folge C – C/H – Am – Am/G – F lässt den Bass stufenweise abwärts gehen (c, h, a, g, f), während die Akkorde darüber nur wenig wechseln. Für dich am Klavier heißt das: Die linke Hand spielt den Ton hinter dem Schrägstrich, die rechte den Akkord vor dem Schrägstrich.</p>
+  <div class="abc" data-bpm="76" data-caption="Absteigende Basslinie mit Slash-Akkorden: c–h–a–g–f">
+    X:1
+    M:4/4
+    L:1/2
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"[CEG]2 | "C/B"[CEG]2 | "Am"[CEA]2 | "Am/G"[CEA]2 | "F"[CFA]2 |]
+    [V:LH] C,2 | B,,2 | A,,2 | G,,2 | F,,2 |]
+  </div>
+  <p class="muted">Im Akkordsymbol steht „C/B“, englisch für C mit h im Bass.</p>
+
+  <section class="layer deep" data-title="Warum der Bass so viel bestimmt">
+    <p>F/G enthält kein einziges h, also keinen Leitton. Trotzdem wirkt der Akkord wie eine Dominante, die nach C-Dur will. Warum?</p>
+    <p>Das Ohr bezieht einen Zusammenklang stark auf seinen tiefsten Ton. In Abschnitt 5.10 hast du die Obertonreihe kennengelernt: Über einem Grundton erklingen Oktave, Quinte, Terz und so weiter. Ein tiefer Basston liefert damit selbst ein Klangfundament, in das sich die Töne darüber einordnen. Liegt g im Bass, hört man f, a und c als Erweiterungen eines G-Klangs: als Septime, None und Undezime. In der Jazz-Schreibweise wäre F/G etwa ein G9sus4 oder G11.</p>
+    <p>Diese „Dominante ohne Leitton“ klingt weicher als G7, weil der Tritonus h–f fehlt. Gospel, Soul und Pop schätzen sie gerade deshalb: Sie bereitet den Schluss vor, ohne ihn zu erzwingen.</p>
+    <p>Umgekehrt kann ein Bass einen bekannten Akkord völlig umdeuten. Ein C-Dur-Akkord über dem Bass d (C/D) klingt nicht mehr nach Tonika, sondern nach einem D-Klang mit Septime, None und Undezime. Der Bass bestimmt, was als Grundton gehört wird. Das ist der Grund, warum man in Slash-Akkorden die linke Hand nie weglassen sollte.</p>
+  </section>
+
+  <!-- 17.6 -->
+  <h2 id="varianten">17.6 Gleichbedeutende Schreibweisen</h2>
+  <p>Weil es keine verbindliche Norm gibt, findest du für denselben Akkord oft mehrere Symbole. Diese Tabelle hilft beim Übersetzen:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Akkord</th><th>Schreibweisen</th></tr></thead>
+      <tbody>
+        <tr><td>Moll</td><td>Cm, Cmi, Cmin, C–</td></tr>
+        <tr><td>großer Septakkord</td><td>Cmaj7, CM7, CΔ7, CΔ, Cj7</td></tr>
+        <tr><td>Moll-Septakkord</td><td>Cm7, Cmi7, Cmin7, C–7</td></tr>
+        <tr><td>halbvermindert</td><td>Cm7♭5, Cmi7(♭5), C–7♭5, Cø, Cø7</td></tr>
+        <tr><td>verminderter Dreiklang</td><td>Cdim, C°, Cm(♭5)</td></tr>
+        <tr><td>verminderter Septakkord</td><td>Cdim7, C°7, in Jazzbüchern oft auch nur C°</td></tr>
+        <tr><td>übermäßig</td><td>Caug, C+, C(♯5), C+5</td></tr>
+        <tr><td>Dominantsept mit Quarte</td><td>C7sus4, C7sus</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Vorsicht bei zwei Zeichen. Das Dreieck Δ bedeutet immer die große Septime, nie Dur allein. Und „C°“ kann je nach Quelle den verminderten Dreiklang oder den verminderten Septakkord meinen. Im Zweifel hilft der Zusammenhang: In Jazz-Leadsheets ist meist der Septakkord gemeint.</p>
+
+  <!-- Baukasten -->
+  <div class="builder" id="builder">
+    <h4>Akkord-Baukasten</h4>
+    <p>Wähle Grundton und Akkordtyp. Der Baukasten zeigt das Symbol, die richtig geschriebenen Töne und den Griff.</p>
+    <div class="controls">
+      <label for="b-root">Grundton<select id="b-root"></select></label>
+      <label for="b-type">Akkordtyp<select id="b-type"></select></label>
+      <button class="btn primary" type="button" id="b-play">▶ Anhören</button>
+    </div>
+    <dl class="out">
+      <dt>Symbol</dt><dd class="sym" id="b-sym"></dd>
+      <dt>Töne (deutsch)</dt><dd id="b-de"></dd>
+      <dt>Töne (englisch)</dt><dd id="b-en"></dd>
+      <dt>Formel</dt><dd id="b-formula"></dd>
+    </dl>
+    <div id="b-kb"></div>
+  </div>
+
+  <!-- 17.7 -->
+  <h2 id="lesen">17.7 Akkordsymbole schnell greifen</h2>
+  <p>Beim Spielen nach Leadsheet bleibt keine Zeit, Intervalle zu zählen. Schneller geht es, wenn du jeden Akkord vom Dreiklang aus denkst. Erst greifst du den Dur- oder Moll-Dreiklang, dann veränderst du einzelne Töne nach festen Regeln.</p>
+
+  <section class="layer piano" data-title="Griff-Tricks: vom Dreiklang zu jedem Symbol">
+    <p>Greif zuerst den Dreiklang in Grundstellung, zum Beispiel C-Dur mit 1–3–5. Von dort aus kommst du mit einem Handgriff zu jedem anderen Typ:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Ziel</th><th>Handgriff ausgehend vom Dur-Dreiklang</th></tr></thead>
+        <tbody>
+          <tr><td>m</td><td>Terz einen Halbton tiefer</td></tr>
+          <tr><td>dim</td><td>Terz und Quinte je einen Halbton tiefer</td></tr>
+          <tr><td>aug</td><td>Quinte einen Halbton höher</td></tr>
+          <tr><td>sus4</td><td>Terz einen Halbton höher</td></tr>
+          <tr><td>sus2</td><td>Terz einen Ganzton tiefer</td></tr>
+          <tr><td>7</td><td>Ton hinzufügen: einen Ganzton unter dem oberen Grundton</td></tr>
+          <tr><td>maj7</td><td>Ton hinzufügen: einen Halbton unter dem oberen Grundton</td></tr>
+          <tr><td>6</td><td>Ton hinzufügen: einen Ganzton über der Quinte</td></tr>
+          <tr><td>add9</td><td>Ton hinzufügen: einen Ganzton über dem Grundton (meist eine Oktave höher)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Die Septakkorde hängen über eine Kette zusammen, in der sich immer nur ein Ton um einen Halbton bewegt. Spiel sie in dieser Reihenfolge:</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-play="60 64 67 71" data-mode="harm">▶ Cmaj7: c e g h</button>
+      <button class="btn" type="button" data-play="60 64 67 70" data-mode="harm">▶ C7: h → b</button>
+      <button class="btn" type="button" data-play="60 63 67 70" data-mode="harm">▶ Cm7: e → es</button>
+      <button class="btn" type="button" data-play="60 63 66 70" data-mode="harm">▶ Cm7♭5: g → ges</button>
+      <button class="btn" type="button" data-play="60 63 66 69" data-mode="harm">▶ Cdim7: b → a</button>
+    </div>
+    <p><strong>Übung:</strong> Spiel diese Kette auf c, f und g. Die Finger bleiben auf denselben Tasten liegen, nur jeweils ein Finger rückt einen Halbton nach unten. Nach ein paar Tagen hast du die fünf wichtigsten Septakkorde auf jedem Grundton unter Kontrolle.</p>
+  </section>
+
+  <!-- 17.8 -->
+  <h2 id="umsetzen">17.8 Vom Leadsheet zum Klavier</h2>
+  <p>Ein Leadsheet lässt sich in drei Ausbaustufen spielen. Jede Stufe ist für sich schon vollständige Musik. Fang mit der ersten an und geh erst weiter, wenn sie sicher sitzt.</p>
+  <h4>Stufe 1: Melodie rechts, Grundton links</h4>
+  <p>Die rechte Hand spielt die Melodie, die linke hält bei jedem Akkordwechsel den Grundton. Schon das ergibt einen klaren harmonischen Rahmen.</p>
+  <div class="abc" data-bpm="110" data-caption="Stufe 1: Melodie und Grundtöne">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"z C E F | G4 | z C E F | G4 | z C E F | G2 E2 | C2 E2 | "G7"D4 |]
+    [V:LH] C,4 | C,4 | C,4 | C,4 | C,4 | C,4 | C,4 | G,,4 |]
+  </div>
+  <h4>Stufe 2: Melodie rechts, Akkord links</h4>
+  <p>Die linke Hand spielt den ganzen Akkord in enger Lage, etwa in der kleinen Oktave, und schlägt ihn auf Zählzeit 1 und 3 an. Bei G7 genügen h, f und g: Grundton und Quinte darf man weglassen, Terz und Septime nicht.</p>
+  <div class="abc" data-bpm="110" data-caption="Stufe 2: Melodie und Akkorde in der linken Hand">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"z C E F | G4 | z C E F | G4 | z C E F | G2 E2 | C2 E2 | "G7"D4 |]
+    [V:LH] [C,E,G,]2 [C,E,G,]2 | [C,E,G,]2 [C,E,G,]2 | [C,E,G,]2 [C,E,G,]2 | [C,E,G,]2 [C,E,G,]2 | [C,E,G,]2 [C,E,G,]2 | [C,E,G,]2 [C,E,G,]2 | [C,E,G,]2 [C,E,G,]2 | [B,,F,G,]2 [B,,F,G,]2 |]
+  </div>
+  <h4>Stufe 3: Akkord unter der Melodie</h4>
+  <p>Für einen vollen Klang wandert die Melodie eine Oktave höher. Die rechte Hand greift auf betonten Zählzeiten Akkordtöne <em>unter</em> der Melodie dazu, die linke spielt Grundton und Quinte. Die Melodie liegt dabei immer oben und muss lauter klingen als die Begleittöne.</p>
+  <div class="abc" data-bpm="110" data-caption="Stufe 3: Melodie oben mit Akkordtönen darunter, links Grundton und Quinte">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"z c e f | [ceg]4 | z c e f | [ceg]4 |]
+    [V:LH] C,2 G,,2 | C,2 G,,2 | C,2 G,,2 | C,2 G,,2 |]
+  </div>
+
+  <section class="layer piano" data-title="Leadsheets spielen: Fingersatz und Balance">
+    <ul>
+      <li><strong>Melodie mit 4 und 5:</strong> In Stufe 3 übernehmen der vierte und fünfte Finger die Melodie, Daumen bis Mittelfinger die Akkordtöne darunter. Gib dem Melodiefinger etwas mehr Gewicht, damit die Melodie über der Begleitung singt.</li>
+      <li><strong>Nicht verdoppeln:</strong> Liegt der Melodieton im Akkord, lass ihn in der Begleitung weg. Spielt die Melodie e'' über C-Dur, greift die rechte Hand darunter nur c'' und g', nicht noch ein e'.</li>
+      <li><strong>Linke Hand tief, aber nicht zu tief:</strong> Akkorde mit enger Lage klingen unterhalb des kleinen c schnell dumpf. Unten gehören Grundton und Quinte hin, enge Terzen erst ab etwa c.</li>
+      <li><strong>Vorausschauen:</strong> Lies beim Spielen das nächste Akkordsymbol, bevor es dran ist. Die Hand kann sich dann rechtzeitig auf den Wechsel einstellen.</li>
+    </ul>
+    <p><strong>Übung:</strong> Spiel die acht Takte von „When the Saints“ in allen drei Stufen. Spiel sie dann in F-Dur: F statt C, C7 statt G7, die Melodie beginnt auf f'.</p>
+  </section>
+
+  <section class="layer piano" data-title="Slash-Akkorde greifen">
+    <p>Bei Slash-Akkorden teilen sich die Hände die Arbeit klar auf. Die linke Hand spielt den Ton hinter dem Schrägstrich, am besten als einzelnen Ton oder Oktave. Die rechte Hand spielt den Akkord vor dem Schrägstrich.</p>
+    <ul>
+      <li><strong>C/E:</strong> links e, rechts c'–e'–g' (oder g–c'–e').</li>
+      <li><strong>F/G:</strong> links g, rechts f'–a'–c''. Klingt wie eine sanfte Dominante zu C-Dur.</li>
+      <li><strong>Am/G:</strong> links g, rechts a–c'–e'. Typisch in absteigenden Basslinien.</li>
+    </ul>
+    <div class="btn-row">
+      <button class="btn" type="button" data-play="40 60 64 67" data-mode="harm">▶ C/E</button>
+      <button class="btn" type="button" data-play="43 65 69 72" data-mode="harm">▶ F/G</button>
+      <button class="btn" type="button" data-play="43 57 60 64" data-mode="harm">▶ Am/G</button>
+    </div>
+    <p>Bei Umkehrungen darfst du die rechte Hand so legen, dass der Basston nicht noch einmal direkt darüber auftaucht. Bei C/E klingt die rechte Hand g–c'–e' meist klarer als e'–g'–c''.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Ein Leadsheet notiert Melodie und Akkordsymbole. Die Begleitung gestaltest du selbst.</li>
+    <li>Ein Akkordsymbol liest sich als Grundton, Geschlecht (m = Moll), Zusätze und eventuell Bass nach dem Schrägstrich.</li>
+    <li>Akkordsymbole sind englisch: <strong>B</strong> = H, <strong>B♭</strong> = B. Ein „H“ verrät ein deutsches Leadsheet.</li>
+    <li>„7“ bedeutet die kleine Septime, „maj7“ die große. Ab 9 ist die Septime mitgemeint, „add“ schließt sie aus.</li>
+    <li>Slash-Akkorde nennen den Basston: entweder eine Umkehrung oder ein fremder Bass. Links den Bass, rechts den Akkord spielen.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">17.1</span><div><span class="kind">Theorie</span>Nenne die Töne (deutsch): Am7, Fmaj7, E7, Gsus4, Cadd9, F6, Ebaug.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Am7: a, c, e, g. Fmaj7: f, a, c, e. E7: e, gis, h, d. Gsus4: g, c, d. Cadd9: c, e, g, d. F6: f, a, c, d. Ebaug: es, g, h (die übermäßige Quinte über es heißt h, nicht ces, denn eine Quinte über e(s) muss ein h-Name sein).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">17.2</span><div><span class="kind">Theorie</span>Achtung, englische Symbole: Welche Töne haben Bm7♭5, B♭7, Bdim7 und B?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Bm7♭5 = h-Moll mit verminderter Quinte und kleiner Septime: h, d, f, a. B♭7: b, d, f, as. Bdim7: h, d, f, as. B = H-Dur: h, dis, fis. Wer hier B-Dur (b, d, f) spielt, ist in die H/B-Falle getappt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">17.3</span><div><span class="kind">Theorie</span>Welches Symbol passt? (a) c, es, g, b. (b) f, a, c, es. (c) d, fis, a, cis. (d) g, b, d. (e) e, g, b, d.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>(a) Cm7. (b) F7. (c) Dmaj7. (d) Gm. (e) Em7♭5 (halbvermindert, denn b ist die verminderte Quinte über e).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">17.4</span><div><span class="kind">Notenlesen</span>Bestimme die Symbole der vier Akkorde.</div></div>
+      <div class="abc" data-bpm="56">
+        X:1
+        M:none
+        L:1
+        K:C
+        "^1"[CEGB] | "^2"[DFAc] | "^3"[G,B,DF] | "^4"[B,DFA] |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: c', e', g', h' = Cmaj7. 2: d', f', a', c'' = Dm7. 3: g, h, d', f' = G7. 4: h, d', f', a' = Bm7♭5 (deutsch: h-Moll mit verminderter Quinte, „Hm7♭5“). Das sind übrigens die Septakkorde auf I, ii, V und vii in C-Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">17.5</span><div><span class="kind">Theorie</span>Umkehrung oder fremder Bass? C/E, F/G, Am/G, D/F♯, G/F.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C/E: Umkehrung (e ist die Terz). F/G: fremder Bass. Am/G: Umkehrung von Am7 (g ist die Septime). D/F♯: Umkehrung (fis ist die Terz). G/F: Umkehrung von G7 (f ist die Septime), also G7 mit Septime im Bass.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">17.6</span><div><span class="kind">Theorie</span>Was ist der Unterschied zwischen C9 und Cadd9? Und warum bedeutet C7 nicht c, e, g, h?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C9 = c, e, g, b, d (mit kleiner Septime). Cadd9 = c, e, g, d (ohne Septime). C7 bezeichnet den Dominantseptakkord mit kleiner Septime, weil er der häufigste Septakkord ist. Die große Septime muss als maj7 ausdrücklich verlangt werden.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">17.7</span><div><span class="kind">Am Klavier</span>Spiel die Folge C – Am – F – G mit der rechten Hand so, dass sie sich möglichst wenig bewegt. Die linke Hand spielt die Grundtöne. Welche Griffe nimmst du?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C: c'–e'–g'. Am: c'–e'–a' (nur g' → a'). F: c'–f'–a' (nur e' → f'). G: h–d'–g' (alle drei rücken je einen Schritt). Gemeinsame Töne bleiben liegen, der Rest bewegt sich in Sekunden.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">17.8</span><div><span class="kind">Am Klavier</span>Spiel die Septakkord-Kette (maj7 → 7 → m7 → m7♭5 → dim7) auf f. Welche Töne greifst du bei jedem Schritt?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Fmaj7: f, a, c, e. F7: f, a, c, es. Fm7: f, as, c, es. Fm7♭5: f, as, ces, es. Fdim7: f, as, ces, eses. Auf dem Klavier klingen ces wie h und eses wie d. Geschrieben werden sie als ces und eses, weil Quinte und Septime über f ein c- bzw. e-Name sein müssen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">17.9</span><div><span class="kind">Vertiefung</span>Wie viele verschiedene verminderte Septakkorde gibt es auf dem Klavier, und warum? Wie viele übermäßige Dreiklänge?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Drei verminderte Septakkorde: Der Akkord teilt die Oktave in vier gleiche kleine Terzen, deshalb ergibt das Verschieben um eine kleine Terz denselben Tastensatz. Nach drei Verschiebungen um einen Halbton ist man wieder am Anfang. Übermäßige Dreiklänge gibt es vier: Sie teilen die Oktave in drei große Terzen, also wiederholt sich der Tastensatz nach vier Halbtönen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">17.10</span><div><span class="kind">Vertiefung</span>Im Generalbass steht unter dem Basston e die Ziffer „6“. Welcher Akkord ist gemeint? Wie würde man ihn als Akkordsymbol schreiben?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die 6 verlangt eine Sexte über dem Bass, die Terz ist stillschweigend mitgemeint: e, g, c. Das ist C-Dur in erster Umkehrung, als Akkordsymbol C/E. Der Generalbass beschreibt den Klang vom Bass aus, das Akkordsymbol vom Grundton aus.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(17);
+
+  // Akkord-Baukasten: Grundton + Akkordtyp → Symbol, korrekt geschriebene Töne, Griff
+  (function () {
+    const LET_DE = ["c", "d", "e", "f", "g", "a", "h"];
+    const LET_EN = ["C", "D", "E", "F", "G", "A", "B"];
+    const NAT = [0, 2, 4, 5, 7, 9, 11];
+    const ROOTS = [[0, 0], [1, -1], [1, 0], [2, -1], [2, 0], [3, 0], [3, 1], [4, 0], [5, -1], [5, 0], [6, -1], [6, 0]];
+    const TYPES = [
+      { s: "", n: "Dur", f: [[1, 0], [3, 4], [5, 7]] },
+      { s: "m", n: "Moll", f: [[1, 0], [3, 3], [5, 7]] },
+      { s: "dim", n: "vermindert", f: [[1, 0], [3, 3], [5, 6]] },
+      { s: "aug", n: "übermäßig", f: [[1, 0], [3, 4], [5, 8]] },
+      { s: "sus2", n: "sus2", f: [[1, 0], [2, 2], [5, 7]] },
+      { s: "sus4", n: "sus4", f: [[1, 0], [4, 5], [5, 7]] },
+      { s: "6", n: "Sextakkord", f: [[1, 0], [3, 4], [5, 7], [6, 9]] },
+      { s: "m6", n: "Moll-Sextakkord", f: [[1, 0], [3, 3], [5, 7], [6, 9]] },
+      { s: "add9", n: "add9", f: [[1, 0], [3, 4], [5, 7], [9, 14]] },
+      { s: "7", n: "Dominantseptakkord", f: [[1, 0], [3, 4], [5, 7], [7, 10]] },
+      { s: "maj7", n: "großer Septakkord", f: [[1, 0], [3, 4], [5, 7], [7, 11]] },
+      { s: "m7", n: "Moll-Septakkord", f: [[1, 0], [3, 3], [5, 7], [7, 10]] },
+      { s: "m7♭5", n: "halbvermindert", f: [[1, 0], [3, 3], [5, 6], [7, 10]] },
+      { s: "dim7", n: "vermindert (Sept)", f: [[1, 0], [3, 3], [5, 6], [7, 9]] },
+      { s: "7sus4", n: "7sus4", f: [[1, 0], [4, 5], [5, 7], [7, 10]] }
+    ];
+    const DEG = { "1,0": "1", "2,2": "2", "3,3": "♭3", "3,4": "3", "4,5": "4", "5,6": "♭5", "5,7": "5", "5,8": "♯5", "6,9": "6", "7,9": "𝄫7", "7,10": "♭7", "7,11": "7", "9,14": "9" };
+    function de(li, acc) {
+      const l = LET_DE[li];
+      if (acc === 0) return l;
+      if (acc > 0) return l + "is".repeat(acc);
+      if (l === "h") return acc === -1 ? "b" : "heses";
+      if (l === "e" || l === "a") return l + "s" + "es".repeat(-acc - 1);
+      return l + "es".repeat(-acc);
+    }
+    function en(li, acc) { return LET_EN[li] + (acc > 0 ? "♯".repeat(acc) : acc === -2 ? "𝄫" : "♭".repeat(-acc)); }
+    const rootSel = document.getElementById("b-root"), typeSel = document.getElementById("b-type");
+    rootSel.innerHTML = ROOTS.map(([li, a], i) => `<option value="${i}">${en(li, a)}${LET_EN[li] === "B" && a === 0 ? " (= H)" : LET_EN[li] === "B" ? " (= B)" : ""}</option>`).join("");
+    typeSel.innerHTML = TYPES.map((t, i) => `<option value="${i}">${t.s ? "C" + t.s : "C"} · ${t.n}</option>`).join("");
+    typeSel.value = "11";
+    rootSel.value = "9";
+    const kb = Book.keyboard(document.getElementById("b-kb"), { from: 53, to: 84, labels: "c" });
+    let cur = [];
+    function update() {
+      const [li, a] = ROOTS[+rootSel.value];
+      const t = TYPES[+typeSel.value];
+      const rootPc = (NAT[li] + a + 12) % 12;
+      const rootMidi = 60 + rootPc - (rootPc > 6 ? 12 : 0);
+      const des = [], ens = [];
+      cur = t.f.map(([n, s]) => {
+        const tl = (li + n - 1) % 7;
+        let acc = ((rootPc + s) - NAT[tl]) % 12;
+        if (acc > 6) acc -= 12;
+        if (acc < -6) acc += 12;
+        des.push(de(tl, acc)); ens.push(en(tl, acc));
+        return rootMidi + s;
+      });
+      document.getElementById("b-sym").textContent = en(li, a) + t.s;
+      document.getElementById("b-de").textContent = des.join(" – ");
+      document.getElementById("b-en").textContent = ens.join(" – ");
+      document.getElementById("b-formula").textContent = t.f.map((x) => DEG[x.join(",")]).join(" ");
+      kb.mark(cur.map((m, i) => (i === 0 ? { m, cls: "c2" } : m)));
+    }
+    rootSel.addEventListener("change", update);
+    typeSel.addEventListener("change", update);
+    document.getElementById("b-play").addEventListener("click", () => Book.playSpec(cur.join(" "), "both", 140));
+    update();
+  })();
+</script>
+</body>
+</html>

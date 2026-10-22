@@ -1,0 +1,10 @@
+# Werkzeuge: Abhängigkeiten werden mit "npm install" im Ordner tools/ geholt
+tools/node_modules/
+# erzeugte Prüfdateien
+tools/xref.txt
+__pycache__/
+*.pyc
+# Betriebssystem
+.DS_Store
+Thumbs.db
+desktop.ini

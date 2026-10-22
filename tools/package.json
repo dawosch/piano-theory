@@ -1,0 +1,16 @@
+{
+  "name": "klavier-verstehen-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Prüf- und Bauwerkzeuge für das Lehrbuch „Klavier verstehen“",
+  "license": "MIT",
+  "scripts": {
+    "smoke": "node smoke.js",
+    "glossar": "node mk_glossar.js",
+    "xref": "node xref.js"
+  },
+  "devDependencies": {
+    "abcjs": "6.4.4",
+    "jsdom": "24.1.3"
+  }
+}

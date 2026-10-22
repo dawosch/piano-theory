@@ -1,0 +1,278 @@
+/* Layout: eine ruhige Lesespalte (~68ch) wie in einem gesetzten Fachbuch; Vertiefungen und Klavierpraxis als getönte, einklappbare Einschübe in derselben Spalte. */
+:root {
+  /* Papier, Tinte und ein kühles Notenstich-Blau */
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --ink: #1b1e25;
+  --muted: #5b6272;
+  --line: #d8dce4;
+  --accent: #2d4a94;
+  --accent-soft: #e6ebf7;
+  /* Ebene „Tiefer verstehen“: Petrol */
+  --deep: #22746e;
+  --deep-bg: #e8f2f1;
+  --deep-line: #b9d8d5;
+  /* Ebene „Am Klavier“: Ocker */
+  --piano: #9a6414;
+  --piano-bg: #faf2e3;
+  --piano-line: #ead2a6;
+  /* Klaviatur */
+  --key-white: #fdfdfb;
+  --key-black: #22252c;
+  --key-edge: #9aa1ad;
+  --key-mark: #2d4a94;
+  --key-mark-2: #22746e;
+  --key-mark-3: #b05a1e;
+  --key-label: #1b1e25;
+  --key-label-on-dark: #f5f6f8;
+  --ok: #2e7d4f;
+  --bad: #b23b3b;
+
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Literata", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-2: 1.5625rem;
+  --step-3: 2.125rem;
+  --step-4: clamp(2.5rem, 6vw, 3.75rem);
+  --measure: 68ch;
+  --radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12151b; --surface: #1a1e26; --ink: #e5e7ec; --muted: #9ba2b0; --line: #2d333e;
+    --accent: #93aaf0; --accent-soft: #1f2840;
+    --deep: #6cc8bf; --deep-bg: #142826; --deep-line: #24504b;
+    --piano: #e2ab55; --piano-bg: #2a2216; --piano-line: #574322;
+    --key-white: #d9dbe0; --key-black: #0b0d11; --key-edge: #4a505c;
+    --key-mark: #6f8fe6; --key-mark-2: #3fb0a6; --key-mark-3: #e0874a;
+    --key-label: #12151b; --key-label-on-dark: #e5e7ec;
+    --ok: #5cc18a; --bad: #e57373;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12151b; --surface: #1a1e26; --ink: #e5e7ec; --muted: #9ba2b0; --line: #2d333e;
+  --accent: #93aaf0; --accent-soft: #1f2840;
+  --deep: #6cc8bf; --deep-bg: #142826; --deep-line: #24504b;
+  --piano: #e2ab55; --piano-bg: #2a2216; --piano-line: #574322;
+  --key-white: #d9dbe0; --key-black: #0b0d11; --key-edge: #4a505c;
+  --key-mark: #6f8fe6; --key-mark-2: #3fb0a6; --key-mark-3: #e0874a;
+  --key-label: #12151b; --key-label-on-dark: #e5e7ec;
+  --ok: #5cc18a; --bad: #e57373;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.65;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--surface);
+}
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: var(--step-4); font-weight: 700; margin: 0; }
+h2 { font-size: var(--step-3); font-weight: 650; margin: 2.6em 0 0.5em; }
+h3 { font-size: var(--step-2); font-weight: 600; margin: 2em 0 0.4em; }
+h4 { font-size: var(--step-1); font-weight: 600; margin: 1.6em 0 0.3em; }
+p { margin: 0 0 1em; }
+strong { font-weight: 650; }
+code, .mono { font-family: var(--font-mono); font-size: 0.9em; }
+.eyebrow {
+  font-family: var(--font-display); font-size: var(--step--1); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 0.6em;
+}
+.muted { color: var(--muted); }
+
+/* ---------- Gerüst ---------- */
+.wrap {
+  max-width: calc(var(--measure) + 4rem);
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap-wide {
+  max-width: 64rem; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.topbar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--surface); border-bottom: 1px solid var(--line);
+}
+.topbar .inner {
+  display: flex; align-items: center; gap: 0.75rem 1rem; flex-wrap: wrap;
+  padding-block: 0.55rem; font-family: var(--font-display); font-size: var(--step--1);
+}
+.topbar .home { font-weight: 700; color: var(--ink); text-decoration: none; }
+.topbar .where { color: var(--muted); min-width: 0; flex: 1 1 12rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.toggle {
+  display: inline-flex; align-items: center; gap: 0.45rem; cursor: pointer; user-select: none;
+  font-family: var(--font-display); font-size: var(--step--1); color: var(--muted);
+  background: none; border: 1px solid var(--line); border-radius: 999px; padding: 0.25rem 0.7rem;
+}
+.toggle[aria-pressed="true"] { color: var(--deep); border-color: var(--deep-line); background: var(--deep-bg); }
+
+/* ---------- Kapitelkopf ---------- */
+.chapter-head { padding-block: 3rem 1.5rem; }
+.chapter-head .num {
+  font-family: var(--font-mono); font-size: var(--step--1); color: var(--accent); letter-spacing: 0.04em;
+}
+.chapter-head h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin-top: 0.2em; }
+.chapter-head .lede { font-size: var(--step-1); color: var(--muted); margin-top: 0.8em; line-height: 1.5; }
+.prereq {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 0.6rem; align-items: baseline;
+  font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); margin-top: 1.2rem;
+}
+.prereq a { text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 0.1rem 0.6rem; }
+.goals { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 1rem; margin-block: 1.5rem 2rem; }
+.goals ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+
+/* ---------- Die drei Ebenen ---------- */
+.layer {
+  border-radius: var(--radius); margin-block: 1.6rem; border: 1px solid;
+}
+.layer > summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.55rem;
+  padding: 0.7rem 1rem; font-family: var(--font-display); font-weight: 650; font-size: var(--step-0);
+}
+.layer > summary::-webkit-details-marker { display: none; }
+.layer > summary .tag {
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.09em; font-weight: 700;
+  white-space: nowrap;
+}
+.layer > summary .ttl { flex: 1; min-width: 0; }
+.layer > summary .chev { transition: transform 0.15s ease; flex: none; }
+.layer[open] > summary .chev { transform: rotate(90deg); }
+.layer > .body { padding: 0.2rem 1.15rem 0.6rem; }
+.layer > .body > :last-child { margin-bottom: 0.6rem; }
+.layer svg.icon { width: 1.15rem; height: 1.15rem; flex: none; }
+
+.layer.deep { background: var(--deep-bg); border-color: var(--deep-line); }
+.layer.deep > summary .tag, .layer.deep > summary svg { color: var(--deep); }
+.layer.piano { background: var(--piano-bg); border-color: var(--piano-line); }
+.layer.piano > summary .tag, .layer.piano > summary svg { color: var(--piano); }
+body.hide-deep .layer.deep { display: none; }
+
+/* Merksatz/Definition im Theorietext */
+.rule {
+  border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line);
+  padding: 0.8rem 0 0.7rem; margin-block: 1.4rem;
+}
+.rule .lbl { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--muted); }
+.rule p:last-child { margin-bottom: 0; }
+
+dfn, .term { font-style: normal; font-weight: 650; }
+
+/* ---------- Tabellen ---------- */
+.table-scroll { overflow-x: auto; margin-block: 1.2rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 0.45rem 0.7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: var(--font-display); font-weight: 600; font-size: var(--step--1); color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+td.num, th.num { text-align: right; }
+tr.play-row { cursor: pointer; }
+tr.play-row:hover td { background: var(--accent-soft); }
+
+/* ---------- Formeln ---------- */
+.formula {
+  font-family: var(--font-mono); font-size: 1rem; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 0.7rem 1rem; margin-block: 1rem; overflow-x: auto; white-space: nowrap;
+}
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.1; margin: 0 0.15em; }
+.frac > span:first-child { border-bottom: 1px solid currentColor; padding: 0 0.2em; }
+
+/* ---------- Abbildungen ---------- */
+figure { margin: 1.6rem 0; }
+figcaption { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); margin-top: 0.5rem; }
+.figure-scroll { overflow-x: auto; }
+
+/* ---------- Klaviatur ---------- */
+.kbd { display: block; max-width: 100%; height: auto; touch-action: manipulation; }
+.kbd .w { fill: var(--key-white); stroke: var(--key-edge); stroke-width: 1; }
+.kbd .b { fill: var(--key-black); stroke: var(--key-black); }
+.kbd .key { cursor: pointer; }
+.kbd .key:hover .w { fill: var(--accent-soft); }
+.kbd .key.on .w, .kbd .key.on .b { fill: var(--key-mark); }
+.kbd .key.on.c2 .w, .kbd .key.on.c2 .b { fill: var(--key-mark-2); }
+.kbd .key.on.c3 .w, .kbd .key.on.c3 .b { fill: var(--key-mark-3); }
+.kbd .key.down .w { fill: var(--accent-soft); }
+.kbd .key.down .b { fill: var(--muted); }
+.kbd text { font-family: var(--font-display); font-size: 11px; text-anchor: middle; pointer-events: none; fill: var(--key-label); }
+.kbd .key.on text, .kbd .b + text { fill: var(--key-label-on-dark); }
+.kbd text.small { font-size: 9px; }
+.kbd .bracket { stroke: var(--muted); fill: none; stroke-width: 1.2; }
+.kbd .bracket-label { fill: var(--muted); font-family: var(--font-mono); font-size: 11px; }
+
+/* ---------- Noten ---------- */
+.score { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.4rem 0.6rem 0.6rem; margin-block: 1.2rem; }
+.score .paper { overflow-x: auto; }
+.score .paper svg { max-width: 100%; }
+.score .paper svg path, .score .paper svg text, .score .paper svg tspan { fill: var(--ink); }
+.score .paper svg .abcjs-staff, .score .paper svg .abcjs-bar { stroke: var(--ink); }
+.score .paper svg .abcjs-note_selected, .score .paper svg .abcjs-note_selected path { fill: var(--accent); }
+.score .paper svg .playing, .score .paper svg .playing path { fill: var(--accent) !important; }
+.score .tools { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.score .cap { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); }
+
+/* ---------- Knöpfe ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.4rem; cursor: pointer;
+  font-family: var(--font-display); font-size: var(--step--1); font-weight: 600;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 999px;
+  padding: 0.3rem 0.8rem; line-height: 1.3;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+.btn.primary:hover { color: var(--surface); filter: brightness(1.1); }
+.btn svg { width: 0.95em; height: 0.95em; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-block: 0.8rem; }
+
+/* ---------- Übungen ---------- */
+.exercises { margin-top: 3rem; }
+.exercise { border-top: 1px solid var(--line); padding-block: 1rem; }
+.exercise .q { display: flex; gap: 0.8rem; }
+.exercise .q .n { font-family: var(--font-mono); color: var(--accent); flex: none; min-width: 2.2rem; }
+.exercise .q .kind { font-family: var(--font-display); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; }
+.exercise details.solution { margin: 0.6rem 0 0 3rem; }
+.exercise details.solution > summary { cursor: pointer; font-family: var(--font-display); font-size: var(--step--1); color: var(--accent); font-weight: 600; }
+.exercise details.solution > div { padding-top: 0.5rem; }
+
+/* ---------- Gehörtrainer ---------- */
+.trainer { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.2rem; margin-block: 1.6rem; }
+.trainer h4 { margin-top: 0; }
+.trainer .opts { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-block: 0.8rem; }
+.trainer .opts .btn.right { border-color: var(--ok); color: var(--ok); }
+.trainer .opts .btn.wrong { border-color: var(--bad); color: var(--bad); text-decoration: line-through; }
+.trainer .score-line { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); }
+.trainer .settings { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-size: var(--step--1); font-family: var(--font-display); color: var(--muted); }
+.trainer .settings label { display: inline-flex; gap: 0.3rem; align-items: center; cursor: pointer; }
+
+/* ---------- Kapitelfuß ---------- */
+.chapter-foot { margin-top: 4rem; padding-block: 1.5rem 3rem; border-top: 1px solid var(--line); }
+.chapter-foot .done { margin-bottom: 1.5rem; }
+.pager { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.pager a { display: block; text-decoration: none; border: 1px solid var(--line); border-radius: var(--radius); padding: 0.8rem 1rem; background: var(--surface); min-width: 0; }
+.pager a:hover { border-color: var(--accent); }
+.pager .dir { font-family: var(--font-display); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; }
+.pager .t { font-family: var(--font-display); font-weight: 600; color: var(--ink); }
+.pager .next { text-align: right; grid-column: 2; }
+.pager .soon { opacity: 0.6; pointer-events: none; }
+@media (max-width: 520px) { .pager { grid-template-columns: 1fr; } .pager .next { grid-column: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}

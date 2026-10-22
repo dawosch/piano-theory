@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Liedformen, Rondo und Variation · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .formplan svg { width: 100%; height: auto; display: block; }
+  .formplan .blk { stroke: var(--surface); stroke-width: 2; }
+  .formplan .A { fill: var(--accent-soft); }
+  .formplan .B { fill: var(--deep-bg); }
+  .formplan .C { fill: var(--piano-bg); }
+  .formplan .D { fill: var(--line); }
+  .formplan text { fill: var(--ink); font-family: var(--font-display); font-size: 13px; font-weight: 600; text-anchor: middle; }
+  .formplan text.k { fill: var(--muted); font-family: var(--font-mono); font-size: 10.5px; font-weight: 400; }
+  .formplan text.lbl { text-anchor: start; fill: var(--muted); font-size: 11px; font-weight: 500; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil VI · Kapitel 40</div>
+    <h1>Liedformen, Rondo und Variation</h1>
+    <p class="lede">Aus achttaktigen Themen werden ganze Stücke. Die meisten kurzen Klavierstücke, die du als Anfänger spielst, folgen einer Handvoll Grundformen: zweiteilig, dreiteilig, Rondo oder Variation. Wer die Form kennt, weiß beim ersten Blick in die Noten, welche Teile gleich sind und wo das Neue kommt.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Formteile mit Buchstaben beschreiben (A, B, A'),</li>
+      <li>zweiteilige und dreiteilige Liedformen unterscheiden und ihren Tonartenplan erklären,</li>
+      <li>ein Rondo am Wechsel von Refrain und Couplets erkennen,</li>
+      <li>die wichtigsten Arten der Variation benennen und selbst einfache Variationen spielen,</li>
+      <li>die Form eines Stücks zum Üben und Auswendiglernen nutzen.</li>
+    </ul>
+  </div>
+
+  <!-- 40.1 -->
+  <h2 id="buchstaben">40.1 Formen mit Buchstaben beschreiben</h2>
+  <p>Für die Beschreibung größerer Formen benutzt man Buchstaben. Jeder neue musikalische Gedanke bekommt einen neuen Buchstaben, jede Wiederkehr denselben:</p>
+  <ul>
+    <li><strong>A, B, C</strong> stehen für Formteile mit unterschiedlichem Material.</li>
+    <li>Ein Strich bedeutet eine veränderte Wiederkehr: <strong>A'</strong> (gesprochen „A Strich“) ist A mit Abweichungen, etwa einem anderen Schluss.</li>
+    <li>Kleinbuchstaben (<strong>a, b</strong>) beschreiben die kleineren Bausteine innerhalb eines Teils, meist Phrasen oder Achttakter.</li>
+  </ul>
+  <p>Eine Form ist also nichts anderes als ein Muster aus Wiederholung und Kontrast. Wie dieses Muster aussieht, verrät dir die Form oft schon in den Noten: Wiederholungszeichen, Da-capo-Anweisungen und gleich aussehende Notenbilder (Kapitel 10).</p>
+
+  <!-- 40.2 -->
+  <h2 id="zweiteilig">40.2 Die zweiteilige Liedform</h2>
+  <p>Die <dfn id="g-zweiteilige-liedform">zweiteilige Liedform</dfn> besteht aus zwei Teilen, A und B, die häufig jeweils wiederholt werden: ||: A :||: B :||. Sie ist die Grundform fast aller barocken Tanzsätze, also von Menuett, Gavotte, Sarabande und Gigue.</p>
+  <p>Das Entscheidende an ihr ist der <strong>Tonartenplan</strong>:</p>
+  <ul>
+    <li>Teil A beginnt in der Grundtonart und moduliert zu einer verwandten Tonart, in Dur meist zur Dominante (C-Dur → G-Dur), in Moll meist zur Paralleltonart (a-Moll → C-Dur).</li>
+    <li>Teil B beginnt in dieser neuen Tonart, bewegt sich oft noch weiter weg und führt dann in die Grundtonart zurück.</li>
+  </ul>
+  <figure class="formplan" id="plan-binary"></figure>
+  <p>Häufig greift das Ende von Teil B den Anfang von A wieder auf, jetzt in der Grundtonart. Diese Variante heißt <dfn id="g-gerundet">gerundete zweiteilige Form</dfn>. Sie ist eine Vorstufe der dreiteiligen Form und, im Großen, der Sonatenform (Kapitel 41).</p>
+  <p>Ein bekanntes Beispiel für die zweiteilige Form ist das Menuett G-Dur aus dem „Notenbüchlein für Anna Magdalena Bach“. Es wurde lange Bach zugeschrieben, stammt aber von Christian Petzold. Beide Teile stehen zwischen Wiederholungszeichen.</p>
+
+  <section class="layer deep" data-title="Warum die Tonart wandert: Form durch Harmonie">
+    <p>Die zweiteilige Form zeigt ein Prinzip, das die gesamte klassische Formenlehre prägt: Form entsteht nicht nur durch Melodie, sondern vor allem durch <strong>Tonarten</strong>.</p>
+    <p>Wenn Teil A zur Dominante moduliert, endet er zwar mit einem Ganzschluss, aber in der falschen Tonart. Das Ohr hat die Grundtonart noch im Gedächtnis und empfindet den Schluss in der Dominante als vorläufig. Die Musik steht unter Spannung, ähnlich einem Satz, der mit „aber“ endet. Teil B hat dadurch eine Aufgabe: Er muss diese Spannung lösen und die Grundtonart zurückgewinnen.</p>
+    <p>Warum gerade die Dominante? Sie ist die nächste Verwandte der Tonika. Die Tonleitern von C-Dur und G-Dur unterscheiden sich nur in einem Ton (f gegenüber fis), auf dem Quintenzirkel liegen sie direkt nebeneinander (Kapitel 7). Ein Wechsel dorthin ist deutlich hörbar und dennoch leicht nachvollziehbar. In Moll ist die Paralleltonart noch näher, denn a-Moll und C-Dur haben exakt dieselben Töne.</p>
+    <p>Dieser Gang Tonika → Nebentonart → Tonika ist das Grundgerüst, das im 18. Jahrhundert immer weiter ausgebaut wurde. Die Sonatenhauptsatzform des nächsten Kapitels ist im Kern eine stark erweiterte gerundete zweiteilige Form.</p>
+  </section>
+
+  <!-- 40.3 -->
+  <h2 id="dreiteilig">40.3 Die dreiteilige Liedform</h2>
+  <p>Die <dfn id="g-dreiteilige-liedform">dreiteilige Liedform</dfn> folgt dem Muster <strong>A B A</strong>: ein Hauptteil, ein kontrastierender Mittelteil und die Rückkehr des Hauptteils. Ihr Gewicht liegt auf der Wiederkehr. Wenn A zurückkommt, hört man etwas Bekanntes neu, nachdem man es eine Weile vermisst hat.</p>
+  <p>Der Mittelteil B setzt sich meist durch mehrere Mittel ab:</p>
+  <ul>
+    <li><strong>Tonart:</strong> Dominante, Paralleltonart oder Varianttonart (C-Dur → c-Moll),</li>
+    <li><strong>Charakter:</strong> ruhiger oder bewegter, anderer Rhythmus, andere Begleitung,</li>
+    <li><strong>Material:</strong> eine neue Melodie oder ein neu verarbeitetes Motiv aus A.</li>
+  </ul>
+  <figure class="formplan" id="plan-ternary"></figure>
+  <p>Die Form gibt es im Kleinen und im Großen. Im Kleinen genügt ein Lied von 16 Takten. Die vollständige „Ode an die Freude“ ist so gebaut: zwei Viertakter, dann ein kontrastierender Viertakter, dann wieder der Anfang. Das ergibt die Form a a' b a'.</p>
+  <div class="abc" data-bpm="110" data-caption="„Ode an die Freude“ vollständig (C-Dur, vereinfacht): a a' b a'">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    "^a""C" E E F G | "G" G F E D | "C" C C D E | "G" E3/2 D/ D2 |
+    "^a'""C" E E F G | "G" G F E D | "C" C C D E | "G" D3/2 "C" C/ C2 |
+    "^b""G" D D E C | "G7" D E/F/ "C" E C | "G7" D E/F/ E D | "Am" C "D7" D "G" G,2 |
+    "^a'""C" E E F G | "G" G F E D | "C" C C D E | "G" D3/2 "C" C/ C2 |]
+  </div>
+  <p>Der b-Teil kreist um die Dominante G und endet auf ihr, auf dem tiefen g. Diese Spannung bereitet die Rückkehr von a' vor. Die Form a a' b a' wirst du in Kapitel 42 als AABA-Songform wiedertreffen, dort mit acht Takten pro Teil.</p>
+  <p>Im Großen besteht der dritte Satz vieler klassischer Sonaten und Sinfonien aus <strong>Menuett – Trio – Menuett</strong>. Das Trio ist der kontrastierende Mittelteil. Nach ihm steht „Menuetto da capo“: Das Menuett wird noch einmal gespielt, traditionell ohne die inneren Wiederholungen. Jeder der drei Teile ist dabei selbst eine zweiteilige Form. Auch viele romantische Charakterstücke, etwa zahlreiche Nocturnes von Chopin, sind im Großen ABA gebaut.</p>
+
+  <section class="layer piano" data-title="Wegweiser in den Noten: Wiederholung, Da capo, Fine, Segno">
+    <p>Die großen Formen sind in Noten oft nicht ausgeschrieben, sondern über Zeichen gesteuert. Lies sie vor dem ersten Durchspielen und plane den Weg:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Zeichen</th><th>Bedeutung</th></tr></thead>
+        <tbody>
+          <tr><td>||: … :||</td><td>Abschnitt wiederholen</td></tr>
+          <tr><td>1. und 2. Klammer (Volta)</td><td>beim ersten Mal Klammer 1 spielen, bei der Wiederholung direkt in Klammer 2 springen</td></tr>
+          <tr><td>D.C. (da capo)</td><td>zurück an den Anfang</td></tr>
+          <tr><td>Fine</td><td>Ende, sobald man nach einem D.C. oder D.S. hier ankommt</td></tr>
+          <tr><td>D.S. (dal segno) und 𝄋</td><td>zurück zum Segno-Zeichen</td></tr>
+          <tr><td>𝄌 (Coda-Zeichen)</td><td>beim Rücksprung an dieser Stelle zur Coda springen</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Tipp:</strong> Schreib den Formverlauf mit Bleistift über den Anfang des Stücks, etwa „A A B A, Menuett D.C. ohne Wdh.“. Markiere jede Sprungstelle farbig. So verhinderst du die klassischen Fehler beim Vorspielen: eine Wiederholung vergessen, an der falschen Stelle zurückspringen oder nach dem Da capo nicht am Fine aufhören.</p>
+    <p>Beim Üben einer ABA-Form sparst du Zeit: A musst du nur einmal lernen. Achte aber genau darauf, ob die Rückkehr wirklich identisch ist. Oft unterscheiden sich die letzten Takte (A'), weil das Stück jetzt endgültig schließen soll. Genau dort passieren beim Auswendigspielen die meisten Fehler.</p>
+  </section>
+
+  <!-- 40.4 -->
+  <h2 id="rondo">40.4 Das Rondo</h2>
+  <p>Im <dfn id="g-rondo">Rondo</dfn> kehrt ein Hauptteil, der <dfn id="g-refrain-rondo">Refrain</dfn>, mehrmals wieder. Dazwischen stehen jeweils andere Teile, die <dfn id="g-couplet">Couplets</dfn> (auch Episoden). Typische Rondoformen sind:</p>
+  <ul>
+    <li><strong>ABACA:</strong> fünfteiliges Rondo, zwei verschiedene Couplets,</li>
+    <li><strong>ABACABA:</strong> siebenteiliges Rondo, das erste Couplet kehrt wieder.</li>
+  </ul>
+  <figure class="formplan" id="plan-rondo"></figure>
+  <p>Der Refrain steht immer in der Grundtonart und ist meist ein eingängiges, geschlossenes Thema, oft eine Periode oder eine kleine zweiteilige Form. Die Couplets wechseln in andere Tonarten und Charaktere. Wegen seines leicht wiedererkennbaren Refrains wurde das Rondo in der Klassik zur beliebtesten Form für fröhliche, schnelle Schlusssätze.</p>
+  <p>Ein Beispiel, das viele Klavierschüler kennen, ist Beethovens „Für Elise“. Es ist ein Rondo in der Form A B A C A. Der bekannte a-Moll-Teil ist der Refrain, das erste Couplet bringt eine hellere Episode in Dur, das zweite einen dramatischen Abschnitt über einem pochenden Orgelpunkt im Bass.</p>
+  <h4>Sonatenrondo</h4>
+  <p>Ab Mozart und Haydn verbindet sich das Rondo mit der Sonatenform zum <dfn id="g-sonatenrondo">Sonatenrondo</dfn> mit dem Plan A B A C A B A. B steht beim ersten Mal in einer Nebentonart und kehrt später in der Grundtonart zurück, genau wie das zweite Thema einer Sonate. C ist oft eine Art Durchführung. Ein bekanntes Beispiel ist der dritte Satz von Beethovens Klaviersonate „Pathétique“ op. 13. Die Einzelheiten werden verständlich, sobald du in Kapitel 41 die Sonatenhauptsatzform kennst.</p>
+
+  <section class="layer deep" data-title="Warum wollen wir den Refrain wieder hören?">
+    <p>Das Rondo baut auf einem Effekt, den die Psychologie gut untersucht hat. Robert Zajonc zeigte 1968, dass Menschen Reize umso positiver bewerten, je öfter sie ihnen begegnet sind. Dieser <em>Mere-Exposure-Effekt</em> gilt auch für Melodien: Was man schon kennt, gefällt beim nächsten Mal tendenziell besser.</p>
+    <p>Der Musikpsychologe David Huron hat in „Sweet Anticipation“ (2006) eine zweite Seite beschrieben. Unser Gehirn sagt ständig vorher, was als Nächstes kommt, und belohnt richtige Vorhersagen mit einem kleinen Gefühl der Befriedigung. Ein wiederkehrender Refrain ist eine ideale Gelegenheit für eine richtige Vorhersage. Die Couplets dazwischen sorgen dafür, dass die Wiederkehr nicht zu früh und nicht zu oft kommt, sonst würde aus Freude Langeweile.</p>
+    <p>Rondo und dreiteilige Form spielen beide mit dieser Balance aus Neuheit und Wiedererkennen. Ein ABA wirkt geschlossen, weil der Hörer am Ende genau das bekommt, was er erwartet. Ein Rondo verlängert das Spiel, indem es die Erwartung mehrmals aufbaut und erfüllt.</p>
+    <p>Der Name stammt übrigens aus der Dichtung. Das <em>Rondeau</em> war im mittelalterlichen Frankreich eine Gedichtform mit Kehrreim. Die französischen Cembalisten des Barock, besonders François Couperin, schrieben zahlreiche Rondeaux für Tasteninstrumente, in denen der Refrain zwischen den Couplets jedes Mal unverändert wiederkehrt.</p>
+  </section>
+
+  <!-- 40.5 -->
+  <h2 id="variation">40.5 Thema mit Variationen</h2>
+  <p>Bei der <dfn id="g-variation">Variation</dfn> wird ein Thema mehrfach hintereinander gespielt, jedes Mal verändert. Das Thema ist meist eine kurze, klare Liedform von 16 oder 32 Takten. Was bei allen Variationen gleich bleibt, ist in der Regel das <strong>harmonische Gerüst</strong> und die <strong>Länge</strong>. Die Melodie kann dagegen stark verändert werden, bis sie kaum noch zu hören ist.</p>
+  <p>Hier ist das Thema, über das Mozart 12 Variationen KV 265 geschrieben hat, das französische Lied „Ah, vous dirai-je, Maman“. Im Deutschen kennst du es als „Morgen kommt der Weihnachtsmann“:</p>
+  <div class="abc" data-bpm="100" data-caption="Thema (erste Hälfte)">
+    X:1
+    M:2/4
+    L:1/8
+    K:C
+    "C" C2 C2 | "C" G2 G2 | "F" A2 A2 | "C" G4 | "F" F2 F2 | "C" E2 E2 | "G" D2 D2 | "C" C4 |]
+  </div>
+  <p>Darüber vier eigene Variationen, die je eine Technik zeigen. Spiel sie nacheinander ab und achte darauf, was gleich bleibt.</p>
+  <h4>Variation 1: Figuration</h4>
+  <p>Die Melodie wird in schnellere Notenwerte aufgelöst. Die Haupttöne des Themas stehen jeweils auf der ersten Achtel, dazwischen liegen Nachbartöne.</p>
+  <div class="abc" data-bpm="100">
+    X:1
+    M:2/4
+    L:1/8
+    K:C
+    "C" C E D C | "C" G A G F | "F" A c B A | "C" G4 | "F" F A G F | "C" E G F E | "G" D F E D | "C" C4 |]
+  </div>
+  <h4>Variation 2: Rhythmus</h4>
+  <p>Gleiche Töne, neuer Rhythmus. Die punktierten Werte verwandeln das Kinderlied in einen Marsch.</p>
+  <div class="abc" data-bpm="100">
+    X:1
+    M:2/4
+    L:1/8
+    K:C
+    "C" C>C C>C | "C" G>G G>G | "F" A>A A>A | "C" G4 | "F" F>F F>F | "C" E>E E>E | "G" D>D D>D | "C" C4 |]
+  </div>
+  <h4>Variation 3: Moll</h4>
+  <p>Das Thema in der Varianttonart c-Moll. Terz und Sexte werden kleiner, der Charakter kippt vollständig, obwohl die Kontur gleich bleibt.</p>
+  <div class="abc" data-bpm="84">
+    X:1
+    M:2/4
+    L:1/8
+    K:Cm
+    "Cm" C2 C2 | "Cm" G2 G2 | "Fm" A2 A2 | "Cm" G4 | "Fm" F2 F2 | "Cm" E2 E2 | "G" D2 D2 | "Cm" C4 |]
+  </div>
+  <h4>Variation 4: Harmonik</h4>
+  <p>Die Melodie bleibt unverändert, die Begleitung wählt andere Akkorde: C, Em, Dm, G, B, Am, G7, C. Jeder Melodieton passt in den neuen Akkord, aber die Färbung ist eine andere.</p>
+  <div class="abc" data-bpm="84">
+    X:1
+    M:2/4
+    L:1/8
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C" C2 C2 | "Em" G2 G2 | "Dm" A2 A2 | "G" G4 | "Bb" F2 F2 | "Am" E2 E2 | "G7" D2 D2 | "C" C4 |]
+    [V:LH] [C,G,]4 | [E,B,]4 | [D,A,]4 | [G,,D,]4 | [_B,,F,]4 | [A,,E,]4 | [G,,F,]4 | [C,G,]4 |]
+  </div>
+  <p>Weitere Techniken sind Wechsel von Taktart und Tempo, Verlegung der Melodie in die linke Hand, kontrapunktische Variationen mit Imitation (Kapitel 38) und <strong>Charaktervariationen</strong>, die das Thema in einen ganz anderen Tonfall versetzen, etwa als Walzer oder Trauermarsch.</p>
+  <p>Hörempfehlungen: Mozarts Sonate A-Dur KV 331 beginnt mit einem Thema und sechs Variationen, darunter eine in Moll und eine langsame Adagio-Variation. Bachs „Goldberg-Variationen“ (30 Variationen über eine Aria) halten das Bassgerüst des Themas fest und variieren alles andere. Beethovens 33 „Diabelli-Variationen“ treiben die Charaktervariation auf die Spitze.</p>
+
+  <h4>Variationen über einem festen Bass</h4>
+  <p>Eine besondere Variationsform wiederholt nur eine kurze Basslinie oder Akkordfolge immer wieder, ein <dfn id="g-ostinato">Ostinato</dfn>. Darüber entstehen ständig neue Melodien. Im Barock hießen solche Stücke <em>Passacaglia</em> oder <em>Chaconne</em>. Das bekannteste Beispiel ist Pachelbels Kanon in D-Dur, dessen achttöniger Bass (d–a–h–fis–g–d–g–a) unverändert 28 Mal erklingt. Im Pop und Jazz lebt dasselbe Prinzip weiter: Ein Musiker improvisiert über eine sich wiederholende Akkordfolge, und jeder Durchgang ist eine neue Variation.</p>
+
+  <section class="layer deep" data-title="Was macht ein Thema „dasselbe“, wenn sich alles ändert?">
+    <p>In einer guten Variation kann die Melodie fast verschwinden, und trotzdem fühlt man sich auf vertrautem Boden. Woran hält sich das Ohr fest?</p>
+    <p><strong>Die Länge und die Gliederung.</strong> Jede Variation hat die gleiche Zahl von Takten und die gleichen Zäsuren. Nach vier Takten kommt ein Halbschluss, nach acht ein Ganzschluss. Das Ohr verfolgt dieses Raster unbewusst wie eine Landkarte.</p>
+    <p><strong>Die Harmonik.</strong> Im 18. Jahrhundert wurde das Thema oft eher als Akkordfolge denn als Melodie verstanden. Bachs Goldberg-Variationen behalten von der Aria fast nur das Bassgerüst. Das Ohr spürt die gleiche Abfolge von Spannung und Entspannung, auch wenn keine Note der Melodie übrig bleibt.</p>
+    <p><strong>Markante Ankertöne.</strong> Viele Variationen behalten wenigstens die betonten Haupttöne der Melodie und umspielen nur die Zwischenräume. Das ist die Figuration aus Variation 1.</p>
+    <p>Diese Beobachtung hat praktische Folgen. Jazzmusiker improvisieren nach demselben Prinzip: Sie behalten Form und Akkordfolge eines Stücks und erfinden in jedem Durchgang, dem <em>Chorus</em>, eine neue Melodie. Ein Jazzsolo ist so gesehen eine improvisierte Variationsreihe. Kapitel 49 zeigt dir, wie du damit selbst anfangen kannst.</p>
+  </section>
+
+  <section class="layer piano" data-title="Selbst variieren: eine Übung für Kopf und Hände">
+    <p>Variieren ist die beste Brücke vom Notenspiel zur Improvisation. Nimm ein einfaches Lied, das du auswendig kannst, etwa das Thema oben, und spiel es nacheinander so:</p>
+    <ol>
+      <li><strong>Original</strong> mit Grundtönen in der linken Hand.</li>
+      <li><strong>Rhythmus ändern:</strong> punktiert, dann im Dreiertakt (jeder Ton als Viertel plus Achtel), dann synkopiert.</li>
+      <li><strong>Figurieren:</strong> Zwischen zwei Melodietönen einen Nachbarton einfügen.</li>
+      <li><strong>Moll:</strong> dieselbe Melodie in c-Moll (e → es, a → as).</li>
+      <li><strong>Linke Hand variieren:</strong> statt Grundtönen gebrochene Akkorde oder einen Alberti-Bass (Kapitel 46).</li>
+    </ol>
+    <p>Achte dabei darauf, dass jede Variation genau acht Takte lang bleibt und an denselben Stellen ihre Schlüsse hat. Diese Disziplin trainiert dein Gefühl für Form. Wenn du bei einer Variation hängen bleibst, spiel weiter wie ein Jazzmusiker: Der nächste Takt kommt so oder so.</p>
+  </section>
+
+  <!-- 40.6 -->
+  <h2 id="erkennen">40.6 Form beim Hören erkennen</h2>
+  <p>Formen hört man leichter, als man denkt, wenn man weiß, worauf man achten soll:</p>
+  <ol>
+    <li><strong>Anfang merken.</strong> Präge dir die ersten Takte genau ein. Alles Weitere misst du daran.</li>
+    <li><strong>Neues bemerken.</strong> Wann kommt etwas Unbekanntes? Ändert sich die Tonart (heller, dunkler), der Rhythmus oder die Begleitung?</li>
+    <li><strong>Wiederkehr bemerken.</strong> Kommt der Anfang zurück? Einmal (ABA), mehrmals mit Neuem dazwischen (Rondo) oder ständig verändert (Variation)?</li>
+    <li><strong>Mitschreiben.</strong> Notiere die Buchstaben in der Reihenfolge, in der du sie hörst, mit Zeitangaben.</li>
+  </ol>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Formen beschreibt man mit Buchstaben: neues Material bekommt einen neuen Buchstaben, veränderte Wiederkehr einen Strich (A').</li>
+    <li><strong>Zweiteilig (AB):</strong> A moduliert zur Dominante oder Paralleltonart, B kehrt zur Grundtonart zurück.</li>
+    <li><strong>Dreiteilig (ABA):</strong> Hauptteil, kontrastierender Mittelteil, Wiederkehr. Im Großen: Menuett–Trio–Menuett.</li>
+    <li><strong>Rondo (ABACA):</strong> ein wiederkehrender Refrain in der Grundtonart mit wechselnden Couplets.</li>
+    <li><strong>Variation:</strong> Länge, Gliederung und Harmonik bleiben, Melodie, Rhythmus und Charakter ändern sich. Ostinatoformen variieren über einem festen Bass.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">40.1</span><div><span class="kind">Theorie</span>Ein Stück hat diesen Ablauf: Thema in C-Dur, neue Melodie in a-Moll, Thema in C-Dur, neue Melodie in F-Dur, Thema in C-Dur. Wie heißt die Form, und wie schreibt man sie in Buchstaben?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Rondo, ABACA. Das wiederkehrende Thema in der Grundtonart ist der Refrain, a-Moll und F-Dur sind zwei verschiedene Couplets.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">40.2</span><div><span class="kind">Theorie</span>Ein barocker Tanz in D-Dur hat zwei Teile mit Wiederholungszeichen. In welcher Tonart endet Teil A vermutlich, und warum endet Teil B in D-Dur?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Teil A endet vermutlich in A-Dur, der Dominanttonart von D-Dur. Teil B löst die dadurch entstandene Tonartenspannung und führt in die Grundtonart zurück, damit das Stück geschlossen endet.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">40.3</span><div><span class="kind">Theorie</span>Was ist der Unterschied zwischen einer gerundeten zweiteiligen Form und einer dreiteiligen Form ABA?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>In der gerundeten zweiteiligen Form kehrt der Anfang von A erst am Ende von Teil B zurück, und Teil B wird zusammen mit dieser Rückkehr wiederholt (||: A :||: B + A' :||). In der dreiteiligen Form ist die Rückkehr ein eigener, vollständiger dritter Teil. Die Grenze ist fließend, und die gerundete Form gilt als Vorstufe der dreiteiligen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">40.4</span><div><span class="kind">Theorie</span>Nach einem Trio steht „Menuetto da capo“. Was spielst du, und welche Form ergibt sich für den ganzen Satz?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Du spielst das Menuett noch einmal von vorn bis zum Fine bzw. Ende des Menuetts, traditionell ohne die inneren Wiederholungen. Der Satz hat dann die große dreiteilige Form A B A (Menuett, Trio, Menuett).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">40.5</span><div><span class="kind">Notenlesen</span>Welche Variationstechnik zeigt dieses Beispiel über dem Thema „Morgen kommt der Weihnachtsmann“?</div></div>
+      <div class="abc" data-bpm="96">
+        X:1
+        M:3/4
+        L:1/8
+        K:C
+        "C" C4 C2 | "C" G4 G2 | "F" A4 A2 | "C" G6 | "F" F4 F2 | "C" E4 E2 | "G" D4 D2 | "C" C6 |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Rhythmische Variation mit Taktwechsel: Aus dem 2/4-Takt wird ein 3/4-Takt. Aus jedem Paar gleich langer Viertel wird eine Halbe plus eine Viertel. Melodie, Harmonik und Länge (acht Takte) bleiben gleich, der Charakter wird walzerartig.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">40.6</span><div><span class="kind">Theorie</span>Warum ist bei Pachelbels Kanon der Bass das „Thema“ der Variationen und nicht die Melodie?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der achttönige Bass (d–a–h–fis–g–d–g–a) und die zugehörige Akkordfolge wiederholen sich unverändert. Die Oberstimmen ändern sich in jedem Durchgang. Das feste Element, an dem man die Wiederkehr erkennt, ist also der Bass. Das ist das Prinzip des Ostinatos.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">40.7</span><div><span class="kind">Am Klavier</span>Spiel die „Ode an die Freude“ (40.3) vollständig. Markiere vorher in den Noten, wo a, a', b und a' beginnen, und übe danach nur die Stellen, an denen sich a und a' unterscheiden.</div></div>
+      <details class="solution"><summary>Hinweis</summary><div>a und a' unterscheiden sich nur im letzten Takt: e'–d'–d' gegenüber d'–c'–c'. Fast alles liegt in Fünf-Finger-Lage mit dem Daumen auf c' (c' = 1, d' = 2, e' = 3, f' = 4, g' = 5). Die Achtelfigur e'–f' im b-Teil spielst du mit 3–4. Nur für das tiefe g am Ende von Takt 12 muss die Hand kurz nach unten. Spiel es mit dem Daumen und kehr danach sofort in die Ausgangslage zurück.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">40.8</span><div><span class="kind">Am Klavier</span>Erfinde zwei eigene Variationen über das Thema aus 40.5: eine Figuration in Achteln und eine mit verändertem Rhythmus. Jede Variation muss acht Takte lang sein und in Takt 4 auf G sowie in Takt 8 auf C enden.</div></div>
+      <details class="solution"><summary>Prüfliste</summary><div>Acht Takte? Stehen die Haupttöne des Themas noch auf den betonten Zeiten (bei der Figuration)? Endet Takt 4 auf g' und Takt 8 auf c'? Passt jeder Melodieton zu dem Akkord, der darüber steht? Dann hast du eine korrekte Variation geschrieben.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">40.9</span><div><span class="kind">Gehör</span>Hör dir Beethovens „Für Elise“ ganz an. Schreib mit Zeitangabe auf, wann der Refrain beginnt, und bestimme die Form.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der a-Moll-Refrain erklingt dreimal, getrennt durch zwei verschiedene Couplets: A B A C A. Das erste Couplet ist heller und bewegter, das zweite dramatisch mit einem durchgehend wiederholten Basston. Die genauen Zeiten hängen von der Aufnahme ab.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">40.10</span><div><span class="kind">Vertiefung</span>Erkläre mit dem Mere-Exposure-Effekt und mit Hurons Vorhersage-Theorie, warum ein Rondo seinen Refrain nicht direkt hintereinander wiederholt, sondern durch Couplets trennt.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der Mere-Exposure-Effekt macht den Refrain mit jeder Wiederholung vertrauter und tendenziell angenehmer. Nach Huron entsteht Befriedigung, wenn eine Vorhersage eintrifft. Damit der Refrain als erfüllte Erwartung erlebt wird, muss er zuerst eine Weile fehlen. Die Couplets erzeugen diese Abwesenheit und Abwechslung, sodass die Rückkehr wirkt, statt zu ermüden.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(40);
+
+  // Formpläne
+  (function () {
+    function plan(id, parts, keys, label) {
+      const W = 640, H = 78, L = 4, R = 4;
+      const total = parts.reduce((a, p) => a + p.w, 0);
+      let x = L, s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${label}">`;
+      parts.forEach((p, i) => {
+        const w = (p.w / total) * (W - L - R);
+        s += `<rect class="blk ${p.c}" x="${x}" y="8" width="${w}" height="38" rx="4"/>`;
+        s += `<text x="${x + w / 2}" y="32">${p.t}</text>`;
+        if (keys && keys[i]) s += `<text class="k" x="${x + w / 2}" y="${H - 12}" text-anchor="middle">${keys[i]}</text>`;
+        x += w;
+      });
+      s += "</svg>";
+      document.getElementById(id).innerHTML = s + `<figcaption>${label}</figcaption>`;
+    }
+    plan("plan-binary",
+      [{ t: "||: A", w: 1, c: "A" }, { t: "B :||", w: 1, c: "B" }],
+      ["I → V", "V → … → I"],
+      "Zweiteilige Form: A führt von der Grundtonart (I) zur Dominante (V), B kehrt zur Grundtonart zurück.");
+    plan("plan-ternary",
+      [{ t: "A", w: 1, c: "A" }, { t: "B", w: 1, c: "B" }, { t: "A", w: 1, c: "A" }],
+      ["I", "V, vi oder i", "I"],
+      "Dreiteilige Form: Der Mittelteil kontrastiert in Tonart und Charakter, danach kehrt A zurück.");
+    plan("plan-rondo",
+      [{ t: "A", w: 1, c: "A" }, { t: "B", w: 1, c: "B" }, { t: "A", w: 1, c: "A" }, { t: "C", w: 1, c: "C" }, { t: "A", w: 1, c: "A" }],
+      ["I", "V", "I", "vi / iv / …", "I"],
+      "Fünfteiliges Rondo: Der Refrain A in der Grundtonart wechselt sich mit zwei Couplets ab.");
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Skalentabelle · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .picker { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-block: 0.6rem 1.2rem; }
+  .picker .btn { min-width: 2.6rem; justify-content: center; }
+  tr.sel td { background: var(--accent-soft); }
+  td.notes, td.steps { font-family: var(--font-mono); font-size: 0.85em; white-space: nowrap; }
+  .group td { font-family: var(--font-display); font-weight: 650; padding-top: 1.2rem; border-bottom: 2px solid var(--ink); }
+  #scale-kbd { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 2.6rem); background: var(--bg); padding-block: 0.4rem; z-index: 2; }
+  #scale-name { font-family: var(--font-display); font-weight: 650; margin: 0.2rem 0 0; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Anhang</div>
+    <h1>Skalentabelle</h1>
+    <p class="lede">Tonleitern und Modi mit Schrittmuster und Formel. Wähl einen Grundton und tippe eine Zeile an: Die Skala erklingt aufwärts und erscheint auf der Klaviatur.</p>
+  </header>
+
+  <p class="eyebrow">Grundton</p>
+  <div class="picker" id="roots"></div>
+
+  <div id="scale-kbd"><div id="kbd-host"></div><p id="scale-name" aria-live="polite"></p></div>
+
+  <div class="table-scroll">
+    <table id="scales">
+      <thead><tr><th>Skala</th><th>Schritte</th><th>Formel</th><th>Töne</th><th>Kapitel</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="muted">Schritte: 1 = Halbton, 2 = Ganzton, 3 = übermäßige Sekunde (drei Halbtöne). Die Formel vergleicht jeden Ton mit der Dur-Tonleiter auf demselben Grundton. Bei sehr entfernten Grundtönen entstehen Doppelvorzeichen (𝄪, 𝄫). Das ist korrekt geschrieben, in der Praxis wählt man dann meist den enharmonisch gleichen Grundton.</p>
+</main>
+
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script src="anhang.js"></script>
+<script>
+  Book.page("Skalentabelle");
+  const MAJ = [0, 2, 4, 5, 7, 9, 11];
+  // Skala als Liste [Stufenzahl, Halbtöne über Grundton]
+  const D = (semis, nums) => semis.map((s, i) => [nums ? nums[i] : i + 1, s]);
+  const SCALES = [
+    { g: "Dur und Moll" },
+    { name: "Dur (Ionisch)", f: D([0, 2, 4, 5, 7, 9, 11]), ch: 6 },
+    { name: "natürliches Moll (Äolisch)", f: D([0, 2, 3, 5, 7, 8, 10]), ch: 8 },
+    { name: "harmonisches Moll", f: D([0, 2, 3, 5, 7, 8, 11]), ch: 8 },
+    { name: "melodisches Moll (aufwärts)", f: D([0, 2, 3, 5, 7, 9, 11]), ch: 8 },
+    { g: "Kirchentonarten (Modi)" },
+    { name: "Ionisch", f: D([0, 2, 4, 5, 7, 9, 11]), ch: 24 },
+    { name: "Dorisch", f: D([0, 2, 3, 5, 7, 9, 10]), ch: 24 },
+    { name: "Phrygisch", f: D([0, 1, 3, 5, 7, 8, 10]), ch: 24 },
+    { name: "Lydisch", f: D([0, 2, 4, 6, 7, 9, 11]), ch: 24 },
+    { name: "Mixolydisch", f: D([0, 2, 4, 5, 7, 9, 10]), ch: 24 },
+    { name: "Äolisch", f: D([0, 2, 3, 5, 7, 8, 10]), ch: 24 },
+    { name: "Lokrisch", f: D([0, 1, 3, 5, 6, 8, 10]), ch: 24 },
+    { g: "Pentatonik und Blues" },
+    { name: "Dur-Pentatonik", f: D([0, 2, 4, 7, 9], [1, 2, 3, 5, 6]), ch: 9 },
+    { name: "Moll-Pentatonik", f: D([0, 3, 5, 7, 10], [1, 3, 4, 5, 7]), ch: 9 },
+    { name: "Blues-Skala (Moll)", f: D([0, 3, 5, 6, 7, 10], [1, 3, 4, 4, 5, 7]), ch: 9 },
+    { g: "Symmetrische und Jazz-Skalen" },
+    { name: "Ganztonleiter", f: D([0, 2, 4, 6, 8, 10], [1, 2, 3, 4, 5, 7]), ch: 9 },
+    { name: "Halbton-Ganzton (vermindert)", f: D([0, 1, 3, 4, 6, 7, 9, 10], [1, 2, 2, 3, 4, 5, 6, 7]), ch: 30 },
+    { name: "Ganzton-Halbton (vermindert)", f: D([0, 2, 3, 5, 6, 8, 9, 11], [1, 2, 3, 4, 5, 6, 6, 7]), ch: 30 },
+    { name: "Lydisch ♭7 (Lydian dominant)", f: D([0, 2, 4, 6, 7, 9, 10]), ch: 30 },
+    { name: "Alteriert (Super-Lokrisch)", f: D([0, 1, 3, 4, 6, 8, 10], [1, 2, 2, 3, 5, 6, 7]), ch: 31 },
+    { name: "Chromatisch", f: D([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], [1, 1, 2, 2, 3, 4, 4, 5, 5, 6, 6, 7]), ch: 9 }
+  ];
+  const deg = ([n, s]) => { const d = s - MAJ[n - 1]; return (d === -2 ? "𝄫" : d === -1 ? "♭" : d === 1 ? "♯" : d === 2 ? "𝄪" : "") + n; };
+  const tbody = document.querySelector("#scales tbody");
+  const host = document.getElementById("kbd-host");
+  const nameEl = document.getElementById("scale-name");
+  let root = Anhang.ROOTS[0], sel = 1;
+  const all = Book.allChapters();
+  const chLink = (n) => { const c = all.find((x) => x.n === n); return c.ready ? `<a href="${Book.file(c)}">${n}</a>` : String(n); };
+  const steps = (f) => f.map(([, s], i) => (i + 1 < f.length ? f[i + 1][1] : 12) - s).join("-");
+  const tones = (c) => Anhang.spell(root, c.f).map((t) => Anhang.de(t.letter, t.acc));
+
+  function render() {
+    tbody.innerHTML = SCALES.map((c, i) => {
+      if (c.g) return `<tr class="group"><td colspan="5">${c.g}</td></tr>`;
+      return `<tr class="play-row${i === sel ? " sel" : ""}" data-i="${i}"><td>${c.name}</td><td class="steps">${steps(c.f)}</td>` +
+        `<td class="notes">${c.f.map(deg).join(" ")}</td><td class="notes">${tones(c).join(" ")}</td><td>${chLink(c.ch)}</td></tr>`;
+    }).join("");
+    show(false);
+  }
+  function show(play) {
+    const c = SCALES[sel];
+    const r0 = Anhang.rootMidi(root, 60);
+    const ms = c.f.map(([, s]) => r0 + s).concat([r0 + 12]);
+    host.textContent = "";
+    Book.keyboard(host, { from: 60, to: 84, labels: "c", marks: ms.map((m, i) => ({ m, cls: i === 0 || i === ms.length - 1 ? "c2" : "" })) });
+    nameEl.textContent = `${Anhang.rootLabel(root)} ${c.name}: ${tones(c).join(", ")}`;
+    if (play) Book.audio.seq(ms.map((m) => [m, 1]), 160);
+  }
+  tbody.addEventListener("click", (e) => {
+    const tr = e.target.closest("tr[data-i]"); if (!tr || e.target.closest("a")) return;
+    sel = +tr.dataset.i;
+    tbody.querySelectorAll("tr.sel").forEach((t) => t.classList.remove("sel"));
+    tr.classList.add("sel");
+    show(true);
+  });
+  Anhang.rootPicker(document.getElementById("roots"), (r) => { root = r; render(); });
+  render();
+</script>
+</body>
+</html>

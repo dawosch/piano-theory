@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Melodie über Akkorden · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil II · Kapitel 19</div>
+    <h1>Melodie über Akkorden</h1>
+    <p class="lede">Eine Melodie besteht nicht nur aus Tönen des gerade klingenden Akkords. Dazwischen liegen Töne, die kurz reiben, verzögern oder vorausgreifen. Wer diese Nichtakkordtöne erkennt, versteht, wie Melodie und Harmonie zusammenarbeiten, und kann selbst passende Akkorde zu einer Melodie finden.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>in einer Melodie Akkordtöne und Nichtakkordtöne unterscheiden,</li>
+      <li>Durchgang, Wechselnote, Vorhalt, Antizipation, Appoggiatura und Échappée benennen und erkennen,</li>
+      <li>erklären, warum Dissonanzen auf leichten Zählzeiten kaum stören, auf schweren aber Ausdruck erzeugen,</li>
+      <li>eine einfache Melodie mit I, IV und V7 harmonisieren,</li>
+      <li>beim Spielen Melodie und Begleitung klanglich trennen.</li>
+    </ul>
+  </div>
+
+  <!-- 19.1 -->
+  <h2 id="grundidee">19.1 Akkordtöne und Nichtakkordtöne</h2>
+  <p>Klingt in der Begleitung ein C-Dur-Akkord, sind c, e und g seine <dfn id="g-akkordton">Akkordtöne</dfn>. Jeder andere Melodieton, der gleichzeitig erklingt, ist ein <dfn id="g-nichtakkordton">Nichtakkordton</dfn> (auch <em>harmoniefremder Ton</em>, englisch <em>non-chord tone</em>). Nichtakkordtöne sind nicht falsch. Sie sind das, was eine Melodie beweglich macht. Ohne sie könnte eine Melodie nur in Akkordbrechungen springen.</p>
+  <p>Nichtakkordtöne lassen sich nach zwei Fragen ordnen:</p>
+  <ul>
+    <li><strong>Wie wird der Ton erreicht und verlassen?</strong> Im Schritt (Sekunde) oder im Sprung, und in welche Richtung?</li>
+    <li><strong>Wo steht er im Takt?</strong> Auf einer leichten Zählzeit (unbetont) oder auf einer schweren (betont)?</li>
+  </ul>
+  <p>Aus diesen beiden Fragen ergeben sich die Typen, die dieses Kapitel vorstellt. Die Übersicht vorab:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Typ</th><th>erreicht</th><th>verlassen</th><th>Zählzeit</th><th>Englisch</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Durchgang</strong></td><td>Schritt</td><td>Schritt, gleiche Richtung</td><td>meist leicht</td><td>passing tone</td></tr>
+        <tr><td><strong>Wechselnote</strong></td><td>Schritt</td><td>Schritt zurück</td><td>meist leicht</td><td>neighbor tone</td></tr>
+        <tr><td><strong>Vorhalt</strong></td><td>liegen bleiben</td><td>Schritt, meist abwärts</td><td>schwer</td><td>suspension</td></tr>
+        <tr><td><strong>Antizipation</strong></td><td>Schritt oder Sprung</td><td>liegen bleiben</td><td>leicht</td><td>anticipation</td></tr>
+        <tr><td><strong>Appoggiatura</strong></td><td>Sprung</td><td>Schritt, Gegenrichtung</td><td>schwer</td><td>appoggiatura</td></tr>
+        <tr><td><strong>Échappée</strong></td><td>Schritt</td><td>Sprung, Gegenrichtung</td><td>leicht</td><td>escape tone</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 19.2 -->
+  <h2 id="durchgang">19.2 Der Durchgang</h2>
+  <p>Ein <dfn id="g-durchgang">Durchgang</dfn> (Durchgangston) füllt den Raum zwischen zwei Akkordtönen stufenweise aus. Die Melodie läuft von e über f nach g, und f ist dabei nur ein Zwischenschritt. Der Durchgang wird im Schritt erreicht und im Schritt in derselben Richtung verlassen. Er steht meist auf einer leichten Zählzeit.</p>
+  <div class="abc" data-bpm="80" data-caption="Durchgänge (D) über C-Dur: aufwärts e–f–g, abwärts g–f–e">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"E "_D"F G2 | G "_D"F E2 |]
+    [V:LH] [C,E,G,]4 | [C,E,G,]4 |]
+  </div>
+  <p>Zwischen zwei Akkordtönen im Abstand einer Quarte (etwa g und c) haben zwei Durchgänge Platz: g–a–h–c. Ein Durchgang kann auch chromatisch sein, etwa f–fis–g. Der chromatische Durchgang färbt die Linie, ohne die Harmonie zu verlassen.</p>
+
+  <!-- 19.3 -->
+  <h2 id="wechselnote">19.3 Die Wechselnote</h2>
+  <p>Eine <dfn id="g-wechselnote">Wechselnote</dfn> (auch <em>Nebennote</em>) verlässt einen Akkordton im Schritt und kehrt sofort zu ihm zurück. Geht sie nach oben, heißt sie obere Wechselnote (e–f–e), geht sie nach unten, untere Wechselnote (e–d–e). Sie umspielt einen Ton, ohne die Melodie voranzubringen.</p>
+  <div class="abc" data-bpm="80" data-caption="Obere und untere Wechselnote (W) um e'">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"E "_W"F E2 | E "_W"D E2 |]
+    [V:LH] [C,E,G,]4 | [C,E,G,]4 |]
+  </div>
+  <p>Viele Verzierungen sind ausgeschriebene Wechselnoten. Ein Pralltriller oder ein Doppelschlag (Kapitel 10) springt in schnellen Wechselnoten um den Hauptton. Achtung beim Wort: In der Kontrapunktlehre gibt es außerdem die „Fux’sche Wechselnote“, eine besondere Figur, die mit der hier beschriebenen Wechselnote nur den Namen teilt (Kapitel 35).</p>
+
+  <section class="layer deep" data-title="Warum dürfen Dissonanzen auf leichten Zählzeiten stehen?">
+    <p>Ein f über C-Dur bildet mit dem e eine kleine Sekunde und mit dem c eine Quarte über dem Bass. Als langer Akkordton würde das reiben. Als kurzer Durchgang fällt es kaum auf. Warum?</p>
+    <p><strong>Das Ohr hört Linien.</strong> Wenn Töne schrittweise aufeinander folgen, verbindet das Gehör sie zu einer zusammenhängenden Bewegung. Die Gestaltpsychologie nennt das Prinzip der <em>guten Fortsetzung</em>: Elemente, die sich in eine glatte Bahn fügen, werden als Einheit wahrgenommen. Der Psychologe Albert Bregman hat in seiner Forschung zur auditiven Szenenanalyse gezeigt, wie das Gehör nah beieinanderliegende Töne zu Strömen zusammenfasst. Ein Durchgang wird deshalb als Teil einer Bewegung von e nach g gehört, nicht als eigener Klang, der zum Akkord passen müsste.</p>
+    <p><strong>Leichte Zählzeiten tragen wenig Gewicht.</strong> Das Metrum (Kapitel 4) teilt die Zeit in schwere und leichte Positionen. Auf schweren Positionen hört das Ohr genauer hin und bezieht den Klang stärker auf die Harmonie. Kurze Töne auf leichten Positionen gelten als Bewegung zwischen den Stützpunkten.</p>
+    <p>Daraus folgt die Grundregel der klassischen Satzlehre: <strong>Unbetonte Dissonanzen</strong> werden im Schritt erreicht und verlassen. <strong>Betonte Dissonanzen</strong> brauchen eine besondere Behandlung, entweder Vorbereitung (Vorhalt) oder eine Auflösung im Schritt (Appoggiatura). Die Regeln der Kontrapunktlehre (Kapitel 34 bis 36) sind im Kern eine genaue Ausformulierung dieser Wahrnehmungstatsache.</p>
+  </section>
+
+  <!-- 19.4 -->
+  <h2 id="vorhalt">19.4 Der Vorhalt</h2>
+  <p>Ein <dfn id="g-vorhalt">Vorhalt</dfn> (englisch <em>suspension</em>) entsteht, wenn ein Ton liegen bleibt, während der Akkord darunter wechselt. Er war im alten Akkord ein Akkordton und wird im neuen plötzlich zur Dissonanz. Erst danach rückt er einen Schritt, meist abwärts, in einen Akkordton des neuen Akkords. Ein Vorhalt hat drei Phasen:</p>
+  <ol>
+    <li><strong>Vorbereitung:</strong> Der Ton erklingt als Akkordton (c'' über C-Dur).</li>
+    <li><strong>Vorhalt:</strong> Der Akkord wechselt, der Ton bleibt liegen und wird dissonant (c'' über G-Dur, eine Quarte über dem Grundton g). Das geschieht auf einer betonten Zählzeit.</li>
+    <li><strong>Auflösung:</strong> Der Ton rückt einen Schritt abwärts in einen Akkordton (c'' → h').</li>
+  </ol>
+  <div class="abc" data-bpm="66" data-caption="Quartvorhalt 4–3: c'' bleibt über G-Dur liegen und löst sich nach h' auf">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C""^Vorbereitung"c4- | "G""^Vorhalt"c2 "^Auflösung"B2 |]
+    [V:LH] [C,E,G,]4 | [G,,B,,D,]4 |]
+  </div>
+  <p>Vorhalte werden nach den Intervallen über dem Bass benannt. Die häufigsten sind <strong>4–3</strong> (Quarte löst sich in die Terz), <strong>9–8</strong> (None löst sich in die Oktave), <strong>7–6</strong> und, im Bass selbst, <strong>2–3</strong>. Der Quartsextvorhalt aus Kapitel 16 ist ein doppelter Vorhalt: 6–5 und 4–3 gleichzeitig.</p>
+  <p>Die sus-Akkorde aus Kapitel 17 sind Vorhalte, die man im Akkordsymbol festhält. Csus4 hat die Quarte f statt der Terz e, und die Folge Csus4 – C ist genau ein Quartvorhalt mit Auflösung. In der Popmusik bleibt der sus-Akkord oft auch unaufgelöst stehen, als offene Klangfarbe.</p>
+
+  <section class="layer deep" data-title="Der Vorhalt: eine kontrollierte Dissonanz">
+    <p>In der Vokalpolyphonie des 16. Jahrhunderts, etwa bei Palestrina, waren Dissonanzen streng geregelt. Auf leichten Zählzeiten waren Durchgänge erlaubt. Auf schweren Zählzeiten war fast nur eine Art Dissonanz zugelassen: der Vorhalt, also ein Ton, der vorher als Konsonanz erklungen ist und sich danach schrittweise auflöst. Weil die Sänger den Ton bereits sangen, war die Dissonanz sicher zu intonieren und für das Ohr vorhersehbar. Der Vorhalt ist die kontrollierteste Form, Reibung auf einen Schwerpunkt zu legen.</p>
+    <p>Gerade weil er auf dem Schwerpunkt reibt, hat der Vorhalt eine starke Ausdruckswirkung. Ein Vorhalt, der sich abwärts in einen Halbton auflöst, klingt wie ein Seufzen. Im Barock wurde diese Figur zu einem festen Ausdrucksmittel, dem <em>Seufzermotiv</em> aus zwei fallenden Tönen, von denen der erste betont und der zweite leise ist. Carl Philipp Emanuel Bach widmete den Vorschlägen und ihrer Ausführung in seinem „Versuch über die wahre Art das Clavier zu spielen“ (1753) ein ausführliches Kapitel und zählte sie zu den nötigsten Verzierungen überhaupt.</p>
+    <p>Auch heute arbeiten Filmmusik und Pop mit diesem Mittel. Ein liegender Melodieton über einem wechselnden Akkord und seine verzögerte Auflösung gehören zu den Momenten, die Hörer am häufigsten als berührend beschreiben. Die Spannung entsteht aus derselben Erwartungslogik wie beim Trugschluss in Kapitel 16. Das Ohr weiß, wohin der Ton will, und die Auflösung wird für einen Moment aufgeschoben.</p>
+  </section>
+
+  <!-- 19.5 -->
+  <h2 id="antizipation">19.5 Antizipation (Vorausnahme)</h2>
+  <p>Die <dfn id="g-antizipation">Antizipation</dfn>, deutsch <em>Vorausnahme</em>, ist das Gegenstück zum Vorhalt. Ein Ton des kommenden Akkords erklingt schon kurz vor dem Akkordwechsel, auf einer leichten Zählzeit. Wenn der neue Akkord kommt, wird der Ton wiederholt oder gehalten. Klassisch steht die Antizipation oft am Schluss: Über G7 erklingt schon das c, bevor der C-Dur-Akkord eintritt.</p>
+  <div class="abc" data-bpm="76" data-caption="Antizipation (A): Das c' erklingt schon über G7, bevor C-Dur kommt">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "G7"D4 B,2 "_A"C2 | "C"C8 |]
+    [V:LH] [G,,B,,F,]8 | [C,E,G,]8 |]
+  </div>
+  <p>In der Popmusik ist die Antizipation vor allem ein rhythmisches Mittel. Melodie und oft auch der Akkordwechsel kommen eine Achtel vor der Eins, die dann nicht mehr angeschlagen wird. Musiker sagen dazu, der Akkord wird „vorgezogen“ (englisch <em>push</em>). Diese Synkope (Kapitel 4) gibt vielen Songs ihren Vorwärtsdrang.</p>
+
+  <!-- 19.6 -->
+  <h2 id="appoggiatura">19.6 Appoggiatura und Échappée</h2>
+  <p>Die <dfn id="g-appoggiatura">Appoggiatura</dfn> (italienisch <em>appoggiare</em>, „anlehnen“) ist ein betonter Nichtakkordton, der im Sprung erreicht wird und sich im Schritt in die Gegenrichtung auflöst. Sie wirkt wie ein Vorhalt ohne Vorbereitung und heißt deshalb auch <em>freier Vorhalt</em>. Im Beispiel springt die Melodie von g' auf d'', das über C-Dur dissonant ist, und sinkt dann zum c''.</p>
+  <div class="abc" data-bpm="66" data-caption="Appoggiatura (Ap): Sprung auf die betonte Dissonanz d'', Auflösung zum c''">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "G7"G4 | "C""_Ap"d2 c2 |]
+    [V:LH] [G,,B,,F,]4 | [C,E,G,]4 |]
+  </div>
+  <p>In älteren Noten wird die Appoggiatura oft als kleine Note vor der Hauptnote geschrieben, als sogenannter langer Vorschlag. Sie bekommt beim Spielen dennoch Gewicht und Zeit, meist die Hälfte der Hauptnote. Die Ausführung solcher Verzierungen behandelt Kapitel 10.</p>
+  <p>Die <dfn id="g-echappee">Échappée</dfn> (französisch „die Entwischte“, englisch <em>escape tone</em>) funktioniert umgekehrt. Sie wird im Schritt erreicht, steht unbetont und wird im Sprung in die Gegenrichtung verlassen. Die Melodie „entwischt“ kurz aus der Linie, bevor sie den nächsten Akkordton erreicht.</p>
+  <div class="abc" data-bpm="72" data-caption="Échappée (E): e'–f' im Schritt, dann Sprung abwärts zum d'">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"E2 "_E"F2 | "G"D4 |]
+    [V:LH] [C,E,G,]4 | [G,,B,,D,]4 |]
+  </div>
+
+  <section class="layer deep" data-title="Warum Melodien Schritte lieben">
+    <p>Durchgang, Wechselnote, Vorhalt und Appoggiatura haben eines gemeinsam: Sie bewegen sich mindestens in einer Richtung im Schritt. Das ist kein Zufall. In Melodien aus sehr vielen Musikkulturen sind kleine Intervalle weit häufiger als große. David Huron fasst in „Sweet Anticipation“ (2006) zahlreiche Untersuchungen dazu zusammen und nennt das Prinzip <em>pitch proximity</em>: Ein Ton folgt am wahrscheinlichsten auf einen nahe gelegenen Ton.</p>
+    <p>Das hat mit dem Hören zu tun. Schritte verbinden Töne zu einer Linie (siehe die Vertiefung in 19.3). Große Sprünge reißen die Linie auf, und das Ohr muss neu ansetzen. Hörer erwarten deshalb nach jedem Ton am ehesten einen benachbarten Ton.</p>
+    <p>Eine zweite Beobachtung betrifft Sprünge. Der Musiktheoretiker Leonard B. Meyer beschrieb, dass Melodien nach einem großen Sprung oft in die Gegenrichtung zurückgehen und die entstandene „Lücke“ füllen (<em>gap fill</em>). Paul von Hippel und David Huron haben im Jahr 2000 gezeigt, dass sich dieses Muster weitgehend statistisch erklären lässt: Wer weit nach oben springt, landet meist im hohen Bereich des Tonumfangs, und von dort geht es am wahrscheinlichsten wieder abwärts.</p>
+    <p>Die Appoggiatura nutzt beides. Sie springt, was Aufmerksamkeit erzeugt, landet auf einer Dissonanz, was Spannung erzeugt, und füllt die Lücke dann mit einem Schritt in die Gegenrichtung, was das Ohr erwartet hat.</p>
+  </section>
+
+  <!-- 19.7 -->
+  <h2 id="analyse">19.7 Akkordtöne in einer Melodie finden</h2>
+  <p>Wenn du eine Melodie analysieren oder begleiten willst, hilft eine einfache Reihenfolge:</p>
+  <ol>
+    <li><strong>Schwere Zählzeiten und lange Töne zuerst.</strong> Sie sind meistens Akkordtöne. Ausnahmen sind Vorhalte und Appoggiaturen, die sich danach schrittweise auflösen.</li>
+    <li><strong>Sprungziele prüfen.</strong> Ein Ton, zu dem die Melodie springt, ist meist ein Akkordton (Ausnahme: Appoggiatura).</li>
+    <li><strong>Schritte auf leichten Zählzeiten</strong> sind oft Durchgänge oder Wechselnoten und dürfen nicht zum Akkord passen.</li>
+  </ol>
+  <p>Als Beispiel das Kinderlied „Alle meine Entchen“ (Volkslied) mit einer Begleitung aus I, IV und V7. Im ersten Takt sind d und f Durchgänge (D), alle anderen Melodietöne sind Akkordtöne.</p>
+  <div class="abc" data-bpm="120" data-caption="„Alle meine Entchen“ mit I, IV und V7. Durchgänge sind mit D markiert.">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "C"C "_D"D E "_D"F | G2 G2 | "F"A A A A | "C"G4 | "F"A A A A | "C"G4 | "F"F F F F | "C"E2 E2 | "G7"D D D D | "C"C4 |]
+    [V:LH] [C,E,G,]4 | [C,E,G,]4 | [F,,A,,C,]4 | [C,E,G,]4 | [F,,A,,C,]4 | [C,E,G,]4 | [F,,A,,C,]4 | [C,E,G,]4 | [G,,B,,F,]4 | [C,E,G,]4 |]
+  </div>
+
+  <section class="layer deep" data-title="Akkordton oder nicht: Der Zusammenhang entscheidet">
+    <p>Ob ein Ton ein Nichtakkordton ist, liegt nicht am Ton selbst, sondern an der Harmonie, die gleichzeitig klingt. Das a in „Alle meine Entchen“ ist über F-Dur ein Akkordton. Hätte man stattdessen C-Dur gewählt, wäre dasselbe a eine Wechselnote zum g. Harmonisieren heißt also immer auch: entscheiden, welche Melodietöne man zu Akkordtönen macht.</p>
+    <p>Die Grenze verschiebt sich außerdem mit dem Stil. Ein a über C-Dur gilt in einem Volkslied als Nichtakkordton. In einem Pop- oder Jazzstück kann derselbe Klang als C6 gemeint sein, und das a gehört dann fest zum Akkord. Die Jazz-Harmonik geht diesen Weg konsequent weiter. Töne, die klassisch als None, Undezime oder Tredezime Vorhalte wären, werden zu festen Bestandteilen des Akkords: C9, C11, C13 (Kapitel 27).</p>
+    <p>Man kann die Geschichte der Harmonik auch so erzählen: Was eine Epoche als Nichtakkordton behandelt, wird in einer späteren oft zum Akkordton. Die Septime begann als Durchgang und Vorhalt, bevor sie im Dominantseptakkord zum festen Akkordbestandteil wurde. Die None ging im 19. Jahrhundert und im Jazz denselben Weg.</p>
+  </section>
+
+  <!-- 19.8 -->
+  <h2 id="harmonisieren">19.8 Melodien harmonisieren</h2>
+  <p>Zu einer Melodie passende Akkorde zu finden, heißt <dfn id="g-harmonisieren">harmonisieren</dfn>. Für viele einfache Lieder reichen die drei Hauptakkorde I, IV und V (oder V7). Diese Tabelle zeigt, in welchen Akkorden jede Stufe der Dur-Tonleiter als Akkordton vorkommt:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Melodieton (Stufe)</th><th>in C-Dur</th><th>Hauptakkorde</th><th>weitere</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>c</td><td>I, IV</td><td>vi</td></tr>
+        <tr><td class="num">2</td><td>d</td><td>V</td><td>ii, vii°</td></tr>
+        <tr><td class="num">3</td><td>e</td><td>I</td><td>iii, vi</td></tr>
+        <tr><td class="num">4</td><td>f</td><td>IV, V7</td><td>ii, vii°</td></tr>
+        <tr><td class="num">5</td><td>g</td><td>I, V</td><td>iii</td></tr>
+        <tr><td class="num">6</td><td>a</td><td>IV</td><td>ii, vi</td></tr>
+        <tr><td class="num">7</td><td>h</td><td>V</td><td>iii, vii°</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Damit kannst du in vier Schritten harmonisieren:</p>
+  <ol>
+    <li><strong>Tonart bestimmen.</strong> Der letzte Melodieton ist fast immer der Grundton.</li>
+    <li><strong>Pro Takt die wichtigen Töne markieren:</strong> Töne auf der Eins, lange Töne und Sprungziele.</li>
+    <li><strong>Akkord wählen,</strong> der möglichst viele dieser Töne enthält. Kurze Töne dazwischen dürfen Durchgänge oder Wechselnoten sein.</li>
+    <li><strong>Schlüsse prüfen.</strong> Am Ende einer Phrase sollte eine Kadenz stehen (Kapitel 16): V–I am Schluss, ein Halbschluss auf V in der Mitte.</li>
+  </ol>
+  <p>Meistens wechselt der Akkord ein- oder zweimal pro Takt. Häufigere Wechsel klingen schnell unruhig.</p>
+
+  <section class="layer piano" data-title="Harmonisieren mit drei Akkorden">
+    <p>Übe das Harmonisieren an Liedern, die du auswendig kennst, zuerst in C-Dur. Spiel die Melodie mit der rechten Hand und probier mit der linken nacheinander C, F und G7. Dein Ohr sagt dir sofort, welcher Akkord passt. Halte dich an diese Griffe in der linken Hand, sie liegen nah beieinander:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Akkord</th><th>linke Hand</th><th>Finger</th><th></th></tr></thead>
+        <tbody>
+          <tr class="play-row" data-play="48 52 55" data-mode="harm"><td>C (I)</td><td>c–e–g</td><td>5–3–1</td><td>▶</td></tr>
+          <tr class="play-row" data-play="48 53 57" data-mode="harm"><td>F (IV)</td><td>c–f–a</td><td>5–2–1</td><td>▶</td></tr>
+          <tr class="play-row" data-play="47 53 55" data-mode="harm"><td>G7 (V7)</td><td>h–f–g</td><td>5–2–1</td><td>▶</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Diese Griffe sind Umkehrungen mit möglichst kurzen Wegen (Kapitel 12). Der Ton c bleibt zwischen C und F liegen, g zwischen C und G7.</p>
+    <p><strong>Übung:</strong> Harmonisiere „Hänschen klein“, „Alle meine Entchen“ und „Kuckuck, Kuckuck, ruft’s aus dem Wald“ nur mit diesen drei Griffen. Sing oder summ die Melodie, während die linke Hand begleitet. Wenn ein Akkord schief klingt, prüf, ob auf der Eins des Takts ein Akkordton liegt.</p>
+  </section>
+
+  <section class="layer piano" data-title="Melodie und Begleitung klanglich trennen">
+    <p>Sobald Melodie und Begleitung gleichzeitig klingen, muss die Melodie hörbar oben schweben. Drei Dinge helfen:</p>
+    <ul>
+      <li><strong>Lautstärke verteilen:</strong> Die Melodie etwa eine Stufe lauter als die Begleitung, also mezzoforte gegen piano. Die Begleitung mit weniger Armgewicht und flacheren Fingern anschlagen.</li>
+      <li><strong>Legato in der Melodie:</strong> Verbinde die Melodietöne. Bei Durchgängen und Wechselnoten hörst du so die Linie statt einzelner Töne.</li>
+      <li><strong>Vorhalte betonen:</strong> Der Vorhalt steht auf der schweren Zählzeit und trägt die Spannung. Spiel ihn etwas kräftiger und die Auflösung leiser. So entsteht die typische Seufzerbewegung.</li>
+    </ul>
+    <p><strong>Übung:</strong> Spiel „Alle meine Entchen“ mit der Begleitung aus dem Notenbeispiel oben. Spiel dann absichtlich die linke Hand lauter als die rechte und vergleiche. Der Unterschied zeigt, wie viel Balance ausmacht.</p>
+  </section>
+
+  <section class="layer piano" data-title="Vorhalte in die Begleitung einbauen">
+    <p>Mit sus-Akkorden kannst du in jede Begleitung Vorhalte einbauen, ohne die Melodie zu ändern. Spiel vor einem Dur-Akkord kurz die sus4-Form und löse dann auf:</p>
+    <div class="btn-row">
+      <button class="btn" type="button" id="sus-c">▶ Csus4 → C</button>
+      <button class="btn" type="button" id="sus-g">▶ G7sus4 → G7 → C</button>
+    </div>
+    <p>Besonders wirkungsvoll ist das am Schluss: G7sus4 – G7 – C. Der Vorhalt c→h über dem Bass g verzögert den Leitton und macht den Schluss noch zwingender.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Melodietöne sind Akkordtöne oder Nichtakkordtöne. Nichtakkordtöne machen Melodien beweglich und ausdrucksvoll.</li>
+    <li>Unbetont und im Schritt: <strong>Durchgang</strong> (weiter in dieselbe Richtung) und <strong>Wechselnote</strong> (zurück zum Ausgangston).</li>
+    <li>Betont: <strong>Vorhalt</strong> (vorbereitet, liegen geblieben, löst sich schrittweise auf) und <strong>Appoggiatura</strong> (im Sprung erreicht, löst sich schrittweise auf).</li>
+    <li>Die <strong>Antizipation</strong> nimmt einen Ton des nächsten Akkords vorweg, die <strong>Échappée</strong> entwischt im Schritt und springt zurück.</li>
+    <li>Zum Harmonisieren die Töne auf schweren Zählzeiten und lange Töne zu Akkordtönen machen und Phrasen mit Kadenzen schließen.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">19.1</span><div><span class="kind">Theorie</span>Über C-Dur erklingt die Melodie (a) e–f–g, (b) g–a–g, (c) c–h–c, (d) g–a–h–c. Welche Töne sind Nichtakkordtöne, und welcher Typ?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>(a) f ist ein Durchgang. (b) a ist eine obere Wechselnote. (c) h ist eine untere Wechselnote. (d) a und h sind zwei Durchgänge, die die Quarte g–c füllen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">19.2</span><div><span class="kind">Theorie</span>Ein Vorhalt über G-Dur löst sich von c nach h auf. Welcher Vorhalt ist das (Intervalle über dem Bass g)? Welcher Vorhalt liegt vor, wenn über C-Dur das d nach c geht?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>c über g ist eine Quarte, h eine Terz: Quartvorhalt 4–3. d über c ist eine None (Sekunde plus Oktave), c die Oktave: Nonvorhalt 9–8.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">19.3</span><div><span class="kind">Notenlesen</span>Akkordton oder Nichtakkordton? Bestimme für die markierten Töne 1 bis 4 und benenne gegebenenfalls den Typ. Die Akkorde stehen darüber.</div></div>
+      <div class="abc" data-bpm="70">
+        X:1
+        M:4/4
+        L:1/4
+        K:C
+        %%score {RH LH}
+        V:RH clef=treble
+        V:LH clef=bass
+        [V:RH] "F"A "^1"B c2 | "C"G2 "^2"=A G | "G7"F2 "^3"G2 | "C"E2 E2 | "G"d2- "^4"d B |]
+        [V:LH] [F,,A,,C,]4 | [C,E,G,]4 | [G,,B,,F,]4 | [C,E,G,]4 | [G,,B,,D,]4 |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: h' über F-Dur zwischen a' und c'': Durchgang. 2: a' über C-Dur zwischen g' und g': obere Wechselnote. 3: g' über G7 ist ein Akkordton, nämlich der Grundton. 4: d'' über G-Dur ist ein Akkordton (Quinte). Die Bindung ändert daran nichts, weil der Akkord nicht wechselt. Merke: Nicht jeder Ton zwischen zwei Akkordtönen ist ein Nichtakkordton. Prüfe immer zuerst, ob er im Akkord vorkommt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">19.4</span><div><span class="kind">Theorie</span>Was unterscheidet einen Vorhalt von einer Appoggiatura? Was haben beide gemeinsam?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Gemeinsam: Beide sind betonte Dissonanzen, die sich im Schritt auflösen. Unterschied: Der Vorhalt ist vorbereitet, er klingt schon vorher als Akkordton und bleibt liegen. Die Appoggiatura wird frei, meist im Sprung, erreicht.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">19.5</span><div><span class="kind">Theorie</span>Welche Akkorde in C-Dur enthalten den Ton a? Welche den Ton f?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>a: F (IV), Dm (ii), Am (vi). f: F (IV), Dm (ii), G7 (V7, als Septime) und H° (vii°). Ein langes a in der Melodie legt deshalb IV, ii oder vi nahe.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">19.6</span><div><span class="kind">Theorie</span>Harmonisiere „Hänschen klein“ (C-Dur, vier Takte: g e e | f d d | c d e f | g g g) mit I und V7. Welche Töne werden zu Nichtakkordtönen?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Takt 1: C. Takt 2: G7 (f ist die Septime, d die Quinte). Takt 3: C, dabei sind d und f Durchgänge. Takt 4: C. Der Wechsel zu G7 in Takt 2 und die Rückkehr zu C geben der kurzen Phrase Spannung und Lösung.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">19.7</span><div><span class="kind">Am Klavier</span>Spiel „Alle meine Entchen“ mit der Begleitung aus Abschnitt 19.7. Ersetze dann in Takt 7 das F durch G7. Wie verändert sich der Klang, und warum passt beides?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die Melodie spielt dort viermal f. Das f ist in F-Dur Grundton, in G7 Septime. Mit F klingt der Takt ruhig, mit G7 entsteht Spannung, die über das C in Takt 8 aufgelöst wird. Beides ist richtig, weil f in beiden Akkorden enthalten ist. Welche Lösung du wählst, ist eine Frage der Gestaltung.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">19.8</span><div><span class="kind">Gehör</span>Welches Beispiel enthält einen Vorhalt?</div></div>
+      <div class="btn-row">
+        <button class="btn" type="button" id="hear-a">▶ Beispiel A</button>
+        <button class="btn" type="button" id="hear-b">▶ Beispiel B</button>
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Beispiel A. Dort bleibt c'' liegen, während der Akkord nach G-Dur wechselt, und rückt erst danach zum h'. In Beispiel B springt die Melodie direkt zum h', sobald G-Dur erklingt. Achte auf den Moment der Reibung direkt nach dem Akkordwechsel.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">19.9</span><div><span class="kind">Vertiefung</span>Ein f klingt über C-Dur als kurzer Durchgang unauffällig, als langer Ton auf der Eins aber störend. Erkläre den Unterschied mit zwei Wahrnehmungsprinzipien.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Erstens die gute Fortsetzung: Der kurze Durchgang wird als Teil der Linie e–f–g gehört und nicht als eigener Zusammenklang. Zweitens das Metrum: Auf leichten Zählzeiten bezieht das Ohr den Ton kaum auf die Harmonie, auf schweren schon. Als langer Ton auf der Eins wird f als Teil des Klangs gehört, und dann reibt die Quarte über dem Bass und die kleine Sekunde zu e.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">19.10</span><div><span class="kind">Vertiefung</span>Über C-Dur liegt in der Melodie lange ein a. Ist das ein Nichtakkordton? Nenne zwei Deutungen.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Klassisch gedeutet ist a über C-Dur ein Nichtakkordton, etwa eine Wechselnote oder ein Vorhalt, der sich zum g auflösen müsste. In Pop und Jazz kann der Klang als C6 gemeint sein, dann ist a ein fester Akkordton und muss nicht auflösen. Was als Nichtakkordton gilt, hängt vom Stil und vom Zusammenhang ab.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(19);
+
+  (function () {
+    const a = Book.audio;
+    // Hörbeispiel A: Quartvorhalt c'' über G-Dur, Auflösung nach h'
+    document.getElementById("hear-a").addEventListener("click", () => {
+      a.chord([48, 52, 55], 0, 1.5); a.note(72, 0, 2.3);
+      a.chord([43, 47, 50], 1.6, 2.6); a.note(71, 2.4, 1.8);
+      a.chord([48, 52, 55, 72], 4.3, 2);
+    });
+    // Hörbeispiel B: ohne Vorhalt
+    document.getElementById("hear-b").addEventListener("click", () => {
+      a.chord([48, 52, 55], 0, 1.5); a.note(72, 0, 1.5);
+      a.chord([43, 47, 50], 1.6, 2.6); a.note(71, 1.6, 2.6);
+      a.chord([48, 52, 55, 72], 4.3, 2);
+    });
+    // sus-Auflösungen
+    document.getElementById("sus-c").addEventListener("click", () => {
+      a.seq([[[48, 60, 65, 67], 2], [[48, 60, 64, 67], 3]], 80);
+    });
+    document.getElementById("sus-g").addEventListener("click", () => {
+      a.seq([[[43, 60, 65, 67], 2], [[43, 59, 65, 67], 2], [[48, 60, 64, 67], 3]], 80);
+    });
+  })();
+</script>
+</body>
+</html>

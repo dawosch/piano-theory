@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Die Moll-Tonleitern · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .deg td { font-family: var(--font-mono); text-align: center; }
+  .deg td:first-child { font-family: var(--font-body); text-align: left; white-space: nowrap; }
+  .deg td.alt { color: var(--accent); font-weight: 500; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil I · Kapitel 8</div>
+    <h1>Die Moll-Tonleitern</h1>
+    <p class="lede">Moll ist die zweite große Tonart-Familie. Anders als Dur gibt es Moll in drei Formen, und das hat einen einfachen Grund: Der natürlichen Moll-Tonleiter fehlt der Leitton. Wer das versteht, versteht auch, warum in Moll-Stücken ständig Versetzungszeichen auftauchen.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>natürliches, harmonisches und melodisches Moll bilden und unterscheiden,</li>
+      <li>zu jeder Dur-Tonart die parallele Moll-Tonart finden und umgekehrt,</li>
+      <li>Parallel- und Varianttonarten auseinanderhalten,</li>
+      <li>erklären, warum Moll seine 7. Stufe so oft erhöht,</li>
+      <li>Dur und die drei Moll-Formen am Klang erkennen.</li>
+    </ul>
+  </div>
+
+  <!-- 8.1 -->
+  <h2 id="natuerlich">8.1 Natürliches Moll</h2>
+  <p>Spiel die weißen Tasten von a bis a. Du hörst eine Tonleiter mit denselben sieben Tönen wie C-Dur, aber mit einem ganz anderen Charakter: <strong>a-Moll</strong>. Weil sie ohne zusätzliche Vorzeichen auskommt, heißt diese Form <dfn id="g-natuerliches-moll">natürliches Moll</dfn> (auch äolisch, englisch <em>natural minor</em>).</p>
+  <div class="abc" data-bpm="100" data-caption="a-Moll, natürliche Form">
+    X:1
+    M:4/4
+    L:1/4
+    K:Am
+    "^1"A "^2"B "^3"c "^4"d | "^5"e "^6"f "^7"g "^8"a |]
+  </div>
+  <figure>
+    <div class="kb" data-from="57" data-to="69" data-labels="white" data-marks="57:c2 59 60 62 64 65 67 69:c2" data-brackets="57-59:G;59-60:H;60-62:G;62-64:G;64-65:H;65-67:G;67-69:G" aria-label="a-Moll mit Ganz- und Halbtonschritten"></div>
+    <figcaption>Natürliches Moll: Ganz – Halb – Ganz – Ganz – Halb – Ganz – Ganz. Die Halbtöne liegen zwischen 2–3 und 5–6.</figcaption>
+  </figure>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Natürliches Moll: <strong>Ganz – Halb – Ganz – Ganz – Halb – Ganz – Ganz</strong>.<br>Halbtöne zwischen der 2. und 3. sowie der 5. und 6. Stufe.</p>
+  </div>
+  <p>Wie bei Dur ist der Name nur der Startpunkt. Das Muster lässt sich auf jedem Grundton bilden. Moll-Tonarten schreibt man im Deutschen mit kleinem Anfangsbuchstaben: a-Moll, fis-Moll, es-Moll. Dur-Tonarten werden großgeschrieben: A-Dur, Fis-Dur, Es-Dur.</p>
+
+  <!-- 8.2 -->
+  <h2 id="vergleich">8.2 Moll im Vergleich zu Dur</h2>
+  <p>Vergleiche Dur und Moll auf demselben Grundton, etwa C-Dur und c-Moll. Drei Stufen unterscheiden sich, sie sind in Moll einen Halbton tiefer: die 3., die 6. und die 7. Stufe.</p>
+  <div class="table-scroll">
+    <table class="deg">
+      <thead><tr><th>Tonleiter</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 62 64 65 67 69 71 72" data-bpm="200"><td>C-Dur</td><td>c</td><td>d</td><td>e</td><td>f</td><td>g</td><td>a</td><td>h</td><td>c</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 62 63 65 67 68 70 72" data-bpm="200"><td>c-Moll (natürlich)</td><td>c</td><td>d</td><td class="alt">es</td><td>f</td><td>g</td><td class="alt">as</td><td class="alt">b</td><td>c</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die wichtigste Veränderung ist die <strong>Terz</strong>. In Dur liegt über dem Grundton eine große Terz, in Moll eine kleine. Sie bestimmt den Charakter am stärksten, und auch die englischen Bezeichnungen leiten sich von ihr ab: <em>major</em> (groß) und <em>minor</em> (klein).</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="60 64 67" data-mode="both" data-bpm="140">▶ c–e–g (Dur)</button>
+    <button class="btn" type="button" data-play="60 63 67" data-mode="both" data-bpm="140">▶ c–es–g (Moll)</button>
+  </div>
+
+  <!-- 8.3 -->
+  <h2 id="parallel">8.3 Paralleltonarten</h2>
+  <p>C-Dur und a-Moll benutzen genau dieselben Töne und haben deshalb dieselbe Vorzeichnung (keine). Solche Paare heißen <dfn id="g-paralleltonart">Paralleltonarten</dfn> (englisch <em>relative keys</em>). Der Unterschied liegt allein im Zentrum: In C-Dur ist c das Zuhause, in a-Moll ist es a.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Die parallele Moll-Tonart liegt auf der <strong>6. Stufe</strong> der Dur-Tonart, also eine <strong>kleine Terz tiefer</strong>. Umgekehrt liegt die parallele Dur-Tonart eine kleine Terz über der Moll-Tonika.</p>
+  </div>
+  <figure>
+    <div class="kb" data-from="57" data-to="72" data-labels="white" data-marks="57:c2:a 60::c" data-brackets="57-60:kleine Terz" aria-label="a liegt eine kleine Terz unter c"></div>
+    <figcaption>Von c drei Halbtöne abwärts: a. Von a drei Halbtöne aufwärts: c.</figcaption>
+  </figure>
+  <p>Achte beim Abzählen auf die richtige Schreibweise. Die Parallele von Es-Dur ist c-Moll (eine Terz: es, d, c), die von E-Dur ist cis-Moll und nicht des-Moll.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Vorzeichen</th><th>Dur</th><th>Moll</th><th>Vorzeichen</th><th>Dur</th><th>Moll</th></tr></thead>
+      <tbody>
+        <tr><td>keine</td><td>C</td><td>a</td><td></td><td></td><td></td></tr>
+        <tr><td>1 ♯</td><td>G</td><td>e</td><td>1 ♭</td><td>F</td><td>d</td></tr>
+        <tr><td>2 ♯</td><td>D</td><td>h</td><td>2 ♭</td><td>B</td><td>g</td></tr>
+        <tr><td>3 ♯</td><td>A</td><td>fis</td><td>3 ♭</td><td>Es</td><td>c</td></tr>
+        <tr><td>4 ♯</td><td>E</td><td>cis</td><td>4 ♭</td><td>As</td><td>f</td></tr>
+        <tr><td>5 ♯</td><td>H</td><td>gis</td><td>5 ♭</td><td>Des</td><td>b</td></tr>
+        <tr><td>6 ♯</td><td>Fis</td><td>dis</td><td>6 ♭</td><td>Ges</td><td>es</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Im Quintenzirkel aus Kapitel 7 stehen die Moll-Tonarten deshalb als innerer Ring direkt neben ihren Dur-Parallelen. Die Moll-Tonarten folgen untereinander demselben Quintabstand: a, e, h, fis … mit jeweils einem Kreuz mehr.</p>
+  <p>Eine Vorzeichnung allein verrät also nicht, ob ein Stück in Dur oder Moll steht. Drei Hinweise helfen: der letzte Ton (vor allem im Bass), der erste Akkord und Versetzungszeichen auf der erhöhten 7. Stufe der Moll-Tonart (bei einem ♯ etwa dis für e-Moll).</p>
+
+  <section class="layer deep" data-title="Warum gerade die 6. Stufe? Dieselben Töne, ein anderes Zentrum">
+    <p>Die weißen Tasten bilden einen Kreis aus Ganz- und Halbtönen. Je nachdem, wo du in diesem Kreis anfängst, ergibt sich ein anderes Muster. Ab c: G–G–H–G–G–G–H (Dur). Ab a: G–H–G–G–H–G–G (Moll). Natürliches Moll ist also dieselbe Tonfolge wie Dur, nur von der 6. Stufe aus gelesen.</p>
+    <p>Warum ausgerechnet ab der 6. Stufe? Von allen sieben Startpunkten ist es der einzige, bei dem sich gegenüber Dur genau die Stufen 3, 6 und 7 ändern und alle anderen (2, 4, 5) gleich bleiben. Die reine Quarte und die reine Quinte über dem Grundton sind dabei entscheidend: Sie tragen die wichtigsten Akkorde einer Tonart. Moll behält sie, ändert aber die Terz und damit die Farbe.</p>
+    <p>Die übrigen fünf Startpunkte ergeben weitere Tonleitern mit eigenem Charakter, die sogenannten Kirchentonarten. Ab d entsteht zum Beispiel Dorisch, eine Moll-Tonleiter mit großer Sexte. Kapitel 24 stellt alle sieben vor.</p>
+  </section>
+
+  <!-- 8.4 -->
+  <h2 id="variante">8.4 Varianttonarten</h2>
+  <p>Dur und Moll mit <em>demselben</em> Grundton, etwa C-Dur und c-Moll, heißen <dfn id="g-varianttonart">Varianttonarten</dfn> (englisch <em>parallel keys</em>, Vorsicht: Das englische <em>parallel</em> entspricht dem deutschen <em>Variante</em>, das deutsche <em>parallel</em> dem englischen <em>relative</em>).</p>
+  <div class="abc" data-bpm="110" data-caption="C-Dur und seine Variante c-Moll">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    "^C-Dur"C D E F | G A B c ||[K:Cm]"^c-Moll"C D E F | G A B c |]
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Die Moll-Variante hat <strong>drei ♭ mehr</strong> (oder drei ♯ weniger) als die Dur-Tonart auf demselben Grundton. C-Dur 0 → c-Moll 3 ♭. A-Dur 3 ♯ → a-Moll 0. E-Dur 4 ♯ → e-Moll 1 ♯.</p>
+  </div>
+  <p>Die Regel folgt direkt aus 8.2: In Moll sind drei Stufen erniedrigt. Jede Erniedrigung bedeutet ein ♭ mehr oder ein ♯ weniger. Im Quintenzirkel liegt die Moll-Variante drei Schritte gegen den Uhrzeigersinn.</p>
+  <p>Der Wechsel zwischen Dur und Moll auf demselben Grundton ist ein starkes Ausdrucksmittel. Der Grundton bleibt, nur das Licht ändert sich. Popmusik und Filmmusik nutzen das ständig (Kapitel 23).</p>
+
+  <section class="layer deep" data-title="Woher die Wörter Dur und Moll kommen">
+    <p>Die Begriffe stammen aus dem mittelalterlichen Tonsystem, und zwar von einem einzigen Ton: dem b. Die Musiktheorie kannte zwei Formen dieses Tons. Das <em>b rotundum</em> (rundes b) war der tiefere Ton, unser heutiges b. Das <em>b quadratum</em> (eckiges b) war der höhere, unser heutiges h. Das runde b galt als „weich“ (lateinisch <em>mollis</em>), das eckige als „hart“ (<em>durus</em>).</p>
+    <p>Tongruppen und Melodien mit dem weichen b hießen deshalb <em>molle</em>, solche mit dem harten b <em>durum</em>. Über Jahrhunderte wanderten die Wörter vom einzelnen Ton auf den Gesamtcharakter: „hart“ wurde zur Bezeichnung für die Tonart mit großer Terz, „weich“ für die mit kleiner Terz. Aus der Form der beiden b-Zeichen entwickelten sich übrigens auch das ♭ (rund) und das ♮ und ♯ (eckig). Kapitel 1 erzählt, wie aus dem eckigen b im Deutschen der Buchstabe h wurde.</p>
+    <p>Als eigenständige Tonleitern wurden Dur (ionisch) und Moll (äolisch) erst 1547 von dem Schweizer Humanisten Heinrich Glarean in seinem Buch <em>Dodekachordon</em> in das System der Kirchentonarten aufgenommen. Im Laufe des 17. Jahrhunderts verdrängten diese beiden die übrigen Kirchentonarten weitgehend.</p>
+  </section>
+
+  <!-- 8.5 -->
+  <h2 id="leitton">8.5 Das Problem: der fehlende Leitton</h2>
+  <p>In Kapitel 6 hast du den Leitton kennengelernt: Die 7. Stufe der Dur-Tonleiter liegt einen Halbton unter der Tonika und zieht stark zu ihr hin. Im natürlichen Moll ist das anders. Die 7. Stufe von a-Moll ist g, einen <em>Ganzton</em> unter a. Der Zug zur Tonika ist deutlich schwächer.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" id="end-nat">▶ Schluss mit g → a</button>
+    <button class="btn" type="button" id="end-harm">▶ Schluss mit gis → a</button>
+  </div>
+  <p>Noch deutlicher wird der Unterschied bei Akkorden. Der Akkord auf der 5. Stufe von a-Moll heißt im natürlichen Moll e–g–h (ein Molldreiklang). Mit gis wird daraus e–gis–h, ein Durdreiklang, der viel stärker zur Tonika a–c–e drängt.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" id="cad-nat">▶ e–g–h → a–c–e</button>
+    <button class="btn" type="button" id="cad-harm">▶ e–gis–h → a–c–e</button>
+  </div>
+  <p>Seit dem Barock haben Komponisten deshalb in Moll die 7. Stufe erhöht, wenn es auf einen Schluss zugeht. Daraus entstehen die beiden anderen Moll-Formen.</p>
+
+  <!-- 8.6 -->
+  <h2 id="harmonisch">8.6 Harmonisches Moll</h2>
+  <p>Erhöht man im natürlichen Moll die 7. Stufe um einen Halbton, erhält man <dfn id="g-harmonisches-moll">harmonisches Moll</dfn>. In a-Moll wird aus g ein gis.</p>
+  <div class="abc" data-bpm="100" data-caption="a-Moll, harmonische Form: 7. Stufe erhöht">
+    X:1
+    M:4/4
+    L:1/4
+    K:Am
+    A B c d | e f ^g a |]
+  </div>
+  <figure>
+    <div class="kb" data-from="57" data-to="69" data-labels="white" data-marks="57:c2 59 60 62 64 65:c3 68:c3:gis 69:c2" data-brackets="65-68:übermäßige Sekunde" aria-label="a-Moll harmonisch mit der übermäßigen Sekunde f–gis"></div>
+    <figcaption>Zwischen f und gis entsteht ein Schritt von drei Halbtönen: eine übermäßige Sekunde.</figcaption>
+  </figure>
+  <p>Der Name kommt von der Harmonik: Die Erhöhung entsteht durch den Wunsch nach einem Durdreiklang auf der 5. Stufe (8.5). Als Melodie hat harmonisches Moll eine Besonderheit. Zwischen der 6. und 7. Stufe (f–gis) liegt eine <strong>übermäßige Sekunde</strong>, ein Sprung von drei Halbtönen in einer Tonleiter, die sonst aus Ganz- und Halbtönen besteht. Dieser Schritt klingt auffällig und für westliche Ohren etwas fremd.</p>
+
+  <section class="layer deep" data-title="Die übermäßige Sekunde: auffällig und lange gemieden">
+    <p>In der Gesangsmusik vom 16. bis 18. Jahrhundert galt die übermäßige Sekunde in Melodien als schwer zu singen und wurde vermieden. Die Lehrbücher des Kontrapunkts (Kapitel 34) verbieten übermäßige Schritte in einer Stimme grundsätzlich. Der Sprung ist nicht groß, aber er klingt wie eine Sekunde, die zu weit ist, und Sänger treffen ihn schlecht.</p>
+    <p>Gerade diese Fremdheit hat den Schritt später als Ausdrucksmittel interessant gemacht. Ähnliche Schritte kommen in Musiktraditionen des Nahen Ostens und Osteuropas vor, etwa im arabischen Maqam Hidschaz oder in der jüdischen Klezmer-Musik. Westliche Komponisten haben die übermäßige Sekunde deshalb oft eingesetzt, um einen „orientalischen“ Klang anzudeuten.</p>
+    <p>Wahrnehmungspsychologisch ist die übermäßige Sekunde interessant, weil sie auf dem Klavier genau wie eine kleine Terz klingt (f–gis = f–as). Ob wir sie als „zu große Sekunde“ oder als „Terz“ hören, hängt vom Zusammenhang ab. In der Tonleiter erwartet das Ohr einen Sekundschritt und bemerkt deshalb die ungewöhnliche Größe.</p>
+  </section>
+
+  <!-- 8.7 -->
+  <h2 id="melodisch">8.7 Melodisches Moll</h2>
+  <p>Um die übermäßige Sekunde zu vermeiden und den Leitton trotzdem zu behalten, erhöht man in Melodien zusätzlich die 6. Stufe. So entsteht <dfn id="g-melodisches-moll">melodisches Moll</dfn>: aufwärts mit erhöhter 6. und 7. Stufe, abwärts wie natürliches Moll.</p>
+  <div class="abc" data-bpm="110" data-caption="a-Moll, melodische Form: aufwärts fis und gis, abwärts g und f">
+    X:1
+    M:4/4
+    L:1/4
+    K:Am
+    A B c d | e ^f ^g a | a =g =f e | d c B A |]
+  </div>
+  <p>Warum abwärts natürlich? Wenn die Melodie von der Tonika <em>weg</em> nach unten geht, braucht sie keinen Leitton, der nach oben zieht. Erhöhte Töne würden abwärts sogar in die falsche Richtung streben. Also kehrt man zur natürlichen Form zurück, die abwärts ihren eigenen Sog hat (as bzw. f zieht zum g bzw. e hinunter).</p>
+  <p>Aufwärts unterscheidet sich melodisches Moll von Dur nur noch in einer Stufe, der kleinen Terz. a–h–c–d–e–fis–gis–a ist A-Dur mit c statt cis.</p>
+  <p>Im Jazz wird melodisches Moll in beide Richtungen mit erhöhter 6. und 7. Stufe gespielt. Man nennt es dort auch „Jazz-Moll“. Es ist die Quelle mehrerer wichtiger Akkordskalen (Kapitel 30).</p>
+
+  <!-- 8.8 -->
+  <h2 id="ueberblick">8.8 Die drei Formen im Überblick</h2>
+  <p>Hier sind alle Formen auf dem Grundton c im Vergleich mit Dur. Tippe eine Zeile an, um sie zu hören.</p>
+  <div class="table-scroll">
+    <table class="deg">
+      <thead><tr><th>Form</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 62 64 65 67 69 71 72" data-bpm="200"><td>Dur</td><td>c</td><td>d</td><td>e</td><td>f</td><td>g</td><td>a</td><td>h</td><td>c</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 62 63 65 67 68 70 72" data-bpm="200"><td>natürliches Moll</td><td>c</td><td>d</td><td class="alt">es</td><td>f</td><td>g</td><td class="alt">as</td><td class="alt">b</td><td>c</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 62 63 65 67 68 71 72" data-bpm="200"><td>harmonisches Moll</td><td>c</td><td>d</td><td class="alt">es</td><td>f</td><td>g</td><td class="alt">as</td><td>h</td><td>c</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 62 63 65 67 69 71 72" data-bpm="200"><td>melodisches Moll (aufwärts)</td><td>c</td><td>d</td><td class="alt">es</td><td>f</td><td>g</td><td>a</td><td>h</td><td>c</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die Formen sind keine getrennten Tonarten. Ein Stück in c-Moll benutzt je nach Situation as oder a, b oder h. Die Vorzeichnung zeigt immer das natürliche Moll (c-Moll: drei ♭). Die erhöhten Töne erscheinen als Versetzungszeichen.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>In Moll-Stücken ist die erhöhte 7. Stufe das häufigste Versetzungszeichen. In a-Moll ist es gis, in e-Moll dis, in d-Moll cis, in c-Moll h (als ♮ geschrieben).</p>
+  </div>
+
+  <section class="layer deep" data-title="Klingt Moll wirklich traurig?">
+    <p>In der westlichen Musik verbinden die meisten Hörer Dur mit Freude und Moll mit Trauer. Diese Zuordnung ist aber weder ganz natürlich noch ganz willkürlich.</p>
+    <p><strong>Akustische Spuren.</strong> Der Durdreiklang kommt in der Obertonreihe direkt vor (Teiltöne 4, 5 und 6, Kapitel 5). Der Molldreiklang nicht: In reiner Stimmung hat er das Verhältnis 10:12:15, also deutlich kompliziertere Zahlen. Er wirkt dadurch etwas weniger verschmolzen, etwas „getrübter“. Das erklärt einen Unterschied in der Farbe, aber noch keine Traurigkeit.</p>
+    <p><strong>Sprache.</strong> Traurige Sprache ist leiser, langsamer und bewegt sich in kleineren Tonhöhenschritten. Einige Studien fanden, dass Sprecher in traurigem Tonfall öfter kleine Terzen zwischen Silben verwenden. Musik könnte solche Sprachmuster nachahmen. Die Befunde sind aber noch nicht abschließend.</p>
+    <p><strong>Lernen.</strong> Kinder zeigen die Zuordnung Moll gleich traurig erst im Grundschulalter. Jüngere Kinder beurteilen die Stimmung von Musik fast nur nach dem Tempo. Das spricht dafür, dass ein großer Teil der Wirkung gelernt wird.</p>
+    <p><strong>Gegenbeispiele.</strong> Viele lebhafte Tanz- und Volksmusiken stehen in Moll, etwa zahlreiche osteuropäische und keltische Tänze. Tempo, Rhythmus und Lautstärke beeinflussen die Stimmung oft stärker als das Tongeschlecht. Ein schnelles Moll-Stück kann wild und fröhlich wirken, ein langsames Dur-Stück tief melancholisch.</p>
+  </section>
+
+  <section class="layer piano" data-title="Moll-Tonleitern spielen">
+    <p>a-Moll, e-Moll und d-Moll haben in allen drei Formen denselben Fingersatz wie C-Dur:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Hand</th><th>Fingersatz aufwärts</th><th>Daumen setzt unter bei</th></tr></thead>
+        <tbody>
+          <tr><td>rechts</td><td>1 2 3 1 2 3 4 5</td><td>der 4. Stufe (a-Moll: d)</td></tr>
+          <tr><td>links</td><td>5 4 3 2 1 3 2 1</td><td>Finger 3 greift über nach der 5. Stufe (a-Moll: von e nach f)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Beim harmonischen Moll braucht die übermäßige Sekunde Aufmerksamkeit. In a-Moll liegen f und gis zwischen dem 3. und 4. Finger der rechten Hand. Die Finger müssen sich ein wenig spreizen, und gis liegt auf einer schwarzen Taste weiter hinten. Lass die Hand dafür etwas nach vorn wandern, statt den 4. Finger zu strecken.</p>
+    <p><strong>Übung:</strong> Spiel a-Moll in allen drei Formen hintereinander, jede auf- und abwärts. Sing die Tonleiter leise mit. Die übermäßige Sekunde im harmonischen Moll ist singend erstaunlich schwer zu treffen. Genau deshalb gibt es die melodische Form.</p>
+  </section>
+
+  <section class="layer piano" data-title="Moll schnell finden: Fünftonräume und Terzen">
+    <p>Die schnellste Verwandlung von Dur nach Moll gelingt im Fünftonraum (Kapitel 6). Die ersten fünf Töne von Dur und Moll unterscheiden sich nur in der Terz. Leg die rechte Hand auf c–d–e–f–g und senk nur den Mittelfinger auf es. Aus Dur wird Moll.</p>
+    <div class="kb" data-from="60" data-to="67" data-labels="none" data-marks="60::1 62::2 63:c3:3 64:c2:3 65::4 67::5" aria-label="Fünftonraum c bis g: Mittelfinger auf e (Dur) oder es (Moll)"></div>
+    <p class="muted">Petrol: e für Dur. Orange: es für Moll. Alle anderen Finger bleiben liegen.</p>
+    <p><strong>Übung:</strong> Spiel auf jeder weißen Taste einen Dur-Fünftonraum auf und ab, dann sofort denselben in Moll. Hör auf den Wechsel der Farbe. Danach dasselbe auf den schwarzen Tasten.</p>
+    <p>Für die Paralleltonart gilt: Von der Dur-Tonika drei Halbtöne abwärts. Auf dem Klavier hilft eine Faustregel: Die parallele Molltonika liegt immer zwei weiße Tasten unter der Durtonika (wenn beide auf weißen Tasten liegen), etwa c → a, g → e, f → d.</p>
+  </section>
+
+  <!-- 8.9 -->
+  <h2 id="hoeren">8.9 Dur und Moll hören</h2>
+  <p>Dur und Moll zu unterscheiden gelingt den meisten Menschen schnell. Die drei Moll-Formen auseinanderzuhalten braucht etwas Übung. Achte beim harmonischen Moll auf den auffälligen Sprung vor dem letzten Ton, beim melodischen Moll darauf, dass das Ende hell wie Dur klingt, während der Anfang dunkel bleibt.</p>
+  <div id="scale-trainer"></div>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Natürliches Moll: Ganz – Halb – Ganz – Ganz – Halb – Ganz – Ganz. Gegenüber Dur sind die 3., 6. und 7. Stufe erniedrigt.</li>
+    <li>Paralleltonarten haben dieselbe Vorzeichnung. Die Moll-Parallele liegt eine kleine Terz unter der Dur-Tonika (6. Stufe).</li>
+    <li>Varianttonarten haben denselben Grundton. Moll hat drei ♭ mehr bzw. drei ♯ weniger als Dur.</li>
+    <li>Harmonisches Moll erhöht die 7. Stufe, damit ein Leitton entsteht. Dabei entsteht eine übermäßige Sekunde zwischen 6 und 7.</li>
+    <li>Melodisches Moll erhöht aufwärts die 6. und 7. Stufe und ist abwärts natürlich.</li>
+    <li>Die Vorzeichnung zeigt immer natürliches Moll. Die erhöhten Stufen erscheinen als Versetzungszeichen.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">8.1</span><div><span class="kind">Theorie</span>Nenne die parallele Moll-Tonart zu G-Dur, F-Dur, A-Dur, Es-Dur und H-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G-Dur: e-Moll. F-Dur: d-Moll. A-Dur: fis-Moll. Es-Dur: c-Moll. H-Dur: gis-Moll. Jeweils eine kleine Terz abwärts, mit dem Buchstaben zwei Stellen tiefer im Alphabet der Stammtöne.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">8.2</span><div><span class="kind">Theorie</span>Welche Vorzeichen haben e-Moll, d-Moll, fis-Moll, c-Moll und g-Moll?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>e-Moll: fis (wie G-Dur). d-Moll: b (wie F-Dur). fis-Moll: fis, cis, gis (wie A-Dur). c-Moll: b, es, as (wie Es-Dur). g-Moll: b, es (wie B-Dur).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">8.3</span><div><span class="kind">Theorie</span>Schreib e-Moll in allen drei Formen auf.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Natürlich: e, fis, g, a, h, c, d, e. Harmonisch: e, fis, g, a, h, c, dis, e. Melodisch aufwärts: e, fis, g, a, h, cis, dis, e; abwärts: e, d, c, h, a, g, fis, e.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">8.4</span><div><span class="kind">Theorie</span>Schreib d-Moll harmonisch. Zwischen welchen Tönen liegt die übermäßige Sekunde?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>d, e, f, g, a, b, cis, d. Die übermäßige Sekunde liegt zwischen b und cis (drei Halbtöne, aber zwei benachbarte Buchstaben).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">8.5</span><div><span class="kind">Theorie</span>Bestimme die Vorzeichnung der Moll-Variante: zu C-Dur, A-Dur, E-Dur und B-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>c-Moll: 3 ♭ (0 − 3). a-Moll: 0 (3 ♯ − 3). e-Moll: 1 ♯ (4 ♯ − 3). b-Moll: 5 ♭ (2 ♭ + 3 ♭).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">8.6</span><div><span class="kind">Notenlesen</span>In welcher Moll-Form steht diese Tonleiter? Begründe.</div></div>
+      <div class="abc" data-bpm="110">
+        X:1
+        M:4/4
+        L:1/4
+        K:Em
+        E F G A | B c ^d e |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Ein Kreuz (fis) und Grundton e: e-Moll. Die 6. Stufe ist c (natürlich), die 7. Stufe dis (erhöht). Das ist harmonisches Moll. Zwischen c und dis liegt die übermäßige Sekunde.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">8.7</span><div><span class="kind">Theorie</span>Ein Stück hat ein ♭ in der Vorzeichnung. Im Verlauf tauchen oft cis-Versetzungszeichen auf, und das Stück endet auf d. In welcher Tonart steht es?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>d-Moll. Ein ♭ passt zu F-Dur oder d-Moll. Das cis ist die erhöhte 7. Stufe von d-Moll (Leitton), und der Schlusston d bestätigt es.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">8.8</span><div><span class="kind">Am Klavier</span>Spiel C-Dur und direkt danach c-Moll natürlich, jeweils eine Oktave rechts. Welche Tasten ändern sich?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>e wird zu es, a zu as, h zu b. Drei weiße Tasten werden zu schwarzen. Der Fingersatz von C-Dur funktioniert für c-Moll in der rechten Hand weiterhin (1 2 3 1 2 3 4 5).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">8.9</span><div><span class="kind">Am Klavier</span>Spiel a-Moll harmonisch mit beiden Händen getrennt und dann a-Moll melodisch auf und ab. Wo musst du auf dem Rückweg aufpassen?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Beim melodischen Moll abwärts werden aus gis und fis wieder g und f. Die Hand muss also auf dem Rückweg zwei andere Tasten nehmen als auf dem Hinweg. Langsam üben und die Umkehrstelle (oben auf a) bewusst wahrnehmen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">8.10</span><div><span class="kind">Gehör</span>Üb mit dem Trainer im Modus „Dur oder Moll“, bis du zehn Aufgaben hintereinander richtig hast. Wechsle dann zu „Die drei Moll-Formen“.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Konzentrier dich bei Dur oder Moll auf den dritten Ton. Bei den Moll-Formen hör auf das Ende: Ein auffälliger Sprung vor dem Schluss bedeutet harmonisches Moll. Klingen die letzten drei Töne wie Dur, ist es melodisches Moll.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">8.11</span><div><span class="kind">Vertiefung</span>Spiel die weißen Tasten von d bis d. Diese Tonleiter hat eine kleine Terz wie Moll. Worin unterscheidet sie sich vom natürlichen d-Moll, und warum ist sie trotzdem nicht die parallele Moll-Tonart von C-Dur?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>d–e–f–g–a–h–c–d hat eine große Sexte (h) statt der kleinen Sexte (b) von d-Moll. Das ist Dorisch (Kapitel 24). Als Paralleltonart von C-Dur gilt per Definition die Tonleiter, die sich von Dur nur in den Stufen 3, 6 und 7 unterscheidet. Das ist nur ab der 6. Stufe der Fall, also bei a-Moll.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(8);
+
+  // Hörbeispiele: Schluss mit und ohne Leitton
+  (function () {
+    const on = (id, f) => document.getElementById(id).addEventListener("click", f);
+    on("end-nat", () => Book.audio.seq([[64, 1], [65, 1], [67, 1], [69, 3]], 110));
+    on("end-harm", () => Book.audio.seq([[64, 1], [65, 1], [68, 1], [69, 3]], 110));
+    on("cad-nat", () => Book.audio.seq([[[40, 52, 55, 59], 2], [[45, 57, 60, 64], 3]], 80));
+    on("cad-harm", () => Book.audio.seq([[[40, 52, 56, 59], 2], [[45, 57, 60, 64], 3]], 80));
+  })();
+
+  // Gehörtrainer: Dur und die drei Moll-Formen
+  (function () {
+    const P = {
+      dur: [0, 2, 4, 5, 7, 9, 11, 12], nat: [0, 2, 3, 5, 7, 8, 10, 12],
+      harm: [0, 2, 3, 5, 7, 8, 11, 12], mel: [0, 2, 3, 5, 7, 9, 11, 12]
+    };
+    const ROOTS = [55, 57, 59, 60, 62, 64];
+    Book.earTrainer(document.getElementById("scale-trainer"), {
+      title: "Gehörtrainer: Dur und Moll",
+      intro: "Du hörst eine Tonleiter aufwärts. Welche Form ist es? Der Grundton wechselt bei jeder Aufgabe.",
+      items: [
+        { id: "dur", label: "Dur" }, { id: "nat", label: "natürliches Moll" },
+        { id: "harm", label: "harmonisches Moll" }, { id: "mel", label: "melodisches Moll" }
+      ],
+      presets: [
+        { label: "Dur oder Moll", ids: ["dur", "nat"] },
+        { label: "Die drei Moll-Formen", ids: ["nat", "harm", "mel"] },
+        { label: "Alle vier", ids: ["dur", "nat", "harm", "mel"] }
+      ],
+      from: 53, to: 79,
+      build(it) {
+        const root = ROOTS[Math.floor(Math.random() * ROOTS.length)];
+        const ms = P[it.id].map((s) => root + s);
+        const steps = ms.map((m, i) => [m, i === ms.length - 1 ? 2 : 1]);
+        return {
+          play: () => Book.audio.seq(steps, 200),
+          marks: ms.map((m, i) => (i === 0 || i === 7 ? { m, cls: "c2" } : m)),
+          answer: `${it.label} auf ${Book.name(root, { octave: false })}`
+        };
+      }
+    });
+  })();
+</script>
+</body>
+</html>

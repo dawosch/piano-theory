@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Akkordtabelle · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .picker { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-block: 0.6rem 1.2rem; }
+  .picker .btn { min-width: 2.6rem; justify-content: center; }
+  tr.sel td { background: var(--accent-soft); }
+  td.notes { font-family: var(--font-mono); font-size: 0.9em; white-space: nowrap; }
+  td.sym { font-family: var(--font-mono); font-size: 0.9em; }
+  .group td { font-family: var(--font-display); font-weight: 650; padding-top: 1.2rem; border-bottom: 2px solid var(--ink); }
+  #chord-kbd { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 2.6rem); background: var(--bg); padding-block: 0.4rem; z-index: 2; }
+  #chord-name { font-family: var(--font-display); font-weight: 650; margin: 0.2rem 0 0; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Anhang</div>
+    <h1>Akkordtabelle</h1>
+    <p class="lede">Alle gängigen Akkordtypen mit Formel und Symbol. Wähl einen Grundton, dann zeigt die Tabelle die richtig geschriebenen Töne. Tippe eine Zeile an, um den Akkord zu hören und auf der Klaviatur zu sehen.</p>
+  </header>
+
+  <p class="eyebrow">Grundton</p>
+  <div class="picker" id="roots"></div>
+
+  <div id="chord-kbd"><div id="kbd-host"></div><p id="chord-name" aria-live="polite"></p></div>
+
+  <div class="table-scroll">
+    <table id="chords">
+      <thead><tr><th>Akkord</th><th>Symbol</th><th>Formel</th><th>Töne</th><th>Kapitel</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="muted">Formeln beziehen sich auf die Dur-Tonleiter des Grundtons: 3 = große Terz, ♭3 = kleine Terz, ♭7 = kleine Septime, 9 = None (Sekunde eine Oktave höher). Bei den Symbolen ist die erste Schreibweise die in diesem Buch verwendete, die anderen begegnen dir in Leadsheets ebenfalls.</p>
+</main>
+
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script src="anhang.js"></script>
+<script>
+  Book.page("Akkordtabelle");
+  const MAJ = { 1: 0, 2: 2, 3: 4, 4: 5, 5: 7, 6: 9, 7: 11, 9: 14, 11: 17, 13: 21 };
+  const deg = ([n, s]) => { const d = s - MAJ[n]; return (d === -2 ? "𝄫" : d === -1 ? "♭" : d === 1 ? "♯" : "") + n; };
+  const S = (str) => str.split(" ").map((t) => t.split(",").map(Number));
+  const CHORDS = [
+    { g: "Dreiklänge" },
+    { name: "Dur", sym: ["", "maj"], f: S("1,0 3,4 5,7"), ch: 11 },
+    { name: "Moll", sym: ["m", "mi", "min", "−"], f: S("1,0 3,3 5,7"), ch: 11 },
+    { name: "vermindert", sym: ["dim", "°"], f: S("1,0 3,3 5,6"), ch: 11 },
+    { name: "übermäßig", sym: ["+", "aug", "(♯5)"], f: S("1,0 3,4 5,8"), ch: 11 },
+    { name: "Vorhalt Sekunde", sym: ["sus2"], f: S("1,0 2,2 5,7"), ch: 17 },
+    { name: "Vorhalt Quarte", sym: ["sus4", "sus"], f: S("1,0 4,5 5,7"), ch: 17 },
+    { g: "Vierklänge" },
+    { name: "Dur mit Sexte", sym: ["6"], f: S("1,0 3,4 5,7 6,9"), ch: 17 },
+    { name: "Moll mit Sexte", sym: ["m6"], f: S("1,0 3,3 5,7 6,9"), ch: 17 },
+    { name: "Dur mit None", sym: ["add9", "add2"], f: S("1,0 3,4 5,7 9,14"), ch: 17 },
+    { name: "Dominantseptakkord", sym: ["7"], f: S("1,0 3,4 5,7 7,10"), ch: 15 },
+    { name: "großer Septakkord", sym: ["maj7", "Δ7", "M7", "j7"], f: S("1,0 3,4 5,7 7,11"), ch: 15 },
+    { name: "Moll-Septakkord", sym: ["m7", "−7", "mi7"], f: S("1,0 3,3 5,7 7,10"), ch: 15 },
+    { name: "Moll mit großer Septime", sym: ["m(maj7)", "mΔ7", "−Δ7"], f: S("1,0 3,3 5,7 7,11"), ch: 27 },
+    { name: "halbverminderter Septakkord", sym: ["m7♭5", "ø7", "ø"], f: S("1,0 3,3 5,6 7,10"), ch: 15 },
+    { name: "verminderter Septakkord", sym: ["°7", "dim7"], f: S("1,0 3,3 5,6 7,9"), ch: 15 },
+    { name: "Dominantsept mit Quartvorhalt", sym: ["7sus4", "7sus"], f: S("1,0 4,5 5,7 7,10"), ch: 17 },
+    { name: "übermäßiger Dominantsept", sym: ["7♯5", "+7", "7(♯5)"], f: S("1,0 3,4 5,8 7,10"), ch: 27 },
+    { g: "Erweiterte Akkorde (Jazz)" },
+    { name: "Dominant-Nonenakkord", sym: ["9"], f: S("1,0 3,4 5,7 7,10 9,14"), ch: 27 },
+    { name: "großer Nonenakkord", sym: ["maj9", "Δ9"], f: S("1,0 3,4 5,7 7,11 9,14"), ch: 27 },
+    { name: "Moll-Nonenakkord", sym: ["m9", "−9"], f: S("1,0 3,3 5,7 7,10 9,14"), ch: 27 },
+    { name: "Dominant mit kleiner None", sym: ["7♭9"], f: S("1,0 3,4 5,7 7,10 9,13"), ch: 27 },
+    { name: "Dominant mit übermäßiger None", sym: ["7♯9"], f: S("1,0 3,4 5,7 7,10 9,15"), ch: 27 },
+    { name: "Moll-Undezimenakkord", sym: ["m11", "−11"], f: S("1,0 3,3 5,7 7,10 9,14 11,17"), ch: 27 },
+    { name: "Dominant mit übermäßiger Undezime", sym: ["7♯11"], f: S("1,0 3,4 5,7 7,10 11,18"), ch: 27 },
+    { name: "Dominant-Tredezimenakkord", sym: ["13"], f: S("1,0 3,4 5,7 7,10 9,14 13,21"), ch: 27 }
+  ];
+  const tbody = document.querySelector("#chords tbody");
+  const host = document.getElementById("kbd-host");
+  const nameEl = document.getElementById("chord-name");
+  let root = Anhang.ROOTS[0], sel = 1, kb = null;
+  const all = Book.allChapters();
+  const chLink = (n) => { const c = all.find((x) => x.n === n); return c.ready ? `<a href="${Book.file(c)}">${n}</a>` : String(n); };
+
+  function midis(c) {
+    // tiefe Lage für große Akkorde
+    const base = c.f.length > 4 ? 48 : 60;
+    return c.f.map(([n, s]) => Anhang.rootMidi(root, base) + s);
+  }
+  function render() {
+    const rl = Anhang.rootLabel(root);
+    const rEn = Anhang.en(Anhang.LET[root[0]], root[1]);
+    tbody.innerHTML = CHORDS.map((c, i) => {
+      if (c.g) return `<tr class="group"><td colspan="5">${c.g}</td></tr>`;
+      const tones = Anhang.spell(root, c.f).map((t) => Anhang.de(t.letter, t.acc)).join(" – ");
+      const syms = c.sym.map((s) => rEn + s);
+      return `<tr class="play-row${i === sel ? " sel" : ""}" data-i="${i}"><td>${c.name}</td><td class="sym">${syms.join(", ")}</td>` +
+        `<td class="notes">${c.f.map(deg).join(" ")}</td><td class="notes">${tones}</td><td>${chLink(c.ch)}</td></tr>`;
+    }).join("");
+    show(false);
+  }
+  function show(play) {
+    const c = CHORDS[sel];
+    const ms = midis(c);
+    host.textContent = "";
+    kb = Book.keyboard(host, { from: Math.min(48, ms[0]), to: Math.max(84, ms[ms.length - 1]), labels: "c", marks: ms });
+    nameEl.textContent = `${Anhang.rootLabel(root)} ${c.name}: ${Anhang.spell(root, c.f).map((t) => Anhang.de(t.letter, t.acc)).join(", ")}`;
+    if (play) { Book.audio.chord(ms, 0, 1.8); }
+  }
+  tbody.addEventListener("click", (e) => {
+    const tr = e.target.closest("tr[data-i]"); if (!tr || e.target.closest("a")) return;
+    sel = +tr.dataset.i;
+    tbody.querySelectorAll("tr.sel").forEach((t) => t.classList.remove("sel"));
+    tr.classList.add("sel");
+    show(true);
+  });
+  Anhang.rootPicker(document.getElementById("roots"), (r) => { root = r; render(); });
+  render();
+</script>
+</body>
+</html>

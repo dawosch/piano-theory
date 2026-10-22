@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Modale Mischung · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil III · Kapitel 23</div>
+    <h1>Modale Mischung</h1>
+    <p class="lede">Ein Dur-Stück darf sich Akkorde aus dem Moll auf demselben Grundton ausleihen. Ein einziger erniedrigter Ton genügt, und der Klang bekommt Schatten, Wehmut oder Rock-Energie. Dieses Kapitel zeigt die wichtigsten geliehenen Akkorde, wie du sie erkennst und wie du sie am Klavier einsetzt.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>erklären, was modale Mischung ist und woher die geliehenen Akkorde stammen,</li>
+      <li>in jeder Dur-Tonart iv, ♭VI, ♭VII und ♭III bilden,</li>
+      <li>geliehene Akkorde von Zwischendominanten unterscheiden,</li>
+      <li>die typischen Wendungen IV – iv – I, ♭VI – ♭VII – I und I – ♭VII – IV am Klavier spielen,</li>
+      <li>ein einfaches Lied durch einen geliehenen Akkord umfärben.</li>
+    </ul>
+  </div>
+
+  <!-- 23.1 -->
+  <h2 id="variante">23.1 Dur und Moll auf demselben Grundton</h2>
+  <p>C-Dur und c-Moll haben denselben Grundton, aber verschiedene Tonleitern. Solche Tonarten heißen <strong>Varianttonarten</strong> (Kapitel 8). Sie unterscheiden sich in drei Tönen:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Stufe</th><th class="num">1</th><th class="num">2</th><th class="num">3</th><th class="num">4</th><th class="num">5</th><th class="num">6</th><th class="num">7</th></tr></thead>
+      <tbody>
+        <tr><td>C-Dur</td><td class="num">c</td><td class="num">d</td><td class="num"><strong>e</strong></td><td class="num">f</td><td class="num">g</td><td class="num"><strong>a</strong></td><td class="num"><strong>h</strong></td></tr>
+        <tr><td>c-Moll (natürlich)</td><td class="num">c</td><td class="num">d</td><td class="num"><strong>es</strong></td><td class="num">f</td><td class="num">g</td><td class="num"><strong>as</strong></td><td class="num"><strong>b</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Wenn ein Stück in C-Dur einen Akkord verwendet, der einen dieser Moll-Töne enthält, spricht man von <dfn id="g-modale-mischung">modaler Mischung</dfn> oder Dur-Moll-Mischung (englisch <em>modal mixture</em> oder <em>borrowed chords</em>). Der Akkord wird aus der Variante „geliehen“. Die Tonart bleibt C-Dur, und der geliehene Akkord ist eine Farbe, keine Modulation.</p>
+  <p>Dasselbe Prinzip kennst du schon in umgekehrter Richtung. Moll leiht sich seine Dur-Dominante aus der Dur-Variante (Kapitel 20). Modale Mischung ist das Gegenstück: Dur leiht sich Akkorde aus Moll.</p>
+
+  <!-- 23.2 -->
+  <h2 id="akkorde">23.2 Die wichtigsten geliehenen Akkorde</h2>
+  <p>Die Stufenbezeichnung bezieht sich immer auf die Dur-Tonart. Ein ♭ vor der römischen Zahl bedeutet, dass der <em>Grundton</em> gegenüber der Dur-Tonleiter erniedrigt ist. ♭VI in C-Dur ist also der Akkord auf as, nicht auf a.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Stufe</th><th>in C-Dur</th><th>Töne</th><th>geliehene Töne</th><th>Charakter</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="53 60 65 68" data-mode="harm"><td><strong>iv</strong></td><td>Fm</td><td>f – as – c</td><td>as</td><td>wehmütig, sehr häufig</td><td>▶</td></tr>
+        <tr class="play-row" data-play="56 60 63 68" data-mode="harm"><td><strong>♭VI</strong></td><td>As</td><td>as – c – es</td><td>as, es</td><td>dunkel, weit</td><td>▶</td></tr>
+        <tr class="play-row" data-play="58 62 65 70" data-mode="harm"><td><strong>♭VII</strong></td><td>B</td><td>b – d – f</td><td>b</td><td>rockig, offen</td><td>▶</td></tr>
+        <tr class="play-row" data-play="51 58 63 67" data-mode="harm"><td><strong>♭III</strong></td><td>Es</td><td>es – g – b</td><td>es, b</td><td>überraschend hell-dunkel</td><td>▶</td></tr>
+        <tr class="play-row" data-play="50 60 65 68" data-mode="harm"><td><strong>iiø7</strong></td><td>Dm7♭5</td><td>d – f – as – c</td><td>as</td><td>weiche Vorbereitung der V</td><td>▶</td></tr>
+        <tr class="play-row" data-play="48 60 63 67" data-mode="harm"><td><strong>i</strong></td><td>Cm</td><td>c – es – g</td><td>es</td><td>plötzliche Eintrübung</td><td>▶</td></tr>
+        <tr class="play-row" data-play="55 58 62 67" data-mode="harm"><td>v</td><td>Gm</td><td>g – b – d</td><td>b</td><td>selten, schwache Dominante</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Ein weiterer geliehener Akkord, ♭II (Des-Dur in C), hat einen eigenen Namen, den Neapolitaner. Er ist Thema von Kapitel 25.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Geliehene Akkorde in Dur enthalten mindestens einen der Töne ♭3, ♭6 oder ♭7. In C-Dur sind das es, as und b. Der weitaus häufigste geliehene Ton ist ♭6 (as).</p>
+  </div>
+
+  <!-- 23.3 -->
+  <h2 id="iv">23.3 Die Moll-Subdominante: IV – iv – I</h2>
+  <p>Die beliebteste Mischungswendung verwandelt die Subdominante kurz vor der Tonika von Dur in Moll. In C-Dur: F – Fm – C. Dabei bewegt sich genau eine Stimme, und zwar chromatisch abwärts: a – as – g.</p>
+  <div class="abc" data-bpm="56" data-caption="IV – iv – I in C-Dur. In der Oberstimme sinkt a' über as' nach g'.">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "F"[CFA]2 "Fm"[CF_A]2 | "C"[CEG]4 |]
+    [V:LH] F,,2 F,,2 | C,4 |]
+  </div>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="41 60 65 69/2|48 60 64 67/4">▶ IV – I</button>
+    <button class="btn" type="button" data-seq="41 60 65 69/2|41 60 65 68/2|48 60 64 67/4">▶ IV – iv – I</button>
+  </div>
+  <p>Die Wirkung ist ein kurzes Innehalten, eine Spur Wehmut kurz vor dem Ziel. Die iv kann auch direkt ohne vorheriges IV stehen. Ein bekanntes Beispiel ist „In My Life“ (The Beatles), wo D-Dur kurz zu d-Moll wird, bevor das A-Dur der Tonika erreicht ist. Bei „Creep“ (Radiohead) bildet die Folge I – III – IV – iv sogar das ganze Stück: in G-Dur G – H – C – Cm. Hier ist das H-Dur übrigens eine Zwischendominante zur vi-Stufe (Kapitel 21), die sich nicht auflöst.</p>
+  <p>In der Funktionstheorie heißt der Moll-Subdominant-Akkord in Dur <strong>Moll-Subdominante</strong> und wird mit kleinem <strong>s</strong> geschrieben, im Gegensatz zum großen S für die Dur-Subdominante.</p>
+
+  <section class="layer deep" data-title="Warum ein einziger Ton so viel Schatten wirft">
+    <p>Im Wechsel F → Fm ändert sich nur ein Ton, das a wird zu as. Trotzdem ist die Wirkung groß. Dafür gibt es zwei Gründe.</p>
+    <p><strong>1. Der Gegenleitton.</strong> Das as liegt einen Halbton über g, der Quinte der Tonika. So wie der Leitton h nach oben zum c drängt, drängt das as nach unten zum g. Man nennt solche abwärts strebenden Halbtöne auch <em>Gegenleittöne</em>. Die Wendung F – Fm – C enthält damit eine chromatische Linie a – as – g, die das Ziel g von oben ansteuert. Das ist dieselbe Art von Sog, die der Leitton von unten erzeugt, nur in die andere Richtung und mit dunklerer Farbe.</p>
+    <p><strong>2. Die Erwartung.</strong> In einer Dur-Tonart rechnet das Ohr mit Dur-Tönen. Das as ist eine kleine Enttäuschung dieser Erwartung, die gleich darauf durch die Tonika aufgefangen wird. David Huron beschreibt solche Momente als kurze Störung mit anschließender Belohnung. Viele Hörer empfinden genau diese Mischung als berührend. Das mag erklären, warum die Moll-Subdominante so oft an emotionalen Stellen steht, etwa am Ende einer Liedzeile.</p>
+  </section>
+
+  <!-- 23.4 -->
+  <h2 id="b6-b7">23.4 ♭VI und ♭VII: die Farben der Popmusik</h2>
+  <p>Die Akkorde auf ♭6 und ♭7 sind Dur-Akkorde, deren Grundtöne aus Moll stammen. In C-Dur sind das As-Dur und B-Dur. In Rock und Pop sind sie allgegenwärtig, aus drei typischen Gründen:</p>
+  <ul>
+    <li><strong>♭VI – ♭VII – I:</strong> zwei Dur-Akkorde steigen in Ganztönen zur Tonika auf. Dieser Schluss klingt triumphal. Er ist so typisch für Videospielmusik, dass er im Englischen oft „Mario-Kadenz“ heißt, nach der Fanfare am Ende eines Levels von „Super Mario Bros.“.</li>
+    <li><strong>I – ♭VII – IV – I:</strong> ein Klassiker des Rock. Am Ende von „Hey Jude“ (The Beatles) wiederholt sich F – Es – B – F, in F-Dur genau diese Folge. „Sweet Home Alabama“ (Lynyrd Skynyrd) kreist um D – C – G, also I – ♭VII – IV.</li>
+    <li><strong>♭VII – I:</strong> ersetzt die Dominante. Statt G – C spielt man B – C. Der Schluss klingt weniger zwingend, dafür offener und weniger „klassisch“.</li>
+  </ul>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="44 60 63 68/2|46 62 65 70/2|48 64 67 72/4">▶ ♭VI – ♭VII – I</button>
+    <button class="btn" type="button" data-seq="48 60 64 67/2|46 62 65 70/2|41 60 65 69/2|48 60 64 67/4">▶ I – ♭VII – IV – I</button>
+    <button class="btn" type="button" data-seq="48 60 64 67/2|44 60 63 68/2|46 62 65 70/2|48 60 64 67/4">▶ I – ♭VI – ♭VII – I</button>
+  </div>
+
+  <section class="layer piano" data-title="Der Rock-Griff: parallele Dreiklänge">
+    <p>♭VI – ♭VII – I wird im Pop meist mit <strong>parallelen Dreiklängen</strong> gespielt. Die rechte Hand behält eine Griffform und verschiebt sie nur. Das widerspricht den Regeln der klassischen Stimmführung (Kapitel 33), klingt aber kraftvoll und ist gewollt.</p>
+    <div class="abc" data-bpm="80" data-caption="♭VI – ♭VII – I in C-Dur mit parallel verschobenen Dreiklängen">
+      X:1
+      M:4/4
+      L:1/4
+      K:C
+      %%score {RH LH}
+      V:RH clef=treble
+      V:LH clef=bass
+      [V:RH] "Ab"[C_E_A]2 "Bb"[DF_B]2 | "C"[EGc]4 |]
+      [V:LH] _A,,2 _B,,2 | C,4 |]
+    </div>
+    <ul>
+      <li>Rechte Hand: Fingersatz 1–2–5 für alle drei Akkorde. Die Hand springt jeweils um einen Ganzton nach oben.</li>
+      <li>Linke Hand: Grundton oder Oktave. Bei As und B liegen beide Grundtöne auf schwarzen Tasten, der Daumen kann dort ruhig liegen.</li>
+      <li>Für mehr Wucht spielt die linke Hand Oktaven und die rechte Hand denselben Rhythmus auf allen drei Akkorden.</li>
+    </ul>
+    <p><strong>Übung:</strong> Spiel ♭VI – ♭VII – I in G-Dur (Es – F – G) und in D-Dur (B – C – D).</p>
+  </section>
+
+  <section class="layer deep" data-title="Warum der Rock ♭VII liebt: der doppelte Plagalschluss">
+    <p>Die Folge ♭VII – IV – I (in C-Dur B – F – C) hat eine besondere Struktur. Jeder Grundton liegt eine reine Quinte über dem vorigen: b → f → c. Der Schritt IV → I ist der sogenannte Plagalschluss (Kapitel 16). B → F ist dasselbe Verhältnis eine Stufe früher, also gewissermaßen die IV der IV. Deshalb spricht man vom <em>doppelten Plagalschluss</em>.</p>
+    <p>Ein Plagalschluss kommt ohne Leitton aus. Er klingt weniger zwingend als V – I, eher wie ein „Amen“ (Kapitel 16). Wer zwei davon hintereinander setzt, bekommt eine Kadenz, die die Tonika ansteuert, ohne die klassische Dominante zu benutzen. Das passt zu einer Musik, die aus dem Blues kommt. Im Blues ist die kleine Septime (b in C) ohnehin ein Teil des Grundklangs.</p>
+    <p>Dazu kommt ein instrumentaler Grund. Auf der Gitarre lassen sich Dur-Akkorde mit derselben Griffform verschieben. Ganztonschritte wie B → C oder D → E liegen dabei besonders bequem. Viele Rock-Harmonien entstehen so eher aus der Hand als aus der Theorie.</p>
+  </section>
+
+  <!-- 23.5 -->
+  <h2 id="weitere">23.5 ♭III, iiø7 und die Moll-Tonika</h2>
+  <p><strong>♭III</strong> (Es-Dur in C) wirkt wie ein plötzlicher Lichtwechsel. Der Akkord teilt mit C-Dur nur den Ton g. Er tritt oft in Folgen wie I – ♭III – IV (C – Es – F) auf.</p>
+  <p><strong>iiø7</strong> (d – f – as – c) ersetzt die ii7 vor der Dominante. Statt Dm7 – G7 – C spielst du Dm7♭5 – G7 – C. Das as macht den Übergang weicher und melancholischer. In Moll ist das der normale Akkord auf der ii-Stufe, in Dur ist er geliehen. Das Symbol ø bedeutet halbvermindert (Kapitel 15).</p>
+  <p><strong>i</strong> (c-Moll in C-Dur) ist der radikalste Fall: Die Tonika selbst wechselt kurz ihr Geschlecht. Dieser <dfn id="g-dur-moll-wechsel">Dur-Moll-Wechsel</dfn> war ein Lieblingsmittel von Franz Schubert. Im „Lindenbaum“ aus der „Winterreise“ wechselt die Musik von E-Dur nach e-Moll, wenn der Wanderer „in tiefer Nacht“ am Baum vorbeiziehen muss, und kehrt danach nach E-Dur zurück.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-seq="48 60 64 67/2|51 58 63 67/2|41 60 65 69/2|48 60 64 67/4">▶ I – ♭III – IV – I</button>
+    <button class="btn" type="button" data-seq="50 60 65 68/2|43 59 65 67/2|48 60 64 67/4">▶ iiø7 – V7 – I</button>
+    <button class="btn" type="button" data-seq="48 60 64 67/3|48 60 63 67/3|48 60 64 67/4">▶ I – i – I</button>
+  </div>
+
+  <section class="layer deep" data-title="Mischung als Wechsel des Modus">
+    <p>Der Begriff <em>modale</em> Mischung verweist auf die Kirchentonarten oder Modi (Kapitel 24). Jeder geliehene Akkord stammt nicht nur aus „Moll“ allgemein, sondern lässt sich einem bestimmten Modus auf demselben Grundton zuordnen:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Akkord in C-Dur</th><th>geliehener Ton</th><th>Modus auf c, der ihn enthält</th></tr></thead>
+        <tbody>
+          <tr><td>♭VII (B)</td><td>b</td><td>c-mixolydisch (Dur mit kleiner Septime)</td></tr>
+          <tr><td>iv (Fm), ♭VI (As)</td><td>as (und es)</td><td>c-äolisch (natürliches Moll)</td></tr>
+          <tr><td>♭III (Es)</td><td>es, b</td><td>c-dorisch oder c-äolisch</td></tr>
+          <tr><td>♭II (Des)</td><td>des</td><td>c-phrygisch</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Die Modi lassen sich nach Helligkeit ordnen. Je mehr Töne erniedrigt sind, desto dunkler der Klang (Kapitel 24). Modale Mischung ist also das Verschieben eines einzelnen Akkords in einen dunkleren Modus auf demselben Grundton. Mixolydisch ist dabei die mildeste Stufe (nur ♭7), phrygisch eine sehr dunkle (♭2, ♭3, ♭6, ♭7). Deshalb klingt ♭VII fast neutral, ♭II dagegen dramatisch.</p>
+  </section>
+
+  <!-- 23.6 -->
+  <h2 id="erkennen">23.6 Mischung und Zwischendominanten unterscheiden</h2>
+  <p>Beide erzeugen tonartfremde Töne. In Dur-Tonarten gibt es eine einfache Faustregel:</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p><strong>Zwischendominanten erhöhen</strong> Töne (Leittöne, in C-Dur cis, dis, fis, gis). <strong>Modale Mischung erniedrigt</strong> Töne (in C-Dur es, as, b).</p>
+  </div>
+  <p>Die einzige häufige Ausnahme ist C7, die Zwischendominante zur IV. Sie enthält das b als Septime. Ob ein b in C-Dur zu C7 oder zu B-Dur gehört, entscheidet der Kontext: C7 führt zu F, B-Dur steht meist neben C oder F als eigene Farbe.</p>
+  <p>Im Leadsheet erkennst du Mischung an Akkorden, die einen Halbton unter einer Dur-Stufe stehen (As, B, Es in C-Dur) oder an Moll-Akkorden auf Stufen, die in Dur sonst Dur wären (Fm, Cm, Gm in C-Dur).</p>
+
+  <section class="layer piano" data-title="IV – iv – I: ein Finger macht den Unterschied">
+    <p>Diese Wendung ist am Klavier besonders dankbar, weil sich nur ein Finger bewegt. In C-Dur:</p>
+    <ul>
+      <li>F: c' – f' – a' (rechte Hand 1–3–5)</li>
+      <li>Fm: c' – f' – as' (nur der kleine Finger rutscht auf die schwarze Taste)</li>
+      <li>C: c' – e' – g' (Mittelfinger und kleiner Finger rutschen je einen Halbton bzw. Ganzton tiefer)</li>
+    </ul>
+    <figure>
+      <div class="kb" data-from="60" data-to="72" data-labels="white" data-marks="60 65 69:c2 68:c3:as 67:c2" aria-label="F-Dur und f-Moll in der rechten Hand, a' und as' markiert"></div>
+      <figcaption>Der kleine Finger wandert a' (petrol) – as' (orange) – g' (petrol).</figcaption>
+    </figure>
+    <p><strong>Übung:</strong> Spiel die Wendung in G-Dur (C – Cm – G, der kleine Finger geht e – es – d) und in F-Dur (B – Bm – F, d – des – c). Wenn du sicher bist, ersetze in einem einfachen Lied deiner Wahl die letzte IV vor dem Schluss durch IV – iv.</p>
+  </section>
+
+  <!-- 23.7 -->
+  <h2 id="moll">23.7 Mischung in Moll</h2>
+  <p>Moll leiht sich ebenfalls Akkorde aus Dur, aber seltener zur Farbe als aus funktionalen Gründen. Die beiden wichtigsten Fälle kennst du aus Kapitel 20:</p>
+  <ul>
+    <li>die <strong>Dur-Dominante V</strong> mit erhöhter siebter Stufe,</li>
+    <li>die <strong>picardische Terz</strong>, also ein Schluss auf der Dur-Tonika.</li>
+  </ul>
+  <p>Hinzu kommt die <strong>Dur-Subdominante IV</strong> (D-Dur in a-Moll), die aus dem melodischen Moll bzw. dem dorischen Modus stammt. Sie hellt einen Moll-Satz kurz auf, etwa in der Folge i – IV – i (Am – D – Am), die an Folk oder an „Oye Como Va“ von Tito Puente erinnert.</p>
+
+  <section class="layer deep" data-title="Die Moll-Subdominante in der Geschichte">
+    <p>Geliehene Akkorde sind keine Erfindung der Popmusik. Schon bei Bach und Mozart findet man die Moll-Subdominante in Dur, meist kurz vor einem Schluss. Systematisch genutzt wurde die Dur-Moll-Mischung aber im 19. Jahrhundert. Schubert, Brahms und später Komponisten wie Mahler setzten sie gezielt als Ausdrucksmittel ein, um Dur-Passagen einzutrüben oder Erinnerungen und Abschied zu vertonen.</p>
+    <p>Die Theorie zog nach. Moritz Hauptmann und später Hugo Riemann beschrieben im 19. Jahrhundert ein „Moll-Dur“, also Dur mit Moll-Subdominante, als eigene Variante. Riemanns Funktionstheorie unterscheidet deshalb ausdrücklich zwischen S und s. Im englischsprachigen Raum hat sich der Begriff <em>modal mixture</em> durchgesetzt, der die Akkorde als Leihgaben aus parallelen Modi versteht. Beide Sichtweisen beschreiben dasselbe Phänomen.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Modale Mischung: Ein Dur-Stück leiht sich Akkorde aus der Moll-Variante auf demselben Grundton. Die Tonart bleibt.</li>
+    <li>Die geliehenen Töne sind ♭3, ♭6 und ♭7, in C-Dur es, as und b.</li>
+    <li>Die wichtigsten geliehenen Akkorde: iv (Fm), ♭VI (As), ♭VII (B), ♭III (Es), iiø7 (Dm7♭5), i (Cm).</li>
+    <li>Typische Wendungen: IV – iv – I, ♭VI – ♭VII – I, I – ♭VII – IV – I.</li>
+    <li>Faustregel in Dur: Zwischendominanten erhöhen Töne, Mischung erniedrigt Töne.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">23.1</span><div><span class="kind">Theorie</span>Bilde in G-Dur die geliehenen Akkorde iv, ♭VI, ♭VII und ♭III.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>g-Moll natürlich: g, a, b, c, d, es, f. iv = Cm (c es g), ♭VI = Es (es g b), ♭VII = F (f a c), ♭III = B (b d f). Die geliehenen Töne sind b, es und f.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">23.2</span><div><span class="kind">Theorie</span>Welche geliehenen Töne enthalten in C-Dur die Akkorde Fm, As und B?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Fm: as. As: as und es. B: b. (Das c in As und das d und f in B sind leitereigen.)</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">23.3</span><div><span class="kind">Theorie</span>Analysiere in C-Dur: | C | E | F | Fm | C |</div></div>
+      <details class="solution"><summary>Lösung</summary><div>I | III (E-Dur, als V/vi gebaut, löst sich aber nicht nach Am auf) | IV | iv (modale Mischung) | I. Das gis im E-Dur erhöht, das as im Fm erniedrigt. Zwischendominante und Mischung stehen hier direkt nebeneinander.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">23.4</span><div><span class="kind">Theorie</span>In einem C-Dur-Stück steht einmal A7, einmal As. Was ist jeweils die wahrscheinlichste Erklärung?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>A7 enthält cis, einen erhöhten Ton. Wahrscheinlich V7/ii, Zwischendominante zu d-Moll. As enthält as und es, erniedrigte Töne. Wahrscheinlich ♭VI, modale Mischung.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">23.5</span><div><span class="kind">Notenlesen</span>Bestimme Akkorde und Stufen in C-Dur.</div></div>
+      <div class="abc" data-bpm="60">
+        X:1
+        M:none
+        L:1
+        K:C
+        "^1"[CEG] | "^2"[_B,DF] | "^3"[CFA] | "^4"[CF_A] | "^5"[CEG] |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: C (I). 2: B-Dur (b d' f'), ♭VII. 3: F (c' f' a'), IV in Quartsextlage. 4: f-Moll (c' f' as'), iv. 5: C (I). Die Folge I – ♭VII – IV – iv – I verbindet den doppelten Plagalschluss mit der Moll-Subdominante.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">23.6</span><div><span class="kind">Am Klavier</span>Spiel IV – iv – I in C-Dur, G-Dur und F-Dur mit der Griffform aus dem Klavier-Einschub.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C-Dur: F – Fm – C (a' – as' – g'). G-Dur: C – Cm – G (e' – es' – d'). F-Dur: B – Bm – F (d' – des' – c'). In allen Fällen sinkt die Terz der Subdominante chromatisch zur Quinte der Tonika.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">23.7</span><div><span class="kind">Am Klavier</span>Spiel I – ♭VI – ♭VII – I in D-Dur mit parallelen Dreiklängen. Wie heißen die Akkorde?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>D – B – C – D. B-Dur (b d f) und C-Dur (c e g) sind aus d-Moll geliehen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">23.8</span><div><span class="kind">Gehör</span>Welches Beispiel verwendet die Moll-Subdominante?</div></div>
+      <div class="btn-row">
+        <button class="btn" type="button" data-seq="48 60 64 67/2|41 60 65 68/2|43 59 62 67/2|48 60 64 67/4">▶ Beispiel A</button>
+        <button class="btn" type="button" data-seq="48 60 64 67/2|41 60 65 69/2|43 59 62 67/2|48 60 64 67/4">▶ Beispiel B</button>
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>A: C – Fm – G – C. Der zweite Akkord ist f-Moll mit as. B verwendet das normale F-Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">23.9</span><div><span class="kind">Theorie</span>Wie schreibt man in der Funktionstheorie die Dur-Subdominante und die Moll-Subdominante in Dur? Welcher Akkord ist in C-Dur jeweils gemeint?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>S = Dur-Subdominante (F-Dur), s = Moll-Subdominante (f-Moll). Klein- und Großschreibung unterscheiden in der Funktionstheorie Moll und Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">23.10</span><div><span class="kind">Vertiefung</span>Zeige, dass ♭VII – IV – I aus zwei gleich gebauten Schritten besteht. Welches Intervall liegt zwischen den Grundtönen, und welchen Namen trägt der einzelne Schritt?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>In C-Dur: b → f → c. Beide Schritte führen eine reine Quinte aufwärts (oder eine Quarte abwärts) vom Grundton des einen Akkords zum nächsten, also jeweils von einer Subdominante zu ihrer Tonika. Der einzelne Schritt IV – I heißt Plagalschluss, die Folge daher doppelter Plagalschluss.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(23);
+  document.querySelectorAll("[data-seq]").forEach((b) => b.addEventListener("click", () => {
+    const steps = b.dataset.seq.split("|").map((s) => {
+      const [n, d] = s.split("/");
+      return [n.trim().split(/\s+/).map(Number), +(d || 2)];
+    });
+    Book.audio.seq(steps, +b.dataset.bpm || 72);
+  }));
+</script>
+</body>
+</html>

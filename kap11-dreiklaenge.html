@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dreiklänge · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .keycolors td:first-child { white-space: nowrap; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil II · Kapitel 11</div>
+    <h1>Dreiklänge</h1>
+    <p class="lede">Ein Dreiklang besteht aus drei Tönen, die im Terzabstand übereinanderliegen. Er ist der Grundbaustein fast jeder Begleitung. Wer die vier Dreiklangstypen kennt und von jedem Ton aus greifen kann, kann die meisten Akkordsymbole eines Leadsheets sofort spielen.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Dur-, Moll-, verminderte und übermäßige Dreiklänge an ihren Intervallen erkennen,</li>
+      <li>jeden dieser Dreiklänge von jedem Ton aus bauen und richtig schreiben,</li>
+      <li>Dreiklänge im Notenbild und auf der Klaviatur schnell finden,</li>
+      <li>die vier Typen am Klang unterscheiden,</li>
+      <li>erklären, warum der Durdreiklang in jedem Klavierton steckt und warum Moll weniger eindeutig ist.</li>
+    </ul>
+  </div>
+
+  <!-- 11.1 -->
+  <h2 id="akkord">11.1 Was ein Akkord ist</h2>
+  <p>Ein <dfn id="g-akkord">Akkord</dfn> ist ein Zusammenklang aus mindestens drei verschiedenen Tönen. Zwei Töne gleichzeitig bilden noch keinen Akkord, sondern ein harmonisches Intervall (Kapitel 5).</p>
+  <p>Der wichtigste Akkord der abendländischen Musik ist der <dfn id="g-dreiklang">Dreiklang</dfn>. Er entsteht, wenn man zwei Terzen übereinanderlegt. Dieses Bauprinzip heißt <dfn id="g-terzschichtung">Terzschichtung</dfn>. Von c aus nimmt man die Terz e und darüber die Terz g. Die drei Töne haben feste Namen:</p>
+  <ul>
+    <li>Der unterste Ton der Terzschichtung heißt <dfn id="g-grundton">Grundton</dfn> (englisch <em>root</em>). Er gibt dem Akkord den Namen.</li>
+    <li>Der mittlere Ton ist die <strong>Terz</strong> (<em>third</em>), weil er eine Terz über dem Grundton liegt.</li>
+    <li>Der obere Ton ist die <strong>Quinte</strong> (<em>fifth</em>), weil er eine Quinte über dem Grundton liegt.</li>
+  </ul>
+  <figure>
+    <div class="kb" data-from="60" data-to="72" data-labels="white" data-marks="60::Gt 64:c2:T 67:c3:Q" data-brackets="60-64:Terz;64-67:Terz" aria-label="C-Dur-Dreiklang c'–e'–g' mit Grundton, Terz und Quinte"></div>
+    <figcaption>Der C-Dur-Dreiklang: Grundton c' (Gt), Terz e' (T), Quinte g' (Q). Auf weißen Tasten heißt Terzschichtung: jede zweite Taste.</figcaption>
+  </figure>
+  <div class="abc" data-bpm="80" data-caption="Erst nacheinander, dann gleichzeitig: aus drei Tönen wird ein Klang">
+    X:1
+    M:none
+    L:1/4
+    K:C
+    C E G | [CEG]3 |]
+  </div>
+  <p>Dass ein Akkord „Dreiklang“ heißt, auch wenn man ihn mit fünf Fingern und zwei Händen spielt, liegt daran, dass nur die drei <em>verschiedenen</em> Tonnamen zählen. c–e–g–c'–e' ist immer noch ein C-Dur-Dreiklang. Die verdoppelten Töne ändern die Klangfarbe, aber nicht den Akkord.</p>
+
+  <section class="layer deep" data-title="Warum Terzen und nicht Sekunden oder Quarten?">
+    <p>Man könnte Akkorde auch aus Sekunden (c–d–e) oder Quarten (c–f–b) bauen. Dass die Musik von etwa 1600 bis heute fast überall Terzen schichtet, hat drei Gründe.</p>
+    <p><strong>1. Konsonanz.</strong> In einem Terzenstapel bilden alle Töne untereinander Konsonanzen: zwei Terzen (unvollkommene Konsonanzen) und eine Quinte (vollkommene Konsonanz). Ein Sekundenstapel enthält dagegen nur Dissonanzen. Er klingt als Cluster, als Klumpen aus Reibungen.</p>
+    <p><strong>2. Eindeutigkeit.</strong> Ein Quartenstapel wie c–f–b enthält nur reine Quarten. Weil alle Abstände gleich sind, fehlt dem Ohr ein klarer Grundton. Im Jazz wird genau dieser schwebende Klang gezielt eingesetzt (Kapitel 29). Der Terzenstapel aus großer und kleiner Terz ist dagegen asymmetrisch und hat einen klaren Bezugspunkt.</p>
+    <p><strong>3. Akustik.</strong> Die ersten sechs Teiltöne eines Tons ergeben zusammen einen Durdreiklang (siehe die nächste Vertiefung). Der Dreiklang ist also schon im einzelnen Ton „vorgezeichnet“.</p>
+    <p>Historisch wurde der Dreiklang erst spät als eigene Einheit gedacht. Gioseffo Zarlino beschrieb 1558 Dur- und Mollklang als vollkommenste Harmonie und leitete sie aus den Zahlen 1 bis 6 ab. Jean-Philippe Rameau formulierte 1722 in seinem „Traité de l’harmonie“ die Idee, dass ein Akkord einen Grundton hat und gleich bleibt, egal welcher seiner Töne unten liegt. Vorher dachten Musiker Zusammenklänge als Intervalle über dem Bass. Kapitel 12 erzählt diese Geschichte weiter.</p>
+  </section>
+
+  <!-- 11.2 -->
+  <h2 id="typen">11.2 Die vier Dreiklangstypen</h2>
+  <p>Terzen gibt es in zwei Größen, groß (4 Halbtöne) und klein (3 Halbtöne). Zwei Terzen lassen sich deshalb auf vier Arten übereinanderlegen. Daraus entstehen die vier Dreiklangstypen:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Typ</th><th>untere Terz</th><th>obere Terz</th><th>Quinte</th><th>auf c'</th><th>Symbol</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 64 67" data-mode="both"><td><dfn id="g-durdreiklang">Dur</dfn></td><td>groß</td><td>klein</td><td>rein</td><td>c'–e'–g'</td><td>C</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 67" data-mode="both"><td><dfn id="g-molldreiklang">Moll</dfn></td><td>klein</td><td>groß</td><td>rein</td><td>c'–es'–g'</td><td>Cm</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 63 66" data-mode="both"><td><dfn id="g-verminderter-dreiklang">vermindert</dfn></td><td>klein</td><td>klein</td><td>vermindert</td><td>c'–es'–ges'</td><td>C°, Cdim</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 64 68" data-mode="both"><td><dfn id="g-uebermaessiger-dreiklang">übermäßig</dfn></td><td>groß</td><td>groß</td><td>übermäßig</td><td>c'–e'–gis'</td><td>C+, Caug</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Die Terz über dem Grundton entscheidet über Dur (große Terz) oder Moll (kleine Terz). Die Quinte entscheidet über rein, vermindert oder übermäßig. Dur und Moll haben beide eine reine Quinte.</p>
+  </div>
+  <p>Dur und Moll sind Spiegelbilder: Dur hat unten die große und oben die kleine Terz, Moll umgekehrt. Beide umspannen dieselbe reine Quinte. Der Unterschied liegt nur im mittleren Ton.</p>
+  <div class="abc" data-bpm="60" data-caption="Die vier Typen auf c': Dur, Moll, vermindert, übermäßig">
+    X:1
+    M:none
+    L:1
+    K:C
+    "^Dur" [CEG] | "^Moll" [C_EG] | "^vermindert" [C_E_G] | "^übermäßig" [CE^G] |]
+  </div>
+  <p>Zu den Namen: Im Deutschen schreibt man Durtonarten und Durakkorde mit Großbuchstaben (C-Dur), Molltonarten und Mollakkorde mit Kleinbuchstaben (c-Moll). In Leadsheets und Akkordsymbolen ist international der Großbuchstabe üblich, Moll wird durch ein angehängtes <em>m</em> gekennzeichnet: C für C-Dur, Cm für c-Moll. Manchmal liest du auch <em>Cmi</em>, <em>Cmin</em> oder <em>C–</em>. Kapitel 17 behandelt alle Schreibweisen.</p>
+
+  <section class="layer deep" data-title="Der Durdreiklang steckt in jedem Ton">
+    <p>In Kapitel 5 hast du die Obertonreihe kennengelernt. Ein großes C (65,4 Hz) enthält Teiltöne bei der 2-, 3-, 4-, 5- und 6-fachen Frequenz: c, g, c', e', g'. Die Teiltöne 4, 5 und 6 bilden genau den Dreiklang c'–e'–g'.</p>
+    <div class="formula">c' : e' : g' = 4 : 5 : 6 &nbsp;&nbsp;→&nbsp;&nbsp; 261,6 Hz : 327,0 Hz : 392,4 Hz</div>
+    <p>In diesem Verhältnis stecken alle drei Intervalle des Durdreiklangs mit den einfachsten möglichen Zahlen: 5:4 ist die große Terz, 6:5 die kleine Terz, 6:4 = 3:2 die Quinte. Ein reiner Durdreiklang ist also ein Ausschnitt aus der Obertonreihe eines tieferen Tons. Deshalb verschmilzt er so gut, und deshalb nennt man ihn manchmal den „natürlichen“ Akkord.</p>
+    <p>Hör dir den Unterschied zwischen dem reinen Verhältnis 4:5:6 und dem gleichstufig gestimmten Klavierakkord an. Im zweiten Beispiel wabert die zu große Terz leicht (Kapitel 5, Abschnitt 5.10):</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-tone="261.63 327.03 392.44" data-partials="6" data-dur="4">▶ reiner Durdreiklang 4:5:6</button>
+      <button class="btn" type="button" data-tone="261.63 329.63 392.00" data-partials="6" data-dur="4">▶ Klavier-Durdreiklang</button>
+    </div>
+    <h4>Und Moll?</h4>
+    <p>Der reine Molldreiklang c–es–g hat das Verhältnis 10:12:15. Die Intervalle sind dieselben wie in Dur (6:5, 5:4, 3:2), nur in anderer Reihenfolge. Die Zahlen sind aber deutlich größer. Wenn man fragt, in welcher Obertonreihe diese drei Töne gemeinsam vorkommen, landet man nicht bei c, sondern bei einem sehr tiefen <strong>As</strong>, drei Oktaven und eine große Terz unter c'. Die Töne von c-Moll sind dort erst der 10., 12. und 15. Teilton.</p>
+    <p>Die Hörforschung (etwa die Theorie der virtuellen Tonhöhe von Ernst Terhardt) beschreibt, dass das Gehör zu einem Zusammenklang einen „passenden“ Grundton sucht. Beim Durdreiklang ist dieser Grundton eindeutig der Akkordgrundton. Beim Molldreiklang zeigen die Teiltöne auf einen anderen Ton als den, nach dem der Akkord benannt ist. Moll ist akustisch also <em>weniger eindeutig</em>. Diese leichte Mehrdeutigkeit ist ein Teil dessen, was Moll seine Farbe gibt.</p>
+  </section>
+
+  <section class="layer deep" data-title="Ist Moll traurig?">
+    <p>In der westlichen Musik verbindet man Dur oft mit hell und fröhlich, Moll mit dunkel und traurig. Diese Zuordnung ist stark, aber nicht naturgegeben.</p>
+    <ul>
+      <li><strong>Sie wird gelernt.</strong> Untersuchungen mit Kindern deuten darauf hin, dass sie die Zuordnung Dur = fröhlich, Moll = traurig erst im Lauf der Kindheit sicher herstellen. Tempo und Lautstärke erkennen schon jüngere Kinder als Ausdrucksmittel.</li>
+      <li><strong>Andere Faktoren wiegen schwerer.</strong> Ein schnelles, lautes Stück in Moll wirkt energisch oder wild, kaum traurig. Viele Tanzmusiken der Welt stehen in Moll-ähnlichen Tonleitern.</li>
+      <li><strong>Sie hat sich historisch verschoben.</strong> In der Barockzeit wurden Tonarten mit sehr unterschiedlichen Charakteren beschrieben, Moll konnte ernst, zärtlich oder feierlich sein. Die strenge Gleichung Moll = traurig ist eher ein Produkt des 19. Jahrhunderts und der Filmmusik.</li>
+    </ul>
+    <p>Ein Teil der Wirkung ist trotzdem im Klang begründet: Die kleine Terz liegt näher am Grundton, der Akkord wirkt dadurch enger. Und die akustische Mehrdeutigkeit aus der vorigen Vertiefung macht Moll weniger „fest“. Am Ende ist Moll dunkler und unbestimmter als Dur. Ob das traurig klingt, entscheidet der Zusammenhang.</p>
+  </section>
+
+  <!-- 11.3 -->
+  <h2 id="bauen">11.3 Dreiklänge von jedem Ton aus bauen</h2>
+  <p>Mit zwei Schritten baust du jeden Dreiklang richtig:</p>
+  <ol>
+    <li><strong>Buchstaben:</strong> Nimm vom Grundton aus jeden zweiten Stammton. Über d also d–f–a, über e also e–g–h, über b also b–d–f. Damit stimmen Zahlen und Notenbild schon: Es ist immer ein Terzenstapel.</li>
+    <li><strong>Vorzeichen:</strong> Korrigiere Terz und Quinte mit ♯ oder ♭, bis die Intervalle zum gewünschten Typ passen. Der Buchstabe bleibt dabei gleich.</li>
+  </ol>
+  <h4>Beispiel 1: D-Dur</h4>
+  <p>Buchstaben d–f–a. d–f hat drei Halbtöne, für Dur brauchst du vier. Also wird f zu fis. f–a wird dadurch zu fis–a (drei Halbtöne, kleine Terz, passt). d–a ist eine reine Quinte. Ergebnis: <strong>d–fis–a</strong>.</p>
+  <h4>Beispiel 2: Es-Dur</h4>
+  <p>Buchstaben e–g–h, mit dem Grundton es also es–g–h. es–g hat vier Halbtöne, die große Terz passt. es–h wäre aber eine übermäßige Quinte (acht Halbtöne). Also wird h zu b. Ergebnis: <strong>es–g–b</strong>.</p>
+  <h4>Beispiel 3: h-Moll</h4>
+  <p>Buchstaben h–d–f. h–d ist eine kleine Terz, gut für Moll. h–f ist aber eine verminderte Quinte (Kapitel 5: die Ausnahme auf den weißen Tasten). Also wird f zu fis. Ergebnis: <strong>h–d–fis</strong>.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Die Quinte über einem weißen Grundton ist immer weiß, außer über h (fis). Über einem schwarzen Grundton ist sie immer schwarz, außer über b (f). Hast du die Quinte, musst du nur noch die Terz einpassen.</p>
+  </div>
+  <p>Warum schreibt man D-Dur nicht d–ges–a? Auf dem Klavier sind fis und ges dieselbe Taste. d–ges wäre aber eine verminderte Quarte, kein Terzenstapel. Im Notenbild stünde ges eine Stufe zu hoch und der Akkord sähe nicht mehr wie ein Dreiklang aus. Die richtige Schreibweise ergibt sich immer aus den Buchstaben (Kapitel 5, Abschnitt 5.7).</p>
+  <div class="abc" data-bpm="60" data-caption="Dur-Dreiklänge mit Vorzeichen: D, Es, E, As, H">
+    X:1
+    M:none
+    L:1
+    K:C
+    "^D" [D^FA] | "^Es" [_EG_B] | "^E" [E^GB] | "^As" [_Ac_e] | "^H" [B^d^f] |]
+  </div>
+
+  <section class="layer piano" data-title="Die zwölf Dur- und Molldreiklänge nach Tastenfarben">
+    <p>Beim Spielen hilft es, Dreiklänge als <strong>Farbmuster</strong> zu kennen (w = weiße Taste, s = schwarze Taste, von unten nach oben). Die Hand merkt sich die Form schneller als den Notennamen.</p>
+    <div class="table-scroll">
+      <table class="keycolors">
+        <thead><tr><th>Muster</th><th>Dur</th><th>Moll</th></tr></thead>
+        <tbody>
+          <tr><td>w – w – w</td><td>C, F, G</td><td>d, e, a</td></tr>
+          <tr><td>w – s – w</td><td>D, E, A</td><td>c, f, g</td></tr>
+          <tr><td>s – w – s</td><td>Des, Es, As</td><td>cis, fis, gis</td></tr>
+          <tr><td>s – s – s</td><td>Fis (= Ges)</td><td>es (= dis)</td></tr>
+          <tr><td>w – s – s</td><td>H</td><td>–</td></tr>
+          <tr><td>w – w – s</td><td>–</td><td>h</td></tr>
+          <tr><td>s – w – w</td><td>B</td><td>–</td></tr>
+          <tr><td>s – s – w</td><td>–</td><td>b</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Fällt dir etwas auf? Die Dur-Dreiklänge mit dem Muster w–w–w (C, F, G) werden in Moll zu w–s–w, und die Dur-Dreiklänge mit w–s–w (D, E, A) werden in Moll zu w–w–w. Beim Wechsel von Dur nach Moll wandert nur der mittlere Finger um einen Halbton nach links.</p>
+    <p><strong>Griff:</strong> Rechte Hand 1–3–5 (Daumen, Mittelfinger, kleiner Finger), linke Hand 5–3–1. Halte die Hand rund, als würdest du einen kleinen Ball umfassen. Der dritte Finger darf nicht einknicken. Spielst du über dem Akkord eine Melodie, lass den obersten Ton etwas lauter klingen als die anderen beiden.</p>
+  </section>
+
+  <!-- 11.4 -->
+  <h2 id="notenbild">11.4 Dreiklänge im Notenbild</h2>
+  <p>Ein Dreiklang in Grundstellung sieht im Notensystem aus wie ein kleiner Schneemann: drei Noten auf drei aufeinanderfolgenden Linien oder in drei aufeinanderfolgenden Zwischenräumen (Kapitel 5: Terzen sind Linie–Linie oder Zwischenraum–Zwischenraum). Diese Form erkennst du sofort, ohne die Noten einzeln zu lesen.</p>
+  <p>Den Typ liest du dann in zwei Schritten ab: Der unterste Ton nennt den Grundton, die Vorzeichen (in der Tonart oder vor den Noten) entscheiden über Dur, Moll, vermindert oder übermäßig.</p>
+  <div class="abc" data-bpm="60" data-caption="Schneemänner auf Linien und in Zwischenräumen">
+    X:1
+    M:none
+    L:1
+    K:C
+    "^Linien" [EGB] | [GBd] | "^Zwischenräume" [FAc] | [Ace] |]
+  </div>
+  <p>Liegen die Töne eines Akkords nicht als Schneemann übereinander, ist der Akkord umgekehrt oder anders verteilt. Wie man auch solche Akkorde schnell erkennt, zeigt Kapitel 12.</p>
+
+  <!-- 11.5 -->
+  <h2 id="charakter">11.5 Der Klang der vier Typen</h2>
+  <p>Jeder Dreiklangstyp hat einen eigenen Charakter. Hör sie dir mehrmals hintereinander an:</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="60 64 67" data-mode="harm">▶ Dur: hell, stabil</button>
+    <button class="btn" type="button" data-play="60 63 67" data-mode="harm">▶ Moll: dunkler, weicher</button>
+    <button class="btn" type="button" data-play="60 63 66" data-mode="harm">▶ vermindert: eng, gespannt</button>
+    <button class="btn" type="button" data-play="60 64 68" data-mode="harm">▶ übermäßig: schwebend, offen</button>
+  </div>
+  <ul>
+    <li><strong>Dur</strong> und <strong>Moll</strong> sind konsonant. Sie können ein Stück beginnen und beenden. Fast alle Akkorde eines Popsongs sind Dur- und Molldreiklänge.</li>
+    <li>Der <strong>verminderte</strong> Dreiklang enthält einen Tritonus (c–ges). Er klingt unruhig und will weiter. Du findest ihn als vii° in jeder Durtonart (Kapitel 13).</li>
+    <li>Der <strong>übermäßige</strong> Dreiklang klingt, als wäre er noch nicht fertig. Er kommt seltener vor, oft als Durchgang zwischen zwei Akkorden, etwa wenn die Quinte eines Durakkords chromatisch nach oben steigt (C → C+ → Am/C).</li>
+  </ul>
+  <div class="btn-row">
+    <button class="btn" type="button" id="aug-demo">▶ Beispiel: C – C+ – C6 – C7, die Quinte steigt</button>
+  </div>
+
+  <section class="layer deep" data-title="Vermindert und übermäßig: die symmetrischen Dreiklänge">
+    <p>Dur und Moll bestehen aus zwei verschiedenen Terzen. Vermindert und übermäßig bestehen aus zwei <em>gleichen</em> Terzen. Das hat Folgen.</p>
+    <p><strong>Übermäßig.</strong> Zwei große Terzen ergeben 8 Halbtöne. Bis zur Oktave fehlen noch 4, also genau eine weitere große Terz. Der übermäßige Dreiklang teilt die Oktave in <em>drei gleiche Teile</em>: c–e–gis–(his = c). Deshalb besteht C+ aus denselben Tasten wie E+ und Gis+ (bzw. As+). Auf dem Klavier gibt es nur <strong>vier</strong> verschiedene übermäßige Dreiklänge, denn 12 : 3 = 4.</p>
+    <div class="kb" data-from="60" data-to="84" data-labels="white" data-marks="60 64 68 72:c2 76:c2 80:c2" aria-label="Der übermäßige Dreiklang teilt die Oktave in drei gleiche große Terzen"></div>
+    <p class="muted">c'–e'–gis'–c''–e''–gis'': lauter große Terzen. Welcher Ton der Grundton ist, kann das Ohr nicht entscheiden.</p>
+    <p>Diese Symmetrie erklärt den schwebenden Klang. Ein Akkord mit gleichen Abständen hat keinen ausgezeichneten Ton, dem Ohr fehlt der Grundton. Erst der Zusammenhang und die Schreibweise legen fest, welcher Ton gemeint ist.</p>
+    <p><strong>Vermindert.</strong> Zwei kleine Terzen ergeben 6 Halbtöne, den Tritonus. Der verminderte Dreiklang ist noch nicht ganz symmetrisch, denn bis zur Oktave fehlen noch 6 Halbtöne. Fügt man eine weitere kleine Terz hinzu, entsteht der vollständig symmetrische verminderte Septakkord (Kapitel 15), der die Oktave in vier gleiche Teile teilt.</p>
+  </section>
+
+  <!-- 11.6 -->
+  <h2 id="hoeren">11.6 Dreiklänge hören</h2>
+  <p>Den Unterschied zwischen Dur und Moll hören die meisten Menschen schnell. Schwieriger wird es, wenn vermindert und übermäßig dazukommen. Zwei Hörhilfen:</p>
+  <ul>
+    <li>Vermindert klingt wie Moll, nur enger und gespannter. Achte darauf, ob der Akkord „ruht“ oder „weiterwill“.</li>
+    <li>Übermäßig klingt wie Dur, nur mit einem hellen, scharfen Rand oben. Viele Hörer beschreiben ihn als „verzogen“ oder „wie aus einem Traum“.</li>
+  </ul>
+  <p>Fang im Trainer mit Dur und Moll an und nimm die anderen Typen erst dazu, wenn du zehn Aufgaben in Folge richtig hast. Der Modus „gebrochen“ spielt die Töne nacheinander und dann zusammen. Das ist am Anfang leichter.</p>
+
+  <div class="triad-trainer"></div>
+
+  <section class="layer piano" data-title="Ein Finger macht den Unterschied">
+    <p>Alle vier Dreiklangstypen auf demselben Grundton unterscheiden sich nur in einem oder zwei Tönen. Du kannst sie deshalb ineinander überführen, ohne die Hand umzusetzen:</p>
+    <ul>
+      <li><strong>Dur → Moll:</strong> Der dritte Finger (Terz) geht einen Halbton nach unten.</li>
+      <li><strong>Moll → vermindert:</strong> Zusätzlich geht der fünfte Finger (Quinte) einen Halbton nach unten.</li>
+      <li><strong>Dur → übermäßig:</strong> Der fünfte Finger geht einen Halbton nach oben.</li>
+    </ul>
+    <div class="btn-row">
+      <button class="btn" type="button" id="morph-demo">▶ C – Cm – C° – Cm – C – C+ – C</button>
+    </div>
+    <p><strong>Tägliche Übung (fünf Minuten):</strong> Spiel auf c' die Folge Dur – Moll – vermindert – Moll – Dur – übermäßig – Dur. Sag beim Spielen laut den Typ. Dann rück den ganzen Ablauf einen Halbton höher auf cis', dann d' und so weiter, bis du einmal durch alle zwölf Töne bist. Schreib die Akkorde dabei nicht auf, sondern lass die Hand die Formen lernen.</p>
+    <p><strong>Linke Hand:</strong> Dieselbe Übung mit 5–3–1 eine Oktave tiefer. In der Begleitung spielt die linke Hand oft nur Grundton und Quinte, also den Rahmen ohne Terz. Dieser „leere“ Klang ist weder Dur noch Moll. Die rechte Hand oder die Melodie entscheidet dann über das Geschlecht.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Ein Dreiklang besteht aus Grundton, Terz und Quinte, also zwei übereinandergeschichteten Terzen.</li>
+    <li><strong>Dur</strong> = große + kleine Terz, <strong>Moll</strong> = kleine + große Terz, beide mit reiner Quinte. <strong>Vermindert</strong> = zwei kleine Terzen, <strong>übermäßig</strong> = zwei große Terzen.</li>
+    <li>Bauen: erst jeden zweiten Buchstaben nehmen, dann Terz und Quinte mit Vorzeichen anpassen.</li>
+    <li>Im Notenbild ist ein Dreiklang in Grundstellung ein „Schneemann“ auf Linien oder in Zwischenräumen.</li>
+    <li>Der Durdreiklang entspricht den Teiltönen 4:5:6. Moll ist akustisch weniger eindeutig, seine Wirkung hängt stark vom Zusammenhang ab.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">11.1</span><div><span class="kind">Theorie</span>Bestimme Grundton und Typ: d–f–a, e–gis–h, h–d–f, es–g–h, f–as–c, b–d–f.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>d-Moll (kleine + große Terz). E-Dur (große + kleine Terz). h vermindert (zwei kleine Terzen, h–f ist eine verminderte Quinte). Es übermäßig (zwei große Terzen: es–g und g–h). f-Moll. B-Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">11.2</span><div><span class="kind">Theorie</span>Baue diese Dur-Dreiklänge und schreib sie richtig: A, E, Es, H, As, Fis.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>A: a–cis–e. E: e–gis–h. Es: es–g–b. H: h–dis–fis. As: as–c–es. Fis: fis–ais–cis. Bei Fis ist ais richtig und nicht b, denn die Terz über f(is) muss ein a-Name sein.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">11.3</span><div><span class="kind">Theorie</span>Baue diese Moll-Dreiklänge: g, h, cis, f, b.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>g-Moll: g–b–d. h-Moll: h–d–fis. cis-Moll: cis–e–gis. f-Moll: f–as–c. b-Moll: b–des–f. In jedem Fall ist die Terz klein (drei Halbtöne) und die Quinte rein (sieben Halbtöne).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">11.4</span><div><span class="kind">Theorie</span>Welche Töne musst du ändern, um aus C-Dur (c–e–g) einen Molldreiklang, einen verminderten und einen übermäßigen Dreiklang auf c zu machen?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Moll: e → es. Vermindert: e → es und g → ges. Übermäßig: g → gis. Der Grundton bleibt immer stehen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">11.5</span><div><span class="kind">Notenlesen</span>Bestimme Grundton und Typ der sechs Dreiklänge.</div></div>
+      <div class="abc" data-bpm="50">
+        X:1
+        M:none
+        L:1
+        K:C
+        "^1"[DFA] | "^2"[E^GB] | "^3"[_Bdf] | "^4"[^FAc] | "^5"[_Ac_e] | "^6"[C_E_G] |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: d-Moll (d'–f'–a'). 2: E-Dur (e'–gis'–h'). 3: B-Dur (b'–d''–f''). 4: fis vermindert (fis'–a'–c''). 5: As-Dur (as'–c''–es''). 6: c vermindert (c'–es'–ges').</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">11.6</span><div><span class="kind">Theorie</span>Warum ist d–ges–a falsch geschrieben, obwohl es auf dem Klavier wie D-Dur klingt?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>d–ges ist eine verminderte Quarte, kein Terzabstand. Ein Dreiklang muss aus Terzen bestehen, also aus den Buchstaben d–f–a. Die große Terz über d heißt deshalb fis. Im Notenbild sieht nur d–fis–a wie ein Schneemann aus.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">11.7</span><div><span class="kind">Am Klavier</span>Finde alle Dur- und alle Moll-Dreiklänge, die nur aus weißen Tasten bestehen. Erkläre mit Kapitel 5, warum es genau diese sind.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Dur: C, F, G. Moll: d, e, a. Für Dur braucht man eine große Terz auf weißen Tasten, die gibt es nur auf c, f und g (c–e, f–a, g–h). Alle drei haben eine weiße reine Quinte. Für Moll braucht man eine kleine weiße Terz (d–f, e–g, a–c, h–d). Bei h fällt die Quinte weg, weil h–f vermindert ist. Übrig bleiben d, e und a.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">11.8</span><div><span class="kind">Am Klavier</span>Spiel die Folge Dur – Moll – vermindert – Moll – Dur – übermäßig – Dur auf c', d', e' und f'. Achte darauf, dass nur die Finger 3 und 5 wandern.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Auf d': d–fis–a, d–f–a, d–f–as, d–f–a, d–fis–a, d–fis–ais, d–fis–a. Auf e': e–gis–h, e–g–h, e–g–b, e–g–h, e–gis–h, e–gis–his, e–gis–h. Auf f': f–a–c, f–as–c, f–as–ces, f–as–c, f–a–c, f–a–cis, f–a–c. Die Schreibweisen ais, his und ces folgen aus der Buchstabenregel.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">11.9</span><div><span class="kind">Gehör</span>Üb mit dem Trainer oben, bis du im Modus „Dur und Moll“ zehn Aufgaben hintereinander richtig hast. Wechsle dann zu „Alle vier“.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Sing nach dem Hören den mittleren Ton. Ist er „hell“, ist es Dur oder übermäßig, ist er „dunkel“, Moll oder vermindert. Dann achte auf den oberen Rand: Ruht der Klang, war die Quinte rein.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">11.10</span><div><span class="kind">Vertiefung</span>Warum gibt es auf dem Klavier zwölf verschiedene Dur-Dreiklänge, aber nur vier verschiedene übermäßige Dreiklänge?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Ein Dur-Dreiklang ist asymmetrisch (4 + 3 Halbtöne). Verschiebt man ihn um einen Halbton, entstehen erst nach zwölf Schritten wieder dieselben Tasten. Der übermäßige Dreiklang teilt die Oktave in drei gleiche Teile von je 4 Halbtönen. Verschiebt man ihn um 4 Halbtöne, liegen wieder dieselben Tasten unter den Fingern. Es gibt also nur 12 : 3 = 4 verschiedene Tastenkombinationen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">11.11</span><div><span class="kind">Vertiefung</span>Berechne die Frequenzen der Teiltöne 4, 5 und 6 des großen C (65,41 Hz) und vergleiche sie mit den Klaviertönen c' = 261,63 Hz, e' = 329,63 Hz und g' = 392,00 Hz. Welcher Ton weicht am stärksten ab?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>4 × 65,41 ≈ 261,6 Hz, 5 × 65,41 ≈ 327,0 Hz, 6 × 65,41 ≈ 392,4 Hz. Das c' stimmt überein. Das Klavier-e' liegt etwa 2,6 Hz höher als der Teilton, das sind rund 14 Cent. Das g' liegt nur 0,4 Hz tiefer, rund 2 Cent. Die Terz weicht also am stärksten ab, genau wie in der Tabelle in Abschnitt 5.10.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(11);
+
+  document.getElementById("aug-demo").addEventListener("click", () => {
+    Book.audio.seq([[[48, 60, 64, 67], 2], [[48, 60, 64, 68], 2], [[48, 60, 64, 69], 2], [[48, 60, 64, 70], 2]], 80);
+  });
+  document.getElementById("morph-demo").addEventListener("click", () => {
+    Book.audio.seq([[[60, 64, 67], 1], [[60, 63, 67], 1], [[60, 63, 66], 1], [[60, 63, 67], 1], [[60, 64, 67], 1], [[60, 64, 68], 1], [[60, 64, 67], 2]], 76);
+  });
+
+  // Gehörtrainer: Dreiklänge
+  (function () {
+    const TYPES = [
+      { id: "dur", label: "Dur", t: 4, f: 7 },
+      { id: "moll", label: "Moll", t: 3, f: 7 },
+      { id: "verm", label: "vermindert", t: 3, f: 6 },
+      { id: "ueb", label: "übermäßig", t: 4, f: 8 }
+    ];
+    const ROOTS = [53, 55, 57, 59, 60, 62, 64, 65];
+    document.querySelectorAll(".triad-trainer").forEach((el) => Book.earTrainer(el, {
+      title: "Gehörtrainer: Dreiklänge",
+      intro: "Du hörst einen Dreiklang auf wechselndem Grundton. Bestimme den Typ.",
+      items: TYPES,
+      presets: [
+        { label: "Dur und Moll", ids: ["dur", "moll"] },
+        { label: "Dur, Moll, vermindert", ids: ["dur", "moll", "verm"] },
+        { label: "Alle vier", ids: ["dur", "moll", "verm", "ueb"] }
+      ],
+      modes: [{ id: "harm", label: "zusammen" }, { id: "arp", label: "gebrochen" }, { id: "mix", label: "gemischt" }],
+      from: 48, to: 84,
+      build(it, md) {
+        const r = ROOTS[Math.floor(Math.random() * ROOTS.length)];
+        const ms = [r, r + it.t, r + it.f];
+        const names = [Book.name(r), Book.spellUp(r, 3, it.t), Book.spellUp(r, 5, it.f)];
+        const play = md === "arp"
+          ? () => { ms.forEach((m, i) => Book.audio.note(m, i * 0.45, 0.5)); Book.audio.chord(ms, 1.5, 1.6); }
+          : () => Book.audio.chord(ms, 0, 1.8);
+        return { play, marks: [r, { m: ms[1], cls: "c2" }, { m: ms[2], cls: "c3" }], answer: `${it.label} (${names.join("–")})` };
+      }
+    }));
+  })();
+</script>
+</body>
+</html>

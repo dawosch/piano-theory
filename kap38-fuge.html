@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Imitation, Kanon und Fuge · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil V · Kapitel 38</div>
+    <h1>Imitation, Kanon und Fuge</h1>
+    <p class="lede">Bisher hatte jede Stimme ihre eigene Melodie. In der Imitation greift eine Stimme auf, was eine andere vorgemacht hat. Daraus entstehen der Kanon und die Fuge, die anspruchsvollste Form des Kontrapunkts. Dieses Kapitel zeigt, wie eine Fuge gebaut ist, damit du sie hören, lesen und am Klavier üben kannst.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Imitation, Kanon und Fuge unterscheiden,</li>
+      <li>die Teile einer Fugenexposition benennen: Thema, Antwort, Kontrasubjekt,</li>
+      <li>reale und tonale Antwort unterscheiden und begründen,</li>
+      <li>Zwischenspiel, Engführung und Themenveränderungen erkennen,</li>
+      <li>eine Fuge am Klavier stimmenweise erarbeiten.</li>
+    </ul>
+  </div>
+
+  <!-- 38.1 -->
+  <h2 id="imitation">38.1 Imitation</h2>
+  <p><dfn id="g-imitation">Imitation</dfn> heißt: Eine Stimme wiederholt eine Melodie, die eine andere Stimme kurz vorher gespielt hat, auf derselben oder einer anderen Tonhöhe. Zwei Angaben beschreiben eine Imitation:</p>
+  <ul>
+    <li><strong>der zeitliche Abstand:</strong> Nach wie vielen Schlägen oder Takten setzt die zweite Stimme ein?</li>
+    <li><strong>das Intervall:</strong> Imitiert sie auf derselben Tonhöhe (in der Prime oder Oktave), eine Quinte höher, eine Quarte tiefer und so weiter?</li>
+  </ul>
+  <p>Imitation gibt einem mehrstimmigen Satz Zusammenhalt. Die Stimmen sind selbstständig, aber sie sprechen über dasselbe Material. Das Ohr erkennt die Melodie in der zweiten Stimme wieder und kann so mehrere Linien leichter verfolgen.</p>
+
+  <!-- 38.2 -->
+  <h2 id="kanon">38.2 Der Kanon</h2>
+  <p>Wird eine Melodie von Anfang bis Ende streng nachgeahmt, entsteht ein <dfn id="g-kanon">Kanon</dfn>. Kann man ihn beliebig oft von vorn beginnen, heißt er <strong>Rundkanon</strong> oder Zirkelkanon. Das bekannteste Beispiel ist „Bruder Jakob“:</p>
+  <div class="abc" data-bpm="110" data-caption="„Bruder Jakob“ als zweistimmiger Kanon: Die zweite Stimme setzt zwei Takte später eine Oktave tiefer ein.">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    %%score {V1 V2}
+    V:V1 clef=treble
+    V:V2 clef=bass
+    [V:V1] C D E C | C D E C | E F G2 | E F G2 |
+    [V:V2] z4 | z4 | C, D, E, C, | C, D, E, C, |
+    [V:V1] G/A/G/F/ E C | G/A/G/F/ E C | C G, C2 | C G, C2 |]
+    [V:V2] E, F, G,2 | E, F, G,2 | G,/A,/G,/F,/ E, C, | G,/A,/G,/F,/ E, C, |]
+  </div>
+  <p>Dass das funktioniert, ist kein Zufall. Jeder Zweitakter der Melodie umspielt den C-Dur-Dreiklang: c–e mit dem Durchgang d, e–g mit dem Durchgang f, g–e–c mit Wechselnoten, c–g. Weil alle Abschnitte zur selben Harmonie passen, klingen sie in jeder Kombination zusammen. Die Reibungen, die entstehen, sind Durchgänge und Wechselnoten auf leichten Zeiten (Kapitel 35).</p>
+  <p>Kanons gibt es auf jedem Niveau. Johann Pachelbels berühmter Kanon in D ist ein strenger Kanon dreier Violinen über einem ständig wiederholten Bass. In Bachs Goldberg-Variationen ist jede dritte Variation ein Kanon, und das Imitationsintervall wächst dabei von der Prime bis zur None.</p>
+
+  <section class="layer deep" data-title="Woher das Wort „Fuge“ kommt">
+    <p><em>Fuga</em> ist lateinisch und italienisch für „Flucht“. Die Stimmen scheinen voreinander zu fliehen oder einander nachzujagen. Im 14. und 15. Jahrhundert bezeichnete <em>fuga</em> genau das, was wir heute Kanon nennen: eine streng nachahmende Stimme. Auch eine italienische Gattung des 14. Jahrhunderts, die <em>Caccia</em> („Jagd“), bestand aus Kanons, oft mit Texten über Jagdszenen.</p>
+    <p>Das Wort <em>Kanon</em> bedeutet im Griechischen „Regel“ oder „Richtschnur“. Ursprünglich war damit die Anweisung gemeint, wie aus einer notierten Stimme die weiteren abzuleiten sind, etwa „die zweite Stimme beginnt zwei Takte später eine Oktave tiefer“. Später ging der Name von der Anweisung auf die Komposition über, und <em>Fuge</em> wurde zum Namen für die freiere Form, um die es im Rest dieses Kapitels geht.</p>
+  </section>
+
+  <section class="layer piano" data-title="Einen Kanon allein spielen">
+    <p>Ein zweistimmiger Kanon ist eine ideale Übung für die Unabhängigkeit der Hände, weil beide Hände dasselbe spielen, nur versetzt.</p>
+    <ol>
+      <li>Spiel die Melodie von „Bruder Jakob“ zuerst mit der rechten Hand, dann mit der linken Hand eine Oktave tiefer. Rechts liegt die Hand in Fünf-Finger-Lage auf c'–g' (c' mit 1, g' mit 5). Für den letzten Abschnitt (c' g c') nimmst du c' mit dem 4. Finger und das tiefe g mit dem Daumen. Links gilt dasselbe gespiegelt: c mit 5, g mit 1, im letzten Abschnitt c mit 2 und G mit 5.</li>
+      <li>Spiel dann den Kanon wie notiert: Die rechte Hand beginnt, die linke setzt nach zwei Takten ein.</li>
+      <li>Zähl laut mit. Die Schwierigkeit liegt darin, dass die Hände gleichzeitig verschiedene Abschnitte spielen, etwa rechts die Achtel, während links die Viertel kommen.</li>
+    </ol>
+    <p>Wenn das sicher geht, versuch den Einsatz der linken Hand nach nur einem Takt oder in einer anderen Tonart.</p>
+  </section>
+
+  <!-- 38.3 -->
+  <h2 id="fuge">38.3 Was eine Fuge ist</h2>
+  <p>Eine <dfn id="g-fuge">Fuge</dfn> ist ein mehrstimmiges Stück, das aus einem einzigen kurzen Thema entwickelt wird. Das Thema wandert durch alle Stimmen, mal in der Grundtonart, mal in anderen Tonarten, mal verändert. Dazwischen stehen freiere Abschnitte. Anders als im Kanon ahmen die Stimmen nur das Thema nach, nicht den ganzen Verlauf. Danach gehen sie eigene Wege.</p>
+  <p>Die Fuge ist weniger eine feste Form als ein <em>Verfahren</em>. Es gibt keine zwei Fugen Bachs mit gleichem Bauplan. Gemeinsam sind ihnen aber einige Bausteine:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Begriff</th><th>Bedeutung</th></tr></thead>
+      <tbody>
+        <tr><td><dfn id="g-fugenthema">Thema</dfn> (Subjekt, Dux)</td><td>die Melodie, aus der die Fuge besteht, beim ersten Erklingen in der Grundtonart</td></tr>
+        <tr><td><dfn id="g-comes">Antwort</dfn> (Comes)</td><td>das Thema in der Dominanttonart, meist eine Quinte höher oder eine Quarte tiefer</td></tr>
+        <tr><td><dfn id="g-kontrasubjekt">Kontrasubjekt</dfn></td><td>eine Gegenstimme, die das Thema bei mehreren Einsätzen gleichbleibend begleitet</td></tr>
+        <tr><td><dfn id="g-exposition">Exposition</dfn></td><td>der Anfang, in dem jede Stimme einmal mit Thema oder Antwort einsetzt</td></tr>
+        <tr><td><dfn id="g-zwischenspiel">Zwischenspiel</dfn></td><td>ein Abschnitt ohne vollständiges Thema, oft eine Sequenz aus Themenmotiven</td></tr>
+        <tr><td><dfn id="g-engfuehrung">Engführung</dfn></td><td>Themeneinsätze, die sich überlappen: Die zweite Stimme beginnt, bevor die erste fertig ist</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Die lateinischen Namen <em>Dux</em> („Führer“) und <em>Comes</em> („Gefährte“) beschreiben das Verhältnis gut: Das Thema führt, die Antwort begleitet es in der verwandten Tonart. Im Deutschen nennt man jeden vollständigen Durchgang des Themas durch die Stimmen eine <strong>Durchführung</strong>. Die Exposition ist also die erste Durchführung. Das Wort hat in der Sonate (Kapitel 41) eine andere Bedeutung.</p>
+
+  <!-- 38.4 -->
+  <h2 id="exposition">38.4 Die Exposition</h2>
+  <p>So beginnt eine Fuge: Eine Stimme stellt das Thema allein vor. Dann setzt eine zweite Stimme mit der Antwort ein, während die erste mit einer Gegenstimme weitermacht. Bei drei oder vier Stimmen folgen weitere Einsätze, abwechselnd Thema und Antwort. Die Reihenfolge der Stimmen ist frei.</p>
+  <p>Hier ist eine kleine zweistimmige Exposition mit einem eigens für dieses Buch geschriebenen Thema:</p>
+  <div class="abc" data-bpm="76" data-caption="Takt 1–2: Thema (Dux) in C-Dur. Takt 3–4: Antwort (Comes) in G-Dur in der Unterstimme, dazu das Kontrasubjekt oben.">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    %%score {V1 V2}
+    V:V1 clef=treble
+    V:V2 clef=bass
+    [V:V1] "^Thema"G2 c2 B c d e | f e d c B2 c2 | "^Kontrasubjekt"e4 d2 c2 | e2 c2 A2 B2 |]
+    [V:V2] z8 | z8 | "^Antwort"C2 G2 ^F G A B | c B A G ^F2 G2 |]
+  </div>
+  <p>Achte auf drei Dinge:</p>
+  <ul>
+    <li>Die Antwort steht in G-Dur, der Dominanttonart. Das fis ist das Kennzeichen von G-Dur.</li>
+    <li>Die Antwort ist hier in die Unterstimme gelegt. Weil das Klavier keine getrennten Sänger hat, schreibt man die Unterstimme oft im Bassschlüssel, auch wenn sie wie hier im mittleren Bereich liegt.</li>
+    <li>Das Kontrasubjekt bewegt sich in längeren Notenwerten als das Thema. Wenn zwei Stimmen rhythmisch unterschiedlich sind, hört man sie leichter auseinander (Abschnitt 33.7).</li>
+  </ul>
+
+  <!-- 38.5 -->
+  <h2 id="antwort">38.5 Reale und tonale Antwort</h2>
+  <p>Die einfachste Antwort ist die genaue Transposition des Themas eine Quinte höher. Sie heißt <dfn id="g-reale-antwort">reale Antwort</dfn>. Häufig wird die Antwort aber an einer oder zwei Stellen leicht verändert. Dann spricht man von einer <dfn id="g-tonale-antwort">tonalen Antwort</dfn>. Das ist vor allem dann nötig, wenn das Thema mit dem Ton der Dominante beginnt, wie unser Thema mit g.</p>
+  <div class="abc" data-bpm="90" data-caption="Das Thema, darunter die reale Antwort (beginnt mit d) und die tonale Antwort (beginnt mit c).">
+    X:1
+    M:4/4
+    L:1/8
+    K:C
+    "^Thema"G2 c2 B c d e | f e d c B2 c2 || "^real"D2 G2 ^F G A B | c B A G ^F2 G2 || "^tonal"C2 G2 ^F G A B | c B A G ^F2 G2 |]
+  </div>
+  <p>Das Thema beginnt mit dem Schritt g → c, also Dominante → Tonika. Die reale Antwort beginnt mit d → g. Das d ist in C-Dur die Quinte der Dominante und lenkt das Ohr gleich zu Beginn weit weg von der Grundtonart. Die tonale Antwort beginnt stattdessen mit c → g, Tonika → Dominante. Danach verläuft sie wie die reale Antwort.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Bei der tonalen Antwort wird am Anfang Dominante mit Tonika beantwortet und Tonika mit Dominante. Aus dem Quartsprung g → c im Thema wird der Quintsprung c → g in der Antwort.</p>
+  </div>
+
+  <section class="layer deep" data-title="Warum antwortet die Fuge auf der Quinte, und warum tonal?">
+    <h4>Die Quinte als natürlicher Partner</h4>
+    <p>Die Antwort auf der Quinte hat zwei Wurzeln. Die eine ist harmonisch: Die Dominante ist die nächstverwandte Tonart (Kapitel 7 und 14). Ein Wechsel dorthin bringt Bewegung und Spannung, ohne die Grundtonart aus dem Blick zu verlieren.</p>
+    <p>Die andere Wurzel ist älter und liegt in den Stimmlagen. In den Kirchentonarten (Kapitel 24) unterschied man zu jedem Modus einen höheren und einen tieferen Tonraum, die eine Quarte bzw. Quinte versetzt sind. Sopran und Tenor sangen typischerweise im einen, Alt und Bass im anderen. Eine Melodie, die vom Sopran zum Alt wandert, rückt also ganz natürlich um eine Quinte oder Quarte. Die Fugenantwort setzt diese Praxis fort.</p>
+    <h4>Warum die tonale Anpassung?</h4>
+    <p>Die Exposition einer Fuge soll die Grundtonart festigen, auch wenn die Antwort in die Dominante führt. Der Rahmen dafür ist das Paar Tonika und Dominante: c und g. Eine reale Antwort auf ein Thema, das mit g beginnt, würde mit d beginnen. Das d gehört zum Paar g–d, also zum Rahmen der Dominanttonart. Die Musik würde gleich beim zweiten Einsatz so tun, als sei G-Dur die Grundtonart.</p>
+    <p>Die tonale Antwort tauscht deshalb am Anfang die Rollen: Wo das Thema g hat, steht in der Antwort c. Wo das Thema c hat, steht g. Der Rahmen c–g bleibt erhalten. Erst danach, wenn der Anfang vorbei ist, transponiert die Antwort genau. Der Zuhörer erlebt so einen Einsatz in der Dominante, der dennoch fest in der Grundtonart verankert ist.</p>
+  </section>
+
+  <!-- 38.6 -->
+  <h2 id="verlauf">38.6 Nach der Exposition</h2>
+  <p>Wenn alle Stimmen eingesetzt haben, beginnt der freiere Teil der Fuge. Typische Bausteine sind:</p>
+  <ul>
+    <li><strong>Zwischenspiele:</strong> Kurze Abschnitte ohne vollständiges Thema. Meist werden kleine Motive aus Thema oder Kontrasubjekt in Sequenzen weitergeführt (Kapitel 26). Zwischenspiele führen oft in neue Tonarten.</li>
+    <li><strong>Weitere Durchführungen</strong> des Themas in verwandten Tonarten, etwa der Paralleltonart a-Moll oder der Subdominante F-Dur.</li>
+    <li><strong>Engführung:</strong> Das Thema setzt in einer Stimme ein, bevor es in der vorigen beendet ist. Die Einsätze drängen sich, und die Spannung steigt. Engführungen stehen deshalb gern gegen Ende.</li>
+    <li><strong>Themenveränderungen:</strong> Das Thema kann in <em>Umkehrung</em> erscheinen (jedes Intervall in die Gegenrichtung), in <em>Vergrößerung</em> (Augmentation, doppelte Notenwerte) oder in <em>Verkleinerung</em> (Diminution, halbe Notenwerte).</li>
+    <li><strong>Orgelpunkt:</strong> Ein lang ausgehaltener Basston, meist auf der Dominante oder Tonika, über dem die anderen Stimmen weiterspielen. Er kündigt häufig den Schluss an.</li>
+    <li><strong>Schluss:</strong> Ein letzter Themeneinsatz in der Grundtonart, oft im Bass oder Sopran gut hörbar, dann die Kadenz.</li>
+  </ul>
+  <p>Eine Engführung lässt sich nicht mit jedem Thema bauen. Das Thema muss so gestaltet sein, dass es mit sich selbst konsonant zusammenklingt, wenn es verspätet einsetzt. Komponisten entwerfen Themen deshalb oft gezielt mit Blick auf spätere Engführungen. Bruder Jakob zeigt das Prinzip in der einfachsten Form: Die Melodie passt in jedem Abstand von zwei Takten zu sich selbst.</p>
+
+  <section class="layer deep" data-title="Wie viele Stimmen kann man gleichzeitig hören?">
+    <p>Eine vierstimmige Fuge stellt hohe Anforderungen an das Gehör. Der Musikwissenschaftler David Huron untersuchte 1989, wie gut Hörer die Zahl gleichzeitiger Stimmen in polyphoner Musik einschätzen können. Bei einer, zwei und drei Stimmen gelang das recht zuverlässig. Ab vier Stimmen unterschätzten die Teilnehmer die Zahl zunehmend.</p>
+    <p>Komponisten haben darauf reagiert, auch ohne die Forschung zu kennen. In Bachs Fugen pausieren die Stimmen immer wieder, sodass selten alle gleichzeitig aktiv sind. Ein neuer Themeneinsatz kommt oft nach einer Pause der betreffenden Stimme, damit er als Neuanfang auffällt. Und das Thema ist meist rhythmisch so prägnant, dass man es auch im dichten Satz wiedererkennt.</p>
+    <p>Für dich als Hörer heißt das: Niemand verfolgt alle Stimmen einer Fuge gleichzeitig. Man verfolgt das Thema, und der Rest ergibt einen Klang, in dem das Thema mal hier, mal dort auftaucht. Mit jedem Hören fallen mehr Details auf.</p>
+  </section>
+
+  <!-- 38.7 -->
+  <h2 id="bach">38.7 Eine Bach-Fuge lesen</h2>
+  <p>Der beste Einstieg in echte Fugen ist Johann Sebastian Bachs <em>Wohltemperiertes Klavier</em>, dessen erster Teil 1722 fertig war. Es enthält Präludien und Fugen in allen 24 Dur- und Molltonarten. Die Noten sind gemeinfrei und zum Beispiel in der Online-Bibliothek IMSLP kostenlos zu finden.</p>
+  <ul>
+    <li><strong>Fuge C-Dur (BWV 846):</strong> vierstimmig. Sie gilt als Beispiel einer Fuge, die fast ohne Zwischenspiele auskommt und stattdessen viele Engführungen enthält. Das Thema erscheint dadurch sehr häufig.</li>
+    <li><strong>Fuge c-Moll (BWV 847):</strong> dreistimmig, mit einem rhythmisch prägnanten Thema in Sechzehnteln und deutlichen Zwischenspielen. Sie eignet sich gut, um Thema, Gegenstimmen und Zwischenspiele zu unterscheiden.</li>
+  </ul>
+  <p>So gehst du beim Lesen vor:</p>
+  <ol>
+    <li>Spiel oder sing das Thema, bis du es auswendig kennst.</li>
+    <li>Markier in den Noten jeden Einsatz des Themas mit einer Farbe, jede Antwort mit einer zweiten.</li>
+    <li>Kennzeichne die Abschnitte dazwischen als Zwischenspiele und notier, in welche Tonart sie führen.</li>
+    <li>Hör die Fuge mit den markierten Noten an und folg nur dem Thema.</li>
+  </ol>
+
+  <section class="layer piano" data-title="Eine Fuge am Klavier erarbeiten">
+    <p>Fugen gehören zu den anspruchsvollsten Klavierstücken, weil eine Hand oft zwei Stimmen spielt, die sich unabhängig bewegen. Eine bewährte Reihenfolge beim Üben:</p>
+    <ol>
+      <li><strong>Jede Stimme einzeln</strong>, mit dem Fingersatz, den du später im Zusammenspiel verwendest. Das ist anfangs ungewohnt, weil der Fingersatz einer einzelnen Stimme oft „unbequem“ wirkt. Aber nur so lernt die Hand den richtigen Weg.</li>
+      <li><strong>Stimmen paarweise:</strong> Sopran und Bass, dann Alt und Tenor, dann die Stimmen einer Hand zusammen.</li>
+      <li><strong>Alle Stimmen langsam,</strong> ohne Pedal. Lege die Priorität auf gebundenes Spiel in jeder Stimme. Wo eine Stimme liegen bleibt, während die andere sich bewegt, hilft der stumme Fingerwechsel (Kapitel 37).</li>
+      <li><strong>Thema hörbar machen,</strong> ohne es zu hämmern. Das Thema soll durch etwas mehr Gewicht und klare Artikulation auffallen, die anderen Stimmen bleiben deutlich, aber im Hintergrund.</li>
+    </ol>
+    <p>Als Vorstufe zu Fugen eignen sich Bachs <strong>zweistimmige Inventionen</strong> (BWV 772–786). Sie sind imitatorisch gebaut wie eine Fuge, haben aber nur zwei Stimmen, eine pro Hand. Die erste Invention in C-Dur ist ein klassischer Einstieg. Die dreistimmigen <strong>Sinfonien</strong> (BWV 787–801) sind der nächste Schritt.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Imitation: Eine Stimme wiederholt eine Melodie einer anderen, mit bestimmtem zeitlichem Abstand und Intervall. Der Kanon ist durchgehende, strenge Imitation.</li>
+    <li>Eine Fuge entwickelt sich aus einem Thema. In der Exposition setzen alle Stimmen nacheinander mit Thema (Dux) oder Antwort (Comes) ein.</li>
+    <li>Die Antwort steht in der Dominante. Beginnt das Thema mit dem Dominantton, wird die Antwort tonal angepasst: Tonika und Dominante tauschen am Anfang die Rollen.</li>
+    <li>Nach der Exposition folgen Zwischenspiele, Durchführungen in anderen Tonarten, Engführungen, Themenveränderungen und oft ein Orgelpunkt vor dem Schluss.</li>
+    <li>Am Klavier erarbeitet man Fugen stimmenweise, mit endgültigem Fingersatz, und macht das Thema hörbar, ohne es zu überbetonen.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">38.1</span><div><span class="kind">Theorie</span>Worin unterscheiden sich Kanon und Fuge?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Im Kanon ahmt die zweite Stimme die erste vollständig und streng nach, vom ersten bis zum letzten Ton. In der Fuge wird nur das Thema nachgeahmt. Danach gehen die Stimmen eigene Wege, und es gibt freie Abschnitte (Zwischenspiele). Außerdem steht die Antwort in der Fuge typischerweise in der Dominante und kann tonal angepasst sein.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">38.2</span><div><span class="kind">Theorie</span>Ein Fugenthema in C-Dur lautet c' d' e' f' e' d' c'. Wie lautet die Antwort? Ist eine tonale Anpassung nötig?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die reale Antwort eine Quinte höher lautet g' a' h' c'' h' a' g'. Eine tonale Anpassung ist nicht nötig, weil das Thema nicht mit dem Dominantton beginnt und sich im Tonraum c–f bewegt, ohne das g zu berühren.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">38.3</span><div><span class="kind">Theorie</span>Ein Thema in D-Dur beginnt mit a → d (Dominante → Tonika). Wie beginnt die tonale Antwort, wie beginnt die reale?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Real: e → a (alles eine Quinte höher). Tonal: d → a. Wo das Thema die Dominante a hat, antwortet die tonale Antwort mit der Tonika d. Wo das Thema die Tonika d hat, steht die Dominante a. Aus dem Quartsprung a → d wird der Quintsprung d → a.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">38.4</span><div><span class="kind">Theorie</span>Warum funktioniert „Bruder Jakob“ als Kanon?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Jeder Zweitakter der Melodie umspielt den C-Dur-Dreiklang: c–d–e–c, e–f–g, g–a–g–f–e–c, c–g–c. Auf den betonten Zeiten stehen fast nur Töne von C-Dur, die übrigen Töne sind Durchgänge oder Wechselnoten. Deshalb passen alle Abschnitte über derselben Harmonie zusammen, egal welche zwei (oder vier) gleichzeitig erklingen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">38.5</span><div><span class="kind">Notenlesen</span>Bilde die Umkehrung des ersten Takts unseres Fugenthemas (g' c'' h' c'' d'' e''), beginnend auf g'. Verwende nur Töne von C-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die Intervalle des Originals sind: Quarte aufwärts, Sekunde abwärts, Sekunde aufwärts, Sekunde aufwärts, Sekunde aufwärts. In der Umkehrung gehen alle in die Gegenrichtung: Quarte abwärts, dann Sekunde aufwärts und drei Sekunden abwärts. Ergebnis: g' d' e' d' c' h.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">38.6</span><div><span class="kind">Notenlesen</span>Bestimme im Notenbeispiel der Exposition (38.4) die Zusammenklänge zwischen Kontrasubjekt und Antwort auf den Vierteln von Takt 3. Welche Dissonanzen gibt es, und wie sind sie behandelt?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Auf den Vierteln von Takt 3: e'' über c' (Dezime), e'' über g' (Sexte), d'' über fis' (Sexte), c'' über a' (Terz). Dissonanzen gibt es nur auf leichten Achteln: Das h' in der Unterstimme bildet mit c'' eine Sekunde. Es ist ein Durchgang (a' → h' → c'') und damit nach den Regeln der Kapitel 35 erlaubt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">38.7</span><div><span class="kind">Am Klavier</span>Spiel die Exposition aus 38.4: zuerst die Oberstimme allein (rechts), dann die Unterstimme allein (links), dann beide zusammen.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Fingersatz rechts für das Thema: g' (1), c'' (2), h' (1), c'' (2), d'' (3), e'' (4) | f'' (5), e'' (4), d'' (3), c'' (2), h' (1), c'' (2). Der Daumen wechselt im ersten Takt von g' auf h'. Dieser kleine Lagewechsel fällt auf eine leichte Achtel und stört die Linie nicht. Für das Kontrasubjekt passt e'' (5), d'' (4), c'' (3) | e'' (5), c'' (3), a' (1), h' (2).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">38.8</span><div><span class="kind">Gehör</span>Hör dir die Fuge in C-Dur aus dem ersten Teil des Wohltemperierten Klaviers an (BWV 846). Lerne vorher das Thema aus den Noten. Wie oft erkennst du es beim ersten Hören, und in welcher Stimme?</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Beim ersten Hören erkennen die meisten das Thema in Sopran und Bass, seltener in den Mittelstimmen. Das ist normal (Vertiefung in 38.6). Hör ein zweites Mal mit den Noten, in denen du die Einsätze markiert hast, und achte gezielt auf Alt und Tenor.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">38.9</span><div><span class="kind">Am Klavier</span>Spiel „Bruder Jakob“ als Kanon wie in der Klavier-Box zu 38.2. Lass danach die linke Hand schon nach einem Takt einsetzen. Was ändert sich?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Bei einem Takt Abstand erklingen jeweils der erste und zweite Takt eines Zweitakters zusammen, also zweimal dasselbe Material (c d e c mit c d e c, oder e f g mit e f g). Das klingt eher wie ein Echo. Gleichzeitig entstehen andere Zusammenklänge als beim Zwei-Takt-Abstand. Die Melodie funktioniert weiterhin, weil alle Abschnitte zur selben Harmonie passen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">38.10</span><div><span class="kind">Vertiefung</span>Erkläre, warum eine reale Antwort auf ein Thema, das mit dem Dominantton beginnt, die Grundtonart schwächt.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Ein Thema in C-Dur, das mit g beginnt, wird real mit d beantwortet. Das d bildet mit g das Rahmenpaar der Dominanttonart G-Dur (Tonika g, Dominante d). Der zweite Einsatz stellt sich dadurch so dar, als sei G-Dur die neue Grundtonart, noch bevor C-Dur gefestigt ist. Die tonale Antwort beginnt mit c und hält den Rahmen c–g aufrecht. Erst danach transponiert sie genau.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(38);
+</script>
+</body>
+</html>

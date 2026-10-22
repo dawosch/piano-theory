@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Voicings am Klavier · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .progression { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.8rem 1rem; margin-block: 1.4rem; }
+  .progression .prog-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
+  .progression .chip-btn { font-family: var(--font-display); font-weight: 600; font-size: var(--step--1); border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 999px; padding: 0.2rem 0.7rem; cursor: pointer; }
+  .progression .chip-btn.cur { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+  .progression .cap { font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); margin: 0.3rem 0 0; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil IV · Kapitel 29</div>
+    <h1>Voicings am Klavier</h1>
+    <p class="lede">Ein Akkordsymbol sagt, welche Töne erklingen sollen, aber nicht, wie man sie verteilt. Diese Verteilung heißt Voicing. Sie entscheidet darüber, ob ein Akkord matschig oder klar, schwer oder schwebend klingt. Dieses Kapitel stellt die wichtigsten Voicing-Familien des Jazzpianos vor und zeigt, wie man sie mit minimaler Handbewegung verbindet.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>erklären, warum tiefe Terzen matschig klingen, und Akkorde passend in die Lage setzen,</li>
+      <li>Shell-Voicings, Rootless-Voicings (A und B), Drop-2- und Quartvoicings greifen,</li>
+      <li>eine II–V–I mit Rootless-Voicings fast ohne Handbewegung spielen,</li>
+      <li>für Solo-Klavier, Band und Pop-Begleitung das passende Voicing wählen.</li>
+    </ul>
+  </div>
+
+  <!-- 29.1 -->
+  <h2 id="was">29.1 Was ein Voicing ist</h2>
+  <p>Ein <dfn id="g-voicing">Voicing</dfn> (englisch, etwa „Stimmverteilung“) legt fest, welche Töne eines Akkords gespielt werden, in welcher Oktave sie liegen und welcher Ton oben und unten steht. Derselbe Cmaj7 klingt je nach Voicing völlig verschieden:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Voicing</th><th>Töne</th><th>Klang</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 64 67 71" data-mode="harm"><td>enge Lage, Grundstellung</td><td>c' e' g' h'</td><td>kompakt, schulbuchhaft</td><td>▶</td></tr>
+        <tr class="play-row" data-play="36 40 43 47" data-mode="harm"><td>enge Lage, tief</td><td>C E G H</td><td>matschig, brummig</td><td>▶</td></tr>
+        <tr class="play-row" data-play="36 47 52" data-mode="harm"><td>Shell (1–7–3)</td><td>C h e</td><td>klar, offen</td><td>▶</td></tr>
+        <tr class="play-row" data-play="36 52 55 59 62" data-mode="harm"><td>Bass + Rootless A</td><td>C | e g h d'</td><td>voll, jazzig</td><td>▶</td></tr>
+        <tr class="play-row" data-play="55 60 64 71" data-mode="harm"><td>Drop 2</td><td>g c' e' h'</td><td>weit, wie ein Bläsersatz</td><td>▶</td></tr>
+        <tr class="play-row" data-play="36 43 64 67 71 74" data-mode="harm"><td>zweihändig gespreizt</td><td>C G | e' g' h' d''</td><td>groß, Balladenklang</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Zwei Begriffe brauchst du dafür: Bei der <dfn id="g-enge-lage">engen Lage</dfn> liegen die Akkordtöne so dicht wie möglich, ohne Lücke für einen weiteren Akkordton. Bei der <strong>weiten Lage</strong> sind Lücken offen (Kapitel 12). Jazzpianisten mischen beides und lassen außerdem Töne weg oder fügen Optionstöne hinzu (Kapitel 27).</p>
+
+  <!-- 29.2 -->
+  <h2 id="lage">29.2 Die tiefe Lage: wo Terzen matschig werden</h2>
+  <p>Der zweite Button oben zeigt das Problem: Ein enger Cmaj7 in der großen Oktave brummt und verschwimmt. Terzen und Sekunden klingen im Bass undeutlich, Quinten und Oktaven dagegen kräftig und klar. Daraus folgt eine Faustregel:</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Unterhalb von etwa c (kleine Oktave) nur Oktaven und Quinten, darüber auch Septimen. Terzen erst ab etwa c, Sekunden ab etwa c'. Je tiefer ein Akkord liegt, desto weiter müssen seine Töne auseinanderstehen.</p>
+  </div>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="36 40" data-mode="harm">▶ Terz C–E</button>
+    <button class="btn" type="button" data-play="48 52" data-mode="harm">▶ Terz c–e</button>
+    <button class="btn" type="button" data-play="60 64" data-mode="harm">▶ Terz c'–e'</button>
+    <button class="btn" type="button" data-play="36 43" data-mode="harm">▶ Quinte C–G</button>
+  </div>
+  <p>Deshalb spielt die linke Hand im Jazz selten volle Akkorde in tiefer Lage. Sie spielt entweder einen Grundton (oft mit Septime oder Quinte) oder ein Voicing ohne Grundton in der Mitte der Klaviatur.</p>
+
+  <section class="layer deep" data-title="Warum tiefe Terzen matschig klingen">
+    <p>In Abschnitt 5.10 hast du gesehen, dass zwei Töne rau klingen, wenn ihre Frequenzen nah beieinanderliegen. „Nah“ ist dabei relativ: Das Gehör zerlegt Klänge in Frequenzbänder, die <em>kritischen Bandbreiten</em>. Liegen zwei Töne im selben Band, stören sie sich. Am rauesten klingt es bei etwa einem Viertel der Bandbreite, ab etwa einer ganzen Bandbreite verschwindet die Rauigkeit fast (Plomp und Levelt, 1965).</p>
+    <p>Entscheidend ist, dass diese Bänder im Bass im Verhältnis viel breiter sind als in der Mitte. Eine verbreitete Näherung von Glasberg und Moore (1990) liefert für die Bandbreite (ERB) folgende Werte:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Terz</th><th class="num">Frequenzen</th><th class="num">Abstand</th><th class="num">Bandbreite (ERB)</th><th class="num">Abstand / Band</th></tr></thead>
+        <tbody>
+          <tr><td>C–E</td><td class="num">65,4 / 82,4 Hz</td><td class="num">17,0 Hz</td><td class="num">32,7 Hz</td><td class="num">0,52</td></tr>
+          <tr><td>c–e</td><td class="num">130,8 / 164,8 Hz</td><td class="num">34,0 Hz</td><td class="num">40,7 Hz</td><td class="num">0,84</td></tr>
+          <tr><td>c'–e'</td><td class="num">261,6 / 329,6 Hz</td><td class="num">68,0 Hz</td><td class="num">56,6 Hz</td><td class="num">1,20</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Die Terz c'–e' liegt also bereits außerhalb eines Bandes und klingt glatt. Dieselbe Terz zwei Oktaven tiefer liegt mitten in einem Band und reibt. Dazu kommt, dass auch die Obertöne tiefer Töne dicht beieinanderliegen und sich gegenseitig stören. Die Zahlen sind Näherungen, das Muster ist aber eindeutig: Das Intervall ist dasselbe, die Wahrnehmung nicht.</p>
+    <p>Orchestrierungslehrbücher und Arrangeure kennen dieses Phänomen seit Langem und geben Tabellen mit Untergrenzen für jedes Intervall an. Im amerikanischen Arrangier-Unterricht heißen sie <em>low interval limits</em>. Die Faustregel oben ist eine vereinfachte Fassung davon.</p>
+  </section>
+
+  <!-- 29.3 -->
+  <h2 id="shells">29.3 Shell-Voicings</h2>
+  <p>Das einfachste Jazz-Voicing besteht aus Grundton, Terz und Septime. Diese drei Töne zeigen die Funktion des Akkords vollständig. Weil sie wie eine Hülle wirken, in die man Optionstöne und Melodie füllen kann, heißen sie <dfn id="g-shell-voicing">Shell-Voicings</dfn> (englisch <em>shell</em>, Schale). Sie gehen auf Pianisten des Bebop zurück, besonders auf Bud Powell in den 1940er-Jahren.</p>
+  <p>Es gibt zwei Formen:</p>
+  <ul>
+    <li><strong>1–3–7:</strong> Grundton unten, darüber Terz und Septime. Beispiel Dm7: d–f–c'.</li>
+    <li><strong>1–7–3:</strong> Grundton unten, darüber Septime und Terz. Beispiel G7: G–f–h.</li>
+  </ul>
+  <p>Im Quintfall wechseln die beiden Formen sich ab, und die oberen Töne bewegen sich dann höchstens einen Halbton (Kapitel 28):</p>
+  <div class="progression" data-steps="50 53:c2 60:c3 | 43 53:c3 59:c2 | 48 52:c2 59:c3 | 41 52:c3 57:c2" data-labels="Dm7 (1-3-7)|G7 (1-7-3)|Cmaj7 (1-3-7)|Fmaj7 (1-7-3)" data-from="36" data-to="64" data-bpm="60" data-beats="2" data-caption="Petrol: Terz. Orange: Septime. Die Formen 1–3–7 und 1–7–3 wechseln sich ab."></div>
+  <p>Manchmal reicht noch weniger. Die Zweiklänge 1–7 und 1–3 (Grundton mit Septime oder mit Terz) sind die Grundlage vieler Stride- und Swing-Begleitungen und lassen der rechten Hand viel Raum.</p>
+
+  <section class="layer piano" data-title="Shells greifen und mit Melodie kombinieren">
+    <ul>
+      <li><strong>Fingersatz:</strong> 1–3–7 meist mit 5–3–1 oder 5–2–1, 1–7–3 mit 5–2–1. Der kleine Finger bleibt auf dem Grundton, der Daumen auf dem obersten Ton.</li>
+      <li><strong>Lage:</strong> Der Grundton liegt zwischen etwa E und c. So bleibt die Septime unterhalb von c', und die rechte Hand hat Platz.</li>
+      <li><strong>Legato:</strong> Halte gemeinsame Töne liegen und schieb die anderen Finger nur einen Halbton weiter. Der Bassprung ist der einzige echte Sprung.</li>
+    </ul>
+    <p><strong>Übung:</strong> Spiel mit der linken Hand die Shells aus der Folge oben, je zwei Schläge. Spiel mit der rechten Hand eine Melodie, die du kennst, über einfache Akkorde, etwa ein Volkslied in C. Achte darauf, dass die Melodie oberhalb von c' bleibt, damit sich die Hände nicht in die Quere kommen.</p>
+  </section>
+
+  <!-- 29.4 -->
+  <h2 id="rootless">29.4 Rootless-Voicings</h2>
+  <p>Spielt ein Bassist den Grundton, braucht ihn das Klavier nicht zu verdoppeln. Pianisten lassen ihn deshalb weg und nehmen stattdessen einen Optionston auf. So entsteht ein vierstimmiges <dfn id="g-rootless-voicing">Rootless-Voicing</dfn> („ohne Grundton“) in der Mitte der Klaviatur. Diese Technik prägt den Klang des Jazzklaviers seit Ende der 1950er-Jahre, etwa bei Bill Evans, Wynton Kelly und Red Garland.</p>
+  <p>Es gibt zwei Grundformen, benannt nach dem untersten Ton:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Akkordtyp</th><th>Form A (Terz unten)</th><th>Form B (Septime unten)</th></tr></thead>
+      <tbody>
+        <tr><td>m7 (Dm9)</td><td>3–5–7–9: f a c' e'</td><td>7–9–3–5: c' e' f' a'</td></tr>
+        <tr><td>7 (G13)</td><td>3–13–7–9: h e' f' a'</td><td>7–9–3–13: f a h e'</td></tr>
+        <tr><td>maj7 (Cmaj9)</td><td>3–5–7–9: e g h d'</td><td>7–9–3–5: h d' e' g'</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Bei der Dominante steht statt der Quinte die 13. Die Quinte trägt wenig zur Farbe bei, die 13 macht den Akkord satter.</p>
+  <p>Der Trick liegt in der Verbindung: In einer II–V–I wechseln sich A und B ab. Dann bewegt sich jede Stimme höchstens einen Ganzton.</p>
+  <div class="progression" data-steps="38 53:c2 57:c2 60:c2 64:c2 | 43 53:c2 57:c2 59:c2 64:c2 | 36 52:c2 55:c2 59:c2 62:c2" data-labels="Dm9 (A)|G13 (B)|Cmaj9 (A)" data-from="36" data-to="72" data-bpm="60" data-beats="2" data-caption="Variante 1: A – B – A. Blau: Bass, petrol: Voicing der linken Hand."></div>
+  <div class="progression" data-steps="38 60:c2 64:c2 65:c2 69:c2 | 43 59:c2 64:c2 65:c2 69:c2 | 36 59:c2 62:c2 64:c2 67:c2" data-labels="Dm9 (B)|G13 (A)|Cmaj9 (B)" data-from="36" data-to="72" data-bpm="60" data-beats="2" data-caption="Variante 2: B – A – B. Eine Lage höher, sonst dasselbe Prinzip."></div>
+  <div class="abc" data-bpm="60" data-caption="Variante 1 im Bassschlüssel. Nur zwei Töne bewegen sich pro Wechsel.">
+    X:1
+    M:4/4
+    L:1
+    K:C clef=bass
+    "Dm9"[F,A,CE] | "G13"[F,A,B,E] | "Cmaj9"[E,G,B,D] |]
+  </div>
+  <p>In Moll funktioniert dasselbe mit angepassten Tönen. Eine bewährte Folge für die II–V–i in c-Moll:</p>
+  <div class="progression" data-steps="38 53:c2 56:c2 60:c2 62:c2 | 43 53:c2 56:c2 59:c2 63:c2 | 36 51:c2 55:c2 57:c2 62:c2" data-labels="Dm7♭5|G7♭9♭13|Cm6/9" data-from="36" data-to="72" data-bpm="60" data-beats="2" data-caption="f as c' d' → f as h es' → es g a d'"></div>
+
+  <section class="layer deep" data-title="Warum ein Akkord ohne Grundton trotzdem eindeutig klingt">
+    <p>Spiel f–a–h–e ohne Bass. Viele hören sofort „G-Dominante“, obwohl kein g erklingt. Das hat mehrere Gründe.</p>
+    <p><strong>Der Tritonus legt fest.</strong> Terz und Septime eines Dominantseptakkords bilden einen Tritonus (hier h–f). Ein Tritonus kommt in einer Dur-Tonart nur einmal vor. Das Ohr hört ihn als Signal: „Dominante, Auflösung steht bevor.“ Die übrigen Töne (a und e) passen als 9 und 13 dazu.</p>
+    <p><strong>Der Zusammenhang ergänzt.</strong> Im Ensemble liefert der Bass den Grundton. Allein am Klavier ergänzt das Gehör ihn aus dem Kontext, ähnlich wie es beim Telefon die tiefen Grundtöne einer Stimme „hört“, obwohl die Leitung sie gar nicht überträgt. Dieses Phänomen heißt <em>Residualton</em> oder fehlender Grundton (englisch <em>missing fundamental</em>). Bei Akkorden ist der Mechanismus nicht derselbe, aber das Prinzip ähnlich: Das Gehör sucht nach der einfachsten Erklärung für ein Tonmuster.</p>
+    <p><strong>Die Mehrdeutigkeit ist ein Werkzeug.</strong> Derselbe Tritonus h–f gehört auch zu D♭7 (f ist die Terz, h = ces die Septime). f–a–h–e über dem Basston des klingt als D♭7 mit ♯5 und ♯9. Genau diese Doppeldeutigkeit nutzt die Tritonussubstitution (Kapitel 31). Ohne Grundton bleibt offen, welcher von beiden gemeint ist, und der Bassist kann frei wählen.</p>
+  </section>
+
+  <section class="layer piano" data-title="Rootless-Voicings üben">
+    <ul>
+      <li><strong>Lage:</strong> Der unterste Ton sollte etwa zwischen d und d' liegen. Tiefer wird es matschig (29.2), höher dünn.</li>
+      <li><strong>Fingersatz:</strong> Linke Hand meist 5–3–2–1 oder 5–4–2–1. Bei Sekunden im Griff (etwa e'–f') spielt der Daumen oft zwei Tasten zugleich oder die Finger 2–1.</li>
+      <li><strong>Prinzip:</strong> Beginne die II–V–I mit Form A oder B, je nach Tonart, sodass die Hand in der Mitte bleibt. Danach entscheidet die Stimmführung über die nächste Form.</li>
+    </ul>
+    <p><strong>Übung:</strong> Spiel die II–V–I in C mit Variante 1 (A–B–A). Verschieb das ganze Muster dann einen Ganzton abwärts nach B♭-Dur: Cm9 (es g b d'), F13 (es g a d'), B♭maj9 (d f a c'). Weiter nach A♭-Dur. Wechsle zu Variante 2, sobald die Hand zu tief rutscht.</p>
+  </section>
+
+  <!-- 29.5 -->
+  <h2 id="drop2">29.5 Drop-2-Voicings</h2>
+  <p>Ein <dfn id="g-drop-2">Drop-2-Voicing</dfn> entsteht aus einem Vierklang in enger Lage, indem man den zweithöchsten Ton eine Oktave tiefer legt („fallen lässt“). Der Akkord wird dadurch weiter und klingt wie ein Satz aus vier Bläsern oder Sängern. Die Technik stammt aus dem Arrangieren für Bläsergruppen und der Jazzgitarre.</p>
+  <figure>
+    <div class="kb" data-from="55" data-to="72" data-labels="white" data-marks="60 64 67:c3 71" aria-label="Cmaj7 in enger Lage c' e' g' h', das g' ist markiert"></div>
+    <div class="kb" data-from="55" data-to="72" data-labels="white" data-marks="55:c3 60 64 71" aria-label="Drop 2: g c' e' h'"></div>
+    <figcaption>Oben: enge Lage c'–e'–g'–h'. Unten: Drop 2, das g' (orange) wandert eine Oktave nach unten.</figcaption>
+  </figure>
+  <p>Jede der vier Umkehrungen ergibt ein eigenes Drop-2-Voicing. So kannst du jeden Melodieton als obersten Ton haben:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>enge Lage</th><th>Drop 2</th><th>oberster Ton</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="55 60 64 71" data-mode="harm"><td>c' e' g' h'</td><td>g c' e' h'</td><td>h' (7)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="59 64 67 72" data-mode="harm"><td>e' g' h' c''</td><td>h e' g' c''</td><td>c'' (1)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 67 71 76" data-mode="harm"><td>g' h' c'' e''</td><td>c' g' h' e''</td><td>e'' (3)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="64 71 72 79" data-mode="harm"><td>h' c'' e'' g''</td><td>e' h' c'' g''</td><td>g'' (5)</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Am Klavier teilt man Drop-2-Voicings meist auf: Die linke Hand spielt den tiefsten Ton (eventuell mit Grundton darunter), die rechte Hand die oberen drei. Das ist besonders nützlich für <strong>Akkordmelodien</strong>, bei denen die Melodie oben liegt und jeder Melodieton harmonisiert wird.</p>
+
+  <section class="layer piano" data-title="Drop 2 für Melodie und Akkord in einem">
+    <p>Nimm eine Melodie, deren Töne du kennst, und harmonisiere jeden betonten Melodieton mit einem Drop-2-Voicing, in dem die Melodie oben liegt:</p>
+    <ol>
+      <li>Bestimme den Akkord und welcher Akkordton die Melodie ist (1, 3, 5 oder 7).</li>
+      <li>Wähle die Umkehrung, in der dieser Ton oben liegt (Tabelle oben).</li>
+      <li>Lass den zweithöchsten Ton eine Oktave fallen und spiel ihn mit der linken Hand, die drei oberen mit der rechten.</li>
+    </ol>
+    <p>Ist der Melodieton kein Akkordton, ersetzt man den nächstgelegenen Akkordton durch ihn. Beispiel: Melodie d'' über Cmaj7: statt c'' oben den Ton d'' nehmen, also h e' g' d''. So entsteht automatisch ein Cmaj9.</p>
+  </section>
+
+  <!-- 29.6 -->
+  <h2 id="quarten">29.6 Quartvoicings und das So-What-Voicing</h2>
+  <p>Alle bisherigen Voicings bestehen im Kern aus Terzen. <dfn id="g-quartvoicing">Quartvoicings</dfn> schichten stattdessen Quarten. Sie klingen offen, modern und weniger eindeutig auf Dur oder Moll festgelegt. In der Musik der 1960er-Jahre, besonders bei McCoy Tyner, wurden sie zu einem Markenzeichen.</p>
+  <p>Das berühmteste Beispiel ist das <dfn id="g-so-what-voicing">So-What-Voicing</dfn>, benannt nach Miles Davis’ Stück „So What“ (Album „Kind of Blue“, 1959) mit Bill Evans am Klavier: drei reine Quarten übereinander und darüber eine große Terz. Über D-Dorisch: e–a–d'–g'–h'.</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="38 52 57 62 67 71" data-mode="harm">▶ So-What-Voicing auf e (über D)</button>
+    <button class="btn" type="button" data-play="38 50 55 60 65 69" data-mode="harm">▶ dasselbe auf d</button>
+    <button class="btn" type="button" id="sowhat">▶ Antwortfigur e → d</button>
+  </div>
+  <div class="kb" data-from="48" data-to="72" data-labels="white" data-marks="52 57 62 67 71:c2" data-brackets="52-57:4;57-62:4;62-67:4;67-71:g3" aria-label="So-What-Voicing e, a, d', g', h': drei Quarten und eine große Terz"></div>
+  <p>Das Voicing passt zu jedem Ton der dorischen Tonleiter (Kapitel 24), solange seine Töne in der Tonleiter liegen. Über Dm7 enthält die Form auf e die Töne 9, 5, 1, 11 und 13. Eine Quartschichtung kann damit mehrere Akkorde gleichzeitig andeuten, was sie für modale Stücke ideal macht, in denen ein Akkord lange liegen bleibt.</p>
+
+  <section class="layer deep" data-title="Warum Quarten offen und mehrdeutig klingen">
+    <p><strong>Systemlogik.</strong> Dur und Moll unterscheiden sich durch die Terz. Ein Klang aus reinen Quarten hat keine Terz und lässt diese Frage offen. Außerdem ist ein Quartenstapel gleichmäßig gebaut: Jeder Ton steht im selben Verhältnis zu seinem Nachbarn. Es gibt keinen Ton, der sich als Grundton aufdrängt, wie es beim Terzenstapel der unterste tut.</p>
+    <p><strong>Ein Rückgriff auf die Pentatonik.</strong> Schichtet man fünf Töne im Quartabstand, etwa c–f–b–es–as, erhält man die Töne einer pentatonischen Tonleiter (hier As-Dur-Pentatonik, Kapitel 9). Quartvoicings klingen deshalb verwandt mit pentatonischen Melodien. Beides ist frei von Halbtonreibungen.</p>
+    <p><strong>Geschichte.</strong> Quartenklänge sind älter als der Jazz. Arnold Schönberg eröffnet seine Kammersymphonie op. 9 (1906) mit einem Quartenthema, Paul Hindemith baute Quarten systematisch in seine Harmonielehre ein. Im Jazz wurden sie mit dem modalen Jazz Ende der 1950er-Jahre zum festen Bestandteil. McCoy Tyner prägte sie im Quartett von John Coltrane in den frühen 1960er-Jahren.</p>
+    <p><strong>Akustik.</strong> Die reine Quarte hat das Verhältnis 4:3 und gehört zu den vollkommenen Konsonanzen (Abschnitt 5.10). Ein Quartenstapel ist deshalb rau-arm, aber durch die fehlende Terz auch farbarm. Die große Terz oben im So-What-Voicing bringt genau so viel Farbe zurück, dass der Klang warm wird, ohne seine Offenheit zu verlieren.</p>
+  </section>
+
+  <section class="layer piano" data-title="Ein modaler Vamp mit Quartvoicings">
+    <p>In modalen Stücken liegt ein Akkord oft acht oder sechzehn Takte lang. Statt einen Griff zu wiederholen, bewegt man ein Quartvoicing innerhalb der Tonleiter auf und ab.</p>
+    <ul>
+      <li>Linke Hand: D (oder d–a als Quinte) als Bass.</li>
+      <li>Rechte Hand: das So-What-Voicing auf e (e–a–d'–g'–h'), auf d (d–g–c'–f'–a') oder kleinere Quartgriffe aus drei Tönen, etwa a–d'–g', h–e'–a', c'–f'–h'.</li>
+      <li>Rhythmus: kurze Akzente auf „und“ von 2 und auf 4, dazwischen Pausen.</li>
+    </ul>
+    <p><strong>Übung:</strong> Spiel acht Takte über D-Dorisch, dann rück alles einen Halbton höher nach Es-Dorisch, dann zurück. Diese Form (16 Takte D, 8 Takte Es, 8 Takte D) entspricht dem Formschema von „So What“.</p>
+  </section>
+
+  <!-- 29.7 -->
+  <h2 id="stimmfuehrung">29.7 Stimmführung mit minimaler Bewegung</h2>
+  <p>Gute Voicings sind nicht nur einzeln schön, sie verbinden sich gut. Für das Verbinden gelten drei Regeln, die du in diesem Kapitel schon mehrmals gesehen hast:</p>
+  <ol>
+    <li><strong>Gemeinsame Töne liegen lassen.</strong></li>
+    <li><strong>Die übrigen Töne zum nächstgelegenen Ton</strong> des neuen Akkords bewegen, meist einen Halb- oder Ganzton.</li>
+    <li><strong>Die Lage halten.</strong> Lieber die Form wechseln (A ↔ B, 1–3–7 ↔ 1–7–3) als das ganze Voicing verschieben.</li>
+  </ol>
+  <p>Der Bass darf springen, das Voicing darüber nicht. So entsteht der typische Klang des Jazzklaviers: Die Harmonien wechseln deutlich, aber die Hand scheint kaum zu wandern.</p>
+  <div class="progression" data-steps="38 53:c2 57:c2 60:c2 64:c2 | 43 53:c2 57:c2 59:c2 64:c2 | 36 52:c2 55:c2 59:c2 62:c2 | 45 52:c2 55:c2 58:c2 61:c2 | 38 53:c2 57:c2 60:c2 64:c2 | 43 53:c2 57:c2 59:c2 64:c2 | 36 52:c2 55:c2 59:c2 62:c2" data-labels="Dm9|G13|Cmaj9|A7♭9|Dm9|G13|Cmaj9" data-from="36" data-to="72" data-bpm="80" data-beats="2" data-caption="Mit A7♭9 (e g b cis') als Zwischendominante wird die II–V–I zu einem Turnaround. Die Hand bleibt die ganze Zeit in derselben Lage."></div>
+
+  <section class="layer deep" data-title="Warum minimale Bewegung so gut klingt">
+    <p>Bewegen sich Töne in kleinen Schritten, hört das Ohr sie als zusammenhängende Linien. Springen sie, zerfällt der Klang in einzelne Blöcke. Der Musikwissenschaftler David Huron hat 2016 in „Voice Leading: The Science behind a Musical Art“ gezeigt, dass viele klassische Stimmführungsregeln genau diese Wahrnehmungsprinzipien widerspiegeln: Nähe der Tonhöhen, gleichmäßige Bewegung, Vermeidung von Stimmkreuzungen.</p>
+    <p>Beim Klavier kommt ein praktischer Grund dazu. Liegt die Hand ruhig, kann sie legato spielen und gleichmäßig anschlagen. Jeder Sprung kostet Zeit und erzeugt leicht eine Lücke oder einen Akzent. Gute Stimmführung ist deshalb auch gute Klaviertechnik. Kapitel 33 beschreibt dieselben Prinzipien aus Sicht der klassischen Satzlehre.</p>
+  </section>
+
+  <!-- 29.8 -->
+  <h2 id="wann">29.8 Welches Voicing wann?</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Situation</th><th>linke Hand</th><th>rechte Hand</th></tr></thead>
+      <tbody>
+        <tr><td>Solo-Klavier, Swing</td><td>Shells (1–3–7, 1–7–3) oder 1–7</td><td>Melodie, darunter 1–2 Akkordtöne</td></tr>
+        <tr><td>Mit Bassist, Begleitung</td><td>Rootless A/B</td><td>frei für Solo oder Füllfiguren</td></tr>
+        <tr><td>Ballade, solo</td><td>Grundton + Quinte oder Septime</td><td>Rootless oder Drop 2 mit Melodie oben</td></tr>
+        <tr><td>Akkordmelodie</td><td>Grundton oder unterster Drop-2-Ton</td><td>Drop 2 mit Melodie oben</td></tr>
+        <tr><td>Modales Stück</td><td>Grundton oder Quinte</td><td>Quartvoicings, So-What</td></tr>
+        <tr><td>Pop-Begleitung</td><td>Grundton + Quinte/Oktave</td><td>Dreiklänge, add9, sus in naher Lage</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Es gibt keine falsche Wahl, nur eine mehr oder weniger passende. Ein Rootless-Voicing ohne Bassist klingt allein etwas haltlos. Ein voller Akkord mit Grundton links und rechts zugleich ist im Bandkontext zu dick. Hör auf das Ganze, nicht nur auf deine Hände.</p>
+
+  <section class="layer piano" data-title="Zweihändige Balladen-Voicings">
+    <p>Allein am Klavier klingt eine Ballade am vollsten, wenn beide Hände sich den Akkord teilen:</p>
+    <ul>
+      <li><strong>Linke Hand:</strong> Grundton tief, darüber Quinte oder Septime (C–G oder C–h).</li>
+      <li><strong>Rechte Hand:</strong> Terz, Optionstöne und Melodie oben, etwa e'–g'–d'' für Cmaj9 oder f'–a'–e'' für Dm9.</li>
+    </ul>
+    <div class="progression" data-steps="38 48 65:c2 69:c2 76:c2 | 31 41 69:c2 71:c2 76:c2 | 36 47 64:c2 67:c2 74:c2" data-labels="Dm9|G13|Cmaj9" data-from="29" data-to="79" data-bpm="54" data-beats="3" data-caption="D–c | f' a' e''  →  G–f | a' h' e''  →  C–h | e' g' d''"></div>
+    <p><strong>Übung:</strong> Spiel die Folge langsam mit Haltepedal (Kapitel 45). Wechsle das Pedal genau beim Akkordwechsel. Versuch dann, oben eine kleine Melodie aus den obersten Tönen zu machen: e''–e''–d''.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Ein Voicing bestimmt Auswahl, Lage und Reihenfolge der Akkordtöne. Tief unten nur weite Intervalle, Terzen erst ab etwa c.</li>
+    <li>Shell-Voicings (1–3–7, 1–7–3) zeigen mit drei Tönen die Funktion. Sie wechseln sich im Quintfall ab.</li>
+    <li>Rootless-Voicings A (Terz unten) und B (Septime unten) ersetzen den Grundton durch einen Optionston. A und B wechseln sich in der II–V–I ab.</li>
+    <li>Drop 2 entsteht aus der engen Lage, indem der zweithöchste Ton eine Oktave fällt. Es eignet sich für Akkordmelodien.</li>
+    <li>Quartvoicings und das So-What-Voicing klingen offen und modal.</li>
+    <li>Gute Stimmführung: gemeinsame Töne halten, sonst kleinste Schritte, Lage halten.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">29.1</span><div><span class="kind">Theorie</span>Schreib Shell-Voicings für Fmaj7 (1–3–7), B♭7 (1–7–3), Em7 (1–7–3) und A7 (1–3–7).</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Fmaj7: f–a–e'. B♭7: B–as–d. Em7: E–d–g. A7: A–cis–g. In Em7–A7 bleibt g liegen und d geht zu cis.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">29.2</span><div><span class="kind">Theorie</span>Bilde die II–V–I in F-Dur mit Rootless-Voicings in der Reihenfolge A–B–A.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Gm9 (A): b–d'–f'–a'. C13 (B): b–d'–e'–a'. Fmaj9 (A): a–c'–e'–g'. Bewegung: b bleibt und geht zu a, d' bleibt und geht zu c', f' geht zu e' und bleibt, a' bleibt und geht zu g'.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">29.3</span><div><span class="kind">Theorie</span>Bilde das Drop-2-Voicing aus Fmaj7 in enger Lage f'–a'–c''–e''.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Der zweithöchste Ton ist c''. Er fällt nach c'. Ergebnis: c'–f'–a'–e''. Oben liegt die Septime e''.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">29.4</span><div><span class="kind">Theorie</span>Warum klingt ein Cmaj7 mit C–E–G–H in der großen Oktave schlechter als C–h–e (Shell)?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>In der tiefen Lage sind die kritischen Bandbreiten des Gehörs im Verhältnis breit. Die Terz C–E und die Sekunde zwischen den Obertönen liegen innerhalb eines Bandes und reiben. Die Shell setzt nur den Grundton tief und legt Terz und Septime eine Oktave höher, wo sie klar klingen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">29.5</span><div><span class="kind">Theorie</span>Bilde ein So-What-Voicing auf g. Zu welcher dorischen Tonleiter passt es?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>g–c'–f'–b'–d'' (drei Quarten, dann eine große Terz). Die Töne passen zu F-Dorisch (f g as b c d es). Über Fm7 sind es 9, 5, 1, 11 und 13.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">29.6</span><div><span class="kind">Vertiefung</span>Spiel f–a–h–e' einmal über dem Basston G und einmal über Des. Welche Akkorde entstehen?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Über G: G13 (f = 7, a = 9, h = 3, e = 13). Über Des: f ist die Terz, a die übermäßige Quinte (♯5), h (= ces) die Septime und e die übermäßige None (♯9). Es entsteht ein alterierter D♭7. Beide Akkorde teilen den Tritonus h–f. Kapitel 31 baut darauf die Tritonussubstitution auf.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">29.7</span><div><span class="kind">Am Klavier</span>Spiel die II–V–I mit Rootless-Voicings (A–B–A) in C, B♭ und A♭, jeweils mit dem Grundton tief in der linken Hand und dem Voicing in der rechten.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C: Dm9 f a c' e', G13 f a h e', Cmaj9 e g h d'. B♭: Cm9 es g b d', F13 es g a d', B♭maj9 d f a c'. A♭: B♭m9 des f as c', E♭13 des f g c', A♭maj9 c es g b. Jede Tonart liegt einen Ganzton tiefer, das Griffbild bleibt gleich.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">29.8</span><div><span class="kind">Am Klavier</span>Harmonisiere die Melodietöne h', c'', e'', g'' über Cmaj7 jeweils mit einem Drop-2-Voicing, in dem der Ton oben liegt.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>h': g–c'–e'–h'. c'': h–e'–g'–c''. e'': c'–g'–h'–e''. g'': e'–h'–c''–g''. Die linke Hand übernimmt jeweils den tiefsten Ton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">29.9</span><div><span class="kind">Gehör</span>Hör dir die sechs Cmaj7-Voicings in der Tabelle in 29.1 an. Ordne sie von „am hellsten“ bis „am dunkelsten“.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Die meisten Hörer empfinden die tiefe enge Lage als am dunkelsten und das gespreizte zweihändige Voicing oder Drop 2 als am hellsten und offensten. Entscheidend sind die Lage des höchsten Tons und die Abstände zwischen den Tönen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">29.10</span><div><span class="kind">Vertiefung</span>Die Terz C–E (65,4 / 82,4 Hz) liegt bei etwa 0,5 kritischen Bandbreiten, c'–e' bei 1,2. Wo etwa liegt die Terz zwei Oktaven über c' (c'''–e''')? Schätze ohne Rechnung und begründe.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Deutlich über einer Bandbreite (die Rechnung ergibt etwa 1,8). In der Höhe wächst der Frequenzabstand eines Intervalls proportional mit, die Bandbreite aber langsamer. Hohe Terzen klingen deshalb immer glatt. Die Grenze für matschige Intervalle liegt nur im Bass.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(29);
+
+  // Akkordfolgen mit Klaviatur: data-steps="midi midi:klasse | …", data-labels="A|B"
+  document.querySelectorAll(".progression").forEach((el) => {
+    const steps = el.dataset.steps.split("|").map((s) => s.trim().split(/\s+/).map((t) => {
+      const [m, cls] = t.split(":"); return { m: +m, cls: cls || "" };
+    }));
+    const labels = (el.dataset.labels || "").split("|").map((s) => s.trim());
+    const bpm = +el.dataset.bpm || 60, beats = +el.dataset.beats || 2;
+    el.innerHTML = '<div class="prog-chips"></div><div class="prog-kbd"></div>' +
+      `<div class="btn-row"><button class="btn" type="button">${Book.ICON.play}<span>Folge abspielen</span></button></div>` +
+      (el.dataset.caption ? `<p class="cap">${el.dataset.caption}</p>` : "");
+    const chips = el.querySelector(".prog-chips");
+    const kb = Book.keyboard(el.querySelector(".prog-kbd"), { from: +el.dataset.from || 41, to: +el.dataset.to || 76, labels: "c" });
+    const show = (i) => {
+      kb.mark(steps[i]);
+      chips.querySelectorAll(".chip-btn").forEach((c, j) => c.classList.toggle("cur", j === i));
+    };
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip-btn"; b.textContent = labels[i] || String(i + 1);
+      b.addEventListener("click", () => { show(i); Book.audio.chord(s.map((x) => x.m), 0, 1.6); });
+      chips.appendChild(b);
+    });
+    show(0);
+    el.querySelector(".btn-row .btn").addEventListener("click", () => {
+      Book.audio.seq(steps.map((s) => [s.map((x) => x.m), beats]), bpm, (i) => { if (i >= 0) show(i); });
+    });
+  });
+
+  // „So What“-Antwortfigur: kurzer Akkord auf e, dann gehalten auf d (über Bass D)
+  document.getElementById("sowhat").addEventListener("click", () => {
+    Book.audio.note(38, 0, 2.2);
+    Book.audio.chord([52, 57, 62, 67, 71], 0.3, 0.25);
+    Book.audio.chord([50, 55, 60, 65, 69], 0.6, 1.2);
+  });
+</script>
+</body>
+</html>

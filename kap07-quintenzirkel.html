@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tonarten und Quintenzirkel · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .circle-box { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; margin-block: 1.6rem; }
+  .circle-grid { display: grid; grid-template-columns: minmax(0, 22rem) minmax(0, 1fr); gap: 1.2rem; align-items: start; }
+  @media (max-width: 640px) { .circle-grid { grid-template-columns: minmax(0, 1fr); } }
+  .circle-svg { width: 100%; height: auto; display: block; max-width: 22rem; margin-inline: auto; }
+  .circle-svg .seg { fill: var(--bg); stroke: var(--line); stroke-width: 1; cursor: pointer; }
+  .circle-svg .seg:hover { fill: var(--accent-soft); }
+  .circle-svg .seg.on { fill: var(--accent); }
+  .circle-svg text { pointer-events: none; text-anchor: middle; dominant-baseline: middle; fill: var(--ink); font-family: var(--font-display); }
+  .circle-svg text.key { font-size: 17px; font-weight: 650; }
+  .circle-svg text.sig { font-size: 11px; fill: var(--muted); }
+  .circle-svg text.on { fill: var(--surface); }
+  .circle-svg .hub { fill: var(--surface); stroke: var(--line); }
+  .circle-svg text.hubt { font-size: 11px; fill: var(--muted); }
+  .circle-info h4 { margin-top: 0; }
+  .circle-info .names { font-family: var(--font-mono); overflow-wrap: anywhere; }
+  .circle-info .sigs { color: var(--muted); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil I · Kapitel 7</div>
+    <h1>Tonarten und Quintenzirkel</h1>
+    <p class="lede">Die Vorzeichen am Anfang jeder Notenzeile verraten, in welcher Tonart ein Stück steht und welche Tasten du spielen musst. Wer versteht, woher diese Vorzeichen kommen, muss keine Tabelle auswendig lernen. Der Quintenzirkel ist dabei weniger ein Merkbild als eine Landkarte der Verwandtschaft zwischen Tonarten.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>Generalvorzeichen und Versetzungszeichen lesen und richtig anwenden,</li>
+      <li>die Vorzeichen jeder Dur-Tonart herleiten, statt sie auswendig zu lernen,</li>
+      <li>aus einer Vorzeichnung die Dur-Tonart in Sekunden bestimmen,</li>
+      <li>den Quintenzirkel aufbauen und als Karte der Tonartverwandtschaft lesen,</li>
+      <li>enharmonische Tonarten erkennen und erklären, warum der Zirkel sich schließt.</li>
+    </ul>
+  </div>
+
+  <!-- 7.1 -->
+  <h2 id="vorzeichnung">7.1 Tonart und Vorzeichnung</h2>
+  <p>Eine <dfn id="g-tonart">Tonart</dfn> ist mehr als eine Tonleiter. Sie bezeichnet den Tonvorrat eines Stücks <em>und</em> seinen Grundton als Zentrum, um das sich alles dreht. Ein Stück in G-Dur benutzt vor allem die Töne der G-Dur-Tonleiter, und es endet in der Regel auf G.</p>
+  <p>Damit man nicht vor jedes f ein ♯ schreiben muss, stehen die Vorzeichen der Tonart einmal am Anfang jeder Notenzeile, direkt hinter dem Schlüssel. Das ist die <dfn id="g-generalvorzeichen">Vorzeichnung</dfn> (auch Generalvorzeichen, englisch <em>key signature</em>). Sie gilt für die ganze Zeile und für alle Oktaven: Ein ♯ auf der obersten Linie (f'') macht auch jedes f' und f zu fis.</p>
+  <div class="abc" data-bpm="100" data-caption="G-Dur: Das ♯ in der Vorzeichnung gilt für jedes f, in jeder Oktave">
+    X:1
+    M:4/4
+    L:1/4
+    K:G
+    G A B c | d e f g | f d B G | F G A G |]
+  </div>
+  <p>Vorzeichen, die mitten im Stück vor einer einzelnen Note stehen, heißen <dfn id="g-versetzungszeichen">Versetzungszeichen</dfn> (englisch <em>accidentals</em>). Für sie gelten zwei Regeln:</p>
+  <ul>
+    <li>Ein Versetzungszeichen gilt bis zum Ende des Taktes, aber nur für diese eine Tonhöhe (dieselbe Linie bzw. denselben Zwischenraum).</li>
+    <li>Das <strong>Auflösungszeichen ♮</strong> hebt ein Vorzeichen auf, sowohl ein Versetzungszeichen als auch eines aus der Vorzeichnung.</li>
+  </ul>
+  <div class="abc" data-bpm="90" data-caption="Takt 1: das ♯ gilt bis zum Taktstrich. Takt 2: wieder f. Takt 3: ♮ hebt die Vorzeichnung auf">
+    X:1
+    M:4/4
+    L:1/4
+    K:C
+    ^F G F E | F G A2 |[K:G] =F G F G |]
+  </div>
+  <p>Im dritten Takt steht die Vorzeichnung von G-Dur. Das erste f bekommt ein ♮ und klingt als f, das zweite ebenfalls, weil das ♮ bis zum Taktende gilt.</p>
+
+  <!-- 7.2 -->
+  <h2 id="kreuz">7.2 Kreuz-Tonarten herleiten</h2>
+  <p>In Kapitel 6 hast du gesehen: Der obere Tetrachord von C-Dur (g–a–h–c) ist der untere Tetrachord von G-Dur. Für G-Dur brauchst du nur einen neuen oberen Tetrachord, und darin muss die 7. Stufe einen Halbton unter dem Grundton liegen. Daher fis.</p>
+  <p>Dieses Spiel lässt sich wiederholen. Jede Tonart eine Quinte höher übernimmt alle Vorzeichen der vorigen und bekommt ein neues Kreuz auf ihrer 7. Stufe, ihrem Leitton:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Schritt</th><th>neue Tonart</th><th>neuer Leitton</th><th>alle Kreuze</th></tr></thead>
+      <tbody>
+        <tr><td>C + Quinte</td><td>G-Dur</td><td>fis</td><td>fis</td></tr>
+        <tr><td>G + Quinte</td><td>D-Dur</td><td>cis</td><td>fis, cis</td></tr>
+        <tr><td>D + Quinte</td><td>A-Dur</td><td>gis</td><td>fis, cis, gis</td></tr>
+        <tr><td>A + Quinte</td><td>E-Dur</td><td>dis</td><td>fis, cis, gis, dis</td></tr>
+        <tr><td>E + Quinte</td><td>H-Dur</td><td>ais</td><td>fis, cis, gis, dis, ais</td></tr>
+        <tr><td>H + Quinte</td><td>Fis-Dur</td><td>eis</td><td>… und eis</td></tr>
+        <tr><td>Fis + Quinte</td><td>Cis-Dur</td><td>his</td><td>… und his</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>In Fis-Dur taucht <strong>eis</strong> auf. Es klingt wie f, muss aber eis heißen, weil der Buchstabe f in der Tonleiter schon als fis vorkommt und der Buchstabe e sonst fehlen würde (Kapitel 6). Aus demselben Grund heißt der Leitton von Cis-Dur <strong>his</strong> und nicht c.</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Die Kreuze kommen immer in derselben Reihenfolge dazu: <strong>fis, cis, gis, dis, ais, eis, his</strong>.<br>Das letzte Kreuz ist der Leitton. Die Dur-Tonika liegt einen Halbton darüber.</p>
+  </div>
+  <div class="abc" data-bpm="60" data-caption="Cis-Dur: alle sieben Kreuze in der Reihenfolge, in der sie hinzukommen">
+    X:1
+    M:none
+    L:1
+    K:C#
+    C |]
+  </div>
+
+  <section class="layer deep" data-title="Warum folgen die Kreuze im Quintabstand aufeinander?">
+    <p>Schau dir die Reihenfolge der Kreuze an: fis, cis, gis, dis, ais, eis, his. Von jedem zum nächsten ist es eine reine Quinte. Das ist eine direkte Folge der Herleitung.</p>
+    <p>Jedes neue Kreuz ist der Leitton der neuen Tonart, also ihre 7. Stufe. Die neue Tonart liegt eine Quinte über der vorigen. Wenn alle Töne einer Tonleiter um eine Quinte nach oben wandern, wandert auch ihre 7. Stufe um eine Quinte nach oben. Der Leitton von G-Dur ist fis, der Leitton von D-Dur muss deshalb eine Quinte über fis liegen: cis. Und so weiter.</p>
+    <p>Man kann es auch von der anderen Seite sehen. Das neue Kreuz erhöht immer den Ton, der in der vorigen Tonart die 4. Stufe war. In C-Dur ist f die 4. Stufe, in G-Dur wird daraus fis. Die 4. Stufe ist der „Halbton über der Terz“ und passt in der neuen Tonart nicht mehr ins Muster. Zwei Blickwinkel, ein Ergebnis: Beim Schritt eine Quinte aufwärts ändert sich genau ein Ton, und er wird um einen Halbton erhöht.</p>
+  </section>
+
+  <!-- 7.3 -->
+  <h2 id="b-tonarten">7.3 B-Tonarten herleiten</h2>
+  <p>In die andere Richtung funktioniert es genauso. Der <em>untere</em> Tetrachord von C-Dur (c–d–e–f) ist der <em>obere</em> Tetrachord von F-Dur. Für F-Dur brauchst du einen neuen unteren Tetrachord: f–g–a–b. Die 4. Stufe muss einen Halbton über der 3. Stufe (a) liegen. Daher b.</p>
+  <p>Jede Tonart eine Quinte tiefer übernimmt alle ♭ der vorigen und bekommt ein neues ♭ auf ihrer 4. Stufe:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Schritt</th><th>neue Tonart</th><th>neue 4. Stufe</th><th>alle ♭</th></tr></thead>
+      <tbody>
+        <tr><td>C − Quinte</td><td>F-Dur</td><td>b</td><td>b</td></tr>
+        <tr><td>F − Quinte</td><td>B-Dur</td><td>es</td><td>b, es</td></tr>
+        <tr><td>B − Quinte</td><td>Es-Dur</td><td>as</td><td>b, es, as</td></tr>
+        <tr><td>Es − Quinte</td><td>As-Dur</td><td>des</td><td>b, es, as, des</td></tr>
+        <tr><td>As − Quinte</td><td>Des-Dur</td><td>ges</td><td>b, es, as, des, ges</td></tr>
+        <tr><td>Des − Quinte</td><td>Ges-Dur</td><td>ces</td><td>… und ces</td></tr>
+        <tr><td>Ges − Quinte</td><td>Ces-Dur</td><td>fes</td><td>… und fes</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Die ♭ kommen immer in dieser Reihenfolge dazu: <strong>b, es, as, des, ges, ces, fes</strong>. Das ist genau die Kreuzreihenfolge rückwärts.<br>Ab zwei ♭ gilt: Das <em>vorletzte</em> ♭ ist der Name der Tonart. Bei einem ♭ ist es F-Dur.</p>
+  </div>
+  <div class="abc" data-bpm="60" data-caption="Ces-Dur: alle sieben ♭">
+    X:1
+    M:none
+    L:1
+    K:Cb
+    C |]
+  </div>
+  <p>Warum ist das vorletzte ♭ die Tonika? Das letzte ♭ ist die 4. Stufe der Tonart. Die Tonika liegt eine Quarte darunter, also eine Quinte darüber, und genau dort steht das vorletzte ♭ in der Quintenkette.</p>
+
+  <!-- 7.4 -->
+  <h2 id="zirkel">7.4 Der Quintenzirkel</h2>
+  <p>Ordnet man alle Dur-Tonarten im Quintabstand an, ergibt sich ein Kreis: der <dfn id="g-quintenzirkel">Quintenzirkel</dfn> (englisch <em>circle of fifths</em>). Im Uhrzeigersinn geht es jeweils eine Quinte aufwärts und ein Kreuz dazu (oder ein ♭ weg). Gegen den Uhrzeigersinn geht es eine Quinte abwärts und ein ♭ dazu.</p>
+  <div class="circle-box" id="circle">
+    <div class="circle-grid">
+      <div id="circle-svg"></div>
+      <div class="circle-info" aria-live="polite">
+        <h4 id="ci-title">C-Dur</h4>
+        <p class="sigs" id="ci-sig"></p>
+        <p class="names" id="ci-names"></p>
+        <p class="muted" id="ci-extra"></p>
+        <div id="ci-kbd"></div>
+        <div class="btn-row"><button class="btn primary" type="button" id="ci-play">▶ Tonleiter spielen</button></div>
+      </div>
+    </div>
+    <p class="muted" style="margin-bottom:0">Tippe auf eine Tonart im Kreis. Benachbarte Tonarten unterscheiden sich in genau einem Ton.</p>
+  </div>
+  <p>Der Zirkel zeigt, wie nah Tonarten miteinander verwandt sind. Zwei Nachbarn teilen sechs ihrer sieben Töne. Je weiter zwei Tonarten im Kreis auseinander liegen, desto weniger Töne haben sie gemeinsam. C-Dur und Fis-Dur, die sich gegenüberliegen, teilen nur noch zwei Töne (h und f bzw. eis).</p>
+  <p>Diese Nähe hat Folgen, die dir später ständig begegnen. Die wichtigsten Akkorde einer Tonart stehen auf den Nachbarpositionen (Kapitel 14). Wechsel in benachbarte Tonarten klingen weich und natürlich, Sprünge über den Kreis hinweg überraschend (Kapitel 22).</p>
+
+  <section class="layer deep" data-title="Ohne Kompromiss wäre der Zirkel eine Spirale">
+    <p>Unten im Kreis treffen sich die Kreuz- und die ♭-Tonarten: Fis-Dur und Ges-Dur liegen auf denselben Tasten. Der Kreis schließt sich. Das ist aber nur auf dem Klavier so.</p>
+    <p>In Kapitel 5 hast du das pythagoreische Komma kennengelernt: Zwölf reine Quinten sind um etwa 23,5 Cent größer als sieben Oktaven. Mit reinen Quinten wäre his also höher als c, und Fis-Dur läge etwas höher als Ges-Dur. Statt eines Kreises entstünde eine endlose <em>Quintenspirale</em>, die sich nie schließt. Erst die gleichstufige Stimmung verteilt das Komma auf alle zwölf Quinten (jede wird um knapp 2 Cent verkleinert) und biegt die Spirale zum Kreis.</p>
+    <h4>Ein zweites Komma</h4>
+    <p>Stapelt man vier reine Quinten (c–g–d–a–e) und rechnet zwei Oktaven zurück, erhält man eine große Terz c–e mit dem Verhältnis</p>
+    <div class="formula">(3/2)<sup>4</sup> : 4 = 81/64 ≈ 407,8 Cent</div>
+    <p>Die reine große Terz aus der Obertonreihe hat aber 5/4 ≈ 386,3 Cent. Die Differenz von 81/80 ≈ 21,5 Cent heißt <dfn id="g-syntonisches-komma">syntonisches Komma</dfn>. Eine Quintenkette liefert also keine reinen Terzen.</p>
+    <p>Das erklärt ein Stück Musikgeschichte aus Kapitel 5. Im Mittelalter wurden die Tonsysteme aus reinen Quinten gebaut. Ihre Terzen hatten 407,8 Cent, klangen rau und galten folgerichtig als Dissonanzen. Als man ab der Renaissance Stimmungen entwickelte, die die Quinten etwas verkleinerten, um reinere Terzen zu bekommen (die mitteltönige Stimmung), wurden Terzen zum Wohlklang. Jede Stimmung muss entscheiden, wo sie ihre Kommas versteckt. Die gleichstufige Stimmung verteilt sie gleichmäßig auf alle Tonarten.</p>
+  </section>
+
+  <section class="layer deep" data-title="Woher der Quintenzirkel kommt">
+    <p>Kreisförmige Darstellungen der Tonarten tauchen Ende des 17. Jahrhunderts auf. Eine frühe stammt vom ukrainisch-russischen Musiktheoretiker Nikolai Dilezki (1679). Bekannt wurde der Zirkel im deutschen Sprachraum durch Johann David Heinichens Generalbasslehre von 1728, die einen Kreis aller 24 Dur- und Molltonarten zeigt.</p>
+    <p>Dass der Kreis gerade in dieser Zeit entsteht, ist kein Zufall. Erst mit den wohltemperierten Stimmungen (Kapitel 5) wurden alle Tonarten auf Tasteninstrumenten spielbar. Vorher hatte ein Kreis aller Tonarten keinen praktischen Sinn, weil die entfernten Tonarten unbrauchbar verstimmt klangen.</p>
+  </section>
+
+  <!-- 7.5 -->
+  <h2 id="schnell">7.5 Vorzeichen schnell bestimmen</h2>
+  <p>Mit den Regeln aus 7.2 und 7.3 kannst du in beide Richtungen rechnen.</p>
+  <h4>Von der Vorzeichnung zur Tonart</h4>
+  <ul>
+    <li><strong>Kreuze:</strong> Letztes Kreuz plus ein Halbton. Drei Kreuze (fis, cis, gis): gis + Halbton = <strong>A-Dur</strong>.</li>
+    <li><strong>♭:</strong> Das vorletzte ♭. Vier ♭ (b, es, as, des): vorletztes ist as, also <strong>As-Dur</strong>. Ein ♭: F-Dur.</li>
+  </ul>
+  <h4>Von der Tonart zur Vorzeichnung</h4>
+  <ul>
+    <li>Zähl im Zirkel die Schritte von C aus. E-Dur liegt vier Schritte im Uhrzeigersinn, also vier Kreuze: fis, cis, gis, dis.</li>
+    <li>Oder nimm die Reihenfolge und geh so weit, bis du den Leitton der Tonart erreicht hast. E-Dur hat den Leitton dis: fis, cis, gis, dis.</li>
+  </ul>
+  <h4>Zwei nützliche Abkürzungen</h4>
+  <p><strong>Gleicher Buchstabe, Halbton höher.</strong> Erhöht man den Grundton einer Tonart um einen Halbton und behält den Buchstaben, wird jeder der sieben Töne erhöht. Rechnet man ♯ als plus und ♭ als minus, kommen also immer genau sieben dazu. F-Dur (−1) wird zu Fis-Dur (+6). Ges-Dur (−6) wird zu G-Dur (+1). C-Dur (0) wird zu Cis-Dur (+7), Ces-Dur (−7) zu C-Dur (0).</p>
+  <p><strong>Enharmonische Paare.</strong> Klingen zwei Tonarten gleich (wie Fis-Dur und Ges-Dur), ergeben ihre Vorzeichen zusammen immer zwölf: 6 ♯ + 6 ♭, 5 ♯ + 7 ♭ (H/Ces), 7 ♯ + 5 ♭ (Cis/Des).</p>
+
+  <h4>Alle Dur-Tonarten</h4>
+  <p>Zum Nachschlagen und Anhören (Zeile antippen). Auswendig lernen musst du die Tabelle nicht, du kannst jede Zeile herleiten.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Tonart</th><th class="num">Anzahl</th><th>Vorzeichen</th><th>Tonleiter</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 62 64 65 67 69 71 72" data-bpm="200"><td><strong>C-Dur</strong></td><td class="num">0</td><td>–</td><td>c, d, e, f, g, a, h</td><td>▶</td></tr>
+        <tr class="play-row" data-play="55 57 59 60 62 64 66 67" data-bpm="200"><td><strong>G-Dur</strong></td><td class="num">1 ♯</td><td>fis</td><td>g, a, h, c, d, e, fis</td><td>▶</td></tr>
+        <tr class="play-row" data-play="62 64 66 67 69 71 73 74" data-bpm="200"><td><strong>D-Dur</strong></td><td class="num">2 ♯</td><td>fis, cis</td><td>d, e, fis, g, a, h, cis</td><td>▶</td></tr>
+        <tr class="play-row" data-play="57 59 61 62 64 66 68 69" data-bpm="200"><td><strong>A-Dur</strong></td><td class="num">3 ♯</td><td>fis, cis, gis</td><td>a, h, cis, d, e, fis, gis</td><td>▶</td></tr>
+        <tr class="play-row" data-play="64 66 68 69 71 73 75 76" data-bpm="200"><td><strong>E-Dur</strong></td><td class="num">4 ♯</td><td>fis, cis, gis, dis</td><td>e, fis, gis, a, h, cis, dis</td><td>▶</td></tr>
+        <tr class="play-row" data-play="59 61 63 64 66 68 70 71" data-bpm="200"><td><strong>H-Dur</strong></td><td class="num">5 ♯</td><td>fis, cis, gis, dis, ais</td><td>h, cis, dis, e, fis, gis, ais</td><td>▶</td></tr>
+        <tr class="play-row" data-play="66 68 70 71 73 75 77 78" data-bpm="200"><td><strong>Fis-Dur</strong></td><td class="num">6 ♯</td><td>fis, cis, gis, dis, ais, eis</td><td>fis, gis, ais, h, cis, dis, eis</td><td>▶</td></tr>
+        <tr class="play-row" data-play="61 63 65 66 68 70 72 73" data-bpm="200"><td><strong>Cis-Dur</strong></td><td class="num">7 ♯</td><td>fis, cis, gis, dis, ais, eis, his</td><td>cis, dis, eis, fis, gis, ais, his</td><td>▶</td></tr>
+        <tr class="play-row" data-play="65 67 69 70 72 74 76 77" data-bpm="200"><td><strong>F-Dur</strong></td><td class="num">1 ♭</td><td>b</td><td>f, g, a, b, c, d, e</td><td>▶</td></tr>
+        <tr class="play-row" data-play="58 60 62 63 65 67 69 70" data-bpm="200"><td><strong>B-Dur</strong></td><td class="num">2 ♭</td><td>b, es</td><td>b, c, d, es, f, g, a</td><td>▶</td></tr>
+        <tr class="play-row" data-play="63 65 67 68 70 72 74 75" data-bpm="200"><td><strong>Es-Dur</strong></td><td class="num">3 ♭</td><td>b, es, as</td><td>es, f, g, as, b, c, d</td><td>▶</td></tr>
+        <tr class="play-row" data-play="56 58 60 61 63 65 67 68" data-bpm="200"><td><strong>As-Dur</strong></td><td class="num">4 ♭</td><td>b, es, as, des</td><td>as, b, c, des, es, f, g</td><td>▶</td></tr>
+        <tr class="play-row" data-play="61 63 65 66 68 70 72 73" data-bpm="200"><td><strong>Des-Dur</strong></td><td class="num">5 ♭</td><td>b, es, as, des, ges</td><td>des, es, f, ges, as, b, c</td><td>▶</td></tr>
+        <tr class="play-row" data-play="66 68 70 71 73 75 77 78" data-bpm="200"><td><strong>Ges-Dur</strong></td><td class="num">6 ♭</td><td>b, es, as, des, ges, ces</td><td>ges, as, b, ces, des, es, f</td><td>▶</td></tr>
+        <tr class="play-row" data-play="59 61 63 64 66 68 70 71" data-bpm="200"><td><strong>Ces-Dur</strong></td><td class="num">7 ♭</td><td>b, es, as, des, ges, ces, fes</td><td>ces, des, es, fes, ges, as, b</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section class="layer piano" data-title="Vorzeichen beim Spielen nicht vergessen">
+    <p>Der häufigste Lesefehler am Klavier ist ein vergessenes Vorzeichen aus der Vorzeichnung. Das Auge sieht die Note, die Hand spielt die weiße Taste. Drei Gewohnheiten helfen:</p>
+    <ol>
+      <li><strong>Tonart einstellen.</strong> Bevor du ein Stück beginnst, schau auf die Vorzeichnung, bestimme die Tonart und spiel ihre Tonleiter einmal langsam. Danach den Dreiklang auf dem Grundton. Die Hand weiß dann, welche Tasten „dran“ sind.</li>
+      <li><strong>In Handformen denken.</strong> In D-Dur liegen fis und cis unter dem Mittelfinger, wenn du Fünftonräume auf d oder a spielst. Wer die Tonart in der Hand hat, muss nicht jede Note einzeln prüfen.</li>
+      <li><strong>Gefährliche Stellen markieren.</strong> Vorzeichen in Oktaven, die weit von der Vorzeichnung entfernt sind (z. B. ein tiefes fis im Bass), werden am leichtesten übersehen. Ein kleiner Bleistiftkreis hilft am Anfang.</li>
+    </ol>
+    <p><strong>Übung:</strong> Spiel die Tonleitern im Quintenzirkel nacheinander, jede eine Oktave, Hände getrennt: C, G, D, A, E. Sag vor jeder Tonleiter laut, welches Kreuz neu dazukommt und wo es in der Tonleiter liegt (immer die 7. Stufe).</p>
+  </section>
+
+  <!-- 7.6 -->
+  <h2 id="enharmonik">7.6 Enharmonische Tonarten</h2>
+  <p>Drei Paare von Dur-Tonarten klingen auf dem Klavier gleich: H-Dur und Ces-Dur, Fis-Dur und Ges-Dur, Cis-Dur und Des-Dur. Solche Tonarten heißen <dfn id="g-enharmonische-tonarten">enharmonisch verwechselt</dfn>. Es gibt also 15 geschriebene Dur-Tonarten, aber nur 12 verschieden klingende.</p>
+  <div class="kb" data-from="54" data-to="78" data-labels="none" data-marks="54::fis 56::gis 58::ais 59:c2:h 61::cis 63::dis 65:c2:eis 66::fis" aria-label="Fis-Dur auf der Klaviatur: fünf schwarze und zwei weiße Tasten"></div>
+  <p class="muted">Fis-Dur und Ges-Dur benutzen dieselben Tasten: alle fünf schwarzen und dazu zwei weiße (h/ces und eis/f).</p>
+  <p>In der Praxis wählt man meist die Schreibweise mit weniger Vorzeichen. Des-Dur (5 ♭) ist üblicher als Cis-Dur (7 ♯), H-Dur (5 ♯) üblicher als Ces-Dur (7 ♭). Bei Fis-Dur und Ges-Dur (je 6) entscheidet der Zusammenhang, zum Beispiel aus welcher Tonart man kommt.</p>
+  <p>Theoretisch kann man den Zirkel weiterführen: Gis-Dur hätte acht Vorzeichen, darunter ein <dfn id="g-doppelkreuz">Doppelkreuz</dfn> (fisis, geschrieben mit 𝄪). Solche Tonarten kommen als Vorzeichnung praktisch nicht vor, ihre Töne aber durchaus, wenn ein Stück vorübergehend in sie ausweicht.</p>
+
+  <section class="layer deep" data-title="Haben Tonarten einen eigenen Charakter?">
+    <p>Viele Musiker sind überzeugt, dass Es-Dur feierlich und E-Dur strahlend klingt. Im 18. Jahrhundert wurden ganze Kataloge von Tonartencharakteren verfasst. Der bekannteste stammt von Christian Friedrich Daniel Schubart (um 1784 geschrieben, 1806 veröffentlicht). Was ist dran?</p>
+    <p><strong>Historisch: ja.</strong> In ungleichstufigen Stimmungen klangen die Tonarten tatsächlich verschieden. Tonarten nahe C hatten reinere Terzen, entfernte Tonarten schärfere. Ein Komponist, der für Es-Dur schrieb, rechnete mit einem bestimmten Klang.</p>
+    <p><strong>Auf dem gleichstufigen Klavier: kaum.</strong> Alle Tonarten haben exakt dieselben Intervalle. Eine Melodie in Es-Dur klingt genauso wie in E-Dur, nur einen Halbton tiefer. Was bleibt, sind andere Unterschiede. Die Tonarten liegen anders in der Hand (Abschnitt 7.7), was Spielweise und Artikulation beeinflusst. Instrumente wie Geige oder Gitarre haben leere Saiten, die bestimmte Tonarten resonanter klingen lassen. Und Menschen mit absolutem Gehör oder starken Hörgewohnheiten verbinden einzelne Tonarten mit bestimmten Stücken.</p>
+    <p>Der „Charakter“ einer Tonart ist heute also weniger eine Eigenschaft des Klangs als eine Mischung aus Geschichte, Instrument und Assoziation.</p>
+  </section>
+
+  <!-- 7.7 -->
+  <h2 id="merken">7.7 Merkhilfen und Handformen</h2>
+  <p>Herleiten ist besser als auswendig lernen, aber für den Alltag helfen Merksprüche. Für die Kreuz-Tonarten G, D, A, E, H, Fis ist im Deutschen verbreitet: <em>„Geh du alter Esel, hole Fische.“</em> Im Englischen merkt man sich die Reihenfolge der Kreuze mit <em>„Father Charles Goes Down And Ends Battle“</em> (F♯, C♯, G♯, D♯, A♯, E♯, B♯) und die der ♭ mit <em>„BEAD Greatest Common Factor“</em> (B♭, E♭, A♭, D♭, G♭, C♭, F♭).</p>
+  <p>Wichtiger ist die Struktur dahinter: Beide Reihenfolgen sind dieselbe Quintenkette, einmal vorwärts, einmal rückwärts gelesen. Wer f–c–g–d–a–e–h kennt, kennt beide.</p>
+  <div class="formula">Kreuze →&nbsp; f c g d a e h &nbsp;← ♭</div>
+
+  <section class="layer piano" data-title="Tonarten mit vielen schwarzen Tasten liegen gut in der Hand">
+    <p>Tonarten mit vielen Vorzeichen wirken auf dem Papier schwer. Am Klavier sind sie oft bequemer als C-Dur. Der Grund ist die Anatomie der Hand: Finger 2, 3 und 4 sind lang, Daumen und kleiner Finger kurz. Auf schwarzen Tasten liegen die langen Finger höher und weiter hinten, der Daumen bleibt auf den weißen Tasten vorn. Die Hand nimmt dabei ihre natürliche, leicht gewölbte Form an.</p>
+    <p>H-Dur, Fis/Ges-Dur und Des-Dur nutzen alle fünf schwarzen Tasten. Frédéric Chopin ließ seine Schüler deshalb nicht mit C-Dur beginnen, sondern mit H-Dur, weil die Hand dort von selbst richtig liegt.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Tonart</th><th>rechts</th><th>links</th></tr></thead>
+        <tbody>
+          <tr><td>H-Dur</td><td>1 2 3 1 2 3 4 5</td><td>4 3 2 1 4 3 2 1</td></tr>
+          <tr><td>Des-Dur</td><td>2 3 1 2 3 4 1 2</td><td>3 2 1 4 3 2 1 3</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Bei Des-Dur beginnt die rechte Hand mit dem 2. Finger, und die Daumen fallen genau auf die beiden weißen Tasten f und c. Das ist das allgemeine Prinzip für Tonleitern mit vielen schwarzen Tasten: <strong>Daumen auf weiße Tasten, lange Finger auf schwarze.</strong> Kapitel 44 baut daraus ein ganzes System.</p>
+    <p><strong>Übung:</strong> Spiel H-Dur mit der rechten Hand langsam auf und ab. Achte darauf, dass die Hand ruhig über den schwarzen Tasten schwebt und der Daumen ohne Ellbogenbewegung unter die Hand gleitet.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Die Vorzeichnung gilt für die ganze Zeile und alle Oktaven. Versetzungszeichen gelten bis zum Taktende, ♮ hebt Vorzeichen auf.</li>
+    <li>Eine Quinte aufwärts: ein Kreuz mehr, nämlich der neue Leitton. Reihenfolge fis, cis, gis, dis, ais, eis, his.</li>
+    <li>Eine Quinte abwärts: ein ♭ mehr, nämlich die neue 4. Stufe. Reihenfolge b, es, as, des, ges, ces, fes.</li>
+    <li>Tonart erkennen: letztes Kreuz + Halbton bzw. vorletztes ♭.</li>
+    <li>Der Quintenzirkel ordnet die Tonarten nach Verwandtschaft. Nachbarn teilen sechs von sieben Tönen.</li>
+    <li>Enharmonische Tonarten (H/Ces, Fis/Ges, Cis/Des) klingen gleich. Ihre Vorzeichen ergeben zusammen zwölf.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">7.1</span><div><span class="kind">Theorie</span>Welche Dur-Tonart hat 3 ♯, 4 ♭, 1 ♭, 5 ♯, 6 ♭?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>3 ♯: letztes Kreuz gis, also A-Dur. 4 ♭: vorletztes ♭ as, also As-Dur. 1 ♭: F-Dur. 5 ♯: letztes Kreuz ais, also H-Dur. 6 ♭: vorletztes ♭ ges, also Ges-Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">7.2</span><div><span class="kind">Theorie</span>Nenne die Vorzeichen von D-Dur, Es-Dur, E-Dur und Des-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>D-Dur: fis, cis. Es-Dur: b, es, as. E-Dur: fis, cis, gis, dis. Des-Dur: b, es, as, des, ges.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">7.3</span><div><span class="kind">Theorie</span>Begründe ohne Tabelle, warum A-Dur ein gis braucht und warum das gis gerade das <em>dritte</em> Kreuz ist.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die 7. Stufe von A-Dur muss einen Halbton unter a liegen, also gis (Leitton). A-Dur liegt im Quintenzirkel drei Schritte von C entfernt (C → G → D → A). Jeder Schritt bringt ein neues Kreuz, den jeweiligen Leitton: fis (G), cis (D), gis (A).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">7.4</span><div><span class="kind">Notenlesen</span>Welche Tonart zeigt die Vorzeichnung? Welche Töne erklingen tatsächlich? Bei welchen spielst du eine schwarze Taste?</div></div>
+      <div class="abc" data-bpm="100">
+        X:1
+        M:4/4
+        L:1/4
+        K:Eb
+        E G B c | B G F E |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>Drei ♭ (b, es, as): Es-Dur. Es erklingen es', g', b', c'', b', g', f', es'. Schwarze Tasten sind es' und b'. Das as kommt in dieser Melodie nicht vor, gilt aber trotzdem.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">7.5</span><div><span class="kind">Notenlesen</span>Welche Töne erklingen im zweiten Takt?</div></div>
+      <div class="abc" data-bpm="100">
+        X:1
+        M:4/4
+        L:1/4
+        K:D
+        D F A d | c =c B A |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>D-Dur hat fis und cis. Im zweiten Takt erklingen cis'', dann c'' (das ♮ hebt das Kreuz der Vorzeichnung auf), dann h' und a'. Würde danach im selben Takt noch ein c folgen, wäre es wegen des ♮ ebenfalls c.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">7.6</span><div><span class="kind">Theorie</span>Welcher Ton unterscheidet A-Dur von E-Dur? Und welcher F-Dur von B-Dur?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>A-Dur hat d, E-Dur stattdessen dis (das neue Kreuz, Leitton von E). F-Dur hat e, B-Dur stattdessen es (das neue ♭, 4. Stufe von B).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">7.7</span><div><span class="kind">Theorie</span>Wie viele Vorzeichen hat Cis-Dur, wie viele Des-Dur? Prüf die Regel „enharmonische Paare ergeben zusammen zwölf“. Warum gilt sie?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Cis-Dur 7 ♯, Des-Dur 5 ♭, zusammen 12. Jedes Kreuz ist ein Schritt im Uhrzeigersinn von C aus, jedes ♭ ein Schritt gegen den Uhrzeigersinn. Cis-Dur und Des-Dur stehen an derselben Stelle des Kreises. Der eine Weg (7 Schritte) und der andere Weg (5 Schritte) ergeben zusammen einmal den ganzen Kreis mit seinen zwölf Positionen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">7.8</span><div><span class="kind">Theorie</span>C-Dur und Fis-Dur liegen sich im Zirkel gegenüber. Welche Töne haben sie gemeinsam?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Fis-Dur: fis, gis, ais, h, cis, dis, eis. Gemeinsam mit C-Dur sind h und eis (klingt als f). Also nur zwei von sieben Tönen. Die Tonarten sind maximal weit voneinander entfernt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">7.9</span><div><span class="kind">Am Klavier</span>Spiel G-, D- und A-Dur mit beiden Händen getrennt, je eine Oktave. Spiel dann H-Dur rechts mit dem Fingersatz aus dem Klavier-Kasten. Welche Tonleiter liegt am angenehmsten in der Hand?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die Antwort ist persönlich, aber viele empfinden H-Dur nach kurzer Gewöhnung als besonders angenehm: Die langen Finger liegen auf den schwarzen Tasten, der Daumen kommt nur auf e und h. G-, D- und A-Dur haben rechts denselben Fingersatz wie C-Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">7.10</span><div><span class="kind">Vertiefung</span>Berechne den Unterschied zwischen der pythagoreischen großen Terz (vier Quinten minus zwei Oktaven) und der gleichstufigen großen Terz in Cent.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Pythagoreische Terz: 81/64, also 1200 · log<sub>2</sub>(81/64) ≈ 407,8 Cent. Gleichstufig: 400 Cent. Unterschied ≈ 7,8 Cent. Die gleichstufige Terz liegt also zwischen der pythagoreischen (407,8) und der reinen (386,3), aber deutlich näher an der pythagoreischen.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(7);
+
+  // Interaktiver Quintenzirkel
+  (function () {
+    const LET = ["c", "d", "e", "f", "g", "a", "h"], NAT = [0, 2, 4, 5, 7, 9, 11];
+    const SH = ["fis", "cis", "gis", "dis", "ais", "eis", "his"], FL = ["b", "es", "as", "des", "ges", "ces", "fes"];
+    function accName(l, a) {
+      if (a === 0) return l;
+      if (a > 0) return l + "is".repeat(a);
+      if (l === "h") return a === -1 ? "b" : "heses";
+      if (l === "e" || l === "a") return l + "s" + "es".repeat(-a - 1);
+      return l + "es".repeat(-a);
+    }
+    const cap = (s) => s[0].toUpperCase() + s.slice(1);
+    const STEPS = [0, 2, 4, 5, 7, 9, 11, 12];
+    // [Buchstabe, Vorzeichen am Grundton, Vorzeichenzahl (+♯/−♭), enharmonische Alternative]
+    const KEYS = [[0, 0, 0], [4, 0, 1], [1, 0, 2], [5, 0, 3], [2, 0, 4], [6, 0, 5, [0, -1, -7]], [3, 1, 6, [4, -1, -6]],
+      [1, -1, -5, [0, 1, 7]], [5, -1, -4], [2, -1, -3], [6, -1, -2], [3, 0, -1]];
+    function scale(li, acc) {
+      const pc = NAT[li] + acc;
+      let root = 60 + ((pc % 12) + 12) % 12;
+      if (root > 66) root -= 12;
+      const names = STEPS.map((s, i) => {
+        const l = (li + i) % 7, t = ((pc + s) % 12 + 12) % 12;
+        return accName(LET[l], ((t - NAT[l]) % 12 + 18) % 12 - 6);
+      });
+      return { name: cap(accName(LET[li], acc)) + "-Dur", names, midis: STEPS.map((s) => root + s) };
+    }
+    const sigText = (n) => n === 0 ? "keine Vorzeichen" : n > 0 ? `${n} ♯: ${SH.slice(0, n).join(", ")}` : `${-n} ♭: ${FL.slice(0, -n).join(", ")}`;
+    const sigShort = (n) => n === 0 ? "" : n > 0 ? n + "♯" : -n + "♭";
+
+    const C = 180, R1 = 172, R0 = 92;
+    const pt = (r, deg) => [C + r * Math.cos(deg * Math.PI / 180), C + r * Math.sin(deg * Math.PI / 180)];
+    let s = `<svg class="circle-svg" viewBox="0 0 360 360" role="group" aria-label="Quintenzirkel der Dur-Tonarten">`;
+    KEYS.forEach((k, i) => {
+      const a0 = -90 + i * 30 - 15, a1 = a0 + 30;
+      const [x0, y0] = pt(R1, a0), [x1, y1] = pt(R1, a1), [x2, y2] = pt(R0, a1), [x3, y3] = pt(R0, a0);
+      const sc = scale(k[0], k[1]);
+      const label = sc.name.replace("-Dur", "") + (k[3] ? "/" + cap(accName(LET[k[3][0]], k[3][1])) : "");
+      s += `<path class="seg" data-i="${i}" tabindex="0" role="button" aria-label="${sc.name}" d="M${x0} ${y0} A${R1} ${R1} 0 0 1 ${x1} ${y1} L${x2} ${y2} A${R0} ${R0} 0 0 0 ${x3} ${y3} Z"/>`;
+      const [tx, ty] = pt(140, -90 + i * 30), [sx, sy] = pt(108, -90 + i * 30);
+      s += `<text class="key" data-i="${i}" x="${tx}" y="${ty}" style="font-size:${label.length > 4 ? 13 : 17}px">${label}</text>`;
+      s += `<text class="sig" data-i="${i}" x="${sx}" y="${sy}">${sigShort(k[2])}</text>`;
+    });
+    s += `<circle class="hub" cx="${C}" cy="${C}" r="${R0 - 6}"/>`;
+    s += `<text class="hubt" x="${C}" y="${C - 10}">↻ Quinte aufwärts</text><text class="hubt" x="${C}" y="${C + 10}">↺ Quinte abwärts</text></svg>`;
+    document.getElementById("circle-svg").innerHTML = s;
+    const svg = document.querySelector("#circle-svg svg");
+    const kb = Book.keyboard(document.getElementById("ci-kbd"), { from: 54, to: 79, labels: "c", ariaLabel: "Klaviatur mit der gewählten Tonleiter" });
+    let cur = null;
+    function select(i, play) {
+      const k = KEYS[i];
+      cur = scale(k[0], k[1]);
+      svg.querySelectorAll(".seg").forEach((p) => p.classList.toggle("on", +p.dataset.i === i));
+      svg.querySelectorAll("text[data-i]").forEach((t) => t.classList.toggle("on", +t.dataset.i === i));
+      document.getElementById("ci-title").textContent = cur.name;
+      document.getElementById("ci-sig").textContent = sigText(k[2]);
+      document.getElementById("ci-names").textContent = cur.names.join(", ");
+      let extra = "";
+      if (k[3]) { const alt = scale(k[3][0], k[3][1]); extra = `Klingt gleich wie ${alt.name} (${sigText(k[3][2])}).`; }
+      const prev = KEYS[(i + 11) % 12], next = KEYS[(i + 1) % 12];
+      extra += (extra ? " " : "") + `Nachbarn: ${scale(prev[0], prev[1]).name} und ${scale(next[0], next[1]).name}.`;
+      document.getElementById("ci-extra").textContent = extra;
+      kb.mark(cur.midis.map((m, j) => (j === 0 || j === 7 ? { m, cls: "c2" } : m)));
+      if (play) Book.audio.seq(cur.midis.map((m) => [m, 1]), 200);
+    }
+    svg.addEventListener("click", (e) => { const p = e.target.closest(".seg"); if (p) select(+p.dataset.i, true); });
+    svg.addEventListener("keydown", (e) => {
+      const p = e.target.closest(".seg");
+      if (p && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); select(+p.dataset.i, true); }
+    });
+    document.getElementById("ci-play").addEventListener("click", () => cur && Book.audio.seq(cur.midis.map((m) => [m, 1]), 200));
+    select(0, false);
+  })();
+</script>
+</body>
+</html>

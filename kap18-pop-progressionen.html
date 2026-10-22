@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Typische Akkordfolgen · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .prog { margin-block: 1.2rem; }
+  .prog-bar { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: center; }
+  .prog-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0; padding: 0; }
+  .prog-chips li { display: inline-flex; flex-direction: column; align-items: center; min-width: 2.8rem; padding: 0.2rem 0.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); font-family: var(--font-display); line-height: 1.25; }
+  .prog-chips .rn { font-weight: 650; }
+  .prog-chips .cn { font-size: var(--step--1); color: var(--muted); }
+  .prog-chips li.on { border-color: var(--accent); background: var(--accent-soft); }
+  .prog-kb { margin-top: 0.6rem; }
+  .keypick { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.7rem 1rem; margin-block: 1.2rem; font-family: var(--font-display); font-size: var(--step--1); color: var(--muted); }
+  .keypick select { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.25rem 0.5rem; }
+  .blues { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.35rem; margin-block: 1rem; font-family: var(--font-display); }
+  .blues div { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); padding: 0.45rem 0.6rem; }
+  .blues .t { display: block; font-size: 0.7rem; color: var(--muted); font-family: var(--font-mono); }
+  .blues .c { font-weight: 650; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil II · Kapitel 18</div>
+    <h1>Typische Akkordfolgen</h1>
+    <p class="lede">Tausende Songs teilen sich eine Handvoll Akkordfolgen. Das ist kein Mangel an Fantasie, sondern ein Zeichen dafür, wie gut diese Folgen funktionieren. Wer sie als Stufenfolgen kennt, erkennt sie in jedem Lied wieder und kann sie in jeder Tonart sofort spielen.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die wichtigsten Pop-Akkordfolgen als Stufen benennen und in Songs wiedererkennen,</li>
+      <li>diese Folgen in mehreren Tonarten mit ruhiger Handposition spielen,</li>
+      <li>erklären, warum gerade I, IV, V und vi so vielseitig sind,</li>
+      <li>die Kanon-Folge, die andalusische Folge und den 12-Takt-Blues erkennen,</li>
+      <li>einfache Begleitmuster auf jede Akkordschleife anwenden.</li>
+    </ul>
+  </div>
+
+  <!-- 18.1 -->
+  <h2 id="schleifen">18.1 Akkordfolgen als Bausteine</h2>
+  <p>Eine <dfn id="g-akkordfolge">Akkordfolge</dfn> (englisch <em>chord progression</em>) ist eine Reihe von Akkorden, die ein Stück oder einen Teil davon trägt. In der Popmusik wiederholen sich viele Folgen als Schleife (englisch <em>loop</em>) über eine ganze Strophe oder einen Refrain. Vier Akkorde zu je einem Takt sind dabei der häufigste Fall.</p>
+  <p>Weil die Folgen als Stufen notiert sind, gelten sie in jeder Tonart. I–V–vi–IV ist in C-Dur C – G – Am – F und in D-Dur D – A – Bm – G. Wer die Stufen kennt, muss jede Folge nur einmal verstehen. Die Akkordnamen in diesem Kapitel sind englische Symbole wie auf Leadsheets (Kapitel 17).</p>
+  <div class="keypick">
+    <label for="key-select">Tonart für die Hörbeispiele:</label>
+    <select id="key-select">
+      <option value="C">C-Dur</option>
+      <option value="G">G-Dur</option>
+      <option value="D">D-Dur</option>
+      <option value="A">A-Dur</option>
+      <option value="E">E-Dur</option>
+      <option value="F">F-Dur</option>
+      <option value="Bb">B-Dur (B♭)</option>
+      <option value="Eb">Es-Dur (E♭)</option>
+    </select>
+    <span>Die Akkordnamen passen sich an.</span>
+  </div>
+
+  <!-- 18.2 -->
+  <h2 id="achse">18.2 I–V–vi–IV: die Pop-Achse</h2>
+  <p>Die bekannteste Folge der Popmusik führt von der Tonika zur Dominante, dann zur Moll-Parallele und zur Subdominante. In C-Dur: C – G – Am – F.</p>
+  <div class="prog" data-prog="I V vi IV" data-loop="2"></div>
+  <p>Diese Folge trägt unter anderem „Let It Be“ (The Beatles), „No Woman, No Cry“ (Bob Marley), „With or Without You“ (U2), „Don’t Stop Believin’“ (Journey) und „Someone Like You“ (Adele). Die australische Comedy-Gruppe The Axis of Awesome hat 2009 ein Medley veröffentlicht, in dem sie Dutzende Hits über genau diese vier Akkorde singt.</p>
+  <p>In Funktionen gedacht lautet die Folge T – D – Tp – S. Sie bewegt sich also einmal durch alle Bereiche der Tonart. Auffällig ist, dass sie nicht mit einem Ganzschluss endet. Auf die IV folgt in der Wiederholung direkt wieder die I. Der Übergang IV–I ist ein Plagalschluss (Kapitel 16), weich und ohne Zwang. Deshalb kann die Schleife endlos weiterlaufen, ohne je richtig zu enden.</p>
+
+  <section class="layer deep" data-title="Warum funktionieren gerade diese vier Akkorde so gut?">
+    <p>Die vier Akkorde I, V, vi und IV haben drei Eigenschaften, die sie zusammen besonders vielseitig machen.</p>
+    <p><strong>1. Sie decken die ganze Tonleiter ab.</strong> In C-Dur enthält C die Töne c, e, g, G enthält g, h, d, Am enthält a, c, e und F enthält f, a, c. Zusammen sind das alle sieben Töne von C-Dur. Jeder Melodieton der Tonleiter ist deshalb in mindestens einem der vier Akkorde ein Akkordton. Eine Melodie hat über dieser Schleife maximale Freiheit.</p>
+    <p><strong>2. Sie verbinden sich glatt.</strong> I und vi teilen sich zwei Töne (c, e), vi und IV ebenfalls zwei (a, c), IV und I einen (c), I und V einen (g). Nur zwischen V und vi gibt es keinen gemeinsamen Ton, dafür bewegen sich dort alle Stimmen um einen Schritt (h→c, d→e, g→a). Am Klavier kann die rechte Hand deshalb fast an Ort und Stelle bleiben.</p>
+    <p><strong>3. Sie mischen Dur und Moll.</strong> Drei Dur-Akkorde und ein Moll-Akkord geben der Folge eine helle Grundfarbe mit einem melancholischen Moment. Wo dieser Moll-Akkord steht, prägt den Charakter. Beginnt die Schleife auf der vi, kippt die ganze Stimmung (Abschnitt 18.3).</p>
+    <p>Dazu kommt der Bass: c – g – a – f. Er springt eine Quarte abwärts, steigt einen Schritt, fällt eine Terz und steigt dann eine Quarte zurück zum c. Diese Mischung aus Sprüngen und Schritten klingt entschieden, aber nicht mechanisch.</p>
+  </section>
+
+  <section class="layer piano" data-title="Vier Akkorde, eine Handposition">
+    <p>Greif die Schleife mit der rechten Hand so, dass sie sich kaum bewegt. Gemeinsame Töne bleiben liegen, alle anderen rücken einen Schritt:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th></th><th>I</th><th>V</th><th>vi</th><th>IV</th></tr></thead>
+        <tbody>
+          <tr><td>Akkord in C</td><td>C</td><td>G</td><td>Am</td><td>F</td></tr>
+          <tr><td>rechte Hand</td><td>c'–e'–g'</td><td>h–d'–g'</td><td>c'–e'–a'</td><td>c'–f'–a'</td></tr>
+          <tr><td>Finger</td><td>1–3–5</td><td>1–2–5</td><td>1–2–5</td><td>1–3–5</td></tr>
+          <tr><td>linke Hand</td><td>c</td><td>G</td><td>A</td><td>F</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Der Ton g' bleibt bei I und V liegen, c' bei I, vi und IV. Die rechte Hand verlässt kaum ihre Position. Die linke Hand übernimmt alle Sprünge.</p>
+    <p><strong>Übung:</strong> Spiel die Schleife viermal hintereinander ohne Pause, gleichmäßig, je ein Akkord pro Takt. Wähl dann oben eine andere Tonart, hör dir die Folge an und finde die Griffe selbst. Das Muster bleibt immer gleich.</p>
+  </section>
+
+  <!-- 18.3 -->
+  <h2 id="rotation">18.3 Dieselben Akkorde, andere Reihenfolge</h2>
+  <p>Beginnt man dieselbe Schleife an einer anderen Stelle, verändert sich ihr Charakter deutlich. Die wichtigste Variante startet auf der vi: <strong>vi–IV–I–V</strong>, in C-Dur Am – F – C – G.</p>
+  <div class="prog" data-prog="vi IV I V" data-loop="2"></div>
+  <p>Diese Folge klingt dunkler und sehnsuchtsvoller, obwohl die Akkorde exakt dieselben sind. Sie trägt etwa „Zombie“ (The Cranberries) und „Despacito“ (Luis Fonsi). Man kann sie auch als Moll-Folge hören: In a-Moll lautet sie i–VI–III–VII. Welche Deutung das Ohr wählt, hängt davon ab, welcher Akkord sich wie ein Zuhause anfühlt. Oft bleibt das bewusst in der Schwebe.</p>
+
+  <section class="layer deep" data-title="Warum die Reihenfolge die Tonart verschiebt">
+    <p>Die Akkorde C, G, Am und F gehören zu C-Dur und zu a-Moll gleichermaßen (Paralleltonarten, Kapitel 8). Welcher Akkord als Tonika gehört wird, ist deshalb keine Eigenschaft der Akkorde, sondern ihrer Anordnung in der Zeit.</p>
+    <p>Mehrere Faktoren sprechen für einen Akkord als Tonika: Er steht am Anfang eines Abschnitts, er fällt auf die metrisch schwerste Position (den ersten Takt einer Viertaktgruppe), er erklingt am längsten oder am häufigsten, und es führt eine starke Kadenz zu ihm hin. Bei I–V–vi–IV erfüllt C die ersten beiden Bedingungen, und F–C bildet einen Plagalschluss zum C hin. Bei vi–IV–I–V steht Am am Anfang, und G–Am ist eine Art Trugschluss, der dennoch wie eine Ankunft wirken kann.</p>
+    <p>Kein einzelner Faktor entscheidet. In vielen Songs schwankt das Gefühl sogar zwischen Strophe und Refrain. Die Strophe wirkt nach a-Moll, der Refrain mit derselben Folge plötzlich nach C-Dur, weil die Melodie dort auf c endet. Die Musiktheorie spricht dann von einer <em>tonalen Ambivalenz</em>. Für Songwriter ist sie ein wirksames Mittel, um ohne neue Akkorde Kontrast zu erzeugen.</p>
+  </section>
+
+  <!-- 18.4 -->
+  <h2 id="fuenfziger">18.4 Die Fünfziger-Folge I–vi–IV–V</h2>
+  <p>In den 1950er-Jahren prägte diese Folge so viele Lieder, dass sie im Englischen <em>fifties progression</em> oder <em>doo-wop progression</em> heißt. In C-Dur: C – Am – F – G.</p>
+  <div class="prog" data-prog="I vi IV V" data-loop="2"></div>
+  <p>Bekannte Beispiele sind „Stand by Me“ (Ben E. King) und „Every Breath You Take“ (The Police). Am Klavier kennen viele sie als „Heart and Soul“, das Duett, das Klavierschüler seit Generationen zu zweit spielen. Anders als die Pop-Achse endet die Fünfziger-Folge auf der V. Jede Schleife schließt also mit einem Halbschluss und mündet in der Wiederholung in einen Ganzschluss V–I. Das gibt ihr einen kreisenden, sicheren Charakter.</p>
+  <p>Eine verbreitete Variante ersetzt die IV durch die ii: <strong>I–vi–ii–V</strong> (C – Am – Dm – G). Die ii ist ein naher Verwandter der IV (Subdominantparallele, Kapitel 14), und ihr Bass d fällt eine Quinte zum g. Hier beginnt die Welt des Jazz (Abschnitt 18.7).</p>
+  <div class="prog" data-prog="I vi ii V" data-loop="2"></div>
+
+  <!-- 18.5 -->
+  <h2 id="kanon">18.5 Die Kanon-Folge</h2>
+  <p>Der „Kanon in D“ von Johann Pachelbel stammt aus dem späten 17. Jahrhundert. Drei Violinen spielen darin einen Kanon über einer Basslinie, die sich 28-mal unverändert wiederholt. Die Akkorde über diesem Bass lauten <strong>I–V–vi–iii–IV–I–IV–V</strong>, in D-Dur D – A – Bm – F♯m – G – D – G – A.</p>
+  <div class="abc" data-bpm="60" data-caption="Kanon-Folge über Pachelbels Bass (vereinfacht in halben Noten)">
+    X:1
+    M:4/4
+    L:1/2
+    K:D
+    %%score {RH LH}
+    V:RH clef=treble
+    V:LH clef=bass
+    [V:RH] "D"[FAd] "A"[EAc] | "Bm"[FBd] "F#m"[FAc] | "G"[GBd] "D"[FAd] | "G"[GBd] "A"[EAc] |]
+    [V:LH] "_I"D, "_V"A,, | "_vi"B,, "_iii"F,, | "_IV"G,, "_I"D,, | "_IV"G,, "_V"A,, |]
+  </div>
+  <div class="prog" data-prog="I V vi iii IV I IV V" data-key="D"></div>
+  <p>Das Geheimnis dieser Folge steckt im Bass. Er fällt in einem regelmäßigen Muster: d – A, H – Fis, G – D, G – A. Die ersten drei Paare springen jeweils eine Quarte abwärts, und jedes beginnt eine Stufe tiefer als das vorige (d, H, G). Das letzte Paar G – A führt zurück zum Anfang. Darüber liegen die Akkorde so, dass die Oberstimme stufenweise absteigen kann. Die Kanon-Folge steckt, oft mit kleinen Abwandlungen, in vielen späteren Liedern, zum Beispiel in „Go West“ und in „Streets of London“ (Ralph McTell).</p>
+
+  <section class="layer deep" data-title="Schleifen sind älter als Pop: Bassmodelle des Barock">
+    <p>Dass ein ganzes Stück über einer ständig wiederholten Akkord- oder Bassfolge steht, ist keine Erfindung der Popmusik. Im 16. und 17. Jahrhundert waren solche Modelle in ganz Europa verbreitet und trugen eigene Namen:</p>
+    <ul>
+      <li>Die <strong>Folia</strong>, ein Akkordmodell in Moll, über das Komponisten von Corelli bis Rachmaninow Variationen geschrieben haben.</li>
+      <li>Die <strong>Romanesca</strong>, ein Bassmodell, dessen fallende Quart- und Sekundschritte der Kanon-Folge eng verwandt sind.</li>
+      <li><strong>Passacaglia</strong> und <strong>Chaconne</strong>, Variationsformen über einem wiederkehrenden Bass. In England hieß ein solcher Bass <em>ground</em>. Henry Purcells „When I Am Laid in Earth“ aus der Oper „Dido and Aeneas“ steht über einem chromatisch absteigenden Ground.</li>
+    </ul>
+    <p>Diese Modelle funktionierten wie heutige Pop-Schleifen. Musiker kannten sie auswendig, konnten über ihnen improvisieren und erkannten sie sofort, wenn ein anderer sie anstimmte. Pachelbels Kanon ist eines der wenigen Stücke dieser Tradition, das bis heute allgemein bekannt ist. Die Idee dahinter, ein stabiles Gerüst mit wechselnder Oberfläche, ist rund 400 Jahre alt.</p>
+  </section>
+
+  <!-- 18.6 -->
+  <h2 id="moll">18.6 Folgen in Moll: die andalusische Kadenz</h2>
+  <p>Eine der eindrucksvollsten Moll-Folgen steigt stufenweise im Bass hinab: <strong>i–VII–VI–V</strong>, in a-Moll Am – G – F – E. Sie heißt <dfn id="g-andalusische-kadenz">andalusische Kadenz</dfn>, weil sie in der Flamenco-Musik allgegenwärtig ist.</p>
+  <div class="prog" data-prog="i VII VI V" data-key="A" data-loop="2"></div>
+  <p>Der Bass a – g – f – e läuft eine Quarte abwärts, und am Ende steht E-Dur mit dem Leitton gis. Diese Dur-Dominante zieht kräftig zurück zum a-Moll, sodass die Folge sich von selbst wiederholen will. Du hörst sie zum Beispiel in „Hit the Road Jack“ (Ray Charles) und in den Strophen von „Sultans of Swing“ (Dire Straits, dort in d-Moll: Dm – C – B♭ – A).</p>
+  <div class="prog" data-prog="i VII VI V" data-key="D" data-loop="2"></div>
+  <p>Eine verwandte Farbe entsteht in Dur, wenn man Akkorde aus der gleichnamigen Moll-Tonart leiht. Die Folge <strong>I–♭VII–IV–I</strong> (C – B♭ – F – C) klingt nach Rock und Folk. Sie steht etwa in den Strophen von „Sweet Child o’ Mine“ (Guns N’ Roses, dort in D: D – C – G – D) und im langen Schlussteil von „Hey Jude“ (The Beatles). Der Akkord ♭VII gehört nicht zur Dur-Tonleiter. Woher er kommt, erklären die Kapitel 23 und 24.</p>
+  <div class="prog" data-prog="I ♭VII IV I" data-loop="2"></div>
+
+  <!-- 18.7 -->
+  <h2 id="quintfall">18.7 Quintfall und ii–V–I</h2>
+  <p>Eine ganz andere Art von Akkordfolge entsteht, wenn die Grundtöne immer eine Quinte abwärts fallen. Die Folge <strong>vi–ii–V–I</strong> (Am – Dm – G – C) ist ein Ausschnitt aus dieser Kette: Der Bass fällt a – d – g – c, und jeder Akkord wirkt wie eine kleine Dominante zum nächsten.</p>
+  <div class="prog" data-prog="vi ii V7 I" data-loop="2"></div>
+  <p>Diese Quintfallketten sind typisch für Jazzstandards. „Fly Me to the Moon“ beginnt mit einer langen Quintfallkette durch fast alle Stufen der Tonart. Die letzten drei Glieder, <strong>ii–V–I</strong>, sind so wichtig, dass ihnen Kapitel 28 ganz gehört. Die Quintfallsequenz als Modell behandelt Kapitel 26.</p>
+
+  <!-- 18.8 -->
+  <h2 id="blues">18.8 Vorschau: der 12-Takt-Blues</h2>
+  <p>Der <dfn id="g-12-takt-blues">12-Takt-Blues</dfn> ist die wichtigste Akkordfolge der afroamerikanischen Musik und die Grundlage von Blues, frühem Rock ’n’ Roll und vielen Jazzstücken. Er besteht aus nur drei Akkorden, verteilt auf zwölf Takte. In der Grundform sind alle drei Dominantseptakkorde:</p>
+  <div class="blues" aria-label="Schema des 12-Takt-Blues in C">
+    <div><span class="t">1</span><span class="c">I7 · C7</span></div>
+    <div><span class="t">2</span><span class="c">I7 · C7</span></div>
+    <div><span class="t">3</span><span class="c">I7 · C7</span></div>
+    <div><span class="t">4</span><span class="c">I7 · C7</span></div>
+    <div><span class="t">5</span><span class="c">IV7 · F7</span></div>
+    <div><span class="t">6</span><span class="c">IV7 · F7</span></div>
+    <div><span class="t">7</span><span class="c">I7 · C7</span></div>
+    <div><span class="t">8</span><span class="c">I7 · C7</span></div>
+    <div><span class="t">9</span><span class="c">V7 · G7</span></div>
+    <div><span class="t">10</span><span class="c">IV7 · F7</span></div>
+    <div><span class="t">11</span><span class="c">I7 · C7</span></div>
+    <div><span class="t">12</span><span class="c">V7 · G7</span></div>
+  </div>
+  <div class="prog" data-prog="I7 I7 I7 I7 IV7 IV7 I7 I7 V7 IV7 I7 V7" data-beats="4" data-bpm="168"></div>
+  <p>Die zwölf Takte gliedern sich in drei Zeilen zu je vier Takten. Im klassischen Blues singt die erste Zeile einen Gedanken, die zweite wiederholt ihn über der IV, und die dritte gibt eine Antwort. Der letzte Takt auf V7 heißt <em>Turnaround</em>: Er führt zurück zum Anfang. „Johnny B. Goode“ (Chuck Berry) und „Hound Dog“ (Elvis Presley) folgen diesem Schema. Den Blues als Form behandelt Kapitel 42, die Blues-Skala Kapitel 9.</p>
+
+  <section class="layer deep" data-title="Septakkorde, die nicht auflösen müssen">
+    <p>Nach der Logik von Kapitel 15 und 16 ist ein Dominantseptakkord eine Spannung, die nach Auflösung verlangt. C7 müsste nach F-Dur wollen. Im Blues steht C7 aber als Tonika am Anfang und am Ende, und niemand empfindet es als unaufgelöst. Wie passt das zusammen?</p>
+    <p>Der Blues ist keine Spielart der europäischen Dur-Moll-Harmonik, sondern eine eigenständige Tradition, die in den afroamerikanischen Gemeinschaften im Süden der USA entstand. Sie wurde um 1900 bekannt, und W. C. Handy veröffentlichte 1914 mit dem „St. Louis Blues“ eines der ersten erfolgreichen Blues-Stücke in Notenform. In dieser Tradition schwanken viele Melodietöne zwischen Dur und Moll, vor allem Terz und Septime. Diese sogenannten <em>Blue Notes</em> lassen sich mit den zwölf Tasten des Klaviers nur annähern (Kapitel 9).</p>
+    <p>Die kleine Septime ist im Blues deshalb keine Spannung, sondern Klangfarbe. Sie gehört zum Grundklang wie die Terz. Das Ohr hört C7 hier nicht als „V von F“, sondern als einen gefärbten Tonika-Klang. Das zeigt etwas Grundsätzliches: Ob ein Akkord Spannung bedeutet, hängt nicht nur von seinen Tönen ab, sondern vom Stil, in dem er steht. Dieselbe Erwartungslogik, die in Kapitel 16 den Trugschluss erklärt, erklärt auch hier, warum Blues-Hörer keine Auflösung vermissen. Sie haben gelernt, keine zu erwarten.</p>
+  </section>
+
+  <!-- 18.9 -->
+  <h2 id="warum">18.9 Warum so viele Songs gleich gebaut sind</h2>
+  <p>Die Ähnlichkeit vieler Songs hat praktische und psychologische Gründe:</p>
+  <ul>
+    <li><strong>Die Folgen funktionieren.</strong> Sie enthalten Spannung und Entspannung, decken die Tonart ab und lassen der Melodie viel Raum (siehe die Vertiefung in 18.2).</li>
+    <li><strong>Sie sind leicht spielbar.</strong> Auf Gitarre und Klavier liegen I, IV, V und vi in den gängigen Tonarten bequem unter den Fingern.</li>
+    <li><strong>Der Unterschied liegt woanders.</strong> Melodie, Rhythmus, Text, Klang und Produktion machen einen Song unverwechselbar. Die Akkordfolge ist nur das Gerüst.</li>
+    <li><strong>Vertrautheit gefällt.</strong> Wir mögen Musik, die wir in Teilen wiedererkennen.</li>
+  </ul>
+
+  <section class="layer deep" data-title="Wiederholung und Wahrnehmung">
+    <p>Der Psychologe Robert Zajonc beschrieb 1968 den <em>Mere-Exposure-Effekt</em>: Menschen bewerten Dinge positiver, je öfter sie ihnen begegnet sind, selbst wenn sie sich an die Begegnung nicht erinnern. Für Musik ist dieser Effekt vielfach bestätigt worden. Ein Lied gefällt beim dritten Hören meist besser als beim ersten.</p>
+    <p>Wiederholung spielt in der Musik eine viel größere Rolle als in der Sprache. Die Musikpsychologin Elizabeth Hellmuth Margulis hat in „On Repeat“ (2014) gezeigt, dass Wiederholung die Art des Hörens verändert. Beim wiederholten Hören richtet sich die Aufmerksamkeit weg von „Was kommt als Nächstes?“ hin zum Mitvollziehen, zum inneren Mitsingen und Vorausahnen. Eine vertraute Akkordschleife entlastet das Ohr, sodass es sich ganz auf Melodie, Text und Klang konzentrieren kann.</p>
+    <p>Hier trifft sich die Psychologie mit der Erwartungstheorie aus Kapitel 16. Eine bekannte Folge erlaubt sichere Vorhersagen, und erfüllte Vorhersagen fühlen sich gut an. Interessant wird Musik, wenn sie dieses Vertrauen nutzt und an wenigen Stellen bricht, etwa mit einem unerwarteten Akkord vor dem Refrain.</p>
+  </section>
+
+  <section class="layer piano" data-title="Ein Begleitmuster für jede Schleife">
+    <p>Mit einem einzigen Muster kannst du jede Vier-Akkord-Schleife als Ballade begleiten. Die linke Hand spielt in Achteln zweimal pro Takt Grundton, Quinte, Oktave, Quinte. Die rechte Hand schlägt den Akkord in Vierteln an.</p>
+    <div class="abc" data-bpm="76" data-caption="Pop-Balladenmuster über I–V–vi–IV in C-Dur">
+      X:1
+      M:4/4
+      L:1/8
+      K:C
+      %%score {RH LH}
+      V:RH clef=treble
+      V:LH clef=bass
+      [V:RH] "C"[CEG]2 [CEG]2 [CEG]2 [CEG]2 | "G"[B,DG]2 [B,DG]2 [B,DG]2 [B,DG]2 | "Am"[CEA]2 [CEA]2 [CEA]2 [CEA]2 | "F"[CFA]2 [CFA]2 [CFA]2 [CFA]2 |]
+      [V:LH] C,G,CG, C,G,CG, | G,,D,G,D, G,,D,G,D, | A,,E,A,E, A,,E,A,E, | F,,C,F,C, F,,C,F,C, |]
+    </div>
+    <p>Fang langsam an. Die linke Hand bewegt sich mit den Fingern 5–2–1–2 und behält die Handform über den ganzen Takt bei. Hat sich das Muster gesetzt, kannst du die rechte Hand variieren: Akkord nur auf 1 und 3, oder als Arpeggio. Mehr Muster folgen in Kapitel 46.</p>
+  </section>
+
+  <section class="layer piano" data-title="Transponieren mit Stufen">
+    <p>Wer eine Folge als Stufen gelernt hat, kann sie in jede Tonart übertragen. Diese Tabelle zeigt I–V–vi–IV in acht Tonarten (englische Symbole):</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Tonart</th><th>I</th><th>V</th><th>vi</th><th>IV</th></tr></thead>
+        <tbody>
+          <tr><td>C-Dur</td><td>C</td><td>G</td><td>Am</td><td>F</td></tr>
+          <tr><td>G-Dur</td><td>G</td><td>D</td><td>Em</td><td>C</td></tr>
+          <tr><td>D-Dur</td><td>D</td><td>A</td><td>Bm</td><td>G</td></tr>
+          <tr><td>A-Dur</td><td>A</td><td>E</td><td>F♯m</td><td>D</td></tr>
+          <tr><td>E-Dur</td><td>E</td><td>B</td><td>C♯m</td><td>A</td></tr>
+          <tr><td>F-Dur</td><td>F</td><td>C</td><td>Dm</td><td>B♭</td></tr>
+          <tr><td>B-Dur (B♭)</td><td>B♭</td><td>F</td><td>Gm</td><td>E♭</td></tr>
+          <tr><td>Es-Dur (E♭)</td><td>E♭</td><td>B♭</td><td>Cm</td><td>A♭</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Übung:</strong> Nimm dir jeden Tag eine neue Tonart vor. Spiel darin I–V–vi–IV, vi–IV–I–V und I–vi–IV–V, je viermal. Lies dabei nicht die Tabelle, sondern denk in Stufen: „Wo ist die V? Wo ist die vi?“ Nach zwei Wochen hast du die wichtigsten Folgen in allen gängigen Tonarten in den Händen.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Akkordfolgen werden als Stufen gelernt und gelten dann in jeder Tonart.</li>
+    <li><strong>I–V–vi–IV</strong> und seine Drehung <strong>vi–IV–I–V</strong> tragen unzählige Pop-Songs. Die vier Akkorde enthalten alle Töne der Tonleiter und verbinden sich glatt.</li>
+    <li><strong>I–vi–IV–V</strong> (Fünfziger-Folge) endet mit einem Halbschluss und kreist dadurch sicher in sich.</li>
+    <li>Die <strong>Kanon-Folge</strong> lebt von ihrem stufenweise fallenden Bass, die <strong>andalusische Kadenz</strong> (i–VII–VI–V) von ihrer absteigenden Linie zur Dur-Dominante.</li>
+    <li>Der <strong>12-Takt-Blues</strong> nutzt I7, IV7 und V7. Die Septimen sind dort Farbe, nicht Spannung.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">18.1</span><div><span class="kind">Theorie</span>Schreib I–V–vi–IV in G-Dur, D-Dur und F-Dur (englische Symbole).</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G-Dur: G – D – Em – C. D-Dur: D – A – Bm – G. F-Dur: F – C – Dm – B♭. Die vi ist immer Moll, weil sie auf der sechsten Stufe der Dur-Tonleiter steht (Kapitel 13).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">18.2</span><div><span class="kind">Theorie</span>Ein Song in E-Dur verwendet E – C♯m – A – B. Welche Stufen sind das, und wie heißt die Folge?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>I – vi – IV – V, die Fünfziger-Folge. B ist das englische Symbol für H-Dur, die Dominante von E-Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">18.3</span><div><span class="kind">Theorie</span>Am – F – C – G: Welche Stufen sind das in C-Dur? Welche in a-Moll?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>In C-Dur: vi – IV – I – V. In a-Moll: i – VI – III – VII. Es sind dieselben Akkorde. Welche Deutung zutrifft, hängt davon ab, welcher Akkord sich im Song als Zuhause anfühlt.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">18.4</span><div><span class="kind">Theorie</span>Übertrage die Kanon-Folge I–V–vi–iii–IV–I–IV–V nach C-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C – G – Am – Em – F – C – F – G. Der Bass lautet c – G – A – E – F – C – F – G (mit Oktavlagen so gewählt, dass er paarweise eine Quarte fällt).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">18.5</span><div><span class="kind">Theorie</span>Wie lautet die andalusische Kadenz in e-Moll? Achte auf die Dominante.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Em – D – C – B, deutsch e-Moll – D-Dur – C-Dur – H-Dur. Die Dominante ist H-Dur (h, dis, fis) mit dem Leitton dis, nicht h-Moll.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">18.6</span><div><span class="kind">Theorie</span>Schreib das Schema des 12-Takt-Blues in G-Dur auf.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G7 – G7 – G7 – G7 | C7 – C7 – G7 – G7 | D7 – C7 – G7 – D7. Die IV7 ist C7 (c, e, g, b), die V7 ist D7 (d, fis, a, c).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">18.7</span><div><span class="kind">Am Klavier</span>Spiel I–V–vi–IV in G-Dur mit der rechten Hand in einer ruhigen Position. Welche Griffe nimmst du?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Das C-Dur-Muster eine Quarte tiefer: G: g–h–d'. D: fis–a–d'. Em: g–h–e'. C: g–c'–e'. Der Ton g bleibt bei I, vi und IV liegen, d' bei I und V. Die linke Hand spielt G – D – E – C.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">18.8</span><div><span class="kind">Gehör</span>Hör dir die drei Beispiele an. Welches ist I–V–vi–IV, welches vi–IV–I–V, welches I–vi–IV–V?</div></div>
+      <div class="btn-row">
+        <button class="btn hear" type="button" data-prog="I vi IV V">▶ Beispiel A</button>
+        <button class="btn hear" type="button" data-prog="vi IV I V">▶ Beispiel B</button>
+        <button class="btn hear" type="button" data-prog="I V vi IV">▶ Beispiel C</button>
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>A: I–vi–IV–V (der zweite Akkord ist schon Moll). B: vi–IV–I–V (beginnt in Moll). C: I–V–vi–IV (der Moll-Akkord kommt erst an dritter Stelle). Achte zuerst darauf, wann der erste Moll-Akkord erscheint.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">18.9</span><div><span class="kind">Vertiefung</span>Zeige für G-Dur, dass die Akkorde I, V, vi und IV zusammen alle Töne der Tonleiter enthalten.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G: g, h, d. D: d, fis, a. Em: e, g, h. C: c, e, g. Zusammen: g, a, h, c, d, e, fis. Das ist die vollständige G-Dur-Tonleiter.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">18.10</span><div><span class="kind">Vertiefung</span>Warum klingt vi–IV–I–V melancholischer als I–V–vi–IV, obwohl beide dieselben Akkorde verwenden?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Die Schleife beginnt auf dem Moll-Akkord. Der erste Akkord einer Viertaktgruppe steht auf der metrisch schwersten Position und wird leicht als Tonika gehört. Das Ohr ordnet die Folge deshalb eher nach a-Moll als nach C-Dur ein. Die Dur-Akkorde wirken dann wie Ausflüge von einem Moll-Zuhause aus.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(18);
+
+  // Akkordfolgen-Player (kapitelspezifisch). Voicings in C-Dur bzw. c-Moll: Bass + rechte Hand in enger Lage.
+  // d = Abstand der Buchstaben vom Grundton (für korrekte Akkordnamen), r = Halbtöne.
+  const CH = {
+    "I":    { d: 0, r: 0,  q: "",   v: [48, 60, 64, 67] },
+    "ii":   { d: 1, r: 2,  q: "m",  v: [50, 62, 65, 69] },
+    "iii":  { d: 2, r: 4,  q: "m",  v: [52, 59, 64, 67] },
+    "IV":   { d: 3, r: 5,  q: "",   v: [41, 60, 65, 69] },
+    "V":    { d: 4, r: 7,  q: "",   v: [43, 59, 62, 67] },
+    "V7":   { d: 4, r: 7,  q: "7",  v: [43, 59, 65, 67] },
+    "vi":   { d: 5, r: 9,  q: "m",  v: [45, 60, 64, 69] },
+    "i":    { d: 0, r: 0,  q: "m",  v: [48, 60, 63, 67] },
+    "VI":   { d: 5, r: 8,  q: "",   v: [44, 60, 63, 68] },
+    "VII":  { d: 6, r: 10, q: "",   v: [46, 58, 62, 65] },
+    "I7":   { d: 0, r: 0,  q: "7",  v: [48, 58, 64, 67] },
+    "IV7":  { d: 3, r: 5,  q: "7",  v: [41, 57, 63, 65] }
+  };
+  CH["♭VII"] = CH.VII;
+  const KEYS = { C: [0, 0], G: [4, 0], D: [1, 0], A: [5, 0], E: [2, 0], F: [3, 0], Bb: [6, -1], Eb: [2, -1] };
+  const LET = ["C", "D", "E", "F", "G", "A", "B"], NAT = [0, 2, 4, 5, 7, 9, 11];
+  const pcOf = (k) => (NAT[KEYS[k][0]] + KEYS[k][1] + 12) % 12;
+  const off = (k) => ((pcOf(k) + 6) % 12) - 6;
+  function cname(t, k) {
+    const c = CH[t], [li, a] = KEYS[k];
+    const tl = (li + c.d) % 7;
+    let acc = ((pcOf(k) + c.r) - NAT[tl]) % 12;
+    if (acc > 6) acc -= 12;
+    if (acc < -6) acc += 12;
+    return LET[tl] + (acc > 0 ? "♯".repeat(acc) : "♭".repeat(-acc)) + c.q;
+  }
+  const voicing = (t, k) => CH[t].v.map((m) => m + off(k));
+  const marks = (v) => v.map((m, i) => (i === 0 ? { m, cls: "c2" } : m));
+  let pageKey = "C";
+  try { pageKey = Book.store.get("k18key", "C"); if (!KEYS[pageKey]) pageKey = "C"; } catch (e) { pageKey = "C"; }
+  const keySel = document.getElementById("key-select");
+  keySel.value = pageKey;
+
+  function buildSteps(toks, k, beats, loops) {
+    let st = [];
+    for (let l = 0; l < loops; l++) toks.forEach((t, i) => st.push([voicing(t, k), (l === loops - 1 && i === toks.length - 1) ? 4 : beats]));
+    return st;
+  }
+  const progs = [];
+  document.querySelectorAll(".prog").forEach((el) => {
+    const toks = el.dataset.prog.trim().split(/\s+/);
+    el.innerHTML = `<div class="prog-bar"><button class="btn" type="button">${Book.ICON.play}<span>Abspielen</span></button><ol class="prog-chips">` +
+      toks.map((t) => `<li><span class="rn">${t}</span><span class="cn"></span></li>`).join("") + `</ol></div><div class="prog-kb"></div>`;
+    const kb = Book.keyboard(el.querySelector(".prog-kb"), { from: 36, to: 77, labels: "c" });
+    const chips = el.querySelectorAll(".prog-chips li");
+    const key = () => el.dataset.key || pageKey;
+    const paint = () => chips.forEach((c, i) => (c.querySelector(".cn").textContent = cname(toks[i], key())));
+    paint();
+    progs.push(paint);
+    let busy = false;
+    el.querySelector("button").addEventListener("click", () => {
+      if (busy) return;
+      busy = true;
+      const st = buildSteps(toks, key(), +(el.dataset.beats || 2), +(el.dataset.loop || 1));
+      Book.audio.seq(st, +(el.dataset.bpm || 96), (i) => {
+        chips.forEach((c) => c.classList.remove("on"));
+        if (i < 0) { busy = false; kb.mark([]); return; }
+        chips[i % toks.length].classList.add("on");
+        kb.mark(marks(st[i][0]));
+      });
+    });
+  });
+  keySel.addEventListener("change", () => {
+    pageKey = keySel.value;
+    Book.store.set("k18key", pageKey);
+    progs.forEach((p) => p());
+  });
+  document.querySelectorAll("button.hear").forEach((b) => {
+    b.addEventListener("click", () => Book.audio.seq(buildSteps(b.dataset.prog.split(" "), "C", 2, 2), 96));
+  });
+</script>
+</body>
+</html>

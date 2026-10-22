@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Akkordskalen · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .scale-steps { font-family: var(--font-mono); font-size: 0.9em; white-space: nowrap; }
+  .scale-steps .t { color: var(--deep); font-weight: 500; }
+  .scale-steps .a { color: var(--bad); text-decoration: line-through; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil IV · Kapitel 30</div>
+    <h1>Akkordskalen</h1>
+    <p class="lede">Über welchen Akkord passt welche Tonleiter? Die Akkordskalen-Theorie gibt darauf eine systematische Antwort. Sie ist ein nützliches Werkzeug für Improvisation und Voicings, hat aber Grenzen, die man kennen sollte.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>zu jedem leitereigenen Akkord die passende Akkordskala nennen,</li>
+      <li>für Zwischendominanten und Moll-Kadenzen eine Akkordskala herleiten,</li>
+      <li>die wichtigsten Dominantskalen und die Modi von melodisch Moll unterscheiden,</li>
+      <li>Akkordskalen am Klavier für Improvisation und Voicings nutzen,</li>
+      <li>einschätzen, wo die Methode hilft und wo sie in die Irre führt.</li>
+    </ul>
+  </div>
+
+  <!-- 30.1 -->
+  <h2 id="idee">30.1 Die Idee: zu jedem Akkord eine Tonleiter</h2>
+  <p>Ein Septakkord hat vier Töne. Füllt man die Lücken zwischen ihnen mit passenden Tönen auf, entsteht eine siebentönige Tonleiter. Diese Tonleiter heißt <dfn id="g-akkordskala">Akkordskala</dfn> (englisch <em>chord scale</em>). Sie enthält drei Arten von Tönen:</p>
+  <ul>
+    <li><strong>Akkordtöne</strong> (1, 3, 5, 7): das Gerüst.</li>
+    <li><strong>Optionstöne</strong> (9, 11, 13): passende Farben (Kapitel 27).</li>
+    <li><strong>Avoid Notes</strong>: Töne, die als Durchgang gehen, aber nicht gehalten werden sollten (Abschnitt 27.6).</li>
+  </ul>
+  <p>Beispiel: Cmaj7 in C-Dur. Akkordtöne c, e, g, h. Lücken gefüllt mit d, f und a aus C-Dur. Ergebnis: C-Ionisch, also die C-Dur-Tonleiter. Darin sind d und a Optionstöne, das f ist Avoid Note.</p>
+  <p>In den Tabellen dieses Kapitels sind Akkordtöne schwarz, <span class="scale-steps"><span class="t">Optionstöne petrol</span></span> und <span class="scale-steps"><span class="a">Avoid Notes rot durchgestrichen</span></span> markiert.</p>
+
+  <section class="layer deep" data-title="Akkord und Tonleiter sind zwei Seiten derselben Sache">
+    <p>Ein Akkord ist ein senkrechter Schnitt durch eine Tonleiter: Man nimmt jeden zweiten Ton und spielt sie gleichzeitig. Eine Tonleiter ist ein waagrecht ausgebreiteter Akkord: dieselben Töne, nacheinander und in Sekundschritten. Der Terzenstapel aus Kapitel 27 zeigt das am deutlichsten. Der vollständige Cmaj13 (c e g h d f a) und die C-Dur-Tonleiter (c d e f g a h) bestehen aus genau denselben sieben Tönen, nur in anderer Reihenfolge.</p>
+    <p>Daraus folgt die Grundidee der Akkordskalen-Theorie: Wenn ein Akkord eine bestimmte Klangfarbe hat, dann passt dazu die Tonleiter, die diese Farbe nacheinander ausbreitet. Wer über Fmaj7♯11 improvisiert, spielt die Töne dieses Klangs als Melodie, also F-Lydisch.</p>
+    <p>Diese Sicht ist elegant, aber einseitig. Sie behandelt jeden Akkord für sich, als stehenden Klang. Musik bewegt sich aber von Akkord zu Akkord, und Melodien leben von Spannung und Auflösung zwischen ihnen. Darum geht es in 30.7.</p>
+  </section>
+
+  <!-- 30.2 -->
+  <h2 id="dur">30.2 Akkordskalen in Dur</h2>
+  <p>Für die sieben leitereigenen Akkorde einer Dur-Tonart ergeben sich die sieben Modi aus Kapitel 24. Alle verwenden dieselben Töne, nur der Ausgangspunkt wechselt. Tippe eine Zeile an, um die Skala zu hören.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Stufe</th><th>Akkord</th><th>Akkordskala</th><th>Töne (1 … 7 bzw. 9 11 13)</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 62 64 65 67 69 71 72" data-bpm="220"><td>I</td><td>Cmaj7</td><td>Ionisch</td><td class="scale-steps">c <span class="t">d</span> e <span class="a">f</span> g <span class="t">a</span> h</td><td>▶</td></tr>
+        <tr class="play-row" data-play="62 64 65 67 69 71 72 74" data-bpm="220"><td>ii</td><td>Dm7</td><td>Dorisch</td><td class="scale-steps">d <span class="t">e</span> f <span class="t">g</span> a <span class="t">h</span> c</td><td>▶</td></tr>
+        <tr class="play-row" data-play="64 65 67 69 71 72 74 76" data-bpm="220"><td>iii</td><td>Em7</td><td>Phrygisch</td><td class="scale-steps">e <span class="a">f</span> g <span class="t">a</span> h <span class="a">c</span> d</td><td>▶</td></tr>
+        <tr class="play-row" data-play="65 67 69 71 72 74 76 77" data-bpm="220"><td>IV</td><td>Fmaj7</td><td>Lydisch</td><td class="scale-steps">f <span class="t">g</span> a <span class="t">h</span> c <span class="t">d</span> e</td><td>▶</td></tr>
+        <tr class="play-row" data-play="55 57 59 60 62 64 65 67" data-bpm="220"><td>V</td><td>G7</td><td>Mixolydisch</td><td class="scale-steps">g <span class="t">a</span> h <span class="a">c</span> d <span class="t">e</span> f</td><td>▶</td></tr>
+        <tr class="play-row" data-play="57 59 60 62 64 65 67 69" data-bpm="220"><td>vi</td><td>Am7</td><td>Äolisch</td><td class="scale-steps">a <span class="t">h</span> c <span class="t">d</span> e <span class="a">f</span> g</td><td>▶</td></tr>
+        <tr class="play-row" data-play="59 60 62 64 65 67 69 71" data-bpm="220"><td>vii</td><td>Hm7♭5</td><td>Lokrisch</td><td class="scale-steps">h <span class="a">c</span> d <span class="t">e</span> f <span class="t">g</span> a</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Zwei Modi haben keine Avoid Note: Dorisch und Lydisch. Deshalb klingen m7-Akkorde auf der II. Stufe und maj7-Akkorde auf der IV. Stufe mit allen Optionstönen gut. Phrygisch hat zwei Avoid Notes, die übrigen Modi je eine. Die III. und VII. Stufe sind im Jazz entsprechend selten lange stehende Akkorde.</p>
+  <p class="muted">Beim dorischen h (13) sind sich die Lehrbücher nicht einig. Es bildet mit f einen Tritonus und kann den Akkord nach G7 klingen lassen. Manche Quellen zählen es deshalb zu den Avoid Notes. Im Spiel wird es oft verwendet.</p>
+
+  <section class="layer piano" data-title="Dieselben Töne, andere Schwerpunkte">
+    <p>Über Dm7–G7–Cmaj7 in C sind D-Dorisch, G-Mixolydisch und C-Ionisch dieselben sieben weißen Tasten. Wer einfach auf den weißen Tasten herumspielt, trifft also keine „falschen“ Töne, klingt aber trotzdem beliebig. Der Unterschied liegt darin, welche Töne auf den betonten Zählzeiten landen.</p>
+    <p><strong>Übung:</strong> Linke Hand spielt Shells (Kapitel 29): d–f–c', G–f–h, c–e–h, je einen Takt. Rechte Hand spielt Achtel auf den weißen Tasten, aber mit einer Regel: Auf Zählzeit 1 und 3 muss ein Akkordton des aktuellen Akkords stehen.</p>
+    <ul>
+      <li>Über Dm7 also d, f, a oder c auf 1 und 3.</li>
+      <li>Über G7 g, h, d oder f, und am besten das h oder f, weil sie die Leitlinien bilden.</li>
+      <li>Über Cmaj7 c, e, g oder h, und nicht f.</li>
+    </ul>
+    <p>Mit dieser einen Regel klingt die Linie plötzlich so, als „wüsste“ sie, wo die Harmonie gerade ist.</p>
+  </section>
+
+  <!-- 30.3 -->
+  <h2 id="herleiten">30.3 Eine Akkordskala herleiten</h2>
+  <p>Für leitereigene Akkorde liefert die Tabelle oben die Antwort. Für Akkorde, die nicht zur Tonart gehören, etwa Zwischendominanten (Kapitel 21), braucht man ein Verfahren:</p>
+  <ol>
+    <li><strong>Akkordtöne notieren.</strong> Sie sind gesetzt.</li>
+    <li><strong>Lücken mit Tönen der aktuellen Tonart füllen.</strong> Die Akkordskala soll möglichst wenig von der Umgebung abweichen.</li>
+    <li><strong>Bei Dominanten das Ziel berücksichtigen.</strong> Löst sich die Dominante nach Moll auf, kommen ♭9 und ♭13 aus der Zieltonart.</li>
+    <li><strong>Avoid Notes markieren</strong>: jeder Ton einen Halbton über einem Akkordton (außer ♭9 über dem Grundton einer Dominante).</li>
+  </ol>
+  <h4>Beispiel 1: D7 in C-Dur (Doppeldominante, V/V)</h4>
+  <p>Akkordtöne d, fis, a, c. Lücken aus C-Dur: e, g, h. Ergebnis: d e fis g a h c, also D-Mixolydisch. Avoid Note ist g (eine kleine None über fis). Die einzige Abweichung von C-Dur ist das fis, das der Akkord selbst mitbringt.</p>
+  <h4>Beispiel 2: A7 in C-Dur, Ziel Dm7 (V/ii)</h4>
+  <p>Akkordtöne a, cis, e, g. Das Ziel d-Moll bringt b und f mit, die Lücke zwischen cis und e füllt d. Ergebnis: a b cis d e f g. Das ist die fünfte Stufe von harmonisch d-Moll, oft <strong>HM5</strong> oder „Mixolydisch ♭9 ♭13“ genannt (auch: Phrygisch-Dur). Optionstöne sind ♭9 (b) und ♭13 (f). Avoid Note ist d (eine kleine None über cis).</p>
+  <div class="btn-row">
+    <button class="btn" type="button" data-play="62 64 66 67 69 71 72 74" data-bpm="220">▶ D-Mixolydisch</button>
+    <button class="btn" type="button" data-play="57 58 61 62 64 65 67 69" data-bpm="220">▶ A-HM5 (a b cis d e f g)</button>
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Dominante nach Dur: Mixolydisch (9, 13). Dominante nach Moll: HM5 (♭9, ♭13). Die Optionstöne der Dominante kommen aus der Tonart, in die sie führt.</p>
+  </div>
+
+  <!-- 30.4 -->
+  <h2 id="dominanten">30.4 Dominantskalen</h2>
+  <p>Dominanten sind die Akkorde mit der größten Auswahl, weil sie alterierte Optionstöne vertragen (Abschnitt 27.5). Sechs Skalen decken fast alle Fälle ab, hier alle über G:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Skala</th><th>Töne über G</th><th>Optionstöne</th><th>typischer Einsatz</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="55 57 59 60 62 64 65 67" data-bpm="220"><td>Mixolydisch</td><td class="scale-steps">g a h c d e f</td><td>9, 13</td><td>V7 nach Dur, Blues</td><td>▶</td></tr>
+        <tr class="play-row" data-play="55 56 59 60 62 63 65 67" data-bpm="220"><td>HM5 (Mixolydisch ♭9 ♭13)</td><td class="scale-steps">g as h c d es f</td><td>♭9, ♭13</td><td>V7 nach Moll</td><td>▶</td></tr>
+        <tr class="play-row" data-play="55 57 59 61 62 64 65 67" data-bpm="220"><td>Lydisch ♭7</td><td class="scale-steps">g a h cis d e f</td><td>9, ♯11, 13</td><td>Dominanten ohne Auflösung, Tritonussubstitute, IV7 im Blues</td><td>▶</td></tr>
+        <tr class="play-row" data-play="55 56 58 59 61 63 65 67" data-bpm="220"><td>Alteriert</td><td class="scale-steps">g as b h des es f</td><td>♭9, ♯9, ♭5, ♭13</td><td>V7 mit maximaler Spannung (Kapitel 31)</td><td>▶</td></tr>
+        <tr class="play-row" data-play="55 56 58 59 61 62 64 65 67" data-bpm="220"><td>Halbton-Ganzton</td><td class="scale-steps">g as b h cis d e f</td><td>♭9, ♯9, ♯11, 13</td><td>V7 mit ♭9 und natürlicher 13</td><td>▶</td></tr>
+        <tr class="play-row" data-play="55 57 59 61 63 65 67" data-bpm="220"><td>Ganzton</td><td class="scale-steps">g a h cis dis f</td><td>9, ♯11, ♯5</td><td>G7♯5, G+7</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <div class="kb" data-from="55" data-to="67" data-labels="none" data-marks="55::1 59::3 65::7 56:c2:♭9 58:c2:♯9 61:c2:♭5 63:c2:♭13" aria-label="Alterierte Skala über G: Akkordtöne g, h, f und Alterationen as, b, des, es"></div>
+    <figcaption>Die alterierte Skala über G. Blau: Grundton, Terz und Septime. Petrol: alle vier Alterationen. Eine reine Quinte gibt es nicht.</figcaption>
+  </figure>
+  <p>Die Halbton-Ganzton-Skala hat acht Töne, die Ganztonskala nur sechs. Beide sind <dfn id="g-symmetrische-skala">symmetrische Skalen</dfn>: Sie wiederholen ihr Muster nach drei bzw. zwei Halbtönen. Darum gibt es nur drei verschiedene Halbton-Ganzton-Skalen und nur zwei Ganztonskalen.</p>
+  <p>Für die Schreibweise der alterierten Skala gilt dasselbe wie in Kapitel 27: Theoretisch korrekt wäre g as ais h cis dis f, praktisch schreibt man g as b h des es f, weil es leichter zu lesen ist.</p>
+
+  <section class="layer deep" data-title="Warum symmetrische Skalen zu verminderten und übermäßigen Akkorden passen">
+    <p>Die Halbton-Ganzton-Skala auf g (g as b h cis d e f) enthält zwei verminderte Septakkorde: g–b–cis–e und as–h–d–f. Der zweite ist genau der verminderte Septakkord, der in G7♭9 steckt (h–d–f–as, Abschnitt 27.5). Weil ein verminderter Septakkord die Oktave in vier gleiche kleine Terzen teilt, ist auch die Skala symmetrisch: Ihr Muster wiederholt sich alle drei Halbtöne. G7, B♭7, D♭7 und E7 teilen dieselbe Halbton-Ganzton-Skala.</p>
+    <p>Die Ganztonskala teilt die Oktave in sechs gleiche Ganztöne. Sie enthält zwei übermäßige Dreiklänge (g–h–dis und a–cis–f), die ebenfalls die Oktave gleichmäßig teilen. Deshalb passt sie zu G7♯5.</p>
+    <p>Symmetrische Skalen klingen schwebend und richtungslos, weil kein Ton als Zentrum hervortritt. Claude Debussy setzte die Ganztonskala um 1900 für genau diesen Effekt ein, etwa im Klavierprélude „Voiles“ (1909/10). Der russische Komponist Nikolai Rimski-Korsakow verwendete die Halbton-Ganzton-Skala so häufig, dass sie in Russland seinen Namen trägt. In der englischsprachigen Theorie heißt sie <em>octatonic scale</em>.</p>
+  </section>
+
+  <!-- 30.5 -->
+  <h2 id="melodisch">30.5 Melodisch Moll und seine Modi</h2>
+  <p>Für viele Jazzakkorde jenseits der Dur-Tonart liefert eine einzige Tonleiter die passenden Skalen: <strong>melodisch Moll</strong> in der aufwärts gespielten Form (Kapitel 8), also Moll mit großer Sexte und großer Septime. Spielt man sie von jeder ihrer sieben Stufen aus, ergeben sich sieben Modi:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th class="num">Stufe</th><th>Modus (aus c-Moll melodisch)</th><th>Töne</th><th>passender Akkord</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 62 63 65 67 69 71 72" data-bpm="220"><td class="num">1</td><td>Melodisch Moll</td><td class="scale-steps">c d es f g a h</td><td>Cm(maj7), Cm6</td><td>▶</td></tr>
+        <tr class="play-row" data-play="62 63 65 67 69 71 72 74" data-bpm="220"><td class="num">2</td><td>Dorisch ♭9</td><td class="scale-steps">d es f g a h c</td><td>D7sus4♭9</td><td>▶</td></tr>
+        <tr class="play-row" data-play="63 65 67 69 71 72 74 75" data-bpm="220"><td class="num">3</td><td>Lydisch übermäßig</td><td class="scale-steps">es f g a h c d</td><td>E♭maj7♯5</td><td>▶</td></tr>
+        <tr class="play-row" data-play="65 67 69 71 72 74 75 77" data-bpm="220"><td class="num">4</td><td>Lydisch ♭7</td><td class="scale-steps">f g a h c d es</td><td>F7♯11</td><td>▶</td></tr>
+        <tr class="play-row" data-play="67 69 71 72 74 75 77 79" data-bpm="220"><td class="num">5</td><td>Mixolydisch ♭13</td><td class="scale-steps">g a h c d es f</td><td>G7♭13</td><td>▶</td></tr>
+        <tr class="play-row" data-play="69 71 72 74 75 77 79 81" data-bpm="220"><td class="num">6</td><td>Lokrisch ♮2</td><td class="scale-steps">a h c d es f g</td><td>Am7♭5</td><td>▶</td></tr>
+        <tr class="play-row" data-play="71 72 74 75 77 79 81 83" data-bpm="220"><td class="num">7</td><td>Alteriert</td><td class="scale-steps">h c d es f g a</td><td>H7alt</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Zwei Merksätze machen die Tabelle im Alltag brauchbar:</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p><strong>Alteriert</strong> über X7 = melodisch Moll einen Halbton <em>über</em> X. G7alt → as-Moll melodisch.<br>
+    <strong>Lydisch ♭7</strong> über X7 = melodisch Moll eine Quinte <em>über</em> X. G7♯11 → d-Moll melodisch.</p>
+  </div>
+
+  <section class="layer deep" data-title="Warum melodisch Moll so ergiebig ist">
+    <p>Von den sieben Dur-Modi sind nur zwei frei von Avoid Notes (Dorisch und Lydisch). Prüfe die Regel aus 27.6 an den Modi von melodisch Moll, und du findest vier freie: Melodisch Moll selbst (mMaj7), Lydisch ♭7 (7♯11), Lokrisch ♮2 (m7♭5) und Alteriert (7alt, wo die ♭9 über dem Grundton als Alteration erlaubt ist). Nur Dorisch ♭9, Lydisch übermäßig (c über h) und Mixolydisch ♭13 (c über h) haben je eine.</p>
+    <p>Ausgerechnet die vier freien Modi passen zu Akkorden, die im Jazz ständig vorkommen. Über ihnen können alle sieben Töne gleichzeitig erklingen, ohne dass einer stört. Für Jazzpianisten heißt das, dass sie aus diesen Skalen fast beliebig Voicings bilden können.</p>
+    <p>Eine zweite Eigenschaft: Melodisch Moll enthält, anders als Dur, zwei Tritoni (es–a und f–h). Daraus entstehen zwei dominantische Klänge im Tritonusabstand: F7 (f a c es) und H7 mit verminderter Quinte (h dis f a). Damit ist die Tonleiter auf natürliche Weise mit der Tritonussubstitution verbunden (Kapitel 31): F7♯11 (Lydisch ♭7) und H7alt (Alteriert) sind Modi derselben Tonleiter.</p>
+  </section>
+
+  <!-- 30.6 -->
+  <h2 id="moll">30.6 Akkordskalen in der Moll-II–V–i</h2>
+  <p>In der Moll-Kadenz Dm7♭5–G7♭9–Cm6 (Kapitel 28) kommen die Akkorde aus verschiedenen Moll-Formen. Entsprechend wechseln die Skalen:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Akkord</th><th>Skala</th><th>Töne</th><th>Herkunft</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="62 63 65 67 68 70 72 74" data-bpm="220"><td>Dm7♭5</td><td>Lokrisch</td><td class="scale-steps"><span>d</span> <span class="a">es</span> f <span class="t">g</span> as <span class="t">b</span> c</td><td>c-Moll natürlich</td><td>▶</td></tr>
+        <tr class="play-row" data-play="62 64 65 67 68 70 72 74" data-bpm="220"><td>Dm7♭5</td><td>Lokrisch ♮2</td><td class="scale-steps">d <span class="t">e</span> f <span class="t">g</span> as <span class="t">b</span> c</td><td>f-Moll melodisch</td><td>▶</td></tr>
+        <tr class="play-row" data-play="55 56 59 60 62 63 65 67" data-bpm="220"><td>G7♭9</td><td>HM5</td><td class="scale-steps">g <span class="t">as</span> h <span class="a">c</span> d <span class="t">es</span> f</td><td>c-Moll harmonisch</td><td>▶</td></tr>
+        <tr class="play-row" data-play="55 56 58 59 61 63 65 67" data-bpm="220"><td>G7alt</td><td>Alteriert</td><td class="scale-steps">g <span class="t">as</span> <span class="t">b</span> h <span class="t">des</span> <span class="t">es</span> f</td><td>as-Moll melodisch</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 62 63 65 67 69 71 72" data-bpm="220"><td>Cm6, Cm(maj7)</td><td>Melodisch Moll</td><td class="scale-steps">c <span class="t">d</span> es <span class="t">f</span> g a h</td><td>c-Moll melodisch</td><td>▶</td></tr>
+        <tr class="play-row" data-play="60 62 63 65 67 69 70 72" data-bpm="220"><td>Cm7</td><td>Dorisch</td><td class="scale-steps">c <span class="t">d</span> es <span class="t">f</span> g <span class="t">a</span> b</td><td>B♭-Dur</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Für das Spiel heißt das: Im Moll-Kontext ändern sich die Töne von Akkord zu Akkord deutlich mehr als in Dur. Besonders das as und das h unterscheiden die Akkorde. Wer sie trifft, macht die Harmonik hörbar.</p>
+
+  <section class="layer piano" data-title="Voicings aus der Akkordskala bauen">
+    <p>Jede Akkordskala ist auch ein Vorrat für Voicings. Das Rezept: Wähle drei bis fünf Töne aus der Skala, die Terz und Septime enthalten (oder sie bewusst weglassen, wie bei sus), und vermeide Avoid Notes. Alles andere ist frei.</p>
+    <ul>
+      <li><strong>Dm7, Dorisch:</strong> f–c'–e'–a' oder c'–e'–f'–a' oder Quarten e–a–d'–g'.</li>
+      <li><strong>G7, Mixolydisch:</strong> f–h–e' (7–3–13) oder h–e'–f'–a'.</li>
+      <li><strong>G7alt:</strong> f–h–es'–as' (7, 3, ♭13, ♭9). Der Klang hat keinen Grundton und keine reine Quinte und ist dadurch maximal gespannt.</li>
+      <li><strong>Cm6, melodisch Moll:</strong> es–a–d'–g' oder es–g–a–d'.</li>
+    </ul>
+    <div class="btn-row">
+      <button class="btn" type="button" data-play="38 53 60 64 69" data-mode="harm">▶ Dm7: f c' e' a'</button>
+      <button class="btn" type="button" data-play="43 53 59 63 68" data-mode="harm">▶ G7alt: f h es' as'</button>
+      <button class="btn" type="button" data-play="36 51 57 62 67" data-mode="harm">▶ Cm6/9: es a d' g'</button>
+    </div>
+    <p><strong>Übung:</strong> Wähle einen Akkord und spiel nacheinander fünf verschiedene Voicings aus seiner Akkordskala. Hör, wie sich die Farbe verändert, obwohl der Akkord derselbe bleibt.</p>
+  </section>
+
+  <!-- 30.7 -->
+  <h2 id="grenzen">30.7 Herkunft und Grenzen der Methode</h2>
+  <p>Die Akkordskalen-Theorie in ihrer heutigen Form wurde ab den 1960er-Jahren vor allem im Unterricht des Berklee College of Music in Boston systematisiert. Über Lehrbücher und Play-along-Aufnahmen verbreitete sie sich weltweit und ist heute die Standardmethode im Jazzunterricht. Sie hat große Vorzüge: Sie ist lehrbar, schnell anwendbar und verhindert grobe „falsche Töne“.</p>
+  <p>Sie hat aber drei Schwächen, die du kennen solltest:</p>
+  <ul>
+    <li><strong>Sie denkt senkrecht.</strong> Jeder Akkord wird als stehender Klang betrachtet. Über Dm7–G7–Cmaj7 liefert sie dreimal dieselbe Tonleiter und sagt nichts darüber, wie eine Linie von einem Akkord zum nächsten führt.</li>
+    <li><strong>Sie verleitet zu Tonleiter-Gedudel.</strong> Wer nur Skalen auf und ab spielt, klingt korrekt, aber leblos. Melodien entstehen aus Zielen, Wiederholung und Rhythmus.</li>
+    <li><strong>Sie beschreibt nicht, wie der Jazz entstanden ist.</strong> Die Musiker der Swing- und Bebop-Zeit dachten in Akkordtönen, Melodiefloskeln und chromatischen Umspielungen, nicht in Modi. Viele typische Bebop-Linien enthalten Töne, die nach Akkordskalen-Logik gar nicht vorkommen dürften, etwa chromatische Durchgangstöne.</li>
+  </ul>
+  <p>Ein guter Umgang ist deshalb: Akkordskalen als Landkarte nutzen, die zeigt, welche Töne zur Verfügung stehen. Melodien aber von den Leitlinien her denken (Kapitel 28), mit Akkordtönen auf betonten Zählzeiten und den übrigen Tönen als Weg dorthin.</p>
+
+  <section class="layer deep" data-title="Woher die Akkordskalen kommen">
+    <p>Die Idee, Akkorde und Skalen zusammen zu denken, ist im Jazz eng mit George Russell verbunden. Sein Buch „Lydian Chromatic Concept of Tonal Organization“ (1953) ordnete Akkorde Skalen zu und stellte die lydische Tonleiter ins Zentrum. Russell stand im Austausch mit Miles Davis und Bill Evans. Der modale Jazz der späten 1950er-Jahre mit Alben wie „Kind of Blue“ (1959) baute Stücke direkt auf Skalen statt auf schnellen Akkordwechseln auf.</p>
+    <p>Die Berklee-Schule (1945 als „Schillinger House“ gegründet) machte daraus ab den 1960er-Jahren ein durchgehendes Unterrichtssystem mit Akkordskalen, Optionstönen und Avoid Notes. Play-along-Aufnahmen, besonders die Reihe von Jamey Aebersold ab 1967, brachten die Methode zu Hunderttausenden von Lernenden, mit Skalenangaben zu jedem Akkord.</p>
+    <p>Die Kritik an der Methode ist fast so alt wie sie selbst. Pianist und Lehrer Barry Harris etwa unterrichtete einen anderen Ansatz, der vom Bebop ausgeht: Linien aus Akkordtönen und chromatischen Durchgängen, mit einer Bebop-Skala, die durch einen zusätzlichen chromatischen Ton die Akkordtöne auf die Zählzeiten bringt. Beide Sichtweisen ergänzen sich. Die eine sagt, welche Töne passen, die andere, wie man sie verbindet.</p>
+  </section>
+
+  <section class="layer piano" data-title="Von der Skala zur Linie: Zieltöne">
+    <p>Die wirksamste Übung gegen Tonleiter-Gedudel ist das Ansteuern von Zieltönen:</p>
+    <ol>
+      <li>Wähle für jeden Akkord einen Zielton: die Terz.</li>
+      <li>Spiel diesen Ton auf Zählzeit 1 des Akkords.</li>
+      <li>Fülle die Zeit davor mit Tönen der Akkordskala, die schrittweise auf das Ziel zulaufen. Ein chromatischer Ton direkt vor dem Ziel ist ausdrücklich erlaubt.</li>
+    </ol>
+    <p>Beispiel für Dm7–G7–Cmaj7 mit den Zielen f' (Dm7), h' (G7) und e'' (Cmaj7). Das h' wird von oben über c'' angesteuert, das e'' chromatisch von unten über dis'':</p>
+    <div class="abc" data-bpm="90" data-caption="Zieltöne auf Zählzeit 1, die übrigen Töne führen hin.">
+      X:1
+      M:4/4
+      L:1/4
+      K:C
+      "Dm7"F A d c | "G7"B d f ^d | "Cmaj7"e4 |]
+    </div>
+    <p>Die Linie wird dadurch zur Melodie mit Richtung, und die Akkordskala liefert nur noch das Material.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Eine Akkordskala füllt die Lücken eines Akkords mit passenden Tönen. Sie enthält Akkordtöne, Optionstöne und Avoid Notes.</li>
+    <li>Leitereigene Akkorde in Dur haben die sieben Modi als Akkordskalen. Dorisch und Lydisch haben keine Avoid Notes.</li>
+    <li>Dominanten nach Dur: Mixolydisch. Nach Moll: HM5. Für mehr Spannung: Alteriert, Halbton-Ganzton, Lydisch ♭7.</li>
+    <li>Die Modi von melodisch Moll liefern Skalen für mMaj7-, m7♭5-, 7♯11- und alterierte Akkorde und haben kaum Avoid Notes.</li>
+    <li>Akkordskalen zeigen, welche Töne passen. Wie eine Linie klingt, entscheidet die Verbindung von Akkord zu Akkord.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">30.1</span><div><span class="kind">Theorie</span>Nenne die Akkordskalen für Gm7, C7 und Fmaj7 in F-Dur, mit Optionstönen und Avoid Notes.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Gm7: G-Dorisch (g a b c d e f), Optionstöne a, c, e, keine Avoid Note. C7: C-Mixolydisch (c d e f g a b), Optionstöne d, a, Avoid Note f. Fmaj7: F-Ionisch (f g a b c d e), Optionstöne g, d, Avoid Note b.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">30.2</span><div><span class="kind">Theorie</span>Leite die Akkordskala für E7 in C-Dur her, wenn E7 sich nach Am auflöst.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Akkordtöne e, gis, h, d. Ziel a-Moll bringt f (♭9) und c (♭13). Lücke zwischen gis und h: a. Ergebnis: e f gis a h c d, HM5 von a-Moll harmonisch. Avoid Note: a (kleine None über gis).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">30.3</span><div><span class="kind">Theorie</span>Welche Tonleiter liefert die alterierte Skala über D7? Und welche die lydische ♭7-Skala über D7?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Alteriert: es-Moll melodisch (es f ges as b c d), von d aus gespielt: d es f ges as b c. Lydisch ♭7: a-Moll melodisch (a h c d e fis gis), von d aus: d e fis gis a h c.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">30.4</span><div><span class="kind">Theorie</span>Warum hat Fmaj7 (Lydisch) keine Avoid Note, Cmaj7 (Ionisch) aber schon?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>In C-Ionisch liegt f einen Halbton über der Terz e und bildet mit h den Tritonus der Dominante. In F-Lydisch ist die vierte Stufe h, einen Ganzton über a (Terz). Kein Optionston liegt einen Halbton über einem Akkordton.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">30.5</span><div><span class="kind">Theorie</span>Welche vier Dominantseptakkorde teilen sich die Halbton-Ganzton-Skala g as b h cis d e f?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G7, B♭7, C♯7 (D♭7) und E7. Die Skala wiederholt ihr Muster alle drei Halbtöne, also von g, b, cis und e aus.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">30.6</span><div><span class="kind">Theorie</span>Gib für die II–V–i in a-Moll (Hm7♭5–E7♭9–Am6) die Akkordskalen an.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Hm7♭5: H-Lokrisch (h c d e f g a) oder H-Lokrisch ♮2 (h cis d e f g a, aus d-Moll melodisch). E7♭9: E-HM5 (e f gis a h c d). Am6: a-Moll melodisch (a h c d e fis gis).</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">30.7</span><div><span class="kind">Am Klavier</span>Spiel die Übung aus der ersten Klavierbox (Akkordtöne auf 1 und 3) über Dm7–G7–Cmaj7, vier Durchgänge ohne Stocken.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Beginne mit Vierteln statt Achteln. Wenn das sicher läuft, verdopple das Tempo. Es hilft, den Zielton auf 1 vorher zu planen und die übrigen Töne nur als Weg dorthin zu sehen.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">30.8</span><div><span class="kind">Am Klavier</span>Bilde aus F-Lydisch ♭7 drei Voicings für F7♯11 ohne Grundton.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Mögliche Lösungen: a–es'–g'–h' (3, 7, 9, ♯11), es–a–d'–g' (7, 3, 13, 9), h–es'–g'–a' (♯11, 7, 9, 3). Wichtig: a und es (Terz und Septime) bleiben, dazu h als charakteristische ♯11.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">30.9</span><div><span class="kind">Gehör</span>Spiel G-Mixolydisch und G-HM5 nacheinander (Buttons in 30.4). Beschreib den Unterschied.</div></div>
+      <details class="solution"><summary>Tipp</summary><div>Mixolydisch klingt hell und entspannt, HM5 dunkel und „orientalisch“, wegen des übermäßigen Sekundschritts as–h. HM5 kündigt eine Auflösung nach Moll an, Mixolydisch nach Dur.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">30.10</span><div><span class="kind">Vertiefung</span>Prüfe, ob Lokrisch ♮2 (a h c d es f g) über Am7♭5 eine Avoid Note hat.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Akkordtöne a, c, es, g. Optionstöne h (9), d (11), f (♭13). h liegt einen Ganzton über a, d einen Ganzton über c, f einen Ganzton über es. Keiner liegt einen Halbton über einem Akkordton, also gibt es keine Avoid Note. Im normalen Lokrisch wäre die ♭9 (b) eine Avoid Note.</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(30);
+</script>
+</body>
+</html>

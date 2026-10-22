@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leitereigene Akkorde und Stufen · Klavier verstehen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+<link rel="stylesheet" href="book.css">
+<style>
+  .degrees td, .degrees th { text-align: center; }
+  .degrees td:first-child, .degrees th:first-child { text-align: left; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="chapter-head">
+    <div class="num">Teil II · Kapitel 13</div>
+    <h1>Leitereigene Akkorde und Stufen</h1>
+    <p class="lede">Aus den sieben Tönen einer Tonleiter lassen sich sieben Dreiklänge bauen. Sie bilden den Akkordvorrat einer Tonart. Wer diese Akkorde nicht nach Namen, sondern nach ihrer Position in der Tonleiter denkt, kann jede Akkordfolge in jede Tonart übertragen und Songs schneller verstehen.</p>
+    <div class="prereq" id="prereq"></div>
+  </header>
+
+  <div class="goals">
+    <p class="eyebrow">Nach diesem Kapitel kannst du</p>
+    <ul>
+      <li>die sieben leitereigenen Dreiklänge jeder Durtonart bilden,</li>
+      <li>Akkorde mit römischen Stufenziffern bezeichnen,</li>
+      <li>das feste Muster Dur–Moll–Moll–Dur–Dur–Moll–vermindert erklären und anwenden,</li>
+      <li>die Stufen im natürlichen Moll bilden,</li>
+      <li>Akkordfolgen in Stufen denken und in andere Tonarten übertragen.</li>
+    </ul>
+  </div>
+
+  <!-- 13.1 -->
+  <h2 id="bauen">13.1 Akkorde aus der Tonleiter bauen</h2>
+  <p>Nimm die C-Dur-Tonleiter (Kapitel 6) und baue auf jedem ihrer Töne einen Dreiklang, indem du nur Töne dieser Tonleiter verwendest. Wie in Kapitel 11 nimmst du dafür jeden zweiten Ton: auf c die Töne c–e–g, auf d die Töne d–f–a, auf e die Töne e–g–h und so weiter. Weil keine Vorzeichen dazukommen, liegen alle sieben Akkorde auf weißen Tasten.</p>
+  <p>Solche Akkorde heißen <dfn id="g-leitereigen">leitereigen</dfn> (englisch <em>diatonic chords</em>), weil sie nur aus Tönen der Tonleiter bestehen.</p>
+  <div class="abc" data-bpm="70" data-caption="Die sieben leitereigenen Dreiklänge von C-Dur">
+    X:1
+    M:none
+    L:1
+    K:C
+    "^C""_I"[CEG] | "^Dm""_ii"[DFA] | "^Em""_iii"[EGB] | "^F""_IV"[FAc] | "^G""_V"[GBd] | "^Am""_vi"[Ace] | "^H°""_vii°"[Bdf] |]
+  </div>
+  <div class="table-scroll">
+    <table class="degrees">
+      <thead><tr><th>Grundton</th><th>Töne</th><th>Terz</th><th>Quinte</th><th>Typ</th><th>Stufe</th><th></th></tr></thead>
+      <tbody>
+        <tr class="play-row" data-play="60 64 67" data-mode="harm"><td>c</td><td>c–e–g</td><td>groß</td><td>rein</td><td>Dur</td><td>I</td><td>▶</td></tr>
+        <tr class="play-row" data-play="62 65 69" data-mode="harm"><td>d</td><td>d–f–a</td><td>klein</td><td>rein</td><td>Moll</td><td>ii</td><td>▶</td></tr>
+        <tr class="play-row" data-play="64 67 71" data-mode="harm"><td>e</td><td>e–g–h</td><td>klein</td><td>rein</td><td>Moll</td><td>iii</td><td>▶</td></tr>
+        <tr class="play-row" data-play="65 69 72" data-mode="harm"><td>f</td><td>f–a–c</td><td>groß</td><td>rein</td><td>Dur</td><td>IV</td><td>▶</td></tr>
+        <tr class="play-row" data-play="67 71 74" data-mode="harm"><td>g</td><td>g–h–d</td><td>groß</td><td>rein</td><td>Dur</td><td>V</td><td>▶</td></tr>
+        <tr class="play-row" data-play="69 72 76" data-mode="harm"><td>a</td><td>a–c–e</td><td>klein</td><td>rein</td><td>Moll</td><td>vi</td><td>▶</td></tr>
+        <tr class="play-row" data-play="71 74 77" data-mode="harm"><td>h</td><td>h–d–f</td><td>klein</td><td>vermindert</td><td>vermindert</td><td>vii°</td><td>▶</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="btn-row">
+    <button class="btn" type="button" id="degrees-demo">▶ Alle sieben nacheinander</button>
+  </div>
+
+  <!-- 13.2 -->
+  <h2 id="ziffern">13.2 Römische Ziffern</h2>
+  <p>Statt „C-Dur, d-Moll, e-Moll …“ kann man die Akkorde nach ihrer Position in der Tonleiter benennen. Diese Position heißt <dfn id="g-stufe">Stufe</dfn>. Man schreibt sie mit römischen Ziffern, damit sie nicht mit Fingersätzen oder Intervallzahlen verwechselt werden:</p>
+  <ul>
+    <li><strong>Großbuchstaben</strong> für Durdreiklänge: I, IV, V.</li>
+    <li><strong>Kleinbuchstaben</strong> für Molldreiklänge: ii, iii, vi.</li>
+    <li>Ein kleiner Kreis ° für vermindert (vii°), ein + für übermäßig.</li>
+  </ul>
+  <p>In älteren deutschen Lehrbüchern findest du oft nur Großbuchstaben (I, II, III …). Dort musst du den Typ aus der Tonart erschließen. Dieses Buch verwendet die Groß-/Kleinschreibung, weil sie international üblich ist und mehr Information trägt.</p>
+  <p>Mit Stufen beschreibst du die <em>Beziehung</em> eines Akkords zur Tonart, nicht den Akkord selbst. G-Dur ist in C-Dur die V. Stufe, in D-Dur die IV. Stufe und in G-Dur die I. Stufe. Derselbe Akkord spielt in jeder Tonart eine andere Rolle.</p>
+
+  <section class="layer deep" data-title="Woher die römischen Ziffern kommen">
+    <p>Die Bezeichnung von Akkorden durch Stufenziffern entstand im späten 18. Jahrhundert. Der Theoretiker Georg Joseph Vogler (bekannt als Abbé Vogler) verwendete römische Ziffern, um Akkorde auf den Tonleiterstufen zu bezeichnen. Gottfried Weber machte das System in seinem „Versuch einer geordneten Theorie der Tonsetzkunst“ (1817–1821) bekannt und unterschied dabei Dur- und Mollakkorde durch Groß- und Kleinschreibung.</p>
+    <p>Im 19. Jahrhundert entwickelte vor allem Simon Sechter in Wien daraus eine ausgefeilte Stufentheorie. Er war Lehrer von Anton Bruckner. Über Lehrbücher im englischsprachigen Raum wurde die Stufentheorie zum internationalen Standard, auch in Jazz und Pop („the one, the four, the five“). In Deutschland setzte sich daneben die Funktionstheorie durch, die Kapitel 14 vorstellt.</p>
+  </section>
+
+  <!-- 13.3 -->
+  <h2 id="muster">13.3 Das Muster gilt in jeder Durtonart</h2>
+  <p>Baust du die Dreiklänge in G-Dur, F-Dur oder jeder anderen Durtonart, erhältst du immer dieselbe Folge von Typen:</p>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p><strong>I Dur – ii Moll – iii Moll – IV Dur – V Dur – vi Moll – vii° vermindert</strong><br>Kurz: Dur, Moll, Moll, Dur, Dur, Moll, vermindert.</p>
+  </div>
+  <p>Der Grund ist einfach: Jede Dur-Tonleiter hat dasselbe Muster aus Ganz- und Halbtönen (Kapitel 6). Deshalb liegen auch die Terzen und Quinten auf jeder Stufe gleich. Die Tonart verschiebt nur den Ausgangspunkt.</p>
+  <div class="table-scroll">
+    <table class="degrees">
+      <thead><tr><th>Tonart</th><th>I</th><th>ii</th><th>iii</th><th>IV</th><th>V</th><th>vi</th><th>vii°</th></tr></thead>
+      <tbody>
+        <tr><td>C-Dur</td><td>C</td><td>Dm</td><td>Em</td><td>F</td><td>G</td><td>Am</td><td>H°</td></tr>
+        <tr><td>G-Dur</td><td>G</td><td>Am</td><td>Hm</td><td>C</td><td>D</td><td>Em</td><td>Fis°</td></tr>
+        <tr><td>D-Dur</td><td>D</td><td>Em</td><td>Fism</td><td>G</td><td>A</td><td>Hm</td><td>Cis°</td></tr>
+        <tr><td>A-Dur</td><td>A</td><td>Hm</td><td>Cism</td><td>D</td><td>E</td><td>Fism</td><td>Gis°</td></tr>
+        <tr><td>F-Dur</td><td>F</td><td>Gm</td><td>Am</td><td>B</td><td>C</td><td>Dm</td><td>E°</td></tr>
+        <tr><td>B-Dur</td><td>B</td><td>Cm</td><td>Dm</td><td>Es</td><td>F</td><td>Gm</td><td>A°</td></tr>
+        <tr><td>Es-Dur</td><td>Es</td><td>Fm</td><td>Gm</td><td>As</td><td>B</td><td>Cm</td><td>D°</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="muted">Schreibweise in der Tabelle wie in Leadsheets: Großbuchstabe + m für Moll, ° für vermindert. Auf Englisch heißt Hm „Bm“, B heißt „B♭“, Fism „F♯m“.</p>
+
+  <section class="layer deep" data-title="Warum genau drei Dur-, drei Moll- und ein verminderter Akkord?">
+    <p>Man kann das Muster aus den Intervallen der Tonleiter herleiten, ohne Akkorde zu spielen. Dazu brauchst du zwei Beobachtungen aus Kapitel 5.</p>
+    <p><strong>1. Die Terzen.</strong> In der C-Dur-Tonleiter gibt es sieben Terzen zwischen Stammtönen: drei große (c–e, f–a, g–h) und vier kleine (d–f, e–g, a–c, h–d).</p>
+    <p><strong>2. Die Quinten.</strong> Von den sieben Quinten sind sechs rein, nur h–f ist vermindert.</p>
+    <p>Ein Dreiklang mit reiner Quinte ist Dur, wenn die untere Terz groß ist, und Moll, wenn sie klein ist. Die Akkorde auf c, f und g haben eine große untere Terz und eine reine Quinte, also Dur. Die Akkorde auf d, e und a haben eine kleine untere Terz und eine reine Quinte, also Moll. Bleibt h: kleine Terz und verminderte Quinte, also vermindert.</p>
+    <p>Daraus folgt auch, warum es in jeder Durtonart genau <strong>einen</strong> verminderten Dreiklang gibt. Die Tonleiter enthält nur einen Tritonus (zwischen der 4. und 7. Stufe). Der Akkord auf der 7. Stufe ist der einzige, der diesen Tritonus als Rahmen hat. Einen übermäßigen Dreiklang gibt es in Dur überhaupt nicht, weil dafür zwei große Terzen hintereinander nötig wären. In der Dur-Tonleiter folgen aber nie zwei große Terzen direkt aufeinander.</p>
+  </section>
+
+  <!-- 13.4 -->
+  <h2 id="haupt">13.4 Hauptdreiklänge und Nebendreiklänge</h2>
+  <p>Die drei Durakkorde I, IV und V heißen <dfn id="g-hauptdreiklaenge">Hauptdreiklänge</dfn>. Sie haben eine besondere Eigenschaft: Zusammen enthalten sie alle sieben Töne der Tonleiter.</p>
+  <div class="table-scroll">
+    <table class="degrees">
+      <thead><tr><th>Akkord</th><th>c</th><th>d</th><th>e</th><th>f</th><th>g</th><th>a</th><th>h</th></tr></thead>
+      <tbody>
+        <tr><td>I (C)</td><td>●</td><td></td><td>●</td><td></td><td>●</td><td></td><td></td></tr>
+        <tr><td>IV (F)</td><td>●</td><td></td><td></td><td>●</td><td></td><td>●</td><td></td></tr>
+        <tr><td>V (G)</td><td></td><td>●</td><td></td><td></td><td>●</td><td></td><td>●</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <div class="kb" data-from="60" data-to="71" data-labels="none" data-marks="60::I·IV 62:c3:V 64::I 65:c2:IV 67::I·V 69:c2:IV 71:c3:V" aria-label="Die Töne der C-Dur-Tonleiter, aufgeteilt auf die Hauptdreiklänge I, IV und V"></div>
+    <figcaption>Jede weiße Taste gehört zu mindestens einem Hauptdreiklang. c und g gehören sogar zu zweien.</figcaption>
+  </figure>
+  <p>Deshalb kann man jede einfache Melodie einer Durtonart allein mit I, IV und V begleiten. Viele Volkslieder, Kinderlieder und frühe Rock-’n’-Roll-Songs kommen mit diesen drei Akkorden aus.</p>
+  <p>Die Mollakkorde ii, iii und vi heißen <dfn id="g-nebendreiklaenge">Nebendreiklänge</dfn>. Jeder von ihnen teilt zwei Töne mit einem Hauptdreiklang:</p>
+  <ul>
+    <li>ii (d–f–a) teilt f und a mit IV (f–a–c).</li>
+    <li>vi (a–c–e) teilt c und e mit I (c–e–g).</li>
+    <li>iii (e–g–h) teilt g und h mit V (g–h–d) und e und g mit I.</li>
+  </ul>
+  <p>Diese Verwandtschaft ist der Grund, warum ein Nebendreiklang oft einen Hauptdreiklang vertreten kann. Kapitel 14 nutzt das, um die Rollen der Akkorde zu erklären.</p>
+
+  <section class="layer deep" data-title="Die Tonleiter als drei Dreiklänge im Quintabstand">
+    <p>Dass I, IV und V zusammen genau die Tonleiter ergeben, ist kein Zufall. Die drei Grundtöne f, c und g liegen im Quintabstand nebeneinander. Die Tonart ist also ein Ausschnitt aus der Quintenreihe mit der Tonika in der Mitte, einem Nachbarn darunter (F) und einem darüber (G).</p>
+    <p>Gioseffo Zarlino (1558) leitete die Dur-Tonleiter genau so her: als drei reine Durdreiklänge im Verhältnis 4:5:6 auf F, C und G. Rechnet man das durch, erhält man die sogenannte <em>reine Stimmung</em> der Dur-Tonleiter:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Ton</th><th>c</th><th>d</th><th>e</th><th>f</th><th>g</th><th>a</th><th>h</th><th>c'</th></tr></thead>
+        <tbody>
+          <tr><td>Verhältnis zu c</td><td class="mono">1</td><td class="mono">9/8</td><td class="mono">5/4</td><td class="mono">4/3</td><td class="mono">3/2</td><td class="mono">5/3</td><td class="mono">15/8</td><td class="mono">2</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>In dieser Stimmung klingen C, F und G vollkommen rein. Doch schon der Akkord der ii. Stufe hat ein Problem: Die Quinte d–a hat das Verhältnis 5/3 : 9/8 = 40/27. Das sind etwa 680 Cent, rund 22 Cent weniger als eine reine Quinte (702 Cent). Diese Differenz heißt <em>syntonisches Komma</em> (81:80). Der d-Moll-Akkord klingt in reiner Stimmung deutlich verstimmt.</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-tone="297 440" data-partials="6" data-dur="3.5">▶ d–a in reiner C-Dur-Stimmung (zu eng)</button>
+      <button class="btn" type="button" data-tone="293.66 440" data-partials="6" data-dur="3.5">▶ d–a auf dem Klavier</button>
+    </div>
+    <p>Hier zeigt sich wieder der Kompromiss aus Kapitel 5: Eine Tonleiter, in der <em>alle</em> leitereigenen Akkorde gleichzeitig rein klingen, gibt es nicht. Die gleichstufige Stimmung verteilt die Fehler gleichmäßig. Dafür klingt jeder Akkord auf jeder Stufe gleich gut.</p>
+  </section>
+
+  <section class="layer piano" data-title="Die Akkorde einer Tonart durchspielen">
+    <p>Spiel die sieben Dreiklänge einer Tonart aufwärts in Grundstellung, rechte Hand 1–3–5. Die linke Hand spielt dazu den Grundton eine Oktave tiefer. Sag bei jedem Akkord laut die Stufe und den Typ: „eins Dur, zwei Moll, drei Moll …“.</p>
+    <p>Am Anfang in C-Dur. Dann in G-Dur (ein ♯: fis) und F-Dur (ein ♭: b). Du merkst schnell, dass die Hand bei jedem Akkord einfach eine Taste weiterrutscht und nur die Vorzeichen der Tonart beachtet. Die Typen ergeben sich dann von selbst.</p>
+    <p>Typischer Fehler in G-Dur: Beim D-Dur-Akkord (V) und beim h-Moll-Akkord (iii) das fis vergessen. Beim vii° (fis–a–c) den Grundton fis vergessen. Wer die Tonartvorzeichen vorher einmal laut sagt („G-Dur, ein Kreuz, fis“), macht diesen Fehler seltener.</p>
+    <div class="btn-row">
+      <button class="btn" type="button" id="g-degrees">▶ G-Dur: I bis vii° und zurück zu I</button>
+    </div>
+  </section>
+
+  <!-- 13.5 -->
+  <h2 id="moll">13.5 Die Stufen im natürlichen Moll</h2>
+  <p>Auch in einer Molltonart kann man auf jeder Stufe einen leitereigenen Dreiklang bauen. Am einfachsten ist das im natürlichen Moll (Kapitel 8). a-Moll hat dieselben Töne wie C-Dur, beginnt aber auf a. Deshalb hat a-Moll auch dieselben sieben Akkorde wie C-Dur, nur mit anderen Stufennummern:</p>
+  <div class="table-scroll">
+    <table class="degrees">
+      <thead><tr><th>Stufe in a-Moll</th><th>i</th><th>ii°</th><th>III</th><th>iv</th><th>v</th><th>VI</th><th>VII</th></tr></thead>
+      <tbody>
+        <tr><td>Akkord</td><td>Am</td><td>H°</td><td>C</td><td>Dm</td><td>Em</td><td>F</td><td>G</td></tr>
+        <tr><td>Stufe in C-Dur</td><td>vi</td><td>vii°</td><td>I</td><td>ii</td><td>iii</td><td>IV</td><td>V</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="abc" data-bpm="70" data-caption="Die sieben leitereigenen Dreiklänge von a-Moll (natürlich)">
+    X:1
+    M:none
+    L:1
+    K:Am
+    "^Am""_i"[A,CE] | "^H°""_ii°"[B,DF] | "^C""_III"[CEG] | "^Dm""_iv"[DFA] | "^Em""_v"[EGB] | "^F""_VI"[FAc] | "^G""_VII"[GBd] |]
+  </div>
+  <div class="rule">
+    <div class="lbl">Merke</div>
+    <p>Natürliches Moll: <strong>i Moll – ii° vermindert – III Dur – iv Moll – v Moll – VI Dur – VII Dur</strong>.</p>
+  </div>
+  <p>Ein wichtiger Unterschied zu Dur: Die v. Stufe ist im natürlichen Moll ein <em>Moll</em>akkord (e–g–h). Ihr fehlt der Leitton, der in Dur so stark zur Tonika zieht. In der Praxis wird in Moll deshalb meistens ein Dur-Akkord auf der fünften Stufe gespielt (E-Dur statt e-Moll in a-Moll). Woher dieser Akkord kommt und warum er so wichtig ist, erklären Kapitel 14 und Kapitel 20.</p>
+
+  <section class="layer deep" data-title="Gleiche Akkorde, anderes Zentrum">
+    <p>C-Dur und a-Moll benutzen dieselben sieben Akkorde. Was macht dann den Unterschied? Es ist das <strong>Zentrum</strong>, der Akkord, um den sich alles dreht und auf dem die Musik zur Ruhe kommt.</p>
+    <p>Ein Zentrum entsteht durch Gewichtung: Der Akkord steht am Anfang und am Ende, er kommt häufig vor, er steht auf betonten Zählzeiten, und andere Akkorde führen auf ihn hin. Die Musikpsychologin Carol Krumhansl hat 1982 mit Edward Kessler gemessen, wie stabil Hörer einzelne Töne nach einem Tonart-Kontext empfinden. Am stabilsten wirkte der Grundton, dann Quinte und Terz, dann die übrigen Tonleitertöne, am wenigsten die Töne außerhalb der Tonart. Diese Hierarchie ist für Dur und Moll ähnlich gebaut, nur um das jeweilige Zentrum herum.</p>
+    <p>Daraus folgt eine wichtige Einsicht: Eine Tonart ist kein Vorrat an Tönen, sondern eine <em>Ordnung</em> dieser Töne um ein Zentrum. Dieselben Töne können zu verschiedenen Tonarten gehören. Viele Popsongs spielen gezielt mit dieser Mehrdeutigkeit, indem sie zwischen dem Dur- und dem Mollzentrum derselben Akkorde hin- und herpendeln.</p>
+  </section>
+
+  <!-- 13.6 -->
+  <h2 id="denken">13.6 Akkordfolgen in Stufen denken</h2>
+  <p>Der größte praktische Nutzen der Stufen: Eine Akkordfolge, die du einmal in Stufen verstanden hast, kannst du in jeder Tonart spielen. Die Folge <strong>I – vi – IV – V</strong> klingt in jeder Tonart gleich, nur höher oder tiefer:</p>
+  <div class="table-scroll">
+    <table class="degrees">
+      <thead><tr><th>Tonart</th><th>I</th><th>vi</th><th>IV</th><th>V</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>C-Dur</td><td>C</td><td>Am</td><td>F</td><td>G</td><td><button class="btn" type="button" data-prog="0">▶</button></td></tr>
+        <tr><td>G-Dur</td><td>G</td><td>Em</td><td>C</td><td>D</td><td><button class="btn" type="button" data-prog="7">▶</button></td></tr>
+        <tr><td>F-Dur</td><td>F</td><td>Dm</td><td>B</td><td>C</td><td><button class="btn" type="button" data-prog="5">▶</button></td></tr>
+        <tr><td>D-Dur</td><td>D</td><td>Hm</td><td>G</td><td>A</td><td><button class="btn" type="button" data-prog="2">▶</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Musiker sprechen deshalb oft in Stufen: „Der Refrain ist eins–fünf–sechs–vier“ ist eine vollständige Beschreibung, die für jede Tonart gilt. Auch das Heraushören von Songs wird leichter. Statt zwölf Tonarten mit je sieben Akkorden musst du nur sieben Stufen kennen.</p>
+  <p>Umgekehrt analysierst du eine Akkordfolge, indem du die Tonart bestimmst und jedem Akkord seine Stufe zuordnest. Die Folge G – Em – C – D in G-Dur ist I – vi – IV – V, also dieselbe Folge wie oben.</p>
+
+  <section class="layer piano" data-title="Kadenzgriffe in drei Tonarten">
+    <p>Kombiniere die Stufen mit den kurzen Wegen aus Kapitel 12. Die Folge I – IV – V – I hat in jeder Tonart dieselbe Handform, wenn du sie gleich beginnst: Grundstellung, Quartsextakkord, Sextakkord, Grundstellung.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Tonart</th><th>I</th><th>IV</th><th>V</th><th>I</th></tr></thead>
+        <tbody>
+          <tr><td>C-Dur</td><td>c'–e'–g'</td><td>c'–f'–a'</td><td>h–d'–g'</td><td>c'–e'–g'</td></tr>
+          <tr><td>G-Dur</td><td>g–h–d'</td><td>g–c'–e'</td><td>fis–a–d'</td><td>g–h–d'</td></tr>
+          <tr><td>F-Dur</td><td>f–a–c'</td><td>f–b–d'</td><td>e–g–c'</td><td>f–a–c'</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Linke Hand: die Grundtöne der Stufen eine Oktave tiefer. Spiel jede Tonart viermal hintereinander, bis die Form in der Hand sitzt. Wenn du die Form einmal kennst, brauchst du für eine neue Tonart nur den Startakkord.</p>
+    <p><strong>Weiterführung:</strong> Spiel I – vi – IV – V in C-Dur, G-Dur und F-Dur mit kurzen Wegen. Ein möglicher Weg in C: c'–e'–g', c'–e'–a', c'–f'–a', h–d'–g'.</p>
+  </section>
+
+  <!-- Zusammenfassung -->
+  <h2 id="kurz">Das Wichtigste in Kürze</h2>
+  <ul>
+    <li>Leitereigene Dreiklänge bestehen nur aus Tönen der Tonleiter. Jede Tonart hat sieben davon.</li>
+    <li>Stufen werden mit römischen Ziffern bezeichnet: groß für Dur, klein für Moll, ° für vermindert.</li>
+    <li>In jeder Durtonart gilt: I Dur, ii Moll, iii Moll, IV Dur, V Dur, vi Moll, vii° vermindert.</li>
+    <li>Im natürlichen Moll gilt: i Moll, ii° vermindert, III Dur, iv Moll, v Moll, VI Dur, VII Dur.</li>
+    <li>Die Hauptdreiklänge I, IV und V enthalten zusammen alle Töne der Tonleiter. Die Nebendreiklänge teilen je zwei Töne mit einem Hauptdreiklang.</li>
+    <li>In Stufen gedachte Akkordfolgen lassen sich in jede Tonart übertragen.</li>
+  </ul>
+
+  <!-- Übungen -->
+  <section class="exercises" id="uebungen">
+    <h2>Übungen</h2>
+
+    <div class="exercise">
+      <div class="q"><span class="n">13.1</span><div><span class="kind">Theorie</span>Bilde die sieben leitereigenen Dreiklänge von G-Dur und gib Stufe und Typ an.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>I G (g–h–d), ii Am (a–c–e), iii Hm (h–d–fis), IV C (c–e–g), V D (d–fis–a), vi Em (e–g–h), vii° Fis° (fis–a–c). Das fis kommt in V, iii und vii° vor.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">13.2</span><div><span class="kind">Theorie</span>Bilde die sieben leitereigenen Dreiklänge von F-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>I F (f–a–c), ii Gm (g–b–d), iii Am (a–c–e), IV B (b–d–f), V C (c–e–g), vi Dm (d–f–a), vii° E° (e–g–b). Das b kommt in ii, IV und vii° vor.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">13.3</span><div><span class="kind">Theorie</span>Welche Stufe ist e-Moll in C-Dur, in G-Dur, in D-Dur und in e-Moll?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>C-Dur: iii. G-Dur: vi. D-Dur: ii. e-Moll: i. Ein Akkord hat keine feste Stufe, die Stufe hängt immer von der Tonart ab.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">13.4</span><div><span class="kind">Theorie</span>Übertrage I – vi – IV – V in D-Dur und in B-Dur.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>D-Dur: D – Hm – G – A. B-Dur: B – Gm – Es – F.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">13.5</span><div><span class="kind">Theorie</span>Analysiere mit Stufen: C – G – Am – F (in C-Dur), G – Em – C – D (in G-Dur), Dm – G – C (in C-Dur), F – C – Dm – B (in F-Dur).</div></div>
+      <details class="solution"><summary>Lösung</summary><div>I – V – vi – IV. I – vi – IV – V. ii – V – I. I – V – vi – IV. Die erste und die letzte Folge sind dieselbe Stufenfolge in zwei Tonarten.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">13.6</span><div><span class="kind">Theorie</span>Bilde die Stufen von e-Moll (natürlich). Welche Durtonart hat dieselben Akkorde?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>i Em, ii° Fis°, III G, iv Am, v Hm, VI C, VII D. Dieselben Akkorde hat G-Dur, die Paralleltonart von e-Moll.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">13.7</span><div><span class="kind">Notenlesen</span>Die Tonart ist D-Dur (zwei Kreuze: fis und cis). Benenne die sieben Akkorde und ihre Stufen.</div></div>
+      <div class="abc" data-bpm="60">
+        X:1
+        M:none
+        L:1
+        K:D
+        "^1"[DFA] | "^2"[EGB] | "^3"[FAc] | "^4"[GBd] | "^5"[Ace] | "^6"[Bdf] | "^7"[ceg] |]
+      </div>
+      <details class="solution"><summary>Lösung</summary><div>1: D (I). 2: Em (ii). 3: Fism (iii, fis–a–cis). 4: G (IV). 5: A (V, a–cis–e). 6: Hm (vi, h–d–fis). 7: Cis° (vii°, cis–e–g). Die Kreuze der Vorzeichnung gelten für alle f und c.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">13.8</span><div><span class="kind">Am Klavier</span>Spiel die Stufenakkorde von G-Dur und F-Dur aufwärts in Grundstellung und sag laut Stufe und Typ.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>G-Dur: G, Am, Hm, C, D, Em, Fis°. F-Dur: F, Gm, Am, B, C, Dm, E°. Kontrolle: Das Typmuster ist in beiden Fällen Dur, Moll, Moll, Dur, Dur, Moll, vermindert.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">13.9</span><div><span class="kind">Am Klavier</span>Spiel I – IV – V – I in D-Dur mit derselben Handform wie in der Tabelle (Grundstellung, Quartsextakkord, Sextakkord, Grundstellung). Starte mit d'–fis'–a'.</div></div>
+      <details class="solution"><summary>Lösung</summary><div>I: d'–fis'–a'. IV: d'–g'–h'. V: cis'–e'–a'. I: d'–fis'–a'. Linke Hand: d, g, a, d.</div></details>
+    </div>
+
+    <div class="exercise">
+      <div class="q"><span class="n">13.10</span><div><span class="kind">Vertiefung</span>Warum gibt es in jeder Durtonart genau einen verminderten Dreiklang und keinen übermäßigen?</div></div>
+      <details class="solution"><summary>Lösung</summary><div>Ein verminderter Dreiklang braucht eine verminderte Quinte. Die Dur-Tonleiter enthält nur einen Tritonus, zwischen 4. und 7. Stufe (in C: f–h bzw. h–f). Nur der Akkord auf der 7. Stufe hat ihn als Quinte. Ein übermäßiger Dreiklang bräuchte zwei große Terzen übereinander. In der Dur-Tonleiter folgt auf eine große Terz aber immer eine kleine (c–e–g, f–a–c, g–h–d).</div></details>
+    </div>
+  </section>
+
+  <footer class="chapter-foot" id="chapter-foot"></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.4.4/abcjs-basic-min.js"></script>
+<script src="toc.js"></script>
+<script src="book.js"></script>
+<script>
+  Book.chapter(13);
+
+  const tri = (r, t, f) => [r, r + t, r + f];
+  document.getElementById("degrees-demo").addEventListener("click", () => {
+    const C = [tri(60, 4, 7), tri(62, 3, 7), tri(64, 3, 7), tri(65, 4, 7), tri(67, 4, 7), tri(69, 3, 7), tri(71, 3, 6), tri(72, 4, 7)];
+    Book.audio.seq(C.map((c) => [c, 1]), 84);
+  });
+  document.getElementById("g-degrees").addEventListener("click", () => {
+    const G = [tri(55, 4, 7), tri(57, 3, 7), tri(59, 3, 7), tri(60, 4, 7), tri(62, 4, 7), tri(64, 3, 7), tri(66, 3, 6), tri(67, 4, 7)];
+    Book.audio.seq(G.map((c) => [c, 1]), 84);
+  });
+  // I – vi – IV – V in verschiedenen Tonarten (Versatz in Halbtönen gegenüber C)
+  document.querySelectorAll("[data-prog]").forEach((b) => b.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const k = +b.dataset.prog;
+    const prog = [[48, 60, 64, 67], [45, 60, 64, 69], [41, 60, 65, 69], [43, 59, 62, 67], [48, 60, 64, 67]];
+    Book.audio.seq(prog.map((c) => [c.map((m) => m + k), 2]), 92);
+  }));
+</script>
+</body>
+</html>
