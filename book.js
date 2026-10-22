@@ -649,7 +649,9 @@
   // Jeder Link auf eine Begriffsstelle (href="…#g-slug") zeigt beim Zeigen oder Fokussieren die Definition aus glossar-data.js.
   // Auf Touch-Geräten öffnet der erste Tipp den Tooltip, der zweite folgt dem Link.
   // <dfn class="tip"> markiert Begriffe, die das Buch nur benutzt und nicht erklärt; sie zeigen ihre Kurzdefinition selbst.
-  let glossLoad = null, tip = null, tipFor = null, lastPointer = "mouse";
+  // Ob der Tooltip schon offen war, wird beim pointerdown festgehalten: Ein Tipp löst vor dem click noch mouseenter und focus aus,
+  // die den Tooltip bereits öffnen – beim click selbst ließe sich der erste Tipp also nicht mehr vom zweiten unterscheiden.
+  let glossLoad = null, tip = null, tipFor = null, tap = null;
   function loadGlossar() {
     if (window.GLOSSAR) return Promise.resolve();
     return glossLoad || (glossLoad = new Promise((resolve) => {
@@ -695,13 +697,15 @@
       if (!e) return;
       if (a.tagName === "DFN") a.tabIndex = 0;
       else a.classList.add("term-link");
-      a.addEventListener("pointerdown", (ev) => { lastPointer = ev.pointerType; });
+      a.addEventListener("pointerdown", (ev) => { tap = ev.pointerType === "mouse" ? null : { a, open: tipFor === a }; });
+      a.addEventListener("pointercancel", () => { tap = null; });
       a.addEventListener("mouseenter", () => showTip(a, e));
       a.addEventListener("mouseleave", hideTip);
       a.addEventListener("focus", () => showTip(a, e));
       a.addEventListener("blur", hideTip);
       a.addEventListener("click", (ev) => {
-        if (lastPointer === "touch" && tipFor !== a) { ev.preventDefault(); showTip(a, e); }
+        const t = tap; tap = null;
+        if (t && t.a === a && !t.open) { ev.preventDefault(); showTip(a, e); }
       });
     }));
     if (!Book.glossLinks.wired) {
